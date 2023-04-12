@@ -17,6 +17,7 @@ dns:
 proxies:
   - {name: 🇯🇵 _0JP_日本, server: virmach.jp.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202304300000000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
   - {name: 🇺🇸 _0US_美国_洛杉矶1SSR, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇺🇸 _US_美国_洛杉矶v2ray, server: 23.227.38.41, port: 443, type: vmess, uuid: faf28ac6-9109-4cf9-8e88-9798fcab66ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /BVQEA, ws-headers: {Host: fr1.v2ray6.xyz}, udp: true}
   - {name: 🇫🇷 _BZ_伯利兹->🇫🇷_FR_法国, server: 203.30.188.2, port: 80, client-fingerprint: chrome, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fr.v2ray1.xyz}}}
   - {name: 🇺🇸 _美国惠普HP 6, server: hk1.b.bd6b6c503c93.sanfen001.pics, port: 443, type: vmess, uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /zh-cn, ws-headers: {Host: www.microsoft.com}, udp: true}
   - {name: 🇺🇸 _AM_亚美尼亚->🇺🇸_US_美国, server: 185.162.228.1, port: 443, client-fingerprint: chrome, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /ECTCJ0DF, headers: {Host: 154.v2ray3.xyz}}}
@@ -84,6 +85,7 @@ proxy-groups:
       - DIRECT
       - 🇯🇵 _0JP_日本
       - 🇺🇸 _0US_美国_洛杉矶1SSR
+      - 🇺🇸 _US_美国_洛杉矶v2ray
       - 🇫🇷 _BZ_伯利兹->🇫🇷_FR_法国
       - 🇺🇸 _美国惠普HP 6
       - 🇺🇸 _AM_亚美尼亚->🇺🇸_US_美国
@@ -148,9 +150,11 @@ proxy-groups:
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
+    tolerance: 100
     proxies:
       - 🇯🇵 _0JP_日本
       - 🇺🇸 _0US_美国_洛杉矶1SSR
+      - 🇺🇸 _US_美国_洛杉矶v2ray
       - 🇨🇴 _CO_哥伦比亚
       - 🇰🇷 _KR_韩国
       - 🇯🇵 _JP_日本
