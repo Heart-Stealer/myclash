@@ -83,6 +83,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - ♻️ 自动选择
       - 🇯🇵 _0JP_日本
       - 🇺🇸 _0US_美国_洛杉矶1SSR
       - 🇺🇸 _US_美国_洛杉矶v2ray
