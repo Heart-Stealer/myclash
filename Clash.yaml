@@ -5,16 +5,24 @@ log-level: info
 external-controller: :9090
 dns:
   enabled: true
+  ipv6: false
   nameserver:
-    - 119.29.29.29 
-    - 223.5.5.5
+    - 1.2.4.8
     - 8.8.8.8
     - 114.114.114.114
+    - 119.29.29.29 
+    - 223.5.5.5
+    - tls://13800000000.rubyfish.cn:853
   fallback:
     - 8.8.8.8
     - 8.8.4.4
     - tls://1.0.0.1:853
     - tls://dns.google:853
+    - tls://13800000000.rubyfish.cn:853
+  fallback-filter:
+    geoip: true # 默认
+    ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+      - 240.0.0.0/4
 proxies:
   - {name: 🇯🇵_0JP_日本, server: virmach.jp.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202304300000000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
   - {name: 🇺🇸_0喵哥(西雅图), server: miaoge.tech, port: 37739, type: trojan, password: miaoge110, sni: miaoge.tech, skip-cert-verify: true, udp: true}
