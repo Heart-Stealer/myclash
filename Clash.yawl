@@ -18,7 +18,10 @@ dns:
     - tls://dns.google:853
 proxies:
   - {name: 🇯🇵 _0JP_日本, server: virmach.jp.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202304300000000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
+  - {name: 🇺🇸 _喵哥(西雅图), server: miaoge.tech, port: 37739, type: trojan, password: miaoge110, sni: miaoge.tech, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 _0US_美国_洛杉矶1SSR, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 电信误用_FR法国流媒体节点001, server: frjs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: frjs.stablize.top, skip-cert-verify: true, udp: true}
+  - {name: 电信误用_AU澳大利亚流媒体节点002, server: aujs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: aujs.stablize.top, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 _US_美国 16, server: 162.159.58.13, port: 443, type: vmess, uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /5QNROSRV, ws-headers: {Host: lg2.v2ray6.xyz}, udp: true}
   - {name: 🇺🇸 _BZ_伯利兹->🇺🇸 _US_美国, server: 203.30.190.1, port: 443, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ECTCJ0DF, ws-headers: {Host: 154.v2ray3.xyz}, udp: true}
   - {name: 🇺🇸 _US_美国 4, server: 172.67.127.123, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /shirker, ws-headers: {Host: dp1.scproxy.top}, udp: true}
@@ -92,7 +95,10 @@ proxy-groups:
       - DIRECT
       - ♻️ 自动选择
       - 🇯🇵 _0JP_日本
+      - 🇺🇸 _喵哥(西雅图)
       - 🇺🇸 _0US_美国_洛杉矶1SSR
+      - 电信误用_FR法国流媒体节点001
+      - 电信误用_AU澳大利亚流媒体节点002
       - 🇺🇸 _US_美国 16
       - 🇺🇸 _BZ_伯利兹->🇺🇸 _US_美国
       - 🇺🇸 _BZ_伯利兹->🇺🇸 _US_美国 4
@@ -166,7 +172,10 @@ proxy-groups:
     tolerance: 100
     proxies:
       - 🇯🇵 _0JP_日本
+      - 🇺🇸 _喵哥(西雅图)
       - 🇺🇸 _0US_美国_洛杉矶1SSR
+      - 电信误用_FR法国流媒体节点001
+      - 电信误用_AU澳大利亚流媒体节点002
       - 🇺🇸 _AM_亚美尼亚->🇺🇸 _US_美国
       - 🇺🇸 _BZ_伯利兹->🇫🇷_FR_法国
       - 🇺🇸 _BZ_伯利兹->🇫🇷_FR_法国 2
