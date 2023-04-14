@@ -23,6 +23,7 @@ dns:
     geoip: true # 默认
     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
       - 240.0.0.0/4
+
 proxies:
   - {name: 🇯🇵_0JP_日本, server: virmach.jp.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202304300000000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
   - {name: 🇺🇸_0喵哥(西雅图), server: miaoge.tech, port: 37739, type: trojan, password: miaoge110, sni: miaoge.tech, skip-cert-verify: true, udp: true}
@@ -30,8 +31,8 @@ proxies:
   - {name: 🇦🇺_AU_澳大利亚节点002电信误用, server: aujs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: aujs.stablize.top, skip-cert-verify: true, udp: true}
   - {name: 🇫🇷_FR_法国节点001电信误用, server: frjs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: frjs.stablize.top, skip-cert-verify: true, udp: true}
   - {name: 🇷🇺_RU_俄罗斯联邦 2, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 🇺🇸🇺🇲_US_美国 16, server: 162.159.58.13, port: 443, type: vmess, uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /5QNROSRV, ws-headers: {Host: lg2.v2ray6.xyz}, udp: true}
-  - {name: 🇺🇸🇺🇲_美国CloudFlare节点 9, server: 162.159.255.200, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: us-1.acyun.eu.org}, udp: true}
+  - {name: 🇺🇸_US_美国 16, server: 162.159.58.13, port: 443, type: vmess, uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /5QNROSRV, ws-headers: {Host: lg2.v2ray6.xyz}, udp: true}
+  - {name: 🇺🇸_美国CloudFlare节点 9, server: 162.159.255.200, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: us-1.acyun.eu.org}, udp: true}
   - {name: 🇺🇲 美国 1, server: 162.159.58.13, port: 443, type: vmess, uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /5QNROSRV, headers: {Host: lg2.v2ray6.xyz}}}
   - {name: 🇺🇲 美国 2, server: 162.159.58.10, port: 443, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ECTCJ0DF, headers: {Host: 154.v2ray3.xyz}}}
   - {name: 🇺🇲 美国 3, server: 172.67.70.14, port: 443, type: vmess, uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /AUIKN8AU, headers: {Host: lg1.v2ray6.xyz}}}
@@ -88,8 +89,8 @@ proxy-groups:
       - 🇦🇺_AU_澳大利亚节点002电信误用
       - 🇫🇷_FR_法国节点001电信误用
       - 🇷🇺_RU_俄罗斯联邦 2
-      - 🇺🇸🇺🇲_US_美国 16
-      - 🇺🇸🇺🇲_美国CloudFlare节点 9
+      - 🇺🇸_US_美国 16
+      - 🇺🇸_美国CloudFlare节点 9
       - 🇺🇲 美国 1
       - 🇺🇲 美国 2
       - 🇺🇲 美国 3
@@ -146,8 +147,8 @@ proxy-groups:
       - 🇦🇺_AU_澳大利亚节点002电信误用
       - 🇫🇷_FR_法国节点001电信误用
       - 🇷🇺_RU_俄罗斯联邦 2
-      - 🇺🇸🇺🇲_US_美国 16
-      - 🇺🇸🇺🇲_美国CloudFlare节点 9
+      - 🇺🇸_US_美国 16
+      - 🇺🇸_美国CloudFlare节点 9
       - 🇺🇲 美国 1
       - 🇺🇲 美国 2
       - 🇺🇲 美国 3
