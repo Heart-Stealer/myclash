@@ -27,7 +27,7 @@ dns:
 proxies:
   - {name: _🇫🇷_法国_大佬, server: frjs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: frjs.stablize.top, skip-cert-verify: true, udp: true}
   - {name: _🇦🇺_澳大利亚_大佬, server: aujs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: aujs.stablize.top, skip-cert-verify: true, udp: true}
-  - {name: _🇷🇺_俄罗斯联邦 2, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: _🇷🇺_俄罗斯联邦, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
   - {name: _🇸🇬_新加坡 17, server: sg1.fightertunnel.xyz, port: 80, type: vmess, uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vmess, headers: {Host: sg1.fightertunnel.xyz}}}
   - {name: _🇸🇬_新加坡 233, server: cloud.cluster.download.cloudsys.buzz, port: 80, type: vmess, uuid: 522e8c21-156c-4125-b821-755956840e64, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /msg, headers: {Host: cloud.cluster.download.cloudsys.buzz}}}
   - {name: _🇨🇳_台湾 90, server: tw1.sanfen004.me, port: 443, type: vmess, uuid: ae63c769-7b4f-4916-b575-9214639fcb8b, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: www.microsoft.com}}}
@@ -58,7 +58,7 @@ proxy-groups:
       - ♻️ 自动选择
       - _🇫🇷_法国_大佬
       - _🇦🇺_澳大利亚_大佬
-      - _🇷🇺_俄罗斯联邦 2
+      - _🇷🇺_俄罗斯联邦
       - _🇸🇬_新加坡 17
       - _🇸🇬_新加坡 233
       - _🇨🇳_台湾 90
@@ -89,7 +89,7 @@ proxy-groups:
     proxies:
       - _🇫🇷_法国_大佬
       - _🇦🇺_澳大利亚_大佬
-      - _🇷🇺_俄罗斯联邦 2
+      - _🇷🇺_俄罗斯联邦
       - _🇸🇬_新加坡 17
       - _🇸🇬_新加坡 233
       - _🇨🇳_台湾 90
