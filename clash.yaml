@@ -25,7 +25,6 @@ dns:
     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
       - 240.0.0.0/4
 proxies:
-  - {name: _🇺🇸_美国_洛杉矶1SSR, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
   - {name: _🇫🇷_法国节点001_大佬, server: frjs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: frjs.stablize.top, skip-cert-verify: true, udp: true}
   - {name: _🇦🇺_澳大利亚节点002_大佬, server: aujs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: aujs.stablize.top, skip-cert-verify: true, udp: true}
   - {name: _🇷🇺_俄罗斯联邦 2, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
@@ -57,7 +56,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - ♻️ 自动选择
-      - _🇺🇸_美国_洛杉矶1SSR
       - _🇫🇷_法国节点001_大佬
       - _🇦🇺_澳大利亚节点002_大佬
       - _🇷🇺_俄罗斯联邦 2
@@ -89,7 +87,6 @@ proxy-groups:
     interval: 600
     tolerance: 100
     proxies:
-      - _🇺🇸_美国_洛杉矶1SSR
       - _🇫🇷_法国节点001_大佬
       - _🇦🇺_澳大利亚节点002_大佬
       - _🇷🇺_俄罗斯联邦 2
