@@ -76,6 +76,13 @@ proxies:
   - {name: 🇭🇰 香港 43, server: 103.160.204.13, port: 443, type: vmess, uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /AUIKN8AU, headers: {Host: lg1.v2ray6.xyz}}}
   - {name: 🇺🇲 美国 44, server: 172.64.155.90, port: 80, type: vmess, uuid: 34ff6bca-3f4e-4d30-d6d2-dfc8efb0cf9e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: 212us.zikkcc.ga}}}
   - {name: 🇨🇳 中国 45, server: 111.23.252.214, port: 59902, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false}
+  - {name: 🇺🇸 美国CloudFlare公司CDN节点(shopify) 16, server: 23.227.38.102, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: fr.v2ray1.xyz}, udp: true}
+  - {name: 🇭🇰_HK_香港->🇫🇷_FR_法国, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: fr.v2ray1.xyz}, udp: true}
+  - {name: 美国 CloudFlare节点, server: cf.noaries.de, port: 8080, type: vmess, uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: "/aries?ed=2048", ws-headers: {Host: ft.cloudflare.quest}, udp: true}
+  - {name: 🇺🇸_US_美国->🇯🇵_JP_日本, server: v143a.toddns.tk, port: 80, type: vmess, uuid: a25881f3-967f-3265-bc7f-9e66857b016b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /jp143-d2xddxxj, ws-headers: {Host: v143a.toddns.tk}, udp: true}
+  - {name: 澳大利亚 Kooweerup Secondary College, server: 203.30.189.2, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: fr.v2ray1.xyz}, udp: true}
+  - {name: _AM_亚美尼亚->🇫🇷_FR_法国, server: 185.162.228.2, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: fr.v2ray1.xyz}, udp: true}
+  - {name: 🇸🇬_SG_新加坡 2, server: 18.143.123.35, port: 80, type: vmess, uuid: 68df4838-46d0-4b5b-c3f0-a40ec7063245, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.143.123.35}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -133,6 +140,13 @@ proxy-groups:
       - 🇭🇰 香港 43
       - 🇺🇲 美国 44
       - 🇨🇳 中国 45
+      - 🇺🇸 美国CloudFlare公司CDN节点(shopify) 16
+      - 🇭🇰_HK_香港->🇫🇷_FR_法国
+      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 澳大利亚 Kooweerup Secondary College
+      - _AM_亚美尼亚->🇫🇷_FR_法国
+      - 🇸🇬_SG_新加坡 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -190,6 +204,13 @@ proxy-groups:
       - 🇭🇰 香港 43
       - 🇺🇲 美国 44
       - 🇨🇳 中国 45
+      - 🇺🇸 美国CloudFlare公司CDN节点(shopify) 16
+      - 🇭🇰_HK_香港->🇫🇷_FR_法国
+      - 美国 CloudFlare节点
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 澳大利亚 Kooweerup Secondary College
+      - _AM_亚美尼亚->🇫🇷_FR_法国
+      - 🇸🇬_SG_新加坡 2
   - name: 🎥 NETFLIX
     type: select
     proxies:
