@@ -25,8 +25,8 @@ dns:
       - 240.0.0.0/4
 proxies:
   - {name: 🇺🇸 美国_洛杉矶1SSR, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 🇫🇷 法国节点001电信误用, server: frjs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: frjs.stablize.top, skip-cert-verify: true, udp: true}
-  - {name: 🇦🇺 澳大利亚节点002电信误用, server: aujs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: aujs.stablize.top, skip-cert-verify: true, udp: true}
+  - {name: 🇫🇷 法国节点001_大佬, server: frjs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: frjs.stablize.top, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇺 澳大利亚节点002_大佬, server: aujs.stablize.top, port: 443, type: trojan, password: 829ca50b-b30c-4406-9ded-fccce23d1312, sni: aujs.stablize.top, skip-cert-verify: true, udp: true}
   - {name: 🇷🇺 俄罗斯联邦 2, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
   - {name: 🇺🇸 美国 16, server: 162.159.58.13, port: 443, type: vmess, uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /5QNROSRV, ws-headers: {Host: lg2.v2ray6.xyz}, udp: true}
   - {name: 🇺🇸 美国CloudFlare节点 9, server: 162.159.255.200, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: us-1.acyun.eu.org}, udp: true}
@@ -89,8 +89,8 @@ proxy-groups:
       - DIRECT
       - ♻️ 自动选择
       - 🇺🇸 美国_洛杉矶1SSR
-      - 🇫🇷 法国节点001电信误用
-      - 🇦🇺 澳大利亚节点002电信误用
+      - 🇫🇷 法国节点001_大佬
+      - 🇦🇺 澳大利亚节点002_大佬
       - 🇷🇺 俄罗斯联邦 2
       - 🇺🇸 美国 16
       - 🇺🇸 美国CloudFlare节点 9
@@ -153,8 +153,8 @@ proxy-groups:
     tolerance: 100
     proxies:
       - 🇺🇸 美国_洛杉矶1SSR
-      - 🇫🇷 法国节点001电信误用
-      - 🇦🇺 澳大利亚节点002电信误用
+      - 🇫🇷 法国节点001_大佬
+      - 🇦🇺 澳大利亚节点002_大佬
       - 🇷🇺 俄罗斯联邦 2
       - 🇺🇸 美国 16
       - 🇺🇸 美国CloudFlare节点 9
