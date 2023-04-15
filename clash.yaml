@@ -243,7 +243,7 @@ rules:
  - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
  - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
  - DOMAIN-KEYWORD,1drv,🚀 节点选择
- - DOMAIN-KEYWORD,microsoft,DIRECT
+ - DOMAIN-KEYWORD,microsoft,🚀 节点选择
  - DOMAIN-SUFFIX,aadrm.com,🚀 节点选择
  - DOMAIN-SUFFIX,acompli.com,🚀 节点选择
  - DOMAIN-SUFFIX,acompli.net,🚀 节点选择
