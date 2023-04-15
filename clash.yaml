@@ -31,16 +31,16 @@ proxies:
   - {name: _🇸🇬_新加坡 17, server: sg1.fightertunnel.xyz, port: 80, type: vmess, uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vmess, headers: {Host: sg1.fightertunnel.xyz}}}
   - {name: _🇸🇬_新加坡 233, server: cloud.cluster.download.cloudsys.buzz, port: 80, type: vmess, uuid: 522e8c21-156c-4125-b821-755956840e64, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /msg, headers: {Host: cloud.cluster.download.cloudsys.buzz}}}
   - {name: _🇨🇳_台湾 90, server: tw1.sanfen004.me, port: 443, type: vmess, uuid: ae63c769-7b4f-4916-b575-9214639fcb8b, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: www.microsoft.com}}}
-  - {"name": "🇭🇰HK_24","server":"hk12.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "🇭🇰HK_25","server":"hk10.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "🇭🇰HK_26","server":"hk2.microsoftjs.top","type":"trojan","port":80,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "🇭🇰HK_27","server":"hk4.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "🇭🇰HK_28","server":"hk2.microsoftjs.top","type":"trojan","port":80,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "🇭🇰HK_29","server":"hk4.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "🇭🇰HK_30","server":"hk14.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "🇭🇰HK_157","server":"143.42.31.89","type":"vmess","country":"🇺🇸US","port":443,"uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"cipher":"auto","network":"ws","ws-path":"/chat","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true}
-  - {"name": "🇭🇰HK_173","server":"aujs.stablize.top","type":"trojan","country":"🇺🇸US","port":443,"password":"c0cf56d4-08a7-4436-9e6a-3feebe142706","skip-cert-verify":true,"udp":true}
-  - {"name": "🇭🇰HK_179","server":"152.70.74.66","type":"trojan","country":"🇺🇸US","port":443,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"udp":true}
+  - {"name": "_🇭🇰HK_24","server":"hk12.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "_🇭🇰HK_25","server":"hk10.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "_🇭🇰HK_26","server":"hk2.microsoftjs.top","type":"trojan","port":80,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "_🇭🇰HK_27","server":"hk4.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "_🇭🇰HK_28","server":"hk2.microsoftjs.top","type":"trojan","port":80,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "_🇭🇰HK_29","server":"hk4.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "_🇭🇰HK_30","server":"hk14.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "_🇭🇰HK_157","server":"143.42.31.89","type":"vmess","country":"🇺🇸US","port":443,"uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"cipher":"auto","network":"ws","ws-path":"/chat","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true}
+  - {"name": "_🇭🇰HK_173","server":"aujs.stablize.top","type":"trojan","country":"🇺🇸US","port":443,"password":"c0cf56d4-08a7-4436-9e6a-3feebe142706","skip-cert-verify":true,"udp":true}
+  - {"name": "_🇭🇰HK_179","server":"152.70.74.66","type":"trojan","country":"🇺🇸US","port":443,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"udp":true}
   - {name: _🇭🇰_香港 6, server: 103.160.204.15, port: 443, type: vmess, uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /AUIKN8AU, headers: {Host: lg1.v2ray6.xyz}}}
   - {name: _🇭🇰_香港 97, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: fr.v2ray1.xyz}}}
   - {name: _🇭🇰_香港 13, server: 103.160.204.12, port: 443, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ECTCJ0DF, headers: {Host: 154.v2ray3.xyz}}}
@@ -81,16 +81,16 @@ proxy-groups:
       - _🇸🇬_新加坡 17
       - _🇸🇬_新加坡 233
       - _🇨🇳_台湾 90
-      - "🇭🇰HK_24"
-      - "🇭🇰HK_25"
-      - "🇭🇰HK_26"
-      - "🇭🇰HK_27"
-      - "🇭🇰HK_28"
-      - "🇭🇰HK_29"
-      - "🇭🇰HK_30"
-      - "🇭🇰HK_157"
-      - "🇭🇰HK_173"
-      - "🇭🇰HK_179"
+      - "_🇭🇰HK_24"
+      - "_🇭🇰HK_25"
+      - "_🇭🇰HK_26"
+      - "_🇭🇰HK_27"
+      - "_🇭🇰HK_28"
+      - "_🇭🇰HK_29"
+      - "_🇭🇰HK_30"
+      - "_🇭🇰HK_157"
+      - "_🇭🇰HK_173"
+      - "_🇭🇰HK_179"
       - _🇭🇰_香港 6
       - _🇭🇰_香港 97
       - _🇭🇰_香港 13
@@ -129,16 +129,16 @@ proxy-groups:
       - _🇸🇬_新加坡 17
       - _🇸🇬_新加坡 233
       - _🇨🇳_台湾 90
-      - "🇭🇰HK_24"
-      - "🇭🇰HK_25"
-      - "🇭🇰HK_26"
-      - "🇭🇰HK_27"
-      - "🇭🇰HK_28"
-      - "🇭🇰HK_29"
-      - "🇭🇰HK_30"
-      - "🇭🇰HK_157"
-      - "🇭🇰HK_173"
-      - "🇭🇰HK_179"
+      - "_🇭🇰HK_24"
+      - "_🇭🇰HK_25"
+      - "_🇭🇰HK_26"
+      - "_🇭🇰HK_27"
+      - "_🇭🇰HK_28"
+      - "_🇭🇰HK_29"
+      - "_🇭🇰HK_30"
+      - "_🇭🇰HK_157"
+      - "_🇭🇰HK_173"
+      - "_🇭🇰HK_179"
       - _🇭🇰_香港 6
       - _🇭🇰_香港 97
       - _🇭🇰_香港 13
@@ -174,16 +174,16 @@ proxy-groups:
       - _🇸🇬_新加坡 17
       - _🇸🇬_新加坡 233
       - _🇨🇳_台湾 90
-      - "🇭🇰HK_24"
-      - "🇭🇰HK_25"
-      - "🇭🇰HK_26"
-      - "🇭🇰HK_27"
-      - "🇭🇰HK_28"
-      - "🇭🇰HK_29"
-      - "🇭🇰HK_30"
-      - "🇭🇰HK_157"
-      - "🇭🇰HK_173"
-      - "🇭🇰HK_179"
+      - "_🇭🇰HK_24"
+      - "_🇭🇰HK_25"
+      - "_🇭🇰HK_26"
+      - "_🇭🇰HK_27"
+      - "_🇭🇰HK_28"
+      - "_🇭🇰HK_29"
+      - "_🇭🇰HK_30"
+      - "_🇭🇰HK_157"
+      - "_🇭🇰HK_173"
+      - "_🇭🇰HK_179"
       - _🇭🇰_香港 6
       - _🇭🇰_香港 97
       - _🇭🇰_香港 13
@@ -243,7 +243,7 @@ rules:
  - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
  - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
  - DOMAIN-KEYWORD,1drv,🚀 节点选择
- - DOMAIN-KEYWORD,microsoft,🚀 节点选择
+ - DOMAIN-KEYWORD,microsoft,DIRECT
  - DOMAIN-SUFFIX,aadrm.com,🚀 节点选择
  - DOMAIN-SUFFIX,acompli.com,🚀 节点选择
  - DOMAIN-SUFFIX,acompli.net,🚀 节点选择
