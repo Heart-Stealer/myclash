@@ -31,6 +31,16 @@ proxies:
   - {name: _🇸🇬_新加坡 17, server: sg1.fightertunnel.xyz, port: 80, type: vmess, uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vmess, headers: {Host: sg1.fightertunnel.xyz}}}
   - {name: _🇸🇬_新加坡 233, server: cloud.cluster.download.cloudsys.buzz, port: 80, type: vmess, uuid: 522e8c21-156c-4125-b821-755956840e64, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /msg, headers: {Host: cloud.cluster.download.cloudsys.buzz}}}
   - {name: _🇨🇳_台湾 90, server: tw1.sanfen004.me, port: 443, type: vmess, uuid: ae63c769-7b4f-4916-b575-9214639fcb8b, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: www.microsoft.com}}}
+  - {"name": "🇭🇰HK_24","server":"hk12.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "🇭🇰HK_25","server":"hk10.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "🇭🇰HK_26","server":"hk2.microsoftjs.top","type":"trojan","port":80,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "🇭🇰HK_27","server":"hk4.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "🇭🇰HK_28","server":"hk2.microsoftjs.top","type":"trojan","port":80,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "🇭🇰HK_29","server":"hk4.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "🇭🇰HK_30","server":"hk14.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
+  - {"name": "🇭🇰HK_157","server":"143.42.31.89","type":"vmess","country":"🇺🇸US","port":443,"uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"cipher":"auto","network":"ws","ws-path":"/chat","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true}
+  - {"name": "🇭🇰HK_173","server":"aujs.stablize.top","type":"trojan","country":"🇺🇸US","port":443,"password":"c0cf56d4-08a7-4436-9e6a-3feebe142706","skip-cert-verify":true,"udp":true}
+  - {"name": "🇭🇰HK_179","server":"152.70.74.66","type":"trojan","country":"🇺🇸US","port":443,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"udp":true}
   - {name: _🇭🇰_香港 6, server: 103.160.204.15, port: 443, type: vmess, uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /AUIKN8AU, headers: {Host: lg1.v2ray6.xyz}}}
   - {name: _🇭🇰_香港 97, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: fr.v2ray1.xyz}}}
   - {name: _🇭🇰_香港 13, server: 103.160.204.12, port: 443, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ECTCJ0DF, headers: {Host: 154.v2ray3.xyz}}}
@@ -57,29 +67,30 @@ proxies:
   - {name: _🇺🇲_美国 70 , server: 172.67.86.87, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
   - {name: _🇺🇲_美国CloudFlare节点 3 , server: 162.159.255.205, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: us-1.acyun.eu.org}, udp: true}
   - {name: _🇺🇲_美国CloudFlare节点 15, server: quiz.vidio.com, port: 443, type: vmess, uuid: e6442903-4753-4783-8916-ac47c8080e4f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: dynamic-sg3b.obfs.xyz}, udp: true}
-  - {"name": "Relay_-🇺🇸US_24","server":"hk12.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "Relay_-🇺🇸US_25","server":"hk10.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "Relay_-🇺🇸US_26","server":"hk2.microsoftjs.top","type":"trojan","port":80,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "Relay_-🇺🇸US_27","server":"hk4.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "Relay_-🇺🇸US_28","server":"hk2.microsoftjs.top","type":"trojan","port":80,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "Relay_-🇺🇸US_29","server":"hk4.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "Relay_-🇦🇺AU_26","server":"hk14.microsoftjs.top","type":"trojan","port":443,"password":"932fb8f8-e1ca-4339-9d71-2d74757fca41","sni":"tls.microsoftjs.top","skip-cert-verify":true}
-  - {"name": "🇺🇸US_157","server":"143.42.31.89","type":"vmess","country":"🇺🇸US","port":443,"uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"cipher":"auto","network":"ws","ws-path":"/chat","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true}
-  - {"name": "🇺🇸US_173","server":"aujs.stablize.top","type":"trojan","country":"🇺🇸US","port":443,"password":"c0cf56d4-08a7-4436-9e6a-3feebe142706","skip-cert-verify":true,"udp":true}
-  - {"name": "🇺🇸US_179","server":"152.70.74.66","type":"trojan","country":"🇺🇸US","port":443,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"udp":true}
 proxy-groups:
   - name: 🚀 节点选择 #🔰 节点选择
     type: select
     proxies:
       - DIRECT
       - ♻️ 自动选择
-      -  🔰 美国地区
+      - 🔰 美国地区
+      - 🔰 亚太地区
       - _🇫🇷_法国_大佬
       - _🇦🇺_澳大利亚_大佬
       - _🇷🇺_俄罗斯联邦
       - _🇸🇬_新加坡 17
       - _🇸🇬_新加坡 233
       - _🇨🇳_台湾 90
+      - "🇭🇰HK_24"
+      - "🇭🇰HK_25"
+      - "🇭🇰HK_26"
+      - "🇭🇰HK_27"
+      - "🇭🇰HK_28"
+      - "🇭🇰HK_29"
+      - "🇭🇰HK_30"
+      - "🇭🇰HK_157"
+      - "🇭🇰HK_173"
+      - "🇭🇰HK_179"
       - _🇭🇰_香港 6
       - _🇭🇰_香港 97
       - _🇭🇰_香港 13
@@ -90,16 +101,6 @@ proxy-groups:
       - _🇯🇵_日本
       - _🇰🇷_韩国 72
       - _🇮🇳_印度 214
-      - "Relay_-🇺🇸US_24"
-      - "Relay_-🇺🇸US_25"
-      - "Relay_-🇺🇸US_26"
-      - "Relay_-🇺🇸US_27"
-      - "Relay_-🇺🇸US_28"
-      - "Relay_-🇺🇸US_29"
-      - "Relay_-🇦🇺AU_26"
-      - "🇺🇸US_157"
-      - "🇺🇸US_173"
-      - "🇺🇸US_179"
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
@@ -128,6 +129,16 @@ proxy-groups:
       - _🇸🇬_新加坡 17
       - _🇸🇬_新加坡 233
       - _🇨🇳_台湾 90
+      - "🇭🇰HK_24"
+      - "🇭🇰HK_25"
+      - "🇭🇰HK_26"
+      - "🇭🇰HK_27"
+      - "🇭🇰HK_28"
+      - "🇭🇰HK_29"
+      - "🇭🇰HK_30"
+      - "🇭🇰HK_157"
+      - "🇭🇰HK_173"
+      - "🇭🇰HK_179"
       - _🇭🇰_香港 6
       - _🇭🇰_香港 97
       - _🇭🇰_香港 13
@@ -138,16 +149,6 @@ proxy-groups:
       - _🇯🇵_日本
       - _🇰🇷_韩国 72
       - _🇮🇳_印度 214
-      - "Relay_-🇺🇸US_24"
-      - "Relay_-🇺🇸US_25"
-      - "Relay_-🇺🇸US_26"
-      - "Relay_-🇺🇸US_27"
-      - "Relay_-🇺🇸US_28"
-      - "Relay_-🇺🇸US_29"
-      - "Relay_-🇦🇺AU_26"
-      - "🇺🇸US_157"
-      - "🇺🇸US_173"
-      - "🇺🇸US_179"
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
@@ -164,22 +165,41 @@ proxy-groups:
       - _🇺🇲_美国 70 
       - _🇺🇲_美国CloudFlare节点 3 
       - _🇺🇲_美国CloudFlare节点 15
+  - name: 🔰 亚太地区
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 100
+    proxies:
+      - _🇸🇬_新加坡 17
+      - _🇸🇬_新加坡 233
+      - _🇨🇳_台湾 90
+      - "🇭🇰HK_24"
+      - "🇭🇰HK_25"
+      - "🇭🇰HK_26"
+      - "🇭🇰HK_27"
+      - "🇭🇰HK_28"
+      - "🇭🇰HK_29"
+      - "🇭🇰HK_30"
+      - "🇭🇰HK_157"
+      - "🇭🇰HK_173"
+      - "🇭🇰HK_179"
+      - _🇭🇰_香港 6
+      - _🇭🇰_香港 97
+      - _🇭🇰_香港 13
+      - _🇭🇰_香港 43
+      - _🇮🇳_印度->🇭🇰_HK_香港
+      - _亚太地区 12
+      - _🇯🇵_日本_142
+      - _🇯🇵_日本
+      - _🇰🇷_韩国 72
+      - _🇮🇳_印度 214
   - name: 🔰 美国地区
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 100
     proxies:
-      - "Relay_-🇺🇸US_24"
-      - "Relay_-🇺🇸US_25"
-      - "Relay_-🇺🇸US_26"
-      - "Relay_-🇺🇸US_27"
-      - "Relay_-🇺🇸US_28"
-      - "Relay_-🇺🇸US_29"
-      - "Relay_-🇦🇺AU_26"
-      - "🇺🇸US_157"
-      - "🇺🇸US_173"
-      - "🇺🇸US_179"
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
