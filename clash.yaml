@@ -29,8 +29,8 @@ dns:
       - 240.0.0.0/4
 proxies:
   - {"name": "_🇺🇸_甲骨文US","type":"vmess","server":"192.9.243.110","port":80,"cipher":"auto","uuid":"17c1e494-b9f5-4fc3-f127-679312a8d214","alterId":0,"tls":false,"skip-cert-verify": false,"servername": "","network": "ws","ws-opts":{"path": "/play"}}
-  - {"name": "_🇭🇰尽头のAzureHK","type":"trojan","server":"20.2.80.133","port":443,"udp":true,"password":"123456","skip-cert-verify": false,"network": "tcp"}
-  - {"name": "_🇭🇰尽头の华为云HK","type":"trojan","server":"onlinec.cc","port":1443,"udp":true,"password":"wuRjkSqKpfND","skip-cert-verify": false,"network": "tcp"}
+  - {"name": "_🇭🇰尽头のAzureHK","type":"trojan","server":"20.2.80.133","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
+  - {"name": "_🇭🇰尽头の华为云HK","type":"trojan","server":"onlinec.cc","port":1443,"udp":true,"password":"wuRjkSqKpfND","skip-cert-verify":true,"network":"tcp"}
   - {"name": "_🇫🇷_法国流媒体","type":"trojan","server":"frjs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
   - {"name": "_🇦🇺_澳大利亚流媒体","type":"trojan","server":"aujs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
   - {"name": "_🇭🇰_香港_157","server":"143.42.31.89","type":"vmess","country":"🇺🇸US","port":443,"uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"cipher":"auto","network":"ws","ws-path":"/chat","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify": false}
