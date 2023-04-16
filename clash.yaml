@@ -42,8 +42,8 @@ proxies:
   - {"name": "_🇭🇰HK_173","server":"aujs.stablize.top","type":"trojan","country":"🇺🇸US","port":443,"password":"c0cf56d4-08a7-4436-9e6a-3feebe142706","skip-cert-verify":true,"udp":true}
   - {"name": "_🇭🇰HK_179","server":"152.70.74.66","type":"trojan","country":"🇺🇸US","port":443,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"udp":true}
   - {name: _🇭🇰_香港 6, server: 103.160.204.15, port: 443, type: vmess, uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /AUIKN8AU, headers: {Host: lg1.v2ray6.xyz}}}
-  - {name: _🇭🇰_香港 97, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: fr.v2ray1.xyz}}}
   - {name: _🇭🇰_香港 13, server: 103.160.204.12, port: 443, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ECTCJ0DF, headers: {Host: 154.v2ray3.xyz}}}
+  - {name: _🇭🇰_香港 97, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: fr.v2ray1.xyz}}}
   - {name: _🇭🇰_香港 43, server: 103.160.204.13, port: 443, type: vmess, uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /AUIKN8AU, headers: {Host: lg1.v2ray6.xyz}}}
   - {name: _🇮🇳_印度->🇭🇰_HK_香港, server: 139.59.12.30, port: 443, client-fingerprint: chrome, type: ssr, cipher: aes-256-cfb, password: vyunme, tfo: false, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 17422:TTp0SX, obfs-param: ab93117422.jd.h%%%}
   - {name: _亚太地区 12, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: fr.v2ray1.xyz}, udp: true}
@@ -54,6 +54,7 @@ proxies:
   - {name: _🇺🇲_美国 130, server: www.gov.tw, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}}
   - {name: _🇺🇲_美国 168, server: 162.159.255.200, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}}
   - {name: _🇺🇲_美国 178, server: www.udemy.com, port: 443, type: vmess, uuid: e6442903-4753-4783-8916-ac47c8080e4f, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /, headers: {Host: dynamic-sg3b.obfs.xyz}}}
+  - {name: _🇺🇲_美国 206, server: quiz.vidio.com, port: 443, type: vmess, uuid: e6442903-4753-4783-8916-ac47c8080e4f, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /, headers: {Host: dynamic-sg3b.obfs.xyz}}}
   - {name: _🇺🇲_美国 225, server: els200.jslist.tk, port: 8443, type: vmess, uuid: e30cfa80-bc2c-43df-e808-97876aee77e2, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /wo.php, headers: {Host: els200.jslist.tk}}}
   - {name: _🇺🇲_美国 116, server: 172.67.57.22, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
   - {name: _🇺🇲_美国 144, server: fr2.cachexy.ga, port: 80, type: vmess, uuid: c8c9867b-df9a-4217-8161-67824e20cb57, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /g5D0hFMY/, headers: {Host: fr2.cachexy.ga}}}
@@ -92,8 +93,8 @@ proxy-groups:
       - "_🇭🇰HK_173"
       - "_🇭🇰HK_179"
       - _🇭🇰_香港 6
-      - _🇭🇰_香港 97
       - _🇭🇰_香港 13
+      - _🇭🇰_香港 97
       - _🇭🇰_香港 43
       - _🇮🇳_印度->🇭🇰_HK_香港
       - _亚太地区 12
@@ -104,6 +105,7 @@ proxy-groups:
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
+      - _🇺🇲_美国 206
       - _🇺🇲_美国 225
       - _🇺🇲_美国 116
       - _🇺🇲_美国 144
@@ -140,8 +142,8 @@ proxy-groups:
       - "_🇭🇰HK_173"
       - "_🇭🇰HK_179"
       - _🇭🇰_香港 6
-      - _🇭🇰_香港 97
       - _🇭🇰_香港 13
+      - _🇭🇰_香港 97
       - _🇭🇰_香港 43
       - _🇮🇳_印度->🇭🇰_HK_香港
       - _亚太地区 12
@@ -152,6 +154,7 @@ proxy-groups:
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
+      - _🇺🇲_美国 206
       - _🇺🇲_美国 225
       - _🇺🇲_美国 116
       - _🇺🇲_美国 144
@@ -185,8 +188,8 @@ proxy-groups:
       - "_🇭🇰HK_173"
       - "_🇭🇰HK_179"
       - _🇭🇰_香港 6
-      - _🇭🇰_香港 97
       - _🇭🇰_香港 13
+      - _🇭🇰_香港 97
       - _🇭🇰_香港 43
       - _🇮🇳_印度->🇭🇰_HK_香港
       - _亚太地区 12
@@ -203,6 +206,7 @@ proxy-groups:
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
+      - _🇺🇲_美国 206
       - _🇺🇲_美国 225
       - _🇺🇲_美国 116
       - _🇺🇲_美国 144
