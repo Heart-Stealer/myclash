@@ -10,8 +10,11 @@ dns:
     - 1.2.4.8
     - 114.114.114.114
     - 223.5.5.5
-    - 119.29.29.29 
-    - 8.8.8.8
+    - 223.6.6.6
+    - 119.29.29.29
+    - 180.76.76.76
+    - 183.60.83.19
+    - 183.60.82.98
     - tls://13800000000.rubyfish.cn:853
     - https://13800000000.rubyfish.cn/
   fallback:
@@ -25,18 +28,18 @@ dns:
     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
       - 240.0.0.0/4
 proxies:
-  - {"name": "_🇺🇸_甲骨文US","type":"vmess","server":"192.9.243.110","port":80,"cipher":"auto","uuid":"17c1e494-b9f5-4fc3-f127-679312a8d214","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/play"}}
-  - {"name": "_🇭🇰尽头のAzureHK","type":"trojan","server":"20.2.80.133","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
-  - {"name": "_🇭🇰尽头の华为云HK","type":"trojan","server":"onlinec.cc","port":1443,"udp":true,"password":"wuRjkSqKpfND","skip-cert-verify":true,"network":"tcp"}
-  - {"name": "_🇫🇷_法国流媒体","type":"trojan","server":"frjs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify":true,"network":"tcp"}
-  - {"name": "_🇦🇺_澳大利亚流媒体","type":"trojan","server":"aujs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify":true,"network":"tcp"}
-  - {"name": "_🇭🇰_香港_157","server":"143.42.31.89","type":"vmess","country":"🇺🇸US","port":443,"uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"cipher":"auto","network":"ws","ws-path":"/chat","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true}
+  - {"name": "_🇺🇸_甲骨文US","type":"vmess","server":"192.9.243.110","port":80,"cipher":"auto","uuid":"17c1e494-b9f5-4fc3-f127-679312a8d214","alterId":0,"tls":false,"skip-cert-verify": false,"servername": "","network": "ws","ws-opts":{"path": "/play"}}
+  - {"name": "_🇭🇰尽头のAzureHK","type":"trojan","server":"20.2.80.133","port":443,"udp":true,"password":"123456","skip-cert-verify": false,"network": "tcp"}
+  - {"name": "_🇭🇰尽头の华为云HK","type":"trojan","server":"onlinec.cc","port":1443,"udp":true,"password":"wuRjkSqKpfND","skip-cert-verify": false,"network": "tcp"}
+  - {"name": "_🇫🇷_法国流媒体","type":"trojan","server":"frjs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
+  - {"name": "_🇦🇺_澳大利亚流媒体","type":"trojan","server":"aujs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
+  - {"name": "_🇭🇰_香港_157","server":"143.42.31.89","type":"vmess","country":"🇺🇸US","port":443,"uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"cipher":"auto","network":"ws","ws-path":"/chat","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify": false}
   - {name: _🇷🇺_俄罗斯联邦, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
   - {name: _🇨🇳_台湾 90, server: tw1.sanfen004.me, port: 443, type: vmess, uuid: ae63c769-7b4f-4916-b575-9214639fcb8b, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: www.microsoft.com}}}
   - {name: _🇸🇬_新加坡 233, server: cloud.cluster.download.cloudsys.buzz, port: 80, type: vmess, uuid: 522e8c21-156c-4125-b821-755956840e64, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /msg, headers: {Host: cloud.cluster.download.cloudsys.buzz}}}
-  - {name: _🇮🇳_印度 214, server: 152.70.74.66, port: 443, type: trojan, password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e, skip-cert-verify: true}
+  - {name: _🇮🇳_印度 214, server: 152.70.74.66, port: 443, type: trojan, password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e, skip-cert-verify: false}
   - {name: _🇸🇬_新加坡 17, server: sg1.fightertunnel.xyz, port: 80, type: vmess, uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vmess, headers: {Host: sg1.fightertunnel.xyz}}}
-  - {name: _亚太地区 12, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: fr.v2ray1.xyz}, udp: true}
+  - {name: _亚太地区 12, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: fr.v2ray1.xyz}, udp: true}
   - {name: _🇯🇵_日本_142, server: lop.janp2.gfwcaonimanmsl.ml, port: 21980, type: vmess, uuid: dd5b858a-49f5-447a-aa72-e31985f479c5, alterId: 0, cipher: auto, tls: false}
   - {name: _🇯🇵_日本, server: 140.83.63.38, port: 24445, client-fingerprint: chrome, type: vmess, uuid: 94c5ef37-4d82-49f9-c624-f01259374a17, alterId: 64, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
   - {name: _🇰🇷_韩国 72, server: 131.186.21.62, port: 4433, type: ss, cipher: aes-256-gcm, password: yy595721}
