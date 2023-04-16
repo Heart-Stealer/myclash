@@ -51,6 +51,7 @@ proxies:
   - {name: _🇯🇵_日本, server: 140.83.63.38, port: 24445, client-fingerprint: chrome, type: vmess, uuid: 94c5ef37-4d82-49f9-c624-f01259374a17, alterId: 64, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
   - {name: _🇰🇷_韩国 72, server: 131.186.21.62, port: 4433, type: ss, cipher: aes-256-gcm, password: yy595721}
   - {name: _🇮🇳_印度 214, server: 152.70.74.66, port: 443, type: trojan, password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e, skip-cert-verify: true}
+  - {name: _甲骨文US, server: 192.9.243.110, port: 80, type: vmess, uuid: 17c1e494-b9f5-4fc3-f127-679312a8d214, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /play, ws-headers: {Host: 192.9.243.110}, udp: true}
   - {name: _🇺🇲_美国 130, server: www.gov.tw, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}}
   - {name: _🇺🇲_美国 168, server: 162.159.255.200, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}}
   - {name: _🇺🇲_美国 178, server: www.udemy.com, port: 443, type: vmess, uuid: e6442903-4753-4783-8916-ac47c8080e4f, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /, headers: {Host: dynamic-sg3b.obfs.xyz}}}
@@ -102,6 +103,7 @@ proxy-groups:
       - _🇯🇵_日本
       - _🇰🇷_韩国 72
       - _🇮🇳_印度 214
+      - _甲骨文US
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
@@ -151,6 +153,7 @@ proxy-groups:
       - _🇯🇵_日本
       - _🇰🇷_韩国 72
       - _🇮🇳_印度 214
+      - _甲骨文US
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
@@ -200,9 +203,10 @@ proxy-groups:
   - name: 🔰 美国地区
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 600
+    interval: 300
     tolerance: 100
     proxies:
+      - _甲骨文US
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
