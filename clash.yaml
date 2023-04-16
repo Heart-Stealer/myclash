@@ -34,92 +34,107 @@ proxies:
   - {"name": "_🇫🇷_法国流媒体","type":"trojan","server":"frjs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
   - {"name": "_🇦🇺_澳大利亚流媒体","type":"trojan","server":"aujs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
   - {"name": "_🇭🇰_香港_157","server":"143.42.31.89","type":"vmess","country":"🇺🇸US","port":443,"uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"cipher":"auto","network":"ws","ws-path":"/chat","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify": false}
-  - {name: _🇷🇺_俄罗斯联邦, server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: _🇨🇳_台湾 90, server: tw1.sanfen004.me, port: 443, type: vmess, uuid: ae63c769-7b4f-4916-b575-9214639fcb8b, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: www.microsoft.com}}}
-  - {name: _🇸🇬_新加坡 233, server: cloud.cluster.download.cloudsys.buzz, port: 80, type: vmess, uuid: 522e8c21-156c-4125-b821-755956840e64, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /msg, headers: {Host: cloud.cluster.download.cloudsys.buzz}}}
-  - {name: _🇮🇳_印度 214, server: 152.70.74.66, port: 443, type: trojan, password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e, skip-cert-verify: false}
-  - {name: _🇸🇬_新加坡 17, server: sg1.fightertunnel.xyz, port: 80, type: vmess, uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vmess, headers: {Host: sg1.fightertunnel.xyz}}}
-  - {name: _亚太地区 12, server: 103.160.204.14, port: 80, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: fr.v2ray1.xyz}, udp: true}
-  - {name: _🇯🇵_日本_142, server: lop.janp2.gfwcaonimanmsl.ml, port: 21980, type: vmess, uuid: dd5b858a-49f5-447a-aa72-e31985f479c5, alterId: 0, cipher: auto, tls: false}
-  - {name: _🇯🇵_日本, server: 140.83.63.38, port: 24445, client-fingerprint: chrome, type: vmess, uuid: 94c5ef37-4d82-49f9-c624-f01259374a17, alterId: 64, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
-  - {name: _🇰🇷_韩国 72, server: 131.186.21.62, port: 4433, type: ss, cipher: aes-256-gcm, password: yy595721}
-  - {name: _🇺🇲_美国 11 , server: 172.67.86.79, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: hk-hytron.ilovescp.com}}}
-  - {name: _🇺🇲_美国 220, server: ping.pe, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 132, server: 172.67.113.82, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 96 , server: 172.67.199.253, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 9  , server: 172.67.217.222, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}}
-  - {name: _🇺🇲_美国 215, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/shirker?ed=2048", headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 70 , server: 172.67.86.87, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 28 , server: 172.67.250.239, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: dp2.scproxy.top}}}
-  - {name: _🇺🇲_美国 196, server: 172.67.140.193, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 36 , server: 172.67.86.214, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: lv2.sharecentrepro.org}}}
-  - {name: _🇺🇲_美国 223, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp2.scproxy.top}}}
-  - {name: _🇺🇲_美国 115, server: 172.67.21.219, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 144, server: fr2.cachexy.ga, port: 80, type: vmess, uuid: c8c9867b-df9a-4217-8161-67824e20cb57, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /g5D0hFMY/, headers: {Host: fr2.cachexy.ga}}}
-  - {name: _🇺🇲_美国 139, server: 172.67.84.93, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 206, server: quiz.vidio.com, port: 443, type: vmess, uuid: e6442903-4753-4783-8916-ac47c8080e4f, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /, headers: {Host: dynamic-sg3b.obfs.xyz}}}
-  - {name: _🇺🇲_美国 116, server: 172.67.57.22, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 74 , server: 172.67.98.34, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 163, server: 172.67.87.132, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇺🇲_美国 225, server: els200.jslist.tk, port: 8443, type: vmess, uuid: e30cfa80-bc2c-43df-e808-97876aee77e2, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /wo.php, headers: {Host: els200.jslist.tk}}}
-  - {name: _🇺🇲_美国 130, server: www.gov.tw, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}}
-  - {name: _🇺🇲_美国 168, server: 162.159.255.200, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}}
-  - {name: _🇺🇲_美国 178, server: www.udemy.com, port: 443, type: vmess, uuid: e6442903-4753-4783-8916-ac47c8080e4f, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /, headers: {Host: dynamic-sg3b.obfs.xyz}}}
+  - {name: _🇷🇺_俄罗斯  , server: t3.freegradely.xyz, port: 20022, type: ssr, cipher: aes-256-cfb, password: dongtaiwang.com, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: _🇨🇳_台湾 90 , server: tw1.sanfen004.me, port: 443, type: vmess, uuid: ae63c769-7b4f-4916-b575-9214639fcb8b, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: www.microsoft.com}}}
   - {name: _🇭🇰_香港_1号, server: 54.192.18.202, port: 80, type: vmess, uuid: e4b81f9f-00b7-40d4-dd74-f8c51945b944, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cg666, headers: {Host: dli35om2q81g1.cloudfront.net}}, udp: true}
   - {name: _🇭🇰_香港_2号, server: 13.227.54.89, port: 80, type: vmess, uuid: e4b81f9f-00b7-40d4-dd74-f8c51945b944, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cg666, headers: {Host: dli35om2q81g1.cloudfront.net}}, udp: true}
   - {name: _🇭🇰_香港_3号, server: 13.226.115.112, port: 80, type: vmess, uuid: e4b81f9f-00b7-40d4-dd74-f8c51945b944, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cg666, headers: {Host: dli35om2q81g1.cloudfront.net}}, udp: true}
   - {name: _🇭🇰_香港_4号, server: 13.226.125.199, port: 80, type: vmess, uuid: e4b81f9f-00b7-40d4-dd74-f8c51945b944, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cg666, headers: {Host: dli35om2q81g1.cloudfront.net}}, udp: true}
   - {name: _🇭🇰_香港_5号, server: 54.192.16.73, port: 80, type: vmess, uuid: e4b81f9f-00b7-40d4-dd74-f8c51945b944, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cg666, headers: {Host: dli35om2q81g1.cloudfront.net}}, udp: true}
-  - {name: _🇮🇷_伊朗_12, server: f-eu1.wvvvv.eu.org, port: 1, client-fingerprint: chrome, type: vmess, uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
-  - {name: _🇯🇵_日本_7 , server: cdn.739256.xyz, port: 80, client-fingerprint: chrome, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇯🇵_日本_14, server: cdn.739256.xyz, port: 80, client-fingerprint: chrome, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
-  - {name: _🇯🇵_日本_25, server: cdn.739256.xyz, port: 80, client-fingerprint: chrome, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: 🇭🇰 Relay 🇭🇰 Hong Kong 02, server: 223.111.129.116, port: 63078, type: vmess, uuid: c796ecaf-e6ca-3eba-96d3-21df44550cbc, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: hk-balancer.airport-v2.com}}, udp: true}
+  - {name: 🇭🇰 Hong Kong 04, server: 16.163.128.120, port: 80, type: vmess, uuid: 6ba2173f-7262-4db2-b41d-b3e4f38efd0b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /zasasdsmkhjn}, udp: true}
+  - {name: 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 02, server: 116.192.171.97, port: 8443, type: trojan, password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f, sni: 66.42.40.132, skip-cert-verify: false, udp: true}
+  - {name: 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03, server: official.taipeicitygovernment.kiev.ua, port: 8443, type: trojan, password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f, sni: 66.42.40.132, skip-cert-verify: false, udp: true}
+  - {name: 🇨🇳 Relay 🇹🇼 Taiwan 05, server: 14.29.124.168, port: 24000, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
+  - {name: 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 07, server: 223.111.129.116, port: 63088, type: vmess, uuid: c796ecaf-e6ca-3eba-96d3-21df44550cbc, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /mugua, headers: {Host: tw-load-balancer.myn1des.com}}, udp: true}
+  - {name: _🇮🇳_印度 214, server: 152.70.74.66, port: 443, type: trojan, password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e, skip-cert-verify: false}
+  - {name: _🇯🇵_日本_7  , server: cdn.739256.xyz, port: 80, client-fingerprint: chrome, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇯🇵_日本_14 , server: cdn.739256.xyz, port: 80, client-fingerprint: chrome, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇯🇵_日本_25 , server: cdn.739256.xyz, port: 80, client-fingerprint: chrome, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇯🇵_日本_   , server: 140.83.63.38, port: 24445, client-fingerprint: chrome, type: vmess, uuid: 94c5ef37-4d82-49f9-c624-f01259374a17, alterId: 64, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+  - {name: _🇯🇵_日本_142, server: lop.janp2.gfwcaonimanmsl.ml, port: 21980, type: vmess, uuid: dd5b858a-49f5-447a-aa72-e31985f479c5, alterId: 0, cipher: auto, tls: false}
+  - {name: _🇮🇷_伊朗_12 , server: f-eu1.wvvvv.eu.org, port: 1, client-fingerprint: chrome, type: vmess, uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+  - {name: _🇺🇲_美国 139, server: 172.67.84.93, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 132, server: 172.67.113.82, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 11 , server: 172.67.86.79, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: hk-hytron.ilovescp.com}}}
+  - {name: _🇺🇲_美国 96 , server: 172.67.199.253, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 28 , server: 172.67.250.239, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: dp2.scproxy.top}}}
+  - {name: _🇺🇲_美国 196, server: 172.67.140.193, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 6  , server: cf.515188.xyz, port: 8080, client-fingerprint: chrome, type: vmess, uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v3/download.getFile, headers: {Host: ssrsub.v03.ssrsub.com}}}
+  - {name: _🇺🇲_美国 215, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/shirker?ed=2048", headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 220, server: ping.pe, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 163, server: 172.67.87.132, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 116, server: 172.67.57.22, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 115, server: 172.67.21.219, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 144, server: fr2.cachexy.ga, port: 80, type: vmess, uuid: c8c9867b-df9a-4217-8161-67824e20cb57, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /g5D0hFMY/, headers: {Host: fr2.cachexy.ga}}}
+  - {name: _🇺🇲_美国 36 , server: 172.67.86.214, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: lv2.sharecentrepro.org}}}
+  - {name: _🇺🇲_美国 9  , server: 172.67.217.222, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}}
+  - {name: _🇺🇲_美国 74 , server: 172.67.98.34, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 223, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp2.scproxy.top}}}
+  - {name: _🇺🇲_美国 130, server: www.gov.tw, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}}
+  - {name: _🇺🇲_美国 168, server: 162.159.255.200, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}}
+  - {name: _🇺🇲_美国 178, server: www.udemy.com, port: 443, type: vmess, uuid: e6442903-4753-4783-8916-ac47c8080e4f, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /, headers: {Host: dynamic-sg3b.obfs.xyz}}}
+  - {name: _🇺🇲_美国 206, server: quiz.vidio.com, port: 443, type: vmess, uuid: e6442903-4753-4783-8916-ac47c8080e4f, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /, headers: {Host: dynamic-sg3b.obfs.xyz}}}
+  - {name: _🇺🇲_美国 70 , server: 172.67.86.87, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}}
+  - {name: _🇺🇲_美国 225, server: els200.jslist.tk, port: 8443, type: vmess, uuid: e30cfa80-bc2c-43df-e808-97876aee77e2, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /wo.php, headers: {Host: els200.jslist.tk}}}
 proxy-groups:
   - name: 🚀 节点选择 #🔰 节点选择
     type: select
     proxies:
       - DIRECT
       - ♻️ 自动选择
+      - 🔰 小日本
+      - 🔰 港澳台
       - 🔰 美国地区
-      - 🔰 亚太地区
       - "_🇺🇸_甲骨文US"
       - "_🇫🇷_法国流媒体"
       - "_🇦🇺_澳大利亚流媒体"
       - "_🇭🇰_香港_157"
       - "_🇭🇰尽头のAzureHK"
-      - _🇷🇺_俄罗斯联邦
-      - _🇨🇳_台湾 90
-      - _🇺🇲_美国 11 
-      - _🇺🇲_美国 220
-      - _🇺🇲_美国 132
-      - _🇺🇲_美国 96 
-      - _🇺🇲_美国 9  
-      - _🇺🇲_美国 215
-      - _🇺🇲_美国 70 
-      - _🇺🇲_美国 28 
-      - _🇺🇲_美国 196
-      - _🇺🇲_美国 36 
-      - _🇺🇲_美国 223
-      - _🇺🇲_美国 115
-      - _🇺🇲_美国 144
-      - _🇺🇲_美国 139
-      - _🇺🇲_美国 206
-      - _🇺🇲_美国 116
-      - _🇺🇲_美国 74 
-      - _🇺🇲_美国 163
-      - _🇺🇲_美国 225
-      - _🇺🇲_美国 130
-      - _🇺🇲_美国 168
-      - _🇺🇲_美国 178
+      - "_🇭🇰尽头の华为云HK"
+      - _🇷🇺_俄罗斯  
+      - _🇨🇳_台湾 90 
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇮🇷_伊朗_12
-      - _🇯🇵_日本_7 
-      - _🇯🇵_日本_14
-      - _🇯🇵_日本_25
+      - 🇭🇰 Relay 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 04
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 02
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03
+      - 🇨🇳 Relay 🇹🇼 Taiwan 05
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 07
+      - _🇮🇳_印度 214
+      - _🇯🇵_日本_7  
+      - _🇯🇵_日本_14 
+      - _🇯🇵_日本_25 
+      - _🇯🇵_日本_   
+      - _🇯🇵_日本_142
+      - _🇮🇷_伊朗_12 
+      - _🇺🇲_美国 139
+      - _🇺🇲_美国 132
+      - _🇺🇲_美国 11 
+      - _🇺🇲_美国 96 
+      - _🇺🇲_美国 28 
+      - _🇺🇲_美国 196
+      - _🇺🇲_美国 6  
+      - _🇺🇲_美国 215
+      - _🇺🇲_美国 220
+      - _🇺🇲_美国 163
+      - _🇺🇲_美国 116
+      - _🇺🇲_美国 115
+      - _🇺🇲_美国 144
+      - _🇺🇲_美国 36 
+      - _🇺🇲_美国 9  
+      - _🇺🇲_美国 74 
+      - _🇺🇲_美国 223
+      - _🇺🇲_美国 130
+      - _🇺🇲_美国 168
+      - _🇺🇲_美国 178
+      - _🇺🇲_美国 206
+      - _🇺🇲_美国 70 
+      - _🇺🇲_美国 225
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -127,75 +142,84 @@ proxy-groups:
     tolerance: 100
     proxies:
       - "_🇺🇸_甲骨文US"
-      - "_🇭🇰尽头のAzureHK"
       - "_🇫🇷_法国流媒体"
       - "_🇦🇺_澳大利亚流媒体"
       - "_🇭🇰_香港_157"
-      - _🇷🇺_俄罗斯联邦
-      - _🇨🇳_台湾 90
-      - _🇸🇬_新加坡 17
-      - _🇸🇬_新加坡 233
-      - _亚太地区 12
-      - _🇯🇵_日本_142
-      - _🇯🇵_日本
-      - _🇰🇷_韩国 72
-      - _🇮🇳_印度 214
-      - _🇺🇲_美国 11 
-      - _🇺🇲_美国 220
-      - _🇺🇲_美国 132
-      - _🇺🇲_美国 96 
-      - _🇺🇲_美国 9  
-      - _🇺🇲_美国 215
-      - _🇺🇲_美国 70 
-      - _🇺🇲_美国 28 
-      - _🇺🇲_美国 196
-      - _🇺🇲_美国 36 
-      - _🇺🇲_美国 223
-      - _🇺🇲_美国 115
-      - _🇺🇲_美国 144
-      - _🇺🇲_美国 139
-      - _🇺🇲_美国 206
-      - _🇺🇲_美国 116
-      - _🇺🇲_美国 74 
-      - _🇺🇲_美国 163
-      - _🇺🇲_美国 225
-      - _🇺🇲_美国 130
-      - _🇺🇲_美国 168
-      - _🇺🇲_美国 178
+      - "_🇭🇰尽头のAzureHK"
+      - "_🇭🇰尽头の华为云HK"
+      - _🇷🇺_俄罗斯  
+      - _🇨🇳_台湾 90 
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇮🇷_伊朗_12
-      - _🇯🇵_日本_7 
-      - _🇯🇵_日本_14
-      - _🇯🇵_日本_25
-  - name: 🔰 亚太地区
+      - 🇭🇰 Relay 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 04
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 02
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03
+      - 🇨🇳 Relay 🇹🇼 Taiwan 05
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 07
+      - _🇮🇳_印度 214
+      - _🇯🇵_日本_7  
+      - _🇯🇵_日本_14 
+      - _🇯🇵_日本_25 
+      - _🇯🇵_日本_   
+      - _🇯🇵_日本_142
+      - _🇮🇷_伊朗_12 
+      - _🇺🇲_美国 139
+      - _🇺🇲_美国 132
+      - _🇺🇲_美国 11 
+      - _🇺🇲_美国 96 
+      - _🇺🇲_美国 28 
+      - _🇺🇲_美国 196
+      - _🇺🇲_美国 6  
+      - _🇺🇲_美国 215
+      - _🇺🇲_美国 220
+      - _🇺🇲_美国 163
+      - _🇺🇲_美国 116
+      - _🇺🇲_美国 115
+      - _🇺🇲_美国 144
+      - _🇺🇲_美国 36 
+      - _🇺🇲_美国 9  
+      - _🇺🇲_美国 74 
+      - _🇺🇲_美国 223
+      - _🇺🇲_美国 130
+      - _🇺🇲_美国 168
+      - _🇺🇲_美国 178
+      - _🇺🇲_美国 206
+      - _🇺🇲_美国 70 
+      - _🇺🇲_美国 225
+  - name: 🔰 小日本
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 100
     proxies:
-      - "_🇭🇰尽头のAzureHK"
+      - _🇯🇵_日本_7  
+      - _🇯🇵_日本_14 
+      - _🇯🇵_日本_25 
+  - name: 🔰 港澳台
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 100
+    proxies:
       - "_🇭🇰_香港_157"
-      - _🇨🇳_台湾 90
-      - _🇸🇬_新加坡 17
-      - _🇸🇬_新加坡 233
-      - _亚太地区 12
-      - _🇯🇵_日本_142
-      - _🇯🇵_日本
-      - _🇰🇷_韩国 72
-      - _🇮🇳_印度 214
+      - "_🇭🇰尽头のAzureHK"
+      - "_🇭🇰尽头の华为云HK"
+      - _🇨🇳_台湾 90 
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇮🇷_伊朗_12
-      - _🇯🇵_日本_7 
-      - _🇯🇵_日本_14
-      - _🇯🇵_日本_25
+      - 🇭🇰 Relay 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 04
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 02
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03
+      - 🇨🇳 Relay 🇹🇼 Taiwan 05
+      - 🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 07
   - name: 🔰 美国地区
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -203,28 +227,29 @@ proxy-groups:
     tolerance: 100
     proxies:
       - "_🇺🇸_甲骨文US"
-      - _🇺🇲_美国 11 
-      - _🇺🇲_美国 220
+      - _🇺🇲_美国 139
       - _🇺🇲_美国 132
+      - _🇺🇲_美国 11 
       - _🇺🇲_美国 96 
-      - _🇺🇲_美国 9  
-      - _🇺🇲_美国 215
-      - _🇺🇲_美国 70 
       - _🇺🇲_美国 28 
       - _🇺🇲_美国 196
-      - _🇺🇲_美国 36 
-      - _🇺🇲_美国 223
+      - _🇺🇲_美国 6  
+      - _🇺🇲_美国 215
+      - _🇺🇲_美国 220
+      - _🇺🇲_美国 163
+      - _🇺🇲_美国 116
       - _🇺🇲_美国 115
       - _🇺🇲_美国 144
-      - _🇺🇲_美国 139
-      - _🇺🇲_美国 206
-      - _🇺🇲_美国 116
+      - _🇺🇲_美国 36 
+      - _🇺🇲_美国 9  
       - _🇺🇲_美国 74 
-      - _🇺🇲_美国 163
-      - _🇺🇲_美国 225
+      - _🇺🇲_美国 223
       - _🇺🇲_美国 130
       - _🇺🇲_美国 168
       - _🇺🇲_美国 178
+      - _🇺🇲_美国 206
+      - _🇺🇲_美国 70 
+      - _🇺🇲_美国 225
   - name: 🎯 全球直连
     type: select
     proxies:
