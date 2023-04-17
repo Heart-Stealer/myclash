@@ -20,8 +20,8 @@ dns:
   fallback:
     - 8.8.8.8 # Google DNS （偏爱）
     - 8.8.4.4 # Google DNS （偏爱）
-    - tls://1.0.0.1:853 （偏爱）
-    - tls://dns.google:853 （偏爱）
+    - tls://1.0.0.1:853 # （偏爱）
+    - tls://dns.google:853 # （偏爱）
     - tls://13800000000.rubyfish.cn:853
   fallback-filter:
     geoip: true # 默认
