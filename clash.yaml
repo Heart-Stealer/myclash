@@ -28,7 +28,6 @@ dns:
     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
       - 240.0.0.0/4
 proxies:
-  - {"name": "_🇺🇸_甲骨文US","type":"vmess","server":"192.9.243.110","port":80,"cipher":"auto","uuid":"17c1e494-b9f5-4fc3-f127-679312a8d214","alterId":0,"tls":false,"skip-cert-verify": false,"servername": "","network": "ws","ws-opts":{"path": "/play"}}
   - {"name": "_🇭🇰尽头のAzureHK","type":"trojan","server":"20.2.80.133","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
   - {"name": "_🇭🇰尽头の华为云HK","type":"trojan","server":"onlinec.cc","port":1443,"udp":true,"password":"wuRjkSqKpfND","skip-cert-verify":true,"network":"tcp"}
   - {"name": "_🇫🇷_法国流媒体","type":"trojan","server":"frjs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
@@ -67,9 +66,6 @@ proxies:
   - {name: _🇺🇲_美国 116, server: 172.67.57.22, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}, udp: true}
   - {name: _🇺🇲_美国 115, server: 172.67.21.219, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}, udp: true}
   - {name: _🇺🇲_美国 74 , server: 172.67.98.34, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}, udp: true}
-  - {name: _🇺🇲_美国 215, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/shirker?ed=2048", headers: {Host: uk1.scproxy.top}}, udp: true}
-  - {name: _🇺🇲_美国 223, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp2.scproxy.top}}, udp: true}
-  - {name: _🇺🇲_美国 6  , server: cf.515188.xyz, port: 8080, client-fingerprint: chrome, type: vmess, uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v3/download.getFile, headers: {Host: ssrsub.v03.ssrsub.com}}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择 #🔰 节点选择
     type: select
@@ -79,7 +75,6 @@ proxy-groups:
       - 🔰 小日本
       - 🔰 港澳台
       - 🔰 美国地区
-      - "_🇺🇸_甲骨文US"
       - "_🇫🇷_法国流媒体"
       - "_🇦🇺_澳大利亚流媒体"
       - "_🇭🇰尽头のAzureHK"
@@ -118,16 +113,12 @@ proxy-groups:
       - _🇺🇲_美国 116
       - _🇺🇲_美国 115
       - _🇺🇲_美国 74 
-      - _🇺🇲_美国 215
-      - _🇺🇲_美国 223
-      - _🇺🇲_美国 6  
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 100
     proxies:
-      - "_🇺🇸_甲骨文US"
       - "_🇫🇷_法国流媒体"
       - "_🇦🇺_澳大利亚流媒体"
       - "_🇭🇰尽头のAzureHK"
@@ -166,9 +157,6 @@ proxy-groups:
       - _🇺🇲_美国 116
       - _🇺🇲_美国 115
       - _🇺🇲_美国 74 
-      - _🇺🇲_美国 215
-      - _🇺🇲_美国 223
-      - _🇺🇲_美国 6  
   - name: 🔰 小日本
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -184,10 +172,7 @@ proxy-groups:
     interval: 300
     tolerance: 100
     proxies:
-      - "_🇭🇰尽头のAzureHK"
-      - "_🇭🇰尽头の华为云HK"
       - "_🇭🇰_香港_157"
-      - _🇷🇺_俄罗斯  
       - _🇨🇳_台湾 90 
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
@@ -206,7 +191,6 @@ proxy-groups:
     interval: 300
     tolerance: 100
     proxies:
-      - "_🇺🇸_甲骨文US"
       - _🇺🇲_美国 9  
       - _🇺🇲 美国 48 
       - _🇺🇲_美国 11 
@@ -222,9 +206,6 @@ proxy-groups:
       - _🇺🇲_美国 116
       - _🇺🇲_美国 115
       - _🇺🇲_美国 74 
-      - _🇺🇲_美国 215
-      - _🇺🇲_美国 223
-      - _🇺🇲_美国 6  
   - name: 🎯 全球直连
     type: select
     proxies:
