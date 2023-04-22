@@ -1,0 +1,194 @@
+parsers: # array
+  - reg: 'rule$'
+    yaml:
+      append-proxy-groups:
+        - name: 🚀 节点选择
+          type: select
+        - name: ♻️ 自动选择
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+          tolerance: 50
+        - name: 🚀 🇨🇳港澳台-自动选择
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 600
+          tolerance: 50
+        - name: 🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 600
+          tolerance: 50
+        - name: 🚀 🇺🇸美国-自动选择
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 600
+          tolerance: 50
+        - name: 🎯 全球直连
+          type: select
+        - name: 🛑 全球拦截
+          type: select
+        - name: 🐟 漏网之鱼
+          type: select
+        - name: ⚖️ 🇨🇳港澳台-负载均衡-散列
+          type: load-balance
+          url: http://www.google.com/generate_204
+          interval: 600
+          strategy: consistent-hashing
+        # - name: ⚖️ 🇨🇳港澳台-负载均衡-轮询
+        #   type: load-balance
+        #   url: http://www.google.com/generate_204
+        #   interval: 600
+        #   strategy: round-robin
+        - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
+          type: load-balance
+          url: http://www.google.com/generate_204
+          interval: 600
+          strategy: consistent-hashing
+        # - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询
+        #   type: load-balance
+        #   url: http://www.google.com/generate_204
+        #   interval: 600
+        #   strategy: round-robin
+        - name: ⚖️ 🇺🇸美国-负载均衡-散列
+          type: load-balance
+          url: http://www.google.com/generate_204
+          interval: 600
+          strategy: consistent-hashing
+        # - name: ⚖️ 🇺🇸美国-负载均衡-轮询
+        #   type: load-balance
+        #   url: http://www.google.com/generate_204
+        #   interval: 600
+        #   strategy: round-robin
+      commands:
+        - proxy-groups.🐟 漏网之鱼.proxies.0+♻️ 自动选择
+        - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
+        - proxy-groups.🛑 全球拦截.proxies.0+DIRECT
+        - proxy-groups.🛑 全球拦截.proxies.0+REJECT
+        - proxy-groups.🎯 全球直连.proxies.0+♻️ 自动选择
+        - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
+        - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
+        - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦)
+        - proxy-groups.0.proxies.0+🚀 🇺🇸美国-自动选择
+        - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦)
+        - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-散列
+        # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-轮询.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦)
+        # - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-轮询
+        - proxy-groups.🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷)
+        - proxy-groups.0.proxies.0+🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
+        - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷)
+        - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
+        # - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷)
+        # - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询
+        - proxy-groups.🚀 🇨🇳港澳台-自动选择.proxies=[]proxyNames|(🇨🇳|🇹🇼|🇭🇰)
+        - proxy-groups.0.proxies.0+🚀 🇨🇳港澳台-自动选择
+        - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-散列.proxies=[]proxyNames|(🇨🇳|🇹🇼|🇭🇰)
+        - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-散列
+        # - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-轮询.proxies=[]proxyNames|(🇨🇳|🇹🇼|🇭🇰)
+        # - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-轮询
+        - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
+        - proxy-groups.0.proxies.0+♻️ 自动选择
+        - proxy-groups.0.proxies.0+DIRECT
+      mix-rule-providers:
+        reject:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+          path: ./ruleset/reject.yaml
+          interval: 86400
+        icloud:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+          path: ./ruleset/icloud.yaml
+          interval: 86400
+          
+        apple:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+          path: ./ruleset/apple.yaml
+          interval: 86400
+        google:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+          path: ./ruleset/google.yaml
+          interval: 86400
+        proxy:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+          path: ./ruleset/proxy.yaml
+          interval: 86400
+        direct:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+          path: ./ruleset/direct.yaml
+          interval: 86400
+        private:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+          path: ./ruleset/private.yaml
+          interval: 86400
+        gfw:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+          path: ./ruleset/gfw.yaml
+          interval: 86400
+        greatfire:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
+          path: ./ruleset/greatfire.yaml
+          interval: 86400
+        tld-not-cn:
+          type: http
+          behavior: domain
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+          path: ./ruleset/tld-not-cn.yaml
+          interval: 86400
+        telegramcidr:
+          type: http
+          behavior: ipcidr
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+          path: ./ruleset/telegramcidr.yaml
+          interval: 86400
+        cncidr:
+          type: http
+          behavior: ipcidr
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+          path: ./ruleset/cncidr.yaml
+          interval: 86400
+        lancidr:
+          type: http
+          behavior: ipcidr
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+          path: ./ruleset/lancidr.yaml
+          interval: 86400
+        applications:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+          path: ./ruleset/applications.yaml
+          interval: 86400
+      prepend-rules:
+        - RULE-SET,applications,DIRECT,no-resolve # 需要直连的常见软件列表 applications
+        - DOMAIN,clash.razord.top,DIRECT,no-resolve
+        - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
+        - RULE-SET,private,DIRECT,no-resolve # 私有网络专用域名列表 private
+        - RULE-SET,reject,REJECT # 广告域名列表 reject
+        - RULE-SET,icloud,🚀 节点选择 # iCloud 域名列表 icloud
+        - RULE-SET,apple,🚀 节点选择 # Apple 在中国大陆可直连的域名列表 apple
+        - RULE-SET,google,🚀 节点选择
+        - RULE-SET,proxy,🚀 节点选择
+        - RULE-SET,direct,DIRECT,no-resolve # 直连域名列表 direct
+        - RULE-SET,lancidr,DIRECT,no-resolve # 局域网 IP 及保留 IP 地址列表 lancidr.txt
+        - RULE-SET,cncidr,DIRECT,no-resolve # 中国大陆 IP 地址列表 cncidr
+        - RULE-SET,telegramcidr,🚀 节点选择 # 代理域名列表 proxy
+        - GEOIP,LAN,DIRECT,no-resolve
+        - GEOIP,CN,DIRECT,no-resolve
+        - MATCH,🚀 节点选择      
