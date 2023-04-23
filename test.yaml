@@ -87,7 +87,7 @@ dns:
   #  若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
 proxies:
   - {"name": "_🇭🇰尽头のAzureHK","type":"trojan","server":"20.2.80.133","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
-  - {"name": "_🇭🇰尽头の华为云HK","type":"trojan","server":"onlinec.cc","port":1443,"udp":true,"password":"wuRjkSqKpfND","skip-cert-verify":true,"network":"tcp"}
+  # - {"name": "_🇭🇰尽头の华为云HK","type":"trojan","server":"onlinec.cc","port":1443,"udp":true,"password":"wuRjkSqKpfND","skip-cert-verify":true,"network":"tcp"}
   - {"name": "_🇷🇺_俄罗斯","type":"ssr","server":"t3.freegradely.xyz","port":55555,"password":"dongtaiwang.com","cipher":"rc4-md5","obfs":"plain","protocol":"auth_aes128_sha1", "udp": true}
   - {"name": "_🇫🇷_法国流媒体","type":"trojan","server":"frjs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
   - {"name": "_🇦🇺_澳大利亚流媒体","type":"trojan","server":"aujs.stablize.top","port":443,"udp":true,"password":"829ca50b-b30c-4406-9ded-fccce23d1312","skip-cert-verify": false,"network": "tcp"}
