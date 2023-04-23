@@ -27,7 +27,7 @@ proxyItemWidth: ""
 proxyMiniListWidth: ""
 proxyOrder: 0
 proxyDelayType: 0
-latencyUrl: ""
+latencyUrl: http://www.google.com/generate_204
 latencyTimeout: .nan
 showProxyFilter: false
 hideUnselectableGroup: true
