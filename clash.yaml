@@ -41,7 +41,7 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: _🇭🇰尽头のAzureHK
+  - name: _1🇭🇰_尽头のAzureHK
     type: trojan
     server: 20.2.80.133
     port: 443
@@ -49,32 +49,7 @@ proxies:
     password: "123456"
     skip-cert-verify: true
     network: tcp
-  - name: _🇷🇺_俄罗斯
-    type: ssr
-    server: t3.freegradely.xyz
-    port: 55555
-    password: dongtaiwang.com
-    cipher: rc4-md5
-    obfs: plain
-    protocol: auth_aes128_sha1
-    udp: true
-  - name: _🇫🇷_法国流媒体
-    type: trojan
-    server: frjs.stablize.top
-    port: 443
-    udp: true
-    password: 829ca50b-b30c-4406-9ded-fccce23d1312
-    skip-cert-verify: false
-    network: tcp
-  - name: _🇦🇺_澳大利亚流媒体
-    type: trojan
-    server: aujs.stablize.top
-    port: 443
-    udp: true
-    password: 829ca50b-b30c-4406-9ded-fccce23d1312
-    skip-cert-verify: false
-    network: tcp
-  - name: 洛杉矶21号截止
+  - name: _1🇺🇸_洛杉矶21号截止
     type: vmess
     server: 1d-la.18cm.tech
     port: 443
@@ -89,6 +64,15 @@ proxies:
       path: /
       headers:
         host: 1d-la.18cm.tech
+  - name: _🇷🇺_俄罗斯
+    type: ssr
+    server: t3.freegradely.xyz
+    port: 55555
+    password: dongtaiwang.com
+    cipher: rc4-md5
+    obfs: plain
+    protocol: auth_aes128_sha1
+    udp: true
   - name: _🇭🇰_香港_1号
     server: 54.192.18.202
     port: 80
@@ -164,7 +148,17 @@ proxies:
       headers:
         Host: dli35om2q81g1.cloudfront.net
     udp: true
-  - name: _🇨🇳_台湾 90
+  - name: _🇹🇼_台湾_03
+    server: hinet1261.gfwisbest.xyz
+    port: 224
+    type: vmess
+    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: _🇹🇼_台湾_90
     server: tw1.sanfen004.me
     port: 443
     type: vmess
@@ -178,23 +172,7 @@ proxies:
       headers:
         Host: www.microsoft.com
     udp: true
-  - name: _🇭🇰 Relay 🇭🇰 Hong Kong 02
-    server: 16.162.44.241
-    port: 443
-    type: trojan
-    password: be8b8f45-a290-4405-8699-ffeb07f3ee24
-    sni: 16-163-218-240.nhost.00cdn.com
-    skip-cert-verify: false
-    udp: true
-  - name: _🇭🇰 Relay 🇭🇰 Hong Kong 03
-    server: 16.162.44.241
-    port: 443
-    type: trojan
-    password: be8b8f45-a290-4405-8699-ffeb07f3ee24
-    sni: 16-163-218-240.nhost.00cdn.com
-    skip-cert-verify: false
-    udp: true
-  - name: _🇭🇰 Relay 🇭🇰 Hong Kong 06
+  - name: _🇭🇰_香港_06
     server: 172.67.86.79
     port: 80
     type: vmess
@@ -209,78 +187,14 @@ proxies:
       headers:
         Host: hk-hytron.ilovescp.com
     udp: true
-  - name: _🇭🇰 Relay 🇭🇰 Hong Kong 09
-    server: shdx.donghui.tech
-    port: 49717
-    type: ss
-    cipher: aes-128-gcm
-    password: c0942f3d-58cd-43a9-8282-1bcc3b9f291e
-    udp: true
-  - name: _🇭🇰 Relay 🇭🇰 Hong Kong 10
+  - name: _🇭🇰_香港_10
     server: assets.flareai.site
     port: 15543
     type: ss
     cipher: chacha20-ietf-poly1305
     password: d5dd371c-11db-4cfb-b458-072f0fbd0e18
     udp: true
-  - name: _🇭🇰 Relay 🇭🇰 Hong Kong 13
-    server: gg.xn--gmqa02ag57d.com
-    port: 24603
-    type: trojan
-    password: 053a9fcf-af39-366d-a925-04b78de12fbd
-    sni: z259.hongkongnode.top
-    skip-cert-verify: false
-    udp: true
-  - name: _🇭🇰 Relay 🇭🇰 Hong Kong 18
-    server: gg.xn--gmqa02ag57d.com
-    port: 20279
-    type: trojan
-    password: 053a9fcf-af39-366d-a925-04b78de12fbd
-    sni: z279.hongkongnode.top
-    skip-cert-verify: false
-    udp: true
-  - name: _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 01
-    server: assets.flareai.site
-    port: 15343
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: d5dd371c-11db-4cfb-b458-072f0fbd0e18
-    udp: true
-  - name: _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03
-    server: azhj.xifasd.top
-    port: 20767
-    type: trojan
-    password: c39d5e05-3d06-317e-b5ca-e2f71b661570
-    sni: ssl.ssl12.xyz
-    skip-cert-verify: false
-    udp: true
-  - name: _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 05
-    server: AZHJ.xifasd.top
-    port: 20767
-    type: trojan
-    password: c39d5e05-3d06-317e-b5ca-e2f71b661570
-    sni: ssl.ssl12.xyz
-    skip-cert-verify: false
-    udp: true
-  - name: _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 13
-    server: gg.xn--gmqa02ag57d.com
-    port: 33323
-    type: trojan
-    password: 053a9fcf-af39-366d-a925-04b78de12fbd
-    sni: z261.hongkongnode.top
-    skip-cert-verify: false
-    udp: true
-  - name: _🇨🇳 Taiwan 03
-    server: hinet1261.gfwisbest.xyz
-    port: 224
-    type: vmess
-    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    udp: true
-  - name: _🇮🇳_印度 214
+  - name: _🇮🇳_印度_214
     server: 152.70.74.66
     port: 443
     type: trojan
@@ -346,7 +260,33 @@ proxies:
       headers:
         Host: uk1.scproxy.top
     udp: true
-  - name: _🇺🇸_美国_9
+  - name: _🇺🇸_美国_20
+    server: cf.noaries.de
+    port: 2086
+    type: vmess
+    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: ovh.iiio.wiki
+  - name: _🇺🇸_美国_17
+    server: cf.noaries.de
+    port: 8880
+    type: vmess
+    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: vnpt.iiio.wiki
+  - name: _🇺🇸_美国_307
     server: 172.67.217.222
     port: 80
     type: vmess
@@ -359,6 +299,32 @@ proxies:
       path: /shirker
       headers:
         Host: dp3.scproxy.top
+  - name: _🇺🇸_美国_8
+    server: 172.67.217.222
+    port: 80
+    type: vmess
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp3.scproxy.top
+  - name: _🇺🇸_美国_28
+    server: 172.67.250.239
+    port: 80
+    type: vmess
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp2.scproxy.top
     udp: true
   - name: _🇺🇸_美国_11
     server: 172.67.86.79
@@ -374,7 +340,7 @@ proxies:
       headers:
         Host: hk-hytron.ilovescp.com
     udp: true
-  - name: _🇺🇸_美国_8
+  - name: _🇺🇸_美国_9
     server: 172.67.217.222
     port: 80
     type: vmess
@@ -387,49 +353,8 @@ proxies:
       path: /shirker
       headers:
         Host: dp3.scproxy.top
-  - name: _🇺🇸_美国_144
-    server: fr2.cachexy.ga
-    port: 80
-    type: vmess
-    uuid: c8c9867b-df9a-4217-8161-67824e20cb57
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /g5D0hFMY/
-      headers:
-        Host: fr2.cachexy.ga
     udp: true
-  - name: _🇺🇸_美国_36
-    server: 172.67.86.214
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: lv2.sharecentrepro.org
-    udp: true
-  - name: _🇺🇸_美国_28
-    server: 172.67.250.239
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp2.scproxy.top
-    udp: true
-  - name: _🇺🇸_美国_307
+  - name: _🇺🇸_美国_91
     server: 172.67.217.222
     port: 80
     type: vmess
@@ -442,19 +367,58 @@ proxies:
       path: /shirker
       headers:
         Host: dp3.scproxy.top
-  - name: _🇬🇧_英国 17
-    server: 185.193.30.158
+  - name: _🇺🇸_美国_86
+    server: cf-lt.sharecentre.online
     port: 443
     type: vmess
-    uuid: A59E320C-BAC6-45E3-8A27-1518610708D0
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     tls: true
     network: ws
     ws-opts:
-      path: /speedtest
+      path: /shirker
       headers:
-        Host: Amsterdam.v2ray.online
+        Host: ca.ilovescp.com
+  - name: _🇺🇸_美国_88
+    server: cf-lt-dns.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp3.scproxy.top
+  - name: _🇺🇸_美国_22
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp3.scproxy.top
+  - name: _🇺🇸_美国_19
+    server: cf.noaries.de
+    port: 2082
+    type: vmess
+    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: ovh.iiio.wiki
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -467,109 +431,86 @@ proxy-groups:
       - 🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - 🚀 🇺🇸美国-自动选择
-      - _🇭🇰尽头のAzureHK
+      - _1🇭🇰_尽头のAzureHK
+      - _1🇺🇸_洛杉矶21号截止
       - _🇷🇺_俄罗斯
-      - _🇫🇷_法国流媒体
-      - _🇦🇺_澳大利亚流媒体
-      - 洛杉矶21号截止
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇨🇳_台湾 90
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 02
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 03
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 06
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 09
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 10
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 13
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 18
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 01
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 05
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 13
-      - _🇨🇳 Taiwan 03
-      - _🇮🇳_印度 214
+      - _🇹🇼_台湾_03
+      - _🇹🇼_台湾_90
+      - _🇭🇰_香港_06
+      - _🇭🇰_香港_10
+      - _🇮🇳_印度_214
       - _🇯🇵_日本_2
       - _🇯🇵_日本_7
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
-      - _🇺🇸_美国_9
-      - _🇺🇸_美国_11
-      - _🇺🇸_美国_8
-      - _🇺🇸_美国_144
-      - _🇺🇸_美国_36
-      - _🇺🇸_美国_28
+      - _🇺🇸_美国_20
+      - _🇺🇸_美国_17
       - _🇺🇸_美国_307
-      - _🇬🇧_英国 17
+      - _🇺🇸_美国_8
+      - _🇺🇸_美国_28
+      - _🇺🇸_美国_11
+      - _🇺🇸_美国_9
+      - _🇺🇸_美国_91
+      - _🇺🇸_美国_86
+      - _🇺🇸_美国_88
+      - _🇺🇸_美国_22
+      - _🇺🇸_美国_19
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - _🇭🇰尽头のAzureHK
+      - _1🇭🇰_尽头のAzureHK
+      - _1🇺🇸_洛杉矶21号截止
       - _🇷🇺_俄罗斯
-      - _🇫🇷_法国流媒体
-      - _🇦🇺_澳大利亚流媒体
-      - 洛杉矶21号截止
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇨🇳_台湾 90
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 02
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 03
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 06
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 09
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 10
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 13
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 18
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 01
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 05
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 13
-      - _🇨🇳 Taiwan 03
-      - _🇮🇳_印度 214
+      - _🇹🇼_台湾_03
+      - _🇹🇼_台湾_90
+      - _🇭🇰_香港_06
+      - _🇭🇰_香港_10
+      - _🇮🇳_印度_214
       - _🇯🇵_日本_2
       - _🇯🇵_日本_7
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
-      - _🇺🇸_美国_9
-      - _🇺🇸_美国_11
-      - _🇺🇸_美国_8
-      - _🇺🇸_美国_144
-      - _🇺🇸_美国_36
-      - _🇺🇸_美国_28
+      - _🇺🇸_美国_20
+      - _🇺🇸_美国_17
       - _🇺🇸_美国_307
-      - _🇬🇧_英国 17
+      - _🇺🇸_美国_8
+      - _🇺🇸_美国_28
+      - _🇺🇸_美国_11
+      - _🇺🇸_美国_9
+      - _🇺🇸_美国_91
+      - _🇺🇸_美国_86
+      - _🇺🇸_美国_88
+      - _🇺🇸_美国_22
+      - _🇺🇸_美国_19
   - name: 🚀 🇨🇳港澳台-自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - _🇭🇰尽头のAzureHK
+      - _1🇭🇰_尽头のAzureHK
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇨🇳_台湾 90
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 02
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 03
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 06
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 09
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 10
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 13
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 18
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 01
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 05
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 13
-      - _🇨🇳 Taiwan 03
+      - _🇹🇼_台湾_03
+      - _🇹🇼_台湾_90
+      - _🇭🇰_香港_06
+      - _🇭🇰_香港_10
   - name: 🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -586,13 +527,19 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - _🇺🇸_美国_9
-      - _🇺🇸_美国_11
-      - _🇺🇸_美国_8
-      - _🇺🇸_美国_144
-      - _🇺🇸_美国_36
-      - _🇺🇸_美国_28
+      - _1🇺🇸_洛杉矶21号截止
+      - _🇺🇸_美国_20
+      - _🇺🇸_美国_17
       - _🇺🇸_美国_307
+      - _🇺🇸_美国_8
+      - _🇺🇸_美国_28
+      - _🇺🇸_美国_11
+      - _🇺🇸_美国_9
+      - _🇺🇸_美国_91
+      - _🇺🇸_美国_86
+      - _🇺🇸_美国_88
+      - _🇺🇸_美国_22
+      - _🇺🇸_美国_19
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -614,25 +561,16 @@ proxy-groups:
     interval: 600
     strategy: consistent-hashing
     proxies:
-      - _🇭🇰尽头のAzureHK
+      - _1🇭🇰_尽头のAzureHK
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇨🇳_台湾 90
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 02
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 03
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 06
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 09
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 10
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 13
-      - _🇭🇰 Relay 🇭🇰 Hong Kong 18
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 01
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 03
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 05
-      - _🇨🇳 Relay 🇹🇼 Taiwan(ChatGPT) 13
-      - _🇨🇳 Taiwan 03
+      - _🇹🇼_台湾_03
+      - _🇹🇼_台湾_90
+      - _🇭🇰_香港_06
+      - _🇭🇰_香港_10
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -649,13 +587,19 @@ proxy-groups:
     interval: 600
     strategy: consistent-hashing
     proxies:
-      - _🇺🇸_美国_9
-      - _🇺🇸_美国_11
-      - _🇺🇸_美国_8
-      - _🇺🇸_美国_144
-      - _🇺🇸_美国_36
-      - _🇺🇸_美国_28
+      - _1🇺🇸_洛杉矶21号截止
+      - _🇺🇸_美国_20
+      - _🇺🇸_美国_17
       - _🇺🇸_美国_307
+      - _🇺🇸_美国_8
+      - _🇺🇸_美国_28
+      - _🇺🇸_美国_11
+      - _🇺🇸_美国_9
+      - _🇺🇸_美国_91
+      - _🇺🇸_美国_86
+      - _🇺🇸_美国_88
+      - _🇺🇸_美国_22
+      - _🇺🇸_美国_19
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
