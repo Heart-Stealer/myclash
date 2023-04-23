@@ -194,6 +194,19 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: d5dd371c-11db-4cfb-b458-072f0fbd0e18
     udp: true
+  - name: _🇭🇰_香港_19
+    server: cf.noaries.de
+    port: 2082
+    type: vmess
+    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: ovh.iiio.wiki
   - name: _🇮🇳_印度_214
     server: 152.70.74.66
     port: 443
@@ -260,6 +273,32 @@ proxies:
       headers:
         Host: uk1.scproxy.top
     udp: true
+  - name: _🇰🇷_韩国_20
+    server: cf.noaries.de
+    port: 2086
+    type: vmess
+    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: ovh.iiio.wiki
+  - name: _🇻🇳_越南_17
+    server: cf.noaries.de
+    port: 8880
+    type: vmess
+    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: vnpt.iiio.wiki
   - name: _🇺🇸_美国_20
     server: cf.noaries.de
     port: 2086
@@ -273,19 +312,32 @@ proxies:
       path: /aries?ed=2048
       headers:
         Host: ovh.iiio.wiki
-  - name: _🇺🇸_美国_17
-    server: cf.noaries.de
-    port: 8880
+  - name: _🇺🇸_美国_90
+    server: 172.67.84.93
+    port: 80
     type: vmess
-    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     tls: false
     network: ws
     ws-opts:
-      path: /aries?ed=2048
+      path: /shirker
       headers:
-        Host: vnpt.iiio.wiki
+        Host: uk1.scproxy.top
+  - name: _🇺🇸_美国_88
+    server: cf-lt-dns.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp3.scproxy.top
   - name: _🇺🇸_美国_307
     server: 172.67.217.222
     port: 80
@@ -380,19 +432,6 @@ proxies:
       path: /shirker
       headers:
         Host: ca.ilovescp.com
-  - name: _🇺🇸_美国_88
-    server: cf-lt-dns.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
   - name: _🇺🇸_美国_22
     server: cf-lt.sharecentre.online
     port: 80
@@ -406,19 +445,6 @@ proxies:
       path: /shirker
       headers:
         Host: dp3.scproxy.top
-  - name: _🇺🇸_美国_19
-    server: cf.noaries.de
-    port: 2082
-    type: vmess
-    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        Host: ovh.iiio.wiki
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -426,11 +452,8 @@ proxy-groups:
       - DIRECT
       - ♻️ 自动选择
       - ⚖️ 🇨🇳港澳台-负载均衡-散列
-      - 🚀 🇨🇳港澳台-自动选择
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
-      - 🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
       - ⚖️ 🇺🇸美国-负载均衡-散列
-      - 🚀 🇺🇸美国-自动选择
       - _1🇭🇰_尽头のAzureHK
       - _1🇺🇸_洛杉矶21号截止
       - _🇷🇺_俄罗斯
@@ -443,13 +466,17 @@ proxy-groups:
       - _🇹🇼_台湾_90
       - _🇭🇰_香港_06
       - _🇭🇰_香港_10
+      - _🇭🇰_香港_19
       - _🇮🇳_印度_214
       - _🇯🇵_日本_2
       - _🇯🇵_日本_7
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
+      - _🇰🇷_韩国_20
+      - _🇻🇳_越南_17
       - _🇺🇸_美国_20
-      - _🇺🇸_美国_17
+      - _🇺🇸_美国_90
+      - _🇺🇸_美国_88
       - _🇺🇸_美国_307
       - _🇺🇸_美国_8
       - _🇺🇸_美国_28
@@ -457,9 +484,7 @@ proxy-groups:
       - _🇺🇸_美国_9
       - _🇺🇸_美国_91
       - _🇺🇸_美国_86
-      - _🇺🇸_美国_88
       - _🇺🇸_美国_22
-      - _🇺🇸_美国_19
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -478,13 +503,17 @@ proxy-groups:
       - _🇹🇼_台湾_90
       - _🇭🇰_香港_06
       - _🇭🇰_香港_10
+      - _🇭🇰_香港_19
       - _🇮🇳_印度_214
       - _🇯🇵_日本_2
       - _🇯🇵_日本_7
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
+      - _🇰🇷_韩国_20
+      - _🇻🇳_越南_17
       - _🇺🇸_美国_20
-      - _🇺🇸_美国_17
+      - _🇺🇸_美国_90
+      - _🇺🇸_美国_88
       - _🇺🇸_美国_307
       - _🇺🇸_美国_8
       - _🇺🇸_美国_28
@@ -492,54 +521,7 @@ proxy-groups:
       - _🇺🇸_美国_9
       - _🇺🇸_美国_91
       - _🇺🇸_美国_86
-      - _🇺🇸_美国_88
       - _🇺🇸_美国_22
-      - _🇺🇸_美国_19
-  - name: 🚀 🇨🇳港澳台-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 600
-    tolerance: 50
-    proxies:
-      - _1🇭🇰_尽头のAzureHK
-      - _🇭🇰_香港_1号
-      - _🇭🇰_香港_2号
-      - _🇭🇰_香港_3号
-      - _🇭🇰_香港_4号
-      - _🇭🇰_香港_5号
-      - _🇹🇼_台湾_03
-      - _🇹🇼_台湾_90
-      - _🇭🇰_香港_06
-      - _🇭🇰_香港_10
-  - name: 🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 600
-    tolerance: 50
-    proxies:
-      - _🇯🇵_日本_2
-      - _🇯🇵_日本_7
-      - _🇯🇵_日本_14
-      - _🇯🇵_日本_25
-  - name: 🚀 🇺🇸美国-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 600
-    tolerance: 50
-    proxies:
-      - _1🇺🇸_洛杉矶21号截止
-      - _🇺🇸_美国_20
-      - _🇺🇸_美国_17
-      - _🇺🇸_美国_307
-      - _🇺🇸_美国_8
-      - _🇺🇸_美国_28
-      - _🇺🇸_美国_11
-      - _🇺🇸_美国_9
-      - _🇺🇸_美国_91
-      - _🇺🇸_美国_86
-      - _🇺🇸_美国_88
-      - _🇺🇸_美国_22
-      - _🇺🇸_美国_19
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -558,7 +540,7 @@ proxy-groups:
   - name: ⚖️ 🇨🇳港澳台-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
-    interval: 600
+    interval: 300
     strategy: consistent-hashing
     proxies:
       - _1🇭🇰_尽头のAzureHK
@@ -571,25 +553,28 @@ proxy-groups:
       - _🇹🇼_台湾_90
       - _🇭🇰_香港_06
       - _🇭🇰_香港_10
+      - _🇭🇰_香港_19
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
-    interval: 600
+    interval: 300
     strategy: consistent-hashing
     proxies:
       - _🇯🇵_日本_2
       - _🇯🇵_日本_7
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
+      - _🇰🇷_韩国_20
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
-    interval: 600
+    interval: 300
     strategy: consistent-hashing
     proxies:
       - _1🇺🇸_洛杉矶21号截止
       - _🇺🇸_美国_20
-      - _🇺🇸_美国_17
+      - _🇺🇸_美国_90
+      - _🇺🇸_美国_88
       - _🇺🇸_美国_307
       - _🇺🇸_美国_8
       - _🇺🇸_美国_28
@@ -597,9 +582,7 @@ proxy-groups:
       - _🇺🇸_美国_9
       - _🇺🇸_美国_91
       - _🇺🇸_美国_86
-      - _🇺🇸_美国_88
       - _🇺🇸_美国_22
-      - _🇺🇸_美国_19
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
