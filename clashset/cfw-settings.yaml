@@ -10466,20 +10466,35 @@ profileParsersText: >-
 
   # prepend-rules:
   #   - RULE-SET,applications,DIRECT,no-resolve # 需要直连的常见软件列表 applications
+
   #   - DOMAIN,clash.razord.top,DIRECT,no-resolve
+
   #   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
+
   #   - RULE-SET,private,DIRECT,no-resolve # 私有网络专用域名列表 private
+
   #   - RULE-SET,reject,REJECT # 广告域名列表 reject
+
   #   - RULE-SET,icloud,🚀 节点选择 # iCloud 域名列表 icloud
+
   #   - RULE-SET,apple,🚀 节点选择 # Apple 在中国大陆可直连的域名列表 apple
+  
   #   - RULE-SET,google,🚀 节点选择
+  
   #   - RULE-SET,proxy,🚀 节点选择
+  
   #   - RULE-SET,direct,DIRECT,no-resolve # 直连域名列表 direct
+  
   #   - RULE-SET,lancidr,DIRECT,no-resolve # 局域网 IP 及保留 IP 地址列表 lancidr.txt
+  
   #   - RULE-SET,cncidr,DIRECT,no-resolve # 中国大陆 IP 地址列表 cncidr
+  
   #   - RULE-SET,telegramcidr,🚀 节点选择 # 代理域名列表 proxy
+  
   #   - GEOIP,LAN,DIRECT,no-resolve
+  
   #   - GEOIP,CN,DIRECT,no-resolve
+  
   #   - MATCH,🚀 节点选择 ceshi
 mixinText: >-
   mixin: # object
