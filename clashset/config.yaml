@@ -24,7 +24,7 @@ mode: Rule
 # 5 个级别：silent / debug / info / warning / error /。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: info
 # clash web 控制的 RESTful API
-external-controller: 127.0.0.1:5056
+external-controller: 127.0.0.1:9090
 # 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `${API}/ui`
 # 参数应填写配置目录的相对路径或绝对路径。
 # external-ui: folder
