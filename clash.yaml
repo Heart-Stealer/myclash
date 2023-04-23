@@ -2,7 +2,7 @@ mixed-port: 7890
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: :9090
+external-controller: 127.0.0.1:9090
 hosts:
   localhost: 127.0.0.1
 dns:
@@ -11,6 +11,7 @@ dns:
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  use-hosts: true
   nameserver:
     - 1.2.4.8
     - 223.5.5.5
@@ -20,18 +21,25 @@ dns:
     - 183.60.83.19
     - 183.60.82.98
     - 114.114.114.114
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
     - tls://13800000000.rubyfish.cn:853
     - https://13800000000.rubyfish.cn/
   fallback:
     - 8.8.8.8
     - 8.8.4.4
     - tls://1.0.0.1:853
+    - tls://8.8.4.4:853
     - tls://dns.google:853
     - tls://13800000000.rubyfish.cn:853
+    - https://doh.dns.sb/dns-query
+    - https://dns.twnic.tw/dns-query
+    - https://dns.cloudflare.com/dns-query
   fallback-filter:
     geoip: true
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
 proxies:
   - name: _🇭🇰尽头のAzureHK
     type: trojan
@@ -497,7 +505,7 @@ proxy-groups:
       - _🇬🇧_英国 17
   - name: ♻️ 自动选择
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
@@ -539,7 +547,7 @@ proxy-groups:
       - _🇬🇧_英国 17
   - name: 🚀 🇨🇳港澳台-自动选择
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
@@ -564,7 +572,7 @@ proxy-groups:
       - _🇨🇳 Taiwan 03
   - name: 🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
@@ -574,7 +582,7 @@ proxy-groups:
       - _🇯🇵_日本_25
   - name: 🚀 🇺🇸美国-自动选择
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 600
     tolerance: 50
     proxies:

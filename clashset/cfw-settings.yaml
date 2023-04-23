@@ -27,7 +27,7 @@ proxyItemWidth: ""
 proxyMiniListWidth: ""
 proxyOrder: 0
 proxyDelayType: 0
-latencyUrl: ""
+latencyUrl: http://www.google.com/generate_204
 latencyTimeout: .nan
 showProxyFilter: false
 hideUnselectableGroup: true
@@ -59,22 +59,26 @@ profileParsersText: >-
             type: select
           - name: ♻️ 自动选择
             type: url-test
-            url: http://www.gstatic.com/generate_204
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
             interval: 300
             tolerance: 50
           - name: 🚀 🇨🇳港澳台-自动选择
             type: url-test
-            url: http://www.gstatic.com/generate_204
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
             interval: 600
             tolerance: 50
           - name: 🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
             type: url-test
-            url: http://www.gstatic.com/generate_204
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
             interval: 600
             tolerance: 50
           - name: 🚀 🇺🇸美国-自动选择
             type: url-test
-            url: http://www.gstatic.com/generate_204
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
             interval: 600
             tolerance: 50
           - name: 🎯 全球直连
@@ -10464,8 +10468,7 @@ profileParsersText: >-
           - GEOIP,CN,🎯 全球直连
           - MATCH,🐟 漏网之鱼
 
-  # prepend-rules:
-  #   - RULE-SET,applications,DIRECT,no-resolve # 需要直连的常见软件列表 applications
+  # prepend-rules: #   - RULE-SET,applications,DIRECT,no-resolve # 需要直连的常见软件列表 applications
 
   #   - DOMAIN,clash.razord.top,DIRECT,no-resolve
 
@@ -10478,23 +10481,23 @@ profileParsersText: >-
   #   - RULE-SET,icloud,🚀 节点选择 # iCloud 域名列表 icloud
 
   #   - RULE-SET,apple,🚀 节点选择 # Apple 在中国大陆可直连的域名列表 apple
-  
+
   #   - RULE-SET,google,🚀 节点选择
-  
+
   #   - RULE-SET,proxy,🚀 节点选择
-  
+
   #   - RULE-SET,direct,DIRECT,no-resolve # 直连域名列表 direct
-  
+
   #   - RULE-SET,lancidr,DIRECT,no-resolve # 局域网 IP 及保留 IP 地址列表 lancidr.txt
-  
+
   #   - RULE-SET,cncidr,DIRECT,no-resolve # 中国大陆 IP 地址列表 cncidr
-  
+
   #   - RULE-SET,telegramcidr,🚀 节点选择 # 代理域名列表 proxy
-  
+
   #   - GEOIP,LAN,DIRECT,no-resolve
-  
+
   #   - GEOIP,CN,DIRECT,no-resolve
-  
+
   #   - MATCH,🚀 节点选择 ceshi
 mixinText: >-
   mixin: # object
