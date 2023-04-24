@@ -69,10 +69,28 @@ proxies:
     server: t3.freegradely.xyz
     port: 55555
     password: dongtaiwang.com
-    cipher: rc4-md5
-    obfs: plain
+    cipher: aes-256-cfb
+    obfs: tls1.2_ticket_auth
+    obfs-param: ""
     protocol: auth_aes128_sha1
+    protocol-param: ""
     udp: true
+  - name: _🇫🇷_法国流媒体
+    type: trojan
+    server: frjs.stablize.top
+    port: 443
+    udp: true
+    password: 829ca50b-b30c-4406-9ded-fccce23d1312
+    skip-cert-verify: false
+    network: tcp
+  - name: _🇦🇺_澳大利亚流媒体
+    type: trojan
+    server: aujs.stablize.top
+    port: 443
+    udp: true
+    password: 829ca50b-b30c-4406-9ded-fccce23d1312
+    skip-cert-verify: false
+    network: tcp
   - name: _🇭🇰_香港_1号
     server: 54.192.18.202
     port: 80
@@ -148,30 +166,6 @@ proxies:
       headers:
         Host: dli35om2q81g1.cloudfront.net
     udp: true
-  - name: _🇹🇼_台湾_03
-    server: hinet1261.gfwisbest.xyz
-    port: 224
-    type: vmess
-    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    udp: true
-  - name: _🇹🇼_台湾_90
-    server: tw1.sanfen004.me
-    port: 443
-    type: vmess
-    uuid: ae63c769-7b4f-4916-b575-9214639fcb8b
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        Host: www.microsoft.com
-    udp: true
   - name: _🇭🇰_香港_06
     server: 172.67.86.79
     port: 80
@@ -207,12 +201,29 @@ proxies:
       path: /aries?ed=2048
       headers:
         Host: ovh.iiio.wiki
-  - name: _🇮🇳_印度_214
-    server: 152.70.74.66
-    port: 443
-    type: trojan
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: _🇹🇼_台湾_03
+    server: hinet1261.gfwisbest.xyz
+    port: 224
+    type: vmess
+    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
+    alterId: 0
+    cipher: auto
+    tls: false
     skip-cert-verify: false
+    udp: true
+  - name: _🇹🇼_台湾_90
+    server: tw1.sanfen004.me
+    port: 443
+    type: vmess
+    uuid: ae63c769-7b4f-4916-b575-9214639fcb8b
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /zh-cn
+      headers:
+        Host: www.microsoft.com
     udp: true
   - name: _🇯🇵_日本_2
     server: aws-hk01.aikun.online
@@ -299,6 +310,13 @@ proxies:
       path: /aries?ed=2048
       headers:
         Host: vnpt.iiio.wiki
+  - name: _🇮🇳_印度_214
+    server: 152.70.74.66
+    port: 443
+    type: trojan
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    skip-cert-verify: false
+    udp: true
   - name: _🇺🇸_美国_20
     server: cf.noaries.de
     port: 2086
@@ -445,6 +463,152 @@ proxies:
       path: /shirker
       headers:
         Host: dp3.scproxy.top
+  - name: _🇬🇧_英国 17
+    server: 185.193.30.158
+    port: 443
+    type: vmess
+    uuid: A59E320C-BAC6-45E3-8A27-1518610708D0
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-path: /speedtest
+    ws-headers:
+      Host: Amsterdam.v2ray.online
+    udp: true
+  - name: 🇭🇰 HK Kirino
+    server: kirino.hk.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇭🇰 HK xTom
+    server: v.ps.hk.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇯🇵 JP CMI
+    server: 141.11.139.56
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇯🇵 JP GreenCloud
+    server: greencloud.jp.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇯🇵 JP VirMach
+    server: virmach.jp.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇯🇵 JP xTom
+    server: virmach.jp.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇯🇵 JP Kirino
+    server: kirino.jp.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇯🇵 JP 软银
+    server: v.ps.jp.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇯🇵 JP aws
+    server: aws.jp.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇸🇬 SG aws
+    server: aws.sg.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇸🇬 SG DigitalOcean
+    server: dosg.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
+  - name: 🇺🇸 US DigitalOcean
+    server: do.us.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -457,23 +621,25 @@ proxy-groups:
       - _1🇭🇰_尽头のAzureHK
       - _1🇺🇸_洛杉矶21号截止
       - _🇷🇺_俄罗斯
+      - _🇫🇷_法国流媒体
+      - _🇦🇺_澳大利亚流媒体
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇹🇼_台湾_03
-      - _🇹🇼_台湾_90
       - _🇭🇰_香港_06
       - _🇭🇰_香港_10
       - _🇭🇰_香港_19
-      - _🇮🇳_印度_214
+      - _🇹🇼_台湾_03
+      - _🇹🇼_台湾_90
       - _🇯🇵_日本_2
       - _🇯🇵_日本_7
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
       - _🇰🇷_韩国_20
       - _🇻🇳_越南_17
+      - _🇮🇳_印度_214
       - _🇺🇸_美国_20
       - _🇺🇸_美国_90
       - _🇺🇸_美国_88
@@ -485,6 +651,19 @@ proxy-groups:
       - _🇺🇸_美国_91
       - _🇺🇸_美国_86
       - _🇺🇸_美国_22
+      - _🇬🇧_英国 17
+      - 🇭🇰 HK Kirino
+      - 🇭🇰 HK xTom
+      - 🇯🇵 JP CMI
+      - 🇯🇵 JP GreenCloud
+      - 🇯🇵 JP VirMach
+      - 🇯🇵 JP xTom
+      - 🇯🇵 JP Kirino
+      - 🇯🇵 JP 软银
+      - 🇯🇵 JP aws
+      - 🇸🇬 SG aws
+      - 🇸🇬 SG DigitalOcean
+      - 🇺🇸 US DigitalOcean
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -494,23 +673,25 @@ proxy-groups:
       - _1🇭🇰_尽头のAzureHK
       - _1🇺🇸_洛杉矶21号截止
       - _🇷🇺_俄罗斯
+      - _🇫🇷_法国流媒体
+      - _🇦🇺_澳大利亚流媒体
       - _🇭🇰_香港_1号
       - _🇭🇰_香港_2号
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇹🇼_台湾_03
-      - _🇹🇼_台湾_90
       - _🇭🇰_香港_06
       - _🇭🇰_香港_10
       - _🇭🇰_香港_19
-      - _🇮🇳_印度_214
+      - _🇹🇼_台湾_03
+      - _🇹🇼_台湾_90
       - _🇯🇵_日本_2
       - _🇯🇵_日本_7
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
       - _🇰🇷_韩国_20
       - _🇻🇳_越南_17
+      - _🇮🇳_印度_214
       - _🇺🇸_美国_20
       - _🇺🇸_美国_90
       - _🇺🇸_美国_88
@@ -522,6 +703,19 @@ proxy-groups:
       - _🇺🇸_美国_91
       - _🇺🇸_美国_86
       - _🇺🇸_美国_22
+      - _🇬🇧_英国 17
+      - 🇭🇰 HK Kirino
+      - 🇭🇰 HK xTom
+      - 🇯🇵 JP CMI
+      - 🇯🇵 JP GreenCloud
+      - 🇯🇵 JP VirMach
+      - 🇯🇵 JP xTom
+      - 🇯🇵 JP Kirino
+      - 🇯🇵 JP 软银
+      - 🇯🇵 JP aws
+      - 🇸🇬 SG aws
+      - 🇸🇬 SG DigitalOcean
+      - 🇺🇸 US DigitalOcean
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -549,11 +743,13 @@ proxy-groups:
       - _🇭🇰_香港_3号
       - _🇭🇰_香港_4号
       - _🇭🇰_香港_5号
-      - _🇹🇼_台湾_03
-      - _🇹🇼_台湾_90
       - _🇭🇰_香港_06
       - _🇭🇰_香港_10
       - _🇭🇰_香港_19
+      - _🇹🇼_台湾_03
+      - _🇹🇼_台湾_90
+      - 🇭🇰 HK Kirino
+      - 🇭🇰 HK xTom
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -565,6 +761,15 @@ proxy-groups:
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
       - _🇰🇷_韩国_20
+      - 🇯🇵 JP CMI
+      - 🇯🇵 JP GreenCloud
+      - 🇯🇵 JP VirMach
+      - 🇯🇵 JP xTom
+      - 🇯🇵 JP Kirino
+      - 🇯🇵 JP 软银
+      - 🇯🇵 JP aws
+      - 🇸🇬 SG aws
+      - 🇸🇬 SG DigitalOcean
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -583,6 +788,7 @@ proxy-groups:
       - _🇺🇸_美国_91
       - _🇺🇸_美国_86
       - _🇺🇸_美国_22
+      - 🇺🇸 US DigitalOcean
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
