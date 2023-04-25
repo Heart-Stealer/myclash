@@ -41,22 +41,39 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: _1🇭🇰_尽头のAzureHK
-    type: trojan
-    server: 20.2.80.133
-    port: 443
+  - name: _🇯🇵_JP CMI_good
+    server: 141.11.139.56
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
     udp: true
-    password: "123456"
-    skip-cert-verify: true
-    network: tcp
-  - name: _1🇭🇰_尽头の华为云HK
-    type: trojan
-    server: onlinec.cc
-    port: 1443
+  - name: _🇯🇵_JP 软银_good
+    server: v.ps.jp.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
     udp: true
-    password: wuRjkSqKpfND
-    skip-cert-verify: true
-    network: tcp
+  - name: _🇯🇵_JP aws_good
+    server: aws.jp.securevpn.cc
+    port: 1020
+    type: ss
+    cipher: aes-128-gcm
+    password: "202304300000000000000020"
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: bulianglin.com
+    udp: true
   - name: _1🇺🇸_洛杉矶21号截止
     type: vmess
     server: 1d-la.18cm.tech
@@ -83,22 +100,6 @@ proxies:
     protocol: auth_aes128_sha1
     protocol-param: ""
     udp: true
-  - name: _🇫🇷_法国流媒体
-    type: trojan
-    server: frjs.stablize.top
-    port: 443
-    udp: true
-    password: 829ca50b-b30c-4406-9ded-fccce23d1312
-    skip-cert-verify: false
-    network: tcp
-  - name: _🇦🇺_澳大利亚流媒体
-    type: trojan
-    server: aujs.stablize.top
-    port: 443
-    udp: true
-    password: 829ca50b-b30c-4406-9ded-fccce23d1312
-    skip-cert-verify: false
-    network: tcp
   - name: _🇭🇰_香港_1号_good
     server: 54.192.18.202
     port: 80
@@ -513,7 +514,7 @@ proxies:
       mode: http
       host: bulianglin.com
     udp: true
-  - name: _🇭🇰_HK xTom
+  - name: _🇭🇰_HK xTom_good
     server: v.ps.hk.securevpn.cc
     port: 1020
     type: ss
@@ -524,19 +525,8 @@ proxies:
       mode: http
       host: bulianglin.com
     udp: true
-  - name: _🇯🇵_JP xTom
+  - name: _🇯🇵_JP xTom_good
     server: virmach.jp.securevpn.cc
-    port: 1020
-    type: ss
-    cipher: aes-128-gcm
-    password: "202304300000000000000020"
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: bulianglin.com
-    udp: true
-  - name: _🇯🇵_JP CMI_good
-    server: 141.11.139.56
     port: 1020
     type: ss
     cipher: aes-128-gcm
@@ -557,30 +547,8 @@ proxies:
       mode: http
       host: bulianglin.com
     udp: true
-  - name: _🇯🇵_JP 软银
-    server: v.ps.jp.securevpn.cc
-    port: 1020
-    type: ss
-    cipher: aes-128-gcm
-    password: "202304300000000000000020"
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: bulianglin.com
-    udp: true
   - name: _🇯🇵_JP VirMach
     server: virmach.jp.securevpn.cc
-    port: 1020
-    type: ss
-    cipher: aes-128-gcm
-    password: "202304300000000000000020"
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: bulianglin.com
-    udp: true
-  - name: _🇯🇵_JP aws_good
-    server: aws.jp.securevpn.cc
     port: 1020
     type: ss
     cipher: aes-128-gcm
@@ -623,14 +591,14 @@ proxies:
       mode: http
       host: bulianglin.com
     udp: true
-  - name: _🇭🇰 香港 01_good
+  - name: _🇭🇰 香港 01
     server: catlog.flareai.science
     port: 15543
     type: ss
     cipher: chacha20-ietf-poly1305
     password: d5dd371c-11db-4cfb-b458-072f0fbd0e18
     udp: true
-  - name: _🇭🇰 香港 04_good
+  - name: _🇭🇰 香港 04
     server: 13.224.250.76
     port: 80
     type: vmess
@@ -645,7 +613,7 @@ proxies:
       headers:
         Host: dpy7fu11rxn5x.cloudfront.net
     udp: true
-  - name: _🇭🇰 香港 07_good
+  - name: _🇭🇰 香港 07
     server: gg.xn--gmqa02ag57d.com
     port: 24603
     type: trojan
@@ -653,7 +621,7 @@ proxies:
     sni: z259.hongkongnode.top
     skip-cert-verify: false
     udp: true
-  - name: _🇭🇰 香港 08_good
+  - name: _🇭🇰 香港 08
     server: gg.xn--gmqa02ag57d.com
     port: 20294
     type: trojan
@@ -661,7 +629,7 @@ proxies:
     sni: x294.flybar.work
     skip-cert-verify: false
     udp: true
-  - name: _🇹🇼 台湾(ChatGPT) 06_good
+  - name: _🇹🇼 台湾(ChatGPT) 06
     server: gg.xn--gmqa02ag57d.com
     port: 33323
     type: trojan
@@ -678,12 +646,11 @@ proxy-groups:
       - ⚖️ 🇨🇳港澳台-负载均衡-散列
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
-      - _1🇭🇰_尽头のAzureHK
-      - _1🇭🇰_尽头の华为云HK
+      - _🇯🇵_JP CMI_good
+      - _🇯🇵_JP 软银_good
+      - _🇯🇵_JP aws_good
       - _1🇺🇸_洛杉矶21号截止
       - _🇷🇺_俄罗斯
-      - _🇫🇷_法国流媒体
-      - _🇦🇺_澳大利亚流媒体
       - _🇭🇰_香港_1号_good
       - _🇭🇰_香港_2号_good
       - _🇭🇰_香港_3号_good
@@ -716,33 +683,29 @@ proxy-groups:
       - _🇬🇧_英国 17
       - _🇭🇰_HK Kirino
       - _🇯🇵_JP Kirino
-      - _🇭🇰_HK xTom
-      - _🇯🇵_JP xTom
-      - _🇯🇵_JP CMI_good
+      - _🇭🇰_HK xTom_good
+      - _🇯🇵_JP xTom_good
       - _🇯🇵_JP GreenCloud
-      - _🇯🇵_JP 软银
       - _🇯🇵_JP VirMach
-      - _🇯🇵_JP aws_good
       - _🇸🇬_SG aws
       - _🇸🇬_SG DigitalOcean
       - _🇺🇸_US DigitalOcean
-      - _🇭🇰 香港 01_good
-      - _🇭🇰 香港 04_good
-      - _🇭🇰 香港 07_good
-      - _🇭🇰 香港 08_good
-      - _🇹🇼 台湾(ChatGPT) 06_good
+      - _🇭🇰 香港 01
+      - _🇭🇰 香港 04
+      - _🇭🇰 香港 07
+      - _🇭🇰 香港 08
+      - _🇹🇼 台湾(ChatGPT) 06
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - _1🇭🇰_尽头のAzureHK
-      - _1🇭🇰_尽头の华为云HK
+      - _🇯🇵_JP CMI_good
+      - _🇯🇵_JP 软银_good
+      - _🇯🇵_JP aws_good
       - _1🇺🇸_洛杉矶21号截止
       - _🇷🇺_俄罗斯
-      - _🇫🇷_法国流媒体
-      - _🇦🇺_澳大利亚流媒体
       - _🇭🇰_香港_1号_good
       - _🇭🇰_香港_2号_good
       - _🇭🇰_香港_3号_good
@@ -775,21 +738,18 @@ proxy-groups:
       - _🇬🇧_英国 17
       - _🇭🇰_HK Kirino
       - _🇯🇵_JP Kirino
-      - _🇭🇰_HK xTom
-      - _🇯🇵_JP xTom
-      - _🇯🇵_JP CMI_good
+      - _🇭🇰_HK xTom_good
+      - _🇯🇵_JP xTom_good
       - _🇯🇵_JP GreenCloud
-      - _🇯🇵_JP 软银
       - _🇯🇵_JP VirMach
-      - _🇯🇵_JP aws_good
       - _🇸🇬_SG aws
       - _🇸🇬_SG DigitalOcean
       - _🇺🇸_US DigitalOcean
-      - _🇭🇰 香港 01_good
-      - _🇭🇰 香港 04_good
-      - _🇭🇰 香港 07_good
-      - _🇭🇰 香港 08_good
-      - _🇹🇼 台湾(ChatGPT) 06_good
+      - _🇭🇰 香港 01
+      - _🇭🇰 香港 04
+      - _🇭🇰 香港 07
+      - _🇭🇰 香港 08
+      - _🇹🇼 台湾(ChatGPT) 06
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -811,8 +771,6 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _1🇭🇰_尽头のAzureHK
-      - _1🇭🇰_尽头の华为云HK
       - _🇭🇰_香港_1号_good
       - _🇭🇰_香港_2号_good
       - _🇭🇰_香港_3号_good
@@ -825,30 +783,30 @@ proxy-groups:
       - _🇹🇼_台湾_90
       - _🇹🇼_台湾(ChatGPT)+01
       - _🇭🇰_HK Kirino
-      - _🇭🇰_HK xTom
-      - _🇭🇰 香港 01_good
-      - _🇭🇰 香港 04_good
-      - _🇭🇰 香港 07_good
-      - _🇭🇰 香港 08_good
-      - _🇹🇼 台湾(ChatGPT) 06_good
+      - _🇭🇰_HK xTom_good
+      - _🇭🇰 香港 01
+      - _🇭🇰 香港 04
+      - _🇭🇰 香港 07
+      - _🇭🇰 香港 08
+      - _🇹🇼 台湾(ChatGPT) 06
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
+      - _🇯🇵_JP CMI_good
+      - _🇯🇵_JP 软银_good
+      - _🇯🇵_JP aws_good
       - _🇯🇵_日本_02
       - _🇯🇵_日本_07
       - _🇯🇵_日本_14
       - _🇯🇵_日本_25
       - _🇰🇷_韩国_20
       - _🇯🇵_JP Kirino
-      - _🇯🇵_JP xTom
-      - _🇯🇵_JP CMI_good
+      - _🇯🇵_JP xTom_good
       - _🇯🇵_JP GreenCloud
-      - _🇯🇵_JP 软银
       - _🇯🇵_JP VirMach
-      - _🇯🇵_JP aws_good
       - _🇸🇬_SG aws
       - _🇸🇬_SG DigitalOcean
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
