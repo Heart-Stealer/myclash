@@ -1218,16 +1218,6 @@ proxy-groups:
     interval: 60
     strategy: consistent-hashing
     proxies:
-      - _🇯🇵_JP CMI_good
-      - _🇯🇵_JP 软银_good
-      - _🇯🇵_JP aws_good
-      - _🇭🇰_香港_1号_good
-      - _🇭🇰_香港_2号_good
-      - _🇭🇰_香港_3号_good
-      - _🇭🇰_香港_4号_good
-      - _🇭🇰_香港_5号_good
-      - _🇭🇰_HK xTom_good
-      - _🇯🇵_JP xTom_good
       - IEPL-香港HKT-x5.0
       - IEPL-香港BGP-x5.0
       - IEPL-日本02-x5.0

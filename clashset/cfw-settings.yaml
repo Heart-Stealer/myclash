@@ -144,11 +144,11 @@ profileParsersText: >-
           - proxy-groups.⚖️ 隧道-负载均衡-散列.proxies=[]proxyNames|(隧道|IEPL)
           - proxy-groups.0.proxies.0+⚖️ 隧道-负载均衡-散列
 
-          # - proxy-groups.🚀 看视频-自动选择.proxies=[]proxyNames|(good|IEPL)
+          # - proxy-groups.🚀 看视频-自动选择.proxies=[]proxyNames|(good隧道|IEPL)
           # - proxy-groups.0.proxies.0+🚀 看视频-自动选择
-          - proxy-groups.⚖️ 看视频-负载均衡-散列.proxies=[]proxyNames|(good|IEPL)
+          - proxy-groups.⚖️ 看视频-负载均衡-散列.proxies=[]proxyNames|(good隧道|IEPL)
           - proxy-groups.0.proxies.0+⚖️ 看视频-负载均衡-散列
-          # - proxy-groups.⚖️ 看视频-负载均衡-轮询.proxies=[]proxyNames|(good|IEPL)
+          # - proxy-groups.⚖️ 看视频-负载均衡-轮询.proxies=[]proxyNames|(good隧道|IEPL)
           # - proxy-groups.0.proxies.0+⚖️ 看视频-负载均衡-轮询
 
           # - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦)
