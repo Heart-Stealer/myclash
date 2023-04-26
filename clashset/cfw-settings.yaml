@@ -127,7 +127,12 @@ profileParsersText: >-
             url: http://www.google.com/generate_204
             interval: 60
             strategy: consistent-hashing
-          - name: ⚖️ 隧道-负载均衡-散列
+          - name: ⚖️ 隧道A-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 60
+            strategy: consistent-hashing
+          - name: ⚖️ 隧道B-负载均衡-散列
             type: load-balance
             url: http://www.google.com/generate_204
             interval: 60
@@ -141,9 +146,12 @@ profileParsersText: >-
           - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
           - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
 
-          - proxy-groups.⚖️ 隧道-负载均衡-散列.proxies=[]proxyNames|(隧道|IEPL)
-          - proxy-groups.0.proxies.0+⚖️ 隧道-负载均衡-散列
+          - proxy-groups.⚖️ 隧道B-负载均衡-散列.proxies=[]proxyNames|(隧道B|IEPL)
+          - proxy-groups.0.proxies.0+⚖️ 隧道B-负载均衡-散列
 
+          - proxy-groups.⚖️ 隧道A-负载均衡-散列.proxies=[]proxyNames|(隧道A|IEPL)
+          - proxy-groups.0.proxies.0+⚖️ 隧道A-负载均衡-散列
+          
           # - proxy-groups.🚀 看视频-自动选择.proxies=[]proxyNames|(good隧道|IEPL)
           # - proxy-groups.0.proxies.0+🚀 看视频-自动选择
           - proxy-groups.⚖️ 看视频-负载均衡-散列.proxies=[]proxyNames|(good隧道|IEPL)

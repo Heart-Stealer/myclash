@@ -169,25 +169,28 @@ proxies:
   - { name: 隧道B-香港BGP-x1.0, type: vmess, server: s400l.ddns1.pw, port: 53680, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: IEPL-香港BGP-x5.0, type: vmess, server: s450l.cmcuct.org, port: 56801, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-美国4-ChatGPT-x3.0, type: vmess, server: s400l.ddns1.pw, port: 30009, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 隧道A-香港2-x1.0, type: ss, server: sd2.cmcuct.org, port: 21101, cipher: chacha20-ietf-poly1305, password: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, udp: true }
   - { name: 隧道B-台湾2-x1.0, type: vmess, server: s400l.ddns1.pw, port: 30222, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-越南-x1.0, type: vmess, server: s400l.ddns1.pw, port: 30016, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-日本02-ss-x1.0, type: ss, server: s400l.ddns1.pw, port: 21104, cipher: chacha20-ietf-poly1305, password: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, udp: true }
   - { name: 隧道B-日本02-v2-x1.0, type: vmess, server: s400l.ddns1.pw, port: 21105, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: IEPL-日本02-x5.0, type: vmess, server: s450l.cmcuct.org, port: 56805, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 隧道A-日本01-v2-x1.0, type: vmess, server: sd2.cmcuct.org, port: 50929, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 隧道A-日本01-ss-x1.0, type: ss, server: sd2.cmcuct.org, port: 50930, cipher: chacha20-ietf-poly1305, password: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, udp: true }
   - { name: 隧道B-美国01-v2-x1.0, type: vmess, server: s400l.ddns1.pw, port: 30007, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-美国02-x1.0, type: vmess, server: s400l.ddns1.pw, port: 30021, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道A-美国01-v2-x1.0, type: vmess, server: sd2.cmcuct.org, port: 30007, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-新加坡01-ss-x1.0, type: ss, server: s400l.ddns1.pw, port: 30008, cipher: chacha20-ietf-poly1305, password: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, udp: true }
   - { name: IEPL-新加坡01-x5.0, type: vmess, server: s450l.cmcuct.org, port: 56806, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-新加坡02-x1.0, type: vmess, server: s400l.ddns1.pw, port: 36136, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
-  - { name: 隧道B-意大利-x0.7, type: vmess, server: s400l.ddns1.pw, port: 30889, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-法国-x1.0, type: vmess, server: s400l.ddns1.pw, port: 33926, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-马来西亚-x1.0, type: vmess, server: s400l.ddns1.pw, port: 30020, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
-  - { name: 隧道B-菲律宾-x2.0, type: vmess, server: s400l.ddns1.pw, port: 11125, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
-  - { name: 隧道B-加拿大-x0.5, type: vmess, server: s400l.ddns1.pw, port: 11119, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 隧道A-澳大利亚-x0.7, type: vmess, server: sd2.cmcuct.org, port: 11106, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-泰国-x1.0, type: vmess, server: s400l.ddns1.pw, port: 30017, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: IEPL-韩国01-x5.0, type: vmess, server: s450l.cmcuct.org, port: 56803, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 隧道A-阿根廷-x1.0, type: vmess, server: sd2.cmcuct.org, port: 30019, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
   - { name: 隧道B-土耳其-x1.0, type: vmess, server: s400l.ddns1.pw, port: 34364, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 隧道A-巴西1-x1.0, type: vmess, server: sd2.cmcuct.org, port: 30020, uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8, alterId: 0, cipher: auto, udp: true }
 proxy-groups:
  # 🚀 节点选择 🔰 节点选择 ⚖️ 负载均衡 🎥 NETFLIX 🎯 全球直连 🛑 全球拦截 ⛔️ 广告拦截
  # 🚫 运营劫持 🌍 国外媒体 🌏 国内媒体 📲 电报信息 🍎 苹果服务 🐟 漏网之鱼
