@@ -19,6 +19,7 @@ allow-lan: true
 # "*"                           绑定所有的 IP 地址
 # 192.168.122.11                绑定一个的 IPv4 地址
 # "[aaaa::a8aa:ff:fe09:57d8]"   绑定一个 IPv6 地址
+ipv6: true
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
 mode: Rule
 # 5 个级别：silent / debug / info / warning / error /。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
@@ -94,4 +95,3 @@ dns:
   #  DoH: 以 https:// 开头的 DNS 服务器。拥有更好的伪装性，且几乎不可能被运营商或网络管理封锁，但查询效率和安全性可能略低。
   #  DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
   #  若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
-ipv6: true

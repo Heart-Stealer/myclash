@@ -2,6 +2,7 @@ mixed-port: 7890
 allow-lan: true
 mode: Rule
 log-level: info
+ipv6: true
 external-controller: 127.0.0.1:9090
 hosts:
   localhost: 127.0.0.1
@@ -637,6 +638,304 @@ proxies:
     sni: z261.hongkongnode.top
     skip-cert-verify: false
     udp: true
+  - name: 🇭🇰 香港01
+    type: ss
+    server: sh.yibaoemail.com
+    port: 16397
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇭🇰 香港02
+    type: ss
+    server: sh.yibaoemail.com
+    port: 16397
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇭🇰 香港03
+    type: ss
+    server: sh.yibaoemail.com
+    port: 16397
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇭🇰 香港04
+    type: ss
+    server: sh.yibaoemail.com
+    port: 16397
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇯🇵 日本01
+    type: ss
+    server: gz-cm.acnawscn.uk
+    port: 54494
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇯🇵 日本02
+    type: ss
+    server: sh.yibaoemail.com
+    port: 27996
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇯🇵 日本03
+    type: ss
+    server: sh.yibaoemail.com
+    port: 27996
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇰🇷 韩国01
+    type: ss
+    server: sh.yibaoemail.com
+    port: 49781
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇰🇷 韩国02
+    type: ss
+    server: sh.yibaoemail.com
+    port: 49781
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇰🇷 韩国03
+    type: ss
+    server: sh.yibaoemail.com
+    port: 49781
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 🇰🇷 韩国04
+    type: ss
+    server: sh.yibaoemail.com
+    port: 49781
+    cipher: chacha20-ietf-poly1305
+    password: a272456e-444a-40a0-98a1-6faf22cc77f8
+    udp: true
+  - name: 地址1:ysbzc.link
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30003
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-香港HKT-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 12149
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: IEPL-香港HKT-x5.0
+    type: vmess
+    server: s450l.cmcuct.org
+    port: 56802
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-香港BGP-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 53680
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: IEPL-香港BGP-x5.0
+    type: vmess
+    server: s450l.cmcuct.org
+    port: 56801
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-美国4-ChatGPT-x3.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30009
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-台湾2-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30222
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-越南-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30016
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-日本02-ss-x1.0
+    type: ss
+    server: s400l.ddns1.pw
+    port: 21104
+    cipher: chacha20-ietf-poly1305
+    password: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    udp: true
+  - name: 隧道B-日本02-v2-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 21105
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: IEPL-日本02-x5.0
+    type: vmess
+    server: s450l.cmcuct.org
+    port: 56805
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-美国01-v2-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30007
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-美国02-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30021
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道A-美国01-v2-x1.0
+    type: vmess
+    server: sd2.cmcuct.org
+    port: 30007
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-新加坡01-ss-x1.0
+    type: ss
+    server: s400l.ddns1.pw
+    port: 30008
+    cipher: chacha20-ietf-poly1305
+    password: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    udp: true
+  - name: IEPL-新加坡01-x5.0
+    type: vmess
+    server: s450l.cmcuct.org
+    port: 56806
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-新加坡02-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 36136
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-意大利-x0.7
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30889
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-法国-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 33926
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-马来西亚-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30020
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-菲律宾-x2.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 11125
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-加拿大-x0.5
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 11119
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-泰国-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 30017
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: IEPL-韩国01-x5.0
+    type: vmess
+    server: s450l.cmcuct.org
+    port: 56803
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+  - name: 隧道B-土耳其-x1.0
+    type: vmess
+    server: s400l.ddns1.pw
+    port: 34364
+    uuid: 486a108f-d6ef-48dc-b74e-fb9a3eae41c8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -646,6 +945,8 @@ proxy-groups:
       - ⚖️ 🇨🇳港澳台-负载均衡-散列
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
+      - ⚖️ 看视频-负载均衡-散列
+      - ⚖️ 隧道-负载均衡-散列
       - _🇯🇵_JP CMI_good
       - _🇯🇵_JP 软银_good
       - _🇯🇵_JP aws_good
@@ -695,6 +996,42 @@ proxy-groups:
       - _🇭🇰 香港 07
       - _🇭🇰 香港 08
       - _🇹🇼 台湾(ChatGPT) 06
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇰🇷 韩国01
+      - 🇰🇷 韩国02
+      - 🇰🇷 韩国03
+      - 🇰🇷 韩国04
+      - 地址1:ysbzc.link
+      - 隧道B-香港HKT-x1.0
+      - IEPL-香港HKT-x5.0
+      - 隧道B-香港BGP-x1.0
+      - IEPL-香港BGP-x5.0
+      - 隧道B-美国4-ChatGPT-x3.0
+      - 隧道B-台湾2-x1.0
+      - 隧道B-越南-x1.0
+      - 隧道B-日本02-ss-x1.0
+      - 隧道B-日本02-v2-x1.0
+      - IEPL-日本02-x5.0
+      - 隧道B-美国01-v2-x1.0
+      - 隧道B-美国02-x1.0
+      - 隧道A-美国01-v2-x1.0
+      - 隧道B-新加坡01-ss-x1.0
+      - IEPL-新加坡01-x5.0
+      - 隧道B-新加坡02-x1.0
+      - 隧道B-意大利-x0.7
+      - 隧道B-法国-x1.0
+      - 隧道B-马来西亚-x1.0
+      - 隧道B-菲律宾-x2.0
+      - 隧道B-加拿大-x0.5
+      - 隧道B-泰国-x1.0
+      - IEPL-韩国01-x5.0
+      - 隧道B-土耳其-x1.0
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -750,6 +1087,42 @@ proxy-groups:
       - _🇭🇰 香港 07
       - _🇭🇰 香港 08
       - _🇹🇼 台湾(ChatGPT) 06
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇰🇷 韩国01
+      - 🇰🇷 韩国02
+      - 🇰🇷 韩国03
+      - 🇰🇷 韩国04
+      - 地址1:ysbzc.link
+      - 隧道B-香港HKT-x1.0
+      - IEPL-香港HKT-x5.0
+      - 隧道B-香港BGP-x1.0
+      - IEPL-香港BGP-x5.0
+      - 隧道B-美国4-ChatGPT-x3.0
+      - 隧道B-台湾2-x1.0
+      - 隧道B-越南-x1.0
+      - 隧道B-日本02-ss-x1.0
+      - 隧道B-日本02-v2-x1.0
+      - IEPL-日本02-x5.0
+      - 隧道B-美国01-v2-x1.0
+      - 隧道B-美国02-x1.0
+      - 隧道A-美国01-v2-x1.0
+      - 隧道B-新加坡01-ss-x1.0
+      - IEPL-新加坡01-x5.0
+      - 隧道B-新加坡02-x1.0
+      - 隧道B-意大利-x0.7
+      - 隧道B-法国-x1.0
+      - 隧道B-马来西亚-x1.0
+      - 隧道B-菲律宾-x2.0
+      - 隧道B-加拿大-x0.5
+      - 隧道B-泰国-x1.0
+      - IEPL-韩国01-x5.0
+      - 隧道B-土耳其-x1.0
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -789,6 +1162,10 @@ proxy-groups:
       - _🇭🇰 香港 07
       - _🇭🇰 香港 08
       - _🇹🇼 台湾(ChatGPT) 06
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -809,6 +1186,13 @@ proxy-groups:
       - _🇯🇵_JP VirMach
       - _🇸🇬_SG aws
       - _🇸🇬_SG DigitalOcean
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇰🇷 韩国01
+      - 🇰🇷 韩国02
+      - 🇰🇷 韩国03
+      - 🇰🇷 韩国04
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -828,6 +1212,47 @@ proxy-groups:
       - _🇺🇸_美国_86
       - _🇺🇸_美国_22
       - _🇺🇸_US DigitalOcean
+  - name: ⚖️ 看视频-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 60
+    strategy: consistent-hashing
+    proxies:
+      - _🇯🇵_JP CMI_good
+      - _🇯🇵_JP 软银_good
+      - _🇯🇵_JP aws_good
+      - _🇭🇰_香港_1号_good
+      - _🇭🇰_香港_2号_good
+      - _🇭🇰_香港_3号_good
+      - _🇭🇰_香港_4号_good
+      - _🇭🇰_香港_5号_good
+      - _🇭🇰_HK xTom_good
+      - _🇯🇵_JP xTom_good
+  - name: ⚖️ 隧道-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 60
+    strategy: consistent-hashing
+    proxies:
+      - 隧道B-香港HKT-x1.0
+      - 隧道B-香港BGP-x1.0
+      - 隧道B-美国4-ChatGPT-x3.0
+      - 隧道B-台湾2-x1.0
+      - 隧道B-越南-x1.0
+      - 隧道B-日本02-ss-x1.0
+      - 隧道B-日本02-v2-x1.0
+      - 隧道B-美国01-v2-x1.0
+      - 隧道B-美国02-x1.0
+      - 隧道A-美国01-v2-x1.0
+      - 隧道B-新加坡01-ss-x1.0
+      - 隧道B-新加坡02-x1.0
+      - 隧道B-意大利-x0.7
+      - 隧道B-法国-x1.0
+      - 隧道B-马来西亚-x1.0
+      - 隧道B-菲律宾-x2.0
+      - 隧道B-加拿大-x0.5
+      - 隧道B-泰国-x1.0
+      - 隧道B-土耳其-x1.0
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve

@@ -107,11 +107,6 @@ profileParsersText: >-
           #   url: http://www.google.com/generate_204
           #   interval: 300
           #   strategy: round-robin
-          - name: ⚖️ 看视频-负载均衡-散列
-            type: load-balance
-            url: http://www.google.com/generate_204
-            interval: 60
-            strategy: consistent-hashing
           # - name: ⚖️ 看视频-负载均衡-轮询
           #   type: load-balance
           #   url: http://www.google.com/generate_204
@@ -127,6 +122,16 @@ profileParsersText: >-
           #   url: http://www.google.com/generate_204
           #   interval: 300
           #   strategy: round-robin
+          - name: ⚖️ 看视频-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 60
+            strategy: consistent-hashing
+          - name: ⚖️ 隧道-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 60
+            strategy: consistent-hashing
         commands:
           - proxy-groups.🐟 漏网之鱼.proxies.0+♻️ 自动选择
           - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
@@ -135,6 +140,9 @@ profileParsersText: >-
           - proxy-groups.🎯 全球直连.proxies.0+♻️ 自动选择
           - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
           - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
+
+          - proxy-groups.⚖️ 隧道-负载均衡-散列.proxies=[]proxyNames|(隧道)
+          - proxy-groups.0.proxies.0+⚖️ 隧道-负载均衡-散列
 
           # - proxy-groups.🚀 看视频-自动选择.proxies=[]proxyNames|(_good)
           # - proxy-groups.0.proxies.0+🚀 看视频-自动选择
