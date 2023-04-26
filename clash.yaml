@@ -970,6 +970,7 @@ proxy-groups:
       - ⚖️ 看视频-负载均衡-散列
       - ⚖️ 隧道A-负载均衡-散列
       - ⚖️ 隧道B-负载均衡-散列
+      - ⚖️ IEPL-负载均衡-散列
       - _🇯🇵_JP CMI_good
       - _🇯🇵_JP 软银_good
       - _🇯🇵_JP aws_good
@@ -1247,27 +1248,49 @@ proxy-groups:
     interval: 60
     strategy: consistent-hashing
     proxies:
-      - IEPL-香港HKT-x5.0
-      - IEPL-香港BGP-x5.0
-      - IEPL-日本02-x5.0
-      - IEPL-新加坡01-x5.0
-      - IEPL-韩国01-x5.0
+      - _🇯🇵_JP CMI_good
+      - _🇯🇵_JP 软银_good
+      - _🇯🇵_JP aws_good
+      - _🇭🇰_香港_1号_good
+      - _🇭🇰_香港_2号_good
+      - _🇭🇰_香港_3号_good
+      - _🇭🇰_香港_4号_good
+      - _🇭🇰_香港_5号_good
+      - _🇭🇰_HK xTom_good
+      - _🇯🇵_JP xTom_good
+      - 隧道B-香港HKT-x1.0
+      - 隧道B-香港BGP-x1.0
+      - 隧道B-美国4-ChatGPT-x3.0
+      - 隧道A-香港2-x1.0
+      - 隧道B-台湾2-x1.0
+      - 隧道B-越南-x1.0
+      - 隧道B-日本02-ss-x1.0
+      - 隧道B-日本02-v2-x1.0
+      - 隧道A-日本01-v2-x1.0
+      - 隧道A-日本01-ss-x1.0
+      - 隧道B-美国01-v2-x1.0
+      - 隧道B-美国02-x1.0
+      - 隧道A-美国01-v2-x1.0
+      - 隧道B-新加坡01-ss-x1.0
+      - 隧道B-新加坡02-x1.0
+      - 隧道B-法国-x1.0
+      - 隧道B-马来西亚-x1.0
+      - 隧道A-澳大利亚-x0.7
+      - 隧道B-泰国-x1.0
+      - 隧道A-阿根廷-x1.0
+      - 隧道B-土耳其-x1.0
+      - 隧道A-巴西1-x1.0
   - name: ⚖️ 隧道A-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 60
     strategy: consistent-hashing
     proxies:
-      - IEPL-香港HKT-x5.0
-      - IEPL-香港BGP-x5.0
       - 隧道A-香港2-x1.0
-      - IEPL-日本02-x5.0
       - 隧道A-日本01-v2-x1.0
       - 隧道A-日本01-ss-x1.0
       - 隧道A-美国01-v2-x1.0
-      - IEPL-新加坡01-x5.0
       - 隧道A-澳大利亚-x0.7
-      - IEPL-韩国01-x5.0
       - 隧道A-阿根廷-x1.0
       - 隧道A-巴西1-x1.0
   - name: ⚖️ 隧道B-负载均衡-散列
@@ -1277,25 +1300,31 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - 隧道B-香港HKT-x1.0
-      - IEPL-香港HKT-x5.0
       - 隧道B-香港BGP-x1.0
-      - IEPL-香港BGP-x5.0
       - 隧道B-美国4-ChatGPT-x3.0
       - 隧道B-台湾2-x1.0
       - 隧道B-越南-x1.0
       - 隧道B-日本02-ss-x1.0
       - 隧道B-日本02-v2-x1.0
-      - IEPL-日本02-x5.0
       - 隧道B-美国01-v2-x1.0
       - 隧道B-美国02-x1.0
       - 隧道B-新加坡01-ss-x1.0
-      - IEPL-新加坡01-x5.0
       - 隧道B-新加坡02-x1.0
       - 隧道B-法国-x1.0
       - 隧道B-马来西亚-x1.0
       - 隧道B-泰国-x1.0
-      - IEPL-韩国01-x5.0
       - 隧道B-土耳其-x1.0
+  - name: ⚖️ IEPL-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 60
+    strategy: consistent-hashing
+    proxies:
+      - IEPL-香港HKT-x5.0
+      - IEPL-香港BGP-x5.0
+      - IEPL-日本02-x5.0
+      - IEPL-新加坡01-x5.0
+      - IEPL-韩国01-x5.0
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
