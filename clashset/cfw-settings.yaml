@@ -122,26 +122,11 @@ profileParsersText: >-
           #   url: http://www.google.com/generate_204
           #   interval: 300
           #   strategy: round-robin
-          - name: ⚖️ 看视频-负载均衡-散列
-            type: load-balance
-            url: http://www.google.com/generate_204
-            interval: 60
-            strategy: consistent-hashing
-          - name: ⚖️ 隧道A-负载均衡-散列
-            type: load-balance
-            url: http://www.google.com/generate_204
-            interval: 60
-            strategy: consistent-hashing
-          - name: ⚖️ 隧道B-负载均衡-散列
-            type: load-balance
-            url: http://www.google.com/generate_204
-            interval: 60
-            strategy: consistent-hashing
-          - name: ⚖️ IEPL-负载均衡-散列
-            type: load-balance
-            url: http://www.google.com/generate_204
-            interval: 60
-            strategy: consistent-hashing
+          # - name: ⚖️ 看视频-负载均衡-散列
+          #   type: load-balance
+          #   url: http://www.google.com/generate_204
+          #   interval: 60
+          #   strategy: consistent-hashing
         commands:
           - proxy-groups.🐟 漏网之鱼.proxies.0+♻️ 自动选择
           - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
@@ -151,27 +136,14 @@ profileParsersText: >-
           - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
           - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
 
-          - proxy-groups.⚖️ IEPL-负载均衡-散列.proxies=[]proxyNames|(IEPL)
-          - proxy-groups.0.proxies.0+⚖️ IEPL-负载均衡-散列
+          # - proxy-groups.⚖️ 看视频-负载均衡-散列.proxies=[]proxyNames|(good|隧道)
+          # - proxy-groups.0.proxies.0+⚖️ 看视频-负载均衡-散列
 
-          - proxy-groups.⚖️ 隧道B-负载均衡-散列.proxies=[]proxyNames|(隧道B)
-          - proxy-groups.0.proxies.0+⚖️ 隧道B-负载均衡-散列
-
-          - proxy-groups.⚖️ 隧道A-负载均衡-散列.proxies=[]proxyNames|(隧道A)
-          - proxy-groups.0.proxies.0+⚖️ 隧道A-负载均衡-散列
-          
-          # - proxy-groups.🚀 看视频-自动选择.proxies=[]proxyNames|(good|隧道)
-          # - proxy-groups.0.proxies.0+🚀 看视频-自动选择
-          - proxy-groups.⚖️ 看视频-负载均衡-散列.proxies=[]proxyNames|(good|隧道)
-          - proxy-groups.0.proxies.0+⚖️ 看视频-负载均衡-散列
-          # - proxy-groups.⚖️ 看视频-负载均衡-轮询.proxies=[]proxyNames|(good|隧道)
-          # - proxy-groups.0.proxies.0+⚖️ 看视频-负载均衡-轮询
-
-          # - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦)
+          # - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷)
           # - proxy-groups.0.proxies.0+🚀 🇺🇸美国-自动选择
-          - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦)
+          - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷)
           - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-散列
-          # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-轮询.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦)
+          # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-轮询.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷)
           # - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-轮询
 
           # - proxy-groups.🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷)
