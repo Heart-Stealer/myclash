@@ -108,50 +108,19 @@ proxies:
       mode: http
       host: bulianglin.com
     udp: true
-  - name: _🇯🇵_JP Kirino
-    server: kirino.jp.securevpn.cc
-    port: 1020
-    type: ss
-    cipher: aes-128-gcm
-    password: "202304300000000000000020"
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: bulianglin.com
-    udp: true
-  - name: _🇯🇵_JP GreenCloud
-    server: greencloud.jp.securevpn.cc
-    port: 1020
-    type: ss
-    cipher: aes-128-gcm
-    password: "202304300000000000000020"
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: bulianglin.com
-    udp: true
-  - name: _🇯🇵_JP VirMach
-    server: virmach.jp.securevpn.cc
-    port: 1020
-    type: ss
-    cipher: aes-128-gcm
-    password: "202304300000000000000020"
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: bulianglin.com
-    udp: true
-  - name: _🇸🇬_SG aws
-    server: aws.sg.securevpn.cc
-    port: 1020
-    type: ss
-    cipher: aes-128-gcm
-    password: "202304300000000000000020"
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: bulianglin.com
-    udp: true
+  - name: _🇭🇰_HK_03
+    server: join-bede.vmessorg.fun
+    type: vmess
+    country: 🇭🇰HK
+    port: 80
+    uuid: bd09fd7b-d228-4de6-f6d9-53daf6a75013
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /
+    http-opts: {}
+    h2-opts: {}
+    skip-cert-verify: true
   - name: _🇸🇬_SG DigitalOcean
     server: dosg.securevpn.cc
     port: 1020
@@ -174,57 +143,6 @@ proxies:
       mode: http
       host: bulianglin.com
     udp: true
-  - name: _🇨🇦_加拿大 69
-    server: 23.227.38.99
-    port: 443
-    type: vmess
-    uuid: 86d37526-5758-4cec-862f-df404b313086
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-path: /3G6WPDL7
-    ws-headers:
-      Host: 1.freek1.xyz
-    udp: true
-  - name: _🇲🇽_墨西哥 120
-    server: 213.156.144.6
-    port: 443
-    type: vmess
-    uuid: 859b9dd2-23e5-4663-abe9-aca56154a1f4
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-path: /bb
-    ws-headers:
-      Host: cc66.111711.xyz
-    udp: true
-  - name: _🇭🇰_香港 112
-    server: hk1.taobao4755.xyz
-    port: 80
-    type: vmess
-    uuid: f36ffaa2-b7ce-4297-b18f-1c003698ae49
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: _🇻🇳_越南_17
-    server: cf.noaries.de
-    port: 8880
-    type: vmess
-    uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        Host: vnpt.iiio.wiki
   - name: _🇮🇳_印度_14
     server: 152.70.74.66
     port: 443
@@ -232,7 +150,7 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: false
     udp: true
-  - name: _🇺🇸_美国 12
+  - name: 🇺🇲 美国【付费推荐：https://v1.mk/vip】28
     server: www.udemy.com
     port: 443
     type: vmess
@@ -240,187 +158,37 @@ proxies:
     alterId: 0
     cipher: auto
     tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-path: /worryfree
-    ws-headers:
-      Host: dynamic-sg1b.obfs.xyz
-    udp: true
-  - name: _🇺🇸_美国_90
-    server: 172.67.84.93
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
     network: ws
     ws-opts:
-      path: /shirker
+      path: /worryfree
       headers:
-        Host: uk1.scproxy.top
-  - name: _🇺🇸_美国 72
-    server: 172.67.87.132
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
-    udp: true
-  - name: _🇺🇸_美国 147
-    server: 172.67.86.87
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
-    udp: true
-  - name: _🇺🇸_美国_14
-    server: 172.67.217.222
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-  - name: _🇺🇸_美国_26
-    server: 172.67.127.123
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp1.scproxy.top
-  - name: _🇺🇸_美国_22
-    server: cf-lt.sharecentre.online
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 35d1eaf8-53e7-4c8b-92aa-d96a20854e3c
-    alterId: 0
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        Host: ssrsub.v03.ssrsub.com
-  - name: _🇺🇸_美国_39
-    server: cf-lt.sharecentre.online
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-  - name: _🇺🇸_美国 86
-    server: cf-lt.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-  - name: _🇺🇸_美国 49
-    server: cf-dx-dns.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: dp3.scproxy.top
-    udp: true
-  - name: _🇺🇸_美国 29
-    server: cf-dx-dns.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-  - name: _🇺🇸_美国 77
-    server: cf-lt-dns.sharecentre.online
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-  - name: _🇺🇸_美国 4
-    type: vmess
-    server: 104.17.14.48
+        Host: dynamic-sg1b.obfs.xyz
+  - name: 🇺🇲 美国【付费推荐：https://v1.mk/vip】23
+    server: quiz.vidio.com
     port: 443
-    cipher: auto
-    uuid: 083a9d0b-11fb-4b3d-ad57-7ace252bb51b
+    type: vmess
+    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
     alterId: 0
+    cipher: auto
     tls: true
-    skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /vmess
+      path: /
       headers:
-        host: fr-v.sshmax.xyz
+        Host: dynamic-sg1b.obfs.xyz
+  - name: 🇺🇲 美国【付费推荐：https://v1.mk/vip】259
+    server: 172.67.229.153
+    port: 80
+    type: vmess
+    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: sg4.562148.xyz
   - name: _🇺🇸_美国 6
     type: vmess
     server: www.udemy.com
@@ -435,58 +203,6 @@ proxies:
       path: /worryfree
       headers:
         host: dynamic-sg1b.obfs.xyz
-  - name: _🇺🇸_美国 8
-    type: vmess
-    server: 104.17.3.81
-    port: 80
-    cipher: auto
-    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /worryfree
-      headers:
-        host: w.evouch77.live
-  - name: _🇺🇸_美国 11
-    type: vmess
-    server: l1.zanbil-mo.cf
-    port: 2095
-    cipher: auto
-    uuid: 56fc3d21-4a2f-4f68-8f78-eebd6a051101
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - name: _🇺🇸_美国 107
-    server: ganjun.xyz
-    port: 443
-    type: vmess
-    uuid: 17bc2008-0ff7-44b0-bfb1-0c300180c71e
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: ganjun.xyz
-  - name: _🇺🇸_美国 117
-    server: 172.67.98.34
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: uk1.scproxy.top
   - name: _🇺🇸_美国 122
     server: quiz.vidio.com
     port: 443
@@ -500,45 +216,20 @@ proxies:
       path: /
       headers:
         Host: dynamic-sg1b.obfs.xyz
-  - name: _🇺🇸_美国 85
-    server: telegram-id.vpneti.ga
+  - name: _🇺🇸_美国 12
+    server: www.udemy.com
     port: 443
     type: vmess
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
     alterId: 0
     cipher: auto
     tls: true
+    skip-cert-verify: true
     network: ws
-    ws-opts:
-      path: /vjp2.0bad.com:443/chat
-      headers:
-        Host: bia-to-channel.vpneti.tk
-  - name: _🇺🇸_美国 94
-    server: 4.mamadcucu.com
-    port: 8880
-    type: vmess
-    uuid: 51ba5a9a-4b7c-4c62-b4ae-0e53ec8d3024
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /ArsalanTauBot
-      headers:
-        Host: 4.mamadcucu.com
-  - name: _🇺🇸_美国 244
-    server: 172.67.217.222
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
+    ws-path: /worryfree
+    ws-headers:
+      Host: dynamic-sg1b.obfs.xyz
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -554,39 +245,16 @@ proxy-groups:
       - _🇯🇵_JP xTom_good
       - _🇭🇰_HK xTom_good
       - _🇭🇰_HK Kirino
-      - _🇯🇵_JP Kirino
-      - _🇯🇵_JP GreenCloud
-      - _🇯🇵_JP VirMach
-      - _🇸🇬_SG aws
+      - _🇭🇰_HK_03
       - _🇸🇬_SG DigitalOcean
       - _🇺🇸_US DigitalOcean
-      - _🇨🇦_加拿大 69
-      - _🇲🇽_墨西哥 120
-      - _🇭🇰_香港 112
-      - _🇻🇳_越南_17
       - _🇮🇳_印度_14
-      - _🇺🇸_美国 12
-      - _🇺🇸_美国_90
-      - _🇺🇸_美国 72
-      - _🇺🇸_美国 147
-      - _🇺🇸_美国_14
-      - _🇺🇸_美国_26
-      - _🇺🇸_美国_22
-      - _🇺🇸_美国_39
-      - _🇺🇸_美国 86
-      - _🇺🇸_美国 49
-      - _🇺🇸_美国 29
-      - _🇺🇸_美国 77
-      - _🇺🇸_美国 4
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】28
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】23
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】259
       - _🇺🇸_美国 6
-      - _🇺🇸_美国 8
-      - _🇺🇸_美国 11
-      - _🇺🇸_美国 107
-      - _🇺🇸_美国 117
       - _🇺🇸_美国 122
-      - _🇺🇸_美国 85
-      - _🇺🇸_美国 94
-      - _🇺🇸_美国 244
+      - _🇺🇸_美国 12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -599,39 +267,16 @@ proxy-groups:
       - _🇯🇵_JP xTom_good
       - _🇭🇰_HK xTom_good
       - _🇭🇰_HK Kirino
-      - _🇯🇵_JP Kirino
-      - _🇯🇵_JP GreenCloud
-      - _🇯🇵_JP VirMach
-      - _🇸🇬_SG aws
+      - _🇭🇰_HK_03
       - _🇸🇬_SG DigitalOcean
       - _🇺🇸_US DigitalOcean
-      - _🇨🇦_加拿大 69
-      - _🇲🇽_墨西哥 120
-      - _🇭🇰_香港 112
-      - _🇻🇳_越南_17
       - _🇮🇳_印度_14
-      - _🇺🇸_美国 12
-      - _🇺🇸_美国_90
-      - _🇺🇸_美国 72
-      - _🇺🇸_美国 147
-      - _🇺🇸_美国_14
-      - _🇺🇸_美国_26
-      - _🇺🇸_美国_22
-      - _🇺🇸_美国_39
-      - _🇺🇸_美国 86
-      - _🇺🇸_美国 49
-      - _🇺🇸_美国 29
-      - _🇺🇸_美国 77
-      - _🇺🇸_美国 4
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】28
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】23
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】259
       - _🇺🇸_美国 6
-      - _🇺🇸_美国 8
-      - _🇺🇸_美国 11
-      - _🇺🇸_美国 107
-      - _🇺🇸_美国 117
       - _🇺🇸_美国 122
-      - _🇺🇸_美国 85
-      - _🇺🇸_美国 94
-      - _🇺🇸_美国 244
+      - _🇺🇸_美国 12
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -655,7 +300,7 @@ proxy-groups:
     proxies:
       - _🇭🇰_HK xTom_good
       - _🇭🇰_HK Kirino
-      - _🇭🇰_香港 112
+      - _🇭🇰_HK_03
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -666,10 +311,6 @@ proxy-groups:
       - _🇯🇵_JP 软银_good
       - _🇯🇵_JP aws_good
       - _🇯🇵_JP xTom_good
-      - _🇯🇵_JP Kirino
-      - _🇯🇵_JP GreenCloud
-      - _🇯🇵_JP VirMach
-      - _🇸🇬_SG aws
       - _🇸🇬_SG DigitalOcean
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
@@ -678,30 +319,12 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇸_US DigitalOcean
-      - _🇨🇦_加拿大 69
-      - _🇲🇽_墨西哥 120
-      - _🇺🇸_美国 12
-      - _🇺🇸_美国_90
-      - _🇺🇸_美国 72
-      - _🇺🇸_美国 147
-      - _🇺🇸_美国_14
-      - _🇺🇸_美国_26
-      - _🇺🇸_美国_22
-      - _🇺🇸_美国_39
-      - _🇺🇸_美国 86
-      - _🇺🇸_美国 49
-      - _🇺🇸_美国 29
-      - _🇺🇸_美国 77
-      - _🇺🇸_美国 4
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】28
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】23
+      - 🇺🇲 美国【付费推荐：https://v1.mk/vip】259
       - _🇺🇸_美国 6
-      - _🇺🇸_美国 8
-      - _🇺🇸_美国 11
-      - _🇺🇸_美国 107
-      - _🇺🇸_美国 117
       - _🇺🇸_美国 122
-      - _🇺🇸_美国 85
-      - _🇺🇸_美国 94
-      - _🇺🇸_美国 244
+      - _🇺🇸_美国 12
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
