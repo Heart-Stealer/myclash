@@ -77,7 +77,39 @@ proxies:
       path: /
       headers:
         host: ygld.loyou.me
-  - name: _🇭🇰Hong Kong
+  - name: _🇷🇺 _RU_俄罗斯联邦
+    server: 45.130.146.86
+    port: 443
+    client-fingerprint: chrome
+    type: ssr
+    cipher: aes-256-cfb
+    password: vyunme
+    tfo: false
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 17422:TTp0SX
+    obfs-param: ab93117422.jd.hk
+  - name: _🇮🇳 _IN_印度 01
+    server: 152.70.74.66
+    port: 443
+    type: trojan
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    skip-cert-verify: true
+    udp: true
+  - name: _🇭🇰 _香港
+    server: hk.ytjs114514.ml
+    port: 443
+    type: vmess
+    uuid: 3d50d828-4ec6-45aa-8465-710434a45e75
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: hk.ytjs114514.ml
+  - name: _🇭🇰 Hong Kong
     type: vmess
     server: 20.24.93.181
     port: 443
@@ -92,7 +124,7 @@ proxies:
       path: /getData
       headers:
         host: apps.apple.com
-  - name: _🇯🇵Japan
+  - name: _🇯🇵 Japan
     type: vmess
     server: 20.222.61.124
     port: 443
@@ -107,256 +139,221 @@ proxies:
       path: /getData
       headers:
         host: apps.apple.com
-  - name: _🇮🇳_印度_14
-    server: 152.70.74.66
-    port: 443
-    type: trojan
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    skip-cert-verify: false
-    udp: true
-  - name: _🇺🇲 美国 28
-    server: www.udemy.com
-    port: 443
-    type: vmess
-    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /worryfree
-      headers:
-        Host: dynamic-sg1b.obfs.xyz
-  - name: _🇺🇲 美国 23
-    server: quiz.vidio.com
-    port: 443
-    type: vmess
-    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: dynamic-sg1b.obfs.xyz
-  - name: _🇺🇲 美国 259
-    server: 172.67.229.153
-    port: 80
-    type: vmess
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: sg4.562148.xyz
-  - name: _🇺🇸_美国 122
-    server: quiz.vidio.com
-    port: 443
-    type: vmess
-    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: dynamic-sg1b.obfs.xyz
-  - name: _🇺🇸_美国 12
-    server: www.udemy.com
-    port: 443
-    type: vmess
-    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-path: /worryfree
-    ws-headers:
-      Host: dynamic-sg1b.obfs.xyz
-    udp: true
-  - name: _🇺🇸_美国 6
-    type: vmess
-    server: www.udemy.com
-    port: 443
-    cipher: auto
-    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /worryfree
-      headers:
-        host: dynamic-sg1b.obfs.xyz
-  - name: _🇺🇲 美国 11
-    server: 172.67.145.116
-    port: 8080
-    type: vmess
-    uuid: 6d68cfc2-36e5-432d-b6f2-5ff431cd431b
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /uitsrt
-      headers:
-        Host: vc3chixui.uitsrt.me
-  - name: _🇺🇲 美国 14
-    server: cf-lt.sharecentre.online
-    port: 8080
-    type: vmess
-    uuid: e2952737-6f10-492b-9813-19131deb71b1
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        Host: ssrsub.v03.ssrsub.com
-  - name: _🇺🇲 美国 24
-    server: i.vpchi.tk
-    port: 2082
-    type: vmess
-    uuid: 1cbcbeff-de07-4f43-8ca9-4cb3a2a508ab
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: i.vpchi.tk
-  - name: _🇺🇲 美国 37
-    server: zfc.windowsupdate1.com
-    port: 443
-    type: vmess
-    uuid: 4a7cab09-d65d-4d3e-8951-697310c2f48f
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /yfjc/nl?ed=2048
-      headers:
-        Host: nl.yfjc.sbs
-  - name: _🇺🇲 美国 47
-    server: cf-lt.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-  - name: _🇺🇲 美国 55
-    server: quiz.vidio.com
-    port: 443
-    type: vmess
-    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /worryfree
-      headers:
-        Host: dynamic-sg1b.obfs.xyz
-  - name: _🇺🇲 美国 78
-    server: 162.159.152.5
-    port: 443
-    type: vmess
-    uuid: 4a7cab09-d65d-4d3e-8951-697310c2f48f
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /yfjc/jp1?ed=2048
-      headers:
-        Host: jp1.yfjc.sbs
-  - name: _🇰🇷 KR_韩国 3
-    server: 3.35.55.5
-    port: 443
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    tfo: false
-  - name: _🇸🇬 NZ_新西兰
-    server: tempest-us.aikun.online
+  - name: _🇯🇵 _JP_日本 2
+    server: 43.206.255.205
     port: 443
     client-fingerprint: chrome
     type: trojan
-    password: 11e247e5-136d-45f1-844a-a7f054d36bab
+    password: 3e1170f8-0dc1-4aa8-b5cc-8d19324ffa60
     tfo: false
+    sni: data.amazon-azure.com
     skip-cert-verify: false
-  - name: _美国CloudFlare节点 13
-    server: 172.67.38.105
-    port: 2096
-    type: vmess
-    uuid: fcbd5c07-fba5-4ff9-c19c-02e023220628
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-path: ho3ino
-    ws-headers:
-      Host: h.h3io.co
-    udp: true
-  - name: 北美地区
-    server: 169.197.141.187
-    port: 8000
-    type: ss
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-    udp: true
-  - name: 美国 CloudFlare节点
-    server: cf-lt.sharecentre.online
+  - name: _🇸🇬 _SG 01
+    server: 172.67.73.39
     port: 80
     type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    uuid: b8458948-a630-4e6d-809a-230b2223ff3d
     alterId: 0
     cipher: auto
     tls: false
-    skip-cert-verify: true
     network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: dp4.scproxy.top
-    udp: true
-  - name: 美国 惠普HP
-    server: hk3.af49c4e4c2ef.sanfen004.me
+    ws-opts:
+      path: /xrayvws
+      headers:
+        Host: f.tun4.live
+  - name: _🇸🇬 _SG 02
+    server: www.udemy.com
     port: 443
     type: vmess
-    uuid: a316207e-0d3b-4754-ae9f-a4ec13aacba9
+    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: hk3.af49c4e4c2ef.sanfen004.me
+    ws-opts:
+      path: /worryfree
+      headers:
+        Host: dynamic-sg1b.obfs.xyz
     udp: true
-  - name: 瑞典
-    server: 167.88.61.213
-    port: 3389
-    type: ss
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
+  - name: _🇸🇬 _SG 03
+    server: quiz.vidio.com
+    port: 443
+    type: vmess
+    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /worryfree
+      headers:
+        Host: dynamic-sg1b.obfs.xyz
     udp: true
+  - name: _🇺🇲 _美国 96
+    server: 172.67.65.43
+    port: 2053
+    type: vmess
+    uuid: d6616014-a47e-4040-8286-34a2207c5b7c
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /10029
+      headers:
+        Host: b.v2ray2333.tk
+  - name: _🇺🇲 _美国 02
+    server: cc.tross.top
+    port: 60528
+    type: trojan
+    password: sfgdg225v5ddfs
+    sni: cc.tross.top
+    skip-cert-verify: true
+    udp: true
+  - name: _🇺🇲 _美国 4
+    type: trojan
+    server: cc.tross.top
+    port: 60528
+    udp: true
+    password: sfgdg225v5ddfs
+    skip-cert-verify: true
+    network: tcp
+  - name: _🇺🇲 _美国 8
+    type: vmess
+    server: 170.187.200.114
+    port: 443
+    cipher: auto
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /chat
+  - name: _🇺🇲 _美国 11
+    type: vmess
+    server: hd.mamadcucu.com
+    port: 2052
+    cipher: auto
+    uuid: 8ed9aec2-e02e-4a27-fe02-c3e20452e4c7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: h4.mamadcucu.com
+  - name: _🇺🇲 _美国 6
+    type: vmess
+    server: cf.yxjnode.com
+    port: 80
+    cipher: auto
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        host: buyvm2.yxjnode.com
+  - name: _🇺🇲 _美国 9
+    type: vmess
+    server: cdnjs.com
+    port: 443
+    cipher: auto
+    uuid: B6076D16-1F56-4D56-80E7-1B45FEE195E9
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /speedtest
+      headers:
+        host: Kansas.kotick.site
+  - name: _🇺🇲 _美国 53
+    server: 172.66.46.15
+    port: 443
+    type: vmess
+    uuid: 12612e87-8003-44a8-b4e8-ec4a325e9016
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /ou
+      headers:
+        Host: z.zorro.tk
+  - name: _🇲🇳 _蒙古 72
+    server: 180.149.90.66
+    port: 443
+    type: vmess
+    uuid: 859b9dd2-23e5-4663-abe9-aca56154a1f4
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /bb
+      headers:
+        Host: cc66.111711.xyz
+  - name: _🇺🇲 _美国 223
+    server: 172.66.43.240
+    port: 443
+    type: vmess
+    uuid: 12612e87-8003-44a8-b4e8-ec4a325e9016
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /ou
+      headers:
+        Host: z.zorro.tk
+  - name: _🇺🇸 _美国 206
+    server: 170.187.200.114
+    port: 443
+    type: vmess
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /chat
+      headers:
+        Host: 170.187.200.114
+    udp: true
+  - name: Relay_🇺🇸US-🇺🇸US_195
+    server: vsg1.0bad.com
+    port: 443
+    type: vmess
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /chat
+      headers:
+        Host: vsg1.0bad.com
+    udp: true
+  - name: _🇨🇳 _中国
+    server: 36.134.16.171
+    port: 11023
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc
+    alterId: 0
+    cipher: auto
+    tls: false
+    tfo: false
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -369,29 +366,28 @@ proxy-groups:
       - 芜湖
       - 好无聊啊
       - 伦敦
-      - _🇭🇰Hong Kong
-      - _🇯🇵Japan
-      - _🇮🇳_印度_14
-      - _🇺🇲 美国 28
-      - _🇺🇲 美国 23
-      - _🇺🇲 美国 259
-      - _🇺🇸_美国 122
-      - _🇺🇸_美国 12
-      - _🇺🇸_美国 6
-      - _🇺🇲 美国 11
-      - _🇺🇲 美国 14
-      - _🇺🇲 美国 24
-      - _🇺🇲 美国 37
-      - _🇺🇲 美国 47
-      - _🇺🇲 美国 55
-      - _🇺🇲 美国 78
-      - _🇰🇷 KR_韩国 3
-      - _🇸🇬 NZ_新西兰
-      - _美国CloudFlare节点 13
-      - 北美地区
-      - 美国 CloudFlare节点
-      - 美国 惠普HP
-      - 瑞典
+      - _🇷🇺 _RU_俄罗斯联邦
+      - _🇮🇳 _IN_印度 01
+      - _🇭🇰 _香港
+      - _🇭🇰 Hong Kong
+      - _🇯🇵 Japan
+      - _🇯🇵 _JP_日本 2
+      - _🇸🇬 _SG 01
+      - _🇸🇬 _SG 02
+      - _🇸🇬 _SG 03
+      - _🇺🇲 _美国 96
+      - _🇺🇲 _美国 02
+      - _🇺🇲 _美国 4
+      - _🇺🇲 _美国 8
+      - _🇺🇲 _美国 11
+      - _🇺🇲 _美国 6
+      - _🇺🇲 _美国 9
+      - _🇺🇲 _美国 53
+      - _🇲🇳 _蒙古 72
+      - _🇺🇲 _美国 223
+      - _🇺🇸 _美国 206
+      - Relay_🇺🇸US-🇺🇸US_195
+      - _🇨🇳 _中国
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -401,29 +397,28 @@ proxy-groups:
       - 芜湖
       - 好无聊啊
       - 伦敦
-      - _🇭🇰Hong Kong
-      - _🇯🇵Japan
-      - _🇮🇳_印度_14
-      - _🇺🇲 美国 28
-      - _🇺🇲 美国 23
-      - _🇺🇲 美国 259
-      - _🇺🇸_美国 122
-      - _🇺🇸_美国 12
-      - _🇺🇸_美国 6
-      - _🇺🇲 美国 11
-      - _🇺🇲 美国 14
-      - _🇺🇲 美国 24
-      - _🇺🇲 美国 37
-      - _🇺🇲 美国 47
-      - _🇺🇲 美国 55
-      - _🇺🇲 美国 78
-      - _🇰🇷 KR_韩国 3
-      - _🇸🇬 NZ_新西兰
-      - _美国CloudFlare节点 13
-      - 北美地区
-      - 美国 CloudFlare节点
-      - 美国 惠普HP
-      - 瑞典
+      - _🇷🇺 _RU_俄罗斯联邦
+      - _🇮🇳 _IN_印度 01
+      - _🇭🇰 _香港
+      - _🇭🇰 Hong Kong
+      - _🇯🇵 Japan
+      - _🇯🇵 _JP_日本 2
+      - _🇸🇬 _SG 01
+      - _🇸🇬 _SG 02
+      - _🇸🇬 _SG 03
+      - _🇺🇲 _美国 96
+      - _🇺🇲 _美国 02
+      - _🇺🇲 _美国 4
+      - _🇺🇲 _美国 8
+      - _🇺🇲 _美国 11
+      - _🇺🇲 _美国 6
+      - _🇺🇲 _美国 9
+      - _🇺🇲 _美国 53
+      - _🇲🇳 _蒙古 72
+      - _🇺🇲 _美国 223
+      - _🇺🇸 _美国 206
+      - Relay_🇺🇸US-🇺🇸US_195
+      - _🇨🇳 _中国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -445,35 +440,36 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇭🇰Hong Kong
+      - _🇭🇰 _香港
+      - _🇭🇰 Hong Kong
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇯🇵Japan
-      - _🇰🇷 KR_韩国 3
-      - _🇸🇬 NZ_新西兰
+      - _🇯🇵 Japan
+      - _🇯🇵 _JP_日本 2
+      - _🇸🇬 _SG 01
+      - _🇸🇬 _SG 02
+      - _🇸🇬 _SG 03
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇺🇲 美国 28
-      - _🇺🇲 美国 23
-      - _🇺🇲 美国 259
-      - _🇺🇸_美国 122
-      - _🇺🇸_美国 12
-      - _🇺🇸_美国 6
-      - _🇺🇲 美国 11
-      - _🇺🇲 美国 14
-      - _🇺🇲 美国 24
-      - _🇺🇲 美国 37
-      - _🇺🇲 美国 47
-      - _🇺🇲 美国 55
-      - _🇺🇲 美国 78
+      - _🇺🇲 _美国 96
+      - _🇺🇲 _美国 02
+      - _🇺🇲 _美国 4
+      - _🇺🇲 _美国 8
+      - _🇺🇲 _美国 11
+      - _🇺🇲 _美国 6
+      - _🇺🇲 _美国 9
+      - _🇺🇲 _美国 53
+      - _🇺🇲 _美国 223
+      - _🇺🇸 _美国 206
+      - Relay_🇺🇸US-🇺🇸US_195
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve

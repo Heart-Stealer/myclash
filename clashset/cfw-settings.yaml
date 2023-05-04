@@ -139,25 +139,25 @@ profileParsersText: >-
           # - proxy-groups.⚖️ 看视频-负载均衡-散列.proxies=[]proxyNames|(good|隧道)
           # - proxy-groups.0.proxies.0+⚖️ 看视频-负载均衡-散列
 
-          # - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷)
+          # - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
           # - proxy-groups.0.proxies.0+🚀 🇺🇸美国-自动选择
-          - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷)
+          - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
           - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-散列
-          # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-轮询.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷)
+          # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-轮询.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
           # - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-轮询
 
-          # - proxy-groups.🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷)
+          # - proxy-groups.🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
           # - proxy-groups.0.proxies.0+🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
-          - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷)
+          - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
           - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
-          # - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷)
+          # - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
           # - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询
 
-          # - proxy-groups.🚀 🇨🇳港澳台-自动选择.proxies=[]proxyNames|(🇹🇼|🇭🇰)
+          # - proxy-groups.🚀 🇨🇳港澳台-自动选择.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
           # - proxy-groups.0.proxies.0+🚀 🇨🇳港澳台-自动选择
-          - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-散列.proxies=[]proxyNames|(🇹🇼|🇭🇰)
+          - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-散列.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
           - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-散列
-          # - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-轮询.proxies=[]proxyNames|(🇹🇼|🇭🇰)
+          # - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-轮询.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
           # - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-轮询
 
           - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
