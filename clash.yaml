@@ -191,6 +191,20 @@ proxies:
       headers:
         Host: dynamic-sg1b.obfs.xyz
     udp: true
+  - name: _🇩🇪 _德国 11
+    type: vmess
+    server: hd.mamadcucu.com
+    port: 2052
+    cipher: auto
+    uuid: 8ed9aec2-e02e-4a27-fe02-c3e20452e4c7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: h4.mamadcucu.com
   - name: _🇺🇲 _美国 96
     server: 172.67.65.43
     port: 2053
@@ -232,20 +246,6 @@ proxies:
     network: ws
     ws-opts:
       path: /chat
-  - name: _🇺🇲 _美国 11
-    type: vmess
-    server: hd.mamadcucu.com
-    port: 2052
-    cipher: auto
-    uuid: 8ed9aec2-e02e-4a27-fe02-c3e20452e4c7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: h4.mamadcucu.com
   - name: _🇺🇲 _美国 6
     type: vmess
     server: cf.yxjnode.com
@@ -375,11 +375,11 @@ proxy-groups:
       - _🇸🇬 _SG 01
       - _🇸🇬 _SG 02
       - _🇸🇬 _SG 03
+      - _🇩🇪 _德国 11
       - _🇺🇲 _美国 96
       - _🇺🇲 _美国 02
       - _🇺🇲 _美国 4
       - _🇺🇲 _美国 8
-      - _🇺🇲 _美国 11
       - _🇺🇲 _美国 6
       - _🇺🇲 _美国 9
       - _🇺🇲 _美国 53
@@ -406,11 +406,11 @@ proxy-groups:
       - _🇸🇬 _SG 01
       - _🇸🇬 _SG 02
       - _🇸🇬 _SG 03
+      - _🇩🇪 _德国 11
       - _🇺🇲 _美国 96
       - _🇺🇲 _美国 02
       - _🇺🇲 _美国 4
       - _🇺🇲 _美国 8
-      - _🇺🇲 _美国 11
       - _🇺🇲 _美国 6
       - _🇺🇲 _美国 9
       - _🇺🇲 _美国 53
@@ -463,7 +463,6 @@ proxy-groups:
       - _🇺🇲 _美国 02
       - _🇺🇲 _美国 4
       - _🇺🇲 _美国 8
-      - _🇺🇲 _美国 11
       - _🇺🇲 _美国 6
       - _🇺🇲 _美国 9
       - _🇺🇲 _美国 53
