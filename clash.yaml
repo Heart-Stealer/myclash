@@ -71,7 +71,7 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
-  - name: 🇭🇰 香港
+  - name: _🇭🇰 香港
     server: hk6.af49c4e4c2ef.sanfen004.me
     port: 443
     type: vmess
@@ -85,7 +85,7 @@ proxies:
       path: /zh-cn
       headers:
         Host: www.microsoft.com
-  - name: 🇸🇬 新加坡
+  - name: _🇸🇬 新加坡
     server: natsg1.bytevirt.net
     port: 32253
     type: vmess
@@ -93,7 +93,7 @@ proxies:
     alterId: 0
     cipher: auto
     tls: false
-  - name: 🇯🇵 日本1
+  - name: _🇯🇵 日本1
     server: ap-jp-west-1.292228.xyz
     port: 80
     type: vmess
@@ -106,24 +106,19 @@ proxies:
       path: /filetransfer
       headers:
         Host: ap-jp-west-1.292228.xyz
-  - name: 🇷🇴 罗马尼亚  4
-    server: mci.ircf.space
-    port: 443
+  - name: _🇯🇵 日本2
+    server: c20s4.jjvip8.com
+    port: 10171
     type: vmess
-    uuid: a6e6b3e0-b8a7-4123-8ab4-573a9241a259
+    uuid: f7eef69d-49f3-41dc-84b9-e724fc795455
     alterId: 0
     cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /UcM6L7nnEW8E0h3Y
-      headers:
-        Host: hasan.foriran.nl
-  - name: 🇨🇳 中国阿里云 6
-    server: 8.219.216.27
-    port: 2052
+    tls: false
+  - name: _🇨🇳 中国50
+    server: 223.167.41.49
+    port: 63072
     type: vmess
-    uuid: 8ed9aec2-e02e-4a27-fe02-c3e20452e4c7
+    uuid: 7feb22ed-8283-3313-a09f-c5dc1402333b
     alterId: 0
     cipher: auto
     tls: false
@@ -131,8 +126,65 @@ proxies:
     ws-opts:
       path: /
       headers:
-        Host: h4.mamadcucu.com
-  - name: 🇺🇸 美国  7
+        Host: ag01-cdn.myn1des.com
+  - name: _🇨🇳 中国83
+    server: t.cccao.cyou
+    port: 16635
+    type: vmess
+    uuid: ad3f9bf7-d8d1-47df-a6bd-77ff50037339
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: t.cccao.cyou
+  - name: _🇨🇳 中国79
+    server: m.lwvzmdu.cn
+    port: 16635
+    type: vmess
+    uuid: ad3f9bf7-d8d1-47df-a6bd-77ff50037339
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: m.lwvzmdu.cn
+  - name: _🇷🇴 罗马尼亚80
+    server: mcix.ipcf.cloud
+    port: 443
+    type: vmess
+    uuid: CBDB1902-6B9B-4872-B20C-E94A3BD2F63D
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /speedtest
+      headers:
+        Host: Dusseldorf.kotick.site
+  - name: _🇨🇦 加拿大 4
+    server: 38.64.138.145
+    port: 8008
+    type: ss
+    cipher: aes-256-gcm
+    password: XKFKl2rULjIp74
+  - name: _🇨🇦 加拿大 13
+    server: 38.64.138.145
+    port: 6379
+    type: ss
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+  - name: _🇺🇲 美国 19
+    server: 172.99.190.149
+    port: 2376
+    type: ss
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
+  - name: _🇺🇲 德国-美国 1
     server: 192.203.230.86
     port: 80
     type: vmess
@@ -145,41 +197,7 @@ proxies:
       path: /
       headers:
         Host: us-1.acyun.cf
-  - name: 🇺🇸 美国  11
-    server: 170.114.45.122
-    port: 443
-    type: vmess
-    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /db698b16-d216-11ed-8e14-5ad705867cff
-      headers:
-        Host: db698b16-d216-11ed-8e14-5ad705867cff.asmandll.com
-  - name: 🇸🇬 SG
-    server: 51.79.141.144
-    port: 51199
-    type: vmess
-    uuid: 35b05d90-1ae2-4d5c-a42b-13b842ee584a
-    alterId: 0
-    cipher: auto
-    tls: false
-  - name: 🇺🇸 美国85
-    server: cdnjs.com
-    port: 443
-    type: vmess
-    uuid: F86EFDE3-B236-493C-A903-998DCEA823E2
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /speedtest
-      headers:
-        Host: Lille.kotick.site
-  - name: 🇨🇦 加拿大151
+  - name: _🇨🇦 加拿大151
     server: 23.227.38.99
     port: 443
     type: vmess
@@ -192,20 +210,33 @@ proxies:
       path: /3G6WPDL7
       headers:
         Host: 1.freek1.xyz
-  - name: 🇺🇸 美国68
-    server: d.pgypgykmoljklj.xyz
-    port: 443
+  - name: _🇺🇸 美国4
+    server: 192.203.230.86
+    port: 80
     type: vmess
-    uuid: fa4cb529-3ac9-4268-bb04-ed4253813508
+    uuid: a442dacf-cbb3-488a-9744-61494ea38630
     alterId: 0
     cipher: auto
-    tls: true
+    tls: false
     network: ws
     ws-opts:
-      path: /mR17oBKzZ7
+      path: /
       headers:
-        Host: d.pgypgykmoljklj.xyz
-  - name: 🇺🇸 美国44
+        Host: us-1.acyun.cf
+  - name: _🇺🇸 美国 7
+    server: 192.203.230.86
+    port: 80
+    type: vmess
+    uuid: a442dacf-cbb3-488a-9744-61494ea38630
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us-1.acyun.cf
+  - name: _🇺🇸 美国44
     server: tech.noaries.de
     port: 80
     type: vmess
@@ -218,7 +249,7 @@ proxies:
       path: /shirker
       headers:
         Host: nl.sharecentrepro.com
-  - name: 🇺🇸 美国55
+  - name: _🇺🇸 美国55
     server: 192.203.230.86
     port: 80
     type: vmess
@@ -231,67 +262,7 @@ proxies:
       path: /
       headers:
         Host: us-1.acyun.cf
-  - name: 塞舌尔105
-    server: 154.85.0.237
-    port: 48823
-    type: vmess
-    uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7
-    alterId: 64
-    cipher: auto
-    tls: false
-  - name: 🇺🇸 美国惠普HP 2
-    server: hk2.c2bfe79372be.sanfen004.me
-    port: 443
-    type: vmess
-    uuid: 30ba67cf-776c-48be-8bb5-578878830228
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: www.microsoft.com
-  - name: 🇺🇸 美国CloudFlare节点 2
-    server: cf-lt.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-  - name: 🇺🇸 美国CloudFlare公司CDN节点 27
-    server: cf.yxjnode.com
-    port: 80
-    type: vmess
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        Host: dp1.yxjnode.com
-  - name: 🇺🇸 美国2
-    server: yx.timeswath.uk
-    port: 80
-    type: vmess
-    uuid: 947bfda6-877f-4747-8e89-da77a0eef191
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /111111111
-      headers:
-        Host: sfo.fof124.top
-  - name: 🇺🇸 美国4
+  - name: _🇺🇸 美国91
     server: 192.203.230.86
     port: 80
     type: vmess
@@ -304,95 +275,6 @@ proxies:
       path: /
       headers:
         Host: us-1.acyun.cf
-  - name: 🇺🇸 美国5
-    server: tech.noaries.de
-    port: 80
-    type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: nl.sharecentrepro.com
-  - name: 🇺🇸 美国6
-    server: target.292228.xyz
-    port: 80
-    type: vmess
-    uuid: b151a4da-0056-4b26-8598-ca3862963ca2
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /filetransfer
-      headers:
-        Host: ap-sg-central-2.292228.xyz
-  - name: 🇺🇸 美国18
-    server: new8.huvicloud.com
-    port: 443
-    type: vmess
-    uuid: a11ca760-9ef9-4a63-95c9-4c5c32d56251
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: new8.huvicloud.com
-  - name: 🇺🇸 美国26
-    server: hd.mamadcucu.com
-    port: 2095
-    type: vmess
-    uuid: 19350d64-6868-4a64-e501-9c0df903d788
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: h3.mamadcucu.com
-  - name: 🇺🇸 美国76
-    server: 23.225.33.171
-    port: 56662
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-  - name: 🇺🇸 美国91
-    server: 192.203.230.86
-    port: 80
-    type: vmess
-    uuid: a442dacf-cbb3-488a-9744-61494ea38630
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us-1.acyun.cf
-  - name: 🇺🇸 荷兰-美国101
-    server: 156.225.67.231
-    port: 53231
-    type: vmess
-    uuid: 515bcb4d-0ba1-4cae-87cf-a047007eec54
-    alterId: 64
-    cipher: auto
-    tls: false
-  - name: 🇺🇸 荷兰-美国104
-    server: 156.225.67.103
-    port: 49188
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -405,33 +287,24 @@ proxy-groups:
       - 好无聊啊
       - _🇷🇺 _RU_俄罗斯联邦
       - _🇮🇳 _IN_印度 01
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本1
-      - 🇷🇴 罗马尼亚  4
-      - 🇨🇳 中国阿里云 6
-      - 🇺🇸 美国  7
-      - 🇺🇸 美国  11
-      - 🇸🇬 SG
-      - 🇺🇸 美国85
-      - 🇨🇦 加拿大151
-      - 🇺🇸 美国68
-      - 🇺🇸 美国44
-      - 🇺🇸 美国55
-      - 塞舌尔105
-      - 🇺🇸 美国惠普HP 2
-      - 🇺🇸 美国CloudFlare节点 2
-      - 🇺🇸 美国CloudFlare公司CDN节点 27
-      - 🇺🇸 美国2
-      - 🇺🇸 美国4
-      - 🇺🇸 美国5
-      - 🇺🇸 美国6
-      - 🇺🇸 美国18
-      - 🇺🇸 美国26
-      - 🇺🇸 美国76
-      - 🇺🇸 美国91
-      - 🇺🇸 荷兰-美国101
-      - 🇺🇸 荷兰-美国104
+      - _🇭🇰 香港
+      - _🇸🇬 新加坡
+      - _🇯🇵 日本1
+      - _🇯🇵 日本2
+      - _🇨🇳 中国50
+      - _🇨🇳 中国83
+      - _🇨🇳 中国79
+      - _🇷🇴 罗马尼亚80
+      - _🇨🇦 加拿大 4
+      - _🇨🇦 加拿大 13
+      - _🇺🇲 美国 19
+      - _🇺🇲 德国-美国 1
+      - _🇨🇦 加拿大151
+      - _🇺🇸 美国4
+      - _🇺🇸 美国 7
+      - _🇺🇸 美国44
+      - _🇺🇸 美国55
+      - _🇺🇸 美国91
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -441,33 +314,24 @@ proxy-groups:
       - 好无聊啊
       - _🇷🇺 _RU_俄罗斯联邦
       - _🇮🇳 _IN_印度 01
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本1
-      - 🇷🇴 罗马尼亚  4
-      - 🇨🇳 中国阿里云 6
-      - 🇺🇸 美国  7
-      - 🇺🇸 美国  11
-      - 🇸🇬 SG
-      - 🇺🇸 美国85
-      - 🇨🇦 加拿大151
-      - 🇺🇸 美国68
-      - 🇺🇸 美国44
-      - 🇺🇸 美国55
-      - 塞舌尔105
-      - 🇺🇸 美国惠普HP 2
-      - 🇺🇸 美国CloudFlare节点 2
-      - 🇺🇸 美国CloudFlare公司CDN节点 27
-      - 🇺🇸 美国2
-      - 🇺🇸 美国4
-      - 🇺🇸 美国5
-      - 🇺🇸 美国6
-      - 🇺🇸 美国18
-      - 🇺🇸 美国26
-      - 🇺🇸 美国76
-      - 🇺🇸 美国91
-      - 🇺🇸 荷兰-美国101
-      - 🇺🇸 荷兰-美国104
+      - _🇭🇰 香港
+      - _🇸🇬 新加坡
+      - _🇯🇵 日本1
+      - _🇯🇵 日本2
+      - _🇨🇳 中国50
+      - _🇨🇳 中国83
+      - _🇨🇳 中国79
+      - _🇷🇴 罗马尼亚80
+      - _🇨🇦 加拿大 4
+      - _🇨🇦 加拿大 13
+      - _🇺🇲 美国 19
+      - _🇺🇲 德国-美国 1
+      - _🇨🇦 加拿大151
+      - _🇺🇸 美国4
+      - _🇺🇸 美国 7
+      - _🇺🇸 美国44
+      - _🇺🇸 美国55
+      - _🇺🇸 美国91
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -489,42 +353,32 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇭🇰 香港
+      - _🇭🇰 香港
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本1
-      - 🇸🇬 SG
+      - _🇸🇬 新加坡
+      - _🇯🇵 日本1
+      - _🇯🇵 日本2
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇺🇸 美国  7
-      - 🇺🇸 美国  11
-      - 🇺🇸 美国85
-      - 🇨🇦 加拿大151
-      - 🇺🇸 美国68
-      - 🇺🇸 美国44
-      - 🇺🇸 美国55
-      - 🇺🇸 美国惠普HP 2
-      - 🇺🇸 美国CloudFlare节点 2
-      - 🇺🇸 美国CloudFlare公司CDN节点 27
-      - 🇺🇸 美国2
-      - 🇺🇸 美国4
-      - 🇺🇸 美国5
-      - 🇺🇸 美国6
-      - 🇺🇸 美国18
-      - 🇺🇸 美国26
-      - 🇺🇸 美国76
-      - 🇺🇸 美国91
-      - 🇺🇸 荷兰-美国101
-      - 🇺🇸 荷兰-美国104
+      - _🇨🇦 加拿大 4
+      - _🇨🇦 加拿大 13
+      - _🇺🇲 美国 19
+      - _🇺🇲 德国-美国 1
+      - _🇨🇦 加拿大151
+      - _🇺🇸 美国4
+      - _🇺🇸 美国 7
+      - _🇺🇸 美国44
+      - _🇺🇸 美国55
+      - _🇺🇸 美国91
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
