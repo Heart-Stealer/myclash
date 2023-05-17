@@ -160,9 +160,9 @@ profileParsersText: >-
           # - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-轮询.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
           # - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-轮询
 
+          - proxy-groups.0.proxies.0+DIRECT
           - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
           - proxy-groups.0.proxies.0+♻️ 自动选择
-          - proxy-groups.0.proxies.0+DIRECT
         # mix-rule-providers:
         #   reject:
         #     type: http
