@@ -70,14 +70,12 @@ proxies:
     tfo: false
     sni: tlsdata.cnamazon.sbs
     skip-cert-verify: false
-  - name: _🇹🇼 _TW_台湾
-    server: scloudtw1-tg-data.amazonwebservicess.com
+  - name: _🇭🇰_香港20-4K
+    server: hinet.mjt001.com
     port: 443
-    client-fingerprint: chrome
     type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    tfo: false
-    skip-cert-verify: false
+    password: af4dc66a-ec88-4057-9e46-777b584577f7
+    udp: true
   - name: _🇭🇰_香港高速-720P
     server: hk4.af49c4e4c2ef.sanfen004.me
     port: 443
@@ -106,12 +104,6 @@ proxies:
       path: /zh-cn/
       headers:
         Host: www.baidu.com
-    udp: true
-  - name: _🇭🇰_香港20-4K
-    server: hinet.mjt001.com
-    port: 443
-    type: trojan
-    password: af4dc66a-ec88-4057-9e46-777b584577f7
     udp: true
   - name: _🇭🇰_香港快-1440P
     server: gzzz.8bqyato.ml
@@ -174,6 +166,14 @@ proxies:
     sni: aws-sg.aikun.online
     skip-cert-verify: false
     udp: true
+  - name: _🇹🇼 _TW_台湾
+    server: scloudtw1-tg-data.amazonwebservicess.com
+    port: 443
+    client-fingerprint: chrome
+    type: trojan
+    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
+    tfo: false
+    skip-cert-verify: false
   - name: _🇩🇪_德国 1
     server: 192.203.230.86
     port: 80
@@ -224,15 +224,21 @@ proxies:
       headers:
         host: d2.pgypgykmoljklj.xyz
     udp: true
-  - name: _🇰🇿_哈萨克斯坦-1080P
-    server: shabi.masscloud.cf
+  - name: _🇺🇸_美国2
+    server: 38.40.158.249
+    port: 45002
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    udp: true
+  - name: _🇺🇦_乌克兰-500KB
+    server: ua.mjt001.com
     port: 443
-    client-fingerprint: chrome
     type: trojan
-    password: GaON64N6
-    tfo: false
-    sni: shabi.masscloud.cf
-    skip-cert-verify: false
+    password: af4dc66a-ec88-4057-9e46-777b584577f7
+    sni: ua.mjt001.com
     udp: true
   - name: _🇨🇦_加拿大151
     server: 23.227.38.99
@@ -248,6 +254,20 @@ proxies:
       headers:
         Host: 1.freek1.xyz
     udp: true
+  - name: _🇺🇸_美国19
+    server: 172.66.46.15
+    port: 443
+    type: vmess
+    uuid: 12612e87-8003-44a8-b4e8-ec4a325e9016
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /ou
+      headers:
+        Host: z.zorro.tk
+    udp: true
   - name: _🇺🇲_美国1
     server: kamnaf.ml
     port: 2095
@@ -261,15 +281,6 @@ proxies:
       path: /
       headers:
         Host: kamnaf.ml
-    udp: true
-  - name: _🇺🇸_美国2
-    server: 38.40.158.249
-    port: 45002
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
     udp: true
   - name: _🇺🇲_美国40
     server: 104.21.53.35
@@ -285,13 +296,6 @@ proxies:
       headers:
         Host: buyvm1.yxjnode.com
     udp: true
-  - name: _🇺🇦_乌克兰-500KB
-    server: ua.mjt001.com
-    port: 443
-    type: trojan
-    password: af4dc66a-ec88-4057-9e46-777b584577f7
-    sni: ua.mjt001.com
-    udp: true
   - name: _🇺🇸_美国8
     server: 172.67.94.59
     port: 443
@@ -306,20 +310,6 @@ proxies:
       headers:
         Host: tou.vtcss.top
     udp: true
-  - name: _🇺🇸_美国19
-    server: 172.66.46.15
-    port: 443
-    type: vmess
-    uuid: 12612e87-8003-44a8-b4e8-ec4a325e9016
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /ou
-      headers:
-        Host: z.zorro.tk
-    udp: true
   - name: _🇺🇸_美国
     server: us62vms.qpfdpf5.jfdiwue7.wpdfj.mrgspeed.site
     port: 36611
@@ -330,6 +320,16 @@ proxies:
     cipher: auto
     tls: false
     tfo: false
+    skip-cert-verify: false
+    udp: true
+  - name: _🇰🇿_哈萨克斯坦-1080P
+    server: shabi.masscloud.cf
+    port: 443
+    client-fingerprint: chrome
+    type: trojan
+    password: GaON64N6
+    tfo: false
+    sni: shabi.masscloud.cf
     skip-cert-verify: false
     udp: true
 proxy-groups:
@@ -344,28 +344,28 @@ proxy-groups:
       - _🇮🇳_印度-2MB
       - _🇷🇺_俄罗斯联邦-1MB
       - _🇷🇺_RU_俄罗斯联邦-2MB
-      - _🇹🇼 _TW_台湾
+      - _🇭🇰_香港20-4K
       - _🇭🇰_香港高速-720P
       - _🇭🇰_香港M-1080P
-      - _🇭🇰_香港20-4K
       - _🇭🇰_香港快-1440P
       - _🇯🇵_日本1-720P
       - _🇯🇵_日本2-1440P
       - _🇸🇬_新加坡1印度尼西亚
       - _🇸🇬_新加坡3
+      - _🇹🇼 _TW_台湾
       - _🇩🇪_德国 1
       - _🇩🇪_德国 6
       - _🇲🇾_马来西亚 美国-2MB
       - _🇺🇲 美国洛杉矶-720P
-      - _🇰🇿_哈萨克斯坦-1080P
-      - _🇨🇦_加拿大151
-      - _🇺🇲_美国1
       - _🇺🇸_美国2
-      - _🇺🇲_美国40
       - _🇺🇦_乌克兰-500KB
-      - _🇺🇸_美国8
+      - _🇨🇦_加拿大151
       - _🇺🇸_美国19
+      - _🇺🇲_美国1
+      - _🇺🇲_美国40
+      - _🇺🇸_美国8
       - _🇺🇸_美国
+      - _🇰🇿_哈萨克斯坦-1080P
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -375,28 +375,28 @@ proxy-groups:
       - _🇮🇳_印度-2MB
       - _🇷🇺_俄罗斯联邦-1MB
       - _🇷🇺_RU_俄罗斯联邦-2MB
-      - _🇹🇼 _TW_台湾
+      - _🇭🇰_香港20-4K
       - _🇭🇰_香港高速-720P
       - _🇭🇰_香港M-1080P
-      - _🇭🇰_香港20-4K
       - _🇭🇰_香港快-1440P
       - _🇯🇵_日本1-720P
       - _🇯🇵_日本2-1440P
       - _🇸🇬_新加坡1印度尼西亚
       - _🇸🇬_新加坡3
+      - _🇹🇼 _TW_台湾
       - _🇩🇪_德国 1
       - _🇩🇪_德国 6
       - _🇲🇾_马来西亚 美国-2MB
       - _🇺🇲 美国洛杉矶-720P
-      - _🇰🇿_哈萨克斯坦-1080P
-      - _🇨🇦_加拿大151
-      - _🇺🇲_美国1
       - _🇺🇸_美国2
-      - _🇺🇲_美国40
       - _🇺🇦_乌克兰-500KB
-      - _🇺🇸_美国8
+      - _🇨🇦_加拿大151
       - _🇺🇸_美国19
+      - _🇺🇲_美国1
+      - _🇺🇲_美国40
+      - _🇺🇸_美国8
       - _🇺🇸_美国
+      - _🇰🇿_哈萨克斯坦-1080P
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -418,11 +418,11 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇹🇼 _TW_台湾
+      - _🇭🇰_香港20-4K
       - _🇭🇰_香港高速-720P
       - _🇭🇰_香港M-1080P
-      - _🇭🇰_香港20-4K
       - _🇭🇰_香港快-1440P
+      - _🇹🇼 _TW_台湾
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -440,12 +440,12 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇲 美国洛杉矶-720P
-      - _🇨🇦_加拿大151
-      - _🇺🇲_美国1
       - _🇺🇸_美国2
+      - _🇨🇦_加拿大151
+      - _🇺🇸_美国19
+      - _🇺🇲_美国1
       - _🇺🇲_美国40
       - _🇺🇸_美国8
-      - _🇺🇸_美国19
       - _🇺🇸_美国
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
