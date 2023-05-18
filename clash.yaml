@@ -58,7 +58,51 @@ proxies:
       headers:
         host: d2.pgypgykmoljklj.xyz
     udp: true
-  - name: _🇮🇳 印度-2K
+  - name: _🇺🇸 美国 凤凰城-4K
+    type: vmess
+    server: 129.146.247.135
+    port: 14027
+    cipher: auto
+    uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+    udp: true
+  - name: _🇺🇸 美国 德克萨斯-4K
+    type: vmess
+    server: 103.21.244.206
+    port: 80
+    cipher: auto
+    uuid: d1a48c30-d328-4801-8710-fcb55e256093
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: d1a48c30
+      headers:
+        host: rat-musicians-recognised-anna.trycloudflare.com
+    udp: true
+  - name: _🇯🇵 日本-4K
+    type: vmess
+    server: 192.203.230.65
+    port: 443
+    cipher: auto
+    uuid: cf53bffc-d018-46a2-94ee-257e2d33326a
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: jp1.hnokkdf.top
+    network: ws
+    ws-opts:
+      path: /kbjc/jp1
+      headers:
+        host: jp1.hnokkdf.top
+    udp: true
+  - name: _🇮🇳 印度-4K
     server: 152.70.74.66
     port: 443
     type: trojan
@@ -78,38 +122,6 @@ proxies:
     protocol-param: 17422:TTp0SX
     obfs-param: ab93117422.jd.hk
     udp: true
-  - name: _🇯🇵 日本-2K
-    type: vmess
-    server: 192.203.230.65
-    port: 443
-    cipher: auto
-    uuid: cf53bffc-d018-46a2-94ee-257e2d33326a
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: jp1.hnokkdf.top
-    network: ws
-    ws-opts:
-      path: /kbjc/jp1
-      headers:
-        host: jp1.hnokkdf.top
-    udp: true
-  - name: _🇺🇸 美国 德克萨斯-2K
-    type: vmess
-    server: 103.21.244.206
-    port: 80
-    cipher: auto
-    uuid: d1a48c30-d328-4801-8710-fcb55e256093
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: d1a48c30
-      headers:
-        host: rat-musicians-recognised-anna.trycloudflare.com
-    udp: true
   - name: _🇱🇺 欧洲 卢森堡-2K
     type: vmess
     server: CSGO.COM
@@ -125,18 +137,6 @@ proxies:
       path: /
       headers:
         host: lu1.hug1013.me
-    udp: true
-  - name: _🇺🇸 美国 凤凰城-2K
-    type: vmess
-    server: 129.146.247.135
-    port: 14027
-    cipher: auto
-    uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
     udp: true
   - name: _🇩🇪 德国 CF3-2K
     type: vmess
@@ -324,12 +324,12 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇲 美国 洛杉矶-4K有延迟
-      - _🇮🇳 印度-2K
+      - _🇺🇸 美国 凤凰城-4K
+      - _🇺🇸 美国 德克萨斯-4K
+      - _🇯🇵 日本-4K
+      - _🇮🇳 印度-4K
       - _🇷🇺 俄罗斯联邦-1K
-      - _🇯🇵 日本-2K
-      - _🇺🇸 美国 德克萨斯-2K
       - _🇱🇺 欧洲 卢森堡-2K
-      - _🇺🇸 美国 凤凰城-2K
       - _🇩🇪 德国 CF3-2K
       - "_🇷🇺 BGP|俄罗斯1\r-2K"
       - "_🇭🇰 专线|香港5\r-2K"
@@ -354,12 +354,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇺🇲 美国 洛杉矶-4K有延迟
-      - _🇮🇳 印度-2K
+      - _🇺🇸 美国 凤凰城-4K
+      - _🇺🇸 美国 德克萨斯-4K
+      - _🇯🇵 日本-4K
+      - _🇮🇳 印度-4K
       - _🇷🇺 俄罗斯联邦-1K
-      - _🇯🇵 日本-2K
-      - _🇺🇸 美国 德克萨斯-2K
       - _🇱🇺 欧洲 卢森堡-2K
-      - _🇺🇸 美国 凤凰城-2K
       - _🇩🇪 德国 CF3-2K
       - "_🇷🇺 BGP|俄罗斯1\r-2K"
       - "_🇭🇰 专线|香港5\r-2K"
@@ -408,7 +408,7 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇯🇵 日本-2K
+      - _🇯🇵 日本-4K
       - _🇸🇬 新加坡 1-2K
       - _🇸🇬 新加坡 2-1K
       - _🇯🇵 日本1
@@ -420,8 +420,8 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇲 美国 洛杉矶-4K有延迟
-      - _🇺🇸 美国 德克萨斯-2K
-      - _🇺🇸 美国 凤凰城-2K
+      - _🇺🇸 美国 凤凰城-4K
+      - _🇺🇸 美国 德克萨斯-4K
       - _🇺🇸 荷兰 美国17-2K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇸 美国 7-1K
