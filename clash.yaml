@@ -170,6 +170,14 @@ proxies:
     password: c0508331-3ed5-48df-adb4-6d90758c6f5e
     sni: tlsdata.cnamazon.sbs
     skip-cert-verify: false
+  - name: "_🇹🇼 BGP|台湾1\r-2K"
+    type: trojan
+    server: bgptw1.cnamazon.sbs
+    port: 443
+    udp: true
+    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
+    sni: tlsdata.cnamazon.sbs
+    skip-cert-verify: false
   - name: _🇸🇬 新加坡 1-2K
     type: vmess
     server: t.cccao.cyou
@@ -325,6 +333,7 @@ proxy-groups:
       - _🇩🇪 德国 CF3-2K
       - "_🇷🇺 BGP|俄罗斯1\r-2K"
       - "_🇭🇰 专线|香港5\r-2K"
+      - "_🇹🇼 BGP|台湾1\r-2K"
       - _🇸🇬 新加坡 1-2K
       - _🇺🇸 荷兰 美国17-2K
       - _🇲🇾 马来西亚 美国-1K
@@ -354,6 +363,7 @@ proxy-groups:
       - _🇩🇪 德国 CF3-2K
       - "_🇷🇺 BGP|俄罗斯1\r-2K"
       - "_🇭🇰 专线|香港5\r-2K"
+      - "_🇹🇼 BGP|台湾1\r-2K"
       - _🇸🇬 新加坡 1-2K
       - _🇺🇸 荷兰 美国17-2K
       - _🇲🇾 马来西亚 美国-1K
@@ -389,6 +399,7 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - "_🇭🇰 专线|香港5\r-2K"
+      - "_🇹🇼 BGP|台湾1\r-2K"
       - _🇭🇰 香港20
       - _🇹🇼 TW_台湾
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
