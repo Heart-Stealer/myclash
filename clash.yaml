@@ -222,29 +222,72 @@ proxies:
       headers:
         host: hendostan.foriran.nl
     udp: true
+  - name: _🇺🇸 美国 凤凰城
+    type: vmess
+    server: cf.yxjnode.com
+    port: 80
+    cipher: auto
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        host: dp1.yxjnode.com
+  - name: _🇯🇵 日本 普通|
+    type: vmess
+    server: jp3.d4995a2eb9b2.sanfen004.me
+    port: 443
+    cipher: auto
+    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - name: _🇸🇬 新加坡 狮城A|
+    type: vmess
+    server: m.lwvzmdu.cn
+    port: 16618
+    cipher: auto
+    uuid: 16925dca-05be-4d7c-b469-6bcbd8a227ce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - name: _🇭🇰 香港 台湾
+    type: vmess
+    server: shuaigewsh.xyz
+    port: 443
+    cipher: auto
+    uuid: 5d7fb2d3-8fbd-4040-a907-08ff73523d0d
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 1576b37f
+      headers:
+        host: shuaigewsh.xyz
+  - name: _🇭🇰 香港3|
+    type: vmess
+    server: vip1.rovod.top
+    port: 19994
+    cipher: auto
+    uuid: 2f3f33ed-0b2c-3074-9111-33ad7011c7da
+    alterId: 2
+    tls: false
+    skip-cert-verify: true
+    network: tcp
   - name: _🇲🇾 马来西亚 美国-1K
     server: my.mjt001.com
     port: 443
     type: trojan
     password: af4dc66a-ec88-4057-9e46-777b584577f7
     udp: true
-  - name: _🇺🇸 美国 7-1K
-    server: 167.88.63.79
-    port: 8118
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-    tfo: false
-  - name: _🇸🇬 新加坡 2-1K
-    server: 3.112.220.151
-    port: 31467
-    client-fingerprint: chrome
-    type: trojan
-    password: e8dacfc5-79b1-4289-92f1-e390080d56aa
-    tfo: false
-    sni: sgp.piaole.me
-    skip-cert-verify: false
   - name: _🇺🇦 乌克兰-1K
     server: ua.mjt001.com
     port: 443
@@ -258,33 +301,6 @@ proxies:
     type: trojan
     password: af4dc66a-ec88-4057-9e46-777b584577f7
     udp: true
-  - name: _🇯🇵 日本1
-    server: 13.113.7.165
-    port: 443
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    tfo: false
-    udp: true
-  - name: _🇹🇼 TW_台湾
-    server: stw7-tg-data.amazonwebservicess.com
-    port: 443
-    client-fingerprint: chrome
-    type: trojan
-    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
-    tfo: false
-    sni: data.amazonwebservicess.com
-    skip-cert-verify: false
-  - name: _🇸🇬 新加坡 3
-    server: 3.112.220.151
-    port: 26911
-    client-fingerprint: chrome
-    type: trojan
-    password: a3869db4-eaaa-4cef-b131-26b3c0b46686
-    tfo: false
-    sni: sgp.piaole.me
-    skip-cert-verify: false
   - name: _🇩🇪 德国 1-不能看视频
     server: 192.203.230.86
     port: 80
@@ -314,6 +330,50 @@ proxies:
       headers:
         Host: us-1.acyun.cf
     udp: true
+  - name: _🇺🇸 美国 7-1K
+    server: 167.88.63.79
+    port: 8118
+    client-fingerprint: chrome
+    type: ss
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
+    tfo: false
+  - name: _🇸🇬 新加坡 2-1K
+    server: 3.112.220.151
+    port: 31467
+    client-fingerprint: chrome
+    type: trojan
+    password: e8dacfc5-79b1-4289-92f1-e390080d56aa
+    tfo: false
+    sni: sgp.piaole.me
+    skip-cert-verify: false
+  - name: _🇯🇵 日本1
+    server: 13.113.7.165
+    port: 443
+    client-fingerprint: chrome
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    tfo: false
+    udp: true
+  - name: _🇹🇼 TW_台湾
+    server: stw7-tg-data.amazonwebservicess.com
+    port: 443
+    client-fingerprint: chrome
+    type: trojan
+    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
+    tfo: false
+    sni: data.amazonwebservicess.com
+    skip-cert-verify: false
+  - name: _🇸🇬 新加坡 3
+    server: 3.112.220.151
+    port: 26911
+    client-fingerprint: chrome
+    type: trojan
+    password: a3869db4-eaaa-4cef-b131-26b3c0b46686
+    tfo: false
+    sni: sgp.piaole.me
+    skip-cert-verify: false
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -337,16 +397,21 @@ proxy-groups:
       - "_🇹🇼 BGP|台湾1\r-2K"
       - _🇸🇬 新加坡 1-2K
       - _🇺🇸 荷兰 美国17-2K
+      - _🇺🇸 美国 凤凰城
+      - _🇯🇵 日本 普通|
+      - _🇸🇬 新加坡 狮城A|
+      - _🇭🇰 香港 台湾
+      - _🇭🇰 香港3|
       - _🇲🇾 马来西亚 美国-1K
-      - _🇺🇸 美国 7-1K
-      - _🇸🇬 新加坡 2-1K
       - _🇺🇦 乌克兰-1K
       - _🇭🇰 香港20
+      - _🇩🇪 德国 1-不能看视频
+      - _🇩🇪 德国 6-不能看视频
+      - _🇺🇸 美国 7-1K
+      - _🇸🇬 新加坡 2-1K
       - _🇯🇵 日本1
       - _🇹🇼 TW_台湾
       - _🇸🇬 新加坡 3
-      - _🇩🇪 德国 1-不能看视频
-      - _🇩🇪 德国 6-不能看视频
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -367,16 +432,21 @@ proxy-groups:
       - "_🇹🇼 BGP|台湾1\r-2K"
       - _🇸🇬 新加坡 1-2K
       - _🇺🇸 荷兰 美国17-2K
+      - _🇺🇸 美国 凤凰城
+      - _🇯🇵 日本 普通|
+      - _🇸🇬 新加坡 狮城A|
+      - _🇭🇰 香港 台湾
+      - _🇭🇰 香港3|
       - _🇲🇾 马来西亚 美国-1K
-      - _🇺🇸 美国 7-1K
-      - _🇸🇬 新加坡 2-1K
       - _🇺🇦 乌克兰-1K
       - _🇭🇰 香港20
+      - _🇩🇪 德国 1-不能看视频
+      - _🇩🇪 德国 6-不能看视频
+      - _🇺🇸 美国 7-1K
+      - _🇸🇬 新加坡 2-1K
       - _🇯🇵 日本1
       - _🇹🇼 TW_台湾
       - _🇸🇬 新加坡 3
-      - _🇩🇪 德国 1-不能看视频
-      - _🇩🇪 德国 6-不能看视频
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -400,6 +470,8 @@ proxy-groups:
     proxies:
       - "_🇭🇰 专线|香港5\r-2K"
       - "_🇹🇼 BGP|台湾1\r-2K"
+      - _🇭🇰 香港 台湾
+      - _🇭🇰 香港3|
       - _🇭🇰 香港20
       - _🇹🇼 TW_台湾
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
@@ -410,6 +482,8 @@ proxy-groups:
     proxies:
       - _🇯🇵 日本-4K
       - _🇸🇬 新加坡 1-2K
+      - _🇯🇵 日本 普通|
+      - _🇸🇬 新加坡 狮城A|
       - _🇸🇬 新加坡 2-1K
       - _🇯🇵 日本1
       - _🇸🇬 新加坡 3
@@ -424,6 +498,7 @@ proxy-groups:
       - _🇺🇸 美国 德克萨斯-4K
       - _🇺🇸 美国40-1K
       - _🇺🇸 荷兰 美国17-2K
+      - _🇺🇸 美国 凤凰城
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇸 美国 7-1K
 rules:
