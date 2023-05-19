@@ -42,22 +42,6 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: _🇺🇲 美国 洛杉矶-4K有延迟
-    server: 104.18.1.110
-    port: 443
-    type: vmess
-    uuid: 1d8488a7-c784-4e66-ae92-1b22da9c9e68
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: d2.pgypgykmoljklj.xyz
-    network: ws
-    ws-opts:
-      path: /c3lZ7dp02p?ed=2048
-      headers:
-        host: d2.pgypgykmoljklj.xyz
-    udp: true
   - name: _🇸🇬 新加坡 狮城A|4K
     type: vmess
     server: m.lwvzmdu.cn
@@ -94,20 +78,10 @@ proxies:
       path: 1576b37f
       headers:
         host: shuaigewsh.xyz
-  - name: _🇭🇰 香港3|4K
-    type: vmess
-    server: vip1.rovod.top
-    port: 19994
-    cipher: auto
-    uuid: 2f3f33ed-0b2c-3074-9111-33ad7011c7da
-    alterId: 2
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - name: _🇺🇸 美国 凤凰城-4K
+  - name: _🇺🇸 美国 凤凰城-4K喵哥
     type: vmess
     server: 129.146.247.135
-    port: 14027
+    port: 14021
     cipher: auto
     uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
     alterId: 0
@@ -115,22 +89,6 @@ proxies:
     skip-cert-verify: true
     servername: ""
     network: tcp
-    udp: true
-  - name: _🇺🇸 美国 德克萨斯-4K
-    type: vmess
-    server: 103.21.244.206
-    port: 80
-    cipher: auto
-    uuid: d1a48c30-d328-4801-8710-fcb55e256093
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: d1a48c30
-      headers:
-        host: rat-musicians-recognised-anna.trycloudflare.com
     udp: true
   - name: _🇯🇵 日本-4K
     type: vmess
@@ -147,6 +105,22 @@ proxies:
       path: /kbjc/jp1
       headers:
         host: jp1.hnokkdf.top
+    udp: true
+  - name: _🇺🇲 美国 洛杉矶-4K有延迟
+    server: 104.18.1.110
+    port: 443
+    type: vmess
+    uuid: 1d8488a7-c784-4e66-ae92-1b22da9c9e68
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: d2.pgypgykmoljklj.xyz
+    network: ws
+    ws-opts:
+      path: /c3lZ7dp02p?ed=2048
+      headers:
+        host: d2.pgypgykmoljklj.xyz
     udp: true
   - name: _🇮🇳 印度-4K
     server: 152.70.74.66
@@ -182,6 +156,32 @@ proxies:
       headers:
         Host: buyvm1.yxjnode.com
     udp: true
+  - name: _🇺🇸 美国 德克萨斯-4K
+    type: vmess
+    server: 103.21.244.206
+    port: 80
+    cipher: auto
+    uuid: d1a48c30-d328-4801-8710-fcb55e256093
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: d1a48c30
+      headers:
+        host: rat-musicians-recognised-anna.trycloudflare.com
+    udp: true
+  - name: _🇭🇰 香港3|4K
+    type: vmess
+    server: vip1.rovod.top
+    port: 19994
+    cipher: auto
+    uuid: 2f3f33ed-0b2c-3074-9111-33ad7011c7da
+    alterId: 2
+    tls: false
+    skip-cert-verify: true
+    network: tcp
   - name: _🇱🇺 欧洲 卢森堡-2K
     type: vmess
     server: CSGO.COM
@@ -310,17 +310,17 @@ proxy-groups:
       - ⚖️ 🇨🇳港澳台-负载均衡-散列
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
-      - _🇺🇲 美国 洛杉矶-4K有延迟
       - _🇸🇬 新加坡 狮城A|4K
       - _🇯🇵 日本 低延迟|4K
       - _🇭🇰 香港 台湾-4K
-      - _🇭🇰 香港3|4K
-      - _🇺🇸 美国 凤凰城-4K
-      - _🇺🇸 美国 德克萨斯-4K
+      - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇯🇵 日本-4K
+      - _🇺🇲 美国 洛杉矶-4K有延迟
       - _🇮🇳 印度-4K
       - _🇷🇺 俄罗斯联邦-1K
       - _🇺🇸 美国40-1K
+      - _🇺🇸 美国 德克萨斯-4K
+      - _🇭🇰 香港3|4K
       - _🇱🇺 欧洲 卢森堡-2K
       - _🇩🇪 德国 CF3-2K
       - _🇺🇸 荷兰 美国17-2K
@@ -338,17 +338,17 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - _🇺🇲 美国 洛杉矶-4K有延迟
       - _🇸🇬 新加坡 狮城A|4K
       - _🇯🇵 日本 低延迟|4K
       - _🇭🇰 香港 台湾-4K
-      - _🇭🇰 香港3|4K
-      - _🇺🇸 美国 凤凰城-4K
-      - _🇺🇸 美国 德克萨斯-4K
+      - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇯🇵 日本-4K
+      - _🇺🇲 美国 洛杉矶-4K有延迟
       - _🇮🇳 印度-4K
       - _🇷🇺 俄罗斯联邦-1K
       - _🇺🇸 美国40-1K
+      - _🇺🇸 美国 德克萨斯-4K
+      - _🇭🇰 香港3|4K
       - _🇱🇺 欧洲 卢森堡-2K
       - _🇩🇪 德国 CF3-2K
       - _🇺🇸 荷兰 美国17-2K
@@ -402,10 +402,10 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
+      - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇺🇲 美国 洛杉矶-4K有延迟
-      - _🇺🇸 美国 凤凰城-4K
-      - _🇺🇸 美国 德克萨斯-4K
       - _🇺🇸 美国40-1K
+      - _🇺🇸 美国 德克萨斯-4K
       - _🇺🇸 荷兰 美国17-2K
       - _🇺🇸 美国 凤凰城
       - _🇲🇾 马来西亚 美国-1K
