@@ -42,7 +42,7 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: _🇸🇬 新加坡 狮城A|4K
+  - name: _🇸🇬 新加坡|4K
     type: vmess
     server: m.lwvzmdu.cn
     port: 16618
@@ -54,30 +54,6 @@ proxies:
     network: ws
     ws-opts:
       path: /
-  - name: _🇯🇵 日本 低延迟|4K
-    type: vmess
-    server: jp3.d4995a2eb9b2.sanfen004.me
-    port: 443
-    cipher: auto
-    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: tcp
-  - name: _🇭🇰 香港 台湾-4K
-    type: vmess
-    server: shuaigewsh.xyz
-    port: 443
-    cipher: auto
-    uuid: 5d7fb2d3-8fbd-4040-a907-08ff73523d0d
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 1576b37f
-      headers:
-        host: shuaigewsh.xyz
   - name: _🇺🇸 美国 凤凰城-4K喵哥
     type: vmess
     server: 129.146.247.135
@@ -90,22 +66,21 @@ proxies:
     servername: ""
     network: tcp
     udp: true
-  - name: _🇯🇵 日本-4K
+  - name: _🇺🇸 美国 鸡坤CC_CF
     type: vmess
-    server: 192.203.230.65
-    port: 443
+    server: 8.222.243.16
+    port: 2052
     cipher: auto
-    uuid: cf53bffc-d018-46a2-94ee-257e2d33326a
+    uuid: 23182db5-e0b4-4453-a86c-c1f37d423b00
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
-    servername: jp1.hnokkdf.top
+    servername: ""
     network: ws
     ws-opts:
-      path: /kbjc/jp1
+      path: /
       headers:
-        host: jp1.hnokkdf.top
-    udp: true
+        host: cc.maxop.tk
   - name: _🇺🇲 美国 洛杉矶-4K有延迟
     server: 104.18.1.110
     port: 443
@@ -129,59 +104,20 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
-  - name: _🇷🇺 俄罗斯联邦-1K
-    server: 45.130.146.86
-    port: 443
-    client-fingerprint: chrome
-    type: ssr
-    cipher: aes-256-cfb
-    password: vyunme
-    tfo: false
-    protocol: auth_aes128_sha1
-    obfs: plain
-    protocol-param: 17422:TTp0SX
-    obfs-param: ab93117422.jd.hk
-    udp: true
-  - name: _🇺🇸 美国40-1K
-    server: 104.21.53.35
-    port: 80
+  - name: _🇺🇸 美国 凤凰城
     type: vmess
+    server: cf.yxjnode.com
+    port: 80
+    cipher: auto
     uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
     alterId: 0
-    cipher: auto
     tls: false
+    skip-cert-verify: true
     network: ws
     ws-opts:
       path: /yxzbp
       headers:
-        Host: buyvm1.yxjnode.com
-    udp: true
-  - name: _🇺🇸 美国 德克萨斯-4K
-    type: vmess
-    server: 103.21.244.206
-    port: 80
-    cipher: auto
-    uuid: d1a48c30-d328-4801-8710-fcb55e256093
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: d1a48c30
-      headers:
-        host: rat-musicians-recognised-anna.trycloudflare.com
-    udp: true
-  - name: _🇭🇰 香港3|4K
-    type: vmess
-    server: vip1.rovod.top
-    port: 19994
-    cipher: auto
-    uuid: 2f3f33ed-0b2c-3074-9111-33ad7011c7da
-    alterId: 2
-    tls: false
-    skip-cert-verify: true
-    network: tcp
+        host: dp1.yxjnode.com
   - name: _🇱🇺 欧洲 卢森堡-2K
     type: vmess
     server: CSGO.COM
@@ -214,6 +150,102 @@ proxies:
       headers:
         host: jd2.xuwu996.eu.org
     udp: true
+  - name: CF3_1
+    type: vmess
+    server: xuwu996.ml
+    port: 80
+    cipher: auto
+    uuid: ba08ccec-f468-41ec-8d37-04b31a40c337
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jd2.xuwu996.eu.org
+  - name: CF3_2
+    type: vmess
+    server: jpnewacs.114514782.xyz
+    port: 80
+    cipher: auto
+    uuid: ba08ccec-f468-41ec-8d37-04b31a40c337
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jd2.xuwu996.eu.org
+  - name: _🇯🇵 日本 低延迟|4K
+    type: vmess
+    server: jp3.d4995a2eb9b2.sanfen004.me
+    port: 443
+    cipher: auto
+    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - name: _🇭🇰 香港 台湾-4K
+    type: vmess
+    server: shuaigewsh.xyz
+    port: 443
+    cipher: auto
+    uuid: 5d7fb2d3-8fbd-4040-a907-08ff73523d0d
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 1576b37f
+      headers:
+        host: shuaigewsh.xyz
+  - name: _🇯🇵 日本-4K
+    type: vmess
+    server: 192.203.230.65
+    port: 443
+    cipher: auto
+    uuid: cf53bffc-d018-46a2-94ee-257e2d33326a
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: jp1.hnokkdf.top
+    network: ws
+    ws-opts:
+      path: /kbjc/jp1
+      headers:
+        host: jp1.hnokkdf.top
+    udp: true
+  - name: _🇺🇸 美国 德克萨斯-4K
+    type: vmess
+    server: 103.21.244.206
+    port: 80
+    cipher: auto
+    uuid: d1a48c30-d328-4801-8710-fcb55e256093
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: d1a48c30
+      headers:
+        host: rat-musicians-recognised-anna.trycloudflare.com
+    udp: true
+  - name: _🇭🇰 香港3|4K
+    type: vmess
+    server: vip1.rovod.top
+    port: 19994
+    cipher: auto
+    uuid: 2f3f33ed-0b2c-3074-9111-33ad7011c7da
+    alterId: 2
+    tls: false
+    skip-cert-verify: true
+    network: tcp
   - name: _🇺🇸 荷兰 美国17-2K
     type: vmess
     server: hendostan.foriran.nl
@@ -230,20 +262,33 @@ proxies:
       headers:
         host: hendostan.foriran.nl
     udp: true
-  - name: _🇺🇸 美国 凤凰城
-    type: vmess
-    server: cf.yxjnode.com
+  - name: _🇷🇺 俄罗斯联邦-1K
+    server: 45.130.146.86
+    port: 443
+    client-fingerprint: chrome
+    type: ssr
+    cipher: aes-256-cfb
+    password: vyunme
+    tfo: false
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 17422:TTp0SX
+    obfs-param: ab93117422.jd.hk
+    udp: true
+  - name: _🇺🇸 美国40-1K
+    server: 104.21.53.35
     port: 80
-    cipher: auto
+    type: vmess
     uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
     alterId: 0
+    cipher: auto
     tls: false
-    skip-cert-verify: true
     network: ws
     ws-opts:
       path: /yxzbp
       headers:
-        host: dp1.yxjnode.com
+        Host: buyvm1.yxjnode.com
+    udp: true
   - name: _🇲🇾 马来西亚 美国-1K
     server: my.mjt001.com
     port: 443
@@ -263,44 +308,6 @@ proxies:
     type: trojan
     password: af4dc66a-ec88-4057-9e46-777b584577f7
     udp: true
-  - name: "_🇷🇺 BGP|俄罗斯1\r-2K"
-    type: trojan
-    server: bgptru1.cnamazon.sbs
-    port: 443
-    udp: true
-    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
-    sni: tlsdata.cnamazon.sbs
-    skip-cert-verify: false
-  - name: "_🇭🇰 专线|香港5\r-2K"
-    type: trojan
-    server: hk5.cnamazon.sbs
-    port: 443
-    udp: true
-    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
-    sni: tlsdata.cnamazon.sbs
-    skip-cert-verify: false
-  - name: "_🇹🇼 BGP|台湾1\r-2K"
-    type: trojan
-    server: bgptw1.cnamazon.sbs
-    port: 443
-    udp: true
-    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
-    sni: tlsdata.cnamazon.sbs
-    skip-cert-verify: false
-  - name: _🇸🇬 新加坡 1-2K
-    type: vmess
-    server: t.cccao.cyou
-    port: 16618
-    cipher: auto
-    uuid: aef0215f-cef6-4655-be98-803c4dc727e5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /
-    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -310,56 +317,54 @@ proxy-groups:
       - ⚖️ 🇨🇳港澳台-负载均衡-散列
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
-      - _🇸🇬 新加坡 狮城A|4K
-      - _🇯🇵 日本 低延迟|4K
-      - _🇭🇰 香港 台湾-4K
+      - _🇸🇬 新加坡|4K
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇯🇵 日本-4K
+      - _🇺🇸 美国 鸡坤CC_CF
       - _🇺🇲 美国 洛杉矶-4K有延迟
       - _🇮🇳 印度-4K
-      - _🇷🇺 俄罗斯联邦-1K
-      - _🇺🇸 美国40-1K
-      - _🇺🇸 美国 德克萨斯-4K
-      - _🇭🇰 香港3|4K
+      - _🇺🇸 美国 凤凰城
       - _🇱🇺 欧洲 卢森堡-2K
       - _🇩🇪 德国 CF3-2K
+      - CF3_1
+      - CF3_2
+      - _🇯🇵 日本 低延迟|4K
+      - _🇭🇰 香港 台湾-4K
+      - _🇯🇵 日本-4K
+      - _🇺🇸 美国 德克萨斯-4K
+      - _🇭🇰 香港3|4K
       - _🇺🇸 荷兰 美国17-2K
-      - _🇺🇸 美国 凤凰城
+      - _🇷🇺 俄罗斯联邦-1K
+      - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇦 乌克兰-1K
       - _🇭🇰 香港20
-      - "_🇷🇺 BGP|俄罗斯1\r-2K"
-      - "_🇭🇰 专线|香港5\r-2K"
-      - "_🇹🇼 BGP|台湾1\r-2K"
-      - _🇸🇬 新加坡 1-2K
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - _🇸🇬 新加坡 狮城A|4K
-      - _🇯🇵 日本 低延迟|4K
-      - _🇭🇰 香港 台湾-4K
+      - _🇸🇬 新加坡|4K
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇯🇵 日本-4K
+      - _🇺🇸 美国 鸡坤CC_CF
       - _🇺🇲 美国 洛杉矶-4K有延迟
       - _🇮🇳 印度-4K
-      - _🇷🇺 俄罗斯联邦-1K
-      - _🇺🇸 美国40-1K
-      - _🇺🇸 美国 德克萨斯-4K
-      - _🇭🇰 香港3|4K
+      - _🇺🇸 美国 凤凰城
       - _🇱🇺 欧洲 卢森堡-2K
       - _🇩🇪 德国 CF3-2K
+      - CF3_1
+      - CF3_2
+      - _🇯🇵 日本 低延迟|4K
+      - _🇭🇰 香港 台湾-4K
+      - _🇯🇵 日本-4K
+      - _🇺🇸 美国 德克萨斯-4K
+      - _🇭🇰 香港3|4K
       - _🇺🇸 荷兰 美国17-2K
-      - _🇺🇸 美国 凤凰城
+      - _🇷🇺 俄罗斯联邦-1K
+      - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇦 乌克兰-1K
       - _🇭🇰 香港20
-      - "_🇷🇺 BGP|俄罗斯1\r-2K"
-      - "_🇭🇰 专线|香港5\r-2K"
-      - "_🇹🇼 BGP|台湾1\r-2K"
-      - _🇸🇬 新加坡 1-2K
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -384,18 +389,15 @@ proxy-groups:
       - _🇭🇰 香港 台湾-4K
       - _🇭🇰 香港3|4K
       - _🇭🇰 香港20
-      - "_🇭🇰 专线|香港5\r-2K"
-      - "_🇹🇼 BGP|台湾1\r-2K"
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇸🇬 新加坡 狮城A|4K
+      - _🇸🇬 新加坡|4K
       - _🇯🇵 日本 低延迟|4K
       - _🇯🇵 日本-4K
-      - _🇸🇬 新加坡 1-2K
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -403,11 +405,12 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
+      - _🇺🇸 美国 鸡坤CC_CF
       - _🇺🇲 美国 洛杉矶-4K有延迟
-      - _🇺🇸 美国40-1K
+      - _🇺🇸 美国 凤凰城
       - _🇺🇸 美国 德克萨斯-4K
       - _🇺🇸 荷兰 美国17-2K
-      - _🇺🇸 美国 凤凰城
+      - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
