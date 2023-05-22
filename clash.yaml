@@ -54,7 +54,36 @@ proxies:
     servername: ""
     network: tcp
     udp: true
-  - name: 🇯🇵 _JP_日本 5
+  - name: _🇺🇸 美国 凤凰城|4K
+    type: vmess
+    server: cf.yxjnode.com
+    port: 80
+    cipher: auto
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        host: dp1.yxjnode.com
+  - name: 🇯🇵 _JP日本 4K
+    type: vmess
+    server: jp1.d4995a2eb9b2.sanfen004.me
+    port: 443
+    cipher: auto
+    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /zh-cn
+      headers:
+        host: www.microsoft.com
+  - name: 🇯🇵 _JP_日本 5|4K-8MB
     server: 18.183.170.180
     port: 443
     client-fingerprint: chrome
@@ -62,6 +91,21 @@ proxies:
     cipher: aes-256-cfb
     password: amazonskr05
     tfo: false
+  - name: 荷兰4-4K
+    type: vmess
+    server: 156.225.67.126
+    port: 443
+    cipher: auto
+    uuid: 3a3c8a9c-334e-4360-adb8-a80a57ddcbbf
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    servername: www.16046626.xyz
+    network: ws
+    ws-opts:
+      path: /path/131816182113
+      headers:
+        host: www.16046626.xyz
   - name: _🇮🇳 印度-4K
     server: 152.70.74.66
     port: 443
@@ -69,6 +113,36 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
+  - name: CF3_1|4K
+    type: vmess
+    server: xuwu996.ml
+    port: 80
+    cipher: auto
+    uuid: ba08ccec-f468-41ec-8d37-04b31a40c337
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jd2.xuwu996.eu.org
+  - name: CF3_2|2K
+    type: vmess
+    server: jpnewacs.114514782.xyz
+    port: 80
+    cipher: auto
+    uuid: ba08ccec-f468-41ec-8d37-04b31a40c337
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jd2.xuwu996.eu.org
   - name: "🇸🇬 专线|新加坡1\r"
     type: trojan
     server: sg1.cnamazon.sbs
@@ -93,35 +167,6 @@ proxies:
     password: c0508331-3ed5-48df-adb4-6d90758c6f5e
     sni: tlsdata.cnamazon.sbs
     skip-cert-verify: false
-  - name: _🇺🇸 美国 凤凰城
-    type: vmess
-    server: cf.yxjnode.com
-    port: 80
-    cipher: auto
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        host: dp1.yxjnode.com
-  - name: CF3_1
-    type: vmess
-    server: xuwu996.ml
-    port: 80
-    cipher: auto
-    uuid: ba08ccec-f468-41ec-8d37-04b31a40c337
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: jd2.xuwu996.eu.org
   - name: _🇺🇸 美国40-1K
     server: 104.21.53.35
     port: 80
@@ -149,12 +194,6 @@ proxies:
     password: af4dc66a-ec88-4057-9e46-777b584577f7
     sni: ua.mjt001.com
     udp: true
-  - name: _🇭🇰 香港20
-    server: hinet.mjt001.com
-    port: 443
-    type: trojan
-    password: af4dc66a-ec88-4057-9e46-777b584577f7
-    udp: true
   - name: _🇩🇪 德国 CF3-2K
     type: vmess
     server: jpnewacs.114514782.xyz
@@ -171,182 +210,7 @@ proxies:
       headers:
         host: jd2.xuwu996.eu.org
     udp: true
-  - name: 🇰🇷 _KR_韩国 3
-    server: 43.202.33.9
-    port: 443
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    tfo: false
-  - name: 🇺🇸 _US_美国 14
-    server: cf.yxjnode.com
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        Host: dp1.yxjnode.com
-  - name: 🇺🇸 _US_美国->🇱🇺_LU_卢森堡
-    server: 104.21.53.35
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        Host: buyvm1.yxjnode.com
-  - name: 🇸🇬 _US_美国->🇸🇬_SG_新加坡
-    server: cdn-xjp4.cqjsl.xyz
-    port: 443
-    client-fingerprint: chrome
-    type: vmess
-    uuid: a5266489-b935-4fb8-8012-5ad4ad41234e
-    alterId: 0
-    cipher: auto
-    tls: true
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: cdn-xjp4.cqjsl.xyz
-  - name: 乌克兰29
-    type: vmess
-    server: 195.137.167.29
-    port: 443
-    cipher: auto
-    uuid: 7757E99E-75C9-46D5-854D-4065BF372100
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Lille.kotick.site
-  - name: 美国13
-    type: vmess
-    server: 104.17.20.55
-    port: 443
-    cipher: auto
-    uuid: 7757E99E-75C9-46D5-854D-4065BF372100
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Lille.kotick.site
-  - name: 美国17
-    type: vmess
-    server: 104.26.14.137
-    port: 443
-    cipher: auto
-    uuid: 7757E99E-75C9-46D5-854D-4065BF372100
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Lille.kotick.site
-  - name: 美国34
-    type: vmess
-    server: tech.noaries.de
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: nl.sharecentrepro.com
-  - name: 美国4
-    type: vmess
-    server: 162.159.152.153
-    port: 8880
-    cipher: auto
-    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: csjp.iiio.wiki
-  - name: 美国CF公司CDN节点 8
-    type: vmess
-    server: cambridge.org
-    port: 443
-    cipher: auto
-    uuid: 3E271C5F-28FF-4704-B8E5-CC2B39AB7F60
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Lille.kotick.site
-  - name: 美国CF节点 10
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
-  - name: 美国CF节点 11
-    type: vmess
-    server: cfcdn.sanfencdn.net
-    port: 443
-    cipher: auto
-    uuid: dd8314cc-3754-416d-9456-0991f2e74753
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: us2.sanfencdn.net
-  - name: 美国CF节点 13
+  - name: 美国CF节点 13|4K
     type: vmess
     server: bp.nidaye.eu.org
     port: 443
@@ -361,20 +225,21 @@ proxies:
       path: /ndy58850
       headers:
         host: bp.nidaye.eu.org
-  - name: 美国CF节点 28
+  - name: 美国CF节点 11|2K
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
+    server: cfcdn.sanfencdn.net
+    port: 443
     cipher: auto
-    uuid: f809b651-3924-4a80-abde-6c8536fbb229
+    uuid: dd8314cc-3754-416d-9456-0991f2e74753
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
+    servername: ""
     network: ws
     ws-opts:
-      path: /api/v3/download.getFile
+      path: /zh-cn
       headers:
-        host: ssrsub.v03.ssrsub.com
+        host: us2.sanfencdn.net
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -385,32 +250,22 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 🇯🇵 _JP_日本 5
+      - _🇺🇸 美国 凤凰城|4K
+      - 🇯🇵 _JP日本 4K
+      - 🇯🇵 _JP_日本 5|4K-8MB
+      - 荷兰4-4K
       - _🇮🇳 印度-4K
+      - CF3_1|4K
+      - CF3_2|2K
       - "🇸🇬 专线|新加坡1\r"
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
-      - _🇺🇸 美国 凤凰城
-      - CF3_1
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇦 乌克兰-1K
-      - _🇭🇰 香港20
       - _🇩🇪 德国 CF3-2K
-      - 🇰🇷 _KR_韩国 3
-      - 🇺🇸 _US_美国 14
-      - 🇺🇸 _US_美国->🇱🇺_LU_卢森堡
-      - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
-      - 乌克兰29
-      - 美国13
-      - 美国17
-      - 美国34
-      - 美国4
-      - 美国CF公司CDN节点 8
-      - 美国CF节点 10
-      - 美国CF节点 11
-      - 美国CF节点 13
-      - 美国CF节点 28
+      - 美国CF节点 13|4K
+      - 美国CF节点 11|2K
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -418,32 +273,22 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 🇯🇵 _JP_日本 5
+      - _🇺🇸 美国 凤凰城|4K
+      - 🇯🇵 _JP日本 4K
+      - 🇯🇵 _JP_日本 5|4K-8MB
+      - 荷兰4-4K
       - _🇮🇳 印度-4K
+      - CF3_1|4K
+      - CF3_2|2K
       - "🇸🇬 专线|新加坡1\r"
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
-      - _🇺🇸 美国 凤凰城
-      - CF3_1
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇦 乌克兰-1K
-      - _🇭🇰 香港20
       - _🇩🇪 德国 CF3-2K
-      - 🇰🇷 _KR_韩国 3
-      - 🇺🇸 _US_美国 14
-      - 🇺🇸 _US_美国->🇱🇺_LU_卢森堡
-      - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
-      - 乌克兰29
-      - 美国13
-      - 美国17
-      - 美国34
-      - 美国4
-      - 美国CF公司CDN节点 8
-      - 美国CF节点 10
-      - 美国CF节点 11
-      - 美国CF节点 13
-      - 美国CF节点 28
+      - 美国CF节点 13|4K
+      - 美国CF节点 11|2K
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -467,17 +312,15 @@ proxy-groups:
     proxies:
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
-      - _🇭🇰 香港20
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇯🇵 _JP_日本 5
+      - 🇯🇵 _JP日本 4K
+      - 🇯🇵 _JP_日本 5|4K-8MB
       - "🇸🇬 专线|新加坡1\r"
-      - 🇰🇷 _KR_韩国 3
-      - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -485,21 +328,11 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇺🇸 美国 凤凰城
+      - _🇺🇸 美国 凤凰城|4K
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
-      - 🇺🇸 _US_美国 14
-      - 🇺🇸 _US_美国->🇱🇺_LU_卢森堡
-      - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
-      - 美国13
-      - 美国17
-      - 美国34
-      - 美国4
-      - 美国CF公司CDN节点 8
-      - 美国CF节点 10
-      - 美国CF节点 11
-      - 美国CF节点 13
-      - 美国CF节点 28
+      - 美国CF节点 13|4K
+      - 美国CF节点 11|2K
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
