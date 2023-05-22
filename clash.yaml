@@ -83,14 +83,6 @@ proxies:
       path: /zh-cn
       headers:
         host: www.microsoft.com
-  - name: 🇯🇵 _JP_日本 5|4K-8MB
-    server: 18.183.170.180
-    port: 443
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    tfo: false
   - name: 荷兰4-4K
     type: vmess
     server: 156.225.67.126
@@ -106,6 +98,14 @@ proxies:
       path: /path/131816182113
       headers:
         host: www.16046626.xyz
+  - name: 🇯🇵 _JP_日本 5|4K不稳定
+    server: 18.183.170.180
+    port: 443
+    client-fingerprint: chrome
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    tfo: false
   - name: _🇮🇳 印度-4K
     server: 152.70.74.66
     port: 443
@@ -252,8 +252,8 @@ proxy-groups:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇺🇸 美国 凤凰城|4K
       - 🇯🇵 _JP日本 4K
-      - 🇯🇵 _JP_日本 5|4K-8MB
       - 荷兰4-4K
+      - 🇯🇵 _JP_日本 5|4K不稳定
       - _🇮🇳 印度-4K
       - CF3_1|4K
       - CF3_2|2K
@@ -275,8 +275,8 @@ proxy-groups:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇺🇸 美国 凤凰城|4K
       - 🇯🇵 _JP日本 4K
-      - 🇯🇵 _JP_日本 5|4K-8MB
       - 荷兰4-4K
+      - 🇯🇵 _JP_日本 5|4K不稳定
       - _🇮🇳 印度-4K
       - CF3_1|4K
       - CF3_2|2K
@@ -319,7 +319,7 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - 🇯🇵 _JP日本 4K
-      - 🇯🇵 _JP_日本 5|4K-8MB
+      - 🇯🇵 _JP_日本 5|4K不稳定
       - "🇸🇬 专线|新加坡1\r"
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
