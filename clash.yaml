@@ -54,39 +54,8 @@ proxies:
     servername: ""
     network: tcp
     udp: true
-  - name: 日本快|
-    type: vmess
-    server: jp80.6d83777c049a.sanfen004.me
-    port: 80
-    cipher: auto
-    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: www.baidu.com
   - name: 🇯🇵 _JP_日本 5
     server: 18.183.170.180
-    port: 443
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    tfo: false
-  - name: 🇰🇷 _KR_韩国
-    server: 43.201.58.248
-    port: 443
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    tfo: false
-  - name: 🇰🇷 _KR_韩国 3
-    server: 43.202.33.9
     port: 443
     client-fingerprint: chrome
     type: ss
@@ -100,6 +69,30 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
+  - name: "🇸🇬 专线|新加坡1\r"
+    type: trojan
+    server: sg1.cnamazon.sbs
+    port: 443
+    udp: true
+    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
+    sni: tlsdata.cnamazon.sbs
+    skip-cert-verify: false
+  - name: "🇹🇼 BGP|台湾3\r"
+    type: trojan
+    server: bgptw3.cnamazon.sbs
+    port: 443
+    udp: true
+    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
+    sni: tlsdata.cnamazon.sbs
+    skip-cert-verify: false
+  - name: "🇹🇼 BGP|台湾5\r"
+    type: trojan
+    server: bgptw5.cnamazon.sbs
+    port: 443
+    udp: true
+    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
+    sni: tlsdata.cnamazon.sbs
+    skip-cert-verify: false
   - name: _🇺🇸 美国 凤凰城
     type: vmess
     server: cf.yxjnode.com
@@ -178,6 +171,14 @@ proxies:
       headers:
         host: jd2.xuwu996.eu.org
     udp: true
+  - name: 🇰🇷 _KR_韩国 3
+    server: 43.202.33.9
+    port: 443
+    client-fingerprint: chrome
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    tfo: false
   - name: 🇺🇸 _US_美国 14
     server: cf.yxjnode.com
     port: 80
@@ -241,21 +242,6 @@ proxies:
       path: /speedtest
       headers:
         host: Lille.kotick.site
-  - name: 美国|
-    type: vmess
-    server: downloadvip.cfd
-    port: 443
-    cipher: auto
-    uuid: a250f5a3-4147-41e7-8b36-a40466bf76f0
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: us1.jsjc.sbs
-    network: ws
-    ws-opts:
-      path: /jsjc/us1
-      headers:
-        host: us1.jsjc.sbs
   - name: 美国13
     type: vmess
     server: 104.17.20.55
@@ -316,7 +302,7 @@ proxies:
       path: /aries?ed=2048
       headers:
         host: csjp.iiio.wiki
-  - name: 美国CloudFlare公司CDN节点 8
+  - name: 美国CF公司CDN节点 8
     type: vmess
     server: cambridge.org
     port: 443
@@ -330,7 +316,7 @@ proxies:
       path: /speedtest
       headers:
         host: Lille.kotick.site
-  - name: 美国CloudFlare节点 10
+  - name: 美国CF节点 10
     type: vmess
     server: cf-lt.sharecentre.online
     port: 80
@@ -345,7 +331,7 @@ proxies:
       path: /shirker
       headers:
         host: ca.ilovescp.com
-  - name: 美国CloudFlare节点 11
+  - name: 美国CF节点 11
     type: vmess
     server: cfcdn.sanfencdn.net
     port: 443
@@ -360,7 +346,7 @@ proxies:
       path: /zh-cn
       headers:
         host: us2.sanfencdn.net
-  - name: 美国CloudFlare节点 13
+  - name: 美国CF节点 13
     type: vmess
     server: bp.nidaye.eu.org
     port: 443
@@ -375,7 +361,7 @@ proxies:
       path: /ndy58850
       headers:
         host: bp.nidaye.eu.org
-  - name: 美国CloudFlare节点 28
+  - name: 美国CF节点 28
     type: vmess
     server: cf-lt.sharecentre.online
     port: 80
@@ -399,11 +385,11 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 日本快|
       - 🇯🇵 _JP_日本 5
-      - 🇰🇷 _KR_韩国
-      - 🇰🇷 _KR_韩国 3
       - _🇮🇳 印度-4K
+      - "🇸🇬 专线|新加坡1\r"
+      - "🇹🇼 BGP|台湾3\r"
+      - "🇹🇼 BGP|台湾5\r"
       - _🇺🇸 美国 凤凰城
       - CF3_1
       - _🇺🇸 美国40-1K
@@ -411,20 +397,20 @@ proxy-groups:
       - _🇺🇦 乌克兰-1K
       - _🇭🇰 香港20
       - _🇩🇪 德国 CF3-2K
+      - 🇰🇷 _KR_韩国 3
       - 🇺🇸 _US_美国 14
       - 🇺🇸 _US_美国->🇱🇺_LU_卢森堡
       - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
       - 乌克兰29
-      - 美国|
       - 美国13
       - 美国17
       - 美国34
       - 美国4
-      - 美国CloudFlare公司CDN节点 8
-      - 美国CloudFlare节点 10
-      - 美国CloudFlare节点 11
-      - 美国CloudFlare节点 13
-      - 美国CloudFlare节点 28
+      - 美国CF公司CDN节点 8
+      - 美国CF节点 10
+      - 美国CF节点 11
+      - 美国CF节点 13
+      - 美国CF节点 28
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -432,11 +418,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 日本快|
       - 🇯🇵 _JP_日本 5
-      - 🇰🇷 _KR_韩国
-      - 🇰🇷 _KR_韩国 3
       - _🇮🇳 印度-4K
+      - "🇸🇬 专线|新加坡1\r"
+      - "🇹🇼 BGP|台湾3\r"
+      - "🇹🇼 BGP|台湾5\r"
       - _🇺🇸 美国 凤凰城
       - CF3_1
       - _🇺🇸 美国40-1K
@@ -444,20 +430,20 @@ proxy-groups:
       - _🇺🇦 乌克兰-1K
       - _🇭🇰 香港20
       - _🇩🇪 德国 CF3-2K
+      - 🇰🇷 _KR_韩国 3
       - 🇺🇸 _US_美国 14
       - 🇺🇸 _US_美国->🇱🇺_LU_卢森堡
       - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
       - 乌克兰29
-      - 美国|
       - 美国13
       - 美国17
       - 美国34
       - 美国4
-      - 美国CloudFlare公司CDN节点 8
-      - 美国CloudFlare节点 10
-      - 美国CloudFlare节点 11
-      - 美国CloudFlare节点 13
-      - 美国CloudFlare节点 28
+      - 美国CF公司CDN节点 8
+      - 美国CF节点 10
+      - 美国CF节点 11
+      - 美国CF节点 13
+      - 美国CF节点 28
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -479,6 +465,8 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
+      - "🇹🇼 BGP|台湾3\r"
+      - "🇹🇼 BGP|台湾5\r"
       - _🇭🇰 香港20
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
@@ -486,9 +474,8 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 日本快|
       - 🇯🇵 _JP_日本 5
-      - 🇰🇷 _KR_韩国
+      - "🇸🇬 专线|新加坡1\r"
       - 🇰🇷 _KR_韩国 3
       - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
@@ -504,16 +491,15 @@ proxy-groups:
       - 🇺🇸 _US_美国 14
       - 🇺🇸 _US_美国->🇱🇺_LU_卢森堡
       - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
-      - 美国|
       - 美国13
       - 美国17
       - 美国34
       - 美国4
-      - 美国CloudFlare公司CDN节点 8
-      - 美国CloudFlare节点 10
-      - 美国CloudFlare节点 11
-      - 美国CloudFlare节点 13
-      - 美国CloudFlare节点 28
+      - 美国CF公司CDN节点 8
+      - 美国CF节点 10
+      - 美国CF节点 11
+      - 美国CF节点 13
+      - 美国CF节点 28
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
