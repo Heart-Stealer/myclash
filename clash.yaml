@@ -45,7 +45,7 @@ proxies:
   - name: _🇺🇸 美国 凤凰城-4K喵哥
     type: vmess
     server: 129.146.247.135
-    port: 14033
+    port: 14039
     cipher: auto
     uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
     alterId: 0
@@ -98,14 +98,6 @@ proxies:
       path: /path/131816182113
       headers:
         host: www.16046626.xyz
-  - name: 🇯🇵 _JP_日本 5|4K不稳定
-    server: 18.183.170.180
-    port: 443
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    tfo: false
   - name: _🇮🇳 印度-4K
     server: 152.70.74.66
     port: 443
@@ -113,7 +105,32 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
-  - name: CF3_1|4K
+  - name: 美国CloudFlare节点 38
+    type: vmess
+    server: uk.minl.me
+    port: 8080
+    cipher: auto
+    uuid: 0f8b517f-6ffd-4f8b-a129-910a64c26034
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /play1
+  - name: "_🇭🇰 香港:"
+    type: vmess
+    server: t.cccao.cyou
+    port: 16620
+    cipher: auto
+    uuid: 16925dca-05be-4d7c-b469-6bcbd8a227ce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+  - name: 德国CF3_1|4K
     type: vmess
     server: xuwu996.ml
     port: 80
@@ -128,7 +145,7 @@ proxies:
       path: /
       headers:
         host: jd2.xuwu996.eu.org
-  - name: CF3_2|2K
+  - name: 德国CF3_2|2K
     type: vmess
     server: jpnewacs.114514782.xyz
     port: 80
@@ -240,6 +257,110 @@ proxies:
       path: /zh-cn
       headers:
         host: us2.sanfencdn.net
+  - name: 🇺🇲 美国(ChatGPT) 19
+    server: us4.01dj.sbs
+    port: 443
+    type: vmess
+    uuid: 1d746ee5-ceb8-4960-88fb-d9efc4ea2328
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /sometimesnaive
+      headers:
+        Host: us4.01dj.sbs
+  - name: 🇺🇲 美国(ChatGPT) 29
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp1.scproxy.top
+  - name: 🇺🇲 美国(ChatGPT) 39
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: gcore.ilovescp.com
+  - name: 🇭🇰 香港 15
+    server: hnm.xiaohouzi.club
+    port: 30845
+    type: trojan
+    password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
+    sni: hktr015.xiaohouzi.club
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 21
+    server: hn.xiaohouzi.club
+    port: 19534
+    type: trojan
+    password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
+    sni: supaz04.xiaohouzi.club
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 25
+    server: hnm.xiaohouzi.club
+    port: 19462
+    type: trojan
+    password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
+    sni: hk-tr03.xiaohouzi.club
+    skip-cert-verify: false
+  - name: 🇨🇦 加拿大(ChatGPT) 03
+    server: cs.xiaohouzi.club
+    port: 28280
+    type: trojan
+    password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
+    sni: canada01.xiaohouzi.club
+    skip-cert-verify: false
+  - name: 🇬🇧 英国(ChatGPT) 04
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: uk1.scproxy.top
+  - name: 🇮🇳 印度(ChatGPT) 01
+    server: 152.70.74.66
+    port: 443
+    type: trojan
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    skip-cert-verify: false
+  - name: 🇮🇳 印度(ChatGPT) 02
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: in.sharecentrepro.com
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -253,10 +374,11 @@ proxy-groups:
       - _🇺🇸 美国 凤凰城|4K
       - 🇯🇵 _JP日本 4K
       - 荷兰4-4K
-      - 🇯🇵 _JP_日本 5|4K不稳定
       - _🇮🇳 印度-4K
-      - CF3_1|4K
-      - CF3_2|2K
+      - 美国CloudFlare节点 38
+      - "_🇭🇰 香港:"
+      - 德国CF3_1|4K
+      - 德国CF3_2|2K
       - "🇸🇬 专线|新加坡1\r"
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
@@ -266,6 +388,16 @@ proxy-groups:
       - _🇩🇪 德国 CF3-2K
       - 美国CF节点 13|4K
       - 美国CF节点 11|2K
+      - 🇺🇲 美国(ChatGPT) 19
+      - 🇺🇲 美国(ChatGPT) 29
+      - 🇺🇲 美国(ChatGPT) 39
+      - 🇭🇰 香港 15
+      - 🇭🇰 香港 21
+      - 🇭🇰 香港 25
+      - 🇨🇦 加拿大(ChatGPT) 03
+      - 🇬🇧 英国(ChatGPT) 04
+      - 🇮🇳 印度(ChatGPT) 01
+      - 🇮🇳 印度(ChatGPT) 02
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -276,10 +408,11 @@ proxy-groups:
       - _🇺🇸 美国 凤凰城|4K
       - 🇯🇵 _JP日本 4K
       - 荷兰4-4K
-      - 🇯🇵 _JP_日本 5|4K不稳定
       - _🇮🇳 印度-4K
-      - CF3_1|4K
-      - CF3_2|2K
+      - 美国CloudFlare节点 38
+      - "_🇭🇰 香港:"
+      - 德国CF3_1|4K
+      - 德国CF3_2|2K
       - "🇸🇬 专线|新加坡1\r"
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
@@ -289,6 +422,16 @@ proxy-groups:
       - _🇩🇪 德国 CF3-2K
       - 美国CF节点 13|4K
       - 美国CF节点 11|2K
+      - 🇺🇲 美国(ChatGPT) 19
+      - 🇺🇲 美国(ChatGPT) 29
+      - 🇺🇲 美国(ChatGPT) 39
+      - 🇭🇰 香港 15
+      - 🇭🇰 香港 21
+      - 🇭🇰 香港 25
+      - 🇨🇦 加拿大(ChatGPT) 03
+      - 🇬🇧 英国(ChatGPT) 04
+      - 🇮🇳 印度(ChatGPT) 01
+      - 🇮🇳 印度(ChatGPT) 02
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -310,8 +453,12 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
+      - "_🇭🇰 香港:"
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
+      - 🇭🇰 香港 15
+      - 🇭🇰 香港 21
+      - 🇭🇰 香港 25
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -319,7 +466,6 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - 🇯🇵 _JP日本 4K
-      - 🇯🇵 _JP_日本 5|4K不稳定
       - "🇸🇬 专线|新加坡1\r"
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
@@ -329,10 +475,16 @@ proxy-groups:
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇺🇸 美国 凤凰城|4K
+      - 美国CloudFlare节点 38
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - 美国CF节点 13|4K
       - 美国CF节点 11|2K
+      - 🇺🇲 美国(ChatGPT) 19
+      - 🇺🇲 美国(ChatGPT) 29
+      - 🇺🇲 美国(ChatGPT) 39
+      - 🇨🇦 加拿大(ChatGPT) 03
+      - 🇬🇧 英国(ChatGPT) 04
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
