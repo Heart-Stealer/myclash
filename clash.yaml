@@ -54,35 +54,6 @@ proxies:
     servername: ""
     network: tcp
     udp: true
-  - name: _🇺🇸 美国 凤凰城|4K
-    type: vmess
-    server: cf.yxjnode.com
-    port: 80
-    cipher: auto
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        host: dp1.yxjnode.com
-  - name: 🇯🇵 _JP日本 4K
-    type: vmess
-    server: jp1.d4995a2eb9b2.sanfen004.me
-    port: 443
-    cipher: auto
-    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: www.microsoft.com
   - name: 荷兰4-4K
     type: vmess
     server: 156.225.67.126
@@ -105,18 +76,6 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
-  - name: 美国CloudFlare节点 38
-    type: vmess
-    server: uk.minl.me
-    port: 8080
-    cipher: auto
-    uuid: 0f8b517f-6ffd-4f8b-a129-910a64c26034
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /play1
   - name: "_🇭🇰 香港:"
     type: vmess
     server: t.cccao.cyou
@@ -130,6 +89,83 @@ proxies:
     network: ws
     ws-opts:
       path: /
+  - name: "🇹🇼 BGP|台湾3\r"
+    type: trojan
+    server: bgptw3.cnamazon.sbs
+    port: 443
+    udp: true
+    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
+    sni: tlsdata.cnamazon.sbs
+    skip-cert-verify: false
+  - name: "🇹🇼 BGP|台湾5\r"
+    type: trojan
+    server: bgptw5.cnamazon.sbs
+    port: 443
+    udp: true
+    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
+    sni: tlsdata.cnamazon.sbs
+    skip-cert-verify: false
+  - name: _🇺🇸 美国40-1K
+    server: 104.21.53.35
+    port: 80
+    type: vmess
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        Host: buyvm1.yxjnode.com
+    udp: true
+  - name: _🇲🇾 马来西亚 美国-1K
+    server: my.mjt001.com
+    port: 443
+    type: trojan
+    password: af4dc66a-ec88-4057-9e46-777b584577f7
+    udp: true
+  - name: 🇯🇵 _JP日本 4K
+    type: vmess
+    server: jp1.d4995a2eb9b2.sanfen004.me
+    port: 443
+    cipher: auto
+    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /zh-cn
+      headers:
+        host: www.microsoft.com
+  - name: _🇺🇸 美国 凤凰城|4K
+    type: vmess
+    server: cf.yxjnode.com
+    port: 80
+    cipher: auto
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        host: dp1.yxjnode.com
+  - name: 美国CloudFlare节点 38
+    type: vmess
+    server: uk.minl.me
+    port: 8080
+    cipher: auto
+    uuid: 0f8b517f-6ffd-4f8b-a129-910a64c26034
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /play1
   - name: 德国CF3_1|4K
     type: vmess
     server: xuwu996.ml
@@ -168,42 +204,6 @@ proxies:
     password: c0508331-3ed5-48df-adb4-6d90758c6f5e
     sni: tlsdata.cnamazon.sbs
     skip-cert-verify: false
-  - name: "🇹🇼 BGP|台湾3\r"
-    type: trojan
-    server: bgptw3.cnamazon.sbs
-    port: 443
-    udp: true
-    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
-    sni: tlsdata.cnamazon.sbs
-    skip-cert-verify: false
-  - name: "🇹🇼 BGP|台湾5\r"
-    type: trojan
-    server: bgptw5.cnamazon.sbs
-    port: 443
-    udp: true
-    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
-    sni: tlsdata.cnamazon.sbs
-    skip-cert-verify: false
-  - name: _🇺🇸 美国40-1K
-    server: 104.21.53.35
-    port: 80
-    type: vmess
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        Host: buyvm1.yxjnode.com
-    udp: true
-  - name: _🇲🇾 马来西亚 美国-1K
-    server: my.mjt001.com
-    port: 443
-    type: trojan
-    password: af4dc66a-ec88-4057-9e46-777b584577f7
-    udp: true
   - name: _🇺🇦 乌克兰-1K
     server: ua.mjt001.com
     port: 443
@@ -257,21 +257,91 @@ proxies:
       path: /zh-cn
       headers:
         host: us2.sanfencdn.net
-  - name: 🇺🇲 美国(ChatGPT) 19
-    server: us4.01dj.sbs
-    port: 443
+  - name: 🇺🇲 美国 02
+    server: cf.yxjnode.com
+    port: 80
     type: vmess
-    uuid: 1d746ee5-ceb8-4960-88fb-d9efc4ea2328
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
     alterId: 0
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: false
     network: ws
     ws-opts:
-      path: /sometimesnaive
+      path: /yxzbp
       headers:
-        Host: us4.01dj.sbs
-  - name: 🇺🇲 美国(ChatGPT) 29
+        Host: dp2.yxjnode.com
+  - name: 🇺🇲 美国 04
+    server: cf.yxjnode.com
+    port: 80
+    type: vmess
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        Host: dp3.yxjnode.com
+  - name: 🇺🇲 美国 07
+    server: cf.yxjnode.com
+    port: 80
+    type: vmess
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        Host: dp4.yxjnode.com
+  - name: 🇺🇲 美国 09
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: ca.ilovescp.com
+  - name: 🇺🇲 美国 11
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: lv2.sharecentrepro.org
+  - name: 🇺🇲 美国 28
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp4.scproxy.top
+  - name: 🇺🇲 美国 29
     server: cf-lt.sharecentre.online
     port: 80
     type: vmess
@@ -285,7 +355,7 @@ proxies:
       path: /shirker
       headers:
         Host: dp1.scproxy.top
-  - name: 🇺🇲 美国(ChatGPT) 39
+  - name: 🇺🇲 美国 39
     server: cf-lt.sharecentre.online
     port: 80
     type: vmess
@@ -299,35 +369,41 @@ proxies:
       path: /shirker
       headers:
         Host: gcore.ilovescp.com
-  - name: 🇭🇰 香港 15
-    server: hnm.xiaohouzi.club
-    port: 30845
-    type: trojan
-    password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
-    sni: hktr015.xiaohouzi.club
-    skip-cert-verify: false
-  - name: 🇭🇰 香港 21
+  - name: 🇺🇲 美国 55
     server: hn.xiaohouzi.club
-    port: 19534
+    port: 19015
     type: trojan
     password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
-    sni: supaz04.xiaohouzi.club
+    sni: vutussite05.xiaohouzi.club
     skip-cert-verify: false
-  - name: 🇭🇰 香港 25
+  - name: 🇺🇲 美国 63
+    server: cf.yxjnode.com
+    port: 80
+    type: vmess
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        Host: dp1.yxjnode.com
+  - name: 🇯🇵 日本 16
     server: hnm.xiaohouzi.club
-    port: 19462
+    port: 11763
     type: trojan
     password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
-    sni: hk-tr03.xiaohouzi.club
+    sni: ajpn01.xiaohouzi.club
     skip-cert-verify: false
-  - name: 🇨🇦 加拿大(ChatGPT) 03
-    server: cs.xiaohouzi.club
-    port: 28280
-    type: trojan
-    password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
-    sni: canada01.xiaohouzi.club
-    skip-cert-verify: false
-  - name: 🇬🇧 英国(ChatGPT) 04
+  - name: 🇯🇵 日本 07
+    server: fae1.interface.buzz
+    port: 31766
+    type: ss
+    cipher: aes-128-gcm
+    password: c7a1f42c-c79a-3c31-9544-89aff988379c
+  - name: 🇸🇬 狮城 14
     server: cf-lt.sharecentre.online
     port: 80
     type: vmess
@@ -340,14 +416,35 @@ proxies:
     ws-opts:
       path: /shirker
       headers:
-        Host: uk1.scproxy.top
-  - name: 🇮🇳 印度(ChatGPT) 01
-    server: 152.70.74.66
+        Host: do.sharecentrepro.com
+  - name: 🇨🇳 台湾 27
+    server: 165.154.246.229
     port: 443
     type: trojan
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
     skip-cert-verify: false
-  - name: 🇮🇳 印度(ChatGPT) 02
+  - name: 🇹🇷 土耳其 01
+    server: cs.xiaohouzi.club
+    port: 49432
+    type: trojan
+    password: 82277b90-9f40-3c91-9b5a-e97140f63d8b
+    sni: tukey.xiaohouzi.club
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 11
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: hk-hytron.ilovescp.com
+  - name: 🇮🇳 印度 02
     server: cf-lt.sharecentre.online
     port: 80
     type: vmess
@@ -361,6 +458,27 @@ proxies:
       path: /shirker
       headers:
         Host: in.sharecentrepro.com
+  - name: 🇬🇧 英国 04
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: uk1.scproxy.top
+  - name: 🇻🇳 越南 02
+    server: vn02.lovehjq.xyz
+    port: 41927
+    type: trojan
+    password: 09833a6f-4d46-426e-87fe-7793a5489f84
+    sni: lovehjq.xyz
+    skip-cert-verify: false
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -371,33 +489,42 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇺🇸 美国 凤凰城|4K
-      - 🇯🇵 _JP日本 4K
       - 荷兰4-4K
       - _🇮🇳 印度-4K
-      - 美国CloudFlare节点 38
       - "_🇭🇰 香港:"
-      - 德国CF3_1|4K
-      - 德国CF3_2|2K
-      - "🇸🇬 专线|新加坡1\r"
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
+      - 🇯🇵 _JP日本 4K
+      - _🇺🇸 美国 凤凰城|4K
+      - 美国CloudFlare节点 38
+      - 德国CF3_1|4K
+      - 德国CF3_2|2K
+      - "🇸🇬 专线|新加坡1\r"
       - _🇺🇦 乌克兰-1K
       - _🇩🇪 德国 CF3-2K
       - 美国CF节点 13|4K
       - 美国CF节点 11|2K
-      - 🇺🇲 美国(ChatGPT) 19
-      - 🇺🇲 美国(ChatGPT) 29
-      - 🇺🇲 美国(ChatGPT) 39
-      - 🇭🇰 香港 15
-      - 🇭🇰 香港 21
-      - 🇭🇰 香港 25
-      - 🇨🇦 加拿大(ChatGPT) 03
-      - 🇬🇧 英国(ChatGPT) 04
-      - 🇮🇳 印度(ChatGPT) 01
-      - 🇮🇳 印度(ChatGPT) 02
+      - 🇺🇲 美国 02
+      - 🇺🇲 美国 04
+      - 🇺🇲 美国 07
+      - 🇺🇲 美国 09
+      - 🇺🇲 美国 11
+      - 🇺🇲 美国 28
+      - 🇺🇲 美国 29
+      - 🇺🇲 美国 39
+      - 🇺🇲 美国 55
+      - 🇺🇲 美国 63
+      - 🇯🇵 日本 16
+      - 🇯🇵 日本 07
+      - 🇸🇬 狮城 14
+      - 🇨🇳 台湾 27
+      - 🇹🇷 土耳其 01
+      - 🇭🇰 香港 11
+      - 🇮🇳 印度 02
+      - 🇬🇧 英国 04
+      - 🇻🇳 越南 02
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -405,33 +532,42 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇺🇸 美国 凤凰城|4K
-      - 🇯🇵 _JP日本 4K
       - 荷兰4-4K
       - _🇮🇳 印度-4K
-      - 美国CloudFlare节点 38
       - "_🇭🇰 香港:"
-      - 德国CF3_1|4K
-      - 德国CF3_2|2K
-      - "🇸🇬 专线|新加坡1\r"
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
+      - 🇯🇵 _JP日本 4K
+      - _🇺🇸 美国 凤凰城|4K
+      - 美国CloudFlare节点 38
+      - 德国CF3_1|4K
+      - 德国CF3_2|2K
+      - "🇸🇬 专线|新加坡1\r"
       - _🇺🇦 乌克兰-1K
       - _🇩🇪 德国 CF3-2K
       - 美国CF节点 13|4K
       - 美国CF节点 11|2K
-      - 🇺🇲 美国(ChatGPT) 19
-      - 🇺🇲 美国(ChatGPT) 29
-      - 🇺🇲 美国(ChatGPT) 39
-      - 🇭🇰 香港 15
-      - 🇭🇰 香港 21
-      - 🇭🇰 香港 25
-      - 🇨🇦 加拿大(ChatGPT) 03
-      - 🇬🇧 英国(ChatGPT) 04
-      - 🇮🇳 印度(ChatGPT) 01
-      - 🇮🇳 印度(ChatGPT) 02
+      - 🇺🇲 美国 02
+      - 🇺🇲 美国 04
+      - 🇺🇲 美国 07
+      - 🇺🇲 美国 09
+      - 🇺🇲 美国 11
+      - 🇺🇲 美国 28
+      - 🇺🇲 美国 29
+      - 🇺🇲 美国 39
+      - 🇺🇲 美国 55
+      - 🇺🇲 美国 63
+      - 🇯🇵 日本 16
+      - 🇯🇵 日本 07
+      - 🇸🇬 狮城 14
+      - 🇨🇳 台湾 27
+      - 🇹🇷 土耳其 01
+      - 🇭🇰 香港 11
+      - 🇮🇳 印度 02
+      - 🇬🇧 英国 04
+      - 🇻🇳 越南 02
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -456,9 +592,8 @@ proxy-groups:
       - "_🇭🇰 香港:"
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
-      - 🇭🇰 香港 15
-      - 🇭🇰 香港 21
-      - 🇭🇰 香港 25
+      - 🇨🇳 台湾 27
+      - 🇭🇰 香港 11
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -467,6 +602,9 @@ proxy-groups:
     proxies:
       - 🇯🇵 _JP日本 4K
       - "🇸🇬 专线|新加坡1\r"
+      - 🇯🇵 日本 16
+      - 🇯🇵 日本 07
+      - 🇸🇬 狮城 14
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -474,17 +612,23 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇺🇸 美国 凤凰城|4K
-      - 美国CloudFlare节点 38
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
+      - _🇺🇸 美国 凤凰城|4K
+      - 美国CloudFlare节点 38
       - 美国CF节点 13|4K
       - 美国CF节点 11|2K
-      - 🇺🇲 美国(ChatGPT) 19
-      - 🇺🇲 美国(ChatGPT) 29
-      - 🇺🇲 美国(ChatGPT) 39
-      - 🇨🇦 加拿大(ChatGPT) 03
-      - 🇬🇧 英国(ChatGPT) 04
+      - 🇺🇲 美国 02
+      - 🇺🇲 美国 04
+      - 🇺🇲 美国 07
+      - 🇺🇲 美国 09
+      - 🇺🇲 美国 11
+      - 🇺🇲 美国 28
+      - 🇺🇲 美国 29
+      - 🇺🇲 美国 39
+      - 🇺🇲 美国 55
+      - 🇺🇲 美国 63
+      - 🇬🇧 英国 04
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
