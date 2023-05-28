@@ -45,7 +45,7 @@ proxies:
   - name: _🇺🇸 美国 凤凰城-4K喵哥
     type: vmess
     server: 129.146.247.135
-    port: 14038
+    port: 16351
     cipher: auto
     uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
     alterId: 0
@@ -119,6 +119,12 @@ proxies:
     password: c0508331-3ed5-48df-adb4-6d90758c6f5e
     sni: tlsdata.cnamazon.sbs
     skip-cert-verify: false
+  - name: 🇨🇳 台湾(ChatGPT) 02
+    server: 02-1.qqingca.cc
+    port: 20384
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
   - name: _🇺🇸 美国40-1K
     server: 104.21.53.35
     port: 80
@@ -161,74 +167,21 @@ proxies:
       path: /kbjc/jp1
       headers:
         host: jp1.hnokkdf.top
-  - name: _🇺🇸 美国直连|
+  - name: 美国102
     type: vmess
-    server: 140.99.4.120
-    port: 11128
+    server: 142.4.100.36
+    port: 443
     cipher: auto
-    uuid: d688b6f0-6458-42a9-863d-011c146eead6
-    alterId: 0
-    tls: false
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: true
     skip-cert-verify: true
     servername: ""
     network: ws
     ws-opts:
-      path: /
-  - name: US-DP1-HTTP
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
+      path: /path/1684994761011
       headers:
-        host: dp1.scproxy.top
-  - name: US-DP3-HTTP
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: dp3.scproxy.top
-  - name: 🇺🇲 美国 01
-    server: 163.123.192.153
-    port: 443
-    type: trojan
-    password: 194e456a-68d2-4f05-b554-c7282d32abae
-    sni: download.xn--mes358a9urctx.com
-    skip-cert-verify: false
-  - name: 🇺🇲 美国(ChatGPT) 10
-    server: cf-lt.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp1.scproxy.top
-  - name: 🇨🇳 台湾(ChatGPT) 02
-    server: 02-1.qqingca.cc
-    port: 20384
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
+        host: www.26167530.xyz
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -245,16 +198,12 @@ proxy-groups:
       - _🇮🇳 印度-4K
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
+      - 🇨🇳 台湾(ChatGPT) 02
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇦 乌克兰-1K
       - _🇯🇵 日本
-      - _🇺🇸 美国直连|
-      - US-DP1-HTTP
-      - US-DP3-HTTP
-      - 🇺🇲 美国 01
-      - 🇺🇲 美国(ChatGPT) 10
-      - 🇨🇳 台湾(ChatGPT) 02
+      - 美国102
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -268,16 +217,12 @@ proxy-groups:
       - _🇮🇳 印度-4K
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
+      - 🇨🇳 台湾(ChatGPT) 02
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇦 乌克兰-1K
       - _🇯🇵 日本
-      - _🇺🇸 美国直连|
-      - US-DP1-HTTP
-      - US-DP3-HTTP
-      - 🇺🇲 美国 01
-      - 🇺🇲 美国(ChatGPT) 10
-      - 🇨🇳 台湾(ChatGPT) 02
+      - 美国102
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -320,9 +265,7 @@ proxy-groups:
       - _🇺🇸 美国 凤凰城|4K
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
-      - _🇺🇸 美国直连|
-      - 🇺🇲 美国 01
-      - 🇺🇲 美国(ChatGPT) 10
+      - 美国102
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
