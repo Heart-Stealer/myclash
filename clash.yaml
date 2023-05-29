@@ -45,7 +45,7 @@ proxies:
   - name: _🇺🇸 美国 凤凰城-4K喵哥
     type: vmess
     server: 129.146.247.135
-    port: 16351
+    port: 14631
     cipher: auto
     uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
     alterId: 0
@@ -54,7 +54,7 @@ proxies:
     servername: ""
     network: tcp
     udp: true
-  - name: _🇸🇬 新加坡甲骨文
+  - name: 🇸🇬_SG_新加坡_1
     type: vmess
     server: 168.138.174.249
     port: 41921
@@ -63,24 +63,95 @@ proxies:
     alterId: 0
     tls: false
     skip-cert-verify: true
-    servername: ""
     network: ws
     ws-opts:
       path: /ssss
-  - name: _🇺🇸 美国 凤凰城|4K
+  - name: 🇬🇧_GB_英国
     type: vmess
-    server: cf.yxjnode.com
+    server: 178.239.171.103
     port: 80
     cipher: auto
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    uuid: 61280f80-cd25-4c7b-8e5a-b1560617047a
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /yxzbp
+      path: /T5t5p1DPeSIooUZfEmkFAYfTxZ
+  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+    type: ss
+    server: 02-2.qqingca.cc
+    port: 20315
+    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
+    cipher: chacha20-ietf-poly1305
+  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+    type: ss
+    server: 04-2.qqingca.cc
+    port: 20349
+    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
+    cipher: chacha20-ietf-poly1305
+  - name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
+    type: ss
+    server: js2.76po.com
+    port: 44315
+    password: 1196c1f1-ac69-4d3f-bbbb-722517323170
+    cipher: chacha20-ietf-poly1305
+  - name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
+    type: ss
+    server: 03-1.qqingca.cc
+    port: 20341
+    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
+    cipher: chacha20-ietf-poly1305
+  - name: 🇮🇳_IN_印度
+    type: trojan
+    server: 152.70.74.66
+    port: 443
+    udp: true
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇰🇷_KR_韩国_2
+    type: trojan
+    server: kr5.microsoft-orgwly.vip
+    port: 443
+    udp: true
+    password: bb59547d-0ea9-4af0-97c7-169bcb15f961
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇰🇷_KR_韩国_4
+    type: ss
+    server: 43.202.45.84
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 🇹🇼_TW_台湾
+    type: trojan
+    server: tw5.microsoft-orgwly.vip
+    port: 443
+    udp: true
+    password: aef8d2c4-6ff7-4cc1-8d14-8596d3426223
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_10
+    type: ss
+    server: 54.187.97.19
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
+    type: vmess
+    server: v133.toddns.gq
+    port: 80
+    cipher: auto
+    uuid: cd1836ed-78be-3dcb-9fb1-9d2a4bdfecb8
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /v133PDXkklxLEcOvD
       headers:
-        host: dp1.yxjnode.com
+        host: v133.toddns.gq
   - name: 荷兰4-4K
     type: vmess
     server: 156.225.67.126
@@ -96,13 +167,6 @@ proxies:
       path: /path/131816182113
       headers:
         host: www.16046626.xyz
-  - name: _🇮🇳 印度-4K
-    server: 152.70.74.66
-    port: 443
-    type: trojan
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    skip-cert-verify: true
-    udp: true
   - name: "🇹🇼 BGP|台湾3\r"
     type: trojan
     server: bgptw3.cnamazon.sbs
@@ -152,21 +216,6 @@ proxies:
     password: af4dc66a-ec88-4057-9e46-777b584577f7
     sni: ua.mjt001.com
     udp: true
-  - name: _🇯🇵 日本
-    type: vmess
-    server: zfc.windowsupdate1.com
-    port: 443
-    cipher: auto
-    uuid: 60454f67-7e28-4ddd-855f-e8216dfedf5a
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: jp1.hnokkdf.top
-    network: ws
-    ws-opts:
-      path: /kbjc/jp1
-      headers:
-        host: jp1.hnokkdf.top
   - name: 美国102
     type: vmess
     server: 142.4.100.36
@@ -182,6 +231,51 @@ proxies:
       path: /path/1684994761011
       headers:
         host: www.26167530.xyz
+  - name: 🇳🇱 荷兰9
+    server: 188.114.99.102
+    port: 2095
+    type: vmess
+    uuid: 67597b31-fba2-42ba-b3df-b7264d346235
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /tg@hkaa0
+      headers:
+        Host: jp.wyhkaa0.ga
+  - name: 🇺🇲 美国278
+    server: 198.41.203.57
+    port: 2095
+    type: vmess
+    uuid: 67597b31-fba2-42ba-b3df-b7264d346235
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /tg@hkaa0
+      headers:
+        Host: jp.wyhkaa0.ga
+  - name: 🇺🇲 美国258
+    server: cf.yxjnode.com
+    port: 80
+    type: vmess
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        Host: dp4.yxjnode.com
+  - name: 🇨🇳 中国49
+    server: 04-2.qqingca.cc
+    port: 20349
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -192,18 +286,30 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇸🇬 新加坡甲骨文
-      - _🇺🇸 美国 凤凰城|4K
+      - 🇸🇬_SG_新加坡_1
+      - 🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
+      - 🇮🇳_IN_印度
+      - 🇰🇷_KR_韩国_2
+      - 🇰🇷_KR_韩国_4
+      - 🇹🇼_TW_台湾
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
       - 荷兰4-4K
-      - _🇮🇳 印度-4K
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - 🇨🇳 台湾(ChatGPT) 02
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇦 乌克兰-1K
-      - _🇯🇵 日本
       - 美国102
+      - 🇳🇱 荷兰9
+      - 🇺🇲 美国278
+      - 🇺🇲 美国258
+      - 🇨🇳 中国49
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -211,18 +317,30 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇸🇬 新加坡甲骨文
-      - _🇺🇸 美国 凤凰城|4K
+      - 🇸🇬_SG_新加坡_1
+      - 🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
+      - 🇮🇳_IN_印度
+      - 🇰🇷_KR_韩国_2
+      - 🇰🇷_KR_韩国_4
+      - 🇹🇼_TW_台湾
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
       - 荷兰4-4K
-      - _🇮🇳 印度-4K
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - 🇨🇳 台湾(ChatGPT) 02
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - _🇺🇦 乌克兰-1K
-      - _🇯🇵 日本
       - 美国102
+      - 🇳🇱 荷兰9
+      - 🇺🇲 美国278
+      - 🇺🇲 美国258
+      - 🇨🇳 中国49
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -244,6 +362,7 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
+      - 🇹🇼_TW_台湾
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - 🇨🇳 台湾(ChatGPT) 02
@@ -253,8 +372,13 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇸🇬 新加坡甲骨文
-      - _🇯🇵 日本
+      - 🇸🇬_SG_新加坡_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
+      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
+      - 🇰🇷_KR_韩国_2
+      - 🇰🇷_KR_韩国_4
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -262,10 +386,14 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - _🇺🇸 美国 凤凰城|4K
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
       - _🇺🇸 美国40-1K
       - _🇲🇾 马来西亚 美国-1K
       - 美国102
+      - 🇺🇲 美国278
+      - 🇺🇲 美国258
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
