@@ -54,18 +54,14 @@ proxies:
     servername: ""
     network: tcp
     udp: true
-  - name: 🇸🇬_SG_新加坡
-    type: vmess
-    server: 168.138.174.249
-    port: 41921
-    cipher: auto
-    uuid: 2308da67-868d-4bc0-e040-aa087a57312f
-    alterId: 0
-    tls: false
+  - name: 🇮🇳_IN_印度
+    type: trojan
+    server: 152.70.74.66
+    port: 443
+    udp: true
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ssss
+    network: tcp
   - name: 🇬🇧_GB_英国
     type: vmess
     server: 178.239.171.103
@@ -78,76 +74,6 @@ proxies:
     network: ws
     ws-opts:
       path: /T5t5p1DPeSIooUZfEmkFAYfTxZ
-  - name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
-    type: ss
-    server: js2.76po.com
-    port: 44315
-    password: 1196c1f1-ac69-4d3f-bbbb-722517323170
-    cipher: chacha20-ietf-poly1305
-  - name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
-    type: ss
-    server: 03-1.qqingca.cc
-    port: 20341
-    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
-    cipher: chacha20-ietf-poly1305
-  - name: 🇮🇳_IN_印度
-    type: trojan
-    server: 152.70.74.66
-    port: 443
-    udp: true
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇰🇷_KR_韩国
-    type: trojan
-    server: kr5.microsoft-orgwly.vip
-    port: 443
-    udp: true
-    password: bb59547d-0ea9-4af0-97c7-169bcb15f961
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇰🇷_KR_韩国_2
-    type: trojan
-    server: kr5.microsoft-orgwly.vip
-    port: 443
-    udp: true
-    password: bb59547d-0ea9-4af0-97c7-169bcb15f961
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇰🇷_KR_韩国_4
-    type: ss
-    server: 43.202.45.84
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - name: 🇹🇼_TW_台湾
-    type: trojan
-    server: tw5.microsoft-orgwly.vip
-    port: 443
-    udp: true
-    password: aef8d2c4-6ff7-4cc1-8d14-8596d3426223
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇸_US_美国_10
-    type: ss
-    server: 54.187.97.19
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
-    type: vmess
-    server: v133.toddns.gq
-    port: 80
-    cipher: auto
-    uuid: cd1836ed-78be-3dcb-9fb1-9d2a4bdfecb8
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /v133PDXkklxLEcOvD
-      headers:
-        host: v133.toddns.gq
   - name: "🇹🇼 BGP|台湾2\r"
     type: trojan
     server: bgptw2.cnamazon.sbs
@@ -164,103 +90,20 @@ proxies:
     password: c0508331-3ed5-48df-adb4-6d90758c6f5e
     sni: tlsdata.cnamazon.sbs
     skip-cert-verify: false
-  - name: "🇹🇼 BGP|台湾5\r"
-    type: trojan
-    server: bgptw5.cnamazon.sbs
-    port: 443
-    udp: true
-    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
-    sni: tlsdata.cnamazon.sbs
-    skip-cert-verify: false
-  - name: 🇨🇳_CN_中国->🇹🇼_TW_台湾
-    type: ss
-    server: 02-1.qqingca.cc
-    port: 20384
-    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
-    cipher: chacha20-ietf-poly1305
-  - name: 🇺🇸_US_美国_9
-    type: ss
-    server: 54.187.97.19
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
     type: vmess
-    server: channel2.unlimiteddev.tk
-    port: 443
-    cipher: auto
-    uuid: 9aa6b5ad-c0fc-47f4-a837-f72179d7b662
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /Lsv4s7nS0ErewnEN
-      headers:
-        host: channel2.unlimiteddev.tk
-  - name: 荷兰4-4K
-    type: vmess
-    server: 156.225.67.126
-    port: 443
-    cipher: auto
-    uuid: 3a3c8a9c-334e-4360-adb8-a80a57ddcbbf
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    servername: www.16046626.xyz
-    network: ws
-    ws-opts:
-      path: /path/131816182113
-      headers:
-        host: www.16046626.xyz
-  - name: 🇨🇳 台湾(ChatGPT) 02
-    server: 02-1.qqingca.cc
-    port: 20384
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 27e2f037-effd-493a-bd28-6004cd9ff1cf
-  - name: _🇺🇸 美国40-1K
-    server: 104.21.53.35
+    server: v133.toddns.gq
     port: 80
-    type: vmess
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    cipher: auto
+    uuid: cd1836ed-78be-3dcb-9fb1-9d2a4bdfecb8
     alterId: 0
-    cipher: auto
     tls: false
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        Host: buyvm1.yxjnode.com
-    udp: true
-  - name: _🇲🇾 马来西亚 美国-1K
-    server: my.mjt001.com
-    port: 443
-    type: trojan
-    password: af4dc66a-ec88-4057-9e46-777b584577f7
-    udp: true
-  - name: _🇺🇦 乌克兰-1K
-    server: ua.mjt001.com
-    port: 443
-    type: trojan
-    password: af4dc66a-ec88-4057-9e46-777b584577f7
-    sni: ua.mjt001.com
-    udp: true
-  - name: 美国102
-    type: vmess
-    server: 142.4.100.36
-    port: 443
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: true
     skip-cert-verify: true
-    servername: ""
     network: ws
     ws-opts:
-      path: /path/1684994761011
+      path: /v133PDXkklxLEcOvD
       headers:
-        host: www.26167530.xyz
+        host: v133.toddns.gq
   - name: 🇺🇲 美国278
     server: 198.41.203.57
     port: 2095
@@ -287,6 +130,77 @@ proxies:
       path: /yxzbp
       headers:
         Host: dp4.yxjnode.com
+  - name: _🇺🇸 美国40-1K
+    server: 104.21.53.35
+    port: 80
+    type: vmess
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        Host: buyvm1.yxjnode.com
+    udp: true
+  - name: 🇰🇷_KR_韩国_4
+    type: ss
+    server: 43.202.45.84
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_11
+    type: trojan
+    server: 163.123.192.155
+    port: 443
+    udp: true
+    password: 1113a9fa-c6ee-4929-ae93-d29d024b1728
+    sni: download.xn--mes358a9urctx.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_12
+    type: trojan
+    server: 163.123.192.156
+    port: 443
+    udp: true
+    password: 1113a9fa-c6ee-4929-ae93-d29d024b1728
+    sni: download.xn--mes358a9urctx.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_16
+    type: ss
+    server: 74.121.191.98
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_28
+    type: trojan
+    server: 163.123.192.154
+    port: 443
+    udp: true
+    password: 1113a9fa-c6ee-4929-ae93-d29d024b1728
+    sni: download.xn--mes358a9urctx.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇪🇪_EE_爱沙尼亚
+    type: vmess
+    server: 46.36.219.85
+    port: 443
+    cipher: aes-128-gcm
+    uuid: 96197594-323a-4ffb-bb3c-c7f64045187e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - name: 🇩🇪_DE_德国
+    type: ss
+    server: 80.92.204.106
+    port: 9094
+    password: rpgbNnU9rDDU4aWZ
+    cipher: aes-256-cfb
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -297,31 +211,21 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 🇸🇬_SG_新加坡
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
       - 🇮🇳_IN_印度
-      - 🇰🇷_KR_韩国
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_4
-      - 🇹🇼_TW_台湾
-      - 🇺🇸_US_美国_10
-      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
+      - 🇬🇧_GB_英国
       - "🇹🇼 BGP|台湾2\r"
       - "🇹🇼 BGP|台湾3\r"
-      - "🇹🇼 BGP|台湾5\r"
-      - 🇨🇳_CN_中国->🇹🇼_TW_台湾
-      - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 荷兰4-4K
-      - 🇨🇳 台湾(ChatGPT) 02
-      - _🇺🇸 美国40-1K
-      - _🇲🇾 马来西亚 美国-1K
-      - _🇺🇦 乌克兰-1K
-      - 美国102
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
       - 🇺🇲 美国278
       - 🇺🇲 美国258
+      - _🇺🇸 美国40-1K
+      - 🇰🇷_KR_韩国_4
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_28
+      - 🇪🇪_EE_爱沙尼亚
+      - 🇩🇪_DE_德国
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -329,31 +233,21 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 🇸🇬_SG_新加坡
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
       - 🇮🇳_IN_印度
-      - 🇰🇷_KR_韩国
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_4
-      - 🇹🇼_TW_台湾
-      - 🇺🇸_US_美国_10
-      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
+      - 🇬🇧_GB_英国
       - "🇹🇼 BGP|台湾2\r"
       - "🇹🇼 BGP|台湾3\r"
-      - "🇹🇼 BGP|台湾5\r"
-      - 🇨🇳_CN_中国->🇹🇼_TW_台湾
-      - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 荷兰4-4K
-      - 🇨🇳 台湾(ChatGPT) 02
-      - _🇺🇸 美国40-1K
-      - _🇲🇾 马来西亚 美国-1K
-      - _🇺🇦 乌克兰-1K
-      - 美国102
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
       - 🇺🇲 美国278
       - 🇺🇲 美国258
+      - _🇺🇸 美国40-1K
+      - 🇰🇷_KR_韩国_4
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_28
+      - 🇪🇪_EE_爱沙尼亚
+      - 🇩🇪_DE_德国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -375,23 +269,14 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇹🇼_TW_台湾
       - "🇹🇼 BGP|台湾2\r"
       - "🇹🇼 BGP|台湾3\r"
-      - "🇹🇼 BGP|台湾5\r"
-      - 🇨🇳_CN_中国->🇹🇼_TW_台湾
-      - 🇨🇳 台湾(ChatGPT) 02
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
-      - 🇰🇷_KR_韩国
-      - 🇰🇷_KR_韩国_2
       - 🇰🇷_KR_韩国_4
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
@@ -401,15 +286,14 @@ proxy-groups:
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇬🇧_GB_英国
-      - 🇺🇸_US_美国_10
       - 🇺🇸_US_美国->🇫🇷_FR_法国_3
-      - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - _🇺🇸 美国40-1K
-      - _🇲🇾 马来西亚 美国-1K
-      - 美国102
       - 🇺🇲 美国278
       - 🇺🇲 美国258
+      - _🇺🇸 美国40-1K
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_28
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
