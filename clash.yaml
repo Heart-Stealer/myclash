@@ -45,7 +45,7 @@ proxies:
   - name: _🇺🇸 美国 凤凰城-4K喵哥
     type: vmess
     server: 129.146.247.135
-    port: 14638
+    port: 14641
     cipher: auto
     uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
     alterId: 0
@@ -54,6 +54,16 @@ proxies:
     servername: ""
     network: tcp
     udp: true
+  - name: 🇨🇳 香港
+    type: vmess
+    server: cdn.jike.cyou
+    port: 50039
+    cipher: auto
+    uuid: b26f5f92-4996-4408-b1db-87aeeab3c706
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
   - name: 🇮🇳_IN_印度
     type: trojan
     server: 152.70.74.66
@@ -62,26 +72,6 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     network: tcp
-  - name: 🇬🇧_GB_英国
-    type: vmess
-    server: 178.239.171.103
-    port: 80
-    cipher: auto
-    uuid: 61280f80-cd25-4c7b-8e5a-b1560617047a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /T5t5p1DPeSIooUZfEmkFAYfTxZ
-  - name: "🇹🇼 BGP|台湾2\r"
-    type: trojan
-    server: bgptw2.cnamazon.sbs
-    port: 443
-    udp: true
-    password: c0508331-3ed5-48df-adb4-6d90758c6f5e
-    sni: tlsdata.cnamazon.sbs
-    skip-cert-verify: false
   - name: "🇹🇼 BGP|台湾3\r"
     type: trojan
     server: bgptw3.cnamazon.sbs
@@ -90,33 +80,6 @@ proxies:
     password: c0508331-3ed5-48df-adb4-6d90758c6f5e
     sni: tlsdata.cnamazon.sbs
     skip-cert-verify: false
-  - name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
-    type: vmess
-    server: v133.toddns.gq
-    port: 80
-    cipher: auto
-    uuid: cd1836ed-78be-3dcb-9fb1-9d2a4bdfecb8
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /v133PDXkklxLEcOvD
-      headers:
-        host: v133.toddns.gq
-  - name: 🇺🇲 美国278
-    server: 198.41.203.57
-    port: 2095
-    type: vmess
-    uuid: 67597b31-fba2-42ba-b3df-b7264d346235
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /tg@hkaa0
-      headers:
-        Host: jp.wyhkaa0.ga
   - name: 🇺🇲 美国258
     server: cf.yxjnode.com
     port: 80
@@ -150,57 +113,18 @@ proxies:
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇺🇸_US_美国_11
-    type: trojan
-    server: 163.123.192.155
-    port: 443
-    udp: true
-    password: 1113a9fa-c6ee-4929-ae93-d29d024b1728
-    sni: download.xn--mes358a9urctx.com
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇸_US_美国_12
-    type: trojan
-    server: 163.123.192.156
-    port: 443
-    udp: true
-    password: 1113a9fa-c6ee-4929-ae93-d29d024b1728
-    sni: download.xn--mes358a9urctx.com
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇸_US_美国_16
-    type: ss
-    server: 74.121.191.98
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - name: 🇺🇸_US_美国_28
-    type: trojan
-    server: 163.123.192.154
-    port: 443
-    udp: true
-    password: 1113a9fa-c6ee-4929-ae93-d29d024b1728
-    sni: download.xn--mes358a9urctx.com
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇪🇪_EE_爱沙尼亚
+  - name: 🇬🇧_GB_英国
     type: vmess
-    server: 46.36.219.85
-    port: 443
-    cipher: aes-128-gcm
-    uuid: 96197594-323a-4ffb-bb3c-c7f64045187e
+    server: 178.239.171.103
+    port: 80
+    cipher: auto
+    uuid: 61280f80-cd25-4c7b-8e5a-b1560617047a
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
-  - name: 🇩🇪_DE_德国
-    type: ss
-    server: 80.92.204.106
-    port: 9094
-    password: rpgbNnU9rDDU4aWZ
-    cipher: aes-256-cfb
+      path: /T5t5p1DPeSIooUZfEmkFAYfTxZ
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -211,21 +135,13 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇸 美国 凤凰城-4K喵哥
+      - 🇨🇳 香港
       - 🇮🇳_IN_印度
-      - 🇬🇧_GB_英国
-      - "🇹🇼 BGP|台湾2\r"
       - "🇹🇼 BGP|台湾3\r"
-      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
-      - 🇺🇲 美国278
       - 🇺🇲 美国258
       - _🇺🇸 美国40-1K
       - 🇰🇷_KR_韩国_4
-      - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_16
-      - 🇺🇸_US_美国_28
-      - 🇪🇪_EE_爱沙尼亚
-      - 🇩🇪_DE_德国
+      - 🇬🇧_GB_英国
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -233,21 +149,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
+      - 🇨🇳 香港
       - 🇮🇳_IN_印度
-      - 🇬🇧_GB_英国
-      - "🇹🇼 BGP|台湾2\r"
       - "🇹🇼 BGP|台湾3\r"
-      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
-      - 🇺🇲 美国278
       - 🇺🇲 美国258
       - _🇺🇸 美国40-1K
       - 🇰🇷_KR_韩国_4
-      - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_16
-      - 🇺🇸_US_美国_28
-      - 🇪🇪_EE_爱沙尼亚
-      - 🇩🇪_DE_德国
+      - 🇬🇧_GB_英国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -269,7 +177,7 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - "🇹🇼 BGP|台湾2\r"
+      - 🇨🇳 香港
       - "🇹🇼 BGP|台湾3\r"
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
@@ -285,15 +193,9 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 🇬🇧_GB_英国
-      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
-      - 🇺🇲 美国278
       - 🇺🇲 美国258
       - _🇺🇸 美国40-1K
-      - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_16
-      - 🇺🇸_US_美国_28
+      - 🇬🇧_GB_英国
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
