@@ -105,26 +105,25 @@ proxies:
   - {"name":"🇹🇼 BGP|台湾3\r","type":"trojan","server":"bgptw3.cnamazon.sbs","port":443,"udp":true,"password":"c0508331-3ed5-48df-adb4-6d90758c6f5e","sni":"tlsdata.cnamazon.sbs","skip-cert-verify":false}
   - {"name":"🇹🇼 BGP|台湾5\r","type":"trojan","server":"bgptw5.cnamazon.sbs","port":443,"udp":true,"password":"c0508331-3ed5-48df-adb4-6d90758c6f5e","sni":"tlsdata.cnamazon.sbs","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇰🇷_KR_韩国_4","type":"ss","server":"43.202.45.84","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-
   - {name: 🇺🇲 美国 2, server: aujs.stablize.top, port: 443, type: trojan, password: 03604138-c4b4-481a-bc82-52a41189415a}
   - {name: 🇺🇲 美国 3, server: tempest-us.aikun.online, port: 443, type: trojan, password: 11e247e5-136d-45f1-844a-a7f054d36bab}
   - {name: 🇺🇲 美国 5, server: dejs.stablize.top, port: 443, type: trojan, password: cf1df355-e505-44a5-9c80-3fe732de1c71}
   - {name: 以色列 9, server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg}
   - {name: 🇺🇲 美国 13, server: cfcdn.sanfencdn.net, port: 443, type: vmess, uuid: 951a393a-b557-4590-88b6-30948e1e0b8d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: us1.sanfencdn.net}}, udp: true}
-  - {name: 🇺🇲 美国278-4K, server: 198.41.203.57, port: 2095, type: vmess, uuid: 67597b31-fba2-42ba-b3df-b7264d346235, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /tg@hkaa0, headers: {Host: jp.wyhkaa0.ga}}, udp: true}
+  - {name: 🇺🇲 日本278-4K, server: 198.41.203.57, port: 2095, type: vmess, uuid: 67597b31-fba2-42ba-b3df-b7264d346235, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /tg@hkaa0, headers: {Host: jp.wyhkaa0.ga}}, udp: true}
   - {name: 🇺🇲 美国258-1K, server: cf.yxjnode.com, port: 80, type: vmess, uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /yxzbp, headers: {Host: dp4.yxjnode.com}}, udp: true}
   - {name: _🇺🇸 美国40-1K, server: 104.21.53.35, port: 80, type: vmess, uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /yxzbp, headers: {Host: buyvm1.yxjnode.com}}, udp: true}
   - {"name":"香港普通|","type":"vmess","server":"hk4.af49c4e4c2ee.sanfen004.me","port":443,"cipher":"auto","uuid":"1f5c74ca-5058-44b6-9d87-0fbbbf3bd23e","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hk1.sanfen004.me","network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"www.microsoft.com"}}}
-  - {"name":"韩国2|","type":"vmess","server":"hkdsubv.114514782.xyz","port":2082,"cipher":"auto","uuid":"0ee79445-85a0-38fe-be38-58035ad10530","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/sdubfc"}}
-  - {"name":"新加坡","type":"vmess","server":"sgtippos.76898102.xyz","port":2052,"cipher":"auto","uuid":"0ee79445-85a0-38fe-be38-58035ad10530","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/miao"}}
-  - {"name":"美国91","type":"vmess","server":"scaleway.696960.xyz","port":443,"cipher":"auto","uuid":"e357cd63-f1a5-4c8e-c42e-26da11207fee","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/root/","headers":{"host":"scaleway.696960.xyz"}}}
-  - {"name":"美国70","type":"vmess","server":"yd1.01dj.sbs","port":443,"cipher":"auto","uuid":"95b2dc83-a476-4a82-93b2-0d77b4c30c18","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/sometimesnaive","headers":{"host":"yd1.01dj.sbs"}}}
   - {"name":"美国93","type":"vmess","server":"vps29.imhup.com","port":20000,"cipher":"auto","uuid":"1ed3c3dd-ff8d-4ae4-b4fb-d84a3400c227","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"tcp"}
-
   - {name: United States(ChatGPT) 03, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: gcore.ilovescp.com}}, udp: true}
+  - {"name":"Indonesia(ChatGPT) 01","type":"trojan","server":"103.169.7.11","port":80,"udp":true,"password":"c0d9da22-2569-4bed-a395-607d9e7ae687","sni":"sciencedirect.com","skip-cert-verify":true}
+
+  # - {"name":"韩国2|","type":"vmess","server":"hkdsubv.114514782.xyz","port":2082,"cipher":"auto","uuid":"0ee79445-85a0-38fe-be38-58035ad10530","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/sdubfc"}}
+  # - {"name":"新加坡","type":"vmess","server":"sgtippos.76898102.xyz","port":2052,"cipher":"auto","uuid":"0ee79445-85a0-38fe-be38-58035ad10530","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/miao"}}
+  # - {"name":"美国91","type":"vmess","server":"scaleway.696960.xyz","port":443,"cipher":"auto","uuid":"e357cd63-f1a5-4c8e-c42e-26da11207fee","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/root/","headers":{"host":"scaleway.696960.xyz"}}}
+  # - {"name":"美国70","type":"vmess","server":"yd1.01dj.sbs","port":443,"cipher":"auto","uuid":"95b2dc83-a476-4a82-93b2-0d77b4c30c18","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/sometimesnaive","headers":{"host":"yd1.01dj.sbs"}}}
   # - {name: 新加坡 Singapore(ChatGPT) 01, server: cf-yd-dns.sharecentre.online, port: 80, type: vmess, uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: do.sharecentrepro.com}}, udp: true}
   # - {"name":"Singapore(ChatGPT) 01","type":"vmess","server":"cf-yd-dns.sharecentre.online","port":80,"udp":true,"cipher":"auto","uuid":"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/shirker","headers":{"Host":"do.sharecentrepro.com"}}}
-  - {"name":"Indonesia(ChatGPT) 01","type":"trojan","server":"103.169.7.11","port":80,"udp":true,"password":"c0d9da22-2569-4bed-a395-607d9e7ae687","sni":"sciencedirect.com","skip-cert-verify":true}
 proxy-groups:
  # 🚀 节点选择 🔰 节点选择 ⚖️ 负载均衡 🎥 NETFLIX 🎯 全球直连 🛑 全球拦截 ⛔️ 广告拦截
  # 🚫 运营劫持 🌍 国外媒体 🌏 国内媒体 📲 电报信息 🍎 苹果服务 🐟 漏网之鱼

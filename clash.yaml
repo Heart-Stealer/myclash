@@ -119,7 +119,7 @@ proxies:
       headers:
         Host: us1.sanfencdn.net
     udp: true
-  - name: 🇺🇲 美国278-4K
+  - name: 🇺🇲 日本278-4K
     server: 198.41.203.57
     port: 2095
     type: vmess
@@ -176,62 +176,6 @@ proxies:
       path: /zh-cn
       headers:
         host: www.microsoft.com
-  - name: 韩国2|
-    type: vmess
-    server: hkdsubv.114514782.xyz
-    port: 2082
-    cipher: auto
-    uuid: 0ee79445-85a0-38fe-be38-58035ad10530
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /sdubfc
-  - name: 新加坡
-    type: vmess
-    server: sgtippos.76898102.xyz
-    port: 2052
-    cipher: auto
-    uuid: 0ee79445-85a0-38fe-be38-58035ad10530
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /miao
-  - name: 美国91
-    type: vmess
-    server: scaleway.696960.xyz
-    port: 443
-    cipher: auto
-    uuid: e357cd63-f1a5-4c8e-c42e-26da11207fee
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /root/
-      headers:
-        host: scaleway.696960.xyz
-  - name: 美国70
-    type: vmess
-    server: yd1.01dj.sbs
-    port: 443
-    cipher: auto
-    uuid: 95b2dc83-a476-4a82-93b2-0d77b4c30c18
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /sometimesnaive
-      headers:
-        host: yd1.01dj.sbs
   - name: 美国93
     type: vmess
     server: vps29.imhup.com
@@ -285,14 +229,10 @@ proxy-groups:
       - 🇺🇲 美国 5
       - 以色列 9
       - 🇺🇲 美国 13
-      - 🇺🇲 美国278-4K
+      - 🇺🇲 日本278-4K
       - 🇺🇲 美国258-1K
       - _🇺🇸 美国40-1K
       - 香港普通|
-      - 韩国2|
-      - 新加坡
-      - 美国91
-      - 美国70
       - 美国93
       - United States(ChatGPT) 03
       - Indonesia(ChatGPT) 01
@@ -312,14 +252,10 @@ proxy-groups:
       - 🇺🇲 美国 5
       - 以色列 9
       - 🇺🇲 美国 13
-      - 🇺🇲 美国278-4K
+      - 🇺🇲 日本278-4K
       - 🇺🇲 美国258-1K
       - _🇺🇸 美国40-1K
       - 香港普通|
-      - 韩国2|
-      - 新加坡
-      - 美国91
-      - 美国70
       - 美国93
       - United States(ChatGPT) 03
       - Indonesia(ChatGPT) 01
@@ -354,8 +290,7 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - 🇰🇷_KR_韩国_4
-      - 韩国2|
-      - 新加坡
+      - 🇺🇲 日本278-4K
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -367,11 +302,9 @@ proxy-groups:
       - 🇺🇲 美国 3
       - 🇺🇲 美国 5
       - 🇺🇲 美国 13
-      - 🇺🇲 美国278-4K
+      - 🇺🇲 日本278-4K
       - 🇺🇲 美国258-1K
       - _🇺🇸 美国40-1K
-      - 美国91
-      - 美国70
       - 美国93
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
