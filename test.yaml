@@ -102,6 +102,7 @@ proxies:
   - {"name":"_🇺🇸 美国 凤凰城-4K喵哥","type":"vmess","server":"129.146.247.135","port":14322,"cipher":"auto","uuid":"7949f11e-b1d8-4217-b259-9bc2d2af2c25","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp", udp: true}
   - {"name":"🇮🇳_IN_印度","type":"trojan","server":"152.70.74.66","port":443,"udp":true,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"network":"tcp"}
   - {"name":"印度尼西亚","type":"vmess","server":"43.129.41.138","port":80,"cipher":"auto","uuid":"e3b32ef1-61e3-441b-a79f-4815f967434e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/txy"}}
+  - {"name":"德国 大象公益￨优选IP￨无限流量","type":"vmess","server":"172.64.35.76","port":80,"cipher":"auto","uuid":"2045a9cc-8160-4249-990f-bf056d338a17","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/wwws","headers":{"host":"cf5.besthz365.eu.org"}}}
 
   - {"name":"🇰🇷_KR_韩国_4","type":"ss","server":"43.202.45.84","port":443,"password":"amazonskr05","cipher":"aes-256-cfb", udp: true}
   - {name: 🇺🇲 美国 9 xTom, server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
