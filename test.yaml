@@ -50,7 +50,7 @@ dns:
   fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
   use-hosts: true
   nameserver:
-    - 1.2.4.8 # 1.2.4.8
+    # - 1.2.4.8 # 1.2.4.8
     - 223.5.5.5 # 阿里云 DNS （偏爱）
     - 223.6.6.6 # 阿里云 DNS （偏爱）
     - 119.29.29.29 # DNSPod DNS （偏爱）
@@ -103,52 +103,41 @@ proxies:
   - {"name":"🇮🇳_IN_印度","type":"trojan","server":"152.70.74.66","port":443,"udp":true,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"network":"tcp"}
   - {"name":"印度尼西亚","type":"vmess","server":"43.129.41.138","port":80,"cipher":"auto","uuid":"e3b32ef1-61e3-441b-a79f-4815f967434e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/txy"}}
 
+  - {"name":"🇰🇷_KR_韩国_4","type":"ss","server":"43.202.45.84","port":443,"password":"amazonskr05","cipher":"aes-256-cfb", udp: true}
+  - {name: 🇺🇲 美国 9 xTom, server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
   # - {"name":"🇹🇼 BGP|台湾2\r","type":"trojan","server":"bgptw2.cnamazon.sbs","port":443,"udp":true,"password":"c0508331-3ed5-48df-adb4-6d90758c6f5e","sni":"tlsdata.cnamazon.sbs","skip-cert-verify":false}
   - {"name":"🇹🇼 BGP|台湾3\r","type":"trojan","server":"bgptw3.cnamazon.sbs","port":443,"udp":true,"password":"c0508331-3ed5-48df-adb4-6d90758c6f5e","sni":"tlsdata.cnamazon.sbs","skip-cert-verify":false}
   - {"name":"🇹🇼 BGP|台湾5\r","type":"trojan","server":"bgptw5.cnamazon.sbs","port":443,"udp":true,"password":"c0508331-3ed5-48df-adb4-6d90758c6f5e","sni":"tlsdata.cnamazon.sbs","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇰🇷_KR_韩国_4","type":"ss","server":"43.202.45.84","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  # - {name: 🇺🇲 美国 2, server: aujs.stablize.top, port: 443, type: trojan, password: 03604138-c4b4-481a-bc82-52a41189415a}
-  # - {name: 🇺🇲 美国 5, server: dejs.stablize.top, port: 443, type: trojan, password: cf1df355-e505-44a5-9c80-3fe732de1c71}
-  # - {name: 🇺🇲 美国 3, server: tempest-us.aikun.online, port: 443, type: trojan, password: 11e247e5-136d-45f1-844a-a7f054d36bab}
-  - {name: 🇺🇲 美国 9 xTom, server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
-  # - {name: 🇺🇲 美国 13, server: cfcdn.sanfencdn.net, port: 443, type: vmess, uuid: 951a393a-b557-4590-88b6-30948e1e0b8d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: us1.sanfencdn.net}}, udp: true}
-  - {name: 🇺🇲 日本278-4K, server: 198.41.203.57, port: 2095, type: vmess, uuid: 67597b31-fba2-42ba-b3df-b7264d346235, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /tg@hkaa0, headers: {Host: jp.wyhkaa0.ga}}, udp: true}
   - {name: 🇺🇲 美国258-1K, server: cf.yxjnode.com, port: 80, type: vmess, uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /yxzbp, headers: {Host: dp4.yxjnode.com}}, udp: true}
-  # - {name: _🇺🇸 美国40-1K, server: 104.21.53.35, port: 80, type: vmess, uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /yxzbp, headers: {Host: buyvm1.yxjnode.com}}, udp: true}
-  # - {"name":"香港普通|","type":"vmess","server":"hk4.af49c4e4c2ee.sanfen004.me","port":443,"cipher":"auto","uuid":"1f5c74ca-5058-44b6-9d87-0fbbbf3bd23e","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hk1.sanfen004.me","network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"www.microsoft.com"}}}
-  # - {"name":"美国93","type":"vmess","server":"vps29.imhup.com","port":20000,"cipher":"auto","uuid":"1ed3c3dd-ff8d-4ae4-b4fb-d84a3400c227","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"tcp"}
   - {name: United States(ChatGPT) 03, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: gcore.ilovescp.com}}, udp: true}
+  # - {name: 🇯🇵 日本278-4K, server: 198.41.203.57, port: 2095, type: vmess, uuid: 67597b31-fba2-42ba-b3df-b7264d346235, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /tg@hkaa0, headers: {Host: jp.wyhkaa0.ga}}, udp: true}
   # - {"name":"Indonesia(ChatGPT) 01","type":"trojan","server":"103.169.7.11","port":80,"udp":true,"password":"c0d9da22-2569-4bed-a395-607d9e7ae687","sni":"sciencedirect.com","skip-cert-verify":true}
+# https://sub.vpnpls.com/%E4%BB%8A%E6%97%A5%E7%AC%94%E8%AE%B0-%E9%98%B2%E5%A4%B1%E8%81%94%E4%B8%93%E7%94%A8.php
+  # - {"name":"香港普通|","type":"vmess","server":"hk4.af49c4e4c2ee.sanfen004.me","port":443,"cipher":"auto","uuid":"1f5c74ca-5058-44b6-9d87-0fbbbf3bd23e","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hk1.sanfen004.me","network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"www.microsoft.com"}}}
+  # - {"name":"韩国首尔|","type":"vmess","server":"146.56.174.31","port":8080,"cipher":"auto","uuid":"c2eb5ff8-508d-4100-e0ca-9739f4d1c52c","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/tg@herhero6"}}
+  # - {"name":"狮城普通|","type":"vmess","server":"sg2.f163ab0f2c74.sanfen004.me","port":443,"cipher":"auto","uuid":"6d31bd0b-81df-4bb0-b9ea-e00bab2e06d8","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"sg1.sanfen004.me","network":"tcp"}
+  # - {"name":"哥斯达黎加37","type":"vmess","server":"190.93.245.228","port":2052,"cipher":"auto","uuid":"0227edc4-8735-4370-ac42-4e8147920f0b","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/qwer10","headers":{"host":"tou.vtcss.top"}}}
+  # - {"name":"美国27","type":"vmess","server":"104.16.45.208","port":2052,"cipher":"auto","uuid":"0227edc4-8735-4370-ac42-4e8147920f0b","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/qwer10","headers":{"host":"tou.vtcss.top"}}}
+  # - {"name":"美国114","type":"vmess","server":"cf-dx-dns.sharecentre.online","port":80,"cipher":"auto","uuid":"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/shirker","headers":{"host":"dp1.scproxy.top"}}}
 # https://proxy.yugogo.xyz/clash/proxies
   # - {"name":"Relay_-🇺🇸US_15","server":"192.74.231.175","type":"vmess","port":49202,"uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"cipher":"auto","http-opts":{},"h2-opts":{},"skip-cert-verify":true}
   - {"name":"Relay_🇮🇱IL-🇺🇸US_77","server":"us3.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
   - {"name":"Relay_🇮🇱IL-🏁ZZ_78","server":"au1.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
   - {"name":"Relay_🇮🇱IL-🇺🇸US_79","server":"us1.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
-# https://raw.fastgit.org/freefq/free/master/v2
-  # - {"name":"美国CloudFlare公司CDN节点 34","type":"vmess","server":"104.21.53.35","port":80,"cipher":"auto","uuid":"09c1d32d-4458-4ebf-b36d-4dd732bae3aa","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/yxzbp","headers":{"host":"dp3.yxjnode.com"}}}
-  # - {"name":"美国CloudFlare节点 40","type":"vmess","server":"cfcdn.sanfencdn.net","port":443,"cipher":"auto","uuid":"951a393a-b557-4590-88b6-30948e1e0b8d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"us1.sanfencdn.net"}}}
 # https://tt.vg/freeclash
-  # - {name: 🇨🇳 中国5, server: free.themars.top, port: 32102, type: ss, cipher: chacha20-ietf-poly1305, password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2}
+  - {name: 🇯🇵 日本 5, server: free.themars.top, port: 32102, type: ss, cipher: chacha20-ietf-poly1305, password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2}
   # - {name: 🇺🇲 美国39, server: downloadvip.cfd, port: 443, type: vmess, uuid: 92622695-8087-4f81-97ea-1bd9cfeddfcf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /djjc/us4, headers: {Host: us4.djjc.sbs}}}
   # - {name: 🇺🇲 美国68, server: 172.66.43.240, port: 443, type: vmess, uuid: 12612e87-8003-44a8-b4e8-ec4a325e9016, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ou, headers: {Host: z.zorro.tk}}}
   # - {name: 🇳🇱 荷兰106, server: 188.114.97.210, port: 2052, type: vmess, uuid: 0227edc4-8735-4370-ac42-4e8147920f0b, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /qwer10, headers: {Host: tou.vtcss.top}}}
-  # - {name: 🇺🇲 美国137, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp4.scproxy.top}}}
   # - {name: 🇺🇲 美国44, server: 141.101.114.121, port: 2052, type: vmess, uuid: 0227edc4-8735-4370-ac42-4e8147920f0b, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /qwer10, headers: {Host: tou.vtcss.top}}}
   # - {name: 🇳🇱 荷兰47, server: 188.114.98.51, port: 2095, type: vmess, uuid: 67597b31-fba2-42ba-b3df-b7264d346235, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /tg@hkaa0, headers: {Host: jp.wyhkaa0.ga}}}
   # - {name: 🇺🇲 美国93, server: vps29.imhup.com, port: 20000, type: vmess, uuid: 1ed3c3dd-ff8d-4ae4-b4fb-d84a3400c227, alterId: 0, cipher: auto, tls: true}
   - {name: 🇺🇲 美国138, server: beta.noaries.de, port: 8880, type: vmess, uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/aries?ed=2048", headers: {Host: ovh.iiio.wiki}}}
   - {name: 🇺🇲 美国144, server: beta.noaries.de, port: 2052, type: vmess, uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/aries?ed=2048", headers: {Host: ovh.iiio.wiki}}}
   # - {name: 乌克兰88, server: bx.weizai2023.uk.eu.org, port: 443, type: vmess, uuid: e7d1e562-2af9-40ac-9fad-d1d4806ff1e9, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: "/mioooo?ed=2048", headers: {Host: 2bh.unioreo.rip}}}
-# https://sub.vpnpls.com/%E4%BB%8A%E6%97%A5%E7%AC%94%E8%AE%B0-%E9%98%B2%E5%A4%B1%E8%81%94%E4%B8%93%E7%94%A8.php
-  # - {"name":"香港普通|","type":"vmess","server":"hk4.af49c4e4c2ee.sanfen004.me","port":443,"cipher":"auto","uuid":"1f5c74ca-5058-44b6-9d87-0fbbbf3bd23e","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hk1.sanfen004.me","network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"www.microsoft.com"}}}
-  - {"name":"韩国首尔|","type":"vmess","server":"146.56.174.31","port":8080,"cipher":"auto","uuid":"c2eb5ff8-508d-4100-e0ca-9739f4d1c52c","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/tg@herhero6"}}
-  # - {"name":"狮城普通|","type":"vmess","server":"sg2.f163ab0f2c74.sanfen004.me","port":443,"cipher":"auto","uuid":"6d31bd0b-81df-4bb0-b9ea-e00bab2e06d8","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"sg1.sanfen004.me","network":"tcp"}
-  # - {"name":"哥斯达黎加37","type":"vmess","server":"190.93.245.228","port":2052,"cipher":"auto","uuid":"0227edc4-8735-4370-ac42-4e8147920f0b","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/qwer10","headers":{"host":"tou.vtcss.top"}}}
-  # - {"name":"美国27","type":"vmess","server":"104.16.45.208","port":2052,"cipher":"auto","uuid":"0227edc4-8735-4370-ac42-4e8147920f0b","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/qwer10","headers":{"host":"tou.vtcss.top"}}}
-  # - {"name":"美国114","type":"vmess","server":"cf-dx-dns.sharecentre.online","port":80,"cipher":"auto","uuid":"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/shirker","headers":{"host":"dp1.scproxy.top"}}}
-  # - {"name":"美国77","type":"vmess","server":"cf.noaries.de","port":2082,"cipher":"auto","uuid":"67c5ce45-7b48-473e-bf25-e4c830b0ed24","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/aries?ed=2048","headers":{"host":"dedipath2.iiio.wiki"}}}
-  # - {"name":"美国50","type":"vmess","server":"beta.noaries.de","port":2082,"cipher":"auto","uuid":"67c5ce45-7b48-473e-bf25-e4c830b0ed24","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/aries?ed=2048","headers":{"host":"contabo-jp-win.iiio.wiki"}}}
-  # - {"name":"美国32","type":"vmess","server":"beta.noaries.de","port":8080,"cipher":"auto","uuid":"67c5ce45-7b48-473e-bf25-e4c830b0ed24","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/aries?ed=2048","headers":{"host":"contabo-sg.iiio.wiki"}}}
+# https://raw.fastgit.org/freefq/free/master/v2
+  # - {"name":"美国CloudFlare公司CDN节点 34","type":"vmess","server":"104.21.53.35","port":80,"cipher":"auto","uuid":"09c1d32d-4458-4ebf-b36d-4dd732bae3aa","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/yxzbp","headers":{"host":"dp3.yxjnode.com"}}}
+  # - {"name":"美国CloudFlare节点 40","type":"vmess","server":"cfcdn.sanfencdn.net","port":443,"cipher":"auto","uuid":"951a393a-b557-4590-88b6-30948e1e0b8d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"us1.sanfencdn.net"}}}
 
 proxy-groups:
  # 🚀 节点选择 🔰 节点选择 ⚖️ 负载均衡 🎥 NETFLIX 🎯 全球直连 🛑 全球拦截 ⛔️ 广告拦截

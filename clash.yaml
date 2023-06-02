@@ -14,7 +14,6 @@ dns:
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
-    - 1.2.4.8
     - 223.5.5.5
     - 223.6.6.6
     - 119.29.29.29
@@ -74,6 +73,20 @@ proxies:
     network: ws
     ws-opts:
       path: /txy
+  - name: 🇰🇷_KR_韩国_4
+    type: ss
+    server: 43.202.45.84
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+    udp: true
+  - name: 🇺🇲 美国 9 xTom
+    server: us1.chuqiangtou.net
+    port: 4003
+    type: trojan
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    udp: true
   - name: "🇹🇼 BGP|台湾3\r"
     type: trojan
     server: bgptw3.cnamazon.sbs
@@ -91,33 +104,6 @@ proxies:
     sni: tlsdata.cnamazon.sbs
     skip-cert-verify: true
     network: tcp
-  - name: 🇰🇷_KR_韩国_4
-    type: ss
-    server: 43.202.45.84
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - name: 🇺🇲 美国 9 xTom
-    server: us1.chuqiangtou.net
-    port: 4003
-    type: trojan
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇲 日本278-4K
-    server: 198.41.203.57
-    port: 2095
-    type: vmess
-    uuid: 67597b31-fba2-42ba-b3df-b7264d346235
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /tg@hkaa0
-      headers:
-        Host: jp.wyhkaa0.ga
-    udp: true
   - name: 🇺🇲 美国258-1K
     server: cf.yxjnode.com
     port: 80
@@ -171,6 +157,12 @@ proxies:
     password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
     udp: true
+  - name: 🇯🇵 日本 5
+    server: free.themars.top
+    port: 32102
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
   - name: 🇺🇲 美国138
     server: beta.noaries.de
     port: 8880
@@ -197,19 +189,6 @@ proxies:
       path: /aries?ed=2048
       headers:
         Host: ovh.iiio.wiki
-  - name: 韩国首尔|
-    type: vmess
-    server: 146.56.174.31
-    port: 8080
-    cipher: auto
-    uuid: c2eb5ff8-508d-4100-e0ca-9739f4d1c52c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /tg@herhero6
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -222,19 +201,18 @@ proxy-groups:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇮🇳_IN_印度
       - 印度尼西亚
-      - "🇹🇼 BGP|台湾3\r"
-      - "🇹🇼 BGP|台湾5\r"
       - 🇰🇷_KR_韩国_4
       - 🇺🇲 美国 9 xTom
-      - 🇺🇲 日本278-4K
+      - "🇹🇼 BGP|台湾3\r"
+      - "🇹🇼 BGP|台湾5\r"
       - 🇺🇲 美国258-1K
       - United States(ChatGPT) 03
       - Relay_🇮🇱IL-🇺🇸US_77
       - Relay_🇮🇱IL-🏁ZZ_78
       - Relay_🇮🇱IL-🇺🇸US_79
+      - 🇯🇵 日本 5
       - 🇺🇲 美国138
       - 🇺🇲 美国144
-      - 韩国首尔|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -244,19 +222,18 @@ proxy-groups:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇮🇳_IN_印度
       - 印度尼西亚
-      - "🇹🇼 BGP|台湾3\r"
-      - "🇹🇼 BGP|台湾5\r"
       - 🇰🇷_KR_韩国_4
       - 🇺🇲 美国 9 xTom
-      - 🇺🇲 日本278-4K
+      - "🇹🇼 BGP|台湾3\r"
+      - "🇹🇼 BGP|台湾5\r"
       - 🇺🇲 美国258-1K
       - United States(ChatGPT) 03
       - Relay_🇮🇱IL-🇺🇸US_77
       - Relay_🇮🇱IL-🏁ZZ_78
       - Relay_🇮🇱IL-🇺🇸US_79
+      - 🇯🇵 日本 5
       - 🇺🇲 美国138
       - 🇺🇲 美国144
-      - 韩国首尔|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -287,8 +264,7 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - 🇰🇷_KR_韩国_4
-      - 🇺🇲 日本278-4K
-      - 韩国首尔|
+      - 🇯🇵 日本 5
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -297,7 +273,6 @@ proxy-groups:
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇺🇲 美国 9 xTom
-      - 🇺🇲 日本278-4K
       - 🇺🇲 美国258-1K
       - Relay_🇮🇱IL-🇺🇸US_77
       - Relay_🇮🇱IL-🇺🇸US_79
