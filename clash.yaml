@@ -45,7 +45,7 @@ proxies:
   - name: _🇺🇸 美国 凤凰城-4K喵哥
     type: vmess
     server: 129.146.247.135
-    port: 14640
+    port: 14322
     cipher: auto
     uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
     alterId: 0
@@ -62,6 +62,18 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     network: tcp
+  - name: 印度尼西亚
+    type: vmess
+    server: 43.129.41.138
+    port: 80
+    cipher: auto
+    uuid: e3b32ef1-61e3-441b-a79f-4815f967434e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /txy
   - name: "🇹🇼 BGP|台湾3\r"
     type: trojan
     server: bgptw3.cnamazon.sbs
@@ -85,41 +97,12 @@ proxies:
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇺🇲 美国 2
-    server: aujs.stablize.top
-    port: 443
-    type: trojan
-    password: 03604138-c4b4-481a-bc82-52a41189415a
-  - name: 🇺🇲 美国 5
-    server: dejs.stablize.top
-    port: 443
-    type: trojan
-    password: cf1df355-e505-44a5-9c80-3fe732de1c71
-  - name: 🇺🇲 美国 3
-    server: tempest-us.aikun.online
-    port: 443
-    type: trojan
-    password: 11e247e5-136d-45f1-844a-a7f054d36bab
   - name: 🇺🇲 美国 9 xTom
     server: us1.chuqiangtou.net
     port: 4003
     type: trojan
     password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
-    udp: true
-  - name: 🇺🇲 美国 13
-    server: cfcdn.sanfencdn.net
-    port: 443
-    type: vmess
-    uuid: 951a393a-b557-4590-88b6-30948e1e0b8d
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        Host: us1.sanfencdn.net
     udp: true
   - name: 🇺🇲 日本278-4K
     server: 198.41.203.57
@@ -149,46 +132,6 @@ proxies:
       headers:
         Host: dp4.yxjnode.com
     udp: true
-  - name: _🇺🇸 美国40-1K
-    server: 104.21.53.35
-    port: 80
-    type: vmess
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        Host: buyvm1.yxjnode.com
-    udp: true
-  - name: 香港普通|
-    type: vmess
-    server: hk4.af49c4e4c2ee.sanfen004.me
-    port: 443
-    cipher: auto
-    uuid: 1f5c74ca-5058-44b6-9d87-0fbbbf3bd23e
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hk1.sanfen004.me
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: www.microsoft.com
-  - name: 美国93
-    type: vmess
-    server: vps29.imhup.com
-    port: 20000
-    cipher: auto
-    uuid: 1ed3c3dd-ff8d-4ae4-b4fb-d84a3400c227
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
   - name: United States(ChatGPT) 03
     server: cf-lt.sharecentre.online
     port: 80
@@ -204,32 +147,16 @@ proxies:
       headers:
         Host: gcore.ilovescp.com
     udp: true
-  - name: Indonesia(ChatGPT) 01
-    type: trojan
-    server: 103.169.7.11
-    port: 80
-    udp: true
-    password: c0d9da22-2569-4bed-a395-607d9e7ae687
-    sni: sciencedirect.com
-    skip-cert-verify: true
-  - name: Relay_🇦🇺AU-🇭🇰HK_30
-    server: aws-hk01.aikun.online
-    type: trojan
-    country: 🇦🇺AU
-    port: 443
-    password: 0d234e81-52f2-44a7-8bcc-b9e737c3830f
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇦🇺AU-🇯🇵JP_31
-    server: aws-jp.aikun.online
-    type: trojan
-    country: 🇦🇺AU
-    port: 443
-    password: 0d234e81-52f2-44a7-8bcc-b9e737c3830f
-    skip-cert-verify: true
-    udp: true
   - name: Relay_🇮🇱IL-🇺🇸US_77
     server: us3.chuqiangtou.net
+    type: trojan
+    country: 🇮🇱IL
+    port: 4003
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    udp: true
+  - name: Relay_🇮🇱IL-🏁ZZ_78
+    server: au1.chuqiangtou.net
     type: trojan
     country: 🇮🇱IL
     port: 4003
@@ -244,126 +171,6 @@ proxies:
     password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸US_124
-    server: 172.99.188.99
-    type: ss
-    country: 🇺🇸US
-    port: 5003
-    password: g5MeD6Ft3CWlJId
-    cipher: aes-256-gcm
-  - name: 美国CloudFlare公司CDN节点 34
-    type: vmess
-    server: 104.21.53.35
-    port: 80
-    cipher: auto
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        host: dp3.yxjnode.com
-  - name: 美国CloudFlare节点 40
-    type: vmess
-    server: cfcdn.sanfencdn.net
-    port: 443
-    cipher: auto
-    uuid: 951a393a-b557-4590-88b6-30948e1e0b8d
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: us1.sanfencdn.net
-  - name: 🇨🇳 中国5
-    server: free.themars.top
-    port: 32102
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
-  - name: 🇺🇲 美国39
-    server: downloadvip.cfd
-    port: 443
-    type: vmess
-    uuid: 92622695-8087-4f81-97ea-1bd9cfeddfcf
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /djjc/us4
-      headers:
-        Host: us4.djjc.sbs
-  - name: 🇺🇲 美国68
-    server: 172.66.43.240
-    port: 443
-    type: vmess
-    uuid: 12612e87-8003-44a8-b4e8-ec4a325e9016
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /ou
-      headers:
-        Host: z.zorro.tk
-  - name: 🇳🇱 荷兰106
-    server: 188.114.97.210
-    port: 2052
-    type: vmess
-    uuid: 0227edc4-8735-4370-ac42-4e8147920f0b
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /qwer10
-      headers:
-        Host: tou.vtcss.top
-  - name: 🇺🇲 美国137
-    server: cf-lt.sharecentre.online
-    port: 443
-    type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp4.scproxy.top
-  - name: 🇺🇲 美国44
-    server: 141.101.114.121
-    port: 2052
-    type: vmess
-    uuid: 0227edc4-8735-4370-ac42-4e8147920f0b
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /qwer10
-      headers:
-        Host: tou.vtcss.top
-  - name: 🇳🇱 荷兰47
-    server: 188.114.98.51
-    port: 2095
-    type: vmess
-    uuid: 67597b31-fba2-42ba-b3df-b7264d346235
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /tg@hkaa0
-      headers:
-        Host: jp.wyhkaa0.ga
   - name: 🇺🇲 美国138
     server: beta.noaries.de
     port: 8880
@@ -390,19 +197,19 @@ proxies:
       path: /aries?ed=2048
       headers:
         Host: ovh.iiio.wiki
-  - name: 乌克兰88
-    server: bx.weizai2023.uk.eu.org
-    port: 443
+  - name: 韩国首尔|
     type: vmess
-    uuid: e7d1e562-2af9-40ac-9fad-d1d4806ff1e9
-    alterId: 0
+    server: 146.56.174.31
+    port: 8080
     cipher: auto
-    tls: true
+    uuid: c2eb5ff8-508d-4100-e0ca-9739f4d1c52c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
     network: ws
     ws-opts:
-      path: /mioooo?ed=2048
-      headers:
-        Host: 2bh.unioreo.rip
+      path: /tg@herhero6
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -414,38 +221,20 @@ proxy-groups:
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇮🇳_IN_印度
+      - 印度尼西亚
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - 🇰🇷_KR_韩国_4
-      - 🇺🇲 美国 2
-      - 🇺🇲 美国 5
-      - 🇺🇲 美国 3
       - 🇺🇲 美国 9 xTom
-      - 🇺🇲 美国 13
       - 🇺🇲 日本278-4K
       - 🇺🇲 美国258-1K
-      - _🇺🇸 美国40-1K
-      - 香港普通|
-      - 美国93
       - United States(ChatGPT) 03
-      - Indonesia(ChatGPT) 01
-      - Relay_🇦🇺AU-🇭🇰HK_30
-      - Relay_🇦🇺AU-🇯🇵JP_31
       - Relay_🇮🇱IL-🇺🇸US_77
+      - Relay_🇮🇱IL-🏁ZZ_78
       - Relay_🇮🇱IL-🇺🇸US_79
-      - 🇺🇸US_124
-      - 美国CloudFlare公司CDN节点 34
-      - 美国CloudFlare节点 40
-      - 🇨🇳 中国5
-      - 🇺🇲 美国39
-      - 🇺🇲 美国68
-      - 🇳🇱 荷兰106
-      - 🇺🇲 美国137
-      - 🇺🇲 美国44
-      - 🇳🇱 荷兰47
       - 🇺🇲 美国138
       - 🇺🇲 美国144
-      - 乌克兰88
+      - 韩国首尔|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -454,38 +243,20 @@ proxy-groups:
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇮🇳_IN_印度
+      - 印度尼西亚
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - 🇰🇷_KR_韩国_4
-      - 🇺🇲 美国 2
-      - 🇺🇲 美国 5
-      - 🇺🇲 美国 3
       - 🇺🇲 美国 9 xTom
-      - 🇺🇲 美国 13
       - 🇺🇲 日本278-4K
       - 🇺🇲 美国258-1K
-      - _🇺🇸 美国40-1K
-      - 香港普通|
-      - 美国93
       - United States(ChatGPT) 03
-      - Indonesia(ChatGPT) 01
-      - Relay_🇦🇺AU-🇭🇰HK_30
-      - Relay_🇦🇺AU-🇯🇵JP_31
       - Relay_🇮🇱IL-🇺🇸US_77
+      - Relay_🇮🇱IL-🏁ZZ_78
       - Relay_🇮🇱IL-🇺🇸US_79
-      - 🇺🇸US_124
-      - 美国CloudFlare公司CDN节点 34
-      - 美国CloudFlare节点 40
-      - 🇨🇳 中国5
-      - 🇺🇲 美国39
-      - 🇺🇲 美国68
-      - 🇳🇱 荷兰106
-      - 🇺🇲 美国137
-      - 🇺🇲 美国44
-      - 🇳🇱 荷兰47
       - 🇺🇲 美国138
       - 🇺🇲 美国144
-      - 乌克兰88
+      - 韩国首尔|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -509,8 +280,6 @@ proxy-groups:
     proxies:
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
-      - 香港普通|
-      - Relay_🇦🇺AU-🇭🇰HK_30
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -519,7 +288,7 @@ proxy-groups:
     proxies:
       - 🇰🇷_KR_韩国_4
       - 🇺🇲 日本278-4K
-      - Relay_🇦🇺AU-🇯🇵JP_31
+      - 韩国首尔|
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -527,24 +296,11 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 🇺🇲 美国 2
-      - 🇺🇲 美国 5
-      - 🇺🇲 美国 3
       - 🇺🇲 美国 9 xTom
-      - 🇺🇲 美国 13
       - 🇺🇲 日本278-4K
       - 🇺🇲 美国258-1K
-      - _🇺🇸 美国40-1K
-      - 美国93
       - Relay_🇮🇱IL-🇺🇸US_77
       - Relay_🇮🇱IL-🇺🇸US_79
-      - 🇺🇸US_124
-      - 美国CloudFlare公司CDN节点 34
-      - 美国CloudFlare节点 40
-      - 🇺🇲 美国39
-      - 🇺🇲 美国68
-      - 🇺🇲 美国137
-      - 🇺🇲 美国44
       - 🇺🇲 美国138
       - 🇺🇲 美国144
 rules:
