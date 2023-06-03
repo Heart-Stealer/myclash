@@ -61,18 +61,6 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     network: tcp
-  - name: 印度尼西亚
-    type: vmess
-    server: 43.129.41.138
-    port: 80
-    cipher: auto
-    uuid: e3b32ef1-61e3-441b-a79f-4815f967434e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /txy
   - name: 德国 大象公益￨优选IP￨无限流量
     type: vmess
     server: 172.64.35.76
@@ -88,6 +76,18 @@ proxies:
       path: /wwws
       headers:
         host: cf5.besthz365.eu.org
+  - name: 印度尼西亚
+    type: vmess
+    server: 43.129.41.138
+    port: 80
+    cipher: auto
+    uuid: e3b32ef1-61e3-441b-a79f-4815f967434e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /txy
   - name: 🇰🇷_KR_韩国_4
     type: ss
     server: 43.202.45.84
@@ -148,6 +148,25 @@ proxies:
       headers:
         Host: gcore.ilovescp.com
     udp: true
+  - name: 香港|
+    type: vmess
+    server: 183.232.113.108
+    port: 31020
+    cipher: auto
+    uuid: 6d2a19e2-7fe5-43d4-b5e9-921c006918bc
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: Relay_🇮🇱IL-🇯🇵JP_75
+    server: jp2.chuqiangtou.net
+    type: trojan
+    country: 🇮🇱IL
+    port: 4003
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    udp: true
   - name: Relay_🇮🇱IL-🇺🇸US_77
     server: us3.chuqiangtou.net
     type: trojan
@@ -170,6 +189,37 @@ proxies:
     country: 🇮🇱IL
     port: 4003
     password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    udp: true
+  - name: Relay_🇮🇱IL-🇬🇧GB_80
+    server: hk1.chuqiangtou.net
+    type: trojan
+    country: 🇮🇱IL
+    port: 4003
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    udp: true
+  - name: Relay_🇮🇱IL-🇺🇸US_81
+    server: us1.chuqiangtou.net
+    type: trojan
+    country: 🇮🇱IL
+    port: 4003
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    udp: true
+  - name: Relay_🇯🇵JP-🇯🇵JP_93
+    server: jp01.669990.xyz
+    type: ss
+    country: 🇯🇵JP
+    port: 25566
+    password: b08c30a2-7d68-5e25-4eed-4b9851bfa776
+    cipher: aes-256-gcm
+  - name: 🇺🇸US_319
+    server: 152.70.74.66
+    type: trojan
+    country: 🇺🇸US
+    port: 443
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
   - name: 🇯🇵 日本 5
@@ -204,6 +254,103 @@ proxies:
       path: /aries?ed=2048
       headers:
         Host: ovh.iiio.wiki
+  - name: 🇺🇲 美国118
+    server: beta.noaries.de
+    port: 8880
+    type: vmess
+    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: ovh.iiio.wiki
+  - name: 🇺🇲 美国87
+    server: beta.noaries.de
+    port: 2082
+    type: vmess
+    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: contabo-jp-win.iiio.wiki
+  - name: 🇺🇲 美国112
+    server: beta.noaries.de
+    port: 8080
+    type: vmess
+    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: contabo-sg.iiio.wiki
+  - name: 🇺🇲 美国103
+    server: cf.noaries.de
+    port: 8080
+    type: vmess
+    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: buyvm.iiio.wiki
+  - name: 🇺🇲 美国80
+    server: 104.25.96.171
+    port: 443
+    type: vmess
+    uuid: 3de4ec27-74b4-43e3-bf23-18e726ac80bc
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /P6kpn5UKG40MNLK2
+      headers:
+        Host: GHTyoqrBZm.janbaroon.com
+  - name: 🇺🇲 美国176
+    server: yd1.01dj.sbs
+    port: 443
+    type: vmess
+    uuid: 08d3c0b5-6515-4187-860f-2e41dac6a94b
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /sometimesnaive
+      headers:
+        Host: yd1.01dj.sbs
+  - name: 🇺🇲 美国156
+    server: cf.noaries.de
+    port: 8880
+    type: vmess
+    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: vnpt.iiio.wiki
+  - name: 🇨🇳 中国187
+    server: 62e2186f.f0acf363.83df.34fb5e38.cc
+    port: 30001
+    type: ss
+    cipher: aes-256-gcm
+    password: 23f24a65-57de-464b-9ff5-e994fbd6fe47
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -215,20 +362,34 @@ proxy-groups:
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇮🇳_IN_印度
-      - 印度尼西亚
       - 德国 大象公益￨优选IP￨无限流量
+      - 印度尼西亚
       - 🇰🇷_KR_韩国_4
       - 🇺🇲 美国 9 xTom
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - 🇺🇲 美国258-1K
       - United States(ChatGPT) 03
+      - 香港|
+      - Relay_🇮🇱IL-🇯🇵JP_75
       - Relay_🇮🇱IL-🇺🇸US_77
       - Relay_🇮🇱IL-🏁ZZ_78
       - Relay_🇮🇱IL-🇺🇸US_79
+      - Relay_🇮🇱IL-🇬🇧GB_80
+      - Relay_🇮🇱IL-🇺🇸US_81
+      - Relay_🇯🇵JP-🇯🇵JP_93
+      - 🇺🇸US_319
       - 🇯🇵 日本 5
       - 🇺🇲 美国138
       - 🇺🇲 美国144
+      - 🇺🇲 美国118
+      - 🇺🇲 美国87
+      - 🇺🇲 美国112
+      - 🇺🇲 美国103
+      - 🇺🇲 美国80
+      - 🇺🇲 美国176
+      - 🇺🇲 美国156
+      - 🇨🇳 中国187
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -237,20 +398,34 @@ proxy-groups:
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇮🇳_IN_印度
-      - 印度尼西亚
       - 德国 大象公益￨优选IP￨无限流量
+      - 印度尼西亚
       - 🇰🇷_KR_韩国_4
       - 🇺🇲 美国 9 xTom
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
       - 🇺🇲 美国258-1K
       - United States(ChatGPT) 03
+      - 香港|
+      - Relay_🇮🇱IL-🇯🇵JP_75
       - Relay_🇮🇱IL-🇺🇸US_77
       - Relay_🇮🇱IL-🏁ZZ_78
       - Relay_🇮🇱IL-🇺🇸US_79
+      - Relay_🇮🇱IL-🇬🇧GB_80
+      - Relay_🇮🇱IL-🇺🇸US_81
+      - Relay_🇯🇵JP-🇯🇵JP_93
+      - 🇺🇸US_319
       - 🇯🇵 日本 5
       - 🇺🇲 美国138
       - 🇺🇲 美国144
+      - 🇺🇲 美国118
+      - 🇺🇲 美国87
+      - 🇺🇲 美国112
+      - 🇺🇲 美国103
+      - 🇺🇲 美国80
+      - 🇺🇲 美国176
+      - 🇺🇲 美国156
+      - 🇨🇳 中国187
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -274,6 +449,7 @@ proxy-groups:
     proxies:
       - "🇹🇼 BGP|台湾3\r"
       - "🇹🇼 BGP|台湾5\r"
+      - 香港|
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -281,6 +457,8 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - 🇰🇷_KR_韩国_4
+      - Relay_🇮🇱IL-🇯🇵JP_75
+      - Relay_🇯🇵JP-🇯🇵JP_93
       - 🇯🇵 日本 5
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
@@ -293,8 +471,18 @@ proxy-groups:
       - 🇺🇲 美国258-1K
       - Relay_🇮🇱IL-🇺🇸US_77
       - Relay_🇮🇱IL-🇺🇸US_79
+      - Relay_🇮🇱IL-🇬🇧GB_80
+      - Relay_🇮🇱IL-🇺🇸US_81
+      - 🇺🇸US_319
       - 🇺🇲 美国138
       - 🇺🇲 美国144
+      - 🇺🇲 美国118
+      - 🇺🇲 美国87
+      - 🇺🇲 美国112
+      - 🇺🇲 美国103
+      - 🇺🇲 美国80
+      - 🇺🇲 美国176
+      - 🇺🇲 美国156
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
