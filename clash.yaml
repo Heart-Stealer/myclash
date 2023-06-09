@@ -49,16 +49,6 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     network: tcp
-  - name: _🇨🇳🇭🇰 香港 1
-    server: h961359.waihuizhibiaowang.com
-    port: 13543
-    type: trojan
-    password: d0d24d5b-54ae-40a0-ab68-889dbd4b8a66
-  - name: _🇨🇳🇭🇰 香港 2
-    server: assets.flareai.site
-    port: 13543
-    type: trojan
-    password: d0d24d5b-54ae-40a0-ab68-889dbd4b8a66
   - name: _🇺🇲 美国 9 xTom
     server: us1.chuqiangtou.net
     port: 4003
@@ -114,21 +104,6 @@ proxies:
     sni: 20-212-60-88.nhost.00cdn.com
     skip-cert-verify: true
     network: tcp
-  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1
-    type: ss
-    server: free.themars.top
-    port: 32101
-    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
-    cipher: chacha20-ietf-poly1305
-  - name: 🇸🇬_SG_新加坡
-    type: trojan
-    server: sg1.gsjc.cfd
-    port: 443
-    udp: true
-    password: 979d272e-48b8-488c-ac68-623d1430d67e
-    sni: 20-212-60-88.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
   - name: 🇺🇸_US_美国_13
     type: trojan
     server: 163.123.192.157
@@ -177,65 +152,6 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
-  - name: 美国CloudFlare公司CDN节点 2
-    type: vmess
-    server: datacenter.cm.01.biqibao.site
-    port: 2052
-    cipher: auto
-    uuid: c36d4223-1804-494a-a453-d4f77f10c830
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /public
-      headers:
-        host: detacenter.01.biqibao.site
-  - name: 美国158
-    type: vmess
-    server: 192.203.230.3
-    port: 443
-    cipher: aes-128-gcm
-    uuid: dddd0b29-1576-4003-9990-d7cea34264db
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /835757
-      headers:
-        host: dedi2.1808.cf
-  - name: 美国155
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: do.sharecentrepro.com
-  - name: 美国143
-    type: vmess
-    server: cf.yxjnode.com
-    port: 80
-    cipher: auto
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        host: dp1.yxjnode.com
   - name: 新加坡40
     type: vmess
     server: 15.235.203.129
@@ -249,55 +165,12 @@ proxies:
     network: ws
     ws-opts:
       path: ""
-  - name: 美国48
-    type: vmess
-    server: cf-yd-dns.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: dp3.scproxy.top
-  - name: 美国55
-    type: vmess
-    server: 104.20.55.60
-    port: 2052
-    cipher: auto
-    uuid: 3f100fa9-a160-4a1c-c40d-e22070ac9785
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: x2.ylks01.eu.org
   - name: 🇺🇲 美国10
     server: 163.123.192.58
     port: 443
     type: trojan
     password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca
     sni: 18-140-66-207.nhost.00cdn.com
-  - name: _🇺🇲 美国 4
-    server: ns1.v2-vip.fun
-    port: 80
-    type: vmess
-    uuid: 8abe9496-5e24-4e49-b566-dcf86116017d
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /i99LgvSaslbsPLLQQ7j6Z
-      headers:
-        Host: de5.irteh.fun
   - name: _🇺🇲 美国 5
     server: www.noice.id
     port: 443
@@ -321,16 +194,12 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇮🇳_IN_印度
-      - _🇨🇳🇭🇰 香港 1
-      - _🇨🇳🇭🇰 香港 2
       - _🇺🇲 美国 9 xTom
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇯🇵_JP_日本_1
       - 🇹🇼_TW_台湾
       - 🇭🇰_HK_香港
       - 🇺🇸_US_美国_9
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
-      - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国_13
       - "香港1\r"
       - "香港2\r"
@@ -338,15 +207,8 @@ proxy-groups:
       - "火星互联公益节点04\r"
       - 🇺🇸US_143
       - 🇺🇸US_321
-      - 美国CloudFlare公司CDN节点 2
-      - 美国158
-      - 美国155
-      - 美国143
       - 新加坡40
-      - 美国48
-      - 美国55
       - 🇺🇲 美国10
-      - _🇺🇲 美国 4
       - _🇺🇲 美国 5
   - name: ♻️ 自动选择
     type: url-test
@@ -355,16 +217,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇮🇳_IN_印度
-      - _🇨🇳🇭🇰 香港 1
-      - _🇨🇳🇭🇰 香港 2
       - _🇺🇲 美国 9 xTom
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇯🇵_JP_日本_1
       - 🇹🇼_TW_台湾
       - 🇭🇰_HK_香港
       - 🇺🇸_US_美国_9
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
-      - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国_13
       - "香港1\r"
       - "香港2\r"
@@ -372,15 +230,8 @@ proxy-groups:
       - "火星互联公益节点04\r"
       - 🇺🇸US_143
       - 🇺🇸US_321
-      - 美国CloudFlare公司CDN节点 2
-      - 美国158
-      - 美国155
-      - 美国143
       - 新加坡40
-      - 美国48
-      - 美国55
       - 🇺🇲 美国10
-      - _🇺🇲 美国 4
       - _🇺🇲 美国 5
   - name: 🎯 全球直连
     type: select
@@ -403,8 +254,6 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇨🇳🇭🇰 香港 1
-      - _🇨🇳🇭🇰 香港 2
       - 🇹🇼_TW_台湾
       - 🇭🇰_HK_香港
       - "香港1\r"
@@ -417,8 +266,6 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - 🇯🇵_JP_日本_1
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
-      - 🇸🇬_SG_新加坡
       - 新加坡40
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
@@ -432,14 +279,7 @@ proxy-groups:
       - 🇺🇸_US_美国_13
       - 🇺🇸US_143
       - 🇺🇸US_321
-      - 美国CloudFlare公司CDN节点 2
-      - 美国158
-      - 美国155
-      - 美国143
-      - 美国48
-      - 美国55
       - 🇺🇲 美国10
-      - _🇺🇲 美国 4
       - _🇺🇲 美国 5
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
