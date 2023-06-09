@@ -156,6 +156,12 @@ proxies:
     port: 12586
     password: 81140fe6-f0fd-4c6c-8247-2af1b1e6af37
     cipher: chacha20-ietf-poly1305
+  - name: "火星互联公益节点04\r"
+    type: ss
+    server: free.themars.top
+    port: 32104
+    password: 90cf4b48-accb-4bc6-88d4-ec77e2359695
+    cipher: chacha20-ietf-poly1305
   - name: 🇺🇸US_143
     server: 38.64.138.145
     type: ss
@@ -329,6 +335,7 @@ proxy-groups:
       - "香港1\r"
       - "香港2\r"
       - "香港5-年费专属\r"
+      - "火星互联公益节点04\r"
       - 🇺🇸US_143
       - 🇺🇸US_321
       - 美国CloudFlare公司CDN节点 2
@@ -362,6 +369,7 @@ proxy-groups:
       - "香港1\r"
       - "香港2\r"
       - "香港5-年费专属\r"
+      - "火星互联公益节点04\r"
       - 🇺🇸US_143
       - 🇺🇸US_321
       - 美国CloudFlare公司CDN节点 2
