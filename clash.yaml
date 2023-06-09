@@ -41,20 +41,7 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 🇯🇵 日本
-    server: free.themars.top
-    port: 32102
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
-  - name: 🇺🇲 美国 9 xTom
-    server: us1.chuqiangtou.net
-    port: 4003
-    type: trojan
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: 🇮🇳_IN_印度
+  - name: _🇮🇳_IN_印度
     type: trojan
     server: 152.70.74.66
     port: 443
@@ -62,10 +49,27 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     network: tcp
+  - name: _🇨🇳🇭🇰 香港 1
+    server: h961359.waihuizhibiaowang.com
+    port: 13543
+    type: trojan
+    password: d0d24d5b-54ae-40a0-ab68-889dbd4b8a66
+  - name: _🇨🇳🇭🇰 香港 2
+    server: assets.flareai.site
+    port: 13543
+    type: trojan
+    password: d0d24d5b-54ae-40a0-ab68-889dbd4b8a66
+  - name: _🇺🇲 美国 9 xTom
+    server: us1.chuqiangtou.net
+    port: 4003
+    type: trojan
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    udp: true
   - name: _🇺🇸 美国 凤凰城-4K喵哥
     type: vmess
     server: 129.146.247.135
-    port: 14322
+    port: 14323
     cipher: auto
     uuid: 7949f11e-b1d8-4217-b259-9bc2d2af2c25
     alterId: 0
@@ -74,39 +78,113 @@ proxies:
     servername: ""
     network: tcp
     udp: true
-  - name: 美国156
+  - name: 🇯🇵_JP_日本_1
+    type: trojan
+    server: jp2.gsjc.cfd
+    port: 443
+    udp: true
+    password: ae09438f-b9b8-40c6-ab49-ce6c0d64674e
+    sni: 20-212-60-88.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇹🇼_TW_台湾
+    type: trojan
+    server: gs-hinet.gsjc.cfd
+    port: 443
+    udp: true
+    password: ae09438f-b9b8-40c6-ab49-ce6c0d64674e
+    sni: 20-212-60-88.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇭🇰_HK_香港
+    type: trojan
+    server: hk1.gsjc.cfd
+    port: 443
+    udp: true
+    password: ae09438f-b9b8-40c6-ab49-ce6c0d64674e
+    sni: 20-212-60-88.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_9
+    type: trojan
+    server: 148.59.74.248
+    port: 443
+    udp: true
+    password: ae09438f-b9b8-40c6-ab49-ce6c0d64674e
+    sni: 20-212-60-88.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+    type: ss
+    server: free.themars.top
+    port: 32101
+    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
+    cipher: chacha20-ietf-poly1305
+  - name: 🇸🇬_SG_新加坡
+    type: trojan
+    server: sg1.gsjc.cfd
+    port: 443
+    udp: true
+    password: 979d272e-48b8-488c-ac68-623d1430d67e
+    sni: 20-212-60-88.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_13
+    type: trojan
+    server: 163.123.192.157
+    port: 443
+    udp: true
+    password: 979d272e-48b8-488c-ac68-623d1430d67e
+    sni: 20-212-60-88.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸US_143
+    server: 38.64.138.145
+    type: ss
+    country: 🇺🇸US
+    port: 5500
+    password: KixLvKzwjekG00rm
+    cipher: aes-256-gcm
+  - name: 🇺🇸US_321
+    server: 152.70.74.66
+    type: trojan
+    country: 🇺🇸US
+    port: 443
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    skip-cert-verify: true
+    udp: true
+  - name: 美国CloudFlare公司CDN节点 2
     type: vmess
-    server: cf.noaries.de
-    port: 8880
+    server: datacenter.cm.01.biqibao.site
+    port: 2052
     cipher: auto
-    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
+    uuid: c36d4223-1804-494a-a453-d4f77f10c830
     alterId: 0
     tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /public
+      headers:
+        host: detacenter.01.biqibao.site
+  - name: 美国158
+    type: vmess
+    server: 192.203.230.3
+    port: 443
+    cipher: aes-128-gcm
+    uuid: dddd0b29-1576-4003-9990-d7cea34264db
+    alterId: 0
+    tls: true
     skip-cert-verify: true
     servername: ""
     network: ws
     ws-opts:
-      path: /aries?ed=2048
+      path: /835757
       headers:
-        host: vnpt.iiio.wiki
-  - name: 美国103
+        host: dedi2.1808.cf
+  - name: 美国155
     type: vmess
-    server: cf.noaries.de
-    port: 8080
-    cipher: auto
-    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: buyvm.iiio.wiki
-  - name: 美国60
-    type: vmess
-    server: tech.noaries.de
+    server: cf-lt.sharecentre.online
     port: 80
     cipher: auto
     uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
@@ -118,10 +196,10 @@ proxies:
     ws-opts:
       path: /shirker
       headers:
-        host: nl.sharecentrepro.com
-  - name: 美国63
+        host: do.sharecentrepro.com
+  - name: 美国143
     type: vmess
-    server: 104.21.53.35
+    server: cf.yxjnode.com
     port: 80
     cipher: auto
     uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
@@ -133,250 +211,82 @@ proxies:
     ws-opts:
       path: /yxzbp
       headers:
-        host: buyvm1.yxjnode.com
-  - name: NL荷兰-CF-HTTP
+        host: dp1.yxjnode.com
+  - name: 新加坡40
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
+    server: 15.235.203.129
+    port: 14516
     cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    uuid: 9d136c1d-2a13-4a81-e025-932d6d5a2f8f
     alterId: 0
     tls: false
     skip-cert-verify: true
+    servername: ""
     network: ws
     ws-opts:
-      path: /shirker
-      headers:
-        host: nl.sharecentrepro.com
-  - name: HK香港-CF-HTTP
+      path: ""
+  - name: 美国48
     type: vmess
-    server: cf-lt.sharecentre.online
+    server: cf-yd-dns.sharecentre.online
     port: 80
     cipher: auto
     uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: hk-hytron.ilovescp.com
-  - name: US美国-BuyVM2-HTTP
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: lv1.sharecentrepro.org
-  - name: US美国-BuyVM3-HTTP
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: lv2.sharecentrepro.org
-  - name: US美国-DP1-HTTP
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: dp1.scproxy.top
-  - name: US美国-DP3-HTTP
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
+    servername: ""
     network: ws
     ws-opts:
       path: /shirker
       headers:
         host: dp3.scproxy.top
-  - name: Relay_🇮🇱IL-🇭🇰Hk_01
-    server: hk1.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
+  - name: 美国55
+    type: vmess
+    server: 104.20.55.60
+    port: 2052
+    cipher: auto
+    uuid: 3f100fa9-a160-4a1c-c40d-e22070ac9785
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇯🇵JP_01
-    server: jp1.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇯🇵JP_75
-    server: jp2.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇯🇵JP_03
-    server: jp3.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇦🇺AU_01
-    server: au1.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇦🇺AU_02
-    server: au2.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇦🇺AU_03
-    server: au3.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇺🇸US_01
-    server: us1.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇺🇸US_02
-    server: us2.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇺🇸US_03
-    server: us3.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇳🇱NL_01
-    server: nl1.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇳🇱NL_02
-    server: nl2.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇳🇱NL_03
-    server: nl3.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: Relay_🇮🇱IL-🇬🇧UK_01
-    server: uk1.chuqiangtou.net
-    type: trojan
-    country: 🇮🇱IL
-    port: 4003
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸US_319
-    server: 152.70.74.66
-    type: trojan
-    country: 🇺🇸US
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: x2.ylks01.eu.org
+  - name: 🇺🇲 美国10
+    server: 163.123.192.58
     port: 443
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇲 美国103
-    server: cf.noaries.de
-    port: 8080
-    type: vmess
-    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        Host: buyvm.iiio.wiki
-  - name: 🇺🇲 美国156
-    server: cf.noaries.de
-    port: 8880
-    type: vmess
-    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        Host: vnpt.iiio.wiki
-  - name: 🇺🇲 美国  23
-    server: vm.au.goserver.pw
+    type: trojan
+    password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca
+    sni: 18-140-66-207.nhost.00cdn.com
+  - name: _🇺🇲 美国 4
+    server: ns1.v2-vip.fun
     port: 80
     type: vmess
-    uuid: a2a16067-7ac5-46dd-96f2-a94560ac438c
+    uuid: 8abe9496-5e24-4e49-b566-dcf86116017d
     alterId: 0
     cipher: auto
     tls: false
     network: ws
     ws-opts:
-      path: /v2ray-vmess/ntls
+      path: /i99LgvSaslbsPLLQQ7j6Z
       headers:
-        Host: au.goserver.pw
+        Host: de5.irteh.fun
+  - name: _🇺🇲 美国 5
+    server: www.noice.id
+    port: 443
+    type: vmess
+    uuid: 37776019-07ea-4a1d-94e7-88e5e133ad5a
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /worryfree
+      headers:
+        Host: v2ray1.udpgw.com
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -386,76 +296,60 @@ proxy-groups:
       - ⚖️ 🇨🇳港澳台-负载均衡-散列
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
-      - 🇯🇵 日本
-      - 🇺🇲 美国 9 xTom
-      - 🇮🇳_IN_印度
+      - _🇮🇳_IN_印度
+      - _🇨🇳🇭🇰 香港 1
+      - _🇨🇳🇭🇰 香港 2
+      - _🇺🇲 美国 9 xTom
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 美国156
-      - 美国103
-      - 美国60
-      - 美国63
-      - NL荷兰-CF-HTTP
-      - HK香港-CF-HTTP
-      - US美国-BuyVM2-HTTP
-      - US美国-BuyVM3-HTTP
-      - US美国-DP1-HTTP
-      - US美国-DP3-HTTP
-      - Relay_🇮🇱IL-🇭🇰Hk_01
-      - Relay_🇮🇱IL-🇯🇵JP_01
-      - Relay_🇮🇱IL-🇯🇵JP_75
-      - Relay_🇮🇱IL-🇯🇵JP_03
-      - Relay_🇮🇱IL-🇦🇺AU_01
-      - Relay_🇮🇱IL-🇦🇺AU_02
-      - Relay_🇮🇱IL-🇦🇺AU_03
-      - Relay_🇮🇱IL-🇺🇸US_01
-      - Relay_🇮🇱IL-🇺🇸US_02
-      - Relay_🇮🇱IL-🇺🇸US_03
-      - Relay_🇮🇱IL-🇳🇱NL_01
-      - Relay_🇮🇱IL-🇳🇱NL_02
-      - Relay_🇮🇱IL-🇳🇱NL_03
-      - Relay_🇮🇱IL-🇬🇧UK_01
-      - 🇺🇸US_319
-      - 🇺🇲 美国103
-      - 🇺🇲 美国156
-      - 🇺🇲 美国  23
+      - 🇯🇵_JP_日本_1
+      - 🇹🇼_TW_台湾
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_9
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_13
+      - 🇺🇸US_143
+      - 🇺🇸US_321
+      - 美国CloudFlare公司CDN节点 2
+      - 美国158
+      - 美国155
+      - 美国143
+      - 新加坡40
+      - 美国48
+      - 美国55
+      - 🇺🇲 美国10
+      - _🇺🇲 美国 4
+      - _🇺🇲 美国 5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇯🇵 日本
-      - 🇺🇲 美国 9 xTom
-      - 🇮🇳_IN_印度
+      - _🇮🇳_IN_印度
+      - _🇨🇳🇭🇰 香港 1
+      - _🇨🇳🇭🇰 香港 2
+      - _🇺🇲 美国 9 xTom
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 美国156
-      - 美国103
-      - 美国60
-      - 美国63
-      - NL荷兰-CF-HTTP
-      - HK香港-CF-HTTP
-      - US美国-BuyVM2-HTTP
-      - US美国-BuyVM3-HTTP
-      - US美国-DP1-HTTP
-      - US美国-DP3-HTTP
-      - Relay_🇮🇱IL-🇭🇰Hk_01
-      - Relay_🇮🇱IL-🇯🇵JP_01
-      - Relay_🇮🇱IL-🇯🇵JP_75
-      - Relay_🇮🇱IL-🇯🇵JP_03
-      - Relay_🇮🇱IL-🇦🇺AU_01
-      - Relay_🇮🇱IL-🇦🇺AU_02
-      - Relay_🇮🇱IL-🇦🇺AU_03
-      - Relay_🇮🇱IL-🇺🇸US_01
-      - Relay_🇮🇱IL-🇺🇸US_02
-      - Relay_🇮🇱IL-🇺🇸US_03
-      - Relay_🇮🇱IL-🇳🇱NL_01
-      - Relay_🇮🇱IL-🇳🇱NL_02
-      - Relay_🇮🇱IL-🇳🇱NL_03
-      - Relay_🇮🇱IL-🇬🇧UK_01
-      - 🇺🇸US_319
-      - 🇺🇲 美国103
-      - 🇺🇲 美国156
-      - 🇺🇲 美国  23
+      - 🇯🇵_JP_日本_1
+      - 🇹🇼_TW_台湾
+      - 🇭🇰_HK_香港
+      - 🇺🇸_US_美国_9
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_13
+      - 🇺🇸US_143
+      - 🇺🇸US_321
+      - 美国CloudFlare公司CDN节点 2
+      - 美国158
+      - 美国155
+      - 美国143
+      - 新加坡40
+      - 美国48
+      - 美国55
+      - 🇺🇲 美国10
+      - _🇺🇲 美国 4
+      - _🇺🇲 美国 5
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -477,42 +371,41 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - HK香港-CF-HTTP
-      - Relay_🇮🇱IL-🇭🇰Hk_01
+      - _🇨🇳🇭🇰 香港 1
+      - _🇨🇳🇭🇰 香港 2
+      - 🇹🇼_TW_台湾
+      - 🇭🇰_HK_香港
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇯🇵 日本
-      - Relay_🇮🇱IL-🇯🇵JP_01
-      - Relay_🇮🇱IL-🇯🇵JP_75
-      - Relay_🇮🇱IL-🇯🇵JP_03
+      - 🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+      - 🇸🇬_SG_新加坡
+      - 新加坡40
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇺🇲 美国 9 xTom
+      - _🇺🇲 美国 9 xTom
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 美国156
-      - 美国103
-      - 美国60
-      - 美国63
-      - US美国-BuyVM2-HTTP
-      - US美国-BuyVM3-HTTP
-      - US美国-DP1-HTTP
-      - US美国-DP3-HTTP
-      - Relay_🇮🇱IL-🇺🇸US_01
-      - Relay_🇮🇱IL-🇺🇸US_02
-      - Relay_🇮🇱IL-🇺🇸US_03
-      - Relay_🇮🇱IL-🇬🇧UK_01
-      - 🇺🇸US_319
-      - 🇺🇲 美国103
-      - 🇺🇲 美国156
-      - 🇺🇲 美国  23
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_13
+      - 🇺🇸US_143
+      - 🇺🇸US_321
+      - 美国CloudFlare公司CDN节点 2
+      - 美国158
+      - 美国155
+      - 美国143
+      - 美国48
+      - 美国55
+      - 🇺🇲 美国10
+      - _🇺🇲 美国 4
+      - _🇺🇲 美国 5
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
