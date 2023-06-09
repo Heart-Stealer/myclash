@@ -114,7 +114,10 @@ proxies:
   - {"name":"香港1\r","type":"ss","server":"zjcm.v-too.cloud","port":12054,"password":"81140fe6-f0fd-4c6c-8247-2af1b1e6af37","cipher":"chacha20-ietf-poly1305"}
   - {"name":"香港2\r","type":"ss","server":"zjcm.v-too.cloud","port":28466,"password":"81140fe6-f0fd-4c6c-8247-2af1b1e6af37","cipher":"chacha20-ietf-poly1305"}
   - {"name":"香港5-年费专属\r","type":"ss","server":"gdcm.v-too.cloud","port":12586,"password":"81140fe6-f0fd-4c6c-8247-2af1b1e6af37","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"火星互联公益节点04\r","type":"ss","server":"free.themars.top","port":32104,"password":"90cf4b48-accb-4bc6-88d4-ec77e2359695","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"火星互联公益节点01\r","type":"ss","server":"free.themars.top","port":32101,"password":"b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"火星互联公益节点02\r","type":"ss","server":"free.themars.top","port":32102,"password":"b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"火星互联公益节点03\r","type":"ss","server":"free.themars.top","port":32103,"password":"b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"火星互联公益节点04\r","type":"ss","server":"free.themars.top","port":32104,"password":"b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2","cipher":"chacha20-ietf-poly1305"}
 # https://proxy.yugogo.xyz/clash/proxies
   # - {"name":"_🇭🇰Hk_01","server":"hk1.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
   # - {"name":"_🇭🇰Hk_02","server":"hk2.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
