@@ -111,6 +111,9 @@ proxies:
   - {"name":"🇨🇳_CN_中国->🇯🇵_JP_日本_1","type":"ss","server":"free.themars.top","port":32101,"password":"b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇸🇬_SG_新加坡","type":"trojan","server":"sg1.gsjc.cfd","port":443,"udp":true,"password":"979d272e-48b8-488c-ac68-623d1430d67e","sni":"20-212-60-88.nhost.00cdn.com","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_美国_13","type":"trojan","server":"163.123.192.157","port":443,"udp":true,"password":"979d272e-48b8-488c-ac68-623d1430d67e","sni":"20-212-60-88.nhost.00cdn.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"香港1\r","type":"ss","server":"zjcm.v-too.cloud","port":12054,"password":"81140fe6-f0fd-4c6c-8247-2af1b1e6af37","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"香港2\r","type":"ss","server":"zjcm.v-too.cloud","port":28466,"password":"81140fe6-f0fd-4c6c-8247-2af1b1e6af37","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"香港5-年费专属\r","type":"ss","server":"gdcm.v-too.cloud","port":12586,"password":"81140fe6-f0fd-4c6c-8247-2af1b1e6af37","cipher":"chacha20-ietf-poly1305"}
 # https://proxy.yugogo.xyz/clash/proxies
   # - {"name":"_🇭🇰Hk_01","server":"hk1.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
   # - {"name":"_🇭🇰Hk_02","server":"hk2.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}

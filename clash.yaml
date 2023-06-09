@@ -138,6 +138,24 @@ proxies:
     sni: 20-212-60-88.nhost.00cdn.com
     skip-cert-verify: true
     network: tcp
+  - name: "香港1\r"
+    type: ss
+    server: zjcm.v-too.cloud
+    port: 12054
+    password: 81140fe6-f0fd-4c6c-8247-2af1b1e6af37
+    cipher: chacha20-ietf-poly1305
+  - name: "香港2\r"
+    type: ss
+    server: zjcm.v-too.cloud
+    port: 28466
+    password: 81140fe6-f0fd-4c6c-8247-2af1b1e6af37
+    cipher: chacha20-ietf-poly1305
+  - name: "香港5-年费专属\r"
+    type: ss
+    server: gdcm.v-too.cloud
+    port: 12586
+    password: 81140fe6-f0fd-4c6c-8247-2af1b1e6af37
+    cipher: chacha20-ietf-poly1305
   - name: 🇺🇸US_143
     server: 38.64.138.145
     type: ss
@@ -308,6 +326,9 @@ proxy-groups:
       - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
       - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国_13
+      - "香港1\r"
+      - "香港2\r"
+      - "香港5-年费专属\r"
       - 🇺🇸US_143
       - 🇺🇸US_321
       - 美国CloudFlare公司CDN节点 2
@@ -338,6 +359,9 @@ proxy-groups:
       - 🇨🇳_CN_中国->🇯🇵_JP_日本_1
       - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国_13
+      - "香港1\r"
+      - "香港2\r"
+      - "香港5-年费专属\r"
       - 🇺🇸US_143
       - 🇺🇸US_321
       - 美国CloudFlare公司CDN节点 2
@@ -375,6 +399,9 @@ proxy-groups:
       - _🇨🇳🇭🇰 香港 2
       - 🇹🇼_TW_台湾
       - 🇭🇰_HK_香港
+      - "香港1\r"
+      - "香港2\r"
+      - "香港5-年费专属\r"
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
