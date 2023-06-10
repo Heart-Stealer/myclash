@@ -68,24 +68,6 @@ proxies:
     servername: ""
     network: tcp
     udp: true
-  - name: 🇯🇵_JP_日本_1
-    type: trojan
-    server: jp2.gsjc.cfd
-    port: 443
-    udp: true
-    password: ae09438f-b9b8-40c6-ab49-ce6c0d64674e
-    sni: 20-212-60-88.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇹🇼_TW_台湾
-    type: trojan
-    server: gs-hinet.gsjc.cfd
-    port: 443
-    udp: true
-    password: ae09438f-b9b8-40c6-ab49-ce6c0d64674e
-    sni: 20-212-60-88.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
   - name: 🇭🇰_HK_香港
     type: trojan
     server: hk1.gsjc.cfd
@@ -104,64 +86,12 @@ proxies:
     sni: 20-212-60-88.nhost.00cdn.com
     skip-cert-verify: true
     network: tcp
-  - name: 🇺🇸_US_美国_13
-    type: trojan
-    server: 163.123.192.157
-    port: 443
-    udp: true
-    password: 979d272e-48b8-488c-ac68-623d1430d67e
-    sni: 20-212-60-88.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
-  - name: "香港1\r"
-    type: ss
-    server: zjcm.v-too.cloud
-    port: 12054
-    password: 81140fe6-f0fd-4c6c-8247-2af1b1e6af37
-    cipher: chacha20-ietf-poly1305
-  - name: "香港2\r"
-    type: ss
-    server: zjcm.v-too.cloud
-    port: 28466
-    password: 81140fe6-f0fd-4c6c-8247-2af1b1e6af37
-    cipher: chacha20-ietf-poly1305
-  - name: "香港5-年费专属\r"
-    type: ss
-    server: gdcm.v-too.cloud
-    port: 12586
-    password: 81140fe6-f0fd-4c6c-8247-2af1b1e6af37
-    cipher: chacha20-ietf-poly1305
-  - name: "火星互联公益节点01\r"
-    type: ss
-    server: free.themars.top
-    port: 32101
-    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
-    cipher: chacha20-ietf-poly1305
-  - name: "火星互联公益节点02\r"
-    type: ss
-    server: free.themars.top
-    port: 32102
-    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
-    cipher: chacha20-ietf-poly1305
-  - name: "火星互联公益节点03\r"
-    type: ss
-    server: free.themars.top
-    port: 32103
-    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
-    cipher: chacha20-ietf-poly1305
   - name: "火星互联公益节点04\r"
     type: ss
     server: free.themars.top
     port: 32104
     password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
     cipher: chacha20-ietf-poly1305
-  - name: 🇺🇸US_143
-    server: 38.64.138.145
-    type: ss
-    country: 🇺🇸US
-    port: 5500
-    password: KixLvKzwjekG00rm
-    cipher: aes-256-gcm
   - name: 🇺🇸US_321
     server: 152.70.74.66
     type: trojan
@@ -183,12 +113,71 @@ proxies:
     network: ws
     ws-opts:
       path: ""
-  - name: 🇺🇲 美国10
-    server: 163.123.192.58
-    port: 443
-    type: trojan
-    password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca
-    sni: 18-140-66-207.nhost.00cdn.com
+  - name: 🇺🇲 美国55
+    server: 104.20.55.60
+    port: 2052
+    type: vmess
+    uuid: 3f100fa9-a160-4a1c-c40d-e22070ac9785
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        Host: x2.ylks01.eu.org
+  - name: 🇺🇲 美国143
+    server: cf.yxjnode.com
+    port: 80
+    type: vmess
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        Host: dp1.yxjnode.com
+  - name: 🇺🇲 美国118
+    server: datacenter.cm.01.biqibao.site
+    port: 2052
+    type: vmess
+    uuid: c36d4223-1804-494a-a453-d4f77f10c830
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /public
+      headers:
+        Host: detacenter.01.biqibao.site
+  - name: 🇺🇲 美国155
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: do.sharecentrepro.com
+  - name: _🇺🇲 美国 4
+    server: ns1.v2-vip.fun
+    port: 80
+    type: vmess
+    uuid: 8abe9496-5e24-4e49-b566-dcf86116017d
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /i99LgvSaslbsPLLQQ7j6Z
+      headers:
+        Host: de5.irteh.fun
   - name: _🇺🇲 美国 5
     server: www.noice.id
     port: 443
@@ -202,6 +191,22 @@ proxies:
       path: /worryfree
       headers:
         Host: v2ray1.udpgw.com
+  - name: 🇸🇬 _US_美国->🇸🇬_SG_新加坡
+    server: visa.cn
+    port: 80
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 8a694cfb-d143-4378-cb85-faacdc69e5e1
+    alterId: 0
+    cipher: auto
+    tls: false
+    tfo: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ass.669990.xyz
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -214,23 +219,18 @@ proxy-groups:
       - _🇮🇳_IN_印度
       - _🇺🇲 美国 9 xTom
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 🇯🇵_JP_日本_1
-      - 🇹🇼_TW_台湾
       - 🇭🇰_HK_香港
       - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国_13
-      - "香港1\r"
-      - "香港2\r"
-      - "香港5-年费专属\r"
-      - "火星互联公益节点01\r"
-      - "火星互联公益节点02\r"
-      - "火星互联公益节点03\r"
       - "火星互联公益节点04\r"
-      - 🇺🇸US_143
       - 🇺🇸US_321
       - 新加坡40
-      - 🇺🇲 美国10
+      - 🇺🇲 美国55
+      - 🇺🇲 美国143
+      - 🇺🇲 美国118
+      - 🇺🇲 美国155
+      - _🇺🇲 美国 4
       - _🇺🇲 美国 5
+      - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -240,23 +240,18 @@ proxy-groups:
       - _🇮🇳_IN_印度
       - _🇺🇲 美国 9 xTom
       - _🇺🇸 美国 凤凰城-4K喵哥
-      - 🇯🇵_JP_日本_1
-      - 🇹🇼_TW_台湾
       - 🇭🇰_HK_香港
       - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国_13
-      - "香港1\r"
-      - "香港2\r"
-      - "香港5-年费专属\r"
-      - "火星互联公益节点01\r"
-      - "火星互联公益节点02\r"
-      - "火星互联公益节点03\r"
       - "火星互联公益节点04\r"
-      - 🇺🇸US_143
       - 🇺🇸US_321
       - 新加坡40
-      - 🇺🇲 美国10
+      - 🇺🇲 美国55
+      - 🇺🇲 美国143
+      - 🇺🇲 美国118
+      - 🇺🇲 美国155
+      - _🇺🇲 美国 4
       - _🇺🇲 美国 5
+      - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -278,19 +273,15 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇹🇼_TW_台湾
       - 🇭🇰_HK_香港
-      - "香港1\r"
-      - "香港2\r"
-      - "香港5-年费专属\r"
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇯🇵_JP_日本_1
       - 新加坡40
+      - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -300,11 +291,14 @@ proxy-groups:
       - _🇺🇲 美国 9 xTom
       - _🇺🇸 美国 凤凰城-4K喵哥
       - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国_13
-      - 🇺🇸US_143
       - 🇺🇸US_321
-      - 🇺🇲 美国10
+      - 🇺🇲 美国55
+      - 🇺🇲 美国143
+      - 🇺🇲 美国118
+      - 🇺🇲 美国155
+      - _🇺🇲 美国 4
       - _🇺🇲 美国 5
+      - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
