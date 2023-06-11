@@ -49,10 +49,10 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     network: tcp
-  - name: "火星互联公益节点04\r"
+  - name: 火星互联
     type: ss
     server: free.themars.top
-    port: 32104
+    port: 32103
     password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
     cipher: chacha20-ietf-poly1305
   - name: 草莓的奈飞节点
@@ -70,34 +70,6 @@ proxies:
       path: /dksfjeyrbfSGERgrsfgsdfrq/
       headers:
         host: hk.kkpp.online
-  - name: v2cross.com
-    server: cf-yd-dns.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: dp3.scproxy.top
-    udp: true
-  - name: v2cross.com 5
-    server: 172.67.156.138
-    port: 443
-    type: vmess
-    uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-path: /speedtest
-    ws-headers:
-      Host: Kansas.kotick.site
-    udp: true
   - name: 🇭🇰_HK_香港
     type: trojan
     server: hk1.gsjc.cfd
@@ -126,29 +98,6 @@ proxies:
     password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸US_321
-    server: 152.70.74.66
-    type: trojan
-    country: 🇺🇸US
-    port: 443
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    skip-cert-verify: true
-    udp: true
-  - name: 美国165
-    type: vmess
-    server: 198.41.216.249
-    port: 8080
-    cipher: auto
-    uuid: 516a22c5-54c1-4203-ec0a-bb3b2517a82d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /ylks
-      headers:
-        host: x1.ylks01.eu.org
   - name: 新加坡40
     type: vmess
     server: 15.235.203.129
@@ -162,25 +111,6 @@ proxies:
     network: ws
     ws-opts:
       path: ""
-  - name: 🇨🇳 中国44
-    server: free.themars.top
-    port: 32101
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
-  - name: 🇺🇲 美国55
-    server: 104.20.55.60
-    port: 2052
-    type: vmess
-    uuid: 3f100fa9-a160-4a1c-c40d-e22070ac9785
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        Host: x2.ylks01.eu.org
   - name: 🇺🇲 美国143
     server: cf.yxjnode.com
     port: 80
@@ -220,18 +150,12 @@ proxy-groups:
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - _🇮🇳_IN_印度
-      - "火星互联公益节点04\r"
+      - 火星互联
       - 草莓的奈飞节点
-      - v2cross.com
-      - v2cross.com 5
       - 🇭🇰_HK_香港
       - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇺🇲 美国 9 xTom
-      - 🇺🇸US_321
-      - 美国165
       - 新加坡40
-      - 🇨🇳 中国44
-      - 🇺🇲 美国55
       - 🇺🇲 美国143
       - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
   - name: ♻️ 自动选择
@@ -241,18 +165,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - _🇮🇳_IN_印度
-      - "火星互联公益节点04\r"
+      - 火星互联
       - 草莓的奈飞节点
-      - v2cross.com
-      - v2cross.com 5
       - 🇭🇰_HK_香港
       - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇺🇲 美国 9 xTom
-      - 🇺🇸US_321
-      - 美国165
       - 新加坡40
-      - 🇨🇳 中国44
-      - 🇺🇲 美国55
       - 🇺🇲 美国143
       - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
   - name: 🎯 全球直连
@@ -293,9 +211,6 @@ proxy-groups:
     proxies:
       - _🇺🇸 美国 凤凰城-4K喵哥
       - _🇺🇲 美国 9 xTom
-      - 🇺🇸US_321
-      - 美国165
-      - 🇺🇲 美国55
       - 🇺🇲 美国143
       - 🇸🇬 _US_美国->🇸🇬_SG_新加坡
 rules:
