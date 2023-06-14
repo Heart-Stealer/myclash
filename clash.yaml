@@ -119,7 +119,7 @@ proxies:
       path: /dksfjeyrbfSGERgrsfgsdfrq/
       headers:
         host: hk.kkpp.online
-  - name: 🇺🇲 美国 Notestoday
+  - name: _🇺🇲 美国 Notestoday
     type: vmess
     server: armus.114514782.xyz
     port: 2052
@@ -134,13 +134,26 @@ proxies:
       path: /miao
       headers:
         host: armus.114514782.xyz
-  - name: 🇭🇰_HK_香港
-    type: trojan
-    server: hk1.gsjc.cfd
-    port: 443
-    udp: true
-    password: ae09438f-b9b8-40c6-ab49-ce6c0d64674e
-    sni: 20-212-60-88.nhost.00cdn.com
+  - name: _🇹🇼 TW_台灣
+    type: vmess
+    server: 1.170.220.13
+    port: 21233
+    cipher: auto
+    uuid: f369a419-1dc2-4ade-d0ed-c062857cf9ba
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /testws
+  - name: _🇺🇲 美国 4
+    type: vmess
+    server: cc.liuyenb.ml
+    port: 16174
+    cipher: auto
+    uuid: a796e67a-5a04-40b5-bffd-a071561fda04
+    alterId: 0
+    tls: true
     skip-cert-verify: true
     network: tcp
   - name: 🇸🇬 _SG_新加坡
@@ -291,8 +304,9 @@ proxy-groups:
       - _🇮🇳_IN_印度
       - 大象公益￨优选IP￨无限流量
       - 草莓的奈飞节点
-      - 🇺🇲 美国 Notestoday
-      - 🇭🇰_HK_香港
+      - _🇺🇲 美国 Notestoday
+      - _🇹🇼 TW_台灣
+      - _🇺🇲 美国 4
       - 🇸🇬 _SG_新加坡
       - _🇰🇷 韩国首尔 4K
       - _🇯🇵 日本
@@ -315,8 +329,9 @@ proxy-groups:
       - _🇮🇳_IN_印度
       - 大象公益￨优选IP￨无限流量
       - 草莓的奈飞节点
-      - 🇺🇲 美国 Notestoday
-      - 🇭🇰_HK_香港
+      - _🇺🇲 美国 Notestoday
+      - _🇹🇼 TW_台灣
+      - _🇺🇲 美国 4
       - 🇸🇬 _SG_新加坡
       - _🇰🇷 韩国首尔 4K
       - _🇯🇵 日本
@@ -347,7 +362,7 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇭🇰_HK_香港
+      - _🇹🇼 TW_台灣
   - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -367,7 +382,8 @@ proxy-groups:
       - _🇺🇲 美国 1 4K
       - _🇺🇲 美国 3 4K
       - 🇺🇲 美国862
-      - 🇺🇲 美国 Notestoday
+      - _🇺🇲 美国 Notestoday
+      - _🇺🇲 美国 4
       - _🇺🇲 美国102 1K
       - _🇺🇲 美国45 2K
       - _🇺🇲 美国80
