@@ -41,14 +41,14 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: _🇺🇲 美国 1 xTom
+  - name: _🇺🇲 美国 1 4K
     server: us1.chuqiangtou.net
     port: 4003
     type: trojan
     password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
     udp: true
-  - name: _🇺🇲 美国 3 xTom
+  - name: _🇺🇲 美国 3 4K
     server: us3.chuqiangtou.net
     port: 4003
     type: trojan
@@ -159,7 +159,7 @@ proxies:
       path: /
       headers:
         Host: ass.669990.xyz
-  - name: 首尔
+  - name: _🇰🇷 韩国首尔 4K
     type: vmess
     server: seoul.csi7lahsc.com
     port: 9001
@@ -174,7 +174,7 @@ proxies:
       path: /video
       headers:
         host: seoul.csi7lahsc.com
-  - name: 日本
+  - name: _🇯🇵 日本
     type: vmess
     server: downloadvip.cfd
     port: 443
@@ -204,7 +204,7 @@ proxies:
       path: /vmessws
       headers:
         host: meetzoom.disnet.gq
-  - name: 美国102
+  - name: _🇺🇲 美国102 1K
     type: vmess
     server: cfcdn.sanfencdn.net
     port: 443
@@ -219,7 +219,7 @@ proxies:
       path: /zh-cn
       headers:
         host: us1.sanfencdn.net
-  - name: 美国45
+  - name: _🇺🇲 美国45 2K
     type: vmess
     server: downloadvip.cfd
     port: 443
@@ -234,7 +234,7 @@ proxies:
       path: /jsjc/jp1
       headers:
         host: jp1.jsjc.sbs
-  - name: 美国80
+  - name: _🇺🇲 美国80
     type: vmess
     server: cf-lt.sharecentre.online
     port: 443
@@ -284,8 +284,8 @@ proxy-groups:
       - ⚖️ 🇨🇳港澳台-负载均衡-散列
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
-      - _🇺🇲 美国 1 xTom
-      - _🇺🇲 美国 3 xTom
+      - _🇺🇲 美国 1 4K
+      - _🇺🇲 美国 3 4K
       - 🇺🇲 美国862
       - 🇩🇪 DEvpslog13
       - _🇮🇳_IN_印度
@@ -294,12 +294,12 @@ proxy-groups:
       - 🇺🇲 美国 Notestoday
       - 🇭🇰_HK_香港
       - 🇸🇬 _SG_新加坡
-      - 首尔
-      - 日本
+      - _🇰🇷 韩国首尔 4K
+      - _🇯🇵 日本
       - 新加坡74
-      - 美国102
-      - 美国45
-      - 美国80
+      - _🇺🇲 美国102 1K
+      - _🇺🇲 美国45 2K
+      - _🇺🇲 美国80
       - 英国57
       - 🇺🇲 美国143
   - name: ♻️ 自动选择
@@ -308,8 +308,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - _🇺🇲 美国 1 xTom
-      - _🇺🇲 美国 3 xTom
+      - _🇺🇲 美国 1 4K
+      - _🇺🇲 美国 3 4K
       - 🇺🇲 美国862
       - 🇩🇪 DEvpslog13
       - _🇮🇳_IN_印度
@@ -318,12 +318,12 @@ proxy-groups:
       - 🇺🇲 美国 Notestoday
       - 🇭🇰_HK_香港
       - 🇸🇬 _SG_新加坡
-      - 首尔
-      - 日本
+      - _🇰🇷 韩国首尔 4K
+      - _🇯🇵 日本
       - 新加坡74
-      - 美国102
-      - 美国45
-      - 美国80
+      - _🇺🇲 美国102 1K
+      - _🇺🇲 美国45 2K
+      - _🇺🇲 美国80
       - 英国57
       - 🇺🇲 美国143
   - name: 🎯 全球直连
@@ -355,7 +355,8 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - 🇸🇬 _SG_新加坡
-      - 日本
+      - _🇰🇷 韩国首尔 4K
+      - _🇯🇵 日本
       - 新加坡74
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
@@ -363,13 +364,13 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - _🇺🇲 美国 1 xTom
-      - _🇺🇲 美国 3 xTom
+      - _🇺🇲 美国 1 4K
+      - _🇺🇲 美国 3 4K
       - 🇺🇲 美国862
       - 🇺🇲 美国 Notestoday
-      - 美国102
-      - 美国45
-      - 美国80
+      - _🇺🇲 美国102 1K
+      - _🇺🇲 美国45 2K
+      - _🇺🇲 美国80
       - 🇺🇲 美国143
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
