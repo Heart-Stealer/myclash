@@ -108,6 +108,7 @@ proxies:
   - {"name":"大象公益￨优选IP￨无限流量","type":"vmess","server":"172.64.35.76","port":80,"cipher":"auto","uuid":"2045a9cc-8160-4249-990f-bf056d338a17","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/wwws","headers":{"host":"cf5.besthz365.eu.org"}}}
   - {"name":"_🇯🇵 日本","type":"vmess","server":"45.78.58.171","port":58802,"cipher":"auto","uuid":"b1d5d262-33b5-49d7-84e4-a3d101980706","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
   - {name: "_🇯🇵_日本 2", server: 18.183.168.162, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {"name":"🇳🇱Uk_1","server":"uk1.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
   # - {"name":"草莓的奈飞节点","type":"vmess","server":"hk.kkpp.online","port":443,"cipher":"auto","uuid":"78422c74-9a71-4193-8953-a9446dacd782","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hk.kkpp.online","network":"ws","ws-opts":{"path":"/dksfjeyrbfSGERgrsfgsdfrq/","headers":{"host":"hk.kkpp.online"}}}
 # https://v2rayse.com/free-node/
   - {"name":"_🇯🇵_JP_日本_1","type":"trojan","server":"149.50.70.72","port":4003,"udp":true,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"network":"tcp"}
