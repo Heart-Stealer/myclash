@@ -41,6 +41,32 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
+  - name: 🇳🇱荷兰S
+    type: vmess
+    server: uu.bestcloud.tk
+    port: 443
+    cipher: auto
+    uuid: fbeea2ef-781e-444a-9e9b-6deef9668dfe
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: nl3.mybestjj.com
+    network: ws
+    ws-opts:
+      path: /1654431
+      headers:
+        host: nl3.mybestjj.com
+  - name: 🇫🇷尽头の法国鸡
+    type: vmess
+    server: 51.159.67.118
+    port: 80
+    cipher: auto
+    uuid: 925dadc4-7731-5376-fbf6-56de0232f0d0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
   - name: _🇺🇲 美国 1 4K
     server: us1.chuqiangtou.net
     port: 4003
@@ -265,6 +291,8 @@ proxy-groups:
       - ⚖️ 🇨🇳港澳台-负载均衡-散列
       - ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
       - ⚖️ 🇺🇸美国-负载均衡-散列
+      - 🇳🇱荷兰S
+      - 🇫🇷尽头の法国鸡
       - _🇺🇲 美国 1 4K
       - _🇺🇲 美国 2 4K
       - _🇺🇲 美国 3 4K
@@ -294,6 +322,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇳🇱荷兰S
+      - 🇫🇷尽头の法国鸡
       - _🇺🇲 美国 1 4K
       - _🇺🇲 美国 2 4K
       - _🇺🇲 美国 3 4K
@@ -357,6 +387,7 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
+      - 🇫🇷尽头の法国鸡
       - _🇺🇲 美国 1 4K
       - _🇺🇲 美国 2 4K
       - _🇺🇲 美国 3 4K
