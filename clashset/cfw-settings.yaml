@@ -87,21 +87,21 @@ profileParsersText: >-
             type: select
           - name: 🐟 漏网之鱼
             type: select
-          - name: ⚖️ 🇨🇳港澳台-负载均衡-散列
-            type: load-balance
-            url: http://www.google.com/generate_204
-            interval: 300
-            strategy: consistent-hashing
+          # - name: ⚖️ 🇨🇳港澳台-负载均衡-散列
+          #   type: load-balance
+          #   url: http://www.google.com/generate_204
+          #   interval: 300
+          #   strategy: consistent-hashing
           # - name: ⚖️ 🇨🇳港澳台-负载均衡-轮询
           #   type: load-balance
           #   url: http://www.google.com/generate_204
           #   interval: 300
           #   strategy: round-robin
-          - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
-            type: load-balance
-            url: http://www.google.com/generate_204
-            interval: 300
-            strategy: consistent-hashing
+          # - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
+          #   type: load-balance
+          #   url: http://www.google.com/generate_204
+          #   interval: 300
+          #   strategy: consistent-hashing
           # - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询
           #   type: load-balance
           #   url: http://www.google.com/generate_204
@@ -112,11 +112,11 @@ profileParsersText: >-
           #   url: http://www.google.com/generate_204
           #   interval: 60
           #   strategy: round-robin
-          - name: ⚖️ 🇺🇸美国-负载均衡-散列
-            type: load-balance
-            url: http://www.google.com/generate_204
-            interval: 300
-            strategy: consistent-hashing
+          # - name: ⚖️ 🇺🇸美国-负载均衡-散列
+          #   type: load-balance
+          #   url: http://www.google.com/generate_204
+          #   interval: 300
+          #   strategy: consistent-hashing
           # - name: ⚖️ 🇺🇸美国-负载均衡-轮询
           #   type: load-balance
           #   url: http://www.google.com/generate_204
@@ -141,22 +141,22 @@ profileParsersText: >-
 
           # - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
           # - proxy-groups.0.proxies.0+🚀 🇺🇸美国-自动选择
-          - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
-          - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-散列
+          # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
+          # - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-散列
           # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-轮询.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
           # - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-轮询
 
           # - proxy-groups.🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
           # - proxy-groups.0.proxies.0+🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
-          - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
-          - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
+          # - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
+          # - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
           # - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
           # - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询
 
           # - proxy-groups.🚀 🇨🇳港澳台-自动选择.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
           # - proxy-groups.0.proxies.0+🚀 🇨🇳港澳台-自动选择
-          - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-散列.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
-          - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-散列
+          # - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-散列.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
+          # - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-散列
           # - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-轮询.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
           # - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-轮询
 
