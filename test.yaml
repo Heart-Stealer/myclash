@@ -99,37 +99,39 @@ dns:
 proxies:
   # - {name: 名称、别名, type: ssr, server: 服务器地址, port: 服务器端口接口, password: 密码, cipher: 加密方式, protocol: 协议, protocol-param: "协议参数", obfs: 混淆, obfs-param: "混淆参数", udp: true/false}
   # - {name: 名称、别名, type: vmess, server: 服务器地址, port: 80服务器端口接口, uuid: 用户ID只为验证不加密, alterId: 0额外ID验证, cipher: auto加密方式自动, tls: true/false是否进行tls加密传输层安全, skip-cert-verify: true/false是否跳过验证, network: ws底层传输方式, ws-opts: {path: /路径, headers: {Host: 请求头伪装域名}}, udp: true/false}
-  - {"name":"🇩🇪 DE德国","type":"vmess","server":"104.17.104.115","port":443,"cipher":"auto","uuid":"93466764-c11c-42ea-a656-b46b5527e1b0","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"k.wanyi.eu.org","network":"ws","ws-opts":{"path":"/xray","headers":{"host":"k.wanyi.eu.org"}}}
-  # - {"name":"_🇯🇵 日本","type":"vmess","server":"45.78.58.171","port":58802,"cipher":"auto","uuid":"b1d5d262-33b5-49d7-84e4-a3d101980706","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  - {name: _🇭🇰 香港, server: yc.jiegebuyao.top, port: 443, type: vmess, uuid: 85a43f8e-7e5d-4486-c8d0-176960772889, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _🇭🇰 尽头の香港AZ, server: 20.255.60.134, port: 443, type: trojan, password: !<str> 123456, skip-cert-verify: true, udp: true}
+  - {name: _🇯🇵 尽头の日本搬瓦工, server: c23s4.jjvip8.com, port: 9251, type: vmess, uuid: 8cc0c7d9-cb85-4626-8944-5eae9d972eab, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {"name":"_🇩🇪 DE德国 大象公益","type":"vmess","server":"172.64.35.76","port":80,"cipher":"auto","uuid":"2045a9cc-8160-4249-990f-bf056d338a17","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/wwws","headers":{"host":"cf5.besthz365.eu.org"}}}
+  - {"name":"_🇩🇪 DE德国","type":"vmess","server":"104.17.104.115","port":443,"cipher":"auto","uuid":"93466764-c11c-42ea-a656-b46b5527e1b0","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"k.wanyi.eu.org","network":"ws","ws-opts":{"path":"/xray","headers":{"host":"k.wanyi.eu.org"}}}
+  - {"name":"_🇯🇵 日本 4K","type":"vmess","server":"45.78.58.171","port":58802,"cipher":"auto","uuid":"b1d5d262-33b5-49d7-84e4-a3d101980706","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
   - {"name":"_🇯🇵 日本_1","type":"trojan","server":"149.50.70.72","port":4003,"udp":true,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"network":"tcp"}
   - {"name":"_🇯🇵 日本_2","type":"trojan","server":"149.50.70.87","port":4003,"udp":true,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"network":"tcp"}
   - {name: _🇯🇵 日本_3, server: 18.183.168.162, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  # - {name: _🇯🇵 日本_4, server: w1.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 443, type: trojan, password: 4b526505-3de3-4cb4-8f99-70b65adea09f, sni: w1.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, skip-cert-verify: true, udp: true}
-  # - {"name":"🇳🇱荷兰S","type":"vmess","server":"uu.bestcloud.tk","port":443,"cipher":"auto","uuid":"fbeea2ef-781e-444a-9e9b-6deef9668dfe","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"nl3.mybestjj.com","network":"ws","ws-opts":{"path":"/1654431","headers":{"host":"nl3.mybestjj.com"}}}
-  # - {"name":"🇫🇷尽头の法国鸡","type":"vmess","server":"51.159.67.118","port":80,"cipher":"auto","uuid":"925dadc4-7731-5376-fbf6-56de0232f0d0","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
   - {name: _🇺🇲 美国 1 4K, server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
   - {name: _🇺🇲 美国 2 4K, server: us2.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
   - {name: _🇺🇲 美国 3 4K, server: us3.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
-  # - {name: 腾讯云香港, server: 43.154.117.178, port: 58602, type: vmess, uuid: 697d24eb-b7f6-45ca-bc20-af78e79c0b0d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _🇩🇪 DE德国_77, server: de3.nigirocloud.com, port: 4003, type: trojan, password: PlF471nxneY0YevI, sni: de3.nigirocloud.com, skip-cert-verify: true, udp: true}
   - {"name":"_🇮🇳_IN_印度","type":"trojan","server":"152.70.74.66","port":443,"udp":true,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"network":"tcp"}
-  - {name: 大象公益￨优选IP￨无限流量, server: 172.64.35.76, port: 80, type: vmess, uuid: 2045a9cc-8160-4249-990f-bf056d338a17, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /wwws, ws-headers: {Host: cf5.besthz365.eu.org}, udp: true}
-  - {name: 🇬🇧GB_3, server: nl3.barbecuepie.com, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg}
+  # - {name: 腾讯云香港, server: 43.154.117.178, port: 58602, type: vmess, uuid: 697d24eb-b7f6-45ca-bc20-af78e79c0b0d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  # - {name: _🇯🇵 日本_4, server: w1.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 443, type: trojan, password: 4b526505-3de3-4cb4-8f99-70b65adea09f, sni: w1.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, skip-cert-verify: true, udp: true}
+  # - {"name":"🇳🇱荷兰S","type":"vmess","server":"uu.bestcloud.tk","port":443,"cipher":"auto","uuid":"fbeea2ef-781e-444a-9e9b-6deef9668dfe","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"nl3.mybestjj.com","network":"ws","ws-opts":{"path":"/1654431","headers":{"host":"nl3.mybestjj.com"}}}
+  # - {"name":"🇫🇷尽头の法国鸡","type":"vmess","server":"51.159.67.118","port":80,"cipher":"auto","uuid":"925dadc4-7731-5376-fbf6-56de0232f0d0","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
   # - {"name":"草莓的奈飞节点","type":"vmess","server":"hk.kkpp.online","port":443,"cipher":"auto","uuid":"78422c74-9a71-4193-8953-a9446dacd782","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hk.kkpp.online","network":"ws","ws-opts":{"path":"/dksfjeyrbfSGERgrsfgsdfrq/","headers":{"host":"hk.kkpp.online"}}}
 # https://v2rayse.com/free-node/
   # - {"name":"_🇭🇰_HK_香港_1","type":"ssr","server":"initest08.initcloud.pro","port":562,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"48530:LLLiuiuiu787878"}
   # - {"name":"_🇭🇰_HK_香港_2","type":"vmess","server":"2f36c18cfe76.sanfen004.me","port":10775,"cipher":"auto","uuid":"698115e4-1494-4f4a-85a9-76cd011d3ac6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"_🇳🇱_NL_荷兰","type":"trojan","server":"149.50.75.90","port":4003,"udp":true,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"network":"tcp"}
   - {"name":"_🇦🇺_AU_澳大利亚","type":"trojan","server":"149.50.83.40","port":4003,"udp":true,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"network":"tcp"}
   - {"name":"_🇬🇧_GB_英国","type":"trojan","server":"149.50.77.95","port":4003,"udp":true,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"_🇳🇱_NL_荷兰","type":"trojan","server":"149.50.75.90","port":4003,"udp":true,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"network":"tcp"}
   # - {"name":"🇹🇷_TR_土耳其","type":"ss","server":"45.89.52.66","port":9003,"password":"JdmRK9gMEqFgs8nP","cipher":"aes-256-cfb"}
 # https://raw.githubusercontent.com/openrunner/clash-freenode/main/clash.yaml 
   # - {name: 🇸🇬 _SG_新加坡, server: visa.cn, port: 80, client-fingerprint: chrome, type: vmess, uuid: 8a694cfb-d143-4378-cb85-faacdc69e5e1, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: ass.669990.xyz}}}
 # https://sub.vpnpls.com/%E4%BB%8A%E6%97%A5%E7%AC%94%E8%AE%B0-%E9%98%B2%E5%A4%B1%E8%81%94%E4%B8%93%E7%94%A8.php
 # https://tt.vg/freeclash
 # https://raw.fastgit.org/freefq/free/master/v2
-  - {name: 🇺🇲美国 6, server: www.digitalocean.com, port: 80, type: vmess, uuid: 25b280df-e990-4495-80e3-48ec3c83da77, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /api/v3/download.getFile, headers: {Host: ssrsub.v01.ssrsub.com}}}
-  - {name: 美国 - 以色列  12, server: nl3.barbecuepie.com, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg}
-  - {name: 美国 - 以色列  15, server: uk1.barbecuepie.com, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg}
+  - {name: _🇺🇲 美国 以色列 11, server: de1.nigirocloud.com, port: 4003, type: trojan, password: PlF471nxneY0YevI}
+  - {name: _🇺🇲 美国 以色列 15, server: uk1.barbecuepie.com, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg}
 # https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml
 # https://raw.fastgit.org/Pawdroid/Free-servers/main/sub
 # https://proxy.yugogo.xyz/clash/proxies
@@ -159,7 +161,6 @@ proxies:
   # - {"name":"🇬🇧GB_1","server":"nl1.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
   # - {"name":"🇬🇧GB_2","server":"nl2.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
   # - {"name":"🇬🇧GB_3","server":"nl3.chuqiangtou.net","type":"trojan","country":"🇮🇱IL","port":4003,"password":"TJCfE7Mx2YcA8kX8zg","skip-cert-verify":true,"udp":true}
-  - {"name":"🇩🇪DE_267","server":"dl6.v001sssv.pw","type":"vmess","country":"🇺🇸US","port":80,"uuid":"8eece2e1-cfc1-4f84-803e-1a66650982ea","alterId":0,"cipher":"auto","network":"ws","ws-path":"/","http-opts":{},"h2-opts":{},"skip-cert-verify":true}
 proxy-groups:
  # 🚀 节点选择 🔰 节点选择 ⚖️ 负载均衡 🎥 NETFLIX 🎯 全球直连 🛑 全球拦截 ⛔️ 广告拦截
  # 🚫 运营劫持 🌍 国外媒体 🌏 国内媒体 📲 电报信息 🍎 苹果服务 🐟 漏网之鱼

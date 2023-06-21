@@ -41,7 +41,49 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 🇩🇪 DE德国
+  - name: _🇭🇰 香港
+    server: yc.jiegebuyao.top
+    port: 443
+    type: vmess
+    uuid: 85a43f8e-7e5d-4486-c8d0-176960772889
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: _🇭🇰 尽头の香港AZ
+    server: 20.255.60.134
+    port: 443
+    type: trojan
+    password: "123456"
+    skip-cert-verify: true
+    udp: true
+  - name: _🇯🇵 尽头の日本搬瓦工
+    server: c23s4.jjvip8.com
+    port: 9251
+    type: vmess
+    uuid: 8cc0c7d9-cb85-4626-8944-5eae9d972eab
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: _🇩🇪 DE德国 大象公益
+    type: vmess
+    server: 172.64.35.76
+    port: 80
+    cipher: auto
+    uuid: 2045a9cc-8160-4249-990f-bf056d338a17
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /wwws
+      headers:
+        host: cf5.besthz365.eu.org
+  - name: _🇩🇪 DE德国
     type: vmess
     server: 104.17.104.115
     port: 443
@@ -56,6 +98,17 @@ proxies:
       path: /xray
       headers:
         host: k.wanyi.eu.org
+  - name: _🇯🇵 日本 4K
+    type: vmess
+    server: 45.78.58.171
+    port: 58802
+    cipher: auto
+    uuid: b1d5d262-33b5-49d7-84e4-a3d101980706
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
   - name: _🇯🇵 日本_1
     type: trojan
     server: 149.50.70.72
@@ -100,6 +153,14 @@ proxies:
     password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
     udp: true
+  - name: _🇩🇪 DE德国_77
+    server: de3.nigirocloud.com
+    port: 4003
+    type: trojan
+    password: PlF471nxneY0YevI
+    sni: de3.nigirocloud.com
+    skip-cert-verify: true
+    udp: true
   - name: _🇮🇳_IN_印度
     type: trojan
     server: 152.70.74.66
@@ -108,25 +169,14 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     network: tcp
-  - name: 大象公益￨优选IP￨无限流量
-    server: 172.64.35.76
-    port: 80
-    type: vmess
-    uuid: 2045a9cc-8160-4249-990f-bf056d338a17
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-path: /wwws
-    ws-headers:
-      Host: cf5.besthz365.eu.org
-    udp: true
-  - name: 🇬🇧GB_3
-    server: nl3.barbecuepie.com
-    port: 4003
+  - name: _🇳🇱_NL_荷兰
     type: trojan
+    server: 149.50.75.90
+    port: 4003
+    udp: true
     password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    network: tcp
   - name: _🇦🇺_AU_澳大利亚
     type: trojan
     server: 149.50.83.40
@@ -143,33 +193,12 @@ proxies:
     password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
     network: tcp
-  - name: _🇳🇱_NL_荷兰
-    type: trojan
-    server: 149.50.75.90
-    port: 4003
-    udp: true
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇲美国 6
-    server: www.digitalocean.com
-    port: 80
-    type: vmess
-    uuid: 25b280df-e990-4495-80e3-48ec3c83da77
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        Host: ssrsub.v01.ssrsub.com
-  - name: 美国 - 以色列  12
-    server: nl3.barbecuepie.com
+  - name: _🇺🇲 美国 以色列 11
+    server: de1.nigirocloud.com
     port: 4003
     type: trojan
-    password: TJCfE7Mx2YcA8kX8zg
-  - name: 美国 - 以色列  15
+    password: PlF471nxneY0YevI
+  - name: _🇺🇲 美国 以色列 15
     server: uk1.barbecuepie.com
     port: 4003
     type: trojan
@@ -198,71 +227,62 @@ proxies:
     password: PlF471nxneY0YevI
     skip-cert-verify: true
     udp: true
-  - name: 🇩🇪DE_267
-    server: dl6.v001sssv.pw
-    type: vmess
-    country: 🇺🇸US
-    port: 80
-    uuid: 8eece2e1-cfc1-4f84-803e-1a66650982ea
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-path: /
-    http-opts: {}
-    h2-opts: {}
-    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪 DE德国
+      - _🇭🇰 香港
+      - _🇭🇰 尽头の香港AZ
+      - _🇯🇵 尽头の日本搬瓦工
+      - _🇩🇪 DE德国 大象公益
+      - _🇩🇪 DE德国
+      - _🇯🇵 日本 4K
       - _🇯🇵 日本_1
       - _🇯🇵 日本_2
       - _🇯🇵 日本_3
       - _🇺🇲 美国 1 4K
       - _🇺🇲 美国 2 4K
       - _🇺🇲 美国 3 4K
+      - _🇩🇪 DE德国_77
       - _🇮🇳_IN_印度
-      - 大象公益￨优选IP￨无限流量
-      - 🇬🇧GB_3
+      - _🇳🇱_NL_荷兰
       - _🇦🇺_AU_澳大利亚
       - _🇬🇧_GB_英国
-      - _🇳🇱_NL_荷兰
-      - 🇺🇲美国 6
-      - 美国 - 以色列  12
-      - 美国 - 以色列  15
+      - _🇺🇲 美国 以色列 11
+      - _🇺🇲 美国 以色列 15
       - 🇩🇪DE_1
       - 🇩🇪DE_2
       - 🇩🇪DE_3
-      - 🇩🇪DE_267
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪 DE德国
+      - _🇭🇰 香港
+      - _🇭🇰 尽头の香港AZ
+      - _🇯🇵 尽头の日本搬瓦工
+      - _🇩🇪 DE德国 大象公益
+      - _🇩🇪 DE德国
+      - _🇯🇵 日本 4K
       - _🇯🇵 日本_1
       - _🇯🇵 日本_2
       - _🇯🇵 日本_3
       - _🇺🇲 美国 1 4K
       - _🇺🇲 美国 2 4K
       - _🇺🇲 美国 3 4K
+      - _🇩🇪 DE德国_77
       - _🇮🇳_IN_印度
-      - 大象公益￨优选IP￨无限流量
-      - 🇬🇧GB_3
+      - _🇳🇱_NL_荷兰
       - _🇦🇺_AU_澳大利亚
       - _🇬🇧_GB_英国
-      - _🇳🇱_NL_荷兰
-      - 🇺🇲美国 6
-      - 美国 - 以色列  12
-      - 美国 - 以色列  15
+      - _🇺🇲 美国 以色列 11
+      - _🇺🇲 美国 以色列 15
       - 🇩🇪DE_1
       - 🇩🇪DE_2
       - 🇩🇪DE_3
-      - 🇩🇪DE_267
   - name: 🎯 全球直连
     type: select
     proxies:
