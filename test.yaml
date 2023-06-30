@@ -106,6 +106,7 @@ proxies:
   - {"name":"_🇮🇳_IN_印度","type":"trojan","server":"152.70.74.66","port":443,"udp":true,"password":"d906afe5-7c3c-4ddc-aaa4-61c154a82e5e","skip-cert-verify":true,"network":"tcp"}
   - {"name":"_🇸🇬 新加坡#自行优选IP","type":"vmess","server":"172.64.167.170","port":8080,"cipher":"auto","uuid":"d0ccd82b-732d-454c-88e6-eba3dddf67d2","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"sg-free.adw1681ddaw.tk","network":"ws","ws-opts":{"path":"/sgfree","headers":{"host":"sg-free.adw1681ddaw.tk"}},"udp":true}
   - {"name":"_🇩🇪 DE德国 大象公益","type":"vmess","server":"172.64.35.76","port":80,"cipher":"auto","uuid":"2045a9cc-8160-4249-990f-bf056d338a17","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/wwws","headers":{"host":"cf5.besthz365.eu.org"}},"udp":true}
+  - {"name":"🇹🇼台湾2","type":"trojan","server":"pq-hinet2.gsjc.cfd","port":443,"udp":true,"password":"4e30d8c6-95d6-43bb-a9ca-f0a493c001e1","sni":"18-140-66-207.nhost.00cdn.com","skip-cert-verify":true,"network":"tcp"}
   - {"name":"免流","type":"vmess","server":"38.102.233.82","port":80,"cipher":"auto","uuid":"f4518b0e-2f5c-46f0-875b-6e7d5e40a14d","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
 
   # - {name: _🇭🇰 香港, server: yc.jiegebuyao.top, port: 443, type: vmess, uuid: 85a43f8e-7e5d-4486-c8d0-176960772889, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
