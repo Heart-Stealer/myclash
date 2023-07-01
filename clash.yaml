@@ -73,13 +73,6 @@ proxies:
       path: /sgfree
       headers:
         host: sg-free.adw1681ddaw.tk
-  - name: _🇭🇰 尽头の香港AZ
-    server: 20.255.60.134
-    port: 443
-    type: trojan
-    password: "123456"
-    skip-cert-verify: true
-    udp: true
   - name: _🇮🇳_IN_印度
     type: trojan
     server: 152.70.74.66
@@ -103,6 +96,13 @@ proxies:
       path: /sgfree
       headers:
         host: sg-free.adw1681ddaw.tk
+    udp: true
+  - name: _🇭🇰 尽头の香港AZ
+    server: 20.255.60.134
+    port: 443
+    type: trojan
+    password: "123456"
+    skip-cert-verify: true
     udp: true
   - name: _🇩🇪 DE德国 大象公益
     type: vmess
@@ -149,9 +149,9 @@ proxy-groups:
       - _🇭🇰 香港hytron-ss
       - 喵哥甲骨文(warp)
       - 新加坡无限流量#自行优选IP
-      - _🇭🇰 尽头の香港AZ
       - _🇮🇳_IN_印度
       - _🇸🇬 新加坡#自行优选IP
+      - _🇭🇰 尽头の香港AZ
       - _🇩🇪 DE德国 大象公益
       - 🇹🇼台湾2
       - 免流
@@ -164,9 +164,9 @@ proxy-groups:
       - _🇭🇰 香港hytron-ss
       - 喵哥甲骨文(warp)
       - 新加坡无限流量#自行优选IP
-      - _🇭🇰 尽头の香港AZ
       - _🇮🇳_IN_印度
       - _🇸🇬 新加坡#自行优选IP
+      - _🇭🇰 尽头の香港AZ
       - _🇩🇪 DE德国 大象公益
       - 🇹🇼台湾2
       - 免流
