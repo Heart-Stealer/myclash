@@ -58,6 +58,15 @@ proxies:
     skip-cert-verify: true
     servername: ""
     network: tcp
+  - name: 🇹🇼台湾2
+    type: trojan
+    server: pq-hinet2.gsjc.cfd
+    port: 443
+    udp: true
+    password: 4e30d8c6-95d6-43bb-a9ca-f0a493c001e1
+    sni: 18-140-66-207.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
   - name: 新加坡无限流量#自行优选IP
     type: vmess
     server: cdn.narutos.top
@@ -120,15 +129,6 @@ proxies:
       headers:
         host: cf5.besthz365.eu.org
     udp: true
-  - name: 🇹🇼台湾2
-    type: trojan
-    server: pq-hinet2.gsjc.cfd
-    port: 443
-    udp: true
-    password: 4e30d8c6-95d6-43bb-a9ca-f0a493c001e1
-    sni: 18-140-66-207.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
   - name: 免流
     type: vmess
     server: 38.102.233.82
@@ -148,12 +148,12 @@ proxy-groups:
       - DIRECT
       - _🇭🇰 香港hytron-ss
       - 喵哥甲骨文(warp)
+      - 🇹🇼台湾2
       - 新加坡无限流量#自行优选IP
       - _🇮🇳_IN_印度
       - _🇸🇬 新加坡#自行优选IP
       - _🇭🇰 尽头の香港AZ
       - _🇩🇪 DE德国 大象公益
-      - 🇹🇼台湾2
       - 免流
   - name: ♻️ 自动选择
     type: url-test
@@ -163,12 +163,12 @@ proxy-groups:
     proxies:
       - _🇭🇰 香港hytron-ss
       - 喵哥甲骨文(warp)
+      - 🇹🇼台湾2
       - 新加坡无限流量#自行优选IP
       - _🇮🇳_IN_印度
       - _🇸🇬 新加坡#自行优选IP
       - _🇭🇰 尽头の香港AZ
       - _🇩🇪 DE德国 大象公益
-      - 🇹🇼台湾2
       - 免流
   - name: 🎯 全球直连
     type: select
