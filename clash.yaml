@@ -44,7 +44,7 @@ proxies:
   - name: 喵哥甲骨文(warp)
     type: vmess
     server: 129.146.247.135
-    port: 32562
+    port: 32563
     cipher: auto
     uuid: c24b6170-ba54-4b2b-92a7-c04740bfc7bf
     alterId: 0
@@ -109,20 +109,6 @@ proxies:
       headers:
         Host: usfh2.pqjc.buzz
     udp: true
-  - name: NNC
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
   - name: 🇺🇸 美国11
     type: vmess
     server: 104.18.1.196
@@ -151,6 +137,64 @@ proxies:
       path: /zh-cn
       headers:
         host: us5.sanfencdn1.com
+  - name: NNC
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+  - name: "111"
+    type: vmess
+    server: 140.99.209.30
+    port: 35035
+    cipher: auto
+    uuid: f01e46c6-4f74-4aa0-b13c-e7eb067776bd
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: "222"
+    type: vmess
+    server: 78.141.207.143
+    port: 58094
+    cipher: auto
+    uuid: feb4bdcd-c5ca-46d8-e2dd-77c1c8fb01e1
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: "333"
+    type: vmess
+    server: 107.173.141.221
+    port: 54629
+    cipher: auto
+    uuid: 71427700-1b99-4b13-c47f-e1ea03958d6b
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: "444"
+    type: vmess
+    server: 140.99.217.131
+    port: 17063
+    cipher: auto
+    uuid: bcaecbad-bf90-4744-c186-d1457f0b20ce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -162,9 +206,13 @@ proxy-groups:
       - 彭于晏￨DE2￨无限流量
       - fumax
       - 🇺🇲 美国320
-      - NNC
       - 🇺🇸 美国11
       - 美国 CloudFlare节点
+      - NNC
+      - "111"
+      - "222"
+      - "333"
+      - "444"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -176,9 +224,13 @@ proxy-groups:
       - 彭于晏￨DE2￨无限流量
       - fumax
       - 🇺🇲 美国320
-      - NNC
       - 🇺🇸 美国11
       - 美国 CloudFlare节点
+      - NNC
+      - "111"
+      - "222"
+      - "333"
+      - "444"
   - name: 🎯 全球直连
     type: select
     proxies:
