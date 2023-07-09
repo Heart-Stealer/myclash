@@ -52,6 +52,33 @@ proxies:
     skip-cert-verify: true
     servername: ""
     network: tcp
+  - name: fumax
+    type: trojan
+    server: 152.70.74.66
+    port: 443
+    udp: true
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    sni: undefined
+    skip-cert-verify: true
+    network: tcp
+    ws-opts:
+      headers:
+        host: undefined
+  - name: 🇺🇲 美国320
+    server: zfc.windowsupdate1.com
+    port: 443
+    type: vmess
+    uuid: 41bec492-cd79-4b57-9a15-7d2bb00fcfca
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /pq/usfh2?ed=2048
+      headers:
+        Host: usfh2.pqjc.buzz
+    udp: true
   - name: 新加坡无限流量#自行优选IP
     type: vmess
     server: cdn.narutos.top
@@ -82,33 +109,6 @@ proxies:
       path: /DE2
       headers:
         host: cf2.besthz365.eu.org
-  - name: fumax
-    type: trojan
-    server: 152.70.74.66
-    port: 443
-    udp: true
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    sni: undefined
-    skip-cert-verify: true
-    network: tcp
-    ws-opts:
-      headers:
-        host: undefined
-  - name: 🇺🇲 美国320
-    server: zfc.windowsupdate1.com
-    port: 443
-    type: vmess
-    uuid: 41bec492-cd79-4b57-9a15-7d2bb00fcfca
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/usfh2?ed=2048
-      headers:
-        Host: usfh2.pqjc.buzz
-    udp: true
   - name: 🇺🇸 美国11
     type: vmess
     server: 104.18.1.196
@@ -151,50 +151,26 @@ proxies:
       path: /shirker
       headers:
         host: ca.ilovescp.com
-  - name: "111"
-    type: vmess
-    server: 140.99.209.30
-    port: 35035
-    cipher: auto
-    uuid: f01e46c6-4f74-4aa0-b13c-e7eb067776bd
-    alterId: 0
-    tls: false
+  - name: _🇮🇳_IN_印度
+    type: trojan
+    server: 152.70.74.66
+    port: 443
+    udp: true
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
-    servername: ""
     network: tcp
-  - name: "222"
-    type: vmess
-    server: 78.141.207.143
-    port: 58094
-    cipher: auto
-    uuid: feb4bdcd-c5ca-46d8-e2dd-77c1c8fb01e1
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
-  - name: "333"
-    type: vmess
-    server: 107.173.141.221
-    port: 54629
-    cipher: auto
-    uuid: 71427700-1b99-4b13-c47f-e1ea03958d6b
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
-  - name: "444"
-    type: vmess
-    server: 140.99.217.131
-    port: 17063
-    cipher: auto
-    uuid: bcaecbad-bf90-4744-c186-d1457f0b20ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
+  - name: JP-1
+    type: ss
+    server: weo-jp-1.laowufly.cf
+    port: 2333
+    password: NodeByTG@Weoworks/It'sExpensive!!!
+    cipher: aes-256-gcm
+  - name: JP-2
+    type: ss
+    server: weo-jp-2.laowufly.cf
+    port: 23333
+    password: NodeByTG@Weoworks/It'sExpensive!!!
+    cipher: aes-256-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -202,17 +178,16 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 喵哥甲骨文(warp)
-      - 新加坡无限流量#自行优选IP
-      - 彭于晏￨DE2￨无限流量
       - fumax
       - 🇺🇲 美国320
+      - 新加坡无限流量#自行优选IP
+      - 彭于晏￨DE2￨无限流量
       - 🇺🇸 美国11
       - 美国 CloudFlare节点
       - NNC
-      - "111"
-      - "222"
-      - "333"
-      - "444"
+      - _🇮🇳_IN_印度
+      - JP-1
+      - JP-2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -220,17 +195,16 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 喵哥甲骨文(warp)
-      - 新加坡无限流量#自行优选IP
-      - 彭于晏￨DE2￨无限流量
       - fumax
       - 🇺🇲 美国320
+      - 新加坡无限流量#自行优选IP
+      - 彭于晏￨DE2￨无限流量
       - 🇺🇸 美国11
       - 美国 CloudFlare节点
       - NNC
-      - "111"
-      - "222"
-      - "333"
-      - "444"
+      - _🇮🇳_IN_印度
+      - JP-1
+      - JP-2
   - name: 🎯 全球直连
     type: select
     proxies:
