@@ -44,7 +44,7 @@ proxies:
   - name: 喵哥甲骨文(warp)
     type: vmess
     server: 129.146.247.135
-    port: 32563
+    port: 32564
     cipher: auto
     uuid: c24b6170-ba54-4b2b-92a7-c04740bfc7bf
     alterId: 0
@@ -52,48 +52,6 @@ proxies:
     skip-cert-verify: true
     servername: ""
     network: tcp
-  - name: fumax
-    type: trojan
-    server: 152.70.74.66
-    port: 443
-    udp: true
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    sni: undefined
-    skip-cert-verify: true
-    network: tcp
-    ws-opts:
-      headers:
-        host: undefined
-  - name: 🇺🇲 美国320
-    server: zfc.windowsupdate1.com
-    port: 443
-    type: vmess
-    uuid: 41bec492-cd79-4b57-9a15-7d2bb00fcfca
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/usfh2?ed=2048
-      headers:
-        Host: usfh2.pqjc.buzz
-    udp: true
-  - name: 新加坡无限流量#自行优选IP
-    type: vmess
-    server: cdn.narutos.top
-    port: 8080
-    cipher: auto
-    uuid: d0ccd82b-732d-454c-88e6-eba3dddf67d2
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: sg-free.adw1681ddaw.tk
-    network: ws
-    ws-opts:
-      path: /sgfree
-      headers:
-        host: sg-free.adw1681ddaw.tk
   - name: 彭于晏￨DE2￨无限流量
     type: vmess
     server: 172.64.102.67
@@ -109,34 +67,14 @@ proxies:
       path: /DE2
       headers:
         host: cf2.besthz365.eu.org
-  - name: 🇺🇸 美国11
-    type: vmess
-    server: 104.18.1.196
-    port: 80
-    cipher: auto
-    uuid: 0425d010-19f6-11ee-8be4-1577c1651679
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: sg.xmbb.net
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cfcdn.sanfencdn.net
+  - name: _🇮🇳_IN_印度
+    type: trojan
+    server: 152.70.74.66
     port: 443
-    cipher: auto
-    uuid: da48c616-75b5-4b15-aa8c-62fb3001e352
-    alterId: 0
-    tls: true
+    udp: true
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: us5.sanfencdn1.com
+    network: tcp
   - name: NNC
     type: vmess
     server: cf-lt.sharecentre.online
@@ -151,26 +89,18 @@ proxies:
       path: /shirker
       headers:
         host: ca.ilovescp.com
-  - name: _🇮🇳_IN_印度
+  - name: fumax
     type: trojan
     server: 152.70.74.66
     port: 443
     udp: true
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    sni: undefined
     skip-cert-verify: true
     network: tcp
-  - name: JP-1
-    type: ss
-    server: weo-jp-1.laowufly.cf
-    port: 2333
-    password: NodeByTG@Weoworks/It'sExpensive!!!
-    cipher: aes-256-gcm
-  - name: JP-2
-    type: ss
-    server: weo-jp-2.laowufly.cf
-    port: 23333
-    password: NodeByTG@Weoworks/It'sExpensive!!!
-    cipher: aes-256-gcm
+    ws-opts:
+      headers:
+        host: undefined
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -178,16 +108,10 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 喵哥甲骨文(warp)
-      - fumax
-      - 🇺🇲 美国320
-      - 新加坡无限流量#自行优选IP
       - 彭于晏￨DE2￨无限流量
-      - 🇺🇸 美国11
-      - 美国 CloudFlare节点
-      - NNC
       - _🇮🇳_IN_印度
-      - JP-1
-      - JP-2
+      - NNC
+      - fumax
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -195,16 +119,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 喵哥甲骨文(warp)
-      - fumax
-      - 🇺🇲 美国320
-      - 新加坡无限流量#自行优选IP
       - 彭于晏￨DE2￨无限流量
-      - 🇺🇸 美国11
-      - 美国 CloudFlare节点
-      - NNC
       - _🇮🇳_IN_印度
-      - JP-1
-      - JP-2
+      - NNC
+      - fumax
   - name: 🎯 全球直连
     type: select
     proxies:
