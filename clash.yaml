@@ -41,17 +41,41 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 喵哥甲骨文(warp)
+  - name: _🇯🇵 日本 4K
     type: vmess
-    server: 129.146.247.135
-    port: 32564
+    server: 45.78.58.171
+    port: 58802
     cipher: auto
-    uuid: c24b6170-ba54-4b2b-92a7-c04740bfc7bf
+    uuid: b1d5d262-33b5-49d7-84e4-a3d101980706
     alterId: 0
     tls: false
     skip-cert-verify: true
     servername: ""
     network: tcp
+  - name: 美国108 8MB
+    server: 107.167.30.132
+    port: 43900
+    type: vmess
+    uuid: 58e560b4-bba6-4843-be5f-83321022fa0d
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 中国辽宁NNC
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
   - name: 彭于晏￨DE2￨无限流量
     type: vmess
     server: 172.64.102.67
@@ -67,6 +91,27 @@ proxies:
       path: /DE2
       headers:
         host: cf2.besthz365.eu.org
+  - name: 香港52 1MB
+    server: hk2.yihaobao.xyz
+    port: 10023
+    type: trojan
+    password: eeeebdd2-5aa5-4325-b69f-5b8b2c16d9a0
+    sni: tls.yihaobao.xyz
+  - name: 韩国特殊 5MB
+    server: 43.201.247.194
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: 🇺🇲 美国238
+    server: 23.224.190.237
+    port: 58022
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
   - name: _🇮🇳_IN_印度
     type: trojan
     server: 152.70.74.66
@@ -75,54 +120,49 @@ proxies:
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     network: tcp
-  - name: NNC
+  - name: 🇺🇲 美国215
+    server: 104.16.37.120
+    port: 2086
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    uuid: eb943c5b-ac55-46f9-8710-d0641c38ae9b
     alterId: 0
+    cipher: auto
     tls: false
-    skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /shirker
+      path: /qwer
       headers:
-        host: ca.ilovescp.com
-  - name: fumax
-    type: trojan
-    server: 152.70.74.66
-    port: 443
-    udp: true
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    sni: undefined
-    skip-cert-verify: true
-    network: tcp
-    ws-opts:
-      headers:
-        host: undefined
+        Host: uxx.vtcss.top
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 喵哥甲骨文(warp)
+      - _🇯🇵 日本 4K
+      - 美国108 8MB
+      - 中国辽宁NNC
       - 彭于晏￨DE2￨无限流量
+      - 香港52 1MB
+      - 韩国特殊 5MB
+      - 🇺🇲 美国238
       - _🇮🇳_IN_印度
-      - NNC
-      - fumax
+      - 🇺🇲 美国215
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 喵哥甲骨文(warp)
+      - _🇯🇵 日本 4K
+      - 美国108 8MB
+      - 中国辽宁NNC
       - 彭于晏￨DE2￨无限流量
+      - 香港52 1MB
+      - 韩国特殊 5MB
+      - 🇺🇲 美国238
       - _🇮🇳_IN_印度
-      - NNC
-      - fumax
+      - 🇺🇲 美国215
   - name: 🎯 全球直连
     type: select
     proxies:
