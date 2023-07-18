@@ -41,21 +41,13 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cfcdn2.sanfencdn.net
-    port: 2052
-    cipher: auto
-    uuid: 91b9da49-cb53-4e82-9732-873693470440
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: us6.sanfencdn2.com
-  - name: 美国
+  - name: _🇺🇲 美国ss
+    type: ss
+    server: 141.148.168.193
+    port: 14114
+    password: 9IOfbTwoVr768Gqf2MQb
+    cipher: chacha20-ietf-poly1305
+  - name: _🇺🇲 美国
     type: vmess
     server: cf.ielaina.com
     port: 80
@@ -70,6 +62,34 @@ proxies:
       path: /2TokGE9A/
       headers:
         host: us6.cachexy.cf
+  - name: 中国辽宁NNC
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cfcdn2.sanfencdn.net
+    port: 2052
+    cipher: auto
+    uuid: 91b9da49-cb53-4e82-9732-873693470440
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /zh-cn
+      headers:
+        host: us6.sanfencdn2.com
   - name: 日本
     type: vmess
     server: cf.ielaina.com
@@ -85,20 +105,6 @@ proxies:
       path: /9SCqOah8/
       headers:
         host: jp1.ielaina.com
-  - name: 中国辽宁NNC
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
   - name: 美国5
     type: vmess
     server: cfcdn2.sanfencdn.net
@@ -147,10 +153,11 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 美国 CloudFlare节点
-      - 美国
-      - 日本
+      - _🇺🇲 美国ss
+      - _🇺🇲 美国
       - 中国辽宁NNC
+      - 美国 CloudFlare节点
+      - 日本
       - 美国5
       - 美国9
       - 俄罗斯
@@ -160,10 +167,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 美国 CloudFlare节点
-      - 美国
-      - 日本
+      - _🇺🇲 美国ss
+      - _🇺🇲 美国
       - 中国辽宁NNC
+      - 美国 CloudFlare节点
+      - 日本
       - 美国5
       - 美国9
       - 俄罗斯
