@@ -41,27 +41,6 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: _🇺🇲 美国ss
-    type: ss
-    server: 141.148.168.193
-    port: 14114
-    password: 9IOfbTwoVr768Gqf2MQb
-    cipher: chacha20-ietf-poly1305
-  - name: _🇺🇲 美国
-    type: vmess
-    server: cf.ielaina.com
-    port: 80
-    cipher: auto
-    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /2TokGE9A/
-      headers:
-        host: us6.cachexy.cf
   - name: 中国辽宁NNC
     type: vmess
     server: cf-lt.sharecentre.online
@@ -90,21 +69,6 @@ proxies:
       path: /zh-cn
       headers:
         host: us6.sanfencdn2.com
-  - name: 日本
-    type: vmess
-    server: cf.ielaina.com
-    port: 80
-    cipher: auto
-    uuid: e52d79bb-b26e-4416-ac8a-7755176299a6
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /9SCqOah8/
-      headers:
-        host: jp1.ielaina.com
   - name: 美国5
     type: vmess
     server: cfcdn2.sanfencdn.net
@@ -137,44 +101,78 @@ proxies:
       path: /zh-cn
       headers:
         host: jp4.sanfencdn2.com
-  - name: 俄罗斯
-    type: vmess
-    server: 45.144.179.138
+  - name: _🇮🇳_IN_印度
+    type: trojan
+    server: 152.70.74.66
     port: 443
+    udp: true
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    skip-cert-verify: true
+    network: tcp
+  - name: _🇺🇲 美国ss
+    type: ss
+    server: 141.148.168.193
+    port: 14114
+    password: 9IOfbTwoVr768Gqf2MQb
+    cipher: chacha20-ietf-poly1305
+  - name: 日本
+    type: vmess
+    server: cf.ielaina.com
+    port: 80
     cipher: auto
-    uuid: 96cbe4a6-5728-42df-dc7a-ceb9b51a3db5
+    uuid: e52d79bb-b26e-4416-ac8a-7755176299a6
     alterId: 0
     tls: false
     skip-cert-verify: true
-    udp: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /9SCqOah8/
+      headers:
+        host: jp1.ielaina.com
+  - name: _🇺🇲 美国
+    type: vmess
+    server: cf.ielaina.com
+    port: 80
+    cipher: auto
+    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /2TokGE9A/
+      headers:
+        host: us6.cachexy.cf
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - _🇺🇲 美国ss
-      - _🇺🇲 美国
       - 中国辽宁NNC
       - 美国 CloudFlare节点
-      - 日本
       - 美国5
       - 美国9
-      - 俄罗斯
+      - _🇮🇳_IN_印度
+      - _🇺🇲 美国ss
+      - 日本
+      - _🇺🇲 美国
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - _🇺🇲 美国ss
-      - _🇺🇲 美国
       - 中国辽宁NNC
       - 美国 CloudFlare节点
-      - 日本
       - 美国5
       - 美国9
-      - 俄罗斯
+      - _🇮🇳_IN_印度
+      - _🇺🇲 美国ss
+      - 日本
+      - _🇺🇲 美国
   - name: 🎯 全球直连
     type: select
     proxies:
