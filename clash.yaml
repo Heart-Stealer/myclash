@@ -62,28 +62,6 @@ proxies:
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: 美国 1
-    type: vmess
-    server: 67.21.84.216
-    port: 47088
-    cipher: auto
-    uuid: b9a305a9-1ff2-4ec1-b338-933555833baa
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
-  - name: 荷兰 4
-    type: vmess
-    server: 45.58.186.85
-    port: 51140
-    cipher: auto
-    uuid: 4a138e19-0595-4d51-83c6-fd276cf7d307
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
   - name: 美国
     type: vmess
     server: cdn.chigua.tk
@@ -114,21 +92,6 @@ proxies:
       path: /9SCqOah8/
       headers:
         host: jp1.ielaina.com
-  - name: 草莓的奈飞节点
-    type: vmess
-    server: hk.kkpp.online
-    port: 443
-    cipher: auto
-    uuid: 78422c74-9a71-4193-8953-a9446dacd782
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hk.kkpp.online
-    network: ws
-    ws-opts:
-      path: /dksfjeyrbfSGERgrsfgsdfrq/
-      headers:
-        host: hk.kkpp.online
   - name: 美国12
     type: vmess
     server: www.codepen.io
@@ -155,21 +118,32 @@ proxies:
     skip-cert-verify: true
     servername: ""
     network: tcp
-  - name: 美国19
+  - name: 草莓的奈飞节点
     type: vmess
-    server: www.noice.id
+    server: hk.kkpp.online
     port: 443
     cipher: auto
-    uuid: 7816384f-5d56-4b11-8446-eb9b1306bfd5
+    uuid: 78422c74-9a71-4193-8953-a9446dacd782
     alterId: 0
     tls: true
     skip-cert-verify: true
-    servername: ""
+    servername: hk.kkpp.online
     network: ws
     ws-opts:
-      path: /vmess
+      path: /dksfjeyrbfSGERgrsfgsdfrq/
       headers:
-        host: sgmws.mainssh.xyz
+        host: hk.kkpp.online
+  - name: 美国 加利福尼亚
+    type: vmess
+    server: 142.4.97.71
+    port: 44942
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
   - name: 美国269
     type: vmess
     server: hk.mlxg.org
@@ -185,28 +159,21 @@ proxies:
       path: /
       headers:
         host: us1.mlxg.org
-  - name: 荷兰110
+  - name: 美国19
     type: vmess
-    server: 154.84.1.101
-    port: 52801
+    server: www.noice.id
+    port: 443
     cipher: auto
-    uuid: 3a3c8a9c-334e-4360-adb8-a80a57ddcbbf
-    alterId: 64
-    tls: false
+    uuid: 7816384f-5d56-4b11-8446-eb9b1306bfd5
+    alterId: 0
+    tls: true
     skip-cert-verify: true
     servername: ""
-    network: tcp
-  - name: 美国 加利福尼亚
-    type: vmess
-    server: 142.4.97.71
-    port: 44942
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: sgmws.mainssh.xyz
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -215,17 +182,14 @@ proxy-groups:
       - DIRECT
       - 中国辽宁NNC
       - 韩国特殊 5MB
-      - 美国 1
-      - 荷兰 4
       - 美国
       - 日本
-      - 草莓的奈飞节点
       - 美国12
       - 美国45
-      - 美国19
-      - 美国269
-      - 荷兰110
+      - 草莓的奈飞节点
       - 美国 加利福尼亚
+      - 美国269
+      - 美国19
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -234,17 +198,14 @@ proxy-groups:
     proxies:
       - 中国辽宁NNC
       - 韩国特殊 5MB
-      - 美国 1
-      - 荷兰 4
       - 美国
       - 日本
-      - 草莓的奈飞节点
       - 美国12
       - 美国45
-      - 美国19
-      - 美国269
-      - 荷兰110
+      - 草莓的奈飞节点
       - 美国 加利福尼亚
+      - 美国269
+      - 美国19
   - name: 🎯 全球直连
     type: select
     proxies:
