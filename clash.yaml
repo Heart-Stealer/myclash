@@ -55,12 +55,37 @@ proxies:
       path: /shirker
       headers:
         host: ca.ilovescp.com
+  - name: "@hkaa0||美国"
+    type: vmess
+    server: 142.4.104.196
+    port: 56000
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
   - name: 韩国特殊 5MB
     server: 43.201.247.194
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
+    udp: true
+  - name: 美国特殊
+    type: ss
+    server: 34.223.228.213
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+    udp: true
+  - name: 狮城特殊
+    type: ss
+    server: 13.212.239.81
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
     udp: true
   - name: 美国
     type: vmess
@@ -128,18 +153,6 @@ proxies:
     port: 11009
     password: wNuh3WO616MCaVpb
     cipher: chacha20-ietf-poly1305
-  - name: 美国特殊
-    type: ss
-    server: 34.223.228.213
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - name: 狮城特殊
-    type: ss
-    server: 13.212.239.81
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
   - name: "荷兰31\r"
     type: ss
     server: 185.88.141.175
@@ -329,14 +342,15 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 中国辽宁NNC
+      - "@hkaa0||美国"
       - 韩国特殊 5MB
+      - 美国特殊
+      - 狮城特殊
       - 美国
       - 日本
       - 美国12
       - 草莓的奈飞节点
       - 新加坡B
-      - 美国特殊
-      - 狮城特殊
       - "荷兰31\r"
       - 中国114
       - 🇫🇷 法国181
@@ -357,14 +371,15 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 中国辽宁NNC
+      - "@hkaa0||美国"
       - 韩国特殊 5MB
+      - 美国特殊
+      - 狮城特殊
       - 美国
       - 日本
       - 美国12
       - 草莓的奈飞节点
       - 新加坡B
-      - 美国特殊
-      - 狮城特殊
       - "荷兰31\r"
       - 中国114
       - 🇫🇷 法国181

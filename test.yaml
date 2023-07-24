@@ -100,14 +100,15 @@ proxies:
   # - {name: 名称、别名, type: ssr, server: 服务器地址, port: 服务器端口接口, password: 密码, cipher: 加密方式, protocol: 协议, protocol-param: "协议参数", obfs: 混淆, obfs-param: "混淆参数", udp: true/false}
   # - {name: 名称、别名, type: vmess, server: 服务器地址, port: 80服务器端口接口, uuid: 用户ID只为验证不加密, alterId: 0额外ID验证, cipher: auto加密方式自动, tls: true/false是否进行tls加密传输层安全, skip-cert-verify: true/false是否跳过验证, network: ws底层传输方式, ws-opts: {path: /路径, headers: {Host: 请求头伪装域名}}, udp: true/false}
   - {"name":"中国辽宁NNC","type":"vmess","server":"cf-lt.sharecentre.online","port":80,"cipher":"auto","uuid":"5f751c6e-50b1-4797-ba8e-6ffe324a0bce","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/shirker","headers":{"host":"ca.ilovescp.com"}}}
+  - {"name":"@hkaa0||美国","type":"vmess","server":"142.4.104.196","port":56000,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
   - {name: 韩国特殊 5MB, server: 43.201.247.194, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {"name":"美国特殊","type":"ss","server":"34.223.228.213","port":443,"password":"amazonskr05","cipher":"aes-256-cfb","udp":true}
+  - {"name":"狮城特殊","type":"ss","server":"13.212.239.81","port":443,"password":"amazonskr05","cipher":"aes-256-cfb","udp":true}
   - {"name":"美国","type":"vmess","server":"cdn.chigua.tk","port":80,"cipher":"auto","uuid":"7e7f8398-bd39-49d8-9ce6-e48ffef463dd","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/2TokGE9A/","headers":{"host":"us6.cachexy.cf"}}}
   - {"name":"日本","type":"vmess","server":"cdn.chigua.tk","port":80,"cipher":"auto","uuid":"e52d79bb-b26e-4416-ac8a-7755176299a6","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/9SCqOah8/","headers":{"host":"jp1.ielaina.com"}}}
   - {"name":"美国12","type":"vmess","server":"www.codepen.io","port":443,"cipher":"auto","uuid":"2cd39102-0799-4c61-abb6-2e7a258f0397","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"us-v.sshmax.xyz"}}}
   - {"name":"草莓的奈飞节点","type":"vmess","server":"hk.kkpp.online","port":443,"cipher":"auto","uuid":"78422c74-9a71-4193-8953-a9446dacd782","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"hk.kkpp.online","network":"ws","ws-opts":{"path":"/dksfjeyrbfSGERgrsfgsdfrq/","headers":{"host":"hk.kkpp.online"}}}
   - {"name":"新加坡B","type":"ss","server":"cm.chylink.xyz","port":11009,"password":"wNuh3WO616MCaVpb","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"美国特殊","type":"ss","server":"34.223.228.213","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"狮城特殊","type":"ss","server":"13.212.239.81","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
   - {"name":"荷兰31\r","type":"ss","server":"185.88.141.175","port":8080,"password":"qGjmI8WQlF0tfhDbkLqGdN","cipher":"chacha20-ietf-poly1305"}
 
   - {"name":"中国114","type":"vmess","server":"qzcn2-01.dajuzi.cc","port":15598,"cipher":"auto","uuid":"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
