@@ -140,6 +140,12 @@ proxies:
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
+  - name: "荷兰31\r"
+    type: ss
+    server: 185.88.141.175
+    port: 8080
+    password: qGjmI8WQlF0tfhDbkLqGdN
+    cipher: chacha20-ietf-poly1305
   - name: 中国114
     type: vmess
     server: qzcn2-01.dajuzi.cc
@@ -151,12 +157,6 @@ proxies:
     skip-cert-verify: true
     servername: ""
     network: tcp
-  - name: "荷兰31\r"
-    type: ss
-    server: 185.88.141.175
-    port: 8080
-    password: qGjmI8WQlF0tfhDbkLqGdN
-    cipher: chacha20-ietf-poly1305
   - name: 🇫🇷 法国181
     server: 173.245.49.22
     port: 8880
@@ -172,20 +172,20 @@ proxies:
       headers:
         Host: ecc.vtcss.top
     udp: true
-  - name: 哥斯达黎加137
-    server: 190.93.247.11
-    port: 8080
+  - name: 🇫🇷 法国134
+    server: 173.245.49.236
+    port: 80
     type: vmess
-    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /qwer
+      path: /shirker
       headers:
-        Host: ecc.vtcss.top
+        Host: ca.ilovescp.com
     udp: true
   - name: 🇺🇲 美国221
     server: 104.24.185.151
@@ -204,36 +204,6 @@ proxies:
     udp: true
   - name: 🇺🇲 美国115
     server: 104.18.119.118
-    port: 8080
-    type: vmess
-    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        Host: ecc.vtcss.top
-    udp: true
-  - name: 🇫🇷 法国212
-    server: 173.245.49.187
-    port: 8880
-    type: vmess
-    uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        Host: ecc.vtcss.top
-    udp: true
-  - name: 🇫🇷 法国92
-    server: 173.245.49.204
     port: 8080
     type: vmess
     uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
@@ -277,20 +247,20 @@ proxies:
       headers:
         Host: dp3.scproxy.top
     udp: true
-  - name: 🇫🇷 法国134
-    server: 173.245.49.236
-    port: 80
+  - name: 🇨🇦 加拿大145
+    server: dongtaiwang2.com
+    port: 443
     type: vmess
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /shirker
+      path: /dongtaiwang.com
       headers:
-        Host: ca.ilovescp.com
+        Host: 2.freek1.xyz
     udp: true
   - name: 🇺🇲 美国7
     server: amszxc.66666654.xyz
@@ -307,20 +277,50 @@ proxies:
       headers:
         Host: amszx.66666654.xyz
     udp: true
-  - name: 🇨🇦 加拿大145
-    server: dongtaiwang2.com
-    port: 443
+  - name: 哥斯达黎加137
+    server: 190.93.247.11
+    port: 8080
     type: vmess
-    uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f
+    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
     alterId: 0
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /dongtaiwang.com
+      path: /qwer
       headers:
-        Host: 2.freek1.xyz
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 🇫🇷 法国212
+    server: 173.245.49.187
+    port: 8880
+    type: vmess
+    uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 🇫🇷 法国92
+    server: 173.245.49.204
+    port: 8080
+    type: vmess
+    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        Host: ecc.vtcss.top
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -337,19 +337,19 @@ proxy-groups:
       - 新加坡B
       - 美国特殊
       - 狮城特殊
-      - 中国114
       - "荷兰31\r"
+      - 中国114
       - 🇫🇷 法国181
-      - 哥斯达黎加137
+      - 🇫🇷 法国134
       - 🇺🇲 美国221
       - 🇺🇲 美国115
-      - 🇫🇷 法国212
-      - 🇫🇷 法国92
       - 🇳🇱 荷兰62
       - 🇺🇲 美国82
-      - 🇫🇷 法国134
-      - 🇺🇲 美国7
       - 🇨🇦 加拿大145
+      - 🇺🇲 美国7
+      - 哥斯达黎加137
+      - 🇫🇷 法国212
+      - 🇫🇷 法国92
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -365,19 +365,19 @@ proxy-groups:
       - 新加坡B
       - 美国特殊
       - 狮城特殊
-      - 中国114
       - "荷兰31\r"
+      - 中国114
       - 🇫🇷 法国181
-      - 哥斯达黎加137
+      - 🇫🇷 法国134
       - 🇺🇲 美国221
       - 🇺🇲 美国115
-      - 🇫🇷 法国212
-      - 🇫🇷 法国92
       - 🇳🇱 荷兰62
       - 🇺🇲 美国82
-      - 🇫🇷 法国134
-      - 🇺🇲 美国7
       - 🇨🇦 加拿大145
+      - 🇺🇲 美国7
+      - 哥斯达黎加137
+      - 🇫🇷 法国212
+      - 🇫🇷 法国92
   - name: 🎯 全球直连
     type: select
     proxies:
