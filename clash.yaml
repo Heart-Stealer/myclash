@@ -107,17 +107,6 @@ proxies:
       path: /vmess
       headers:
         host: us-v.sshmax.xyz
-  - name: 美国45
-    type: vmess
-    server: 140.99.129.244
-    port: 48901
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
   - name: 草莓的奈飞节点
     type: vmess
     server: hk.kkpp.online
@@ -133,47 +122,206 @@ proxies:
       path: /dksfjeyrbfSGERgrsfgsdfrq/
       headers:
         host: hk.kkpp.online
-  - name: 美国 加利福尼亚
+  - name: 新加坡B
+    type: ss
+    server: cm.chylink.xyz
+    port: 11009
+    password: wNuh3WO616MCaVpb
+    cipher: chacha20-ietf-poly1305
+  - name: 美国特殊
+    type: ss
+    server: 34.223.228.213
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 狮城特殊
+    type: ss
+    server: 13.212.239.81
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 中国114
     type: vmess
-    server: 142.4.97.71
-    port: 44942
+    server: qzcn2-01.dajuzi.cc
+    port: 15598
     cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    uuid: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+    alterId: 0
     tls: false
     skip-cert-verify: true
     servername: ""
     network: tcp
-  - name: 美国269
+  - name: "荷兰31\r"
+    type: ss
+    server: 185.88.141.175
+    port: 8080
+    password: qGjmI8WQlF0tfhDbkLqGdN
+    cipher: chacha20-ietf-poly1305
+  - name: 🇫🇷 法国181
+    server: 173.245.49.22
+    port: 8880
     type: vmess
-    server: hk.mlxg.org
-    port: 80
-    cipher: auto
-    uuid: c7442852-5a48-4456-8783-b7b8eebbca6c
+    uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
     alterId: 0
+    cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: ""
     network: ws
     ws-opts:
-      path: /
+      path: /qwer
       headers:
-        host: us1.mlxg.org
-  - name: 美国19
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 哥斯达黎加137
+    server: 190.93.247.11
+    port: 8080
     type: vmess
-    server: www.noice.id
-    port: 443
-    cipher: auto
-    uuid: 7816384f-5d56-4b11-8446-eb9b1306bfd5
+    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
     alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 🇺🇲 美国221
+    server: 104.24.185.151
+    port: 8080
+    type: vmess
+    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 🇺🇲 美国115
+    server: 104.18.119.118
+    port: 8080
+    type: vmess
+    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 🇫🇷 法国212
+    server: 173.245.49.187
+    port: 8880
+    type: vmess
+    uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 🇫🇷 法国92
+    server: 173.245.49.204
+    port: 8080
+    type: vmess
+    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 🇳🇱 荷兰62
+    server: 188.114.96.71
+    port: 8080
+    type: vmess
+    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        Host: ecc.vtcss.top
+    udp: true
+  - name: 🇺🇲 美国82
+    server: 172.67.65.210
+    port: 80
+    type: vmess
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp3.scproxy.top
+    udp: true
+  - name: 🇫🇷 法国134
+    server: 173.245.49.236
+    port: 80
+    type: vmess
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: ca.ilovescp.com
+    udp: true
+  - name: 🇺🇲 美国7
+    server: amszxc.66666654.xyz
+    port: 2095
+    type: vmess
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        Host: amszx.66666654.xyz
+    udp: true
+  - name: 🇨🇦 加拿大145
+    server: dongtaiwang2.com
+    port: 443
+    type: vmess
+    uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f
+    alterId: 0
+    cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: ""
     network: ws
     ws-opts:
-      path: /vmess
+      path: /dongtaiwang.com
       headers:
-        host: sgmws.mainssh.xyz
+        Host: 2.freek1.xyz
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -185,11 +333,23 @@ proxy-groups:
       - 美国
       - 日本
       - 美国12
-      - 美国45
       - 草莓的奈飞节点
-      - 美国 加利福尼亚
-      - 美国269
-      - 美国19
+      - 新加坡B
+      - 美国特殊
+      - 狮城特殊
+      - 中国114
+      - "荷兰31\r"
+      - 🇫🇷 法国181
+      - 哥斯达黎加137
+      - 🇺🇲 美国221
+      - 🇺🇲 美国115
+      - 🇫🇷 法国212
+      - 🇫🇷 法国92
+      - 🇳🇱 荷兰62
+      - 🇺🇲 美国82
+      - 🇫🇷 法国134
+      - 🇺🇲 美国7
+      - 🇨🇦 加拿大145
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -201,11 +361,23 @@ proxy-groups:
       - 美国
       - 日本
       - 美国12
-      - 美国45
       - 草莓的奈飞节点
-      - 美国 加利福尼亚
-      - 美国269
-      - 美国19
+      - 新加坡B
+      - 美国特殊
+      - 狮城特殊
+      - 中国114
+      - "荷兰31\r"
+      - 🇫🇷 法国181
+      - 哥斯达黎加137
+      - 🇺🇲 美国221
+      - 🇺🇲 美国115
+      - 🇫🇷 法国212
+      - 🇫🇷 法国92
+      - 🇳🇱 荷兰62
+      - 🇺🇲 美国82
+      - 🇫🇷 法国134
+      - 🇺🇲 美国7
+      - 🇨🇦 加拿大145
   - name: 🎯 全球直连
     type: select
     proxies:
