@@ -41,83 +41,38 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 中国辽宁NNC
+  - name: 白嫖@mlbldyy
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
+    server: 192.3.124.54
+    port: 35374
     cipher: auto
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    uuid: d211415f-eaeb-4f80-afe8-a5489d5bba0e
     alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
-  - name: "@hkaa0||美国"
-    type: vmess
-    server: 142.4.104.196
-    port: 56000
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
     tls: false
     skip-cert-verify: true
     servername: ""
     network: tcp
-  - name: 韩国特殊 5MB
-    server: 43.201.247.194
-    port: 443
+  - name: 🇸🇬 新加坡B
     type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 美国特殊
-    type: ss
-    server: 34.223.228.213
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-    udp: true
-  - name: 狮城特殊
+    server: cm.chylink.xyz
+    port: 11009
+    password: wNuh3WO616MCaVpb
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇲 狮城特殊
     type: ss
     server: 13.212.239.81
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
     udp: true
-  - name: 美国
-    type: vmess
-    server: cdn.chigua.tk
-    port: 80
-    cipher: auto
-    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /2TokGE9A/
-      headers:
-        host: us6.cachexy.cf
-  - name: 日本
-    type: vmess
-    server: cdn.chigua.tk
-    port: 80
-    cipher: auto
-    uuid: e52d79bb-b26e-4416-ac8a-7755176299a6
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /9SCqOah8/
-      headers:
-        host: jp1.ielaina.com
-  - name: 美国12
+  - name: 🇺🇲 美国特殊
+    type: ss
+    server: 34.223.228.213
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+    udp: true
+  - name: 🇺🇲 美国1
     type: vmess
     server: www.codepen.io
     port: 443
@@ -132,150 +87,7 @@ proxies:
       path: /vmess
       headers:
         host: us-v.sshmax.xyz
-  - name: 草莓的奈飞节点
-    type: vmess
-    server: hk.kkpp.online
-    port: 443
-    cipher: auto
-    uuid: 78422c74-9a71-4193-8953-a9446dacd782
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hk.kkpp.online
-    network: ws
-    ws-opts:
-      path: /dksfjeyrbfSGERgrsfgsdfrq/
-      headers:
-        host: hk.kkpp.online
-  - name: 新加坡B
-    type: ss
-    server: cm.chylink.xyz
-    port: 11009
-    password: wNuh3WO616MCaVpb
-    cipher: chacha20-ietf-poly1305
-  - name: "荷兰31\r"
-    type: ss
-    server: 185.88.141.175
-    port: 8080
-    password: qGjmI8WQlF0tfhDbkLqGdN
-    cipher: chacha20-ietf-poly1305
-  - name: 中国114
-    type: vmess
-    server: qzcn2-01.dajuzi.cc
-    port: 15598
-    cipher: auto
-    uuid: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
-  - name: 🇫🇷 法国181
-    server: 173.245.49.22
-    port: 8880
-    type: vmess
-    uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        Host: ecc.vtcss.top
-    udp: true
-  - name: 🇫🇷 法国134
-    server: 173.245.49.236
-    port: 80
-    type: vmess
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: ca.ilovescp.com
-    udp: true
-  - name: 🇺🇲 美国221
-    server: 104.24.185.151
-    port: 8080
-    type: vmess
-    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        Host: ecc.vtcss.top
-    udp: true
-  - name: 🇺🇲 美国115
-    server: 104.18.119.118
-    port: 8080
-    type: vmess
-    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        Host: ecc.vtcss.top
-    udp: true
-  - name: 🇳🇱 荷兰62
-    server: 188.114.96.71
-    port: 8080
-    type: vmess
-    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        Host: ecc.vtcss.top
-    udp: true
-  - name: 🇺🇲 美国82
-    server: 172.67.65.210
-    port: 80
-    type: vmess
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-    udp: true
-  - name: 🇨🇦 加拿大145
-    server: dongtaiwang2.com
-    port: 443
-    type: vmess
-    uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        Host: 2.freek1.xyz
-    udp: true
-  - name: 🇺🇲 美国7
+  - name: 🇳🇱 荷兰
     server: amszxc.66666654.xyz
     port: 2095
     type: vmess
@@ -290,50 +102,35 @@ proxies:
       headers:
         Host: amszx.66666654.xyz
     udp: true
-  - name: 哥斯达黎加137
-    server: 190.93.247.11
-    port: 8080
+  - name: 🇺🇲 美国2
+    server: 172.67.65.210
+    port: 80
     type: vmess
-    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /qwer
+      path: /shirker
       headers:
-        Host: ecc.vtcss.top
+        Host: dp3.scproxy.top
     udp: true
-  - name: 🇫🇷 法国212
-    server: 173.245.49.187
-    port: 8880
+  - name: 🇺🇲 美国3
+    server: dongtaiwang2.com
+    port: 443
     type: vmess
-    uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
+    uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /qwer
+      path: /dongtaiwang.com
       headers:
-        Host: ecc.vtcss.top
-    udp: true
-  - name: 🇫🇷 法国92
-    server: 173.245.49.204
-    port: 8080
-    type: vmess
-    uuid: 54d4a5e9-6441-442c-cab7-05620cbe4f7d
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        Host: ecc.vtcss.top
+        Host: 2.freek1.xyz
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -341,58 +138,28 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 中国辽宁NNC
-      - "@hkaa0||美国"
-      - 韩国特殊 5MB
-      - 美国特殊
-      - 狮城特殊
-      - 美国
-      - 日本
-      - 美国12
-      - 草莓的奈飞节点
-      - 新加坡B
-      - "荷兰31\r"
-      - 中国114
-      - 🇫🇷 法国181
-      - 🇫🇷 法国134
-      - 🇺🇲 美国221
-      - 🇺🇲 美国115
-      - 🇳🇱 荷兰62
-      - 🇺🇲 美国82
-      - 🇨🇦 加拿大145
-      - 🇺🇲 美国7
-      - 哥斯达黎加137
-      - 🇫🇷 法国212
-      - 🇫🇷 法国92
+      - 白嫖@mlbldyy
+      - 🇸🇬 新加坡B
+      - 🇺🇲 狮城特殊
+      - 🇺🇲 美国特殊
+      - 🇺🇲 美国1
+      - 🇳🇱 荷兰
+      - 🇺🇲 美国2
+      - 🇺🇲 美国3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 中国辽宁NNC
-      - "@hkaa0||美国"
-      - 韩国特殊 5MB
-      - 美国特殊
-      - 狮城特殊
-      - 美国
-      - 日本
-      - 美国12
-      - 草莓的奈飞节点
-      - 新加坡B
-      - "荷兰31\r"
-      - 中国114
-      - 🇫🇷 法国181
-      - 🇫🇷 法国134
-      - 🇺🇲 美国221
-      - 🇺🇲 美国115
-      - 🇳🇱 荷兰62
-      - 🇺🇲 美国82
-      - 🇨🇦 加拿大145
-      - 🇺🇲 美国7
-      - 哥斯达黎加137
-      - 🇫🇷 法国212
-      - 🇫🇷 法国92
+      - 白嫖@mlbldyy
+      - 🇸🇬 新加坡B
+      - 🇺🇲 狮城特殊
+      - 🇺🇲 美国特殊
+      - 🇺🇲 美国1
+      - 🇳🇱 荷兰
+      - 🇺🇲 美国2
+      - 🇺🇲 美国3
   - name: 🎯 全球直连
     type: select
     proxies:
