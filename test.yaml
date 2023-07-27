@@ -99,15 +99,22 @@ dns:
 proxies:
   # - {name: 名称、别名, type: ssr, server: 服务器地址, port: 服务器端口接口, password: 密码, cipher: 加密方式, protocol: 协议, protocol-param: "协议参数", obfs: 混淆, obfs-param: "混淆参数", udp: true/false}
   # - {name: 名称、别名, type: vmess, server: 服务器地址, port: 80服务器端口接口, uuid: 用户ID只为验证不加密, alterId: 0额外ID验证, cipher: auto加密方式自动, tls: true/false是否进行tls加密传输层安全, skip-cert-verify: true/false是否跳过验证, network: ws底层传输方式, ws-opts: {path: /路径, headers: {Host: 请求头伪装域名}}, udp: true/false}
-  - {"name":"🇺🇲 美国白嫖@mlbldyy","type":"vmess","server":"192.3.124.54","port":35374,"cipher":"auto","uuid":"d211415f-eaeb-4f80-afe8-a5489d5bba0e","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
-  - {"name":"🇸🇬 新加坡B","type":"ss","server":"cm.chylink.xyz","port":11009,"password":"wNuh3WO616MCaVpb","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇺🇲 狮城特殊","type":"ss","server":"13.212.239.81","port":443,"password":"amazonskr05","cipher":"aes-256-cfb","udp":true}
   - {"name":"🇺🇲 美国特殊","type":"ss","server":"34.223.228.213","port":443,"password":"amazonskr05","cipher":"aes-256-cfb","udp":true}
   - {"name":"🇺🇲 美国1","type":"vmess","server":"www.codepen.io","port":443,"cipher":"auto","uuid":"2cd39102-0799-4c61-abb6-2e7a258f0397","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"us-v.sshmax.xyz"}}}
   - {name: 🇳🇱 荷兰, server: amszxc.66666654.xyz, port: 2095, type: vmess, uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hgcefomn, headers: {Host: amszx.66666654.xyz}}, udp: true}
   - {name: 🇺🇲 美国2, server: 172.67.65.210, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}, udp: true}
   - {name: 🇺🇲 美国3, server: dongtaiwang2.com, port: 443, type: vmess, uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: 2.freek1.xyz}}, udp: true}
+  - {"name":"SG01\r","type":"ss","server":"sg01.airpor.top","port":45547,"password":"4f03eaa9-a025-4f82-accd-92df2d82e9d9","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"SG02\r","type":"ss","server":"sg01.airpor.top","port":24369,"password":"4f03eaa9-a025-4f82-accd-92df2d82e9d9","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"JP01\r","type":"ss","server":"jp.airpor.top","port":37083,"password":"4f03eaa9-a025-4f82-accd-92df2d82e9d9","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"JP02\r","type":"ss","server":"jp.airpor.top","port":37815,"password":"4f03eaa9-a025-4f82-accd-92df2d82e9d9","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"US01\r","type":"ss","server":"us01.airpor.top","port":28235,"password":"4f03eaa9-a025-4f82-accd-92df2d82e9d9","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"US02\r","type":"ss","server":"us02.airpor.top","port":28908,"password":"4f03eaa9-a025-4f82-accd-92df2d82e9d9","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"US03\r","type":"ss","server":"us03.airpor.top","port":22870,"password":"4f03eaa9-a025-4f82-accd-92df2d82e9d9","cipher":"chacha20-ietf-poly1305"}
 
+  # - {"name":"🇺🇲 美国白嫖@mlbldyy","type":"vmess","server":"192.3.124.54","port":35374,"cipher":"auto","uuid":"d211415f-eaeb-4f80-afe8-a5489d5bba0e","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  # - {"name":"🇸🇬 新加坡B","type":"ss","server":"cm.chylink.xyz","port":11009,"password":"wNuh3WO616MCaVpb","cipher":"chacha20-ietf-poly1305"}
   # - {"name":"中国辽宁NNC","type":"vmess","server":"cf-lt.sharecentre.online","port":80,"cipher":"auto","uuid":"5f751c6e-50b1-4797-ba8e-6ffe324a0bce","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/shirker","headers":{"host":"ca.ilovescp.com"}}}
   # - {"name":"@hkaa0||美国","type":"vmess","server":"142.4.104.196","port":56000,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
   # - {name: 韩国特殊 5MB, server: 43.201.247.194, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}

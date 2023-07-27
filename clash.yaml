@@ -41,23 +41,6 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 白嫖@mlbldyy
-    type: vmess
-    server: 192.3.124.54
-    port: 35374
-    cipher: auto
-    uuid: d211415f-eaeb-4f80-afe8-a5489d5bba0e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: tcp
-  - name: 🇸🇬 新加坡B
-    type: ss
-    server: cm.chylink.xyz
-    port: 11009
-    password: wNuh3WO616MCaVpb
-    cipher: chacha20-ietf-poly1305
   - name: 🇺🇲 狮城特殊
     type: ss
     server: 13.212.239.81
@@ -132,34 +115,86 @@ proxies:
       headers:
         Host: 2.freek1.xyz
     udp: true
+  - name: "SG01\r"
+    type: ss
+    server: sg01.airpor.top
+    port: 45547
+    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
+    cipher: chacha20-ietf-poly1305
+  - name: "SG02\r"
+    type: ss
+    server: sg01.airpor.top
+    port: 24369
+    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
+    cipher: chacha20-ietf-poly1305
+  - name: "JP01\r"
+    type: ss
+    server: jp.airpor.top
+    port: 37083
+    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
+    cipher: chacha20-ietf-poly1305
+  - name: "JP02\r"
+    type: ss
+    server: jp.airpor.top
+    port: 37815
+    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
+    cipher: chacha20-ietf-poly1305
+  - name: "US01\r"
+    type: ss
+    server: us01.airpor.top
+    port: 28235
+    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
+    cipher: chacha20-ietf-poly1305
+  - name: "US02\r"
+    type: ss
+    server: us02.airpor.top
+    port: 28908
+    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
+    cipher: chacha20-ietf-poly1305
+  - name: "US03\r"
+    type: ss
+    server: us03.airpor.top
+    port: 22870
+    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
+    cipher: chacha20-ietf-poly1305
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 白嫖@mlbldyy
-      - 🇸🇬 新加坡B
       - 🇺🇲 狮城特殊
       - 🇺🇲 美国特殊
       - 🇺🇲 美国1
       - 🇳🇱 荷兰
       - 🇺🇲 美国2
       - 🇺🇲 美国3
+      - "SG01\r"
+      - "SG02\r"
+      - "JP01\r"
+      - "JP02\r"
+      - "US01\r"
+      - "US02\r"
+      - "US03\r"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 白嫖@mlbldyy
-      - 🇸🇬 新加坡B
       - 🇺🇲 狮城特殊
       - 🇺🇲 美国特殊
       - 🇺🇲 美国1
       - 🇳🇱 荷兰
       - 🇺🇲 美国2
       - 🇺🇲 美国3
+      - "SG01\r"
+      - "SG02\r"
+      - "JP01\r"
+      - "JP02\r"
+      - "US01\r"
+      - "US02\r"
+      - "US03\r"
   - name: 🎯 全球直连
     type: select
     proxies:
