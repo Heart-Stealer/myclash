@@ -99,6 +99,7 @@ dns:
 proxies:
   # - {name: 名称、别名, type: ssr, server: 服务器地址, port: 服务器端口接口, password: 密码, cipher: 加密方式, protocol: 协议, protocol-param: "协议参数", obfs: 混淆, obfs-param: "混淆参数", udp: true/false}
   # - {name: 名称、别名, type: vmess, server: 服务器地址, port: 80服务器端口接口, uuid: 用户ID只为验证不加密, alterId: 0额外ID验证, cipher: auto加密方式自动, tls: true/false是否进行tls加密传输层安全, skip-cert-verify: true/false是否跳过验证, network: ws底层传输方式, ws-opts: {path: /路径, headers: {Host: 请求头伪装域名}}, udp: true/false}
+  - {"name":"🇸🇬尽头の新加坡Linode","type":"trojan","server":"112.29.94.13","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
   - {"name":"中国辽宁NNC","type":"vmess","server":"cf-lt.sharecentre.online","port":80,"cipher":"auto","uuid":"5f751c6e-50b1-4797-ba8e-6ffe324a0bce","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/shirker","headers":{"host":"ca.ilovescp.com"}}}
   - {name: 🇺🇲 美国0, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp1.scproxy.top}}, udp: true}
   - {name: 🇺🇲 美国1, server: 172.64.96.134, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp1.scproxy.top}}, udp: true}
@@ -106,6 +107,8 @@ proxies:
   - {name: 中国深圳224, server: 120.233.43.74, port: 41273, type: vmess, uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 🇺🇲 美国2, server: 172.67.65.210, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}, udp: true}
   - {name: 🇺🇲 美国3, server: dongtaiwang2.com, port: 443, type: vmess, uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: 2.freek1.xyz}}, udp: true}
+
+  - {"name":"🇺🇸美国 07|专线","type":"trojan","server":"us7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou","port":443,"udp":true,"password":"983cae74-b11c-4a86-92a7-3121acdcf0a1","sni":"13-251-128-188.nhost.00cdn.com","skip-cert-verify":true,"network":"tcp"}
 
   # - {"name":"🇺🇲 狮城特殊","type":"ss","server":"13.212.239.81","port":443,"password":"amazonskr05","cipher":"aes-256-cfb","udp":true}
   # - {"name":"🇺🇲 美国特殊","type":"ss","server":"34.223.228.213","port":443,"password":"amazonskr05","cipher":"aes-256-cfb","udp":true}
