@@ -63,6 +63,15 @@ proxies:
       path: /shirker
       headers:
         host: ca.ilovescp.com
+  - name: 🇺🇸美国 07|专线
+    type: trojan
+    server: us7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou
+    port: 443
+    udp: true
+    password: 983cae74-b11c-4a86-92a7-3121acdcf0a1
+    sni: 13-251-128-188.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
   - name: 🇺🇲 美国0
     server: cf-lt.sharecentre.online
     port: 80
@@ -148,15 +157,6 @@ proxies:
       headers:
         Host: 2.freek1.xyz
     udp: true
-  - name: 🇺🇸美国 07|专线
-    type: trojan
-    server: us7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou
-    port: 443
-    udp: true
-    password: 983cae74-b11c-4a86-92a7-3121acdcf0a1
-    sni: 13-251-128-188.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -165,13 +165,13 @@ proxy-groups:
       - DIRECT
       - 🇸🇬尽头の新加坡Linode
       - 中国辽宁NNC
+      - 🇺🇸美国 07|专线
       - 🇺🇲 美国0
       - 🇺🇲 美国1
       - 🇳🇱 荷兰
       - 中国深圳224
       - 🇺🇲 美国2
       - 🇺🇲 美国3
-      - 🇺🇸美国 07|专线
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -180,13 +180,13 @@ proxy-groups:
     proxies:
       - 🇸🇬尽头の新加坡Linode
       - 中国辽宁NNC
+      - 🇺🇸美国 07|专线
       - 🇺🇲 美国0
       - 🇺🇲 美国1
       - 🇳🇱 荷兰
       - 中国深圳224
       - 🇺🇲 美国2
       - 🇺🇲 美国3
-      - 🇺🇸美国 07|专线
   - name: 🎯 全球直连
     type: select
     proxies:
