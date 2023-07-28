@@ -41,19 +41,49 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 🇺🇲 狮城特殊
-    type: ss
-    server: 13.212.239.81
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
+  - name: 中国辽宁NNC
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+  - name: 🇺🇲 美国0
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp1.scproxy.top
     udp: true
-  - name: 🇺🇲 美国特殊
-    type: ss
-    server: 34.223.228.213
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
+  - name: 🇺🇲 美国1
+    server: 172.64.96.134
+    port: 80
+    type: vmess
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp1.scproxy.top
     udp: true
   - name: 🇳🇱 荷兰
     server: amszxc.66666654.xyz
@@ -70,33 +100,16 @@ proxies:
       headers:
         Host: amszx.66666654.xyz
     udp: true
-  - name: "JP01\r"
-    type: ss
-    server: jp.airpor.top
-    port: 37083
-    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
-    cipher: chacha20-ietf-poly1305
-  - name: "JP02\r"
-    type: ss
-    server: jp.airpor.top
-    port: 37815
-    password: 4f03eaa9-a025-4f82-accd-92df2d82e9d9
-    cipher: chacha20-ietf-poly1305
-  - name: 🇺🇲 美国1
+  - name: 中国深圳224
+    server: 120.233.43.74
+    port: 41273
     type: vmess
-    server: www.codepen.io
-    port: 443
+    uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd
+    alterId: 64
     cipher: auto
-    uuid: 2cd39102-0799-4c61-abb6-2e7a258f0397
-    alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        host: us-v.sshmax.xyz
+    udp: true
   - name: 🇺🇲 美国2
     server: 172.67.65.210
     port: 80
@@ -133,12 +146,11 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇲 狮城特殊
-      - 🇺🇲 美国特殊
-      - 🇳🇱 荷兰
-      - "JP01\r"
-      - "JP02\r"
+      - 中国辽宁NNC
+      - 🇺🇲 美国0
       - 🇺🇲 美国1
+      - 🇳🇱 荷兰
+      - 中国深圳224
       - 🇺🇲 美国2
       - 🇺🇲 美国3
   - name: ♻️ 自动选择
@@ -147,12 +159,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇲 狮城特殊
-      - 🇺🇲 美国特殊
-      - 🇳🇱 荷兰
-      - "JP01\r"
-      - "JP02\r"
+      - 中国辽宁NNC
+      - 🇺🇲 美国0
       - 🇺🇲 美国1
+      - 🇳🇱 荷兰
+      - 中国深圳224
       - 🇺🇲 美国2
       - 🇺🇲 美国3
   - name: 🎯 全球直连
