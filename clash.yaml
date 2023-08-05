@@ -41,39 +41,8 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 🇸🇬尽头の新加坡Linode
-    type: trojan
-    server: 112.29.94.13
-    port: 443
-    udp: true
-    password: "123456"
-    skip-cert-verify: true
-    network: tcp
-  - name: 中国辽宁NNC
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
-  - name: 🇺🇸美国 07|专线
-    type: trojan
-    server: us7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou
-    port: 443
-    udp: true
-    password: 983cae74-b11c-4a86-92a7-3121acdcf0a1
-    sni: 13-251-128-188.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇲 美国0
-    server: cf-lt.sharecentre.online
+  - name: 🇨🇳 辽宁
+    server: 173.245.49.236
     port: 80
     type: vmess
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
@@ -85,24 +54,9 @@ proxies:
     ws-opts:
       path: /shirker
       headers:
-        Host: dp1.scproxy.top
+        Host: ca.ilovescp.com
     udp: true
-  - name: 🇺🇲 美国1
-    server: 172.64.96.134
-    port: 80
-    type: vmess
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp1.scproxy.top
-    udp: true
-  - name: 🇳🇱 荷兰
+  - name: 🇧🇷 巴西 5MB
     server: amszxc.66666654.xyz
     port: 2095
     type: vmess
@@ -117,16 +71,41 @@ proxies:
       headers:
         Host: amszx.66666654.xyz
     udp: true
-  - name: 中国深圳224
-    server: 120.233.43.74
-    port: 41273
+  - name: 🇨🇳 辽宁NNC
     type: vmess
-    uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd
-    alterId: 64
+    server: 173.245.49.236
+    port: 80
     cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
     tls: false
     skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+  - name: 🇸🇬尽头の新加坡Linode
+    type: trojan
+    server: 112.29.94.13
+    port: 443
     udp: true
+    password: "123456"
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇲 美国3 1MB
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp3.scproxy.top
   - name: 🇺🇲 美国2
     server: 172.67.65.210
     port: 80
@@ -142,20 +121,20 @@ proxies:
       headers:
         Host: dp3.scproxy.top
     udp: true
-  - name: 🇺🇲 美国3
-    server: dongtaiwang2.com
-    port: 443
+  - name: 🇺🇲 美国0
+    server: cf-lt.sharecentre.online
+    port: 80
     type: vmess
-    uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /dongtaiwang.com
+      path: /shirker
       headers:
-        Host: 2.freek1.xyz
+        Host: dp1.scproxy.top
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -163,30 +142,26 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇨🇳 辽宁
+      - 🇧🇷 巴西 5MB
+      - 🇨🇳 辽宁NNC
       - 🇸🇬尽头の新加坡Linode
-      - 中国辽宁NNC
-      - 🇺🇸美国 07|专线
-      - 🇺🇲 美国0
-      - 🇺🇲 美国1
-      - 🇳🇱 荷兰
-      - 中国深圳224
+      - 🇺🇲 美国3 1MB
       - 🇺🇲 美国2
-      - 🇺🇲 美国3
+      - 🇺🇲 美国0
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇨🇳 辽宁
+      - 🇧🇷 巴西 5MB
+      - 🇨🇳 辽宁NNC
       - 🇸🇬尽头の新加坡Linode
-      - 中国辽宁NNC
-      - 🇺🇸美国 07|专线
-      - 🇺🇲 美国0
-      - 🇺🇲 美国1
-      - 🇳🇱 荷兰
-      - 中国深圳224
+      - 🇺🇲 美国3 1MB
       - 🇺🇲 美国2
-      - 🇺🇲 美国3
+      - 🇺🇲 美国0
   - name: 🎯 全球直连
     type: select
     proxies:
