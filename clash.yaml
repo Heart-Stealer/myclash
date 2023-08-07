@@ -41,6 +41,214 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
+  - name: 🇦🇺_AU_澳大利亚
+    type: vmess
+    server: v01.gutingting.com
+    port: 30063
+    cipher: auto
+    uuid: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        host: sh01.fastcloud.club
+  - name: 🇭🇰_HK_香港_1
+    type: trojan
+    server: v01.gutingting.com
+    port: 30017
+    udp: true
+    password: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    sni: v2hgc01.fuqiangren.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇭🇰_HK_香港_2
+    type: vmess
+    server: v01.gutingting.com
+    port: 30015
+    cipher: auto
+    uuid: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        host: gz.fastcloud.club
+  - name: 🇹🇼_TW_台湾
+    type: vmess
+    server: v01.gutingting.com
+    port: 30064
+    cipher: auto
+    uuid: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        host: sh01.fastcloud.club
+  - name: 🇬🇧_GB_英国_1
+    type: vmess
+    server: v01.gutingting.com
+    port: 30040
+    cipher: auto
+    uuid: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        host: sh01.fastcloud.club
+  - name: 🇺🇸_US_美国_4
+    type: vmess
+    server: v01.gutingting.com
+    port: 30048
+    cipher: auto
+    uuid: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        host: sh02.fastcloud.club
+  - name: 🇸🇬_SG_新加坡
+    type: trojan
+    server: v02.gutingting.com
+    port: 20223
+    udp: true
+    password: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    sni: v2sg01.fuqiangren.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇭🇰_HK_香港_3
+    type: vmess
+    server: v02.gutingting.com
+    port: 30023
+    cipher: auto
+    uuid: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        host: gz.fastcloud.club
+  - name: 🇬🇧_GB_英国_2
+    type: vmess
+    server: v02.gutingting.com
+    port: 30062
+    cipher: auto
+    uuid: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        host: sh01.fastcloud.club
+  - name: 🇬🇧_GB_英国_3
+    type: vmess
+    server: v02.gutingting.com
+    port: 30060
+    cipher: auto
+    uuid: a41d2775-aa1f-4d11-83d6-46afa793c5c5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        host: sh01.fastcloud.club
+  - name: 🇰🇷_KR_韩国
+    type: trojan
+    server: k-r01.xingyunwu.top
+    port: 50020
+    udp: true
+    password: fad6dff0-9437-4ff1-ab9f-f96c48efc928
+    sni: xingyunwu.top
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇯🇵_JP_日本_1
+    type: trojan
+    server: j-p01.xingyunwu.top
+    port: 50044
+    udp: true
+    password: fad6dff0-9437-4ff1-ab9f-f96c48efc928
+    sni: xingyunwu.top
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇯🇵_JP_日本_2
+    type: trojan
+    server: j-p04.xingyunwu.top
+    port: 50092
+    udp: true
+    password: fad6dff0-9437-4ff1-ab9f-f96c48efc928
+    sni: xingyunwu.top
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇨🇳_CN_中国
+    type: trojan
+    server: u-s02.xingyunwu.top
+    port: 50030
+    udp: true
+    password: fad6dff0-9437-4ff1-ab9f-f96c48efc928
+    sni: xingyunwu.top
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇨🇦_CA_加拿大
+    type: trojan
+    server: c-a01.xingyunwu.top
+    port: 50080
+    udp: true
+    password: fad6dff0-9437-4ff1-ab9f-f96c48efc928
+    sni: xingyunwu.top
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 21.kccic2pa.xyz
+    port: 50021
+    cipher: auto
+    uuid: 93ca7271-b80d-42dc-9dcc-000965239fb5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_10
+    type: trojan
+    server: 163.123.192.154
+    port: 443
+    udp: true
+    password: d31792a4-b843-469f-9185-4a6111ff7612
+    skip-cert-verify: true
+    network: tcp
+  - name: 日本-中转
+    type: vmess
+    server: cf.cachexy.my.id
+    port: 80
+    cipher: auto
+    uuid: 9c047f26-d689-49e4-8da7-cafe38910811
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /9SCqOah8/
+      headers:
+        host: jp2.acg88.link
   - name: 🇨🇳 辽宁
     server: 173.245.49.236
     port: 80
@@ -56,24 +264,9 @@ proxies:
       headers:
         Host: ca.ilovescp.com
     udp: true
-  - name: 🇧🇷 巴西 5MB
-    server: amszxc.66666654.xyz
-    port: 2095
+  - name: 🇨🇳 辽宁NNC 3MB
     type: vmess
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        Host: amszx.66666654.xyz
-    udp: true
-  - name: 🇨🇳 辽宁NNC
-    type: vmess
-    server: 173.245.49.236
+    server: cf-lt.sharecentre.online
     port: 80
     cipher: auto
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
@@ -85,14 +278,6 @@ proxies:
       path: /shirker
       headers:
         host: ca.ilovescp.com
-  - name: 🇸🇬尽头の新加坡Linode
-    type: trojan
-    server: 112.29.94.13
-    port: 443
-    udp: true
-    password: "123456"
-    skip-cert-verify: true
-    network: tcp
   - name: 🇺🇲 美国3 1MB
     server: cf-lt.sharecentre.online
     port: 80
@@ -121,6 +306,36 @@ proxies:
       headers:
         Host: dp3.scproxy.top
     udp: true
+  - name: 🇺🇲 美国特殊
+    type: ss
+    server: 34.223.228.213
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+    udp: true
+  - name: 🇧🇷 巴西 5MB
+    server: amszxc.66666654.xyz
+    port: 2095
+    type: vmess
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        Host: amszx.66666654.xyz
+    udp: true
+  - name: 🇸🇬尽头の新加坡Linode
+    type: trojan
+    server: 112.29.94.13
+    port: 443
+    udp: true
+    password: "123456"
+    skip-cert-verify: true
+    network: tcp
   - name: 🇺🇲 美国0
     server: cf-lt.sharecentre.online
     port: 80
@@ -142,12 +357,31 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇦🇺_AU_澳大利亚
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇹🇼_TW_台湾
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_4
+      - 🇸🇬_SG_新加坡
+      - 🇭🇰_HK_香港_3
+      - 🇬🇧_GB_英国_2
+      - 🇬🇧_GB_英国_3
+      - 🇰🇷_KR_韩国
+      - 🇯🇵_JP_日本_1
+      - 🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_10
+      - 日本-中转
       - 🇨🇳 辽宁
-      - 🇧🇷 巴西 5MB
-      - 🇨🇳 辽宁NNC
-      - 🇸🇬尽头の新加坡Linode
+      - 🇨🇳 辽宁NNC 3MB
       - 🇺🇲 美国3 1MB
       - 🇺🇲 美国2
+      - 🇺🇲 美国特殊
+      - 🇧🇷 巴西 5MB
+      - 🇸🇬尽头の新加坡Linode
       - 🇺🇲 美国0
   - name: ♻️ 自动选择
     type: url-test
@@ -155,12 +389,31 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇦🇺_AU_澳大利亚
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇹🇼_TW_台湾
+      - 🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_4
+      - 🇸🇬_SG_新加坡
+      - 🇭🇰_HK_香港_3
+      - 🇬🇧_GB_英国_2
+      - 🇬🇧_GB_英国_3
+      - 🇰🇷_KR_韩国
+      - 🇯🇵_JP_日本_1
+      - 🇯🇵_JP_日本_2
+      - 🇨🇳_CN_中国
+      - 🇨🇦_CA_加拿大
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_10
+      - 日本-中转
       - 🇨🇳 辽宁
-      - 🇧🇷 巴西 5MB
-      - 🇨🇳 辽宁NNC
-      - 🇸🇬尽头の新加坡Linode
+      - 🇨🇳 辽宁NNC 3MB
       - 🇺🇲 美国3 1MB
       - 🇺🇲 美国2
+      - 🇺🇲 美国特殊
+      - 🇧🇷 巴西 5MB
+      - 🇸🇬尽头の新加坡Linode
       - 🇺🇲 美国0
   - name: 🎯 全球直连
     type: select
