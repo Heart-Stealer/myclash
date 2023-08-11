@@ -41,7 +41,15 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 🇯🇵尽头の日本Linode
+  - name: 🇭🇰尽头のCN2+HK
+    type: trojan
+    server: 103.15.217.182
+    port: 33058
+    udp: true
+    password: QHhbhwe6lj
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇸🇬尽头の新加坡Linode
     type: trojan
     server: 112.29.94.13
     port: 443
@@ -49,6 +57,39 @@ proxies:
     password: "123456"
     skip-cert-verify: true
     network: tcp
+  - name: 🇭🇰尽头の新加坡
+    server: 112.29.94.13
+    port: 443
+    type: trojan
+    password: "123456"
+    skip-cert-verify: true
+    udp: true
+  - name: 伦敦
+    type: vmess
+    server: 18.170.58.163
+    port: 35733
+    cipher: auto
+    uuid: 7ff16e3b-b6e2-48ed-d668-3d6dc186f62f
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: 可更换优选
+    type: vmess
+    server: cf.thaseunknown.com
+    port: 8080
+    cipher: auto
+    uuid: 0306fea1-427b-4d08-9b2d-cf8a4078d634
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: chinam.eu.org
   - name: 🇨🇳 辽宁
     server: 173.245.49.236
     port: 80
@@ -100,22 +141,6 @@ proxies:
       headers:
         Host: dp3.scproxy.top
     udp: true
-  - name: "🇸🇬_SG_新加坡_1 "
-    type: ss
-    server: 3.0.182.218
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - name: 🇦🇹_AT_奥地利
-    type: vmess
-    server: 07.kccic2pa.xyz
-    port: 50007
-    cipher: auto
-    uuid: 06bd0689-dee1-4e2f-9413-659ff89f4e87
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
   - name: 🇺🇲 美国3 1MB
     server: cf-lt.sharecentre.online
     port: 80
@@ -129,71 +154,38 @@ proxies:
       path: /shirker
       headers:
         Host: dp3.scproxy.top
-  - name: 🇺🇲 美国0
-    server: cf-lt.sharecentre.online
-    port: 80
-    type: vmess
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp1.scproxy.top
-    udp: true
-  - name: 🇺🇸_US_美国_9
-    type: trojan
-    server: 163.123.192.154
-    port: 443
-    udp: true
-    password: d31792a4-b843-469f-9185-4a6111ff7612
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇸_US_美国_10
-    type: trojan
-    server: 163.123.192.154
-    port: 443
-    udp: true
-    password: d31792a4-b843-469f-9185-4a6111ff7612
-    skip-cert-verify: true
-    network: tcp
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇯🇵尽头の日本Linode
+      - 🇭🇰尽头のCN2+HK
+      - 🇸🇬尽头の新加坡Linode
+      - 🇭🇰尽头の新加坡
+      - 伦敦
+      - 可更换优选
       - 🇨🇳 辽宁
       - 🇨🇳 辽宁NNC 3MB
       - 🇺🇲 美国特殊
       - 🇺🇲 美国2
-      - "🇸🇬_SG_新加坡_1 "
-      - 🇦🇹_AT_奥地利
       - 🇺🇲 美国3 1MB
-      - 🇺🇲 美国0
-      - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国_10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇯🇵尽头の日本Linode
+      - 🇭🇰尽头のCN2+HK
+      - 🇸🇬尽头の新加坡Linode
+      - 🇭🇰尽头の新加坡
+      - 伦敦
+      - 可更换优选
       - 🇨🇳 辽宁
       - 🇨🇳 辽宁NNC 3MB
       - 🇺🇲 美国特殊
       - 🇺🇲 美国2
-      - "🇸🇬_SG_新加坡_1 "
-      - 🇦🇹_AT_奥地利
       - 🇺🇲 美国3 1MB
-      - 🇺🇲 美国0
-      - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国_10
   - name: 🎯 全球直连
     type: select
     proxies:
