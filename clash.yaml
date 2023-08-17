@@ -49,7 +49,7 @@ proxies:
     password: QHhbhwe6lj
     skip-cert-verify: true
     network: tcp
-  - name: 🇸🇬尽头の香港
+  - name: 🇭🇰_HK尽头の香港
     type: trojan
     server: 112.29.94.13
     port: 443
@@ -57,13 +57,21 @@ proxies:
     password: "123456"
     skip-cert-verify: true
     network: tcp
-  - name: 🇭🇰_HK尽头の香港
-    server: 112.29.94.13
+  - name: 越南
+    type: vmess
+    server: 172.67.181.34
     port: 443
-    type: trojan
-    password: "123456"
+    cipher: auto
+    uuid: d4d48322-fce8-4362-cab7-8eaf51a37a7d
+    alterId: 0
+    tls: true
     skip-cert-verify: true
-    udp: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /d4d48322-fce8-4362-cab7-8eaf51a37a7d
+      headers:
+        host: yn.mlbldzz.top
   - name: 🇨🇳 辽宁NNC 有检测
     type: vmess
     server: cf-lt.sharecentre.online
@@ -113,8 +121,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🇭🇰_HK尽头のCN2香港
-      - 🇸🇬尽头の香港
       - 🇭🇰_HK尽头の香港
+      - 越南
       - 🇨🇳 辽宁NNC 有检测
       - 🇺🇲 美国2
       - 🇺🇲 美国3 有检测
@@ -125,8 +133,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇭🇰_HK尽头のCN2香港
-      - 🇸🇬尽头の香港
       - 🇭🇰_HK尽头の香港
+      - 越南
       - 🇨🇳 辽宁NNC 有检测
       - 🇺🇲 美国2
       - 🇺🇲 美国3 有检测
