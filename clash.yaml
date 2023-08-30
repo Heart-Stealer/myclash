@@ -41,7 +41,7 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 🇭🇰_HK尽头のCN2香港
+  - name: 🇭🇰_HK尽头のCN2香港0.6MB
     type: trojan
     server: 103.15.217.182
     port: 33058
@@ -49,7 +49,7 @@ proxies:
     password: QHhbhwe6lj
     skip-cert-verify: true
     network: tcp
-  - name: 🇭🇰_HK尽头の香港
+  - name: 🇭🇰_HK尽头の香港6MB
     type: trojan
     server: 112.29.94.13
     port: 443
@@ -57,35 +57,14 @@ proxies:
     password: "123456"
     skip-cert-verify: true
     network: tcp
-  - name: 越南
-    type: vmess
-    server: 172.67.181.34
+  - name: JP日本002
+    type: trojan
+    server: jp.stablize.top
     port: 443
-    cipher: auto
-    uuid: d4d48322-fce8-4362-cab7-8eaf51a37a7d
-    alterId: 0
-    tls: true
+    udp: true
+    password: 11295cd8-5269-4304-bf6c-838241aa0c5e
     skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /d4d48322-fce8-4362-cab7-8eaf51a37a7d
-      headers:
-        host: yn.mlbldzz.top
-  - name: 🇨🇳 辽宁NNC 有检测
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
+    network: tcp
   - name: 🇺🇲 美国2
     server: 172.67.65.210
     port: 80
@@ -120,10 +99,9 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇭🇰_HK尽头のCN2香港
-      - 🇭🇰_HK尽头の香港
-      - 越南
-      - 🇨🇳 辽宁NNC 有检测
+      - 🇭🇰_HK尽头のCN2香港0.6MB
+      - 🇭🇰_HK尽头の香港6MB
+      - JP日本002
       - 🇺🇲 美国2
       - 🇺🇲 美国3 有检测
   - name: ♻️ 自动选择
@@ -132,10 +110,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇭🇰_HK尽头のCN2香港
-      - 🇭🇰_HK尽头の香港
-      - 越南
-      - 🇨🇳 辽宁NNC 有检测
+      - 🇭🇰_HK尽头のCN2香港0.6MB
+      - 🇭🇰_HK尽头の香港6MB
+      - JP日本002
       - 🇺🇲 美国2
       - 🇺🇲 美国3 有检测
   - name: 🎯 全球直连

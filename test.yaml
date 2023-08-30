@@ -99,17 +99,23 @@ dns:
 proxies:
   # # - {name: 名称、别名, type: ssr, server: 服务器地址, port: 服务器端口接口, password: 密码, cipher: 加密方式, protocol: 协议, protocol-param: "协议参数", obfs: 混淆, obfs-param: "混淆参数", udp: true/false}
   # # - {name: 名称、别名, type: vmess, server: 服务器地址, port: 80服务器端口接口, uuid: 用户ID只为验证不加密, alterId: 0额外ID验证, cipher: auto加密方式自动, tls: true/false是否进行tls加密传输层安全, skip-cert-verify: true/false是否跳过验证, network: ws底层传输方式, ws-opts: {path: /路径, headers: {Host: 请求头伪装域名}}, udp: true/false}
-  - {"name":"🇭🇰_HK尽头のCN2香港","type":"trojan","server":"103.15.217.182","port":33058,"udp":true,"password":"QHhbhwe6lj","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇭🇰_HK尽头の香港","type":"trojan","server":"112.29.94.13","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
-  # - {"name":"🇭🇰_HK尽头のCN2香港","type":"trojan","server":"103.15.217.182","port":33058,"udp":true,"password":"QHhbhwe6lj","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰_HK尽头のCN2香港0.6MB","type":"trojan","server":"103.15.217.182","port":33058,"udp":true,"password":"QHhbhwe6lj","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰_HK尽头の香港6MB","type":"trojan","server":"112.29.94.13","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
+  # - {"name":"🇸🇬尽头の香港","type":"trojan","server":"112.29.94.13","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
   # - {name: 🇭🇰_HK尽头の香港, server: 112.29.94.13, port: 443, type: trojan, password: !<str> 123456, skip-cert-verify: true, udp: true}
-  - {"name":"越南","type":"vmess","server":"172.67.181.34","port":443,"cipher":"auto","uuid":"d4d48322-fce8-4362-cab7-8eaf51a37a7d","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/d4d48322-fce8-4362-cab7-8eaf51a37a7d","headers":{"host":"yn.mlbldzz.top"}}}
-  - {"name":"🇨🇳 辽宁NNC 有检测","type":"vmess","server":"cf-lt.sharecentre.online","port":80,"cipher":"auto","uuid":"5f751c6e-50b1-4797-ba8e-6ffe324a0bce","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/shirker","headers":{"host":"ca.ilovescp.com"}}}
+  - {"name":"JP日本002","type":"trojan","server":"jp.stablize.top","port":443,"udp":true,"password":"11295cd8-5269-4304-bf6c-838241aa0c5e","skip-cert-verify":true,"network":"tcp"}
   - {name: 🇺🇲 美国2, server: 172.67.65.210, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}, udp: true}
   - {name: 🇺🇲 美国3 有检测, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}}
-  # - {"name":"🇸🇬尽头の香港","type":"trojan","server":"112.29.94.13","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
-
+  # - {name: 🇨🇳 辽宁, server: 112.126.72.158, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: ca.ilovescp.com}}, udp: true}
   # - {name: 🇨🇳 辽宁, server: 173.245.49.236, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: ca.ilovescp.com}}, udp: true}
+  # - {"name":"美国","type":"vmess","server":"cf.cachexy.my.id","port":80,"cipher":"auto","uuid":"7e7f8398-bd39-49d8-9ce6-e48ffef463dd","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/2TokGE9A/","headers":{"host":"us6.cachexy.cf"}}}
+  # - {name: warp+, type: wireguard, server: 162.159.192.76, port: 5956, ip: 172.16.0.2, public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=, private-key: cGMkJLRSGDtRSe+blrtyAYhA5OZRMr71eYPVuTUgu3A=, mtu: 1280, udp: true}
+  # - {"name":"🇭🇰_HK尽头のCN2香港","type":"trojan","server":"103.15.217.182","port":33058,"udp":true,"password":"QHhbhwe6lj","skip-cert-verify":true,"network":"tcp"}
+  # - {"name":"🇨🇳 辽宁NNC 有检测","type":"vmess","server":"cf-lt.sharecentre.online","port":80,"cipher":"auto","uuid":"5f751c6e-50b1-4797-ba8e-6ffe324a0bce","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/shirker","headers":{"host":"ca.ilovescp.com"}}}
+
+
+
+  # - {"name":"越南","type":"vmess","server":"172.67.181.34","port":443,"cipher":"auto","uuid":"d4d48322-fce8-4362-cab7-8eaf51a37a7d","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/d4d48322-fce8-4362-cab7-8eaf51a37a7d","headers":{"host":"yn.mlbldzz.top"}}}
   # - {"name":"🇺🇲 美国特殊","type":"ss","server":"34.223.228.213","port":443,"password":"amazonskr05","cipher":"aes-256-cfb","udp":true}
   # - {"name":"可更换优选","type":"vmess","server":"cf.thaseunknown.com","port":8080,"cipher":"auto","uuid":"0306fea1-427b-4d08-9b2d-cf8a4078d634","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"chinam.eu.org"}}}
   # - {"name":"香港优选","type":"vmess","server":"112.126.72.158","port":443,"cipher":"auto","uuid":"7ce1fd0a-3a13-4b77-f5c2-3dca958c0f99","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/7ce1fd0a-3a13-4b77-f5c2-3dca958c0f99","headers":{"host":"dddd.mlbldzz.top"}}}
