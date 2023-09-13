@@ -41,6 +41,21 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
+  - name: 🇨🇳 辽宁2
+    server: 173.245.49.236
+    port: 80
+    type: vmess
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: ca.ilovescp.com
+    udp: true
   - name: 🇭🇰_HK尽头のCN2香港0.6MB
     type: trojan
     server: 103.15.217.182
@@ -93,28 +108,246 @@ proxies:
       path: /shirker
       headers:
         Host: dp3.scproxy.top
+  - name: 法国_1
+    type: vmess
+    server: ip.skk.moe
+    port: 80
+    cipher: auto
+    uuid: 4ff4e04b-c4e6-4515-a99e-7b39b893c594
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /g5D0hFMY/
+      headers:
+        host: fr2.cachexy.ga
+  - name: 法国_2
+    type: vmess
+    server: 104.29.64.24
+    port: 80
+    cipher: auto
+    uuid: 4ff4e04b-c4e6-4515-a99e-7b39b893c594
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /g5D0hFMY/
+      headers:
+        host: fr2.cachexy.ga
+  - name: 美国_1
+    type: vmess
+    server: cdn.chigua.tk
+    port: 80
+    cipher: auto
+    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /2TokGE9A/
+      headers:
+        host: us6.cachexy.cf
+  - name: 美国_2
+    type: vmess
+    server: cm-cdn.cnnic.rip
+    port: 80
+    cipher: auto
+    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /2TokGE9A/
+      headers:
+        host: us6.cachexy.cf
+  - name: 美国23
+    type: vmess
+    server: v117.runba.gq
+    port: 80
+    cipher: auto
+    uuid: 892ebb75-7055-3007-8d16-356e65c6a49a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /v117DEcxDXxxOvD
+  - name: v2香港原生2
+    type: vmess
+    server: tw22.tutu4.one
+    port: 443
+    cipher: auto
+    uuid: 8569a016-24e9-34cd-a9d2-9de42c6ca245
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /cmi
+      headers:
+        host: tw22.tutu4.one
+  - name: 俄罗斯01 CDN隧道 1.2x
+    type: vmess
+    server: tg_mfbpn_i1.52vpn.eu.org
+    port: 63009
+    cipher: auto
+    uuid: 5c6cd0c9-266e-33e0-8b57-a39ac02ece51
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ru01.tencent.best
+  - name: 印度01 CDN隧道 1.5x
+    type: vmess
+    server: tg_mfbpn_i1.52vpn.eu.org
+    port: 63051
+    cipher: auto
+    uuid: 5c6cd0c9-266e-33e0-8b57-a39ac02ece51
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: in01.mycdn888.xyz
+  - name: 新加坡 隧道 均衡负载 动态IP 1.3x
+    type: vmess
+    server: tg_mfbpn_i1.52vpn.eu.org
+    port: 63012
+    cipher: auto
+    uuid: 5c6cd0c9-266e-33e0-8b57-a39ac02ece51
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: 日本A 隧道 1.6x
+    type: vmess
+    server: tg_mfbpn_i1.52vpn.eu.org
+    port: 63011
+    cipher: auto
+    uuid: 5c6cd0c9-266e-33e0-8b57-a39ac02ece51
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jp-a-mugua.weibo-cdn.best
+  - name: 澳洲01 隧道 | 2x
+    type: vmess
+    server: tg_mfbpn_i1.52vpn.eu.org
+    port: 63003
+    cipher: auto
+    uuid: 5c6cd0c9-266e-33e0-8b57-a39ac02ece51
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: V2-新加坡06 套娃 中继 1.5x
+    type: vmess
+    server: tg_mfbpn_i1.52vpn.eu.org
+    port: 63093
+    cipher: auto
+    uuid: 5c6cd0c9-266e-33e0-8b57-a39ac02ece51
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: V2-香港B 隧道 1.6x
+    type: vmess
+    server: tg_mfbpn_i1.52vpn.eu.org
+    port: 63010
+    cipher: auto
+    uuid: 5c6cd0c9-266e-33e0-8b57-a39ac02ece51
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
+  - name: V2-香港FDC01 | 中继 2x
+    type: vmess
+    server: tg_mfbpn_i1.52vpn.eu.org
+    port: 63090
+    cipher: auto
+    uuid: 5c6cd0c9-266e-33e0-8b57-a39ac02ece51
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: tcp
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇨🇳 辽宁2
       - 🇭🇰_HK尽头のCN2香港0.6MB
       - 🇭🇰_HK尽头の香港6MB
       - JP日本002
       - 🇺🇲 美国2
       - 🇺🇲 美国3 有检测
+      - 法国_1
+      - 法国_2
+      - 美国_1
+      - 美国_2
+      - 美国23
+      - v2香港原生2
+      - 俄罗斯01 CDN隧道 1.2x
+      - 印度01 CDN隧道 1.5x
+      - 新加坡 隧道 均衡负载 动态IP 1.3x
+      - 日本A 隧道 1.6x
+      - 澳洲01 隧道 | 2x
+      - V2-新加坡06 套娃 中继 1.5x
+      - V2-香港B 隧道 1.6x
+      - V2-香港FDC01 | 中继 2x
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇨🇳 辽宁2
       - 🇭🇰_HK尽头のCN2香港0.6MB
       - 🇭🇰_HK尽头の香港6MB
       - JP日本002
       - 🇺🇲 美国2
       - 🇺🇲 美国3 有检测
+      - 法国_1
+      - 法国_2
+      - 美国_1
+      - 美国_2
+      - 美国23
+      - v2香港原生2
+      - 俄罗斯01 CDN隧道 1.2x
+      - 印度01 CDN隧道 1.5x
+      - 新加坡 隧道 均衡负载 动态IP 1.3x
+      - 日本A 隧道 1.6x
+      - 澳洲01 隧道 | 2x
+      - V2-新加坡06 套娃 中继 1.5x
+      - V2-香港B 隧道 1.6x
+      - V2-香港FDC01 | 中继 2x
   - name: 🎯 全球直连
     type: select
     proxies:
