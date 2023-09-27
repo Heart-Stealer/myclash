@@ -159,7 +159,6 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 家庭-wireguard
       - JP日本 0.4MB
       - 🇭🇰_HK尽头のCN2香港 0.6MB
       - 🇺🇲美国_1 10MB
@@ -175,7 +174,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 家庭-wireguard
       - JP日本 0.4MB
       - 🇭🇰_HK尽头のCN2香港 0.6MB
       - 🇺🇲美国_1 10MB
