@@ -41,6 +41,34 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
+  - name: 家庭-wireguard
+    type: wireguard
+    server: 162.159.192.186
+    port: 854
+    ip: 172.16.0.2
+    private-key: GPBqJcTXrKx6iKT4jxjScvzORE0nFox9cwduN912uWg=
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+    mtu: 1280
+    udp: false
+  - name: JP日本 0.4MB
+    type: trojan
+    server: jp.stablize.top
+    port: 443
+    udp: true
+    password: 11295cd8-5269-4304-bf6c-838241aa0c5e
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇭🇰_HK尽头のCN2香港 0.6MB
+    type: trojan
+    server: 103.15.217.182
+    port: 33058
+    udp: true
+    password: QHhbhwe6lj
+    skip-cert-verify: true
+    network: tcp
   - name: 🇺🇲美国_1 10MB
     type: vmess
     server: cm-cdn.cnnic.rip
@@ -56,9 +84,9 @@ proxies:
       path: /2TokGE9A/
       headers:
         host: us6.cachexy.cf
-  - name: 🇺🇲美国_2
+  - name: 🇺🇲美国
     type: vmess
-    server: cdn.chigua.tk
+    server: cf.cachexy.my.id
     port: 80
     cipher: auto
     uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
@@ -71,9 +99,9 @@ proxies:
       path: /2TokGE9A/
       headers:
         host: us6.cachexy.cf
-  - name: 🇺🇲美国
+  - name: 🇺🇲美国_2
     type: vmess
-    server: cf.cachexy.my.id
+    server: cdn.chigua.tk
     port: 80
     cipher: auto
     uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
@@ -114,14 +142,6 @@ proxies:
       path: /cmi
       headers:
         host: tw22.tutu4.one
-  - name: JP日本002
-    type: trojan
-    server: jp.stablize.top
-    port: 443
-    udp: true
-    password: 11295cd8-5269-4304-bf6c-838241aa0c5e
-    skip-cert-verify: true
-    network: tcp
   - name: 🇨🇳 辽宁2
     server: 173.245.49.236
     port: 80
@@ -137,14 +157,6 @@ proxies:
       headers:
         Host: ca.ilovescp.com
     udp: true
-  - name: 🇭🇰_HK尽头のCN2香港0.6MB
-    type: trojan
-    server: 103.15.217.182
-    port: 33058
-    udp: true
-    password: QHhbhwe6lj
-    skip-cert-verify: true
-    network: tcp
   - name: 🇭🇰_HK尽头の香港6MB
     type: trojan
     server: 112.29.94.13
@@ -159,14 +171,15 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 家庭-wireguard
+      - JP日本 0.4MB
+      - 🇭🇰_HK尽头のCN2香港 0.6MB
       - 🇺🇲美国_1 10MB
-      - 🇺🇲美国_2
       - 🇺🇲美国
+      - 🇺🇲美国_2
       - 法国
       - 香港原生2MB
-      - JP日本002
       - 🇨🇳 辽宁2
-      - 🇭🇰_HK尽头のCN2香港0.6MB
       - 🇭🇰_HK尽头の香港6MB
   - name: ♻️ 自动选择
     type: url-test
@@ -174,14 +187,15 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 家庭-wireguard
+      - JP日本 0.4MB
+      - 🇭🇰_HK尽头のCN2香港 0.6MB
       - 🇺🇲美国_1 10MB
-      - 🇺🇲美国_2
       - 🇺🇲美国
+      - 🇺🇲美国_2
       - 法国
       - 香港原生2MB
-      - JP日本002
       - 🇨🇳 辽宁2
-      - 🇭🇰_HK尽头のCN2香港0.6MB
       - 🇭🇰_HK尽头の香港6MB
   - name: 🎯 全球直连
     type: select
