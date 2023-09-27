@@ -41,33 +41,6 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 荷兰 1MB 443
-    type: vmess
-    server: 156.225.67.38
-    port: 443
-    cipher: auto
-    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /path/1692256902430
-  - name: 美国 0.5MB 443
-    type: vmess
-    server: 107.167.16.85
-    port: 443
-    cipher: auto
-    uuid: 7640a1e7-9701-428e-a4b2-19b3e7dd6f9f
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/080822272914
-      headers:
-        host: www.51109057.xyz
   - name: 美国CDN节点 5MB
     type: vmess
     server: dongtaiwang3.com
@@ -97,6 +70,33 @@ proxies:
       path: /
       headers:
         host: vnpt.iiio.wiki
+  - name: 荷兰 1MB 443
+    type: vmess
+    server: 156.225.67.38
+    port: 443
+    cipher: auto
+    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /path/1692256902430
+  - name: 美国 0.5MB 443
+    type: vmess
+    server: 107.167.16.85
+    port: 443
+    cipher: auto
+    uuid: 7640a1e7-9701-428e-a4b2-19b3e7dd6f9f
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/080822272914
+      headers:
+        host: www.51109057.xyz
   - name: JP日本 0.4MB
     type: trojan
     server: jp.stablize.top
@@ -164,10 +164,10 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 荷兰 1MB 443
-      - 美国 0.5MB 443
       - 美国CDN节点 5MB
       - 美国CF节点 1MB
+      - 荷兰 1MB 443
+      - 美国 0.5MB 443
       - JP日本 0.4MB
       - 🇭🇰_HK尽头のCN2香港 0.6MB
       - 🇺🇲美国_1
@@ -179,10 +179,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 荷兰 1MB 443
-      - 美国 0.5MB 443
       - 美国CDN节点 5MB
       - 美国CF节点 1MB
+      - 荷兰 1MB 443
+      - 美国 0.5MB 443
       - JP日本 0.4MB
       - 🇭🇰_HK尽头のCN2香港 0.6MB
       - 🇺🇲美国_1
