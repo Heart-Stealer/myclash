@@ -105,6 +105,9 @@ proxies:
   - {"name":"印尼 _3","type":"vless","server":"cdn.chigua.tk","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"yd1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"yd1.rtacg.com"}}}
   - {"name":"新加坡 ","type":"vless","server":"80.cachexy.cf","port":443,"uuid":"de04add9-5c68-8bab-950c-08cd5320df18","tls":true,"servername":"loaded-estimates-aus-lover.trycloudflare.com","network":"ws","ws-opts":{"path":"/argo-vless?ed=2048","headers":{"host":"loaded-estimates-aus-lover.trycloudflare.com"}}}
   - {"name":"美国 ","type":"vless","server":"80.cachexy.cf","port":443,"uuid":"de04add9-5c68-8bab-950c-08cd5320df18","tls":true,"servername":"depend-copyright-trial-blowing.trycloudflare.com","network":"ws","ws-opts":{"path":"/argo-vless?ed=2048","headers":{"host":"depend-copyright-trial-blowing.trycloudflare.com"}}}
+  - {"name":"美国中心 11 4MB","type":"vmess","server":"67.21.90.5","port":443,"cipher":"auto","uuid":"28dd6c26-05a5-4bba-8a5d-052b70ac13b2","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/1694429908748","headers":{"host":"www.75409854.xyz"}}}
+  - {"name":"JP日本 1MB","type":"trojan","server":"jp.stablize.top","port":443,"udp":true,"password":"11295cd8-5269-4304-bf6c-838241aa0c5e","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰_HK尽头のCN2香港 0.6MB","type":"trojan","server":"103.15.217.182","port":33058,"udp":true,"password":"QHhbhwe6lj","skip-cert-verify":true,"network":"tcp"}
 proxy-groups:
  # 🚀 节点选择 🔰 节点选择 ⚖️ 负载均衡 🎥 NETFLIX 🎯 全球直连 🛑 全球拦截 ⛔️ 广告拦截
  # 🚫 运营劫持 🌍 国外媒体 🌏 国内媒体 📲 电报信息 🍎 苹果服务 🐟 漏网之鱼
