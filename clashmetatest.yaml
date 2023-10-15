@@ -1,0 +1,119 @@
+
+#---------------------------------------------------#
+## 配置文件需要放置在 $HOME/.config/clash/config.yml
+## 
+## 如果您不知道如何操作，请参阅 Dreamacro / clash 的 Wiki：
+## https://github.com/Dreamacro/clash/wiki
+#---------------------------------------------------#
+# HTTP 代理端口
+# port: 7890
+# SOCKS5 代理端口
+# socks-port: 7891
+# HTTP SOCKS5 使用一个接口进行代理
+mixed-port: 7890
+# Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
+# redir-port: 7892
+# 允许局域网的连接（可用来共享代理）
+allow-lan: true
+# bind-address: "*"
+# 此功能仅在 allow-lan 设置为 true 时生效，支持三种参数：
+# "*"                           绑定所有的 IP 地址
+# 192.168.122.11                绑定一个的 IPv4 地址
+# "[aaaa::a8aa:ff:fe09:57d8]"   绑定一个 IPv6 地址
+# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
+mode: Rule
+# 5 个级别：silent / debug / info / warning / error /。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+log-level: info
+ipv6: true
+# clash web 控制的 RESTful API
+external-controller: '127.0.0.1:9090'
+# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `${API}/ui`
+# 参数应填写配置目录的相对路径或绝对路径。
+# external-ui: folder
+# RESTful API 的口令 (可选)
+# secret: 
+# # 实验性功能 hosts, 支持通配符 (例如 *.clash.dev 甚至 *.foo.*.example.com)
+# # 静态的域名 比 通配域名 具有更高的优先级 (foo.example.com 优先于 *.example.com)
+# # 注意: hosts 在 fake-ip 模式下不生效
+# hosts:
+#   '*.clash.dev': 127.0.0.1
+hosts:
+  'localhost': 127.0.0.1
+dns:
+  enabled: true
+  ipv6: false
+  # listen: 0.0.0.0:53
+  listen: '0.0.0.0:53'
+  # enhanced-mode: redir-host # 或 fake-ip
+  enhanced-mode: fake-ip
+  # # fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
+  fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
+  use-hosts: true
+  nameserver:
+    # - 1.2.4.8 # 1.2.4.8
+    - 223.5.5.5 # 阿里云 DNS （偏爱）
+    - 223.6.6.6 # 阿里云 DNS （偏爱）
+    - 119.29.29.29 # DNSPod DNS （偏爱）
+    - 180.76.76.76 # 百度云 DNS
+    - 183.60.83.19 # 腾讯云 DNS
+    - 183.60.82.98 # 腾讯云 DNS
+    - 114.114.114.114 # 114 DNS
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - tls://13800000000.rubyfish.cn:853
+    - https://13800000000.rubyfish.cn/
+  # fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
+  fallback:
+    - 8.8.8.8 # Google DNS （偏爱）
+    - 8.8.4.4 # Google DNS （偏爱）
+    - tls://1.0.0.1:853 # （偏爱）
+    - tls://8.8.4.4:853
+    - tls://dns.google:853 # （偏爱）
+    - tls://13800000000.rubyfish.cn:853
+    - https://doh.dns.sb/dns-query
+    - https://dns.twnic.tw/dns-query
+    - https://dns.cloudflare.com/dns-query
+  fallback-filter: {geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32 ]}
+  # fallback-filter:
+  #   geoip: true # 默认
+  #   ipcidr:
+  #     # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+  #     - 240.0.0.0/4
+  # 1. clash DNS 请求逻辑：
+  # (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
+  # (2) clash 将选取 nameserver 列表内，解析最快的结果。
+  # (3) 若解析结果中，IP 地址属于 国外，那么 clash 将选择 fallback 列表内，解析最快的结果。
+  #
+  # 因此，我在 nameserver 和 fallback 内都放置了无污染、解析速度较快的国内 DNS 服务器，以达到最快的解析速度。
+  # 但是 fallback 列表内服务器会用在解析境外网站，为了结果绝对无污染，我仅保留了支持 DoT/DoH 的两个服务器。
+  #
+  # 2. clash DNS 配置注意事项：
+  # (1) 如果您为了确保 DNS 解析结果无污染，请仅保留列表内以 tls:// 或 https:// 开头的 DNS 服务器，但是通常对于国内域名没有必要。
+  # (2) 如果您不在乎可能解析到污染的结果，更加追求速度。请将 nameserver 列表的服务器插入至 fallback 列表内，并移除重复项。
+  #
+  # 3. 关于 DNS over HTTPS (DoH) 和 DNS over TLS (DoT) 的选择：
+  #  对于两项技术双方各执一词，而且会无休止的争论，各有利弊。各位请根据具体需求自行选择，但是配置文件内默认启用 DoT，因为目前国内没有封锁或管制。
+  #  DoH: 以 https:// 开头的 DNS 服务器。拥有更好的伪装性，且几乎不可能被运营商或网络管理封锁，但查询效率和安全性可能略低。
+  #  DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
+  #  若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
+proxies:
+  - {"name":"香港+(频道+@nodes_share)_1","type":"vless","server":"80.cachexy.cf","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"hk1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"hk1.rtacg.com"}}}
+  - {"name":"香港+(频道+@nodes_share)_2","type":"vless","server":"cdn.chigua.tk","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"hk1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"hk1.rtacg.com"}}}
+  - {"name":"香港+(频道+@nodes_share)_3","type":"vless","server":"cdn1.cachexy.cf","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"hk1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"hk1.rtacg.com"}}}
+  - {"name":"印尼 (频道 @nodes_share)_1","type":"vless","server":"80.cachexy.cf","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"yd1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"yd1.rtacg.com"}}}
+  - {"name":"印尼 (频道 @nodes_share)_2","type":"vless","server":"cdn1.cachexy.cf","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"yd1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"yd1.rtacg.com"}}}
+  - {"name":"印尼 (频道 @nodes_share)_3","type":"vless","server":"cdn.chigua.tk","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"yd1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"yd1.rtacg.com"}}}
+  - {"name":"新加坡 (频道 @nodes_share)","type":"vless","server":"80.cachexy.cf","port":443,"uuid":"de04add9-5c68-8bab-950c-08cd5320df18","tls":true,"servername":"loaded-estimates-aus-lover.trycloudflare.com","network":"ws","ws-opts":{"path":"/argo-vless?ed=2048","headers":{"host":"loaded-estimates-aus-lover.trycloudflare.com"}}}
+  - {"name":"美国 (频道 @nodes_share)","type":"vless","server":"80.cachexy.cf","port":443,"uuid":"de04add9-5c68-8bab-950c-08cd5320df18","tls":true,"servername":"depend-copyright-trial-blowing.trycloudflare.com","network":"ws","ws-opts":{"path":"/argo-vless?ed=2048","headers":{"host":"depend-copyright-trial-blowing.trycloudflare.com"}}}
+proxy-groups:
+ # 🚀 节点选择 🔰 节点选择 ⚖️ 负载均衡 🎥 NETFLIX 🎯 全球直连 🛑 全球拦截 ⛔️ 广告拦截
+ # 🚫 运营劫持 🌍 国外媒体 🌏 国内媒体 📲 电报信息 🍎 苹果服务 🐟 漏网之鱼
+ # - name: 自定名称
+ # type: #模式类型 select（用户选择）、url-test（节点延迟检查排序）、load-balance（负载均衡）
+ # url: （需要进行测速的网址）
+ # interval: （测试间隔时间，单位秒s）
+ # strategy: consistent-hashing或者round-robin（负载均衡选择节点的方法。）
+ # #（有consistent-hashing哈希值算法，保证一个二级域名使用同一个节点；有round-robin顺序轮询，每次连接会有不同的节点）
+ # proxies: （节点名称，必须严格一致）
+ # ⚖️ 负载均衡-散列 strategy: consistent-hashing
+ # ⚖️ 负载均衡-轮询 strategy: round-robin
