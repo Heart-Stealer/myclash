@@ -41,19 +41,6 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 美国中心 12 4MB
-    type: vmess
-    server: 64.32.24.222
-    port: 443
-    cipher: auto
-    uuid: cff9d860-7330-4ee1-b072-7142ddf1571d
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /path/080822272914
   - name: 美国中心 11 4MB
     type: vmess
     server: 67.21.90.5
@@ -76,19 +63,6 @@ proxies:
     password: 11295cd8-5269-4304-bf6c-838241aa0c5e
     skip-cert-verify: true
     network: tcp
-  - name: 荷兰 2MB 443
-    type: vmess
-    server: 156.225.67.38
-    port: 443
-    cipher: auto
-    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /path/1692256902430
   - name: 🇭🇰_HK尽头のCN2香港 0.6MB
     type: trojan
     server: 103.15.217.182
@@ -103,10 +77,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 美国中心 12 4MB
       - 美国中心 11 4MB
       - JP日本 1MB
-      - 荷兰 2MB 443
       - 🇭🇰_HK尽头のCN2香港 0.6MB
   - name: ♻️ 自动选择
     type: url-test
@@ -114,10 +86,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 美国中心 12 4MB
       - 美国中心 11 4MB
       - JP日本 1MB
-      - 荷兰 2MB 443
       - 🇭🇰_HK尽头のCN2香港 0.6MB
   - name: 🎯 全球直连
     type: select
@@ -149,7 +119,6 @@ rules:
   - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
   - DOMAIN-KEYWORD,1drv,🚀 节点选择
   - DOMAIN-KEYWORD,microsoft,🚀 节点选择
-  - DOMAIN-SUFFIX,fast.com,🚀 节点选择
   - DOMAIN-SUFFIX,aadrm.com,🚀 节点选择
   - DOMAIN-SUFFIX,acompli.com,🚀 节点选择
   - DOMAIN-SUFFIX,acompli.net,🚀 节点选择
