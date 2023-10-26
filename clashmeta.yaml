@@ -41,7 +41,7 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 香港1
+  - name: 香港_1
     type: vless
     server: 80.cachexy.cf
     port: 80
@@ -53,7 +53,7 @@ proxies:
       path: /
       headers:
         host: hk1.rtacg.com
-  - name: 香港2
+  - name: 香港_2
     type: vless
     server: cdn.chigua.tk
     port: 80
@@ -65,7 +65,7 @@ proxies:
       path: /
       headers:
         host: hk1.rtacg.com
-  - name: 香港3
+  - name: 香港_3
     type: vless
     server: cdn1.cachexy.cf
     port: 80
@@ -77,7 +77,7 @@ proxies:
       path: /
       headers:
         host: hk1.rtacg.com
-  - name: 印尼1
+  - name: 印尼_1
     type: vless
     server: 80.cachexy.cf
     port: 80
@@ -89,7 +89,7 @@ proxies:
       path: /
       headers:
         host: yd1.rtacg.com
-  - name: 印尼2
+  - name: 印尼_2
     type: vless
     server: cdn1.cachexy.cf
     port: 80
@@ -101,7 +101,7 @@ proxies:
       path: /
       headers:
         host: yd1.rtacg.com
-  - name: 印尼3
+  - name: 印尼_3
     type: vless
     server: cdn.chigua.tk
     port: 80
@@ -113,7 +113,7 @@ proxies:
       path: /
       headers:
         host: yd1.rtacg.com
-  - name: 日本1
+  - name: 日本_1
     type: vless
     server: 80.cachexy.cf
     port: 80
@@ -125,7 +125,7 @@ proxies:
       path: /
       headers:
         host: jp3.rtacg.com
-  - name: 日本2
+  - name: 日本_2
     type: vless
     server: cdn.chigua.tk
     port: 80
@@ -137,7 +137,7 @@ proxies:
       path: /
       headers:
         host: jp3.rtacg.com
-  - name: 日本3
+  - name: 日本_3
     type: vless
     server: cdn1.cachexy.cf
     port: 80
@@ -184,6 +184,54 @@ proxies:
       path: /
       headers:
         host: jp2.acg88.link
+  - name: 美国
+    type: vless
+    server: 80.cachexy.cf
+    port: 80
+    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
+  - name: 英国_1
+    type: vless
+    server: cdn1.cachexy.cf
+    port: 80
+    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
+    tls: false
+    servername: uk1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: uk1.rtacg.com
+  - name: 英国_2
+    type: vless
+    server: 80.cachexy.cf
+    port: 80
+    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
+    tls: false
+    servername: uk1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: uk1.rtacg.com
+  - name: 英国_3
+    type: vless
+    server: cdn.chigua.tk
+    port: 80
+    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
+    tls: false
+    servername: uk1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: uk1.rtacg.com
   - name: 美国中心 11 4MB
     type: vmess
     server: 67.21.90.5
@@ -220,18 +268,22 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 香港1
-      - 香港2
-      - 香港3
-      - 印尼1
-      - 印尼2
-      - 印尼3
-      - 日本1
-      - 日本2
-      - 日本3
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 印尼_1
+      - 印尼_2
+      - 印尼_3
+      - 日本_1
+      - 日本_2
+      - 日本_3
       - 日本 2_1
       - 日本 2_2
       - 日本 2_3
+      - 美国
+      - 英国_1
+      - 英国_2
+      - 英国_3
       - 美国中心 11 4MB
       - JP日本 1MB
       - 🇭🇰_HK尽头のCN2香港 0.6MB
@@ -241,18 +293,22 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 香港1
-      - 香港2
-      - 香港3
-      - 印尼1
-      - 印尼2
-      - 印尼3
-      - 日本1
-      - 日本2
-      - 日本3
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 印尼_1
+      - 印尼_2
+      - 印尼_3
+      - 日本_1
+      - 日本_2
+      - 日本_3
       - 日本 2_1
       - 日本 2_2
       - 日本 2_3
+      - 美国
+      - 英国_1
+      - 英国_2
+      - 英国_3
       - 美国中心 11 4MB
       - JP日本 1MB
       - 🇭🇰_HK尽头のCN2香港 0.6MB
