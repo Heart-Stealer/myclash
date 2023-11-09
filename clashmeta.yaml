@@ -77,42 +77,6 @@ proxies:
       path: /
       headers:
         host: hk1.rtacg.com
-  - name: 印尼_1
-    type: vless
-    server: 80.cachexy.cf
-    port: 80
-    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
-    tls: false
-    servername: yd1.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: yd1.rtacg.com
-  - name: 印尼_2
-    type: vless
-    server: cdn1.cachexy.cf
-    port: 80
-    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
-    tls: false
-    servername: yd1.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: yd1.rtacg.com
-  - name: 印尼_3
-    type: vless
-    server: cdn.chigua.tk
-    port: 80
-    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
-    tls: false
-    servername: yd1.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: yd1.rtacg.com
   - name: 日本_1
     type: vless
     server: 80.cachexy.cf
@@ -149,41 +113,6 @@ proxies:
       path: /
       headers:
         host: jp3.rtacg.com
-  - name: 日本 2_1
-    type: vless
-    server: cdn1.cachexy.cf
-    port: 80
-    uuid: e9f04b7b-f241-400e-8d7e-29821240d51d
-    tls: false
-    servername: jp2.acg88.link
-    network: ws
-    ws-opts:
-      headers:
-        host: jp2.acg88.link
-  - name: 日本 2_2
-    type: vless
-    server: cdn.chigua.tk
-    port: 80
-    uuid: e9f04b7b-f241-400e-8d7e-29821240d51d
-    tls: false
-    servername: jp2.acg88.link
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: jp2.acg88.link
-  - name: 日本 2_3
-    type: vless
-    server: 80.cachexy.cf
-    port: 80
-    uuid: e9f04b7b-f241-400e-8d7e-29821240d51d
-    tls: false
-    servername: jp2.acg88.link
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: jp2.acg88.link
   - name: 美国
     type: vless
     server: 80.cachexy.cf
@@ -271,15 +200,9 @@ proxy-groups:
       - 香港_1
       - 香港_2
       - 香港_3
-      - 印尼_1
-      - 印尼_2
-      - 印尼_3
       - 日本_1
       - 日本_2
       - 日本_3
-      - 日本 2_1
-      - 日本 2_2
-      - 日本 2_3
       - 美国
       - 英国_1
       - 英国_2
@@ -296,15 +219,9 @@ proxy-groups:
       - 香港_1
       - 香港_2
       - 香港_3
-      - 印尼_1
-      - 印尼_2
-      - 印尼_3
       - 日本_1
       - 日本_2
       - 日本_3
-      - 日本 2_1
-      - 日本 2_2
-      - 日本 2_3
       - 美国
       - 英国_1
       - 英国_2
