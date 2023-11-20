@@ -118,8 +118,7 @@ proxies:
   - {"name":"美国1 1M","type":"vless","server":"vl27.rnd.biz.id","port":443,"uuid":"8d74b407-abf8-4721-a125-d0a2cce9b4a1","tls":true,"servername":"vl27.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
   - {"name":"美国4 2M","type":"vless","server":"vl25.rnd.biz.id","port":443,"uuid":"d8a98383-26db-4cd7-8d88-c14c180b5c75","tls":true,"servername":"vl25.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
   - {"name":"美国6","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
-  - {"name":"美国28","type":"vless","server":"vl26.rnd.biz.id","port":443,"uuid":"aa81e188-a979-411e-a10b-08287646cc43","tls":true,"servername":"vl26.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed=2048"}}
-  - {"name":"美国44","type":"vless","server":"edtunnel-b6t.pages.dev","port":443,"uuid":"c688395a-b36b-4071-974b-bc91ac2ad2c4","tls":true,"servername":"edtunnel-b6t.pages.dev","network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"美国28 1M","type":"vless","server":"vl26.rnd.biz.id","port":443,"uuid":"aa81e188-a979-411e-a10b-08287646cc43","tls":true,"servername":"vl26.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed=2048"}}
   - {"name":"美国\r_5","type":"vless","server":"ac2.zxv.biz.id","port":443,"uuid":"96e8440e-27c4-430a-927d-bc5aac95a73a","tls":true,"servername":"ac2.zxv.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
   - {"name":"美国\r_3","type":"vless","server":"vl30.rnd.biz.id","port":443,"uuid":"adbb9c54-a35b-494b-9a4d-dec54b0e1f7a","tls":true,"servername":"vl30.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
   - {"name":"美国中心 11 4MB","type":"vmess","server":"67.21.90.5","port":443,"cipher":"auto","uuid":"28dd6c26-05a5-4bba-8a5d-052b70ac13b2","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/1694429908748","headers":{"host":"www.75409854.xyz"}}}

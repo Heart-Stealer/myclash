@@ -211,7 +211,7 @@ proxies:
     network: ws
     ws-opts:
       path: /nimws
-  - name: 美国28
+  - name: 美国28 1M
     type: vless
     server: vl26.rnd.biz.id
     port: 443
@@ -221,16 +221,6 @@ proxies:
     network: ws
     ws-opts:
       path: /?ed=2048
-  - name: 美国44
-    type: vless
-    server: edtunnel-b6t.pages.dev
-    port: 443
-    uuid: c688395a-b36b-4071-974b-bc91ac2ad2c4
-    tls: true
-    servername: edtunnel-b6t.pages.dev
-    network: ws
-    ws-opts:
-      path: /
   - name: "美国\r_5"
     type: vless
     server: ac2.zxv.biz.id
@@ -302,8 +292,7 @@ proxy-groups:
       - 美国1 1M
       - 美国4 2M
       - 美国6
-      - 美国28
-      - 美国44
+      - 美国28 1M
       - "美国\r_5"
       - "美国\r_3"
       - 美国中心 11 4MB
@@ -330,8 +319,7 @@ proxy-groups:
       - 美国1 1M
       - 美国4 2M
       - 美国6
-      - 美国28
-      - 美国44
+      - 美国28 1M
       - "美国\r_5"
       - "美国\r_3"
       - 美国中心 11 4MB
