@@ -115,8 +115,8 @@ proxies:
         host: jp3.rtacg.com
   - name: warp-team
     type: wireguard
-    server: 162.159.192.225
-    port: 988
+    server: 162.159.195.192
+    port: 890
     ip: 172.16.0.2
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: sLbm0N01yKE9GilsIdqz2mpXLzfJ1Usle575wdCB1FU=
