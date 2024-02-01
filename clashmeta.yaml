@@ -41,79 +41,7 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 香港_1
-    type: vless
-    server: 80.cachexy.cf
-    port: 80
-    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
-    tls: false
-    servername: hk1.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: hk1.rtacg.com
-  - name: 香港_2
-    type: vless
-    server: cdn.chigua.tk
-    port: 80
-    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
-    tls: false
-    servername: hk1.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: hk1.rtacg.com
-  - name: 香港_3
-    type: vless
-    server: cdn1.cachexy.cf
-    port: 80
-    uuid: f71fa550-fe5d-444e-917e-6bdf9c644a24
-    tls: false
-    servername: hk1.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: hk1.rtacg.com
-  - name: 日本_1
-    type: vless
-    server: 80.cachexy.cf
-    port: 80
-    uuid: e4e80428-c1e2-44b5-a8ce-7b868d41b49b
-    tls: false
-    servername: jp3.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: jp3.rtacg.com
-  - name: 日本_2
-    type: vless
-    server: cdn.chigua.tk
-    port: 80
-    uuid: e4e80428-c1e2-44b5-a8ce-7b868d41b49b
-    tls: false
-    servername: jp3.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: jp3.rtacg.com
-  - name: 日本_3
-    type: vless
-    server: cdn1.cachexy.cf
-    port: 80
-    uuid: e4e80428-c1e2-44b5-a8ce-7b868d41b49b
-    tls: false
-    servername: jp3.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: jp3.rtacg.com
-  - name: warp-team
+  - name: warp-team 1
     type: wireguard
     server: 162.159.195.192
     port: 890
@@ -126,32 +54,146 @@ proxies:
       - 219
       - 212
       - 139
+  - name: 🇺🇸 美国1
+    server: 103.103.245.239
+    port: 15756
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: true
+    tfo: false
+    servername: us1.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us1.rtacg.com
+    udp: true
+  - name: 🇺🇸 美国 2
+    server: 103.20.222.201
+    port: 42293
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: true
+    tfo: false
+    servername: us1.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us1.rtacg.com
+    udp: true
+  - name: 🇺🇸 美国 3
+    server: 103.235.18.206
+    port: 10008
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: true
+    tfo: false
+    servername: us1.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us1.rtacg.com
+    udp: true
+  - name: 🇺🇸 美国 4
+    server: 103.235.18.251
+    port: 10005
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: true
+    tfo: false
+    servername: us1.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us1.rtacg.com
+    udp: true
+  - name: 🇺🇸 美国 5
+    server: 103.235.18.39
+    port: 53226
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: true
+    tfo: false
+    servername: us1.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us1.rtacg.com
+    udp: true
+  - name: 🇺🇸 美国 6
+    server: 156.251.180.54
+    port: 43
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: true
+    tfo: false
+    servername: us1.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us1.rtacg.com
+    udp: true
+  - name: 🇺🇸 美国 7
+    server: cdn.ahdark.gay
+    port: 80
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    tfo: false
+    servername: us1.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us1.rtacg.com
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 香港_1
-      - 香港_2
-      - 香港_3
-      - 日本_1
-      - 日本_2
-      - 日本_3
-      - warp-team
+      - warp-team 1
+      - 🇺🇸 美国1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 香港_1
-      - 香港_2
-      - 香港_3
-      - 日本_1
-      - 日本_2
-      - 日本_3
-      - warp-team
+      - warp-team 1
+      - 🇺🇸 美国1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
   - name: 🎯 全球直连
     type: select
     proxies:
