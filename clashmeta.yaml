@@ -67,6 +67,19 @@ proxies:
       - 219
       - 212
       - 139
+  - name: warp-team 3
+    type: wireguard
+    server: 162.159.195.198
+    port: 8742
+    ip: 172.16.0.2
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    private-key: sLbm0N01yKE9GilsIdqz2mpXLzfJ1Usle575wdCB1FU=
+    mtu: 1280
+    udp: true
+    reserved:
+      - 219
+      - 212
+      - 139
   - name: 🇺🇸 美国 1
     server: 103.103.245.239
     port: 15756
@@ -187,6 +200,7 @@ proxy-groups:
       - DIRECT
       - warp-team 1
       - warp-team 2
+      - warp-team 3
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
@@ -202,6 +216,7 @@ proxy-groups:
     proxies:
       - warp-team 1
       - warp-team 2
+      - warp-team 3
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
