@@ -41,6 +41,15 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
+  - name: 美国++(频道@nodes_share)
+    type: vless
+    server: 69.30.252.59
+    port: 25550
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
   - name: 🇺🇸 美国 1
     server: cdn.ahdark.gay
     port: 80
@@ -104,6 +113,22 @@ proxies:
       path: /
       headers:
         Host: us2.rtacg.com
+    udp: true
+  - name: 🇺🇸 美国3 2
+    server: cfip.xxxxxxxx.tk
+    port: 80
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    tfo: false
+    servername: us3.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us3.rtacg.com
     udp: true
   - name: 🇺🇸 美国 03
     server: ip.skk.moe
@@ -169,6 +194,22 @@ proxies:
       headers:
         Host: us2.rtacg.com
     udp: true
+  - name: 🇺🇸 美国3 4
+    server: 154.197.75.80
+    port: 8080
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    tfo: false
+    servername: us3.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us3.rtacg.com
+    udp: true
   - name: 🇺🇸 美国 07
     server: 91.193.58.1
     port: 8880
@@ -201,6 +242,22 @@ proxies:
       headers:
         Host: us2.rtacg.com
     udp: true
+  - name: 🇺🇸 美国3 3
+    server: 91.193.58.1
+    port: 8880
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    tfo: false
+    servername: us3.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us3.rtacg.com
+    udp: true
   - name: 🇺🇸 美国 09
     server: 23.227.60.186
     port: 80
@@ -232,6 +289,22 @@ proxies:
       path: /
       headers:
         Host: us1.rtacg.com
+    udp: true
+  - name: 🇺🇸 美国3 1
+    server: 23.227.60.186
+    port: 80
+    client-fingerprint: chrome
+    type: vless
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    tfo: false
+    servername: us3.rtacg.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us3.rtacg.com
     udp: true
   - name: warp-team 1
     type: wireguard
@@ -278,18 +351,23 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 美国++(频道@nodes_share)
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 01
       - 🇺🇸 美国 02
+      - 🇺🇸 美国3 2
       - 🇺🇸 美国 03
       - 🇺🇸 美国 04
       - 🇺🇸 美国 05
       - 🇺🇸 美国 06
+      - 🇺🇸 美国3 4
       - 🇺🇸 美国 07
       - 🇺🇸 美国 08
+      - 🇺🇸 美国3 3
       - 🇺🇸 美国 09
       - 🇺🇸 美国 10
+      - 🇺🇸 美国3 1
       - warp-team 1
       - warp-team 2
       - warp-team 3
@@ -299,18 +377,23 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 美国++(频道@nodes_share)
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 01
       - 🇺🇸 美国 02
+      - 🇺🇸 美国3 2
       - 🇺🇸 美国 03
       - 🇺🇸 美国 04
       - 🇺🇸 美国 05
       - 🇺🇸 美国 06
+      - 🇺🇸 美国3 4
       - 🇺🇸 美国 07
       - 🇺🇸 美国 08
+      - 🇺🇸 美国3 3
       - 🇺🇸 美国 09
       - 🇺🇸 美国 10
+      - 🇺🇸 美国3 1
       - warp-team 1
       - warp-team 2
       - warp-team 3
