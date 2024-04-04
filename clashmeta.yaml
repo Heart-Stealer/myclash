@@ -1040,6 +1040,24 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🚀 🇹🇼台湾-自动选择
+      - 🚀 🇭🇰香港-自动选择
+      - 🚀 🇯🇵日本-自动选择
+      - 🚀 🇺🇸美国-自动选择
+      - 🚀 🇰🇷韩国-自动选择
+      - 🚀 🇸🇬新加坡-自动选择
+      - ⚖️ 🇹🇼台湾-负载均衡-轮询
+      - ⚖️ 🇹🇼台湾-负载均衡-散列
+      - ⚖️ 🇭🇰香港-负载均衡-轮询
+      - ⚖️ 🇭🇰香港-负载均衡-散列
+      - ⚖️ 🇯🇵日本-负载均衡-轮询
+      - ⚖️ 🇯🇵日本-负载均衡-散列
+      - ⚖️ 🇺🇸美国-负载均衡-轮询
+      - ⚖️ 🇺🇸美国-负载均衡-散列
+      - ⚖️ 🇰🇷韩国-负载均衡-轮询
+      - ⚖️ 🇰🇷韩国-负载均衡-散列
+      - ⚖️ 🇸🇬新加坡-负载均衡-轮询
+      - ⚖️ 🇸🇬新加坡-负载均衡-散列
       - 🇺🇸 美国us2_91
       - 🇺🇸 美国us3_91
       - 🇺🇸 美国us1_91
@@ -1192,6 +1210,111 @@ proxy-groups:
       - warp-team 1
       - warp-team 2
       - warp-team 3
+  - name: 🚀 🇹🇼台湾-自动选择
+    type: url-test
+    url: http://www.google.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - TW1
+      - TW2
+      - TW3
+      - TW4
+      - TW5
+      - TW6
+  - name: 🚀 🇭🇰香港-自动选择
+    type: url-test
+    url: http://www.google.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - HK-Hong Kong1
+      - HK-Hong Kong2
+      - HK-Hong Kong3
+      - HK-Hong Kong4
+      - HK-Hong Kong5
+      - HK-Hong Kong6
+      - HK-Hong Kong7
+      - HK-Hong Kong8
+      - HK-Hong Kong9
+      - HK-Hong Kong10
+      - HK-Hong Kong11
+      - HK-Hong Kong12
+      - HK-Hong Kong13
+      - HK-Hong Kong14
+      - HK-Hong Kong15
+      - HK-Hong Kong16
+      - HK-Hong Kong17
+      - HK-Hong Kong18
+  - name: 🚀 🇯🇵日本-自动选择
+    type: url-test
+    url: http://www.google.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - JP-Tokyo1
+      - JP-Tokyo2
+      - JP-Tokyo3
+      - JP-Tokyo4
+      - JP-Tokyo5
+      - JP-Tokyo6
+      - JP-Tokyo7
+      - JP-Tokyo8
+      - JP-Tokyo9
+  - name: 🚀 🇺🇸美国-自动选择
+    type: url-test
+    url: http://www.google.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇸 美国us2_91
+      - 🇺🇸 美国us3_91
+      - 🇺🇸 美国us1_91
+      - 🇺🇸 美国us3_cfip
+      - 🇺🇸 美国us2_cfip
+      - 🇺🇸 美国us1_cfip
+      - 🇺🇸 美国us3_23
+      - 🇺🇸 美国us2_23
+      - 🇺🇸 美国us1_23
+      - 🇺🇸 美国us2_ip
+      - 🇺🇸 美国us1_ip
+      - 🇺🇸 美国us3_154
+      - 🇺🇸 美国us2_154
+      - 🇺🇸 美国us1_154
+      - 美国++(频道@nodes_share)
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - US
+      - US1
+      - US2
+  - name: 🚀 🇰🇷韩国-自动选择
+    type: url-test
+    url: http://www.google.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - KR1
+      - KR2
+      - KR3
+      - KR4
+      - KR5
+      - KR6
+      - KR7
+      - KR8
+      - KR9
+  - name: 🚀 🇸🇬新加坡-自动选择
+    type: url-test
+    url: http://www.google.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - SG-Singapore1
+      - SG-Singapore2
+      - SG-Singapore3
+      - SG-Singapore4
+      - SG-Singapore5
+      - SG-Singapore6
+      - SG-Singapore7
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1207,6 +1330,216 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
+  - name: ⚖️ 🇹🇼台湾-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - TW1
+      - TW2
+      - TW3
+      - TW4
+      - TW5
+      - TW6
+  - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: round-robin
+    proxies:
+      - TW1
+      - TW2
+      - TW3
+      - TW4
+      - TW5
+      - TW6
+  - name: ⚖️ 🇭🇰香港-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - HK-Hong Kong1
+      - HK-Hong Kong2
+      - HK-Hong Kong3
+      - HK-Hong Kong4
+      - HK-Hong Kong5
+      - HK-Hong Kong6
+      - HK-Hong Kong7
+      - HK-Hong Kong8
+      - HK-Hong Kong9
+      - HK-Hong Kong10
+      - HK-Hong Kong11
+      - HK-Hong Kong12
+      - HK-Hong Kong13
+      - HK-Hong Kong14
+      - HK-Hong Kong15
+      - HK-Hong Kong16
+      - HK-Hong Kong17
+      - HK-Hong Kong18
+  - name: ⚖️ 🇭🇰香港-负载均衡-轮询
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: round-robin
+    proxies:
+      - HK-Hong Kong1
+      - HK-Hong Kong2
+      - HK-Hong Kong3
+      - HK-Hong Kong4
+      - HK-Hong Kong5
+      - HK-Hong Kong6
+      - HK-Hong Kong7
+      - HK-Hong Kong8
+      - HK-Hong Kong9
+      - HK-Hong Kong10
+      - HK-Hong Kong11
+      - HK-Hong Kong12
+      - HK-Hong Kong13
+      - HK-Hong Kong14
+      - HK-Hong Kong15
+      - HK-Hong Kong16
+      - HK-Hong Kong17
+      - HK-Hong Kong18
+  - name: ⚖️ 🇯🇵日本-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - JP-Tokyo1
+      - JP-Tokyo2
+      - JP-Tokyo3
+      - JP-Tokyo4
+      - JP-Tokyo5
+      - JP-Tokyo6
+      - JP-Tokyo7
+      - JP-Tokyo8
+      - JP-Tokyo9
+  - name: ⚖️ 🇯🇵日本-负载均衡-轮询
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: round-robin
+    proxies:
+      - JP-Tokyo1
+      - JP-Tokyo2
+      - JP-Tokyo3
+      - JP-Tokyo4
+      - JP-Tokyo5
+      - JP-Tokyo6
+      - JP-Tokyo7
+      - JP-Tokyo8
+      - JP-Tokyo9
+  - name: ⚖️ 🇺🇸美国-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - 🇺🇸 美国us2_91
+      - 🇺🇸 美国us3_91
+      - 🇺🇸 美国us1_91
+      - 🇺🇸 美国us3_cfip
+      - 🇺🇸 美国us2_cfip
+      - 🇺🇸 美国us1_cfip
+      - 🇺🇸 美国us3_23
+      - 🇺🇸 美国us2_23
+      - 🇺🇸 美国us1_23
+      - 🇺🇸 美国us2_ip
+      - 🇺🇸 美国us1_ip
+      - 🇺🇸 美国us3_154
+      - 🇺🇸 美国us2_154
+      - 🇺🇸 美国us1_154
+      - 美国++(频道@nodes_share)
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - US
+      - US1
+      - US2
+  - name: ⚖️ 🇺🇸美国-负载均衡-轮询
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: round-robin
+    proxies:
+      - 🇺🇸 美国us2_91
+      - 🇺🇸 美国us3_91
+      - 🇺🇸 美国us1_91
+      - 🇺🇸 美国us3_cfip
+      - 🇺🇸 美国us2_cfip
+      - 🇺🇸 美国us1_cfip
+      - 🇺🇸 美国us3_23
+      - 🇺🇸 美国us2_23
+      - 🇺🇸 美国us1_23
+      - 🇺🇸 美国us2_ip
+      - 🇺🇸 美国us1_ip
+      - 🇺🇸 美国us3_154
+      - 🇺🇸 美国us2_154
+      - 🇺🇸 美国us1_154
+      - 美国++(频道@nodes_share)
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - US
+      - US1
+      - US2
+  - name: ⚖️ 🇰🇷韩国-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - KR1
+      - KR2
+      - KR3
+      - KR4
+      - KR5
+      - KR6
+      - KR7
+      - KR8
+      - KR9
+  - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: round-robin
+    proxies:
+      - KR1
+      - KR2
+      - KR3
+      - KR4
+      - KR5
+      - KR6
+      - KR7
+      - KR8
+      - KR9
+  - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - SG-Singapore1
+      - SG-Singapore2
+      - SG-Singapore3
+      - SG-Singapore4
+      - SG-Singapore5
+      - SG-Singapore6
+      - SG-Singapore7
+  - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: round-robin
+    proxies:
+      - SG-Singapore1
+      - SG-Singapore2
+      - SG-Singapore3
+      - SG-Singapore4
+      - SG-Singapore5
+      - SG-Singapore6
+      - SG-Singapore7
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
