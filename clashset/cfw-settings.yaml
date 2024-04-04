@@ -63,64 +63,113 @@ profileParsersText: >-
             # url: http://www.gstatic.com/generate_204
             interval: 300
             tolerance: 50
-          # - name: 🚀 🇨🇳港澳台-自动选择
-          #   type: url-test
-          #   url: http://www.google.com/generate_204
-          #   # url: http://www.gstatic.com/generate_204
-          #   interval: 300
-          #   tolerance: 50
-          # - name: 🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
-          #   type: url-test
-          #   url: http://www.google.com/generate_204
-          #   # url: http://www.gstatic.com/generate_204
-          #   interval: 300
-          #   tolerance: 50
-          # - name: 🚀 🇺🇸美国-自动选择
-          #   type: url-test
-          #   url: http://www.google.com/generate_204
-          #   # url: http://www.gstatic.com/generate_204
-          #   interval: 300
-          #   tolerance: 50
+          - name: 🚀 🇹🇼台湾-自动选择
+            type: url-test
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
+            interval: 300
+            tolerance: 50
+          - name: 🚀 🇭🇰香港-自动选择
+            type: url-test
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
+            interval: 300
+            tolerance: 50
+          - name: 🚀 🇯🇵日本-自动选择
+            type: url-test
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
+            interval: 300
+            tolerance: 50
+          - name: 🚀 🇺🇸美国-自动选择
+            type: url-test
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
+            interval: 300
+            tolerance: 50
+          - name: 🚀 🇰🇷韩国-自动选择
+            type: url-test
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
+            interval: 300
+            tolerance: 50
+          - name: 🚀 🇸🇬新加坡-自动选择
+            type: url-test
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
+            interval: 300
+            tolerance: 50
+
           - name: 🎯 全球直连
             type: select
           - name: 🛑 全球拦截
             type: select
           - name: 🐟 漏网之鱼
             type: select
-          # - name: ⚖️ 🇨🇳港澳台-负载均衡-散列
-          #   type: load-balance
-          #   url: http://www.google.com/generate_204
-          #   interval: 300
-          #   strategy: consistent-hashing
-          # - name: ⚖️ 🇨🇳港澳台-负载均衡-轮询
-          #   type: load-balance
-          #   url: http://www.google.com/generate_204
-          #   interval: 300
-          #   strategy: round-robin
-          # - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
-          #   type: load-balance
-          #   url: http://www.google.com/generate_204
-          #   interval: 300
-          #   strategy: consistent-hashing
-          # - name: ⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询
-          #   type: load-balance
-          #   url: http://www.google.com/generate_204
-          #   interval: 300
-          #   strategy: round-robin
+          - name: ⚖️ 🇹🇼台湾-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: consistent-hashing
+          - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: round-robin
+          - name: ⚖️ 🇭🇰香港-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: consistent-hashing
+          - name: ⚖️ 🇭🇰香港-负载均衡-轮询
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: round-robin
+          - name: ⚖️ 🇯🇵日本-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: consistent-hashing
+          - name: ⚖️ 🇯🇵日本-负载均衡-轮询
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: round-robin
+          - name: ⚖️ 🇺🇸美国-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: consistent-hashing
+          - name: ⚖️ 🇺🇸美国-负载均衡-轮询
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: round-robin
+          - name: ⚖️ 🇰🇷韩国-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: consistent-hashing
+          - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: round-robin
+          - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: consistent-hashing
+          - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: round-robin
           # - name: ⚖️ 看视频-负载均衡-轮询
           #   type: load-balance
           #   url: http://www.google.com/generate_204
           #   interval: 60
-          #   strategy: round-robin
-          # - name: ⚖️ 🇺🇸美国-负载均衡-散列
-          #   type: load-balance
-          #   url: http://www.google.com/generate_204
-          #   interval: 300
-          #   strategy: consistent-hashing
-          # - name: ⚖️ 🇺🇸美国-负载均衡-轮询
-          #   type: load-balance
-          #   url: http://www.google.com/generate_204
-          #   interval: 300
           #   strategy: round-robin
           # - name: ⚖️ 看视频-负载均衡-散列
           #   type: load-balance
@@ -136,29 +185,45 @@ profileParsersText: >-
           - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
           - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
 
+          - proxy-groups.⚖️ 🇸🇬新加坡-负载均衡-散列.proxies=[]proxyNames|(🇸🇬|新加坡|SG|Singapore)
+          - proxy-groups.0.proxies.0+⚖️ 🇸🇬新加坡-负载均衡-散列
+          - proxy-groups.⚖️ 🇸🇬新加坡-负载均衡-轮询.proxies=[]proxyNames|(🇸🇬|新加坡|SG|Singapore)
+          - proxy-groups.0.proxies.0+⚖️ 🇸🇬新加坡-负载均衡-轮询
+          - proxy-groups.⚖️ 🇰🇷韩国-负载均衡-散列.proxies=[]proxyNames|(🇰🇷|韩国|KR)
+          - proxy-groups.0.proxies.0+⚖️ 🇰🇷韩国-负载均衡-散列
+          - proxy-groups.⚖️ 🇰🇷韩国-负载均衡-轮询.proxies=[]proxyNames|(🇰🇷|韩国|KR)
+          - proxy-groups.0.proxies.0+⚖️ 🇰🇷韩国-负载均衡-轮询
+          - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|美国|us|US|um|um)
+          - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-散列
+          - proxy-groups.⚖️ 🇺🇸美国-负载均衡-轮询.proxies=[]proxyNames|(🇺🇸|🇺🇲|美国|us|US|um|um)
+          - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-轮询
+          - proxy-groups.⚖️ 🇯🇵日本-负载均衡-散列.proxies=[]proxyNames|(🇯🇵|日本|HP|Tokyo)
+          - proxy-groups.0.proxies.0+⚖️ 🇯🇵日本-负载均衡-散列
+          - proxy-groups.⚖️ 🇯🇵日本-负载均衡-轮询.proxies=[]proxyNames|(🇯🇵|日本|HP|Tokyo)
+          - proxy-groups.0.proxies.0+⚖️ 🇯🇵日本-负载均衡-轮询
+          - proxy-groups.⚖️ 🇭🇰香港-负载均衡-散列.proxies=[]proxyNames|(🇭🇰|香港|HK|Hong Kong)
+          - proxy-groups.0.proxies.0+⚖️ 🇭🇰香港-负载均衡-散列
+          - proxy-groups.⚖️ 🇭🇰香港-负载均衡-轮询.proxies=[]proxyNames|(🇭🇰|香港|HK|Hong Kong)
+          - proxy-groups.0.proxies.0+⚖️ 🇭🇰香港-负载均衡-轮询
+          - proxy-groups.⚖️ 🇹🇼台湾-负载均衡-散列.proxies=[]proxyNames|(🇹🇼|台湾|TW)
+          - proxy-groups.0.proxies.0+⚖️ 🇹🇼台湾-负载均衡-散列
+          - proxy-groups.⚖️ 🇹🇼台湾-负载均衡-轮询.proxies=[]proxyNames|(🇹🇼|台湾|TW)
           # - proxy-groups.⚖️ 看视频-负载均衡-散列.proxies=[]proxyNames|(good|隧道)
           # - proxy-groups.0.proxies.0+⚖️ 看视频-负载均衡-散列
 
-          # - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
-          # - proxy-groups.0.proxies.0+🚀 🇺🇸美国-自动选择
-          # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-散列.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
-          # - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-散列
-          # - proxy-groups.⚖️ 🇺🇸美国-负载均衡-轮询.proxies=[]proxyNames|(🇺🇸|🇺🇲|🇨🇦|🇲🇽|🇬🇧|🇫🇷|美国)
-          # - proxy-groups.0.proxies.0+⚖️ 🇺🇸美国-负载均衡-轮询
-
-          # - proxy-groups.🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
-          # - proxy-groups.0.proxies.0+🚀 🇸🇬🇯🇵🇰🇷新日韩-自动选择
-          # - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
-          # - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-散列
-          # - proxy-groups.⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询.proxies=[]proxyNames|(🇸🇬|🇯🇵|🇰🇷|日本|新加坡|韩国)
-          # - proxy-groups.0.proxies.0+⚖️ 🇸🇬🇯🇵🇰🇷新日韩-负载均衡-轮询
-
-          # - proxy-groups.🚀 🇨🇳港澳台-自动选择.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
-          # - proxy-groups.0.proxies.0+🚀 🇨🇳港澳台-自动选择
-          # - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-散列.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
-          # - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-散列
-          # - proxy-groups.⚖️ 🇨🇳港澳台-负载均衡-轮询.proxies=[]proxyNames|(🇹🇼|🇭🇰|香港|澳门|台湾)
-          # - proxy-groups.0.proxies.0+⚖️ 🇨🇳港澳台-负载均衡-轮询
+          - proxy-groups.0.proxies.0+⚖️ 🇹🇼台湾-负载均衡-轮询
+          - proxy-groups.🚀 🇸🇬新加坡-自动选择.proxies=[]proxyNames|(🇸🇬|新加坡|SG|Singapore)
+          - proxy-groups.0.proxies.0+🚀 🇸🇬新加坡-自动选择
+          - proxy-groups.🚀 🇰🇷韩国-自动选择.proxies=[]proxyNames|(🇰🇷|韩国|KR)
+          - proxy-groups.0.proxies.0+🚀 🇰🇷韩国-自动选择
+          - proxy-groups.🚀 🇺🇸美国-自动选择.proxies=[]proxyNames|(🇺🇸|🇺🇲|美国|us|US|um|um)
+          - proxy-groups.0.proxies.0+🚀 🇺🇸美国-自动选择
+          - proxy-groups.🚀 🇯🇵日本-自动选择.proxies=[]proxyNames|(🇯🇵|日本|HP|Tokyo)
+          - proxy-groups.0.proxies.0+🚀 🇯🇵日本-自动选择
+          - proxy-groups.🚀 🇭🇰香港-自动选择.proxies=[]proxyNames|(🇭🇰|香港|HK|Hong Kong)
+          - proxy-groups.0.proxies.0+🚀 🇭🇰香港-自动选择
+          - proxy-groups.🚀 🇹🇼台湾-自动选择.proxies=[]proxyNames|(🇹🇼|台湾|TW)
+          - proxy-groups.0.proxies.0+🚀 🇹🇼台湾-自动选择
 
           - proxy-groups.0.proxies.0+DIRECT
           - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
@@ -264,7 +329,7 @@ profileParsersText: >-
         #   - RULE-SET,telegramcidr,🚀 节点选择 # 代理域名列表 proxy
         #   - GEOIP,LAN,DIRECT,no-resolve
         #   - GEOIP,CN,DIRECT,no-resolve
-        #   - MATCH,🚀 节点选择      
+        #   - MATCH,🚀 节点选择
         prepend-rules:
           # - RULE-SET,applications,DIRECT,no-resolve # 需要直连的常见软件列表 applications
           # - DOMAIN,clash.razord.top,DIRECT,no-resolve
@@ -296,7 +361,6 @@ profileParsersText: >-
           - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
           - DOMAIN-KEYWORD,1drv,🚀 节点选择
           - DOMAIN-KEYWORD,microsoft,🚀 节点选择
-          - DOMAIN-SUFFIX,fast.com,🚀 节点选择
           - DOMAIN-SUFFIX,aadrm.com,🚀 节点选择
           - DOMAIN-SUFFIX,acompli.com,🚀 节点选择
           - DOMAIN-SUFFIX,acompli.net,🚀 节点选择
