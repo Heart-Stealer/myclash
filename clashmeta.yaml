@@ -1805,15 +1805,153 @@ proxy-groups:
       - ⚖️ 🇺🇸美国-负载均衡-散列
       - ⚖️ 🇯🇵日本-负载均衡-轮询
       - ⚖️ 🇯🇵日本-负载均衡-散列
+      - ⚖️ 🇰🇷韩国-负载均衡-轮询
+      - ⚖️ 🇭🇰香港-负载均衡-散列
       - ⚖️ 🇹🇼台湾-负载均衡-轮询
       - ⚖️ 🇹🇼台湾-负载均衡-散列
       - ⚖️ 🇭🇰香港-负载均衡-轮询
       - ⚖️ 🇭🇰香港-负载均衡-散列
-      - ⚖️ 🇰🇷韩国-负载均衡-轮询
-      - ⚖️ 🇭🇰香港-负载均衡-散列
       - ⚖️ 🇸🇬新加坡-负载均衡-轮询
       - ⚖️ 🇸🇬新加坡-负载均衡-散列
       - DIRECT
+  - name: ☑️ 手动切换
+    type: select
+    proxies:
+      - 美国2_cfip
+      - 美国2_ip
+      - 美国2_154
+      - 美国2_91
+      - 美国2_23
+      - 美国3_cfip
+      - 美国3_91
+      - 美国3_23
+      - 美国3_101
+      - TG@ZDYZ21
+      - TG@ZDYZ22
+      - KR1
+      - KR2
+      - KR3
+      - KR4
+      - KR5
+      - KR6
+      - KR7
+      - KR8
+      - KR9
+      - KR10
+      - KR11
+      - KR12
+      - KR13
+      - HK-Hong Kong1
+      - HK-Hong Kong2
+      - HK-Hong Kong3
+      - HK-Hong Kong4
+      - HK-Hong Kong5
+      - HK-Hong Kong6
+      - HK-Hong Kong7
+      - HK-Hong Kong8
+      - HK-Hong Kong9
+      - HK-Hong Kong10
+      - HK-Hong Kong11
+      - HK-Hong Kong12
+      - HK-Hong Kong13
+      - HK-Hong Kong14
+      - HK-Hong Kong15
+      - HK-Hong Kong16
+      - HK-Hong Kong17
+      - HK-Hong Kong18
+      - HK-Hong Kong19
+      - HK-Hong Kong20
+      - HK-Hong Kong21
+      - HK-Hong Kong22
+      - HK-Hong Kong23
+      - HK-Hong Kong24
+      - HK-Hong Kong25
+      - HK-Hong Kong26
+      - HK-Hong Kong27
+      - HK-Hong Kong28
+      - HK-Hong Kong29
+      - HK-Hong Kong30
+      - HK-Hong Kong31
+      - HK-Hong Kong32
+      - JP-Tokyo1
+      - JP-Tokyo2
+      - JP-Tokyo3
+      - JP-Tokyo4
+      - JP-Tokyo5
+      - JP-Tokyo6
+      - JP-Tokyo7
+      - JP-Tokyo8
+      - JP-Tokyo9
+      - JP-Tokyo10
+      - JP-Tokyo11
+      - JP-Tokyo12
+      - JP-Tokyo13
+      - JP-Tokyo14
+      - JP-Tokyo15
+      - JP-Tokyo16
+      - JP-Tokyo17
+      - JP-Tokyo18
+      - JP-Tokyo19
+      - JP-Tokyo20
+      - JP-Tokyo21
+      - JP-Tokyo22
+      - TW-Taipei1
+      - TW-Taipei2
+      - TW-Taipei3
+      - TW-Taipei4
+      - TW-Taipei5
+      - TW-Taipei6
+      - TW-Taipei7
+      - TW-Taipei8
+      - TW-Taipei9
+      - TW-Taipei10
+      - TW-Taipei11
+      - TW-Taipei12
+      - TW-Taipei13
+      - TW-Taipei14
+      - US-Seattle
+      - US-New York
+      - US-California
+      - US-Washington.D.C
+      - SG-Singapore1
+      - SG-Singapore2
+      - SG-Singapore3
+      - SG-Singapore4
+      - SG-Singapore5
+      - SG-Singapore6
+      - SG-Singapore7
+      - SG-Singapore8
+      - SG-Singapore9
+      - SG-Singapore10
+      - SG-Singapore11
+      - SG-Singapore12
+      - 奥地利🇦🇹
+      - 澳大利亚🇦🇺
+      - 法国🇫🇷
+      - 芬兰🇫🇮
+      - 南非🇿🇦
+      - 英国🇬🇧
+      - 瑞典🇸🇪
+      - 俄罗斯🇷🇺
+      - 加拿大🇨🇦
+      - 德国🇩🇪
+      - 西班牙🇪🇸
+      - CMCC_1
+      - CMCC_2
+      - CMCC_3
+      - CMCC_4
+      - CMCC_5
+      - CMCC_6
+      - CMCC_7
+      - CMCC_8
+      - CT_1
+      - CT_2
+      - CT_3
+      - CT_4
+      - CT_5
+      - CT_6
+      - CT_7
+      - CT_8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -2097,144 +2235,6 @@ proxy-groups:
       - SG-Singapore10
       - SG-Singapore11
       - SG-Singapore12
-  - name: ☑️ 手动切换
-    type: select
-    proxies:
-      - 美国2_cfip
-      - 美国2_ip
-      - 美国2_154
-      - 美国2_91
-      - 美国2_23
-      - 美国3_cfip
-      - 美国3_91
-      - 美国3_23
-      - 美国3_101
-      - TG@ZDYZ21
-      - TG@ZDYZ22
-      - KR1
-      - KR2
-      - KR3
-      - KR4
-      - KR5
-      - KR6
-      - KR7
-      - KR8
-      - KR9
-      - KR10
-      - KR11
-      - KR12
-      - KR13
-      - HK-Hong Kong1
-      - HK-Hong Kong2
-      - HK-Hong Kong3
-      - HK-Hong Kong4
-      - HK-Hong Kong5
-      - HK-Hong Kong6
-      - HK-Hong Kong7
-      - HK-Hong Kong8
-      - HK-Hong Kong9
-      - HK-Hong Kong10
-      - HK-Hong Kong11
-      - HK-Hong Kong12
-      - HK-Hong Kong13
-      - HK-Hong Kong14
-      - HK-Hong Kong15
-      - HK-Hong Kong16
-      - HK-Hong Kong17
-      - HK-Hong Kong18
-      - HK-Hong Kong19
-      - HK-Hong Kong20
-      - HK-Hong Kong21
-      - HK-Hong Kong22
-      - HK-Hong Kong23
-      - HK-Hong Kong24
-      - HK-Hong Kong25
-      - HK-Hong Kong26
-      - HK-Hong Kong27
-      - HK-Hong Kong28
-      - HK-Hong Kong29
-      - HK-Hong Kong30
-      - HK-Hong Kong31
-      - HK-Hong Kong32
-      - JP-Tokyo1
-      - JP-Tokyo2
-      - JP-Tokyo3
-      - JP-Tokyo4
-      - JP-Tokyo5
-      - JP-Tokyo6
-      - JP-Tokyo7
-      - JP-Tokyo8
-      - JP-Tokyo9
-      - JP-Tokyo10
-      - JP-Tokyo11
-      - JP-Tokyo12
-      - JP-Tokyo13
-      - JP-Tokyo14
-      - JP-Tokyo15
-      - JP-Tokyo16
-      - JP-Tokyo17
-      - JP-Tokyo18
-      - JP-Tokyo19
-      - JP-Tokyo20
-      - JP-Tokyo21
-      - JP-Tokyo22
-      - TW-Taipei1
-      - TW-Taipei2
-      - TW-Taipei3
-      - TW-Taipei4
-      - TW-Taipei5
-      - TW-Taipei6
-      - TW-Taipei7
-      - TW-Taipei8
-      - TW-Taipei9
-      - TW-Taipei10
-      - TW-Taipei11
-      - TW-Taipei12
-      - TW-Taipei13
-      - TW-Taipei14
-      - US-Seattle
-      - US-New York
-      - US-California
-      - US-Washington.D.C
-      - SG-Singapore1
-      - SG-Singapore2
-      - SG-Singapore3
-      - SG-Singapore4
-      - SG-Singapore5
-      - SG-Singapore6
-      - SG-Singapore7
-      - SG-Singapore8
-      - SG-Singapore9
-      - SG-Singapore10
-      - SG-Singapore11
-      - SG-Singapore12
-      - 奥地利🇦🇹
-      - 澳大利亚🇦🇺
-      - 法国🇫🇷
-      - 芬兰🇫🇮
-      - 南非🇿🇦
-      - 英国🇬🇧
-      - 瑞典🇸🇪
-      - 俄罗斯🇷🇺
-      - 加拿大🇨🇦
-      - 德国🇩🇪
-      - 西班牙🇪🇸
-      - CMCC_1
-      - CMCC_2
-      - CMCC_3
-      - CMCC_4
-      - CMCC_5
-      - CMCC_6
-      - CMCC_7
-      - CMCC_8
-      - CT_1
-      - CT_2
-      - CT_3
-      - CT_4
-      - CT_5
-      - CT_6
-      - CT_7
-      - CT_8
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
