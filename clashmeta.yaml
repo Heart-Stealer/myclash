@@ -41,287 +41,115 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: 🇺🇸 美国1_101
+  - name: 美国2_cfip
+    type: vless
+    server: cfip.xxxxxxxx.tk
+    port: 80
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us2.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us2.rtacg.com
+  - name: 美国2_ip
+    type: vless
+    server: ip.skk.moe
+    port: 80
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us2.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us2.rtacg.com
+  - name: 美国2_154
+    type: vless
+    server: 154.197.75.80
+    port: 8080
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us2.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us2.rtacg.com
+  - name: 美国2_91
+    type: vless
+    server: 91.193.58.1
+    port: 8880
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us2.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us2.rtacg.com
+  - name: 美国2_23
+    type: vless
+    server: 23.227.60.186
+    port: 80
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us2.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us2.rtacg.com
+  - name: 美国3_cfip
+    type: vless
+    server: cfip.xxxxxxxx.tk
+    port: 80
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us3.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us3.rtacg.com
+  - name: 美国3_91
+    type: vless
+    server: 91.193.58.1
+    port: 8880
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us3.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us3.rtacg.com
+  - name: 美国3_23
+    type: vless
+    server: 23.227.60.186
+    port: 80
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us3.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us3.rtacg.com
+  - name: 美国3_101
+    type: vless
     server: 101.230.71.30
     port: 2907
-    client-fingerprint: chrome
-    type: vless
     uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
+    tls: true
     servername: us3.rtacg.com
-    skip-cert-verify: false
     network: ws
     ws-opts:
       path: /
       headers:
-        Host: us3.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国3_91
-    server: 91.193.58.1
-    port: 8880
+        host: us3.rtacg.com
     client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us3.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us3.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国2_91
-    server: 91.193.58.1
-    port: 8880
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us2.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us2.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国1_91
-    server: 91.193.58.1
-    port: 8880
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us1.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us1.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国3_cfip
-    server: cfip.xxxxxxxx.tk
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us3.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us3.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国2_cfip
-    server: cfip.xxxxxxxx.tk
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us2.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us2.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国1_cfip
-    server: cfip.xxxxxxxx.tk
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us1.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us1.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国3_23
-    server: 23.227.60.186
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us3.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us3.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国2_23
-    server: 23.227.60.186
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us2.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us2.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国1_23
-    server: 23.227.60.186
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us1.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us1.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国2_ip
-    server: ip.skk.moe
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us2.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us2.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国1_ip
-    server: ip.skk.moe
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us1.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us1.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国3_154
-    server: 154.197.75.80
-    port: 8080
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us3.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us3.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国2_154
-    server: 154.197.75.80
-    port: 8080
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us2.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us2.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国1_154
-    server: 154.197.75.80
-    port: 8080
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us1.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us1.rtacg.com
-    udp: true
-  - name: 美国++(频道@nodes_share)
-    type: vless
-    server: 69.30.252.59
-    port: 25550
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    network: ws
-    ws-opts:
-      path: /
-  - name: 🇺🇸 美国 1
-    server: cdn.ahdark.gay
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us1.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us1.rtacg.com
-    udp: true
-  - name: 🇺🇸 美国 2
-    server: cdn.ahdark.gay
-    port: 80
-    client-fingerprint: chrome
-    type: vless
-    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
-    tls: false
-    tfo: false
-    servername: us2.rtacg.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us2.rtacg.com
-    udp: true
   - name: TG@ZDYZ21
     type: vless
     server: 104.17.159.12
@@ -1967,22 +1795,22 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - ☑️ 手动切换
+      - 🚀 🇺🇸美国-自动选择
+      - 🚀 🇯🇵日本-自动选择
+      - 🚀 🇰🇷韩国-自动选择
       - 🚀 🇹🇼台湾-自动选择
       - 🚀 🇭🇰香港-自动选择
-      - 🚀 🇯🇵日本-自动选择
-      - 🚀 🇺🇸美国-自动选择
-      - 🚀 🇰🇷韩国-自动选择
       - 🚀 🇸🇬新加坡-自动选择
+      - ⚖️ 🇺🇸美国-负载均衡-轮询
+      - ⚖️ 🇺🇸美国-负载均衡-散列
+      - ⚖️ 🇯🇵日本-负载均衡-轮询
+      - ⚖️ 🇯🇵日本-负载均衡-散列
       - ⚖️ 🇹🇼台湾-负载均衡-轮询
       - ⚖️ 🇹🇼台湾-负载均衡-散列
       - ⚖️ 🇭🇰香港-负载均衡-轮询
       - ⚖️ 🇭🇰香港-负载均衡-散列
-      - ⚖️ 🇯🇵日本-负载均衡-轮询
-      - ⚖️ 🇯🇵日本-负载均衡-散列
-      - ⚖️ 🇺🇸美国-负载均衡-轮询
-      - ⚖️ 🇺🇸美国-负载均衡-散列
       - ⚖️ 🇰🇷韩国-负载均衡-轮询
-      - ⚖️ 🇰🇷韩国-负载均衡-散列
+      - ⚖️ 🇭🇰香港-负载均衡-散列
       - ⚖️ 🇸🇬新加坡-负载均衡-轮询
       - ⚖️ 🇸🇬新加坡-负载均衡-散列
       - DIRECT
@@ -1992,24 +1820,15 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸 美国1_101
-      - 🇺🇸 美国3_91
-      - 🇺🇸 美国2_91
-      - 🇺🇸 美国1_91
-      - 🇺🇸 美国3_cfip
-      - 🇺🇸 美国2_cfip
-      - 🇺🇸 美国1_cfip
-      - 🇺🇸 美国3_23
-      - 🇺🇸 美国2_23
-      - 🇺🇸 美国1_23
-      - 🇺🇸 美国2_ip
-      - 🇺🇸 美国1_ip
-      - 🇺🇸 美国3_154
-      - 🇺🇸 美国2_154
-      - 🇺🇸 美国1_154
-      - 美国++(频道@nodes_share)
-      - 🇺🇸 美国 1
-      - 🇺🇸 美国 2
+      - 美国2_cfip
+      - 美国2_ip
+      - 美国2_154
+      - 美国2_91
+      - 美国2_23
+      - 美国3_cfip
+      - 美国3_91
+      - 美国3_23
+      - 美国3_101
       - TG@ZDYZ21
       - TG@ZDYZ22
       - KR1
@@ -2228,24 +2047,15 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸 美国1_101
-      - 🇺🇸 美国3_91
-      - 🇺🇸 美国2_91
-      - 🇺🇸 美国1_91
-      - 🇺🇸 美国3_cfip
-      - 🇺🇸 美国2_cfip
-      - 🇺🇸 美国1_cfip
-      - 🇺🇸 美国3_23
-      - 🇺🇸 美国2_23
-      - 🇺🇸 美国1_23
-      - 🇺🇸 美国2_ip
-      - 🇺🇸 美国1_ip
-      - 🇺🇸 美国3_154
-      - 🇺🇸 美国2_154
-      - 🇺🇸 美国1_154
-      - 美国++(频道@nodes_share)
-      - 🇺🇸 美国 1
-      - 🇺🇸 美国 2
+      - 美国2_cfip
+      - 美国2_ip
+      - 美国2_154
+      - 美国2_91
+      - 美国2_23
+      - 美国3_cfip
+      - 美国3_91
+      - 美国3_23
+      - 美国3_101
       - US-Seattle
       - US-New York
       - US-California
@@ -2290,24 +2100,15 @@ proxy-groups:
   - name: ☑️ 手动切换
     type: select
     proxies:
-      - 🇺🇸 美国1_101
-      - 🇺🇸 美国3_91
-      - 🇺🇸 美国2_91
-      - 🇺🇸 美国1_91
-      - 🇺🇸 美国3_cfip
-      - 🇺🇸 美国2_cfip
-      - 🇺🇸 美国1_cfip
-      - 🇺🇸 美国3_23
-      - 🇺🇸 美国2_23
-      - 🇺🇸 美国1_23
-      - 🇺🇸 美国2_ip
-      - 🇺🇸 美国1_ip
-      - 🇺🇸 美国3_154
-      - 🇺🇸 美国2_154
-      - 🇺🇸 美国1_154
-      - 美国++(频道@nodes_share)
-      - 🇺🇸 美国 1
-      - 🇺🇸 美国 2
+      - 美国2_cfip
+      - 美国2_ip
+      - 美国2_154
+      - 美国2_91
+      - 美国2_23
+      - 美国3_cfip
+      - 美国3_91
+      - 美国3_23
+      - 美国3_101
       - TG@ZDYZ21
       - TG@ZDYZ22
       - KR1
@@ -2651,24 +2452,15 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
-      - 🇺🇸 美国1_101
-      - 🇺🇸 美国3_91
-      - 🇺🇸 美国2_91
-      - 🇺🇸 美国1_91
-      - 🇺🇸 美国3_cfip
-      - 🇺🇸 美国2_cfip
-      - 🇺🇸 美国1_cfip
-      - 🇺🇸 美国3_23
-      - 🇺🇸 美国2_23
-      - 🇺🇸 美国1_23
-      - 🇺🇸 美国2_ip
-      - 🇺🇸 美国1_ip
-      - 🇺🇸 美国3_154
-      - 🇺🇸 美国2_154
-      - 🇺🇸 美国1_154
-      - 美国++(频道@nodes_share)
-      - 🇺🇸 美国 1
-      - 🇺🇸 美国 2
+      - 美国2_cfip
+      - 美国2_ip
+      - 美国2_154
+      - 美国2_91
+      - 美国2_23
+      - 美国3_cfip
+      - 美国3_91
+      - 美国3_23
+      - 美国3_101
       - US-Seattle
       - US-New York
       - US-California
@@ -2679,24 +2471,15 @@ proxy-groups:
     interval: 300
     strategy: round-robin
     proxies:
-      - 🇺🇸 美国1_101
-      - 🇺🇸 美国3_91
-      - 🇺🇸 美国2_91
-      - 🇺🇸 美国1_91
-      - 🇺🇸 美国3_cfip
-      - 🇺🇸 美国2_cfip
-      - 🇺🇸 美国1_cfip
-      - 🇺🇸 美国3_23
-      - 🇺🇸 美国2_23
-      - 🇺🇸 美国1_23
-      - 🇺🇸 美国2_ip
-      - 🇺🇸 美国1_ip
-      - 🇺🇸 美国3_154
-      - 🇺🇸 美国2_154
-      - 🇺🇸 美国1_154
-      - 美国++(频道@nodes_share)
-      - 🇺🇸 美国 1
-      - 🇺🇸 美国 2
+      - 美国2_cfip
+      - 美国2_ip
+      - 美国2_154
+      - 美国2_91
+      - 美国2_23
+      - 美国3_cfip
+      - 美国3_91
+      - 美国3_23
+      - 美国3_101
       - US-Seattle
       - US-New York
       - US-California
