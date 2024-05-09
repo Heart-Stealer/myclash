@@ -1952,6 +1952,45 @@ proxy-groups:
       - CT_6
       - CT_7
       - CT_8
+  - name: 🔯 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🚀 🇹🇼台湾-自动选择
+      - 🚀 🇭🇰香港-自动选择
+      - 🚀 🇯🇵日本-自动选择
+      - 🚀 🇺🇸美国-自动选择
+      - 🚀 🇰🇷韩国-自动选择
+      - 🚀 🇸🇬新加坡-自动选择
+      - ⚖️ 🇹🇼台湾-负载均衡-散列
+      - ⚖️ 🇹🇼台湾-负载均衡-轮询
+      - ⚖️ 🇭🇰香港-负载均衡-散列
+      - ⚖️ 🇭🇰香港-负载均衡-轮询
+      - ⚖️ 🇯🇵日本-负载均衡-散列
+      - ⚖️ 🇯🇵日本-负载均衡-轮询
+      - ⚖️ 🇺🇸美国-负载均衡-散列
+      - ⚖️ 🇺🇸美国-负载均衡-轮询
+      - ⚖️ 🇰🇷韩国-负载均衡-散列
+      - ⚖️ 🇰🇷韩国-负载均衡-轮询
+      - ⚖️ 🇸🇬新加坡-负载均衡-散列
+      - ⚖️ 🇸🇬新加坡-负载均衡-轮询
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -2235,45 +2274,6 @@ proxy-groups:
       - SG-Singapore10
       - SG-Singapore11
       - SG-Singapore12
-  - name: 🔯 故障转移
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 🚀 🇹🇼台湾-自动选择
-      - 🚀 🇭🇰香港-自动选择
-      - 🚀 🇯🇵日本-自动选择
-      - 🚀 🇺🇸美国-自动选择
-      - 🚀 🇰🇷韩国-自动选择
-      - 🚀 🇸🇬新加坡-自动选择
-      - ⚖️ 🇹🇼台湾-负载均衡-散列
-      - ⚖️ 🇹🇼台湾-负载均衡-轮询
-      - ⚖️ 🇭🇰香港-负载均衡-散列
-      - ⚖️ 🇭🇰香港-负载均衡-轮询
-      - ⚖️ 🇯🇵日本-负载均衡-散列
-      - ⚖️ 🇯🇵日本-负载均衡-轮询
-      - ⚖️ 🇺🇸美国-负载均衡-散列
-      - ⚖️ 🇺🇸美国-负载均衡-轮询
-      - ⚖️ 🇰🇷韩国-负载均衡-散列
-      - ⚖️ 🇰🇷韩国-负载均衡-轮询
-      - ⚖️ 🇸🇬新加坡-负载均衡-散列
-      - ⚖️ 🇸🇬新加坡-负载均衡-轮询
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
