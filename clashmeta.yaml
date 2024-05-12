@@ -41,6 +41,66 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
+  - name: 美国1_cfip
+    type: vless
+    server: cfip.xxxxxxxx.tk
+    port: 80
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
+  - name: 美国1_ip
+    type: vless
+    server: ip.skk.moe
+    port: 80
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
+  - name: 美国1_154
+    type: vless
+    server: 154.197.75.80
+    port: 8080
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
+  - name: 美国1_91
+    type: vless
+    server: 91.193.58.1
+    port: 8880
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
+  - name: 美国1_23
+    type: vless
+    server: 23.227.60.186
+    port: 80
+    uuid: 435bda4c-fe5e-42c9-a3ad-15334943b38a
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
   - name: 美国2_cfip
     type: vless
     server: cfip.xxxxxxxx.tk
@@ -1817,6 +1877,11 @@ proxy-groups:
   - name: ☑️ 手动切换
     type: select
     proxies:
+      - 美国1_cfip
+      - 美国1_ip
+      - 美国1_154
+      - 美国1_91
+      - 美国1_23
       - 美国2_cfip
       - 美国2_ip
       - 美国2_154
@@ -1997,6 +2062,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 美国1_cfip
+      - 美国1_ip
+      - 美国1_154
+      - 美国1_91
+      - 美国1_23
       - 美国2_cfip
       - 美国2_ip
       - 美国2_154
@@ -2224,6 +2294,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 美国1_cfip
+      - 美国1_ip
+      - 美国1_154
+      - 美国1_91
+      - 美国1_23
       - 美国2_cfip
       - 美国2_ip
       - 美国2_154
@@ -2452,6 +2527,11 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     proxies:
+      - 美国1_cfip
+      - 美国1_ip
+      - 美国1_154
+      - 美国1_91
+      - 美国1_23
       - 美国2_cfip
       - 美国2_ip
       - 美国2_154
@@ -2471,6 +2551,11 @@ proxy-groups:
     interval: 300
     strategy: round-robin
     proxies:
+      - 美国1_cfip
+      - 美国1_ip
+      - 美国1_154
+      - 美国1_91
+      - 美国1_23
       - 美国2_cfip
       - 美国2_ip
       - 美国2_154
