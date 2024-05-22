@@ -210,7 +210,7 @@ proxies:
       headers:
         host: us3.rtacg.com
     client-fingerprint: chrome
-  - name: TG@ZDYZ2 关注TG频道获取更多免费节点
+  - name: TG@ZDYZ2 1
     server: 104.17.159.12
     port: 2083
     client-fingerprint: random
@@ -226,7 +226,7 @@ proxies:
       headers:
         Host: cfed.tgzdyz2.top
     udp: true
-  - name: TG@ZDYZ2 禁止爬取本订阅节点
+  - name: TG@ZDYZ2 2
     server: 104.20.6.94
     port: 2096
     client-fingerprint: random
@@ -2237,8 +2237,8 @@ proxy-groups:
       - 美国3_91
       - 美国3_23
       - 美国3_101
-      - TG@ZDYZ2 关注TG频道获取更多免费节点
-      - TG@ZDYZ2 禁止爬取本订阅节点
+      - TG@ZDYZ2 1
+      - TG@ZDYZ2 2
       - KR1
       - KR2
       - KR3
@@ -2420,8 +2420,8 @@ proxy-groups:
       - 美国3_91
       - 美国3_23
       - 美国3_101
-      - TG@ZDYZ2 关注TG频道获取更多免费节点
-      - TG@ZDYZ2 禁止爬取本订阅节点
+      - TG@ZDYZ2 1
+      - TG@ZDYZ2 2
       - KR1
       - KR2
       - KR3
