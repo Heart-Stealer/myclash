@@ -770,6 +770,358 @@ proxies:
       headers:
         Host: cfed.tgzdyz2.top
     udp: true
+  - name: CMCC 00
+    server: 104.17.219.63
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 02
+    server: 104.17.180.11
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 05
+    server: 104.17.214.86
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 07
+    server: 104.17.179.57
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 10
+    server: 104.17.216.83
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 11
+    server: 104.17.218.241
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 12
+    server: 104.17.213.168
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 13
+    server: 104.17.210.56
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 14
+    server: 104.17.212.74
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CMCC 15
+    server: 104.17.209.117
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT
+    server: 160.153.0.145
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   02
+    server: 156.225.72.57
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   03
+    server: 45.131.211.171
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   05
+    server: 45.131.7.53
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   07
+    server: 45.133.247.8
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   09
+    server: 154.92.9.253
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   10
+    server: 194.152.44.245
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   11
+    server: 164.38.155.208
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   15
+    server: 91.195.110.186
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   16
+    server: 159.246.55.39
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   18
+    server: 45.131.6.13
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT   20
+    server: 31.22.116.26
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    servername: cfed.tgzdyz2.top
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -848,6 +1200,28 @@ proxy-groups:
       - 🇸🇬 SG-Singapore12
       - CT 01
       - CT 07
+      - CMCC 00
+      - CMCC 02
+      - CMCC 05
+      - CMCC 07
+      - CMCC 10
+      - CMCC 11
+      - CMCC 12
+      - CMCC 13
+      - CMCC 14
+      - CMCC 15
+      - CT
+      - CT   02
+      - CT   03
+      - CT   05
+      - CT   07
+      - CT   09
+      - CT   10
+      - CT   11
+      - CT   15
+      - CT   16
+      - CT   18
+      - CT   20
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -942,6 +1316,28 @@ proxy-groups:
       - 🇸🇬 SG-Singapore12
       - CT 01
       - CT 07
+      - CMCC 00
+      - CMCC 02
+      - CMCC 05
+      - CMCC 07
+      - CMCC 10
+      - CMCC 11
+      - CMCC 12
+      - CMCC 13
+      - CMCC 14
+      - CMCC 15
+      - CT
+      - CT   02
+      - CT   03
+      - CT   05
+      - CT   07
+      - CT   09
+      - CT   10
+      - CT   11
+      - CT   15
+      - CT   16
+      - CT   18
+      - CT   20
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
