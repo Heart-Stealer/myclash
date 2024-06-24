@@ -754,6 +754,438 @@ proxies:
       headers:
         Host: cfed.tgzdyz2.top
     udp: true
+  - name: 🐂KR03
+    server: 125.135.115.85
+    port: 18038
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂KR05
+    server: 14.45.254.95
+    port: 39749
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂KR07
+    server: 220.119.139.132
+    port: 39115
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂KR10
+    server: 59.3.87.55
+    port: 39109
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂KR11
+    server: 222.113.18.206
+    port: 38961
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂KR12
+    server: 125.129.129.66
+    port: 12245
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂KR13
+    server: 61.77.9.219
+    port: 12487
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇭🇰 HK04
+    server: 38.147.188.25
+    port: 59449
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇭🇰 HK06
+    server: 103.30.78.25
+    port: 10921
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇭🇰 HK10
+    server: 161.81.90.78
+    port: 11214
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇭🇰 HK11
+    server: 199.15.77.118
+    port: 21092
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇭🇰 HK12
+    server: 13.229.90.43
+    port: 2086
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇭🇰 HK13
+    server: 156.251.176.110
+    port: 44010
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇭🇰 HK24
+    server: 38.207.164.154
+    port: 46142
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇯🇵 JP04
+    server: 13.208.164.103
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇯🇵 JP09
+    server: 103.232.213.133
+    port: 51980
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇯🇵 JP12
+    server: 45.133.247.14
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇹🇼 TW05
+    server: 220.130.213.87
+    port: 23555
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇹🇼 TW06
+    server: 60.249.89.73
+    port: 23555
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇹🇼 TW07
+    server: 35.229.179.98
+    port: 25775
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇹🇼 TW08
+    server: 125.227.213.229
+    port: 23555
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇸🇬 SG02
+    server: 13.229.90.43
+    port: 2086
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇸🇬 SG03
+    server: 54.251.100.89
+    port: 8444
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇸🇬 SG09
+    server: 47.236.202.91
+    port: 2053
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇸🇬 SG12
+    server: 47.236.80.110
+    port: 2096
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🐂🇸🇬 SG14
+    server: 47.236.202.91
+    port: 2096
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: CT 08
+    server: 103.169.142.13
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -832,6 +1264,33 @@ proxy-groups:
       - CT 04
       - CT 05
       - CT 08♥
+      - 🐂KR03
+      - 🐂KR05
+      - 🐂KR07
+      - 🐂KR10
+      - 🐂KR11
+      - 🐂KR12
+      - 🐂KR13
+      - 🐂🇭🇰 HK04
+      - 🐂🇭🇰 HK06
+      - 🐂🇭🇰 HK10
+      - 🐂🇭🇰 HK11
+      - 🐂🇭🇰 HK12
+      - 🐂🇭🇰 HK13
+      - 🐂🇭🇰 HK24
+      - 🐂🇯🇵 JP04
+      - 🐂🇯🇵 JP09
+      - 🐂🇯🇵 JP12
+      - 🐂🇹🇼 TW05
+      - 🐂🇹🇼 TW06
+      - 🐂🇹🇼 TW07
+      - 🐂🇹🇼 TW08
+      - 🐂🇸🇬 SG02
+      - 🐂🇸🇬 SG03
+      - 🐂🇸🇬 SG09
+      - 🐂🇸🇬 SG12
+      - 🐂🇸🇬 SG14
+      - CT 08
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -925,6 +1384,33 @@ proxy-groups:
       - CT 04
       - CT 05
       - CT 08♥
+      - 🐂KR03
+      - 🐂KR05
+      - 🐂KR07
+      - 🐂KR10
+      - 🐂KR11
+      - 🐂KR12
+      - 🐂KR13
+      - 🐂🇭🇰 HK04
+      - 🐂🇭🇰 HK06
+      - 🐂🇭🇰 HK10
+      - 🐂🇭🇰 HK11
+      - 🐂🇭🇰 HK12
+      - 🐂🇭🇰 HK13
+      - 🐂🇭🇰 HK24
+      - 🐂🇯🇵 JP04
+      - 🐂🇯🇵 JP09
+      - 🐂🇯🇵 JP12
+      - 🐂🇹🇼 TW05
+      - 🐂🇹🇼 TW06
+      - 🐂🇹🇼 TW07
+      - 🐂🇹🇼 TW08
+      - 🐂🇸🇬 SG02
+      - 🐂🇸🇬 SG03
+      - 🐂🇸🇬 SG09
+      - 🐂🇸🇬 SG12
+      - 🐂🇸🇬 SG14
+      - CT 08
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -933,6 +1419,10 @@ proxy-groups:
     proxies:
       - 🇨🇳 TW-04♥
       - 🇨🇳 TW-05♥
+      - 🐂🇹🇼 TW05
+      - 🐂🇹🇼 TW06
+      - 🐂🇹🇼 TW07
+      - 🐂🇹🇼 TW08
   - name: 🚀 🇭🇰香港-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -950,6 +1440,13 @@ proxy-groups:
       - 🇭🇰 HK20♥
       - 🇭🇰 HK21♥
       - 🇭🇰 HK23
+      - 🐂🇭🇰 HK04
+      - 🐂🇭🇰 HK06
+      - 🐂🇭🇰 HK10
+      - 🐂🇭🇰 HK11
+      - 🐂🇭🇰 HK12
+      - 🐂🇭🇰 HK13
+      - 🐂🇭🇰 HK24
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -959,6 +1456,9 @@ proxy-groups:
       - 🇯🇵 JP-01♥
       - 🇯🇵 JP-05♥
       - 🇯🇵 JP-12♥
+      - 🐂🇯🇵 JP04
+      - 🐂🇯🇵 JP09
+      - 🐂🇯🇵 JP12
   - name: 🚀 🇺🇸美国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -994,6 +1494,13 @@ proxy-groups:
       - KR11♥
       - KR12♥
       - KR13♥
+      - 🐂KR03
+      - 🐂KR05
+      - 🐂KR07
+      - 🐂KR10
+      - 🐂KR11
+      - 🐂KR12
+      - 🐂KR13
   - name: 🚀 🇸🇬新加坡-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -1004,6 +1511,11 @@ proxy-groups:
       - 🇸🇬 SG-09♥
       - 🇸🇬 SG-11
       - 🇸🇬 SG-13
+      - 🐂🇸🇬 SG02
+      - 🐂🇸🇬 SG03
+      - 🐂🇸🇬 SG09
+      - 🐂🇸🇬 SG12
+      - 🐂🇸🇬 SG14
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1012,6 +1524,10 @@ proxy-groups:
     proxies:
       - 🇨🇳 TW-04♥
       - 🇨🇳 TW-05♥
+      - 🐂🇹🇼 TW05
+      - 🐂🇹🇼 TW06
+      - 🐂🇹🇼 TW07
+      - 🐂🇹🇼 TW08
   - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1020,6 +1536,10 @@ proxy-groups:
     proxies:
       - 🇨🇳 TW-04♥
       - 🇨🇳 TW-05♥
+      - 🐂🇹🇼 TW05
+      - 🐂🇹🇼 TW06
+      - 🐂🇹🇼 TW07
+      - 🐂🇹🇼 TW08
   - name: ⚖️ 🇭🇰香港-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1037,6 +1557,13 @@ proxy-groups:
       - 🇭🇰 HK20♥
       - 🇭🇰 HK21♥
       - 🇭🇰 HK23
+      - 🐂🇭🇰 HK04
+      - 🐂🇭🇰 HK06
+      - 🐂🇭🇰 HK10
+      - 🐂🇭🇰 HK11
+      - 🐂🇭🇰 HK12
+      - 🐂🇭🇰 HK13
+      - 🐂🇭🇰 HK24
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1054,6 +1581,13 @@ proxy-groups:
       - 🇭🇰 HK20♥
       - 🇭🇰 HK21♥
       - 🇭🇰 HK23
+      - 🐂🇭🇰 HK04
+      - 🐂🇭🇰 HK06
+      - 🐂🇭🇰 HK10
+      - 🐂🇭🇰 HK11
+      - 🐂🇭🇰 HK12
+      - 🐂🇭🇰 HK13
+      - 🐂🇭🇰 HK24
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1063,6 +1597,9 @@ proxy-groups:
       - 🇯🇵 JP-01♥
       - 🇯🇵 JP-05♥
       - 🇯🇵 JP-12♥
+      - 🐂🇯🇵 JP04
+      - 🐂🇯🇵 JP09
+      - 🐂🇯🇵 JP12
   - name: ⚖️ 🇯🇵日本-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1072,6 +1609,9 @@ proxy-groups:
       - 🇯🇵 JP-01♥
       - 🇯🇵 JP-05♥
       - 🇯🇵 JP-12♥
+      - 🐂🇯🇵 JP04
+      - 🐂🇯🇵 JP09
+      - 🐂🇯🇵 JP12
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1127,6 +1667,13 @@ proxy-groups:
       - KR11♥
       - KR12♥
       - KR13♥
+      - 🐂KR03
+      - 🐂KR05
+      - 🐂KR07
+      - 🐂KR10
+      - 🐂KR11
+      - 🐂KR12
+      - 🐂KR13
   - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1142,6 +1689,13 @@ proxy-groups:
       - KR11♥
       - KR12♥
       - KR13♥
+      - 🐂KR03
+      - 🐂KR05
+      - 🐂KR07
+      - 🐂KR10
+      - 🐂KR11
+      - 🐂KR12
+      - 🐂KR13
   - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1152,6 +1706,11 @@ proxy-groups:
       - 🇸🇬 SG-09♥
       - 🇸🇬 SG-11
       - 🇸🇬 SG-13
+      - 🐂🇸🇬 SG02
+      - 🐂🇸🇬 SG03
+      - 🐂🇸🇬 SG09
+      - 🐂🇸🇬 SG12
+      - 🐂🇸🇬 SG14
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1162,41 +1721,23 @@ proxy-groups:
       - 🇸🇬 SG-09♥
       - 🇸🇬 SG-11
       - 🇸🇬 SG-13
+      - 🐂🇸🇬 SG02
+      - 🐂🇸🇬 SG03
+      - 🐂🇸🇬 SG09
+      - 🐂🇸🇬 SG12
+      - 🐂🇸🇬 SG14
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: round-robin
     proxies:
-      - KR02♥
-      - KR03♥
-      - KR04♥
-      - KR05♥
-      - KR08♥
-      - KR09♥
-      - KR11♥
-      - KR12♥
-      - KR13♥
-      - 🇭🇰 HK01♥
-      - 🇭🇰 HK04♥
-      - 🇭🇰 HK05♥
-      - 🇭🇰 HK06♥
-      - 🇭🇰 HK10♥
-      - 🇭🇰 HK13♥
-      - 🇭🇰 HK15♥
-      - 🇭🇰 HK18♥
-      - 🇭🇰 HK20♥
-      - 🇭🇰 HK21♥
-      - 🇯🇵 JP-01♥
-      - 🇯🇵 JP-05♥
-      - 🇯🇵 JP-12♥
-      - 🇨🇳 TW-04♥
-      - 🇨🇳 TW-05♥
-      - 🇸🇬 SG-06♥
-      - 🇸🇬 SG-09♥
       - CT 01♥
       - CT 03♥
+      - CT 04
+      - CT 05
       - CT 08♥
+      - CT 08
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
@@ -1212,6 +1753,8 @@ rules:
   - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
   - DOMAIN-KEYWORD,1drv,🚀 节点选择
   - DOMAIN-KEYWORD,microsoft,🚀 节点选择
+  - DOMAIN-SUFFIX,surrit.com,DIRECT
+  - DOMAIN-SUFFIX,sixyik.com,DIRECT
   - DOMAIN-SUFFIX,aadrm.com,🚀 节点选择
   - DOMAIN-SUFFIX,acompli.com,🚀 节点选择
   - DOMAIN-SUFFIX,acompli.net,🚀 节点选择
