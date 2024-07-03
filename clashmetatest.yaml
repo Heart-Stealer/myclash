@@ -44,6 +44,7 @@ dns:
   ipv6: false
   # listen: 0.0.0.0:53
   listen: '0.0.0.0:53'
+  default-nameserver: [223.5.5.5, 119.29.29.29]
   # enhanced-mode: redir-host # 或 fake-ip
   enhanced-mode: fake-ip
   # # fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
@@ -62,6 +63,8 @@ dns:
     - https://dns.alidns.com/dns-query
     - tls://13800000000.rubyfish.cn:853
     - https://13800000000.rubyfish.cn/
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   # fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
     - 8.8.8.8 # Google DNS （偏爱）
@@ -97,6 +100,35 @@ dns:
   #  DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
   #  若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
 proxies:
+  - name: "WG1"
+    type: wireguard
+    server: 2606:4700:d0::6003:2bef:008b:fd1f
+    port: 968
+    udp: true
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:813f:f45b:fa51:d1e5:f0c8
+    mtu: 1280  #做落地节点用，建议调小些，比如1300
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    # pre-shared-key:  YOUR_WireGuard_PSK
+    private-key: OEQIYfclTOWBd5u1COb7IQ1X+YLKb1zgvMLwys2FcEk=
+    remote-dns-resolve: true
+    # dialer-proxy:  ANOTHER_Proxy_node_as_a_tunnel
+    dns: [ 1.1.1.1, 8.8.8.8, 1.0.0.1 ]
+  - name: "WG2"
+    type: wireguard
+    server: 2606:4700:d0::1b76:632d:572b:032e
+    port: 880
+    udp: true
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8bab:3b7f:3663:fb54:f34b
+    mtu: 1280  #做落地节点用，建议调小些，比如1300
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    # pre-shared-key:  YOUR_WireGuard_PSK
+    private-key: cL7hhysR9gptOSY8pf5d+eOqnHUCNI5Fzn4WHwkhNFY=
+    remote-dns-resolve: true
+    # dialer-proxy:  ANOTHER_Proxy_node_as_a_tunnel
+    dns: [ 1.1.1.1, 8.8.8.8, 1.0.0.1 ] 
+
   # - {"name":"美国++(频道@nodes_share)_1","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us2.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us2.rtacg.com"}}}
   # - {"name":"美国++(频道@nodes_share)_2","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us1.rtacg.com"}}}
   # - {"name":"美国++(频道@nodes_share)","type":"vless","server":"69.30.252.59","port":25550,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"network":"ws","ws-opts":{"path":"/"}}
@@ -116,32 +148,28 @@ proxies:
   - {"name":"美国3_91","type":"vless","server":"91.193.58.1","port":8880,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us3.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us3.rtacg.com"}}}
   - {"name":"美国3_23","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us3.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us3.rtacg.com"}}}
   - {"name":"美国3_101","type":"vless","server":"101.230.71.30","port":2907,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":true,"servername":"us3.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us3.rtacg.com"}},"client-fingerprint":"chrome"}
+
+  - {"name":"美国♥","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
   
-  - {name: KR13♥, server: 121.176.33.148, port: 12564, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🇭🇰 HK05♥, server: 103.103.245.159, port: 46384, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: KR05, server: 14.45.254.95, port: 39749, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: KR11, server: 222.113.18.206, port: 38961, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: KR12, server: 125.129.129.66, port: 12245, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: ♥KR13, server: 121.176.33.148, port: 12564, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
   - {name: 🇭🇰 HK06♥, server: 43.154.96.33, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🇭🇰 HK18♥, server: 104.19.59.121, port: 2087, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🇭🇰 HK20♥, server: 103.44.255.27, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🇨🇳 TW-04♥, server: 89.116.161.250, port: 8443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🇨🇳 TW-05♥, server: 211.72.156.10, port: 23555, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: CT 05, server: 181.214.1.55, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: CT 08♥, server: 45.159.219.33, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-
-  - {name: 🐂KR05, server: 14.45.254.95, port: 39749, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂KR07, server: 220.119.139.132, port: 39115, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂KR11, server: 222.113.18.206, port: 38961, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂KR12, server: 125.129.129.66, port: 12245, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇭🇰 HK06, server: 103.30.78.25, port: 10921, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇭🇰 HK11, server: 199.15.77.118, port: 21092, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇭🇰 HK12, server: 13.229.90.43, port: 2086, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇭🇰 HK12, server: 13.229.90.43, port: 2086, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
   - {name: 🐂🇭🇰 HK13, server: 156.251.176.110, port: 44010, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇭🇰 HK24, server: 38.207.164.154, port: 46142, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇯🇵 JP04, server: 13.208.164.103, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇹🇼 TW05, server: 220.130.213.87, port: 23555, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇸🇬 SG09, server: 47.236.202.91, port: 2053, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇸🇬 SG12, server: 47.236.80.110, port: 2096, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
-  - {name: 🐂🇸🇬 SG14, server: 47.236.202.91, port: 2096, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇭🇰 HK18, server: 104.19.59.121, port: 2087, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇭🇰 HK20♥, server: 103.44.255.27, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇯🇵 JP04, server: 13.208.164.103, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇨🇳 TW-04, server: 89.116.161.250, port: 8443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇨🇳 TW-05, server: 211.72.156.10, port: 23555, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇹🇼 TW05, server: 220.130.213.87, port: 23555, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: CT 08, server: 45.159.219.33, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇸🇬 SG09, server: 47.236.202.91, port: 2053, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇸🇬 SG12, server: 47.236.80.110, port: 2096, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
+  - {name: 🇸🇬 SG14, server: 47.236.202.91, port: 2096, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}, udp: true}
 
+  # - {"name":"美国6","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
   # - {"name":"香港_1","type":"vless","server":"80.cachexy.cf","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"hk1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"hk1.rtacg.com"}}}
   # - {"name":"香港_2","type":"vless","server":"cdn.chigua.tk","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"hk1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"hk1.rtacg.com"}}}
   # - {"name":"香港_3","type":"vless","server":"cdn1.cachexy.cf","port":80,"uuid":"f71fa550-fe5d-444e-917e-6bdf9c644a24","tls":false,"servername":"hk1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"hk1.rtacg.com"}}}
@@ -162,7 +190,6 @@ proxies:
   # - {"name":"美国6 8M","type":"vless","server":"vl28.rnd.biz.id","port":443,"uuid":"14ddd817-a070-4f7e-b31d-535523702b25","tls":true,"servername":"vl28.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
   # - {"name":"美国1 1M","type":"vless","server":"vl27.rnd.biz.id","port":443,"uuid":"8d74b407-abf8-4721-a125-d0a2cce9b4a1","tls":true,"servername":"vl27.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
   # - {"name":"美国4 2M","type":"vless","server":"vl25.rnd.biz.id","port":443,"uuid":"d8a98383-26db-4cd7-8d88-c14c180b5c75","tls":true,"servername":"vl25.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
-  # - {"name":"美国6","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
   # - {"name":"美国28 1M","type":"vless","server":"vl26.rnd.biz.id","port":443,"uuid":"aa81e188-a979-411e-a10b-08287646cc43","tls":true,"servername":"vl26.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed=2048"}}
   # - {"name":"美国\r_5","type":"vless","server":"ac2.zxv.biz.id","port":443,"uuid":"96e8440e-27c4-430a-927d-bc5aac95a73a","tls":true,"servername":"ac2.zxv.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
   # - {"name":"美国\r_3","type":"vless","server":"vl30.rnd.biz.id","port":443,"uuid":"adbb9c54-a35b-494b-9a4d-dec54b0e1f7a","tls":true,"servername":"vl30.rnd.biz.id","network":"ws","ws-opts":{"path":"/?ed"}}
