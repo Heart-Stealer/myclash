@@ -61,6 +61,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇭🇰 HK14
     server: 199.15.79.126
     port: 59569
@@ -76,6 +77,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇭🇰 HK10
     server: 166.88.77.58
     port: 27821
@@ -91,6 +93,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇭🇰 HK03
     server: 178.173.248.74
     port: 10073
@@ -106,6 +109,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇭🇰 HK02
     server: 46.3.105.157
     port: 23232
@@ -121,6 +125,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇭🇰 HK04
     server: 166.88.61.168
     port: 28620
@@ -136,6 +141,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇭🇰 HK09
     server: 23.27.48.32
     port: 50744
@@ -151,6 +157,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇭🇰 HK11
     server: 157.119.101.159
     port: 24443
@@ -166,6 +173,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇰🇷 KR08
     server: 211.55.202.96
     port: 33890
@@ -181,6 +189,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇰🇷 KR01
     server: 118.42.9.31
     port: 29984
@@ -196,6 +205,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇰🇷 KR09
     server: 119.203.21.31
     port: 10443
@@ -211,6 +221,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇰🇷 KR06
     server: 59.6.240.181
     port: 27015
@@ -226,6 +237,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇯🇵 JP09
     server: 167.88.186.233
     port: 30829
@@ -241,6 +253,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇯🇵 JP13
     server: 123.108.70.96
     port: 29646
@@ -256,6 +269,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇯🇵 JP06
     server: 38.47.125.140
     port: 47447
@@ -271,6 +285,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇯🇵 JP02
     server: 38.55.98.102
     port: 10115
@@ -286,6 +301,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇹🇼 TW02
     server: 220.130.73.151
     port: 23555
@@ -301,6 +317,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇹🇼 TW06
     server: 211.75.223.133
     port: 23555
@@ -316,6 +333,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇸🇬 SG07
     server: 52.74.34.116
     port: 39001
@@ -331,6 +349,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇸🇬 SG08
     server: 157.119.101.132
     port: 34504
@@ -346,6 +365,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇸🇬 SG03
     server: 45.14.107.237
     port: 23333
@@ -361,6 +381,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇺🇸 US-Seattle
     server: 104.194.80.33
     port: 443
@@ -376,6 +397,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+    udp: true
   - name: US美国UK英国♥
     type: vless
     server: storeships.toptechnonews.com
