@@ -46,6 +46,22 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
+  - name: 🇺🇸 US-Seattle
+    server: 104.194.80.33
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
   - name: 🇭🇰 HK19
     server: 178.173.237.177
     port: 8080
@@ -382,22 +398,6 @@ proxies:
       headers:
         Host: cfed.tgzdyz2.top
     udp: true
-  - name: 🇺🇸 US-Seattle
-    server: 104.194.80.33
-    port: 443
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-    udp: true
   - name: US美国UK英国♥
     type: vless
     server: storeships.toptechnonews.com
@@ -472,54 +472,6 @@ proxies:
       headers:
         Host: cfed.tgzdyz2.top
     udp: true
-  - name: ♥🇭🇰HK07
-    server: 47.76.98.98
-    port: 2087
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-    udp: true
-  - name: ♥🇭🇰HK21
-    server: 161.81.85.153
-    port: 13502
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-    udp: true
-  - name: 🇸🇬SG09-♥
-    server: 47.236.202.91
-    port: 2053
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-    udp: true
   - name: CT 08
     server: 45.159.219.33
     port: 443
@@ -566,6 +518,7 @@ proxy-groups:
   - name: ☑️ 手动切换
     type: select
     proxies:
+      - 🇺🇸 US-Seattle
       - 🇭🇰 HK19
       - 🇭🇰 HK14
       - 🇭🇰 HK10
@@ -587,15 +540,11 @@ proxy-groups:
       - 🇸🇬 SG07
       - 🇸🇬 SG08
       - 🇸🇬 SG03
-      - 🇺🇸 US-Seattle
       - US美国UK英国♥
       - ♥🇯🇵JP13
       - 🇹🇼TW05-♥
       - ♥KR10
       - ♥KR07
-      - ♥🇭🇰HK07
-      - ♥🇭🇰HK21
-      - 🇸🇬SG09-♥
       - CT 08
   - name: 🔯 故障转移
     type: fallback
@@ -642,6 +591,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇺🇸 US-Seattle
       - 🇭🇰 HK19
       - 🇭🇰 HK14
       - 🇭🇰 HK10
@@ -663,15 +613,11 @@ proxy-groups:
       - 🇸🇬 SG07
       - 🇸🇬 SG08
       - 🇸🇬 SG03
-      - 🇺🇸 US-Seattle
       - US美国UK英国♥
       - ♥🇯🇵JP13
       - 🇹🇼TW05-♥
       - ♥KR10
       - ♥KR07
-      - ♥🇭🇰HK07
-      - ♥🇭🇰HK21
-      - 🇸🇬SG09-♥
       - CT 08
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
@@ -696,8 +642,6 @@ proxy-groups:
       - 🇭🇰 HK04
       - 🇭🇰 HK09
       - 🇭🇰 HK11
-      - ♥🇭🇰HK07
-      - ♥🇭🇰HK21
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -738,7 +682,6 @@ proxy-groups:
       - 🇸🇬 SG07
       - 🇸🇬 SG08
       - 🇸🇬 SG03
-      - 🇸🇬SG09-♥
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -771,8 +714,6 @@ proxy-groups:
       - 🇭🇰 HK04
       - 🇭🇰 HK09
       - 🇭🇰 HK11
-      - ♥🇭🇰HK07
-      - ♥🇭🇰HK21
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -787,8 +728,6 @@ proxy-groups:
       - 🇭🇰 HK04
       - 🇭🇰 HK09
       - 🇭🇰 HK11
-      - ♥🇭🇰HK07
-      - ♥🇭🇰HK21
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -860,7 +799,6 @@ proxy-groups:
       - 🇸🇬 SG07
       - 🇸🇬 SG08
       - 🇸🇬 SG03
-      - 🇸🇬SG09-♥
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -870,7 +808,6 @@ proxy-groups:
       - 🇸🇬 SG07
       - 🇸🇬 SG08
       - 🇸🇬 SG03
-      - 🇸🇬SG09-♥
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
