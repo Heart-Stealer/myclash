@@ -162,39 +162,9 @@ proxies:
       headers:
         Host: cfed.tgzdyz2.top
     udp: true
-  - name: 🇭🇰 HK02
-    server: 38.147.190.245
-    port: 47333
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-  - name: 🇭🇰 HK13
-    server: 116.204.210.11
-    port: 443
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-  - name: 🇭🇰 HK15
-    server: 46.3.105.223
-    port: 25623
+  - name: 🇭🇰 HK24
+    server: 47.57.12.238
+    port: 34237
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -222,9 +192,54 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
-  - name: 🇭🇰 HK24
-    server: 47.57.12.238
-    port: 34237
+  - name: 🇭🇰 HK09
+    server: 47.238.43.79
+    port: 2096
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇭🇰 HK15
+    server: 46.3.105.223
+    port: 25623
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇭🇰 HK13
+    server: 116.204.210.11
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇭🇰 HK02
+    server: 38.147.190.245
+    port: 47333
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -252,9 +267,9 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
-  - name: 🇸🇬 SG01
-    server: 140.99.233.156
-    port: 2087
+  - name: 🇸🇬 SG11
+    server: 47.238.48.58
+    port: 80
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -267,9 +282,9 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
-  - name: 🇸🇬 SG02
-    server: 47.239.12.227
-    port: 80
+  - name: 🇸🇬 SG13
+    server: 47.236.180.51
+    port: 2087
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -284,36 +299,6 @@ proxies:
         Host: cfed.tgzdyz2.top
   - name: 🇸🇬 SG08
     server: 47.238.50.221
-    port: 80
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-  - name: 🇸🇬 SG10
-    server: 45.14.107.197
-    port: 24290
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-  - name: 🇸🇬 SG11
-    server: 47.238.48.58
     port: 80
     client-fingerprint: random
     type: vless
@@ -342,9 +327,54 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
-  - name: 🇸🇬 SG13
-    server: 47.236.180.51
+  - name: 🇸🇬 SG03
+    server: 47.238.49.85
+    port: 80
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇸🇬 SG01
+    server: 140.99.233.156
     port: 2087
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇸🇬 SG10
+    server: 45.14.107.197
+    port: 24290
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇸🇬 SG02
+    server: 47.239.12.227
+    port: 80
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -395,19 +425,21 @@ proxy-groups:
       - ♥KR10
       - CT 08
       - 🇯🇵 JP09
-      - 🇭🇰 HK02
-      - 🇭🇰 HK13
-      - 🇭🇰 HK15
-      - 🇭🇰 HK20
       - 🇭🇰 HK24
+      - 🇭🇰 HK20
+      - 🇭🇰 HK09
+      - 🇭🇰 HK15
+      - 🇭🇰 HK13
+      - 🇭🇰 HK02
       - 🇹🇼 TW01
-      - 🇸🇬 SG01
-      - 🇸🇬 SG02
-      - 🇸🇬 SG08
-      - 🇸🇬 SG10
       - 🇸🇬 SG11
-      - 🇸🇬 SG12
       - 🇸🇬 SG13
+      - 🇸🇬 SG08
+      - 🇸🇬 SG12
+      - 🇸🇬 SG03
+      - 🇸🇬 SG01
+      - 🇸🇬 SG10
+      - 🇸🇬 SG02
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -461,19 +493,21 @@ proxy-groups:
       - ♥KR10
       - CT 08
       - 🇯🇵 JP09
-      - 🇭🇰 HK02
-      - 🇭🇰 HK13
-      - 🇭🇰 HK15
-      - 🇭🇰 HK20
       - 🇭🇰 HK24
+      - 🇭🇰 HK20
+      - 🇭🇰 HK09
+      - 🇭🇰 HK15
+      - 🇭🇰 HK13
+      - 🇭🇰 HK02
       - 🇹🇼 TW01
-      - 🇸🇬 SG01
-      - 🇸🇬 SG02
-      - 🇸🇬 SG08
-      - 🇸🇬 SG10
       - 🇸🇬 SG11
-      - 🇸🇬 SG12
       - 🇸🇬 SG13
+      - 🇸🇬 SG08
+      - 🇸🇬 SG12
+      - 🇸🇬 SG03
+      - 🇸🇬 SG01
+      - 🇸🇬 SG10
+      - 🇸🇬 SG02
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -491,11 +525,12 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUS♥
       - "KRJPHKTWSGUS "
-      - 🇭🇰 HK02
-      - 🇭🇰 HK13
-      - 🇭🇰 HK15
-      - 🇭🇰 HK20
       - 🇭🇰 HK24
+      - 🇭🇰 HK20
+      - 🇭🇰 HK09
+      - 🇭🇰 HK15
+      - 🇭🇰 HK13
+      - 🇭🇰 HK02
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -531,13 +566,14 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUS♥
       - "KRJPHKTWSGUS "
-      - 🇸🇬 SG01
-      - 🇸🇬 SG02
-      - 🇸🇬 SG08
-      - 🇸🇬 SG10
       - 🇸🇬 SG11
-      - 🇸🇬 SG12
       - 🇸🇬 SG13
+      - 🇸🇬 SG08
+      - 🇸🇬 SG12
+      - 🇸🇬 SG03
+      - 🇸🇬 SG01
+      - 🇸🇬 SG10
+      - 🇸🇬 SG02
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -564,11 +600,12 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUS♥
       - "KRJPHKTWSGUS "
-      - 🇭🇰 HK02
-      - 🇭🇰 HK13
-      - 🇭🇰 HK15
-      - 🇭🇰 HK20
       - 🇭🇰 HK24
+      - 🇭🇰 HK20
+      - 🇭🇰 HK09
+      - 🇭🇰 HK15
+      - 🇭🇰 HK13
+      - 🇭🇰 HK02
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -577,11 +614,12 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUS♥
       - "KRJPHKTWSGUS "
-      - 🇭🇰 HK02
-      - 🇭🇰 HK13
-      - 🇭🇰 HK15
-      - 🇭🇰 HK20
       - 🇭🇰 HK24
+      - 🇭🇰 HK20
+      - 🇭🇰 HK09
+      - 🇭🇰 HK15
+      - 🇭🇰 HK13
+      - 🇭🇰 HK02
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -644,13 +682,14 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUS♥
       - "KRJPHKTWSGUS "
-      - 🇸🇬 SG01
-      - 🇸🇬 SG02
-      - 🇸🇬 SG08
-      - 🇸🇬 SG10
       - 🇸🇬 SG11
-      - 🇸🇬 SG12
       - 🇸🇬 SG13
+      - 🇸🇬 SG08
+      - 🇸🇬 SG12
+      - 🇸🇬 SG03
+      - 🇸🇬 SG01
+      - 🇸🇬 SG10
+      - 🇸🇬 SG02
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -659,13 +698,14 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUS♥
       - "KRJPHKTWSGUS "
-      - 🇸🇬 SG01
-      - 🇸🇬 SG02
-      - 🇸🇬 SG08
-      - 🇸🇬 SG10
       - 🇸🇬 SG11
-      - 🇸🇬 SG12
       - 🇸🇬 SG13
+      - 🇸🇬 SG08
+      - 🇸🇬 SG12
+      - 🇸🇬 SG03
+      - 🇸🇬 SG01
+      - 🇸🇬 SG10
+      - 🇸🇬 SG02
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
