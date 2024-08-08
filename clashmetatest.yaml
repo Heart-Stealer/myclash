@@ -100,35 +100,6 @@ dns:
   #  DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
   #  若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
 proxies:
-  # - name: "WG1"
-  #   type: wireguard
-  #   server: 2606:4700:d0::6f68:3e2a:88a0:af9d
-  #   port: 2506
-  #   udp: true
-  #   ip: 172.16.0.2
-  #   ipv6: 2606:4700:110:813f:f45b:fa51:d1e5:f0c8
-  #   mtu: 1280  #做落地节点用，建议调小些，比如1300
-  #   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  #   # pre-shared-key:  YOUR_WireGuard_PSK
-  #   private-key: OEQIYfclTOWBd5u1COb7IQ1X+YLKb1zgvMLwys2FcEk=
-  #   remote-dns-resolve: true
-  #   # dialer-proxy:  ANOTHER_Proxy_node_as_a_tunnel
-  #   dns: [ 1.1.1.1, 8.8.8.8, 1.0.0.1 ]
-  # - name: "WG2"
-  #   type: wireguard
-  #   server: 2606:4700:d0::6580:1f33:f580:2b91
-  #   port: 2506
-  #   udp: true
-  #   ip: 172.16.0.2
-  #   ipv6: 2606:4700:110:8bab:3b7f:3663:fb54:f34b
-  #   mtu: 1280  #做落地节点用，建议调小些，比如1300
-  #   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  #   # pre-shared-key:  YOUR_WireGuard_PSK
-  #   private-key: cL7hhysR9gptOSY8pf5d+eOqnHUCNI5Fzn4WHwkhNFY=
-  #   remote-dns-resolve: true
-  #   # dialer-proxy:  ANOTHER_Proxy_node_as_a_tunnel
-  #   dns: [ 1.1.1.1, 8.8.8.8, 1.0.0.1 ] 
-
   # - {"name":"美国++(频道@nodes_share)_1","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us2.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us2.rtacg.com"}}}
   # - {"name":"美国++(频道@nodes_share)_2","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us1.rtacg.com"}}}
   # - {"name":"美国++(频道@nodes_share)","type":"vless","server":"69.30.252.59","port":25550,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"network":"ws","ws-opts":{"path":"/"}}
@@ -162,12 +133,41 @@ proxies:
   - {name: 🇭🇰 HK13 2.0, server: 116.204.210.11, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}
   - {name: CT 08, server: 45.159.219.33, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, servername: cfed.tgzdyz2.top, skip-cert-verify: true, network: ws, ws-opts: {path: TG@ZDYZ2, headers: {Host: cfed.tgzdyz2.top}}, udp: true}
   - {name: 🇭🇰 HK11, server: 199.15.79.167, port: 34566, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}
-
   - {name: 🇰🇷 KR05 1.0, server: 59.3.3.161, port: 443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}
   - {name: 🇰🇷 KR12 0.5, server: 125.129.129.66, port: 12245, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}
   - {name: 🇹🇼 TW01, server: 211.75.243.91, port: 16764, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}
   - {name: 🇹🇼 TW04, server: 203.69.248.40, port: 27381, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}
 
+  - { name: 🇨🇳 ⚡ ⚡, type: ssr, server: yd-01.paofunlink.com, port: 5950, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇭🇰 香港01, type: ssr, server: yd-01.paofunlink.com, port: 5950, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇭🇰 香港02, type: ssr, server: yd-01.paofunlink.com, port: 5951, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇭🇰 香港03, type: ssr, server: yd-01.paofunlink.com, port: 5952, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇭🇰 香港04, type: ssr, server: yd-06.paofunlink.com, port: 5953, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇭🇰 香港05, type: ssr, server: yd-06.paofunlink.com, port: 5954, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇨🇳 台湾01, type: ssr, server: yd-05.paofunlink.com, port: 1070, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇨🇳 台湾02, type: ssr, server: yd-05.paofunlink.com, port: 1071, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇨🇳 台湾03, type: ssr, server: yd-05.paofunlink.com, port: 1072, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇨🇳 台湾04, type: ssr, server: yd-02.paofunlink.com, port: 1073, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇨🇳 台湾05, type: ssr, server: yd-03.paofunlink.com, port: 1075, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇨🇳 台湾06, type: ssr, server: yd-03.paofunlink.com, port: 1076, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇨🇳 台湾07, type: ssr, server: yd-03.paofunlink.com, port: 1077, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇨🇳 台湾08, type: ssr, server: yd-03.paofunlink.com, port: 1078, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇸🇬 新加坡01, type: ssr, server: yd-05.paofunlink.com, port: 1090, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇸🇬 新加坡02, type: ssr, server: yd-05.paofunlink.com, port: 1091, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇸🇬 新加坡03, type: ssr, server: yd-02.paofunlink.com, port: 1092, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇸🇬 新加坡04, type: ssr, server: yd-02.paofunlink.com, port: 1093, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇸🇬 新加坡05, type: ssr, server: yd-03.paofunlink.com, port: 1095, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇸🇬 新加坡06, type: ssr, server: yd-03.paofunlink.com, port: 1096, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇯🇵 日本01, type: ssr, server: yd-05.paofunlink.com, port: 1050, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇯🇵 日本02, type: ssr, server: yd-05.paofunlink.com, port: 1051, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇯🇵 日本03, type: ssr, server: yd-02.paofunlink.com, port: 1052, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇯🇵 日本04, type: ssr, server: yd-02.paofunlink.com, port: 1053, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇯🇵 日本05, type: ssr, server: yd-03.paofunlink.com, port: 1055, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇺🇸 美国01, type: ssr, server: yd-05.paofunlink.com, port: 1080, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇺🇸 美国02, type: ssr, server: yd-05.paofunlink.com, port: 1081, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇺🇸 美国03, type: ssr, server: yd-02.paofunlink.com, port: 1082, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇺🇸 美国04, type: ssr, server: yd-02.paofunlink.com, port: 1083, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+  - { name: 🇺🇸 美国05, type: ssr, server: yd-02.paofunlink.com, port: 1084, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
   # - {name: 🇰🇷 KR09new, server: 119.203.21.31, port: 10443, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}
   # - {name: 🇸🇬 SG02new, server: 47.239.12.227, port: 80, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}
   # - {name: 🇸🇬 SG11new, server: 47.238.48.58, port: 80, client-fingerprint: random, type: vless, uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5, tls: true, tfo: false, skip-cert-verify: true, servername: cfed.tgzdyz2.top, network: ws, ws-opts: {path: "/TG@ZDYZ2?ed=2560", headers: {Host: cfed.tgzdyz2.top}}}

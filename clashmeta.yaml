@@ -293,6 +293,336 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+  - name: 🇨🇳 ⚡ ⚡
+    type: ssr
+    server: yd-01.paofunlink.com
+    port: 5950
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇭🇰 香港01
+    type: ssr
+    server: yd-01.paofunlink.com
+    port: 5950
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇭🇰 香港02
+    type: ssr
+    server: yd-01.paofunlink.com
+    port: 5951
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇭🇰 香港03
+    type: ssr
+    server: yd-01.paofunlink.com
+    port: 5952
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇭🇰 香港04
+    type: ssr
+    server: yd-06.paofunlink.com
+    port: 5953
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇭🇰 香港05
+    type: ssr
+    server: yd-06.paofunlink.com
+    port: 5954
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾01
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1070
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾02
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1071
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾03
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1072
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾04
+    type: ssr
+    server: yd-02.paofunlink.com
+    port: 1073
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾05
+    type: ssr
+    server: yd-03.paofunlink.com
+    port: 1075
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾06
+    type: ssr
+    server: yd-03.paofunlink.com
+    port: 1076
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾07
+    type: ssr
+    server: yd-03.paofunlink.com
+    port: 1077
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾08
+    type: ssr
+    server: yd-03.paofunlink.com
+    port: 1078
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇸🇬 新加坡01
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1090
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇸🇬 新加坡02
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1091
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇸🇬 新加坡03
+    type: ssr
+    server: yd-02.paofunlink.com
+    port: 1092
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇸🇬 新加坡04
+    type: ssr
+    server: yd-02.paofunlink.com
+    port: 1093
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇸🇬 新加坡05
+    type: ssr
+    server: yd-03.paofunlink.com
+    port: 1095
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇸🇬 新加坡06
+    type: ssr
+    server: yd-03.paofunlink.com
+    port: 1096
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇯🇵 日本01
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1050
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇯🇵 日本02
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1051
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇯🇵 日本03
+    type: ssr
+    server: yd-02.paofunlink.com
+    port: 1052
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇯🇵 日本04
+    type: ssr
+    server: yd-02.paofunlink.com
+    port: 1053
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇯🇵 日本05
+    type: ssr
+    server: yd-03.paofunlink.com
+    port: 1055
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇺🇸 美国01
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1080
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇺🇸 美国02
+    type: ssr
+    server: yd-05.paofunlink.com
+    port: 1081
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇺🇸 美国03
+    type: ssr
+    server: yd-02.paofunlink.com
+    port: 1082
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇺🇸 美国04
+    type: ssr
+    server: yd-02.paofunlink.com
+    port: 1083
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
+  - name: 🇺🇸 美国05
+    type: ssr
+    server: yd-02.paofunlink.com
+    port: 1084
+    cipher: chacha20-ietf
+    password: bxsnucrgk6hfish
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 254902:0724Lirrr
+    obfs-param: 54e00254902.microsoft.com
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -340,6 +670,36 @@ proxy-groups:
       - 🇰🇷 KR12 0.5
       - 🇹🇼 TW01
       - 🇹🇼 TW04
+      - 🇨🇳 ⚡ ⚡
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇭🇰 香港05
+      - 🇨🇳 台湾01
+      - 🇨🇳 台湾02
+      - 🇨🇳 台湾03
+      - 🇨🇳 台湾04
+      - 🇨🇳 台湾05
+      - 🇨🇳 台湾06
+      - 🇨🇳 台湾07
+      - 🇨🇳 台湾08
+      - 🇸🇬 新加坡01
+      - 🇸🇬 新加坡02
+      - 🇸🇬 新加坡03
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国04
+      - 🇺🇸 美国05
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -402,6 +762,36 @@ proxy-groups:
       - 🇰🇷 KR12 0.5
       - 🇹🇼 TW01
       - 🇹🇼 TW04
+      - 🇨🇳 ⚡ ⚡
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇭🇰 香港05
+      - 🇨🇳 台湾01
+      - 🇨🇳 台湾02
+      - 🇨🇳 台湾03
+      - 🇨🇳 台湾04
+      - 🇨🇳 台湾05
+      - 🇨🇳 台湾06
+      - 🇨🇳 台湾07
+      - 🇨🇳 台湾08
+      - 🇸🇬 新加坡01
+      - 🇸🇬 新加坡02
+      - 🇸🇬 新加坡03
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国04
+      - 🇺🇸 美国05
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -412,6 +802,14 @@ proxy-groups:
       - "KRJPHKTWSGUSCT "
       - 🇹🇼 TW01
       - 🇹🇼 TW04
+      - 🇨🇳 台湾01
+      - 🇨🇳 台湾02
+      - 🇨🇳 台湾03
+      - 🇨🇳 台湾04
+      - 🇨🇳 台湾05
+      - 🇨🇳 台湾06
+      - 🇨🇳 台湾07
+      - 🇨🇳 台湾08
   - name: 🚀 🇭🇰香港-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -423,6 +821,11 @@ proxy-groups:
       - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK13 2.0
       - 🇭🇰 HK11
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇭🇰 香港05
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -431,6 +834,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
   - name: 🚀 🇺🇸美国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -439,6 +847,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国04
+      - 🇺🇸 美国05
   - name: 🚀 🇰🇷韩国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -464,6 +877,12 @@ proxy-groups:
       - 🇸🇬 SG07 0.5
       - 🇸🇬 SG02 2.5
       - 🇸🇬 SG11 2.0
+      - 🇸🇬 新加坡01
+      - 🇸🇬 新加坡02
+      - 🇸🇬 新加坡03
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -474,6 +893,14 @@ proxy-groups:
       - "KRJPHKTWSGUSCT "
       - 🇹🇼 TW01
       - 🇹🇼 TW04
+      - 🇨🇳 台湾01
+      - 🇨🇳 台湾02
+      - 🇨🇳 台湾03
+      - 🇨🇳 台湾04
+      - 🇨🇳 台湾05
+      - 🇨🇳 台湾06
+      - 🇨🇳 台湾07
+      - 🇨🇳 台湾08
   - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -484,6 +911,14 @@ proxy-groups:
       - "KRJPHKTWSGUSCT "
       - 🇹🇼 TW01
       - 🇹🇼 TW04
+      - 🇨🇳 台湾01
+      - 🇨🇳 台湾02
+      - 🇨🇳 台湾03
+      - 🇨🇳 台湾04
+      - 🇨🇳 台湾05
+      - 🇨🇳 台湾06
+      - 🇨🇳 台湾07
+      - 🇨🇳 台湾08
   - name: ⚖️ 🇭🇰香港-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -495,6 +930,11 @@ proxy-groups:
       - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK13 2.0
       - 🇭🇰 HK11
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇭🇰 香港05
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -506,6 +946,11 @@ proxy-groups:
       - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK13 2.0
       - 🇭🇰 HK11
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇭🇰 香港05
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -514,6 +959,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
   - name: ⚖️ 🇯🇵日本-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -522,6 +972,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -530,6 +985,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国04
+      - 🇺🇸 美国05
   - name: ⚖️ 🇺🇸美国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -538,6 +998,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国04
+      - 🇺🇸 美国05
   - name: ⚖️ 🇰🇷韩国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -576,6 +1041,12 @@ proxy-groups:
       - 🇸🇬 SG07 0.5
       - 🇸🇬 SG02 2.5
       - 🇸🇬 SG11 2.0
+      - 🇸🇬 新加坡01
+      - 🇸🇬 新加坡02
+      - 🇸🇬 新加坡03
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -588,6 +1059,12 @@ proxy-groups:
       - 🇸🇬 SG07 0.5
       - 🇸🇬 SG02 2.5
       - 🇸🇬 SG11 2.0
+      - 🇸🇬 新加坡01
+      - 🇸🇬 新加坡02
+      - 🇸🇬 新加坡03
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
