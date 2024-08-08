@@ -66,9 +66,9 @@ proxies:
     network: ws
     ws-opts:
       path: /nimws
-  - name: 🇰🇷 KR06 1.0
-    server: 14.56.80.32
-    port: 28080
+  - name: 🇸🇬 SG02 2.5
+    server: 47.239.12.227
+    port: 80
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -81,55 +81,9 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
-  - name: 🇰🇷 KR10 pornjav
-    server: 59.3.87.55
-    port: 39109
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-    udp: true
-  - name: 🇰🇷 KR09 1.5
-    server: 119.203.21.31
-    port: 10443
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-  - name: 🇸🇬 SG13 pornjav
-    server: 47.236.180.51
-    port: 2087
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-  - name: 🇭🇰 HK24 2.0M
-    server: 47.57.12.238
-    port: 34237
+  - name: 🇸🇬 SG04 2.0
+    server: 8.218.132.209
+    port: 80
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -144,21 +98,6 @@ proxies:
         Host: cfed.tgzdyz2.top
   - name: 🇸🇬 SG07 0.5
     server: 47.238.52.240
-    port: 80
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-  - name: 🇸🇬 SG02 2.5
-    server: 47.239.12.227
     port: 80
     client-fingerprint: random
     type: vless
@@ -187,9 +126,130 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         Host: cfed.tgzdyz2.top
+  - name: 🇰🇷 KR05 2.0
+    server: 59.3.3.161
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
   - name: 🇭🇰 HK13 2.0
     server: 116.204.210.11
     port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇺🇸 US-California
+    server: 154.17.26.175
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇲🇾 马来西亚🇲🇾
+    server: 210.186.12.244
+    port: 443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇭🇰 HK24 2.0M
+    server: 47.57.12.238
+    port: 34237
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇰🇷 KR06 1.0
+    server: 14.56.80.32
+    port: 28080
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇰🇷 KR09 1.5
+    server: 119.203.21.31
+    port: 10443
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+  - name: 🇰🇷 KR10 pornjav
+    server: 59.3.87.55
+    port: 39109
+    client-fingerprint: random
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
+  - name: 🇸🇬 SG13 pornjav
+    server: 47.236.180.51
+    port: 2087
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -221,21 +281,6 @@ proxies:
   - name: 🇭🇰 HK11
     server: 199.15.79.167
     port: 34566
-    client-fingerprint: random
-    type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    tfo: false
-    skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        Host: cfed.tgzdyz2.top
-  - name: 🇰🇷 KR05 1.0
-    server: 59.3.3.161
-    port: 443
     client-fingerprint: random
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
@@ -655,18 +700,21 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
-      - 🇰🇷 KR06 1.0
-      - 🇰🇷 KR10 pornjav
-      - 🇰🇷 KR09 1.5
-      - 🇸🇬 SG13 pornjav
-      - 🇭🇰 HK24 2.0M
-      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG02 2.5
+      - 🇸🇬 SG04 2.0
+      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG11 2.0
+      - 🇰🇷 KR05 2.0
       - 🇭🇰 HK13 2.0
+      - 🇺🇸 US-California
+      - 🇲🇾 马来西亚🇲🇾
+      - 🇭🇰 HK24 2.0M
+      - 🇰🇷 KR06 1.0
+      - 🇰🇷 KR09 1.5
+      - 🇰🇷 KR10 pornjav
+      - 🇸🇬 SG13 pornjav
       - CT 08
       - 🇭🇰 HK11
-      - 🇰🇷 KR05 1.0
       - 🇰🇷 KR12 0.5
       - 🇹🇼 TW01
       - 🇹🇼 TW04
@@ -747,18 +795,21 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
-      - 🇰🇷 KR06 1.0
-      - 🇰🇷 KR10 pornjav
-      - 🇰🇷 KR09 1.5
-      - 🇸🇬 SG13 pornjav
-      - 🇭🇰 HK24 2.0M
-      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG02 2.5
+      - 🇸🇬 SG04 2.0
+      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG11 2.0
+      - 🇰🇷 KR05 2.0
       - 🇭🇰 HK13 2.0
+      - 🇺🇸 US-California
+      - 🇲🇾 马来西亚🇲🇾
+      - 🇭🇰 HK24 2.0M
+      - 🇰🇷 KR06 1.0
+      - 🇰🇷 KR09 1.5
+      - 🇰🇷 KR10 pornjav
+      - 🇸🇬 SG13 pornjav
       - CT 08
       - 🇭🇰 HK11
-      - 🇰🇷 KR05 1.0
       - 🇰🇷 KR12 0.5
       - 🇹🇼 TW01
       - 🇹🇼 TW04
@@ -818,8 +869,8 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
-      - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK13 2.0
+      - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK11
       - 🇭🇰 香港01
       - 🇭🇰 香港02
@@ -847,6 +898,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇺🇸 US-California
       - 🇺🇸 美国01
       - 🇺🇸 美国02
       - 🇺🇸 美国03
@@ -860,10 +912,10 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇰🇷 KR05 2.0
       - 🇰🇷 KR06 1.0
-      - 🇰🇷 KR10 pornjav
       - 🇰🇷 KR09 1.5
-      - 🇰🇷 KR05 1.0
+      - 🇰🇷 KR10 pornjav
       - 🇰🇷 KR12 0.5
   - name: 🚀 🇸🇬新加坡-自动选择
     type: url-test
@@ -873,10 +925,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
-      - 🇸🇬 SG13 pornjav
-      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG02 2.5
+      - 🇸🇬 SG04 2.0
+      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG11 2.0
+      - 🇸🇬 SG13 pornjav
       - 🇸🇬 新加坡01
       - 🇸🇬 新加坡02
       - 🇸🇬 新加坡03
@@ -927,8 +980,8 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
-      - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK13 2.0
+      - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK11
       - 🇭🇰 香港01
       - 🇭🇰 香港02
@@ -943,8 +996,8 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
-      - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK13 2.0
+      - 🇭🇰 HK24 2.0M
       - 🇭🇰 HK11
       - 🇭🇰 香港01
       - 🇭🇰 香港02
@@ -985,6 +1038,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇺🇸 US-California
       - 🇺🇸 美国01
       - 🇺🇸 美国02
       - 🇺🇸 美国03
@@ -998,6 +1052,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇺🇸 US-California
       - 🇺🇸 美国01
       - 🇺🇸 美国02
       - 🇺🇸 美国03
@@ -1011,10 +1066,10 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇰🇷 KR05 2.0
       - 🇰🇷 KR06 1.0
-      - 🇰🇷 KR10 pornjav
       - 🇰🇷 KR09 1.5
-      - 🇰🇷 KR05 1.0
+      - 🇰🇷 KR10 pornjav
       - 🇰🇷 KR12 0.5
   - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
     type: load-balance
@@ -1024,10 +1079,10 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
+      - 🇰🇷 KR05 2.0
       - 🇰🇷 KR06 1.0
-      - 🇰🇷 KR10 pornjav
       - 🇰🇷 KR09 1.5
-      - 🇰🇷 KR05 1.0
+      - 🇰🇷 KR10 pornjav
       - 🇰🇷 KR12 0.5
   - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
     type: load-balance
@@ -1037,10 +1092,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
-      - 🇸🇬 SG13 pornjav
-      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG02 2.5
+      - 🇸🇬 SG04 2.0
+      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG11 2.0
+      - 🇸🇬 SG13 pornjav
       - 🇸🇬 新加坡01
       - 🇸🇬 新加坡02
       - 🇸🇬 新加坡03
@@ -1055,10 +1111,11 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - "KRJPHKTWSGUSCT "
-      - 🇸🇬 SG13 pornjav
-      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG02 2.5
+      - 🇸🇬 SG04 2.0
+      - 🇸🇬 SG07 0.5
       - 🇸🇬 SG11 2.0
+      - 🇸🇬 SG13 pornjav
       - 🇸🇬 新加坡01
       - 🇸🇬 新加坡02
       - 🇸🇬 新加坡03
