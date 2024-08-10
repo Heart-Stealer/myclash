@@ -1,0 +1,660 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxies:
+    - {name: 🇨🇳 ⚡ 节点超时更新订阅⚡, type: ssr, server: yd-01.paofunlink.com, port: 5950, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇭🇰 香港01｜tg@ghosxtop, type: ssr, server: yd-01.paofunlink.com, port: 5950, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇭🇰 香港02｜tg@ghosxtop, type: ssr, server: yd-01.paofunlink.com, port: 5951, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇭🇰 香港03｜tg@ghosxtop, type: ssr, server: yd-01.paofunlink.com, port: 5952, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇭🇰 香港04｜tg@ghosxtop, type: ssr, server: yd-06.paofunlink.com, port: 5953, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇭🇰 香港05｜tg@ghosxtop, type: ssr, server: yd-06.paofunlink.com, port: 5954, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇨🇳 台湾01｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1070, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇨🇳 台湾02｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1071, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇨🇳 台湾03｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1072, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇨🇳 台湾04｜tg@ghosxtop, type: ssr, server: yd-02.paofunlink.com, port: 1073, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇨🇳 台湾05｜tg@ghosxtop, type: ssr, server: yd-03.paofunlink.com, port: 1075, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇨🇳 台湾06｜tg@ghosxtop, type: ssr, server: yd-03.paofunlink.com, port: 1076, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇨🇳 台湾07｜tg@ghosxtop, type: ssr, server: yd-03.paofunlink.com, port: 1077, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇨🇳 台湾08｜tg@ghosxtop, type: ssr, server: yd-03.paofunlink.com, port: 1078, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇸🇬 新加坡01｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1090, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇸🇬 新加坡02｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1091, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇸🇬 新加坡03｜tg@ghosxtop, type: ssr, server: yd-02.paofunlink.com, port: 1092, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇸🇬 新加坡04｜tg@ghosxtop, type: ssr, server: yd-02.paofunlink.com, port: 1093, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇸🇬 新加坡05｜tg@ghosxtop, type: ssr, server: yd-03.paofunlink.com, port: 1095, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇸🇬 新加坡06｜tg@ghosxtop, type: ssr, server: yd-03.paofunlink.com, port: 1096, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇯🇵 日本01｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1050, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇯🇵 日本02｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1051, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇯🇵 日本03｜tg@ghosxtop, type: ssr, server: yd-02.paofunlink.com, port: 1052, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇯🇵 日本04｜tg@ghosxtop, type: ssr, server: yd-02.paofunlink.com, port: 1053, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇯🇵 日本05｜tg@ghosxtop, type: ssr, server: yd-03.paofunlink.com, port: 1055, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇺🇸 美国01｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1080, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇺🇸 美国02｜tg@ghosxtop, type: ssr, server: yd-05.paofunlink.com, port: 1081, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇺🇸 美国03｜tg@ghosxtop, type: ssr, server: yd-02.paofunlink.com, port: 1082, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇺🇸 美国04｜tg@ghosxtop, type: ssr, server: yd-02.paofunlink.com, port: 1083, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇺🇸 美国05｜tg@ghosxtop, type: ssr, server: yd-02.paofunlink.com, port: 1084, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 254902:0724Lirrr, obfs-param: 54e00254902.microsoft.com, udp: true}
+    - { name: 🇹🇭 泰国01｜tg@ghosxtop, type: ss, server: gtm1.ktmwan.com, port: 27275, cipher: chacha20-ietf-poly1305, password: 60c54131-cb25-4266-acf7-7dd0cff2b82b, udp: true }
+    - { name: 🇹🇭 泰国02｜tg@ghosxtop, type: ss, server: gtm1.ktmwan.com, port: 27275, cipher: chacha20-ietf-poly1305, password: 60c54131-cb25-4266-acf7-7dd0cff2b82b, udp: true }
+    - { name: 🇷🇺 俄罗斯01｜tg@ghosxtop, type: ss, server: gtm1.ktmwan.com, port: 27276, cipher: chacha20-ietf-poly1305, password: 60c54131-cb25-4266-acf7-7dd0cff2b82b, udp: true }
+    - { name: 🇷🇺 俄罗斯02｜tg@ghosxtop, type: ss, server: gtm1.ktmwan.com, port: 27276, cipher: chacha20-ietf-poly1305, password: 60c54131-cb25-4266-acf7-7dd0cff2b82b, udp: true }
+    - { name: 🇻🇳 越南01｜tg@ghosxtop, type: ss, server: gtm1.ktmwan.com, port: 27277, cipher: chacha20-ietf-poly1305, password: 60c54131-cb25-4266-acf7-7dd0cff2b82b, udp: true }
+    - { name: 🇻🇳 越南02｜tg@ghosxtop, type: ss, server: gtm1.ktmwan.com, port: 27277, cipher: chacha20-ietf-poly1305, password: 60c54131-cb25-4266-acf7-7dd0cff2b82b, udp: true }
+proxy-groups:
+  - name: 🔯Ghostx
+    type: select
+    proxies:
+      - ❤️ 懒人专用｜永不掉线
+      - 🎯 ChatGPT｜Netflix解锁
+      - 🇨🇳 ⚡ 节点超时更新订阅⚡
+      - 🇭🇰 香港01｜tg@ghosxtop
+      - 🇭🇰 香港02｜tg@ghosxtop
+      - 🇭🇰 香港03｜tg@ghosxtop
+      - 🇭🇰 香港04｜tg@ghosxtop
+      - 🇭🇰 香港05｜tg@ghosxtop
+      - 🇨🇳 台湾01｜tg@ghosxtop
+      - 🇨🇳 台湾02｜tg@ghosxtop
+      - 🇨🇳 台湾03｜tg@ghosxtop
+      - 🇨🇳 台湾04｜tg@ghosxtop
+      - 🇨🇳 台湾05｜tg@ghosxtop
+      - 🇨🇳 台湾06｜tg@ghosxtop
+      - 🇨🇳 台湾07｜tg@ghosxtop
+      - 🇨🇳 台湾08｜tg@ghosxtop
+      - 🇺🇸 美国01｜tg@ghosxtop
+      - 🇺🇸 美国02｜tg@ghosxtop
+      - 🇺🇸 美国03｜tg@ghosxtop
+      - 🇺🇸 美国04｜tg@ghosxtop
+      - 🇺🇸 美国05｜tg@ghosxtop
+      - 🇯🇵 日本01｜tg@ghosxtop
+      - 🇯🇵 日本02｜tg@ghosxtop
+      - 🇯🇵 日本03｜tg@ghosxtop
+      - 🇯🇵 日本04｜tg@ghosxtop
+      - 🇯🇵 日本05｜tg@ghosxtop
+      - 🇸🇬 新加坡01｜tg@ghosxtop
+      - 🇸🇬 新加坡02｜tg@ghosxtop
+      - 🇸🇬 新加坡03｜tg@ghosxtop
+      - 🇸🇬 新加坡04｜tg@ghosxtop
+      - 🇸🇬 新加坡05｜tg@ghosxtop
+      - 🇸🇬 新加坡06｜tg@ghosxtop
+      - 🇹🇭 泰国01｜tg@ghosxtop
+      - 🇹🇭 泰国02｜tg@ghosxtop
+      - 🇷🇺 俄罗斯01｜tg@ghosxtop
+      - 🇷🇺 俄罗斯02｜tg@ghosxtop
+      - 🇻🇳 越南01｜tg@ghosxtop
+      - 🇻🇳 越南02｜tg@ghosxtop
+     
+  - name: ❤️ 懒人专用｜永不掉线
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 600
+    strategy: round-robin
+    proxies:
+      - 🇭🇰 香港01｜tg@ghosxtop
+      - 🇭🇰 香港02｜tg@ghosxtop
+      - 🇭🇰 香港03｜tg@ghosxtop
+      - 🇭🇰 香港04｜tg@ghosxtop
+      - 🇭🇰 香港05｜tg@ghosxtop
+      - 🇨🇳 台湾01｜tg@ghosxtop
+      - 🇨🇳 台湾02｜tg@ghosxtop
+      - 🇨🇳 台湾03｜tg@ghosxtop
+      - 🇨🇳 台湾04｜tg@ghosxtop
+      - 🇨🇳 台湾05｜tg@ghosxtop
+      - 🇨🇳 台湾06｜tg@ghosxtop
+      - 🇨🇳 台湾07｜tg@ghosxtop
+      - 🇨🇳 台湾08｜tg@ghosxtop
+      - 🇺🇸 美国01｜tg@ghosxtop
+      - 🇺🇸 美国02｜tg@ghosxtop
+      - 🇺🇸 美国03｜tg@ghosxtop
+      - 🇺🇸 美国04｜tg@ghosxtop
+      - 🇺🇸 美国05｜tg@ghosxtop
+      - 🇯🇵 日本01｜tg@ghosxtop
+      - 🇯🇵 日本02｜tg@ghosxtop
+      - 🇯🇵 日本03｜tg@ghosxtop
+      - 🇯🇵 日本04｜tg@ghosxtop
+      - 🇯🇵 日本05｜tg@ghosxtop
+      - 🇸🇬 新加坡01｜tg@ghosxtop
+      - 🇸🇬 新加坡02｜tg@ghosxtop
+      - 🇸🇬 新加坡03｜tg@ghosxtop
+      - 🇸🇬 新加坡04｜tg@ghosxtop
+      - 🇸🇬 新加坡05｜tg@ghosxtop
+      - 🇸🇬 新加坡06｜tg@ghosxtop
+  - name: 🎯 ChatGPT｜Netflix解锁
+    type: url-test
+    url: http://www.google.com/generate_204
+    interval: 600
+    proxies:
+      - 🇭🇰 香港01｜tg@ghosxtop
+      - 🇭🇰 香港02｜tg@ghosxtop
+      - 🇭🇰 香港03｜tg@ghosxtop
+      - 🇭🇰 香港04｜tg@ghosxtop
+      - 🇭🇰 香港05｜tg@ghosxtop
+      - 🇨🇳 台湾01｜tg@ghosxtop
+      - 🇨🇳 台湾02｜tg@ghosxtop
+      - 🇨🇳 台湾03｜tg@ghosxtop
+      - 🇨🇳 台湾04｜tg@ghosxtop
+      - 🇨🇳 台湾05｜tg@ghosxtop
+      - 🇨🇳 台湾06｜tg@ghosxtop
+      - 🇨🇳 台湾07｜tg@ghosxtop
+      - 🇨🇳 台湾08｜tg@ghosxtop
+      - 🇸🇬 新加坡01｜tg@ghosxtop
+      - 🇸🇬 新加坡02｜tg@ghosxtop
+      - 🇸🇬 新加坡03｜tg@ghosxtop
+      - 🇸🇬 新加坡04｜tg@ghosxtop
+      - 🇸🇬 新加坡05｜tg@ghosxtop
+      - 🇸🇬 新加坡06｜tg@ghosxtop
+rules:
+    - 'DOMAIN,link1.🔯Ghostx.top,DIRECT'
+    - 'DOMAIN-SUFFIX,services.googleapis.cn,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🔯Ghostx'
+    - 'DOMAIN,safebrowsing.urlsec.qq.com,DIRECT'
+    - 'DOMAIN,safebrowsing.googleapis.com,DIRECT'
+    - 'DOMAIN,developer.apple.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,digicert.com,🔯Ghostx'
+    - 'DOMAIN,ocsp.apple.com,🔯Ghostx'
+    - 'DOMAIN,ocsp.comodoca.com,🔯Ghostx'
+    - 'DOMAIN,ocsp.usertrust.com,🔯Ghostx'
+    - 'DOMAIN,ocsp.sectigo.com,🔯Ghostx'
+    - 'DOMAIN,ocsp.verisign.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,apple-dns.net,🔯Ghostx'
+    - 'DOMAIN,testflight.apple.com,🔯Ghostx'
+    - 'DOMAIN,sandbox.itunes.apple.com,🔯Ghostx'
+    - 'DOMAIN,itunes.apple.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,apps.apple.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,blobstore.apple.com,🔯Ghostx'
+    - 'DOMAIN,cvws.icloud-content.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,mzstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,itunes.apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud-content.com,DIRECT'
+    - 'DOMAIN-SUFFIX,me.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aaplimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn20.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn-apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,akadns.net,DIRECT'
+    - 'DOMAIN-SUFFIX,akamaiedge.net,DIRECT'
+    - 'DOMAIN-SUFFIX,edgekey.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcname.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-mapkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.net,DIRECT'
+    - 'DOMAIN-SUFFIX,127.net,DIRECT'
+    - 'DOMAIN-SUFFIX,163.com,DIRECT'
+    - 'DOMAIN-SUFFIX,360buyimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,36kr.com,DIRECT'
+    - 'DOMAIN-SUFFIX,acfun.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,air-matters.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aixifan.com,DIRECT'
+    - 'DOMAIN-KEYWORD,alicdn,DIRECT'
+    - 'DOMAIN-KEYWORD,alipay,DIRECT'
+    - 'DOMAIN-KEYWORD,taobao,DIRECT'
+    - 'DOMAIN-SUFFIX,amap.com,DIRECT'
+    - 'DOMAIN-SUFFIX,autonavi.com,DIRECT'
+    - 'DOMAIN-KEYWORD,baidu,DIRECT'
+    - 'DOMAIN-SUFFIX,bdimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bdstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilibili.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilivideo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,caiyunapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,clouddn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbeta.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbetacdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cootekservice.com,DIRECT'
+    - 'DOMAIN-SUFFIX,csdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ctrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dgtle.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dianping.com,DIRECT'
+    - 'DOMAIN-SUFFIX,douban.com,DIRECT'
+    - 'DOMAIN-SUFFIX,doubanio.com,DIRECT'
+    - 'DOMAIN-SUFFIX,duokan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,easou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ele.me,DIRECT'
+    - 'DOMAIN-SUFFIX,feng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,fir.im,DIRECT'
+    - 'DOMAIN-SUFFIX,frdic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,g-cores.com,DIRECT'
+    - 'DOMAIN-SUFFIX,godic.net,DIRECT'
+    - 'DOMAIN-SUFFIX,gtimg.com,DIRECT'
+    - 'DOMAIN,cdn.hockeyapp.net,DIRECT'
+    - 'DOMAIN-SUFFIX,hongxiu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,hxcdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iciba.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifeng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifengimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ipip.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iqiyi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jianshu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,knewone.com,DIRECT'
+    - 'DOMAIN-SUFFIX,le.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lecloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lemicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,licdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,luoo.net,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miaopai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoft.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoftonline.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miui.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miwifi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mob.com,DIRECT'
+    - 'DOMAIN-SUFFIX,netease.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office365.com,DIRECT'
+    - 'DOMAIN-KEYWORD,officecdn,DIRECT'
+    - 'DOMAIN-SUFFIX,oschina.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ppsimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,pstatp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qcloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdaily.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdmm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhres.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qidian.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qihucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiyipic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qq.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qqurl.com,DIRECT'
+    - 'DOMAIN-SUFFIX,rarbg.to,DIRECT'
+    - 'DOMAIN-SUFFIX,ruguoapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,segmentfault.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sinaapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,smzdm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,snapdrop.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sogou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sogoucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sohu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,soku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,speedtest.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sspai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,suning.com,DIRECT'
+    - 'DOMAIN-SUFFIX,taobao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tencent.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tenpay.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tianyancha.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tmall.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tudou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,umetrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upaiyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,veryzhun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weather.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weibo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.net,DIRECT'
+    - 'DOMAIN-SUFFIX,xiaomicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ximalaya.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xmcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xunlei.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yhd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yihaodianimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yinxiang.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ykimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youdao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zealer.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zimuzu.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,zoho.com,DIRECT'
+    - 'DOMAIN-KEYWORD,amazon,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,google,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,gmail,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,youtube,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,facebook,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,fb.me,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,fbcdn.net,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,twitter,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,instagram,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,dropbox,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,twimg.com,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,blogspot,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,youtu.be,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,whatsapp,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,admarvel,REJECT'
+    - 'DOMAIN-KEYWORD,admaster,REJECT'
+    - 'DOMAIN-KEYWORD,adsage,REJECT'
+    - 'DOMAIN-KEYWORD,adsmogo,REJECT'
+    - 'DOMAIN-KEYWORD,adsrvmedia,REJECT'
+    - 'DOMAIN-KEYWORD,adwords,REJECT'
+    - 'DOMAIN-KEYWORD,adservice,REJECT'
+    - 'DOMAIN-SUFFIX,appsflyer.com,REJECT'
+    - 'DOMAIN-KEYWORD,domob,REJECT'
+    - 'DOMAIN-SUFFIX,doubleclick.net,REJECT'
+    - 'DOMAIN-KEYWORD,duomeng,REJECT'
+    - 'DOMAIN-KEYWORD,dwtrack,REJECT'
+    - 'DOMAIN-KEYWORD,guanggao,REJECT'
+    - 'DOMAIN-KEYWORD,lianmeng,REJECT'
+    - 'DOMAIN-SUFFIX,mmstat.com,REJECT'
+    - 'DOMAIN-KEYWORD,mopub,REJECT'
+    - 'DOMAIN-KEYWORD,omgmta,REJECT'
+    - 'DOMAIN-KEYWORD,openx,REJECT'
+    - 'DOMAIN-KEYWORD,partnerad,REJECT'
+    - 'DOMAIN-KEYWORD,pingfore,REJECT'
+    - 'DOMAIN-KEYWORD,supersonicads,REJECT'
+    - 'DOMAIN-KEYWORD,uedas,REJECT'
+    - 'DOMAIN-KEYWORD,umeng,REJECT'
+    - 'DOMAIN-KEYWORD,usage,REJECT'
+    - 'DOMAIN-SUFFIX,vungle.com,REJECT'
+    - 'DOMAIN-KEYWORD,wlmonitor,REJECT'
+    - 'DOMAIN-KEYWORD,zjtoolbar,REJECT'
+    - 'DOMAIN-SUFFIX,9to5mac.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,abpchina.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,adblockplus.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,adobe.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,akamaized.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,alfredapp.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,amplitude.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ampproject.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,android.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,angularjs.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,aolcdn.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,apkpure.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,appledaily.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,appshopper.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,appspot.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,arcgis.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,archive.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,armorgames.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,aspnetcdn.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,att.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,awsstatic.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,azureedge.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,azurewebsites.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,bing.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,bintray.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,bit.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,bit.ly,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,bitbucket.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,bjango.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,bkrtx.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,blog.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,blogcdn.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,blogger.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,blogsmithmedia.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,blogspot.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,blogspot.hk,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,bloomberg.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,box.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,box.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,cachefly.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,chromium.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,cl.ly,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,cloudflare.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,cloudfront.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,cloudmagic.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,cmail19.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,cnet.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,cocoapods.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,comodoca.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,crashlytics.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,culturedcode.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,d.pr,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,danilo.to,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,dayone.me,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,db.tt,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,deskconnect.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,disq.us,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,disqus.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,disquscdn.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,dnsimple.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,docker.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,dribbble.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,droplr.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,duckduckgo.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,dueapp.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,dytt8.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,edgecastcdn.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,edgekey.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,edgesuite.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,engadget.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,entrust.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,eurekavpt.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,evernote.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,fabric.io,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,fast.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,fastly.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,fc2.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,feedburner.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,feedly.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,feedsportal.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,fiftythree.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,firebaseio.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,flexibits.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,flickr.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,flipboard.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,g.co,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,gabia.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,geni.us,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,gfx.ms,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ggpht.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ghostnoteapp.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,git.io,🔯Ghostx'
+    - 'DOMAIN-KEYWORD,github,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,globalsign.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,gmodules.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,godaddy.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,golang.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,gongm.in,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,goo.gl,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,goodreaders.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,goodreads.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,gravatar.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,gstatic.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,gvt0.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,hockeyapp.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,hotmail.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,icons8.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ifixit.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ift.tt,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ifttt.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,iherb.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,imageshack.us,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,img.ly,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,imgur.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,imore.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,instapaper.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ipn.li,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,is.gd,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,issuu.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,itgonglun.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,itun.es,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ixquick.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,j.mp,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,js.revsci.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,jshint.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,jtvnw.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,justgetflux.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,kat.cr,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,klip.me,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,libsyn.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,linkedin.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,line-apps.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,linode.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,lithium.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,littlehj.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,live.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,live.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,livefilestore.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,llnwd.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,macid.co,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,macromedia.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,macrumors.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,mashable.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,mathjax.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,medium.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,mega.co.nz,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,mega.nz,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,megaupload.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,microsofttranslator.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,mindnode.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,mobile01.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,modmyi.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,msedge.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,myfontastic.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,name.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,nextmedia.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,nsstatic.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,nssurge.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,nyt.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,nytimes.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,omnigroup.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,onedrive.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,onenote.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ooyala.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,openvpn.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,openwrt.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,orkut.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,osxdaily.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,outlook.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ow.ly,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,paddleapi.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,parallels.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,parse.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,pdfexpert.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,periscope.tv,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,pinboard.in,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,pinterest.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,pixelmator.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,pixiv.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,playpcesor.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,playstation.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,playstation.com.hk,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,playstation.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,playstationnetwork.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,pushwoosh.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,rime.im,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,servebom.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,sfx.ms,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,shadowsocks.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,sharethis.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,shazam.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,skype.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,smartdns🔯Ghostx.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,smartmailcloud.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,sndcdn.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,sony.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,soundcloud.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,sourceforge.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,spotify.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,squarespace.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,sstatic.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,st.luluku.pw,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,stackoverflow.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,startpage.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,staticflickr.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,steamcommunity.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,symauth.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,symcb.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,symcd.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tapbots.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tapbots.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tdesktop.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,techcrunch.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,techsmith.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,thepiratebay.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,theverge.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,time.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,timeinc.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tiny.cc,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tinypic.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tmblr.co,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,todoist.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,trello.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,trustasiassl.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tumblr.co,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tumblr.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tweetdeck.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,tweetmarker.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,twitch.tv,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,txmblr.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,typekit.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ubertags.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ublock.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ubnt.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ulyssesapp.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,urchin.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,usertrust.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,v.gd,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,v2ex.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,vimeo.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,vimeocdn.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,vine.co,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,vivaldi.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,vox-cdn.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,vsco.co,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,vultr.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,w.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,w3schools.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,webtype.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wikiwand.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wikileaks.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wikimedia.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wikipedia.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wikipedia.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,windows.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,windows.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wire.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wordpress.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,workflowy.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wp.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wsj.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,wsj.net,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,xda-developers.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,xeeno.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,xiti.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,yahoo.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,yimg.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ying.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,yoyo.org,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,ytimg.com,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,telegra.ph,🔯Ghostx'
+    - 'DOMAIN-SUFFIX,telegram.org,🔯Ghostx'
+    - 'IP-CIDR,91.108.4.0/22,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,91.108.8.0/21,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,91.108.16.0/22,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,91.108.56.0/22,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,149.154.160.0/20,🔯Ghostx,no-resolve'
+    - 'IP-CIDR6,2001:67c:4e8::/48,🔯Ghostx,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23d::/48,🔯Ghostx,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23f::/48,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,120.232.181.162/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,120.241.147.226/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,120.253.253.226/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,120.253.255.162/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,120.253.255.34/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,120.253.255.98/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,180.163.150.162/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,180.163.150.34/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,180.163.151.162/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,180.163.151.34/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,203.208.39.0/24,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,203.208.40.0/24,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,203.208.41.0/24,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,203.208.43.0/24,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,203.208.50.0/24,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,220.181.174.162/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,220.181.174.226/32,🔯Ghostx,no-resolve'
+    - 'IP-CIDR,220.181.174.34/32,🔯Ghostx,no-resolve'
+    - 'DOMAIN,injections.adguard.org,DIRECT'
+    - 'DOMAIN,local.adguard.org,DIRECT'
+    - 'DOMAIN-SUFFIX,local,DIRECT'
+    - 'IP-CIDR,127.0.0.0/8,DIRECT'
+    - 'IP-CIDR,172.16.0.0/12,DIRECT'
+    - 'IP-CIDR,192.168.0.0/16,DIRECT'
+    - 'IP-CIDR,10.0.0.0/8,DIRECT'
+    - 'IP-CIDR,17.0.0.0/8,DIRECT'
+    - 'IP-CIDR,100.64.0.0/10,DIRECT'
+    - 'IP-CIDR,224.0.0.0/4,DIRECT'
+    - 'IP-CIDR6,fe80::/10,DIRECT'
+    - 'DOMAIN-SUFFIX,cn,DIRECT'
+    - 'DOMAIN-KEYWORD,-cn,DIRECT'
+    - 'GEOIP,CN,DIRECT'
+    - 'MATCH,🔯Ghostx'
