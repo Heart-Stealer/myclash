@@ -66,6 +66,36 @@ proxies:
     network: ws
     ws-opts:
       path: /nimws
+  - name: 加拿大
+    type: vmess
+    server: 145.724064.xyz
+    port: 443
+    cipher: auto
+    uuid: 5de1ff44-aaf8-4790-b0fb-e55aab062622
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /zrqrvws
+      headers:
+        host: 145.724064.xyz
+  - name: 荷兰
+    type: vmess
+    server: indiavideo.sbs
+    port: 443
+    cipher: auto
+    uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        host: indiavideo.sbs
   - name: SG11-1.0
     type: vless
     server: 47.238.48.58
@@ -105,36 +135,6 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: 加拿大
-    type: vmess
-    server: 145.724064.xyz
-    port: 443
-    cipher: auto
-    uuid: 5de1ff44-aaf8-4790-b0fb-e55aab062622
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /zrqrvws
-      headers:
-        host: 145.724064.xyz
-  - name: 荷兰
-    type: vmess
-    server: indiavideo.sbs
-    port: 443
-    cipher: auto
-    uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        host: indiavideo.sbs
   - name: 马来西亚🇲🇾
     type: vless
     server: 210.186.12.244
@@ -148,6 +148,84 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
+  - name: "1"
+    type: vless
+    server: bestcf.onecf.eu.org
+    port: 443
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "2"
+    type: vless
+    server: 104.19.62.86
+    port: 2082
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "3"
+    type: vless
+    server: www.gov.ua
+    port: 2082
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "4"
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 443
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "6"
+    type: vless
+    server: tilebani.com
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "7"
+    type: vless
+    server: 8.218.132.209
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
   - name: 01-2.0
     type: vless
     server: 45.80.111.111
@@ -469,135 +547,6 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: "1"
-    type: vless
-    server: bestcf.onecf.eu.org
-    port: 443
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: true
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-  - name: "2"
-    type: vless
-    server: 104.19.62.86
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: "3"
-    type: vless
-    server: acsg3.cloudflarest.link
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: true
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: "4"
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 443
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: true
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: "6"
-    type: vless
-    server: tilebani.com
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: true
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: "7"
-    type: vless
-    server: 8.218.132.209
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: true
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: lax1
-    type: vless
-    server: 104.19.128.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: lhr
-    type: vless
-    server: 172.67.192.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: sjc1
-    type: vless
-    server: 172.64.128.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: sjc2
-    type: vless
-    server: 104.19.32.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -630,12 +579,18 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
+      - 加拿大
+      - 荷兰
       - SG11-1.0
       - SG04-1.0
       - 塞尔维亚🇷🇸
-      - 加拿大
-      - 荷兰
       - 马来西亚🇲🇾
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "6"
+      - "7"
       - 01-2.0
       - 02-2.0
       - 印度🇮🇳2
@@ -661,16 +616,6 @@ proxy-groups:
       - HK-16
       - TW-2-1.0
       - US-Seattle
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-      - "6"
-      - "7"
-      - lax1
-      - lhr
-      - sjc1
-      - sjc2
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -718,12 +663,18 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
+      - 加拿大
+      - 荷兰
       - SG11-1.0
       - SG04-1.0
       - 塞尔维亚🇷🇸
-      - 加拿大
-      - 荷兰
       - 马来西亚🇲🇾
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "6"
+      - "7"
       - 01-2.0
       - 02-2.0
       - 印度🇮🇳2
@@ -749,16 +700,6 @@ proxy-groups:
       - HK-16
       - TW-2-1.0
       - US-Seattle
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-      - "6"
-      - "7"
-      - lax1
-      - lhr
-      - sjc1
-      - sjc2
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
