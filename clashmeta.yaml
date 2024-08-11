@@ -66,10 +66,10 @@ proxies:
     network: ws
     ws-opts:
       path: /nimws
-  - name: CMCC1
+  - name: SG11-1.0
     type: vless
-    server: 104.19.57.188
-    port: 443
+    server: 47.238.48.58
+    port: 80
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -79,179 +79,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: CMCC2
+  - name: SG04-1.0
     type: vless
-    server: 104.19.59.50
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: CMCC3
-    type: vless
-    server: 104.19.32.38
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: CMCC4
-    type: vless
-    server: 104.19.32.194
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: CMCC6
-    type: vless
-    server: 104.19.63.236
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: TG@ZDYZ21
-    type: vless
-    server: 188.42.88.66
-    port: 2053
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: TG@ZDYZ22
-    type: vless
-    server: 205.233.181.36
-    port: 2053
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 澳大利亚🇦🇺2
-    type: vless
-    server: 38.55.106.82
-    port: 7777
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 波兰🇵🇱
-    type: vless
-    server: 45.144.48.50
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 丹麦🇩🇰
-    type: vless
-    server: 38.180.1.84
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 德国🇩🇪3
-    type: vless
-    server: 70.34.199.167
-    port: 2096
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 加拿大🇨🇦
-    type: vless
-    server: 198.23.223.178
-    port: 2053
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 马来西亚🇲🇾
-    type: vless
-    server: 210.186.12.244
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 挪威🇳🇴
-    type: vless
-    server: 46.29.238.54
-    port: 8443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 瑞典🇸🇪
-    type: vless
-    server: 46.226.160.40
-    port: 8443
+    server: 8.218.132.209
+    port: 80
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -265,344 +96,6 @@ proxies:
     type: vless
     server: 193.57.139.78
     port: 81
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 印度🇮🇳
-    type: vless
-    server: 20.235.105.146
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 印度🇮🇳2
-    type: vless
-    server: 65.20.76.125
-    port: 2053
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: HK-16
-    type: vless
-    server: 161.81.204.131
-    port: 35510
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: HK-17
-    type: vless
-    server: 161.81.46.121
-    port: 28903
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: HK-18
-    type: vless
-    server: 103.30.78.25
-    port: 30277
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: HK-19
-    type: vless
-    server: 161.81.46.121
-    port: 19343
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: JP3
-    type: vless
-    server: 175.200.14.162
-    port: 17443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: JP6
-    type: vless
-    server: 112.185.223.152
-    port: 11101
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR1
-    type: vless
-    server: 118.42.9.31
-    port: 29984
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR10
-    type: vless
-    server: 59.3.87.55
-    port: 39109
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR13
-    type: vless
-    server: 61.77.9.219
-    port: 12487
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR2
-    type: vless
-    server: 119.207.86.66
-    port: 12209
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR3
-    type: vless
-    server: 115.88.75.154
-    port: 30032
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR5
-    type: vless
-    server: 59.3.3.161
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR6
-    type: vless
-    server: 118.45.125.234
-    port: 16575
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR8
-    type: vless
-    server: 211.55.202.96
-    port: 33890
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR9
-    type: vless
-    server: 119.203.21.31
-    port: 10443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: SG1
-    type: vless
-    server: 140.99.233.156
-    port: 2087
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: SG11
-    type: vless
-    server: 47.238.48.58
-    port: 80
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: SG4
-    type: vless
-    server: 8.218.132.209
-    port: 80
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: SG9
-    type: vless
-    server: 47.236.202.91
-    port: 2053
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: TW-1
-    type: vless
-    server: 211.75.243.91
-    port: 16764
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: TW-2
-    type: vless
-    server: 61.220.41.143
-    port: 36633
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: TW-3
-    type: vless
-    server: 89.116.161.250
-    port: 8443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: US-New York
-    type: vless
-    server: 154.21.88.85
-    port: 56757
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: US-Seattle
-    type: vless
-    server: 154.21.80.108
-    port: 37827
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -627,21 +120,6 @@ proxies:
       path: /zrqrvws
       headers:
         host: 145.724064.xyz
-  - name: 美国
-    type: vmess
-    server: tilebani.com
-    port: 443
-    cipher: auto
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ""
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        host: tilebani.com
   - name: 荷兰
     type: vmess
     server: indiavideo.sbs
@@ -657,202 +135,20 @@ proxies:
       path: /linkws
       headers:
         host: indiavideo.sbs
-  - name: 巴西
-    type: vmess
-    server: 188.114.96.6
+  - name: 马来西亚🇲🇾
+    type: vless
+    server: 210.186.12.244
     port: 443
-    cipher: auto
-    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
-    alterId: 0
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
-    skip-cert-verify: true
-    servername: ""
+    servername: cfed.tgzdyz2.top
     network: ws
     ws-opts:
-      path: /linkws
+      path: /TG@ZDYZ2?ed=2560
       headers:
-        host: jahfkjha.cfd
-  - name: CAE0001
-    type: vless
-    server: 94.140.0.0
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CCH0023
-    type: vless
-    server: 185.18.250.138
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: a.ssll.gay
-  - name: CEE0053
-    type: vless
-    server: 45.80.110.231
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CEE0054
-    type: vless
-    server: 45.80.110.245
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CEE0055
-    type: vless
-    server: 45.80.110.209
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CEE0056
-    type: vless
-    server: 45.80.110.130
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CEE0060
-    type: vless
-    server: 45.80.110.175
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CEE0071
-    type: vless
-    server: 45.80.110.13
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: a.ssll.gay
-  - name: CEE0078
-    type: vless
-    server: 45.80.110.46
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CEE0079
-    type: vless
-    server: 45.80.110.19
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: a.ssll.gay
-  - name: CEE0081
-    type: vless
-    server: 45.80.110.175
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: a.ssll.gay
-  - name: CEE0082
-    type: vless
-    server: 45.80.110.245
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: a.ssll.gay
-  - name: CEE0083
-    type: vless
-    server: 45.80.110.238
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CEE0084
-    type: vless
-    server: 45.80.110.201
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: a.ssll.gay
-  - name: CUS0320
-    type: vless
-    server: 185.148.104.199
-    port: 80
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: false
-    servername: a.ssll.gay
-    network: ws
-    ws-opts:
-      path: Twitterfreecodes
-      headers:
-        host: a.ssll.gay
-  - name: CDE0049
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 01-2.0
     type: vless
     server: 45.80.111.111
     port: 443
@@ -864,7 +160,7 @@ proxies:
       path: /
       headers:
         host: mmdv2.pages.dev
-  - name: CUA0277
+  - name: 02-2.0
     type: vless
     server: 45.94.169.252
     port: 443
@@ -876,7 +172,46 @@ proxies:
       path: /
       headers:
         host: mmdv2.pages.dev
-  - name: CEE0096
+  - name: 印度🇮🇳2
+    type: vless
+    server: 65.20.76.125
+    port: 2053
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: "21"
+    type: vless
+    server: 188.42.88.66
+    port: 2053
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: SG9-0.3
+    type: vless
+    server: 47.236.202.91
+    port: 2053
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 96-1.0
     type: vless
     server: 45.80.110.211
     port: 2053
@@ -888,19 +223,7 @@ proxies:
       path: /
       headers:
         host: a.ssll.gay
-  - name: CKZ0198
-    type: vless
-    server: 31.43.179.87
-    port: 2083
-    uuid: 9af577f2-0a7a-4448-ae0b-6985c53ea634
-    tls: true
-    servername: t-netplus1.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: t-netplus1.pages.dev
-  - name: CEE0072
+  - name: 72-1.0
     type: vless
     server: 45.80.110.133
     port: 2087
@@ -912,18 +235,369 @@ proxies:
       path: /
       headers:
         host: a.ssll.gay
-  - name: CEE0103
+  - name: 德国🇩🇪3
     type: vless
-    server: 45.80.110.96
-    port: 2087
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    server: 70.34.199.167
+    port: 2096
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
-    servername: a.ssll.gay
+    servername: cfed.tgzdyz2.top
     network: ws
     ws-opts:
-      path: /
+      path: /TG@ZDYZ2?ed=2560
       headers:
-        host: a.ssll.gay
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 瑞典🇸🇪
+    type: vless
+    server: 46.226.160.40
+    port: 8443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 挪威🇳🇴-1.5
+    type: vless
+    server: 46.29.238.54
+    port: 8443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR9-1.5
+    type: vless
+    server: 119.203.21.31
+    port: 10443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: JP6-1.0
+    type: vless
+    server: 112.185.223.152
+    port: 11101
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR2-1.0
+    type: vless
+    server: 119.207.86.66
+    port: 12209
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR13-1.0
+    type: vless
+    server: 61.77.9.219
+    port: 12487
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR6
+    type: vless
+    server: 118.45.125.234
+    port: 16575
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: JP3-2.0
+    type: vless
+    server: 175.200.14.162
+    port: 17443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: HK-19-2.0
+    type: vless
+    server: 161.81.46.121
+    port: 19343
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: HK-17-1.0
+    type: vless
+    server: 161.81.46.121
+    port: 28903
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR1
+    type: vless
+    server: 118.42.9.31
+    port: 29984
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR3-2.0
+    type: vless
+    server: 115.88.75.154
+    port: 30032
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: HK-18-2.0
+    type: vless
+    server: 103.30.78.25
+    port: 30277
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR8
+    type: vless
+    server: 211.55.202.96
+    port: 33890
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: HK-16
+    type: vless
+    server: 161.81.204.131
+    port: 35510
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: TW-2-1.0
+    type: vless
+    server: 61.220.41.143
+    port: 36633
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: US-Seattle
+    type: vless
+    server: 154.21.80.108
+    port: 37827
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: "1"
+    type: vless
+    server: bestcf.onecf.eu.org
+    port: 443
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+  - name: "2"
+    type: vless
+    server: 104.19.62.86
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "3"
+    type: vless
+    server: acsg3.cloudflarest.link
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "4"
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 443
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "6"
+    type: vless
+    server: tilebani.com
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: "7"
+    type: vless
+    server: 8.218.132.209
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: lax1
+    type: vless
+    server: 104.19.128.0
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: lhr
+    type: vless
+    server: 172.67.192.0
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: sjc1
+    type: vless
+    server: 172.64.128.0
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: sjc2
+    type: vless
+    server: 104.19.32.0
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -956,73 +630,47 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - CMCC1
-      - CMCC2
-      - CMCC3
-      - CMCC4
-      - CMCC6
-      - TG@ZDYZ21
-      - TG@ZDYZ22
-      - 澳大利亚🇦🇺2
-      - 波兰🇵🇱
-      - 丹麦🇩🇰
-      - 德国🇩🇪3
-      - 加拿大🇨🇦
-      - 马来西亚🇲🇾
-      - 挪威🇳🇴
-      - 瑞典🇸🇪
+      - SG11-1.0
+      - SG04-1.0
       - 塞尔维亚🇷🇸
-      - 印度🇮🇳
-      - 印度🇮🇳2
-      - HK-16
-      - HK-17
-      - HK-18
-      - HK-19
-      - JP3
-      - JP6
-      - KR1
-      - KR10
-      - KR13
-      - KR2
-      - KR3
-      - KR5
-      - KR6
-      - KR8
-      - KR9
-      - SG1
-      - SG11
-      - SG4
-      - SG9
-      - TW-1
-      - TW-2
-      - TW-3
-      - US-New York
-      - US-Seattle
       - 加拿大
-      - 美国
       - 荷兰
-      - 巴西
-      - CAE0001
-      - CCH0023
-      - CEE0053
-      - CEE0054
-      - CEE0055
-      - CEE0056
-      - CEE0060
-      - CEE0071
-      - CEE0078
-      - CEE0079
-      - CEE0081
-      - CEE0082
-      - CEE0083
-      - CEE0084
-      - CUS0320
-      - CDE0049
-      - CUA0277
-      - CEE0096
-      - CKZ0198
-      - CEE0072
-      - CEE0103
+      - 马来西亚🇲🇾
+      - 01-2.0
+      - 02-2.0
+      - 印度🇮🇳2
+      - "21"
+      - SG9-0.3
+      - 96-1.0
+      - 72-1.0
+      - 德国🇩🇪3
+      - 瑞典🇸🇪
+      - 挪威🇳🇴-1.5
+      - KR9-1.5
+      - JP6-1.0
+      - KR2-1.0
+      - KR13-1.0
+      - KR6
+      - JP3-2.0
+      - HK-19-2.0
+      - HK-17-1.0
+      - KR1
+      - KR3-2.0
+      - HK-18-2.0
+      - KR8
+      - HK-16
+      - TW-2-1.0
+      - US-Seattle
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "6"
+      - "7"
+      - lax1
+      - lhr
+      - sjc1
+      - sjc2
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -1070,73 +718,47 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - CMCC1
-      - CMCC2
-      - CMCC3
-      - CMCC4
-      - CMCC6
-      - TG@ZDYZ21
-      - TG@ZDYZ22
-      - 澳大利亚🇦🇺2
-      - 波兰🇵🇱
-      - 丹麦🇩🇰
-      - 德国🇩🇪3
-      - 加拿大🇨🇦
-      - 马来西亚🇲🇾
-      - 挪威🇳🇴
-      - 瑞典🇸🇪
+      - SG11-1.0
+      - SG04-1.0
       - 塞尔维亚🇷🇸
-      - 印度🇮🇳
-      - 印度🇮🇳2
-      - HK-16
-      - HK-17
-      - HK-18
-      - HK-19
-      - JP3
-      - JP6
-      - KR1
-      - KR10
-      - KR13
-      - KR2
-      - KR3
-      - KR5
-      - KR6
-      - KR8
-      - KR9
-      - SG1
-      - SG11
-      - SG4
-      - SG9
-      - TW-1
-      - TW-2
-      - TW-3
-      - US-New York
-      - US-Seattle
       - 加拿大
-      - 美国
       - 荷兰
-      - 巴西
-      - CAE0001
-      - CCH0023
-      - CEE0053
-      - CEE0054
-      - CEE0055
-      - CEE0056
-      - CEE0060
-      - CEE0071
-      - CEE0078
-      - CEE0079
-      - CEE0081
-      - CEE0082
-      - CEE0083
-      - CEE0084
-      - CUS0320
-      - CDE0049
-      - CUA0277
-      - CEE0096
-      - CKZ0198
-      - CEE0072
-      - CEE0103
+      - 马来西亚🇲🇾
+      - 01-2.0
+      - 02-2.0
+      - 印度🇮🇳2
+      - "21"
+      - SG9-0.3
+      - 96-1.0
+      - 72-1.0
+      - 德国🇩🇪3
+      - 瑞典🇸🇪
+      - 挪威🇳🇴-1.5
+      - KR9-1.5
+      - JP6-1.0
+      - KR2-1.0
+      - KR13-1.0
+      - KR6
+      - JP3-2.0
+      - HK-19-2.0
+      - HK-17-1.0
+      - KR1
+      - KR3-2.0
+      - HK-18-2.0
+      - KR8
+      - HK-16
+      - TW-2-1.0
+      - US-Seattle
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "6"
+      - "7"
+      - lax1
+      - lhr
+      - sjc1
+      - sjc2
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -1145,9 +767,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - TW-1
-      - TW-2
-      - TW-3
+      - TW-2-1.0
   - name: 🚀 🇭🇰香港-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -1156,10 +776,10 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
+      - HK-19-2.0
+      - HK-17-1.0
+      - HK-18-2.0
       - HK-16
-      - HK-17
-      - HK-18
-      - HK-19
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -1168,8 +788,8 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - JP3
-      - JP6
+      - JP6-1.0
+      - JP3-2.0
   - name: 🚀 🇺🇸美国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -1178,10 +798,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - US-New York
       - US-Seattle
-      - 美国
-      - CUS0320
   - name: 🚀 🇰🇷韩国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -1190,15 +807,13 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - KR1
-      - KR10
-      - KR13
-      - KR2
-      - KR3
-      - KR5
+      - KR9-1.5
+      - KR2-1.0
+      - KR13-1.0
       - KR6
+      - KR1
+      - KR3-2.0
       - KR8
-      - KR9
   - name: 🚀 🇸🇬新加坡-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -1207,10 +822,9 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - SG1
-      - SG11
-      - SG4
-      - SG9
+      - SG11-1.0
+      - SG04-1.0
+      - SG9-0.3
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1219,9 +833,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - TW-1
-      - TW-2
-      - TW-3
+      - TW-2-1.0
   - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1230,9 +842,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - TW-1
-      - TW-2
-      - TW-3
+      - TW-2-1.0
   - name: ⚖️ 🇭🇰香港-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1241,10 +851,10 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
+      - HK-19-2.0
+      - HK-17-1.0
+      - HK-18-2.0
       - HK-16
-      - HK-17
-      - HK-18
-      - HK-19
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1253,10 +863,10 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
+      - HK-19-2.0
+      - HK-17-1.0
+      - HK-18-2.0
       - HK-16
-      - HK-17
-      - HK-18
-      - HK-19
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1265,8 +875,8 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - JP3
-      - JP6
+      - JP6-1.0
+      - JP3-2.0
   - name: ⚖️ 🇯🇵日本-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1275,8 +885,8 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - JP3
-      - JP6
+      - JP6-1.0
+      - JP3-2.0
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1285,10 +895,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - US-New York
       - US-Seattle
-      - 美国
-      - CUS0320
   - name: ⚖️ 🇺🇸美国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1297,10 +904,7 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - US-New York
       - US-Seattle
-      - 美国
-      - CUS0320
   - name: ⚖️ 🇰🇷韩国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1309,15 +913,13 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - KR1
-      - KR10
-      - KR13
-      - KR2
-      - KR3
-      - KR5
+      - KR9-1.5
+      - KR2-1.0
+      - KR13-1.0
       - KR6
+      - KR1
+      - KR3-2.0
       - KR8
-      - KR9
   - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1326,15 +928,13 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - KR1
-      - KR10
-      - KR13
-      - KR2
-      - KR3
-      - KR5
+      - KR9-1.5
+      - KR2-1.0
+      - KR13-1.0
       - KR6
+      - KR1
+      - KR3-2.0
       - KR8
-      - KR9
   - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1343,10 +943,9 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - SG1
-      - SG11
-      - SG4
-      - SG9
+      - SG11-1.0
+      - SG04-1.0
+      - SG9-0.3
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1355,10 +954,9 @@ proxy-groups:
     proxies:
       - KRJPHKTWSGUSCT♥
       - AAKRJPHKTWSGUSCT
-      - SG1
-      - SG11
-      - SG4
-      - SG9
+      - SG11-1.0
+      - SG04-1.0
+      - SG9-0.3
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
