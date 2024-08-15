@@ -264,6 +264,58 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
+  - name: CF06-10.0
+    type: vless
+    server: 104.19.96.0
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: CFIAD07-10.0
+    type: vless
+    server: 104.24.32.0
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: CFSJC07-10.0_1
+    type: vless
+    server: 104.19.64.0
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: CFSJC07-10.0_2
+    type: vless
+    server: 104.24.151.254
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
   - name: HK-01-2.0
     type: vless
     server: 103.30.78.25
@@ -523,6 +575,43 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
+  - name: 美国1
+    type: vless
+    server: cfip.xxxxxxxx.tk
+    port: 80
+    uuid: 781a8eb4-c4f7-4f99-9dee-e80369dbf1ec
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
+  - name: 美国3
+    type: vless
+    server: cfip.xxxxxxxx.tk
+    port: 80
+    uuid: 781a8eb4-c4f7-4f99-9dee-e80369dbf1ec
+    tls: false
+    servername: us3.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us3.rtacg.com
+  - name: 美国1us1
+    type: vless
+    server: cfip.xxxxxxxx.tk
+    port: 443
+    uuid: 781a8eb4-c4f7-4f99-9dee-e80369dbf1ec
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
+    client-fingerprint: randomized
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -570,6 +659,10 @@ proxy-groups:
       - CF04-3.0
       - CF04-5.0
       - CF05-10.0
+      - CF06-10.0
+      - CFIAD07-10.0
+      - CFSJC07-10.0_1
+      - CFSJC07-10.0_2
       - HK-01-2.0
       - HK-17-1.0
       - HK-19-2.0
@@ -590,6 +683,9 @@ proxy-groups:
       - TW5-1.0
       - US-Seattle-10.0
       - US-Washington
+      - 美国1
+      - 美国3
+      - 美国1us1
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -652,6 +748,10 @@ proxy-groups:
       - CF04-3.0
       - CF04-5.0
       - CF05-10.0
+      - CF06-10.0
+      - CFIAD07-10.0
+      - CFSJC07-10.0_1
+      - CFSJC07-10.0_2
       - HK-01-2.0
       - HK-17-1.0
       - HK-19-2.0
@@ -672,6 +772,9 @@ proxy-groups:
       - TW5-1.0
       - US-Seattle-10.0
       - US-Washington
+      - 美国1
+      - 美国3
+      - 美国1us1
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -713,6 +816,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT"
       - US-Seattle-10.0
       - US-Washington
+      - 美国1
+      - 美国3
+      - 美国1us1
   - name: 🚀 🇰🇷韩国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -809,6 +915,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT"
       - US-Seattle-10.0
       - US-Washington
+      - 美国1
+      - 美国3
+      - 美国1us1
   - name: ⚖️ 🇺🇸美国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -818,6 +927,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT"
       - US-Seattle-10.0
       - US-Washington
+      - 美国1
+      - 美国3
+      - 美国1us1
   - name: ⚖️ 🇰🇷韩国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
