@@ -15,6 +15,10 @@ vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.19.62.86:2082?encryption=none&s
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@www.gov.ua:8080?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF04-3.0
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@tilebani.com:8080?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF04-5.0
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@172.64.128.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF05-10.0
+vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.19.96.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF06-10.0
+vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.24.32.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CFIAD07-10.0
+vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.19.64.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CFSJC07-10.0
+vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.24.151.254:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CFSJC07-10.0
 vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@103.30.78.25:30277?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#HK-01-2.0
 vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@161.81.46.121:28903?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#HK-17-1.0
 vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@161.81.46.121:19343?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#HK-19-2.0
@@ -35,3 +39,6 @@ vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@203.69.248.40:27381?encryption=none
 vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@61.220.65.189:27114?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#TW5-1.0
 vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@154.21.80.108:37827?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#US-Seattle-10.0
 vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@154.17.5.18:38680?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#US-Washington
+vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:80?encryption=none&security=none&type=ws&host=us1.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1
+vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:80?encryption=none&security=none&type=ws&host=us3.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD3
+vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:443?encryption=none&security=none&sni=us1.rtacg.com&fp=randomized&type=ws&host=us1.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1us1
