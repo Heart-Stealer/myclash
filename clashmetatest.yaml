@@ -120,7 +120,7 @@ proxies:
   # - {"name":"美国3_91","type":"vless","server":"91.193.58.1","port":8880,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us3.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us3.rtacg.com"}}}
   # - {"name":"美国3_23","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us3.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us3.rtacg.com"}}}
   # - {"name":"美国3_101","type":"vless","server":"101.230.71.30","port":2907,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":true,"servername":"us3.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us3.rtacg.com"}},"client-fingerprint":"chrome"}
-  # - {"name":" cs","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
+  - {"name":" cs","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
 
   - {"name":" 0AKRJPHKTWSGUSCT","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
   - {"name":" CMCC3-10.0","type":"vless","server":"104.19.59.2","port":443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}},"client-fingerprint":"random"}
