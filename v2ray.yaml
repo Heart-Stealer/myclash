@@ -2,14 +2,12 @@ vless://cede337b-9ea5-40e5-a8b1-690bf49ff41d@storeships.toptechnonews.com:443?en
 vless://cede337b-9ea5-40e5-a8b1-690bf49ff41d@104.21.86.205:443?encryption=none&security=tls&sni=storeships.toptechnonews.com&type=ws&host=storeships.toptechnonews.com&path=%2Fnimws#%200AKRJPHKTWSGUSCT2
 vless://cede337b-9ea5-40e5-a8b1-690bf49ff41d@172.67.233.203:443?encryption=none&security=tls&sni=storeships.toptechnonews.com&type=ws&host=storeships.toptechnonews.com&path=%2Fnimws#%200AKRJPHKTWSGUSCT3
 vless://cede337b-9ea5-40e5-a8b1-690bf49ff41d@104.20.96.215:443?encryption=none&security=tls&sni=storeships.toptechnonews.com&type=ws&host=storeships.toptechnonews.com&path=%2Fnimws#%200AKRJPHKTWSGUSCT4
-vless://d9eb0df3-3190-4447-86b6-656fe5ff1119@45.80.111.111:443?encryption=none&security=tls&sni=mmdv2.pages.dev&type=ws&host=mmdv2.pages.dev&path=%2F#%20SG03-1
+vless://d9eb0df3-3190-4447-86b6-656fe5ff1119@45.80.111.111:443?encryption=none&security=tls&sni=mmdv2.pages.dev&type=ws&host=mmdv2.pages.dev&path=%2F#%20SG03-1-2.0
 vless://d9eb0df3-3190-4447-86b6-656fe5ff1119@104.21.86.205:443?encryption=none&security=tls&sni=mmdv2.pages.dev&type=ws&host=mmdv2.pages.dev&path=%2F#%20SG03-2
 vless://d9eb0df3-3190-4447-86b6-656fe5ff1119@104.24.151.254:443?encryption=none&security=tls&sni=mmdv2.pages.dev&type=ws&host=mmdv2.pages.dev&path=%2F#%20SG03-3
-vless://899de6c4-d602-44f3-b33a-e78bab92adc8@storeships.toptechnonews.com:443?encryption=none&security=tls&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF01
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@bestcf.onecf.eu.org:2082?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF02
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@www.gov.ua:8080?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF03
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@tilebani.com:8080?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF04
-vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.19.62.86:2082?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF05
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@172.64.128.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF06
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.19.96.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CF07
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.24.32.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CFIAD08
@@ -18,17 +16,17 @@ vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.27.64.0:80?encryption=none&secu
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.24.64.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CFSJC11
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.20.64.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CFSJC12
 vless://899de6c4-d602-44f3-b33a-e78bab92adc8@104.22.64.0:80?encryption=none&security=none&sni=vpn.goldbridge.workers.dev&fp=randomized&type=ws&host=vpn.goldbridge.workers.dev&path=%2F%3Fed%3D2048#CFSJC13
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@193.57.139.78:81?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A%F0%9F%87%B7%F0%9F%87%B8
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@104.40.244.228:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E8%8D%B7%E5%85%B0%F0%9F%87%B3%F0%9F%87%B1
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@154.17.9.70:882?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#US-California
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@59.3.3.161:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#KR05
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@47.242.176.185:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#HK21
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@141.11.139.211:8443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#JP05
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@8.219.144.168:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#SG01
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@146.70.175.173:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E8%8D%B7%E5%85%B0%F0%9F%87%B3%F0%9F%87%B101
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@146.70.175.185:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E8%8D%B7%E5%85%B0%F0%9F%87%B3%F0%9F%87%B102
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@46.226.160.40:8443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E7%91%9E%E5%85%B8%F0%9F%87%B8%F0%9F%87%AA03
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@188.42.88.66:2053?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#TG01
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@193.57.139.78:81?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A%F0%9F%87%B7%F0%9F%87%B8-0.3
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@104.40.244.228:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E8%8D%B7%E5%85%B0%F0%9F%87%B3%F0%9F%87%B1-2.0
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@154.17.9.70:882?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#US-California-3.0
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@59.3.3.161:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#KR05-2.0
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@47.242.176.185:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#HK21-3.0
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@104.22.13.181:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#SG01
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@104.22.13.181:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E8%8D%B7%E5%85%B0%F0%9F%87%B3%F0%9F%87%B101
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@104.22.13.181:443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E8%8D%B7%E5%85%B0%F0%9F%87%B3%F0%9F%87%B102
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@46.226.160.40:8443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#%E7%91%9E%E5%85%B8%F0%9F%87%B8%F0%9F%87%AA03-4.0
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@188.42.88.66:2053?encryption=none&security=tls&sni=cfed.tgzdyz2.top&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#TG01-1.0
+vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@207.60.50.24:8443?encryption=none&security=tls&sni=cfed.tgzdyz2.top&fp=random&type=ws&host=cfed.tgzdyz2.top&path=%2FTG%40ZDYZ2%3Fed%3D2560#US-Seattle-3.0
 # vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:80?encryption=none&security=tls&sni=us1.rtacg.com&type=ws&host=us1.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1
 # vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:80?encryption=none&security=none&type=ws&host=us2.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD2
 # vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:80?encryption=none&security=none&type=ws&host=us3.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD3
