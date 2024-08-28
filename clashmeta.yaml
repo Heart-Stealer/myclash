@@ -70,7 +70,7 @@ proxies:
         host: storeships.toptechnonews.com
   - name: " 0AKRJPHKTWSGUSCT3"
     type: vless
-    server: 172.67.233.203
+    server: 104.18.237.128
     port: 443
     uuid: cede337b-9ea5-40e5-a8b1-690bf49ff41d
     tls: true
@@ -80,19 +80,7 @@ proxies:
       path: /nimws
       headers:
         host: storeships.toptechnonews.com
-  - name: " 0AKRJPHKTWSGUSCT4"
-    type: vless
-    server: 104.20.96.215
-    port: 443
-    uuid: cede337b-9ea5-40e5-a8b1-690bf49ff41d
-    tls: true
-    servername: storeships.toptechnonews.com
-    network: ws
-    ws-opts:
-      path: /nimws
-      headers:
-        host: storeships.toptechnonews.com
-  - name: " SG03-1-2.0"
+  - name: " SG01"
     type: vless
     server: 45.80.111.111
     port: 443
@@ -104,30 +92,43 @@ proxies:
       path: /
       headers:
         host: mmdv2.pages.dev
-  - name: " SG03-2"
+  - name: " SG02"
     type: vless
-    server: 104.21.86.205
-    port: 443
+    server: 104.19.80.30
+    port: 80
     uuid: d9eb0df3-3190-4447-86b6-656fe5ff1119
-    tls: true
+    tls: false
     servername: mmdv2.pages.dev
     network: ws
     ws-opts:
       path: /
       headers:
         host: mmdv2.pages.dev
-  - name: " SG03-3"
+  - name: " SG03"
     type: vless
-    server: 104.24.151.254
-    port: 443
+    server: 104.18.237.128
+    port: 80
     uuid: d9eb0df3-3190-4447-86b6-656fe5ff1119
-    tls: true
+    tls: false
     servername: mmdv2.pages.dev
     network: ws
     ws-opts:
       path: /
       headers:
         host: mmdv2.pages.dev
+  - name: CF01
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 443
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
   - name: CF02
     type: vless
     server: bestcf.onecf.eu.org
@@ -156,7 +157,7 @@ proxies:
     client-fingerprint: randomized
   - name: CF04
     type: vless
-    server: tilebani.com
+    server: 104.19.80.30
     port: 8080
     uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
     tls: false
@@ -170,32 +171,6 @@ proxies:
   - name: CF06
     type: vless
     server: 172.64.128.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CF07
-    type: vless
-    server: 104.19.96.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFIAD08
-    type: vless
-    server: 104.24.32.0
     port: 80
     uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
     tls: false
@@ -232,72 +207,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CFSJC11
-    type: vless
-    server: 104.24.64.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFSJC12
-    type: vless
-    server: 104.20.64.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFSJC13
-    type: vless
-    server: 104.22.64.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: 塞尔维亚🇷🇸-0.3
-    type: vless
-    server: 193.57.139.78
-    port: 81
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 荷兰🇳🇱-2.0
-    type: vless
-    server: 104.40.244.228
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: US-California-3.0
+  - name: US-California-5.0
     type: vless
     server: 154.17.9.70
     port: 882
@@ -310,10 +220,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR05-2.0
+  - name: TG01-1.0
     type: vless
-    server: 59.3.3.161
-    port: 443
+    server: 188.42.88.66
+    port: 2053
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -322,7 +232,20 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         host: cfed.tgzdyz2.top
-  - name: HK21-3.0
+  - name: US-Seattle-5.0
+    type: vless
+    server: 207.60.50.24
+    port: 8443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: HK21-5.0
     type: vless
     server: 47.242.176.185
     port: 443
@@ -346,30 +269,6 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         host: cfed.tgzdyz2.top
-  - name: 荷兰🇳🇱01
-    type: vless
-    server: 104.22.13.181
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-  - name: 荷兰🇳🇱02
-    type: vless
-    server: 104.22.13.181
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
   - name: 瑞典🇸🇪03-4.0
     type: vless
     server: 46.226.160.40
@@ -382,31 +281,6 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         host: cfed.tgzdyz2.top
-  - name: TG01-1.0
-    type: vless
-    server: 188.42.88.66
-    port: 2053
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-  - name: US-Seattle-3.0
-    type: vless
-    server: 207.60.50.24
-    port: 8443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -442,32 +316,22 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - " SG03-1-2.0"
-      - " SG03-2"
-      - " SG03-3"
+      - " SG01"
+      - " SG02"
+      - " SG03"
+      - CF01
       - CF02
       - CF03
       - CF04
       - CF06
-      - CF07
-      - CFIAD08
       - CFSJC09
       - CFSJC10
-      - CFSJC11
-      - CFSJC12
-      - CFSJC13
-      - 塞尔维亚🇷🇸-0.3
-      - 荷兰🇳🇱-2.0
-      - US-California-3.0
-      - KR05-2.0
-      - HK21-3.0
-      - SG01
-      - 荷兰🇳🇱01
-      - 荷兰🇳🇱02
-      - 瑞典🇸🇪03-4.0
+      - US-California-5.0
       - TG01-1.0
-      - US-Seattle-3.0
+      - US-Seattle-5.0
+      - HK21-5.0
+      - SG01
+      - 瑞典🇸🇪03-4.0
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -477,7 +341,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: 🚀 🇭🇰香港-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -487,8 +350,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - HK21-3.0
+      - HK21-5.0
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -498,7 +360,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: 🚀 🇺🇸美国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -508,9 +369,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - US-California-3.0
-      - US-Seattle-3.0
+      - US-California-5.0
+      - US-Seattle-5.0
   - name: 🚀 🇰🇷韩国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -520,8 +380,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - KR05-2.0
   - name: 🚀 🇸🇬新加坡-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -531,10 +389,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - " SG03-1-2.0"
-      - " SG03-2"
-      - " SG03-3"
+      - " SG01"
+      - " SG02"
+      - " SG03"
       - SG01
   - name: ☑️ 手动切换
     type: select
@@ -542,32 +399,22 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - " SG03-1-2.0"
-      - " SG03-2"
-      - " SG03-3"
+      - " SG01"
+      - " SG02"
+      - " SG03"
+      - CF01
       - CF02
       - CF03
       - CF04
       - CF06
-      - CF07
-      - CFIAD08
       - CFSJC09
       - CFSJC10
-      - CFSJC11
-      - CFSJC12
-      - CFSJC13
-      - 塞尔维亚🇷🇸-0.3
-      - 荷兰🇳🇱-2.0
-      - US-California-3.0
-      - KR05-2.0
-      - HK21-3.0
-      - SG01
-      - 荷兰🇳🇱01
-      - 荷兰🇳🇱02
-      - 瑞典🇸🇪03-4.0
+      - US-California-5.0
       - TG01-1.0
-      - US-Seattle-3.0
+      - US-Seattle-5.0
+      - HK21-5.0
+      - SG01
+      - 瑞典🇸🇪03-4.0
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -617,7 +464,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -627,7 +473,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇭🇰香港-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -637,8 +482,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - HK21-3.0
+      - HK21-5.0
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -648,8 +492,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - HK21-3.0
+      - HK21-5.0
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -659,7 +502,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇯🇵日本-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -669,7 +511,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -679,9 +520,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - US-California-3.0
-      - US-Seattle-3.0
+      - US-California-5.0
+      - US-Seattle-5.0
   - name: ⚖️ 🇺🇸美国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -691,9 +531,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - US-California-3.0
-      - US-Seattle-3.0
+      - US-California-5.0
+      - US-Seattle-5.0
   - name: ⚖️ 🇰🇷韩国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -703,8 +542,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - KR05-2.0
   - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -714,8 +551,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - KR05-2.0
   - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -725,10 +560,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - " SG03-1-2.0"
-      - " SG03-2"
-      - " SG03-3"
+      - " SG01"
+      - " SG02"
+      - " SG03"
       - SG01
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
     type: load-balance
@@ -739,10 +573,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - " SG03-1-2.0"
-      - " SG03-2"
-      - " SG03-3"
+      - " SG01"
+      - " SG02"
+      - " SG03"
       - SG01
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
