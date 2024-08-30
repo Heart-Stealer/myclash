@@ -299,6 +299,138 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
+  - name: CSE0167
+    type: vless
+    server: 185.146.173.32
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CUS0171
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
+    tls: false
+    servername: 201.myhmyhhuang1980.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.myhmyhhuang1980.workers.dev
+  - name: CUS0179
+    type: vless
+    server: 192.200.160.6
+    port: 443
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    tls: true
+    servername: a.ssll.gay
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a.ssll.gay
+  - name: CUS0192_1
+    type: vless
+    server: 69.84.182.102
+    port: 443
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    tls: true
+    servername: a.ssll.gay
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a.ssll.gay
+  - name: CUS0192_2
+    type: vless
+    server: 69.84.182.102
+    port: 443
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    tls: true
+    servername: a.ssll.gay
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a.ssll.gay
+  - name: CEE0107
+    type: vless
+    server: 45.80.110.161
+    port: 2083
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    tls: true
+    servername: a.ssll.gay
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a.ssll.gay
+  - name: CEE0102
+    type: vless
+    server: 45.80.110.215
+    port: 2087
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    tls: true
+    servername: a.ssll.gay
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a.ssll.gay
+  - name: CUS0225
+    type: vless
+    server: 45.159.217.220
+    port: 443
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzibaipiao.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: juzibaipiao.5112233.xyz
+  - name: CGB0121
+    type: vless
+    server: 94.247.142.245
+    port: 2096
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzibaipiao.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: juzibaipiao.5112233.xyz
+  - name: CGB0125
+    type: vless
+    server: 94.247.142.245
+    port: 2096
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzibaipiao.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: juzibaipiao.5112233.xyz
+  - name: CRU0159
+    type: vless
+    server: 188.42.145.90
+    port: 8443
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzibaipiao.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: juzibaipiao.5112233.xyz
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -350,6 +482,17 @@ proxy-groups:
       - SJC01
       - SJC04
       - SJC07
+      - CSE0167
+      - CUS0171
+      - CUS0179
+      - CUS0192_1
+      - CUS0192_2
+      - CEE0107
+      - CEE0102
+      - CUS0225
+      - CGB0121
+      - CGB0125
+      - CRU0159
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -415,6 +558,17 @@ proxy-groups:
       - SJC01
       - SJC04
       - SJC07
+      - CSE0167
+      - CUS0171
+      - CUS0179
+      - CUS0192_1
+      - CUS0192_2
+      - CEE0107
+      - CEE0102
+      - CUS0225
+      - CGB0121
+      - CGB0125
+      - CRU0159
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -453,6 +607,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT3"
       - US-Seattle-5.0
       - US-California-5.0
+      - CUS0171
+      - CUS0179
+      - CUS0192_1
+      - CUS0192_2
+      - CUS0225
   - name: 🚀 🇰🇷韩国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -538,6 +697,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT3"
       - US-Seattle-5.0
       - US-California-5.0
+      - CUS0171
+      - CUS0179
+      - CUS0192_1
+      - CUS0192_2
+      - CUS0225
   - name: ⚖️ 🇺🇸美国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -549,6 +713,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT3"
       - US-Seattle-5.0
       - US-California-5.0
+      - CUS0171
+      - CUS0179
+      - CUS0192_1
+      - CUS0192_2
+      - CUS0225
   - name: ⚖️ 🇰🇷韩国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
