@@ -41,10 +41,9 @@ hosts:
   'localhost': 127.0.0.1
 dns:
   enabled: true
-  ipv6: false
-  # listen: 0.0.0.0:53
+  ipv6: true
   listen: '0.0.0.0:53'
-  default-nameserver: [223.5.5.5, 119.29.29.29]
+  default-nameserver: [223.5.5.5, 119.29.29.29, 114.114.114.114]
   # enhanced-mode: redir-host # 或 fake-ip
   enhanced-mode: fake-ip
   # # fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
@@ -59,12 +58,10 @@ dns:
     - 183.60.83.19 # 腾讯云 DNS
     - 183.60.82.98 # 腾讯云 DNS
     - 114.114.114.114 # 114 DNS
-    - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
     - tls://13800000000.rubyfish.cn:853
     - https://13800000000.rubyfish.cn/
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
   # fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
     - 8.8.8.8 # Google DNS （偏爱）
@@ -72,7 +69,6 @@ dns:
     - tls://1.0.0.1:853 # （偏爱）
     - tls://8.8.4.4:853
     - tls://dns.google:853 # （偏爱）
-    - tls://13800000000.rubyfish.cn:853
     - https://doh.dns.sb/dns-query
     - https://dns.twnic.tw/dns-query
     - https://dns.cloudflare.com/dns-query
@@ -104,22 +100,24 @@ proxies:
   - {"name":" 0AKRJPHKTWSGUSCT1","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
   - {"name":" 0AKRJPHKTWSGUSCT2","type":"vless","server":"104.21.86.205","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws","headers":{"host":"storeships.toptechnonews.com"}}}
   - {"name":" 0AKRJPHKTWSGUSCT3","type":"vless","server":"104.18.237.128","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws","headers":{"host":"storeships.toptechnonews.com"}}}
+  - {"name":"US-Seattle-5.0","type":"vless","server":"207.60.50.24","port":8443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}},"client-fingerprint":"random"}
+  - {"name":"US-California-5.0","type":"vless","server":"154.17.9.70","port":882,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}},"client-fingerprint":"random"}
+  - {"name":"TG@ZDYZ2-01","type":"vless","server":"188.42.88.66","port":2053,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
+  - {"name":"TG@ZDYZ2-02","type":"vless","server":"205.233.181.36","port":2053,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
+  - {"name":"奥地利🇦🇹","type":"vless","server":"94.177.8.26","port":130,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
+  - {"name":"SG01","type":"vless","server":"104.22.13.181","port":443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
+  - {"name":"瑞典🇸🇪03-4.0","type":"vless","server":"46.226.160.40","port":8443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
+  - {"name":"🇷🇺_RU_俄罗斯","type":"ss","server":"212.118.54.195","port":443,"password":"Q5cAxpeZzVtukD2gz5FQ6g","cipher":"chacha20-ietf-poly1305"}
   - {"name":" SG01","type":"vless","server":"45.80.111.111","port":443,"uuid":"d9eb0df3-3190-4447-86b6-656fe5ff1119","tls":true,"servername":"mmdv2.pages.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"mmdv2.pages.dev"}}}
-  - {"name":" SG02","type":"vless","server":"104.19.80.30","port":80,"uuid":"d9eb0df3-3190-4447-86b6-656fe5ff1119","tls":false,"servername":"mmdv2.pages.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"mmdv2.pages.dev"}}}
-  - {"name":" SG03","type":"vless","server":"104.18.237.128","port":80,"uuid":"d9eb0df3-3190-4447-86b6-656fe5ff1119","tls":false,"servername":"mmdv2.pages.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"mmdv2.pages.dev"}}}
   - {"name":"CF01","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":true,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
   - {"name":"CF02","type":"vless","server":"bestcf.onecf.eu.org","port":2082,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
   - {"name":"CF03","type":"vless","server":"www.gov.ua","port":8080,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
   - {"name":"CF04","type":"vless","server":"104.19.80.30","port":8080,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
-  - {"name":"CF06","type":"vless","server":"172.64.128.0","port":80,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
   - {"name":"CFSJC09","type":"vless","server":"104.24.151.254","port":80,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
   - {"name":"CFSJC10","type":"vless","server":"104.27.64.0","port":80,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
-  - {"name":"US-California-5.0","type":"vless","server":"154.17.9.70","port":882,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}},"client-fingerprint":"random"}
-  - {"name":"TG01-1.0","type":"vless","server":"188.42.88.66","port":2053,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
-  - {"name":"US-Seattle-5.0","type":"vless","server":"207.60.50.24","port":8443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}},"client-fingerprint":"random"}
-  - {"name":"HK21-5.0","type":"vless","server":"47.242.176.185","port":443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
-  - {"name":"SG01","type":"vless","server":"104.22.13.181","port":443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
-  - {"name":"瑞典🇸🇪03-4.0","type":"vless","server":"46.226.160.40","port":8443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
+  - {"name":"SJC01","type":"vless","server":"104.17.96.0","port":80,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
+  - {"name":"SJC04","type":"vless","server":"104.18.96.0","port":80,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
+  - {"name":"SJC07","type":"vless","server":"104.17.0.0","port":80,"uuid":"899de6c4-d602-44f3-b33a-e78bab92adc8","tls":false,"servername":"vpn.goldbridge.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"vpn.goldbridge.workers.dev"}},"client-fingerprint":"randomized"}
 
   # - {"name":"美国++(频道@nodes_share)_1","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us2.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us2.rtacg.com"}}}
   # - {"name":"美国++(频道@nodes_share)_2","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us1.rtacg.com"}}}
