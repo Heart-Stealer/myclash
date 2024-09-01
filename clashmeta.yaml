@@ -84,42 +84,6 @@ proxies:
     port: 443
     password: shadowsocks
     cipher: aes-128-gcm
-  - name: 🇨🇳 ⚡ 节点超时更新订阅⚡
-    type: ss
-    server: south.idyllic.love
-    port: 37000
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
-  - name: 🇭🇰 香港01｜tg@ghosxtop
-    type: ss
-    server: south.idyllic.love
-    port: 37001
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
-  - name: 🇭🇰 香港02｜tg@ghosxtop
-    type: ss
-    server: south.idyllic.love
-    port: 37002
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
-  - name: 🇭🇰 香港03｜tg@ghosxtop
-    type: ss
-    server: south.idyllic.love
-    port: 37003
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
-  - name: 🇭🇰 香港04｜tg@ghosxtop
-    type: ss
-    server: south.idyllic.love
-    port: 37000
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
-  - name: 🇨🇳 台湾01｜tg@ghosxtop
-    type: ss
-    server: south.idyllic.love
-    port: 37013
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
   - name: US-Seattle-5.0
     type: vless
     server: 207.60.50.24
@@ -507,12 +471,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇨🇳 ⚡ 节点超时更新订阅⚡
-      - 🇭🇰 香港01｜tg@ghosxtop
-      - 🇭🇰 香港02｜tg@ghosxtop
-      - 🇭🇰 香港03｜tg@ghosxtop
-      - 🇭🇰 香港04｜tg@ghosxtop
-      - 🇨🇳 台湾01｜tg@ghosxtop
       - US-Seattle-5.0
       - US-California-5.0
       - TG@ZDYZ2-01
@@ -590,12 +548,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇨🇳 ⚡ 节点超时更新订阅⚡
-      - 🇭🇰 香港01｜tg@ghosxtop
-      - 🇭🇰 香港02｜tg@ghosxtop
-      - 🇭🇰 香港03｜tg@ghosxtop
-      - 🇭🇰 香港04｜tg@ghosxtop
-      - 🇨🇳 台湾01｜tg@ghosxtop
       - US-Seattle-5.0
       - US-California-5.0
       - TG@ZDYZ2-01
@@ -635,7 +587,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇨🇳 台湾01｜tg@ghosxtop
   - name: 🚀 🇭🇰香港-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -646,10 +597,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇭🇰 香港01｜tg@ghosxtop
-      - 🇭🇰 香港02｜tg@ghosxtop
-      - 🇭🇰 香港03｜tg@ghosxtop
-      - 🇭🇰 香港04｜tg@ghosxtop
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -709,7 +656,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇨🇳 台湾01｜tg@ghosxtop
   - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -720,7 +666,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇨🇳 台湾01｜tg@ghosxtop
   - name: ⚖️ 🇭🇰香港-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -731,10 +676,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇭🇰 香港01｜tg@ghosxtop
-      - 🇭🇰 香港02｜tg@ghosxtop
-      - 🇭🇰 香港03｜tg@ghosxtop
-      - 🇭🇰 香港04｜tg@ghosxtop
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -745,10 +686,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇭🇰 香港01｜tg@ghosxtop
-      - 🇭🇰 香港02｜tg@ghosxtop
-      - 🇭🇰 香港03｜tg@ghosxtop
-      - 🇭🇰 香港04｜tg@ghosxtop
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
