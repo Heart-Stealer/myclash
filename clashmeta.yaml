@@ -437,6 +437,51 @@ proxies:
       path: /
       headers:
         host: juzibaipiao.5112233.xyz
+  - name: HK21-5.0
+    type: vless
+    server: 47.242.176.185
+    port: 443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+  - name: ♥KR10
+    type: vless
+    server: 59.3.87.55
+    port: 39109
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+    client-fingerprint: random
+  - name: CT 08
+    type: vless
+    server: 45.159.219.33
+    port: 443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: TG@ZDYZ2
+    client-fingerprint: random
+  - name: 🇸🇬 SG01
+    type: vless
+    server: 140.99.233.156
+    port: 2087
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+    client-fingerprint: random
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -500,6 +545,10 @@ proxy-groups:
       - CGB0121
       - CGB0125
       - CRU0159
+      - HK21-5.0
+      - ♥KR10
+      - CT 08
+      - 🇸🇬 SG01
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -577,6 +626,10 @@ proxy-groups:
       - CGB0121
       - CGB0125
       - CRU0159
+      - HK21-5.0
+      - ♥KR10
+      - CT 08
+      - 🇸🇬 SG01
   - name: 🚀 🇹🇼台湾-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -596,7 +649,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+<<<<<<< HEAD
       - " 0AKRJPHKTWSGUSCT4"
+=======
+      - HK21-5.0
+>>>>>>> b87e89a12dd9b4a1a8f308be0a53952ade1c37be
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -633,7 +690,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+<<<<<<< HEAD
       - " 0AKRJPHKTWSGUSCT4"
+=======
+      - ♥KR10
+>>>>>>> b87e89a12dd9b4a1a8f308be0a53952ade1c37be
   - name: 🚀 🇸🇬新加坡-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -646,6 +707,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT4"
       - SG01
       - " SG01"
+      - 🇸🇬 SG01
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -675,7 +737,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+<<<<<<< HEAD
       - " 0AKRJPHKTWSGUSCT4"
+=======
+      - HK21-5.0
+>>>>>>> b87e89a12dd9b4a1a8f308be0a53952ade1c37be
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -685,7 +751,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+<<<<<<< HEAD
       - " 0AKRJPHKTWSGUSCT4"
+=======
+      - HK21-5.0
+>>>>>>> b87e89a12dd9b4a1a8f308be0a53952ade1c37be
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -749,7 +819,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+<<<<<<< HEAD
       - " 0AKRJPHKTWSGUSCT4"
+=======
+      - ♥KR10
+>>>>>>> b87e89a12dd9b4a1a8f308be0a53952ade1c37be
   - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -759,7 +833,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+<<<<<<< HEAD
       - " 0AKRJPHKTWSGUSCT4"
+=======
+      - ♥KR10
+>>>>>>> b87e89a12dd9b4a1a8f308be0a53952ade1c37be
   - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -772,6 +850,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT4"
       - SG01
       - " SG01"
+      - 🇸🇬 SG01
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -784,6 +863,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT4"
       - SG01
       - " SG01"
+      - 🇸🇬 SG01
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
@@ -793,7 +873,11 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+<<<<<<< HEAD
       - " 0AKRJPHKTWSGUSCT4"
+=======
+      - CT 08
+>>>>>>> b87e89a12dd9b4a1a8f308be0a53952ade1c37be
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
