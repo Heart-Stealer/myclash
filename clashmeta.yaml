@@ -84,6 +84,30 @@ proxies:
     port: 443
     password: shadowsocks
     cipher: aes-128-gcm
+  - name: 🇭🇰+香港01
+    type: ss
+    server: south.idyllic.love
+    port: 37001
+    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
+    cipher: aes-128-gcm
+  - name: 🇭🇰+香港02
+    type: ss
+    server: south.idyllic.love
+    port: 37002
+    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
+    cipher: aes-128-gcm
+  - name: 🇭🇰+香港03
+    type: ss
+    server: south.idyllic.love
+    port: 37003
+    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
+    cipher: aes-128-gcm
+  - name: 🇭🇰+香港04
+    type: ss
+    server: south.idyllic.love
+    port: 37000
+    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
+    cipher: aes-128-gcm
   - name: US-Seattle-5.0
     type: vless
     server: 207.60.50.24
@@ -471,6 +495,10 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - 🇭🇰+香港01
+      - 🇭🇰+香港02
+      - 🇭🇰+香港03
+      - 🇭🇰+香港04
       - US-Seattle-5.0
       - US-California-5.0
       - TG@ZDYZ2-01
@@ -548,6 +576,10 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - 🇭🇰+香港01
+      - 🇭🇰+香港02
+      - 🇭🇰+香港03
+      - 🇭🇰+香港04
       - US-Seattle-5.0
       - US-California-5.0
       - TG@ZDYZ2-01
@@ -597,6 +629,10 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - 🇭🇰+香港01
+      - 🇭🇰+香港02
+      - 🇭🇰+香港03
+      - 🇭🇰+香港04
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -676,6 +712,10 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - 🇭🇰+香港01
+      - 🇭🇰+香港02
+      - 🇭🇰+香港03
+      - 🇭🇰+香港04
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -686,6 +726,10 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - 🇭🇰+香港01
+      - 🇭🇰+香港02
+      - 🇭🇰+香港03
+      - 🇭🇰+香港04
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -10158,26 +10202,4 @@ rules:
   - IP-CIDR,103.72.40.0/23,🎯 全球直连,no-resolve
   - IP-CIDR,103.72.44.0/22,🎯 全球直连,no-resolve
   - IP-CIDR,103.72.48.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.128.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.74.24.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.74.48.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.126.92.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.129.252.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.131.252.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.135.240.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.196.64.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,106.2.32.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,106.2.64.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,114.113.196.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,114.113.200.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,115.236.112.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,115.238.76.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,123.58.160.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,223.252.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,101.198.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,101.198.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
-  - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
-proxy-providers: {}
-rule-providers: {}
+  - IP-CIDR,103.72.128
