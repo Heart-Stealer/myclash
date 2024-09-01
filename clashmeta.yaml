@@ -194,6 +194,292 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         host: cfed.tgzdyz2.top
+  - name: TG@ZDYZ2_1
+    type: vless
+    server: 104.21.238.2
+    port: 2096
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR2
+    type: vless
+    server: 119.207.86.66
+    port: 12209
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR5
+    type: vless
+    server: 59.3.3.161
+    port: 443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR7
+    type: vless
+    server: 118.130.23.168
+    port: 18016
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR9
+    type: vless
+    server: 121.165.36.130
+    port: 27017
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR10
+    type: vless
+    server: 59.3.87.55
+    port: 39109
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR11
+    type: vless
+    server: 211.196.226.172
+    port: 32202
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR12
+    type: vless
+    server: 59.13.75.15
+    port: 20002
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR13
+    type: vless
+    server: 61.77.9.219
+    port: 12487
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: JP-Tokyo4
+    type: vless
+    server: 175.200.14.162
+    port: 17443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: JP-Tokyo6
+    type: vless
+    server: 112.185.223.152
+    port: 11101
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: JP-Tokyo13
+    type: vless
+    server: 59.29.116.20
+    port: 11965
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: US-Seattle
+    type: vless
+    server: 207.60.50.24
+    port: 8443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: US-California
+    type: vless
+    server: 154.17.9.70
+    port: 882
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 英国🇬🇧
+    type: vless
+    server: 51.89.241.53
+    port: 8443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 法国🇫🇷
+    type: vless
+    server: 137.74.157.158
+    port: 8443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 德国🇩🇪3
+    type: vless
+    server: 70.34.199.167
+    port: 2096
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 瑞典🇸🇪2
+    type: vless
+    server: 13.51.55.31
+    port: 443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 瑞典🇸🇪3
+    type: vless
+    server: 46.226.160.40
+    port: 8443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 挪威🇳🇴
+    type: vless
+    server: 46.29.238.54
+    port: 8443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 波兰🇵🇱
+    type: vless
+    server: 45.144.48.50
+    port: 443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: TG@ZDYZ2_2
+    type: vless
+    server: 205.233.181.36
+    port: 2053
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
   - name: 🇷🇺_RU_俄罗斯
     type: ss
     server: 212.118.54.195
@@ -506,6 +792,28 @@ proxy-groups:
       - 奥地利🇦🇹
       - SG01
       - 瑞典🇸🇪03-4.0
+      - TG@ZDYZ2_1
+      - KR2
+      - KR5
+      - KR7
+      - KR9
+      - KR10
+      - KR11
+      - KR12
+      - KR13
+      - JP-Tokyo4
+      - JP-Tokyo6
+      - JP-Tokyo13
+      - US-Seattle
+      - US-California
+      - 英国🇬🇧
+      - 法国🇫🇷
+      - 德国🇩🇪3
+      - 瑞典🇸🇪2
+      - 瑞典🇸🇪3
+      - 挪威🇳🇴
+      - 波兰🇵🇱
+      - TG@ZDYZ2_2
       - 🇷🇺_RU_俄罗斯
       - " SG01"
       - CF01
@@ -587,6 +895,28 @@ proxy-groups:
       - 奥地利🇦🇹
       - SG01
       - 瑞典🇸🇪03-4.0
+      - TG@ZDYZ2_1
+      - KR2
+      - KR5
+      - KR7
+      - KR9
+      - KR10
+      - KR11
+      - KR12
+      - KR13
+      - JP-Tokyo4
+      - JP-Tokyo6
+      - JP-Tokyo13
+      - US-Seattle
+      - US-California
+      - 英国🇬🇧
+      - 法国🇫🇷
+      - 德国🇩🇪3
+      - 瑞典🇸🇪2
+      - 瑞典🇸🇪3
+      - 挪威🇳🇴
+      - 波兰🇵🇱
+      - TG@ZDYZ2_2
       - 🇷🇺_RU_俄罗斯
       - " SG01"
       - CF01
@@ -643,6 +973,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - JP-Tokyo4
+      - JP-Tokyo6
+      - JP-Tokyo13
   - name: 🚀 🇺🇸美国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -655,6 +988,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT4"
       - US-Seattle-5.0
       - US-California-5.0
+      - US-Seattle
+      - US-California
       - CUS0171
       - CUS0179
       - CUS0192_1
@@ -670,6 +1005,14 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - KR2
+      - KR5
+      - KR7
+      - KR9
+      - KR10
+      - KR11
+      - KR12
+      - KR13
   - name: 🚀 🇸🇬新加坡-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -740,6 +1083,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - JP-Tokyo4
+      - JP-Tokyo6
+      - JP-Tokyo13
   - name: ⚖️ 🇯🇵日本-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -750,6 +1096,9 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - JP-Tokyo4
+      - JP-Tokyo6
+      - JP-Tokyo13
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -762,6 +1111,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT4"
       - US-Seattle-5.0
       - US-California-5.0
+      - US-Seattle
+      - US-California
       - CUS0171
       - CUS0179
       - CUS0192_1
@@ -779,6 +1130,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT4"
       - US-Seattle-5.0
       - US-California-5.0
+      - US-Seattle
+      - US-California
       - CUS0171
       - CUS0179
       - CUS0192_1
@@ -794,6 +1147,14 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - KR2
+      - KR5
+      - KR7
+      - KR9
+      - KR10
+      - KR11
+      - KR12
+      - KR13
   - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -804,6 +1165,14 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
+      - KR2
+      - KR5
+      - KR7
+      - KR9
+      - KR10
+      - KR11
+      - KR12
+      - KR13
   - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -10028,178 +10397,4 @@ rules:
   - IP-CIDR,103.52.76.0/22,🎯 全球直连,no-resolve
   - IP-CIDR,103.206.40.0/22,🎯 全球直连,no-resolve
   - IP-CIDR,110.76.21.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,110.76.23.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,112.125.0.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,116.251.64.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,119.38.208.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,119.38.224.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,119.42.224.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,139.95.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,140.205.1.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,140.205.122.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,147.139.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,149.129.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,155.102.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,161.117.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,163.181.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,170.33.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,198.11.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,205.204.96.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,19.28.0.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,45.40.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,49.51.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,62.234.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,94.191.0.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,103.7.28.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.116.50.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.231.60.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,109.244.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,111.30.128.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,111.30.136.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,111.30.139.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,111.30.140.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,115.159.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,119.28.0.0/15,🎯 全球直连,no-resolve
-  - IP-CIDR,120.88.56.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,121.51.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,129.28.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,129.204.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,129.211.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,132.232.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,134.175.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,146.56.192.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,148.70.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,150.109.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,152.136.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,162.14.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,162.62.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,170.106.130.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,182.254.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,188.131.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,203.195.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,203.205.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,210.4.138.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,211.152.128.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,211.152.132.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,211.152.148.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,212.64.0.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,212.129.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,45.113.192.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,63.217.23.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,63.243.252.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,103.235.44.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,104.193.88.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,106.12.0.0/15,🎯 全球直连,no-resolve
-  - IP-CIDR,114.28.224.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,119.63.192.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,180.76.0.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,180.76.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,182.61.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,185.10.104.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,202.46.48.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,203.90.238.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,43.254.0.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.249.212.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,49.4.0.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,78.101.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,78.101.224.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,81.52.161.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,85.97.220.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.31.200.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.69.140.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.218.216.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,114.115.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,114.116.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,116.63.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,116.66.184.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.96.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.128.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.136.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.141.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.142.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.243.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.244.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.251.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,117.78.0.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,119.3.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,119.8.0.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,119.8.32.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,121.36.0.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,121.36.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,121.37.0.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,122.112.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.0.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.64.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.100.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.104.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.112.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.224.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.240.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.248.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.128.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.160.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.164.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.168.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.176.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.192.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.0.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.64.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.79.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.80.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.96.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.112.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.125.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.192.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.223.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.224.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,168.195.92.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,185.176.76.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,197.199.0.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,197.210.163.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,197.252.1.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,197.252.2.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,197.252.4.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,197.252.8.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,200.32.52.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,200.32.54.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,200.32.57.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.0.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.4.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.8.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.11.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.13.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.20.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.22.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.24.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.26.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.29.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.33.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.38.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.40.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.43.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.48.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.50.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,42.186.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,45.127.128.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.195.24.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,45.253.132.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.253.240.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.254.48.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,59.111.0.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,59.111.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.120.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.128.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.196.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.200.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.12.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.18.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.24.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.28.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.38.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.40.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.44.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.48.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.128
+  -
