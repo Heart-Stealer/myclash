@@ -130,7 +130,11 @@ proxies:
   - {"name":"CGB0121","type":"vless","server":"94.247.142.245","port":2096,"uuid":"f775978b-6e22-41a8-ae5e-5f9779e6745f","tls":true,"servername":"juzibaipiao.5112233.xyz","network":"ws","ws-opts":{"path":"/","headers":{"host":"juzibaipiao.5112233.xyz"}}}
   - {"name":"CGB0125","type":"vless","server":"94.247.142.245","port":2096,"uuid":"f775978b-6e22-41a8-ae5e-5f9779e6745f","tls":true,"servername":"juzibaipiao.5112233.xyz","network":"ws","ws-opts":{"path":"/","headers":{"host":"juzibaipiao.5112233.xyz"}}}
   - {"name":"CRU0159","type":"vless","server":"188.42.145.90","port":8443,"uuid":"f775978b-6e22-41a8-ae5e-5f9779e6745f","tls":true,"servername":"juzibaipiao.5112233.xyz","network":"ws","ws-opts":{"path":"/","headers":{"host":"juzibaipiao.5112233.xyz"}}}
-
+  - {"name":"HK21-5.0","type":"vless","server":"47.242.176.185","port":443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560","headers":{"host":"cfed.tgzdyz2.top"}}}
+  - {"name":"♥KR10","type":"vless","server":"59.3.87.55","port":39109,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560"},"client-fingerprint":"random"}
+  - {"name":"CT 08","type":"vless","server":"45.159.219.33","port":443,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"TG@ZDYZ2"},"client-fingerprint":"random"}
+  - {"name":"🇸🇬 SG01","type":"vless","server":"140.99.233.156","port":2087,"uuid":"2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5","tls":true,"servername":"cfed.tgzdyz2.top","network":"ws","ws-opts":{"path":"/TG@ZDYZ2?ed=2560"},"client-fingerprint":"random"}
+  
   # - {"name":"美国++(频道@nodes_share)_1","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us2.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us2.rtacg.com"}}}
   # - {"name":"美国++(频道@nodes_share)_2","type":"vless","server":"23.227.60.186","port":80,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"servername":"us1.rtacg.com","network":"ws","ws-opts":{"path":"/","headers":{"host":"us1.rtacg.com"}}}
   # - {"name":"美国++(频道@nodes_share)","type":"vless","server":"69.30.252.59","port":25550,"uuid":"435bda4c-fe5e-42c9-a3ad-15334943b38a","tls":false,"network":"ws","ws-opts":{"path":"/"}}
