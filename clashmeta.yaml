@@ -78,6 +78,12 @@ proxies:
       path: /nimws
       headers:
         host: storeships.toptechnonews.com
+  - name: " 0AKRJPHKTWSGUSCT4"
+    type: ss
+    server: 37.19.198.243
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
   - name: US-Seattle-5.0
     type: vless
     server: 207.60.50.24
@@ -464,6 +470,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
       - US-Seattle-5.0
       - US-California-5.0
       - TG@ZDYZ2-01
@@ -540,6 +547,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
       - US-Seattle-5.0
       - US-California-5.0
       - TG@ZDYZ2-01
@@ -578,6 +586,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: 🚀 🇭🇰香港-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -587,6 +596,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: 🚀 🇯🇵日本-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -596,6 +606,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: 🚀 🇺🇸美国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -605,6 +616,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
       - US-Seattle-5.0
       - US-California-5.0
       - CUS0171
@@ -621,6 +633,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: 🚀 🇸🇬新加坡-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -630,6 +643,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
       - SG01
       - " SG01"
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
@@ -641,6 +655,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -650,6 +665,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇭🇰香港-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -659,6 +675,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -668,6 +685,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -677,6 +695,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇯🇵日本-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -686,6 +705,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -695,6 +715,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
       - US-Seattle-5.0
       - US-California-5.0
       - CUS0171
@@ -711,6 +732,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
       - US-Seattle-5.0
       - US-California-5.0
       - CUS0171
@@ -727,6 +749,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -736,6 +759,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -745,6 +769,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
       - SG01
       - " SG01"
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
@@ -756,6 +781,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
       - SG01
       - " SG01"
   - name: ⚖️ 其他
@@ -767,6 +793,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - " 0AKRJPHKTWSGUSCT4"
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
