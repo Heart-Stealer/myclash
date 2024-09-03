@@ -84,30 +84,6 @@ proxies:
     port: 443
     password: shadowsocks
     cipher: aes-128-gcm
-  - name: 🇭🇰+香港01-H
-    type: ss
-    server: south.idyllic.love
-    port: 37001
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
-  - name: 🇭🇰+香港02-H
-    type: ss
-    server: south.idyllic.love
-    port: 37002
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
-  - name: 🇭🇰+香港03-H
-    type: ss
-    server: south.idyllic.love
-    port: 37003
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
-  - name: 🇭🇰+香港04-H
-    type: ss
-    server: south.idyllic.love
-    port: 37000
-    password: 4946cbe4-3f2d-4305-a170-5e598a390c6d
-    cipher: aes-128-gcm
   - name: " SG01"
     type: vless
     server: 45.80.111.111
@@ -120,9 +96,57 @@ proxies:
       path: /
       headers:
         host: mmdv2.pages.dev
-  - name: CSE0167-H
+  - name: CSE0167-H_1
     type: vless
     server: 185.146.173.32
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H_2
+    type: vless
+    server: 45.80.111.111
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H_3
+    type: vless
+    server: 185.146.173.32
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H_4
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H_5
+    type: vless
+    server: ip.sb
     port: 443
     uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
     tls: true
@@ -588,12 +612,12 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇭🇰+香港01-H
-      - 🇭🇰+香港02-H
-      - 🇭🇰+香港03-H
-      - 🇭🇰+香港04-H
       - " SG01"
-      - CSE0167-H
+      - CSE0167-H_1
+      - CSE0167-H_2
+      - CSE0167-H_3
+      - CSE0167-H_4
+      - CSE0167-H_5
       - "0170"
       - "0171"
       - "0177"
@@ -675,12 +699,12 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇭🇰+香港01-H
-      - 🇭🇰+香港02-H
-      - 🇭🇰+香港03-H
-      - 🇭🇰+香港04-H
       - " SG01"
-      - CSE0167-H
+      - CSE0167-H_1
+      - CSE0167-H_2
+      - CSE0167-H_3
+      - CSE0167-H_4
+      - CSE0167-H_5
       - "0170"
       - "0171"
       - "0177"
@@ -734,10 +758,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇭🇰+香港01-H
-      - 🇭🇰+香港02-H
-      - 🇭🇰+香港03-H
-      - 🇭🇰+香港04-H
       - HK-Hong Kong14
       - HK-Hong Kong18
   - name: 🚀 🇯🇵日本-自动选择
@@ -827,10 +847,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇭🇰+香港01-H
-      - 🇭🇰+香港02-H
-      - 🇭🇰+香港03-H
-      - 🇭🇰+香港04-H
       - HK-Hong Kong14
       - HK-Hong Kong18
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
@@ -843,10 +859,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - " 0AKRJPHKTWSGUSCT4"
-      - 🇭🇰+香港01-H
-      - 🇭🇰+香港02-H
-      - 🇭🇰+香港03-H
-      - 🇭🇰+香港04-H
       - HK-Hong Kong14
       - HK-Hong Kong18
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
