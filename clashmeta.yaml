@@ -78,12 +78,162 @@ proxies:
       path: /nimws
       headers:
         host: storeships.toptechnonews.com
-  - name: " 0AKRJPHKTWSGUSCT4"
-    type: ss
-    server: 37.19.198.243
+  - name: CSE0167-H01
+    type: vless
+    server: 185.146.173.32
     port: 443
-    password: shadowsocks
-    cipher: aes-128-gcm
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H02
+    type: vless
+    server: 45.80.111.111
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H03
+    type: vless
+    server: 185.146.173.32
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H04
+    type: vless
+    server: ip.sb
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H05
+    type: vless
+    server: www.gov.ua
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H06
+    type: vless
+    server: www.ipget.net
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H07
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H08
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 443
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H09
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H10
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H11
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H12
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
+  - name: CSE0167-H13
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
+    tls: true
+    servername: e10c0e4b.oodaeq2.pages.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: e10c0e4b.oodaeq2.pages.dev
   - name: " SG01"
     type: vless
     server: 45.80.111.111
@@ -96,67 +246,43 @@ proxies:
       path: /
       headers:
         host: mmdv2.pages.dev
-  - name: CSE0167-H_1
-    type: vless
-    server: 185.146.173.32
-    port: 443
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H_2
-    type: vless
-    server: 45.80.111.111
-    port: 443
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H_3
-    type: vless
-    server: 185.146.173.32
-    port: 443
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H_4
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 443
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H_5
+  - name: X01701
     type: vless
     server: ip.sb
-    port: 443
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
     network: ws
     ws-opts:
       path: /
       headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: "0170"
+        host: feng.ipy29c99.workers.dev
+  - name: X01702
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: X01703
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: X01704
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -168,19 +294,31 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "0171"
+  - name: X01705
     type: vless
-    server: ip.sb
+    server: storeships.toptechnonews.com
     port: 8080
-    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
     tls: false
-    servername: 201.myhmyhhuang1980.workers.dev
+    servername: feng.ipy29c99.workers.dev
     network: ws
     ws-opts:
       path: /
       headers:
-        host: 201.myhmyhhuang1980.workers.dev
-  - name: "0177"
+        host: feng.ipy29c99.workers.dev
+  - name: X01771
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: X01772
     type: vless
     server: www.gov.ua
     port: 8080
@@ -192,7 +330,43 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "0183"
+  - name: X01773
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: X01774
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: X01775
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: X0183
     type: vless
     server: ip.sb
     port: 8080
@@ -204,7 +378,31 @@ proxies:
       path: /
       headers:
         host: feng4.l1ut8bi9.workers.dev
-  - name: "0187"
+  - name: X0171
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
+    tls: false
+    servername: 201.myhmyhhuang1980.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.myhmyhhuang1980.workers.dev
+  - name: X01871
+    type: vless
+    server: wwww.gov.ua
+    port: 8080
+    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
+    tls: false
+    servername: 201.myhmyhhuang1980.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.myhmyhhuang1980.workers.dev
+  - name: X01872
     type: vless
     server: www.ipget.net
     port: 8080
@@ -216,32 +414,30 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: US-Seattle-5.0
+  - name: X01873
     type: vless
-    server: 207.60.50.24
-    port: 8443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
+    tls: false
+    servername: 201.myhmyhhuang1980.workers.dev
     network: ws
     ws-opts:
-      path: /TG@ZDYZ2?ed=2560
+      path: /
       headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: US-California-5.0
+        host: 201.myhmyhhuang1980.workers.dev
+  - name: X01874
     type: vless
-    server: 154.17.9.70
-    port: 882
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
+    tls: false
+    servername: 201.myhmyhhuang1980.workers.dev
     network: ws
     ws-opts:
-      path: /TG@ZDYZ2?ed=2560
+      path: /
       headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
+        host: 201.myhmyhhuang1980.workers.dev
   - name: TG@ZDYZ2-01
     type: vless
     server: 188.42.88.66
@@ -266,19 +462,6 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         host: cfed.tgzdyz2.top
-  - name: KR2
-    type: vless
-    server: 119.207.86.66
-    port: 12209
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
   - name: KR5
     type: vless
     server: 59.3.3.161
@@ -296,19 +479,6 @@ proxies:
     type: vless
     server: 118.130.23.168
     port: 18016
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR8
-    type: vless
-    server: 211.63.50.135
-    port: 30048
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -461,36 +631,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: JP11
-    type: vless
-    server: 38.47.126.113
-    port: 48765
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
   - name: 英国🇬🇧
     type: vless
     server: 51.89.241.53
     port: 8443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 加拿大🇨🇦
-    type: vless
-    server: 140.238.158.238
-    port: 8080
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -611,26 +755,40 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
+      - CSE0167-H01
+      - CSE0167-H02
+      - CSE0167-H03
+      - CSE0167-H04
+      - CSE0167-H05
+      - CSE0167-H06
+      - CSE0167-H07
+      - CSE0167-H08
+      - CSE0167-H09
+      - CSE0167-H10
+      - CSE0167-H11
+      - CSE0167-H12
+      - CSE0167-H13
       - " SG01"
-      - CSE0167-H_1
-      - CSE0167-H_2
-      - CSE0167-H_3
-      - CSE0167-H_4
-      - CSE0167-H_5
-      - "0170"
-      - "0171"
-      - "0177"
-      - "0183"
-      - "0187"
-      - US-Seattle-5.0
-      - US-California-5.0
+      - X01701
+      - X01702
+      - X01703
+      - X01704
+      - X01705
+      - X01771
+      - X01772
+      - X01773
+      - X01774
+      - X01775
+      - X0183
+      - X0171
+      - X01871
+      - X01872
+      - X01873
+      - X01874
       - TG@ZDYZ2-01
       - TG@ZDYZ2-02
-      - KR2
       - KR5
       - KR7
-      - KR8
       - KR9
       - KR10
       - KR11
@@ -642,9 +800,7 @@ proxy-groups:
       - JP2
       - JP4
       - JP6
-      - JP11
       - 英国🇬🇧
-      - 加拿大🇨🇦
       - 法国🇫🇷
       - 德国🇩🇪3
       - 瑞典🇸🇪3
@@ -698,26 +854,40 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
+      - CSE0167-H01
+      - CSE0167-H02
+      - CSE0167-H03
+      - CSE0167-H04
+      - CSE0167-H05
+      - CSE0167-H06
+      - CSE0167-H07
+      - CSE0167-H08
+      - CSE0167-H09
+      - CSE0167-H10
+      - CSE0167-H11
+      - CSE0167-H12
+      - CSE0167-H13
       - " SG01"
-      - CSE0167-H_1
-      - CSE0167-H_2
-      - CSE0167-H_3
-      - CSE0167-H_4
-      - CSE0167-H_5
-      - "0170"
-      - "0171"
-      - "0177"
-      - "0183"
-      - "0187"
-      - US-Seattle-5.0
-      - US-California-5.0
+      - X01701
+      - X01702
+      - X01703
+      - X01704
+      - X01705
+      - X01771
+      - X01772
+      - X01773
+      - X01774
+      - X01775
+      - X0183
+      - X0171
+      - X01871
+      - X01872
+      - X01873
+      - X01874
       - TG@ZDYZ2-01
       - TG@ZDYZ2-02
-      - KR2
       - KR5
       - KR7
-      - KR8
       - KR9
       - KR10
       - KR11
@@ -729,9 +899,7 @@ proxy-groups:
       - JP2
       - JP4
       - JP6
-      - JP11
       - 英国🇬🇧
-      - 加拿大🇨🇦
       - 法国🇫🇷
       - 德国🇩🇪3
       - 瑞典🇸🇪3
@@ -747,7 +915,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: 🚀 🇭🇰香港-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -757,7 +924,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - HK-Hong Kong14
       - HK-Hong Kong18
   - name: 🚀 🇯🇵日本-自动选择
@@ -769,12 +935,10 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - JP1
       - JP2
       - JP4
       - JP6
-      - JP11
   - name: 🚀 🇺🇸美国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -784,9 +948,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - US-Seattle-5.0
-      - US-California-5.0
   - name: 🚀 🇰🇷韩国-自动选择
     type: url-test
     url: http://www.google.com/generate_204
@@ -796,11 +957,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - KR2
       - KR5
       - KR7
-      - KR8
       - KR9
       - KR10
       - KR11
@@ -815,7 +973,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - " SG01"
   - name: ⚖️ 🇹🇼台湾-负载均衡-散列
     type: load-balance
@@ -826,7 +983,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -836,7 +992,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
   - name: ⚖️ 🇭🇰香港-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -846,7 +1001,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - HK-Hong Kong14
       - HK-Hong Kong18
   - name: ⚖️ 🇭🇰香港-负载均衡-轮询
@@ -858,7 +1012,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - HK-Hong Kong14
       - HK-Hong Kong18
   - name: ⚖️ 🇯🇵日本-负载均衡-散列
@@ -870,12 +1023,10 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - JP1
       - JP2
       - JP4
       - JP6
-      - JP11
   - name: ⚖️ 🇯🇵日本-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -885,12 +1036,10 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - JP1
       - JP2
       - JP4
       - JP6
-      - JP11
   - name: ⚖️ 🇺🇸美国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -900,9 +1049,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - US-Seattle-5.0
-      - US-California-5.0
   - name: ⚖️ 🇺🇸美国-负载均衡-轮询
     type: load-balance
     url: http://www.google.com/generate_204
@@ -912,9 +1058,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - US-Seattle-5.0
-      - US-California-5.0
   - name: ⚖️ 🇰🇷韩国-负载均衡-散列
     type: load-balance
     url: http://www.google.com/generate_204
@@ -924,11 +1067,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - KR2
       - KR5
       - KR7
-      - KR8
       - KR9
       - KR10
       - KR11
@@ -943,11 +1083,8 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
-      - KR2
       - KR5
       - KR7
-      - KR8
       - KR9
       - KR10
       - KR11
@@ -962,7 +1099,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - " SG01"
   - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
     type: load-balance
@@ -973,7 +1109,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
       - " SG01"
   - name: ⚖️ 其他
     type: load-balance
@@ -984,7 +1119,6 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
-      - " 0AKRJPHKTWSGUSCT4"
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
