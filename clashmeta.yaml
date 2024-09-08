@@ -102,33 +102,9 @@ proxies:
       path: /
       headers:
         host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H03
-    type: vless
-    server: 185.146.173.32
-    port: 443
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
   - name: CSE0167-H04
     type: vless
     server: ip.sb
-    port: 443
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H05
-    type: vless
-    server: www.gov.ua
     port: 443
     uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
     tls: true
@@ -174,66 +150,6 @@ proxies:
       path: /
       headers:
         host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H09
-    type: vless
-    server: ip.sb
-    port: 8080
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H10
-    type: vless
-    server: www.gov.ua
-    port: 8080
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H11
-    type: vless
-    server: www.ipget.net
-    port: 8080
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H12
-    type: vless
-    server: xn--b6gac.eu.org
-    port: 8080
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
-  - name: CSE0167-H13
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 8080
-    uuid: d7bbfe83-b037-48ae-996c-b98ed0441ba2
-    tls: true
-    servername: e10c0e4b.oodaeq2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: e10c0e4b.oodaeq2.pages.dev
   - name: " SG01"
     type: vless
     server: 45.80.111.111
@@ -246,7 +162,7 @@ proxies:
       path: /
       headers:
         host: mmdv2.pages.dev
-  - name: X01701
+  - name: "01701"
     type: vless
     server: ip.sb
     port: 8080
@@ -258,7 +174,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: X01702
+  - name: "01702"
     type: vless
     server: www.gov.ua
     port: 8080
@@ -270,7 +186,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: X01703
+  - name: "01703"
     type: vless
     server: www.ipget.net
     port: 8080
@@ -282,7 +198,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: X01704
+  - name: "01704"
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -294,7 +210,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: X01705
+  - name: "01705"
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -306,7 +222,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: X01771
+  - name: "01771"
     type: vless
     server: ip.sb
     port: 8080
@@ -318,7 +234,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: X01772
+  - name: "01772"
     type: vless
     server: www.gov.ua
     port: 8080
@@ -330,7 +246,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: X01773
+  - name: "01773"
     type: vless
     server: www.ipget.net
     port: 8080
@@ -342,7 +258,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: X01774
+  - name: "01774"
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -354,7 +270,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: X01775
+  - name: "01775"
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -366,7 +282,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: X0183
+  - name: "0183"
     type: vless
     server: ip.sb
     port: 8080
@@ -378,7 +294,7 @@ proxies:
       path: /
       headers:
         host: feng4.l1ut8bi9.workers.dev
-  - name: X0171
+  - name: "0171"
     type: vless
     server: ip.sb
     port: 8080
@@ -390,7 +306,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: X01871
+  - name: "01871"
     type: vless
     server: wwww.gov.ua
     port: 8080
@@ -402,7 +318,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: X01872
+  - name: "01872"
     type: vless
     server: www.ipget.net
     port: 8080
@@ -414,7 +330,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: X01873
+  - name: "01873"
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -426,7 +342,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: X01874
+  - name: "01874"
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -438,10 +354,10 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: TG@ZDYZ2-01
+  - name: 奥地利🇦🇹
     type: vless
-    server: 188.42.88.66
-    port: 2053
+    server: 94.177.8.26
+    port: 130
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -450,18 +366,7 @@ proxies:
       path: /TG@ZDYZ2?ed=2560
       headers:
         host: cfed.tgzdyz2.top
-  - name: TG@ZDYZ2-02
-    type: vless
-    server: 205.233.181.36
-    port: 2053
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
+    client-fingerprint: random
   - name: KR5
     type: vless
     server: 59.3.3.161
@@ -475,10 +380,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR7
+  - name: 瑞典🇸🇪2
     type: vless
-    server: 118.130.23.168
-    port: 18016
+    server: 13.51.55.31
+    port: 443
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -488,10 +393,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR9
+  - name: 德国🇩🇪
     type: vless
-    server: 121.165.36.130
-    port: 27017
+    server: 91.107.148.215
+    port: 2053
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -501,10 +406,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR10
+  - name: TG@ZDYZ21
     type: vless
-    server: 59.3.87.55
-    port: 39109
+    server: 188.42.88.66
+    port: 2053
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -514,10 +419,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR11
+  - name: TG@ZDYZ22
     type: vless
-    server: 211.196.226.172
-    port: 32202
+    server: 205.233.181.36
+    port: 2053
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -527,140 +432,49 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR12
+  - name: TG@ZDYZ23
     type: vless
-    server: 59.13.75.15
-    port: 20002
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: KR13
-    type: vless
-    server: 61.77.9.219
-    port: 12487
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: HK-Hong Kong14
-    type: vless
-    server: 58.82.251.82
-    port: 39040
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: HK-Hong Kong18
-    type: vless
-    server: 223.122.220.178
-    port: 35510
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: JP1
-    type: vless
-    server: 14.48.49.133
-    port: 10000
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: JP2
-    type: vless
-    server: 121.181.128.153
-    port: 19100
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: JP4
-    type: vless
-    server: 175.200.14.162
-    port: 17443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: JP6
-    type: vless
-    server: 112.185.223.152
-    port: 11101
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 英国🇬🇧
-    type: vless
-    server: 51.89.241.53
-    port: 8443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 法国🇫🇷
-    type: vless
-    server: 137.74.157.158
-    port: 8443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 德国🇩🇪3
-    type: vless
-    server: 70.34.199.167
+    server: 104.21.238.2
     port: 2096
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 澳大利亚🇦🇺2
+    type: vless
+    server: 38.55.106.82
+    port: 7777
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 加拿大🇨🇦
+    type: vless
+    server: 140.238.158.238
+    port: 8080
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: 德国🇩🇪2
+    type: vless
+    server: 128.140.124.244
+    port: 8443
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -683,10 +497,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: 挪威🇳🇴
+  - name: JP-Tokyo1
     type: vless
-    server: 46.29.238.54
-    port: 8443
+    server: 14.48.49.133
+    port: 10000
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -696,10 +510,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: 波兰🇵🇱
+  - name: TW-Taipei5
     type: vless
-    server: 45.144.48.50
-    port: 443
+    server: 114.34.202.224
+    port: 10004
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -709,10 +523,75 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: 芬兰🇫🇮2
+  - name: JP-Tokyo13
     type: vless
-    server: 65.109.208.21
-    port: 8443
+    server: 59.29.116.20
+    port: 11965
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR2
+    type: vless
+    server: 119.207.86.66
+    port: 12209
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR13
+    type: vless
+    server: 61.77.9.219
+    port: 12487
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: JP-Tokyo4
+    type: vless
+    server: 175.200.14.162
+    port: 17443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR9
+    type: vless
+    server: 121.165.36.130
+    port: 27017
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR11
+    type: vless
+    server: 211.196.226.172
+    port: 32202
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -726,29 +605,10 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - ☑️ 手动切换
-      - 🚀 🇺🇸美国-自动选择
-      - 🚀 🇯🇵日本-自动选择
-      - 🚀 🇰🇷韩国-自动选择
-      - 🚀 🇹🇼台湾-自动选择
-      - 🚀 🇭🇰香港-自动选择
-      - 🚀 🇸🇬新加坡-自动选择
-      - ⚖️ 🇺🇸美国-负载均衡-轮询
-      - ⚖️ 🇺🇸美国-负载均衡-散列
-      - ⚖️ 🇯🇵日本-负载均衡-轮询
-      - ⚖️ 🇯🇵日本-负载均衡-散列
-      - ⚖️ 🇰🇷韩国-负载均衡-轮询
-      - ⚖️ 🇰🇷韩国-负载均衡-散列
-      - ⚖️ 🇹🇼台湾-负载均衡-轮询
-      - ⚖️ 🇹🇼台湾-负载均衡-散列
-      - ⚖️ 🇭🇰香港-负载均衡-轮询
-      - ⚖️ 🇭🇰香港-负载均衡-散列
-      - ⚖️ 🇸🇬新加坡-负载均衡-轮询
-      - ⚖️ 🇸🇬新加坡-负载均衡-散列
-      - ⚖️ 其他
       - DIRECT
+      - ♻️ 自动选择
+      - ☑️ 手动切换
+      - ⚖️ 其他
   - name: ☑️ 手动切换
     type: select
     proxies:
@@ -757,80 +617,46 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT3"
       - CSE0167-H01
       - CSE0167-H02
-      - CSE0167-H03
       - CSE0167-H04
-      - CSE0167-H05
       - CSE0167-H06
       - CSE0167-H07
       - CSE0167-H08
-      - CSE0167-H09
-      - CSE0167-H10
-      - CSE0167-H11
-      - CSE0167-H12
-      - CSE0167-H13
       - " SG01"
-      - X01701
-      - X01702
-      - X01703
-      - X01704
-      - X01705
-      - X01771
-      - X01772
-      - X01773
-      - X01774
-      - X01775
-      - X0183
-      - X0171
-      - X01871
-      - X01872
-      - X01873
-      - X01874
-      - TG@ZDYZ2-01
-      - TG@ZDYZ2-02
+      - "01701"
+      - "01702"
+      - "01703"
+      - "01704"
+      - "01705"
+      - "01771"
+      - "01772"
+      - "01773"
+      - "01774"
+      - "01775"
+      - "0183"
+      - "0171"
+      - "01871"
+      - "01872"
+      - "01873"
+      - "01874"
+      - 奥地利🇦🇹
       - KR5
-      - KR7
-      - KR9
-      - KR10
-      - KR11
-      - KR12
-      - KR13
-      - HK-Hong Kong14
-      - HK-Hong Kong18
-      - JP1
-      - JP2
-      - JP4
-      - JP6
-      - 英国🇬🇧
-      - 法国🇫🇷
-      - 德国🇩🇪3
+      - 瑞典🇸🇪2
+      - 德国🇩🇪
+      - TG@ZDYZ21
+      - TG@ZDYZ22
+      - TG@ZDYZ23
+      - 澳大利亚🇦🇺2
+      - 加拿大🇨🇦
+      - 德国🇩🇪2
       - 瑞典🇸🇪3
-      - 挪威🇳🇴
-      - 波兰🇵🇱
-      - 芬兰🇫🇮2
-  - name: 🔯 故障转移
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 🚀 🇹🇼台湾-自动选择
-      - 🚀 🇭🇰香港-自动选择
-      - 🚀 🇯🇵日本-自动选择
-      - 🚀 🇺🇸美国-自动选择
-      - 🚀 🇰🇷韩国-自动选择
-      - 🚀 🇸🇬新加坡-自动选择
-      - ⚖️ 🇹🇼台湾-负载均衡-散列
-      - ⚖️ 🇹🇼台湾-负载均衡-轮询
-      - ⚖️ 🇭🇰香港-负载均衡-散列
-      - ⚖️ 🇭🇰香港-负载均衡-轮询
-      - ⚖️ 🇯🇵日本-负载均衡-散列
-      - ⚖️ 🇯🇵日本-负载均衡-轮询
-      - ⚖️ 🇺🇸美国-负载均衡-散列
-      - ⚖️ 🇺🇸美国-负载均衡-轮询
-      - ⚖️ 🇰🇷韩国-负载均衡-散列
-      - ⚖️ 🇰🇷韩国-负载均衡-轮询
-      - ⚖️ 🇸🇬新加坡-负载均衡-散列
-      - ⚖️ 🇸🇬新加坡-负载均衡-轮询
+      - JP-Tokyo1
+      - TW-Taipei5
+      - JP-Tokyo13
+      - KR2
+      - KR13
+      - JP-Tokyo4
+      - KR9
+      - KR11
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -856,260 +682,46 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT3"
       - CSE0167-H01
       - CSE0167-H02
-      - CSE0167-H03
       - CSE0167-H04
-      - CSE0167-H05
       - CSE0167-H06
       - CSE0167-H07
       - CSE0167-H08
-      - CSE0167-H09
-      - CSE0167-H10
-      - CSE0167-H11
-      - CSE0167-H12
-      - CSE0167-H13
       - " SG01"
-      - X01701
-      - X01702
-      - X01703
-      - X01704
-      - X01705
-      - X01771
-      - X01772
-      - X01773
-      - X01774
-      - X01775
-      - X0183
-      - X0171
-      - X01871
-      - X01872
-      - X01873
-      - X01874
-      - TG@ZDYZ2-01
-      - TG@ZDYZ2-02
+      - "01701"
+      - "01702"
+      - "01703"
+      - "01704"
+      - "01705"
+      - "01771"
+      - "01772"
+      - "01773"
+      - "01774"
+      - "01775"
+      - "0183"
+      - "0171"
+      - "01871"
+      - "01872"
+      - "01873"
+      - "01874"
+      - 奥地利🇦🇹
       - KR5
-      - KR7
-      - KR9
-      - KR10
-      - KR11
-      - KR12
-      - KR13
-      - HK-Hong Kong14
-      - HK-Hong Kong18
-      - JP1
-      - JP2
-      - JP4
-      - JP6
-      - 英国🇬🇧
-      - 法国🇫🇷
-      - 德国🇩🇪3
+      - 瑞典🇸🇪2
+      - 德国🇩🇪
+      - TG@ZDYZ21
+      - TG@ZDYZ22
+      - TG@ZDYZ23
+      - 澳大利亚🇦🇺2
+      - 加拿大🇨🇦
+      - 德国🇩🇪2
       - 瑞典🇸🇪3
-      - 挪威🇳🇴
-      - 波兰🇵🇱
-      - 芬兰🇫🇮2
-  - name: 🚀 🇹🇼台湾-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-  - name: 🚀 🇭🇰香港-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - HK-Hong Kong14
-      - HK-Hong Kong18
-  - name: 🚀 🇯🇵日本-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - JP1
-      - JP2
-      - JP4
-      - JP6
-  - name: 🚀 🇺🇸美国-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-  - name: 🚀 🇰🇷韩国-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - KR5
-      - KR7
-      - KR9
-      - KR10
-      - KR11
-      - KR12
+      - JP-Tokyo1
+      - TW-Taipei5
+      - JP-Tokyo13
+      - KR2
       - KR13
-  - name: 🚀 🇸🇬新加坡-自动选择
-    type: url-test
-    url: http://www.google.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - " SG01"
-  - name: ⚖️ 🇹🇼台湾-负载均衡-散列
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-  - name: ⚖️ 🇹🇼台湾-负载均衡-轮询
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: round-robin
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-  - name: ⚖️ 🇭🇰香港-负载均衡-散列
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - HK-Hong Kong14
-      - HK-Hong Kong18
-  - name: ⚖️ 🇭🇰香港-负载均衡-轮询
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: round-robin
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - HK-Hong Kong14
-      - HK-Hong Kong18
-  - name: ⚖️ 🇯🇵日本-负载均衡-散列
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - JP1
-      - JP2
-      - JP4
-      - JP6
-  - name: ⚖️ 🇯🇵日本-负载均衡-轮询
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: round-robin
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - JP1
-      - JP2
-      - JP4
-      - JP6
-  - name: ⚖️ 🇺🇸美国-负载均衡-散列
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-  - name: ⚖️ 🇺🇸美国-负载均衡-轮询
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: round-robin
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-  - name: ⚖️ 🇰🇷韩国-负载均衡-散列
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - KR5
-      - KR7
+      - JP-Tokyo4
       - KR9
-      - KR10
       - KR11
-      - KR12
-      - KR13
-  - name: ⚖️ 🇰🇷韩国-负载均衡-轮询
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: round-robin
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - KR5
-      - KR7
-      - KR9
-      - KR10
-      - KR11
-      - KR12
-      - KR13
-  - name: ⚖️ 🇸🇬新加坡-负载均衡-散列
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - " SG01"
-  - name: ⚖️ 🇸🇬新加坡-负载均衡-轮询
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: round-robin
-    proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - " 0AKRJPHKTWSGUSCT2"
-      - " 0AKRJPHKTWSGUSCT3"
-      - " SG01"
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
@@ -1122,7 +734,9 @@ proxy-groups:
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
-  - DOMAIN-KEYWORD,microsoft,🚀 节点选择
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,DIRECT,no-resolve
+  - DOMAIN,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,microsoft,DIRECT,no-resolve
   - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
   - DOMAIN-SUFFIX,surrit.com,DIRECT
   - DOMAIN-SUFFIX,cdn.skyearth.xyz:443,DIRECT
@@ -9927,7 +9541,6 @@ rules:
   - DOMAIN-SUFFIX,azureedge.net,🚀 节点选择
   - DOMAIN-SUFFIX,azurewebsites.net,🚀 节点选择
   - DOMAIN-SUFFIX,bandwagonhost.com,🚀 节点选择
-  - DOMAIN-SUFFIX,bing.com,🚀 节点选择
   - DOMAIN-SUFFIX,bkrtx.com,🚀 节点选择
   - DOMAIN-SUFFIX,blogcdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,blogger.com,🚀 节点选择
@@ -10106,7 +9719,6 @@ rules:
   - DOMAIN-SUFFIX,gvt1.com,🚀 节点选择
   - DOMAIN-SUFFIX,gvt2.com,🚀 节点选择
   - DOMAIN-SUFFIX,gvt3.com,🚀 节点选择
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
   - DOMAIN-SUFFIX,youtu.be,🚀 节点选择
   - DOMAIN-SUFFIX,youtube-nocookie.com,🚀 节点选择
   - DOMAIN-SUFFIX,youtube.com,🚀 节点选择
