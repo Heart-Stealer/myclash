@@ -56,6 +56,6 @@ vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@211.196.226.172:32202?encryption=no
 # vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:80?encryption=none&security=tls&sni=us1.rtacg.com&type=ws&host=us1.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1
 # vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:80?encryption=none&security=none&type=ws&host=us2.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD2
 # vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@cfip.xxxxxxxx.tk:80?encryption=none&security=none&type=ws&host=us3.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD3
-# vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@104.21.19.181:8080?encryption=none&security=none&sni=us1.rtacg.com&fp=randomized&type=ws&host=us1.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1us1
-# vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@104.21.19.181:8080?encryption=none&security=none&sni=us2.rtacg.com&fp=randomized&type=ws&host=us2.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1us2
-# vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@104.21.19.181:8080?encryption=none&security=none&sni=us3.rtacg.com&fp=randomized&type=ws&host=us3.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1us3
+vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@104.21.19.181:8080?encryption=none&security=none&sni=us1.rtacg.com&fp=randomized&type=ws&host=us1.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1us1
+vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@104.21.19.181:8080?encryption=none&security=none&sni=us2.rtacg.com&fp=randomized&type=ws&host=us2.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1us2
+vless://781a8eb4-c4f7-4f99-9dee-e80369dbf1ec@104.21.19.181:8080?encryption=none&security=none&sni=us3.rtacg.com&fp=randomized&type=ws&host=us3.rtacg.com&path=%2F#%E7%BE%8E%E5%9B%BD1us3
