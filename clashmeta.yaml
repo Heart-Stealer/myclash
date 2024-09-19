@@ -78,6 +78,19 @@ proxies:
       path: /nimws
       headers:
         host: storeships.toptechnonews.com
+  - name: FREE_US 04
+    type: trojan
+    server: duke.ns.cloudflare.com
+    port: 443
+    udp: true
+    password: Trevely
+    sni: trojan.trevely.us.kg
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: trojan.trevely.us.kg
   - name: " SG01"
     type: vless
     server: 45.80.111.111
@@ -477,6 +490,30 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
+  - name: 美国1
+    type: vless
+    server: cfip.xxxxxxxx.tk
+    port: 80
+    uuid: 781a8eb4-c4f7-4f99-9dee-e80369dbf1ec
+    tls: false
+    servername: us1.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.rtacg.com
+  - name: 美国3
+    type: vless
+    server: cfip.xxxxxxxx.tk
+    port: 80
+    uuid: 781a8eb4-c4f7-4f99-9dee-e80369dbf1ec
+    tls: false
+    servername: us3.rtacg.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us3.rtacg.com
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -491,6 +528,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - FREE_US 04
       - " SG01"
       - "01701"
       - "01702"
@@ -523,6 +561,8 @@ proxy-groups:
       - KR13-1.0
       - KR9-1.0
       - KR11-1.0
+      - 美国1
+      - 美国3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -546,6 +586,7 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT1"
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
+      - FREE_US 04
       - " SG01"
       - "01701"
       - "01702"
@@ -578,6 +619,8 @@ proxy-groups:
       - KR13-1.0
       - KR9-1.0
       - KR11-1.0
+      - 美国1
+      - 美国3
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
