@@ -91,19 +91,7 @@ proxies:
       path: /
       headers:
         host: trojan.trevely.us.kg
-  - name: " SG01"
-    type: vless
-    server: 45.80.111.111
-    port: 443
-    uuid: d9eb0df3-3190-4447-86b6-656fe5ff1119
-    tls: true
-    servername: mmdv2.pages.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mmdv2.pages.dev
-  - name: "01701"
+  - name: "001"
     type: vless
     server: ip.sb
     port: 8080
@@ -115,7 +103,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "01702"
+  - name: "002"
     type: vless
     server: www.gov.ua
     port: 8080
@@ -127,7 +115,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "01703"
+  - name: "003"
     type: vless
     server: www.ipget.net
     port: 8080
@@ -139,7 +127,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "01704"
+  - name: "004"
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -151,7 +139,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "01705"
+  - name: "005"
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -163,7 +151,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "01771"
+  - name: "011"
     type: vless
     server: ip.sb
     port: 8080
@@ -175,7 +163,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "01772"
+  - name: "012"
     type: vless
     server: www.gov.ua
     port: 8080
@@ -187,7 +175,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "01773"
+  - name: "013"
     type: vless
     server: www.ipget.net
     port: 8080
@@ -199,7 +187,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "01774"
+  - name: "014"
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -211,7 +199,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "01775"
+  - name: "015"
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -223,7 +211,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "0183"
+  - name: "021"
     type: vless
     server: ip.sb
     port: 8080
@@ -235,7 +223,55 @@ proxies:
       path: /
       headers:
         host: feng4.l1ut8bi9.workers.dev
-  - name: "0171"
+  - name: "022"
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: "023"
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: "024"
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: "025"
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: "031"
     type: vless
     server: ip.sb
     port: 8080
@@ -247,7 +283,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: "01871"
+  - name: "032"
     type: vless
     server: wwww.gov.ua
     port: 8080
@@ -259,7 +295,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: "01872"
+  - name: "033"
     type: vless
     server: www.ipget.net
     port: 8080
@@ -271,7 +307,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: "01873"
+  - name: "034"
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -283,7 +319,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: "01874"
+  - name: "035"
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -321,10 +357,36 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: 德国🇩🇪
+  - name: JP-Tokyo1
     type: vless
-    server: 91.107.148.215
-    port: 2053
+    server: 14.48.49.133
+    port: 10000
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: JP-Tokyo13-TG
+    type: vless
+    server: 59.29.116.20
+    port: 11965
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: KR11-1.0
+    type: vless
+    server: 211.196.226.172
+    port: 32202
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -412,36 +474,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: JP-Tokyo1
-    type: vless
-    server: 14.48.49.133
-    port: 10000
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
   - name: TW-Taipei5
     type: vless
     server: 114.34.202.224
     port: 10004
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: JP-Tokyo13-1.0
-    type: vless
-    server: 59.29.116.20
-    port: 11965
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -464,7 +500,7 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR9-1.0
+  - name: KR9-TG3.0
     type: vless
     server: 121.165.36.130
     port: 27017
@@ -477,10 +513,10 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR11-1.0
+  - name: 德国🇩🇪
     type: vless
-    server: 211.196.226.172
-    port: 32202
+    server: 91.107.148.215
+    port: 2053
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
     servername: cfed.tgzdyz2.top
@@ -490,30 +526,6 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: 美国1
-    type: vless
-    server: cfip.xxxxxxxx.tk
-    port: 80
-    uuid: 781a8eb4-c4f7-4f99-9dee-e80369dbf1ec
-    tls: false
-    servername: us1.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: us1.rtacg.com
-  - name: 美国3
-    type: vless
-    server: cfip.xxxxxxxx.tk
-    port: 80
-    uuid: 781a8eb4-c4f7-4f99-9dee-e80369dbf1ec
-    tls: false
-    servername: us3.rtacg.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: us3.rtacg.com
   - name: CF01
     type: vless
     server: storeships.toptechnonews.com
@@ -709,6 +721,138 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
+  - name: 🇭🇰 香港01
+    type: ssr
+    server: dajbxhk.naikonode1.top
+    port: 15004
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇭🇰 香港02
+    type: ssr
+    server: dajbxhk.naikonode1.top
+    port: 15004
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇭🇰 香港03
+    type: ssr
+    server: dajbxhk.naikonode1.top
+    port: 15004
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇭🇰 香港04
+    type: ssr
+    server: dajbxhk.naikonode1.top
+    port: 15004
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾01
+    type: ssr
+    server: dajbxtw.naikonode1.top
+    port: 15503
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇨🇳 台湾02
+    type: ssr
+    server: dajbxtw.naikonode1.top
+    port: 15504
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇸🇬 新加坡01
+    type: ssr
+    server: dajbxsg.naikonode1.top
+    port: 15401
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇸🇬 新加坡02
+    type: ssr
+    server: dajbxsg.naikonode1.top
+    port: 15402
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇯🇵 日本01
+    type: ssr
+    server: dajbxjp.naikonode1.top
+    port: 15201
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇯🇵 日本02
+    type: ssr
+    server: dajbxjp.naikonode1.top
+    port: 15201
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇺🇸 美国01
+    type: ssr
+    server: dajbxus.naikonode1.top
+    port: 15101
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
+  - name: 🇺🇸 美国02
+    type: ssr
+    server: dajbxus.naikonode1.top
+    port: 15102
+    cipher: chacha20-ietf
+    password: NaikoCloud
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 40208:yYyiNvXTethxtYP7
+    obfs-param: 83e2a40208.microsoft.com
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -724,40 +868,41 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - FREE_US 04
-      - " SG01"
-      - "01701"
-      - "01702"
-      - "01703"
-      - "01704"
-      - "01705"
-      - "01771"
-      - "01772"
-      - "01773"
-      - "01774"
-      - "01775"
-      - "0183"
-      - "0171"
-      - "01871"
-      - "01872"
-      - "01873"
-      - "01874"
+      - "001"
+      - "002"
+      - "003"
+      - "004"
+      - "005"
+      - "011"
+      - "012"
+      - "013"
+      - "014"
+      - "015"
+      - "021"
+      - "022"
+      - "023"
+      - "024"
+      - "025"
+      - "031"
+      - "032"
+      - "033"
+      - "034"
+      - "035"
       - 奥地利🇦🇹
       - KR5
-      - 德国🇩🇪
+      - JP-Tokyo1
+      - JP-Tokyo13-TG
+      - KR11-1.0
       - TG@ZDYZ21
       - TG@ZDYZ22
       - TG@ZDYZ23
       - 澳大利亚🇦🇺2-1.0
       - 德国🇩🇪2
       - 瑞典🇸🇪3
-      - JP-Tokyo1
       - TW-Taipei5
-      - JP-Tokyo13-1.0
       - KR13-1.0
-      - KR9-1.0
-      - KR11-1.0
-      - 美国1
-      - 美国3
+      - KR9-TG3.0
+      - 德国🇩🇪
       - CF01
       - CF02
       - CF03
@@ -773,6 +918,18 @@ proxy-groups:
       - CFSJC13
       - 塞尔维亚🇷🇸
       - 荷兰🇳🇱
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇨🇳 台湾01
+      - 🇨🇳 台湾02
+      - 🇸🇬 新加坡01
+      - 🇸🇬 新加坡02
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -797,40 +954,41 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - FREE_US 04
-      - " SG01"
-      - "01701"
-      - "01702"
-      - "01703"
-      - "01704"
-      - "01705"
-      - "01771"
-      - "01772"
-      - "01773"
-      - "01774"
-      - "01775"
-      - "0183"
-      - "0171"
-      - "01871"
-      - "01872"
-      - "01873"
-      - "01874"
+      - "001"
+      - "002"
+      - "003"
+      - "004"
+      - "005"
+      - "011"
+      - "012"
+      - "013"
+      - "014"
+      - "015"
+      - "021"
+      - "022"
+      - "023"
+      - "024"
+      - "025"
+      - "031"
+      - "032"
+      - "033"
+      - "034"
+      - "035"
       - 奥地利🇦🇹
       - KR5
-      - 德国🇩🇪
+      - JP-Tokyo1
+      - JP-Tokyo13-TG
+      - KR11-1.0
       - TG@ZDYZ21
       - TG@ZDYZ22
       - TG@ZDYZ23
       - 澳大利亚🇦🇺2-1.0
       - 德国🇩🇪2
       - 瑞典🇸🇪3
-      - JP-Tokyo1
       - TW-Taipei5
-      - JP-Tokyo13-1.0
       - KR13-1.0
-      - KR9-1.0
-      - KR11-1.0
-      - 美国1
-      - 美国3
+      - KR9-TG3.0
+      - 德国🇩🇪
       - CF01
       - CF02
       - CF03
@@ -846,6 +1004,18 @@ proxy-groups:
       - CFSJC13
       - 塞尔维亚🇷🇸
       - 荷兰🇳🇱
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇭🇰 香港04
+      - 🇨🇳 台湾01
+      - 🇨🇳 台湾02
+      - 🇸🇬 新加坡01
+      - 🇸🇬 新加坡02
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
@@ -866,6 +1036,8 @@ rules:
   - DOMAIN-SUFFIX,cdn.skyearth.xyz:443,DIRECT
   - DOMAIN-SUFFIX,sixyik.com,DIRECT
   - DOMAIN-SUFFIX,javxxx.me,DIRECT
+  - DOMAIN-SUFFIX,cdn.fapnfuck.com,DIRECT
+  - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,DIRECT
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
