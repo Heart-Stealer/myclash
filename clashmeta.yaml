@@ -91,7 +91,7 @@ proxies:
       path: /
       headers:
         host: trojan.trevely.us.kg
-  - name: "001"
+  - name: 001-9.0
     type: vless
     server: ip.sb
     port: 8080
@@ -103,7 +103,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "002"
+  - name: 002-4.0
     type: vless
     server: www.gov.ua
     port: 8080
@@ -115,7 +115,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "003"
+  - name: 003-6.0
     type: vless
     server: www.ipget.net
     port: 8080
@@ -127,7 +127,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "004"
+  - name: 004-4.0
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -139,7 +139,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "005"
+  - name: 005-6.0
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -151,7 +151,7 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
-  - name: "011"
+  - name: 011-1.0
     type: vless
     server: ip.sb
     port: 8080
@@ -163,7 +163,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "012"
+  - name: 012-5.0
     type: vless
     server: www.gov.ua
     port: 8080
@@ -175,7 +175,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "013"
+  - name: 013-3.0
     type: vless
     server: www.ipget.net
     port: 8080
@@ -187,7 +187,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "014"
+  - name: 014-5.0
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -199,7 +199,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "015"
+  - name: 015-9.0
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -211,7 +211,7 @@ proxies:
       path: /
       headers:
         host: 201.58vtg99l.workers.dev
-  - name: "021"
+  - name: 021-4.0
     type: vless
     server: ip.sb
     port: 8080
@@ -223,7 +223,7 @@ proxies:
       path: /
       headers:
         host: feng4.l1ut8bi9.workers.dev
-  - name: "022"
+  - name: 022-4.0
     type: vless
     server: www.gov.ua
     port: 8080
@@ -235,7 +235,7 @@ proxies:
       path: /
       headers:
         host: feng4.l1ut8bi9.workers.dev
-  - name: "023"
+  - name: 023-4.0
     type: vless
     server: www.ipget.net
     port: 8080
@@ -247,7 +247,7 @@ proxies:
       path: /
       headers:
         host: feng4.l1ut8bi9.workers.dev
-  - name: "024"
+  - name: 024-2.0
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -259,7 +259,7 @@ proxies:
       path: /
       headers:
         host: feng4.l1ut8bi9.workers.dev
-  - name: "025"
+  - name: 025-5.0
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -271,7 +271,7 @@ proxies:
       path: /
       headers:
         host: feng4.l1ut8bi9.workers.dev
-  - name: "031"
+  - name: 031-5.0
     type: vless
     server: ip.sb
     port: 8080
@@ -283,7 +283,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: "032"
+  - name: 032-5.0
     type: vless
     server: wwww.gov.ua
     port: 8080
@@ -295,7 +295,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: "033"
+  - name: 033-5.0
     type: vless
     server: www.ipget.net
     port: 8080
@@ -307,7 +307,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: "034"
+  - name: 034-5.0
     type: vless
     server: xn--b6gac.eu.org
     port: 8080
@@ -319,7 +319,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: "035"
+  - name: 035-5.0
     type: vless
     server: storeships.toptechnonews.com
     port: 8080
@@ -331,7 +331,7 @@ proxies:
       path: /
       headers:
         host: 201.myhmyhhuang1980.workers.dev
-  - name: 奥地利🇦🇹
+  - name: 奥地利🇦🇹-0.5
     type: vless
     server: 94.177.8.26
     port: 130
@@ -357,7 +357,7 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: JP-Tokyo1
+  - name: JP-Tokyo1-2.0
     type: vless
     server: 14.48.49.133
     port: 10000
@@ -370,7 +370,7 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: JP-Tokyo13-TG
+  - name: JP-Tokyo13-TG-3.0
     type: vless
     server: 59.29.116.20
     port: 11965
@@ -383,7 +383,7 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: KR11-1.0
+  - name: KR11-0.5
     type: vless
     server: 211.196.226.172
     port: 32202
@@ -396,7 +396,20 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: TG@ZDYZ21
+  - name: TW-Taipei5
+    type: vless
+    server: 114.34.202.224
+    port: 10004
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: TG@ZDYZ21-2.0
     type: vless
     server: 188.42.88.66
     port: 2053
@@ -474,19 +487,6 @@ proxies:
       headers:
         host: cfed.tgzdyz2.top
     client-fingerprint: random
-  - name: TW-Taipei5
-    type: vless
-    server: 114.34.202.224
-    port: 10004
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
   - name: KR13-1.0
     type: vless
     server: 61.77.9.219
@@ -539,7 +539,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CF02
+  - name: CF02-5.0
     type: vless
     server: bestcf.onecf.eu.org
     port: 2082
@@ -552,7 +552,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CF03
+  - name: CF03-9.0
     type: vless
     server: www.gov.ua
     port: 8080
@@ -565,7 +565,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CF04
+  - name: CF04-6.0
     type: vless
     server: tilebani.com
     port: 8080
@@ -578,7 +578,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CF05
+  - name: CF05-5.0
     type: vless
     server: 104.19.62.86
     port: 2082
@@ -591,7 +591,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CF06
+  - name: CF06-5.0
     type: vless
     server: 172.64.128.0
     port: 80
@@ -604,7 +604,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CF07
+  - name: CF07-5.0
     type: vless
     server: 104.19.96.0
     port: 80
@@ -617,7 +617,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CFIAD08
+  - name: CFIAD08-5.0
     type: vless
     server: 104.24.32.0
     port: 80
@@ -630,7 +630,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CFSJC09
+  - name: CFSJC09-0.5
     type: vless
     server: 104.24.151.254
     port: 80
@@ -643,7 +643,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CFSJC10
+  - name: CFSJC10-5.0
     type: vless
     server: 104.27.64.0
     port: 80
@@ -656,7 +656,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CFSJC11
+  - name: CFSJC11-2.0
     type: vless
     server: 104.24.64.0
     port: 80
@@ -669,7 +669,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CFSJC12
+  - name: CFSJC12-1.0
     type: vless
     server: 104.20.64.0
     port: 80
@@ -682,7 +682,7 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: CFSJC13
+  - name: CFSJC13-3.0
     type: vless
     server: 104.22.64.0
     port: 80
@@ -765,7 +765,7 @@ proxies:
     protocol-param: 40208:yYyiNvXTethxtYP7
     obfs-param: 83e2a40208.microsoft.com
     udp: true
-  - name: 🇨🇳 台湾01
+  - name: 🇨🇳 台湾01-TG0.5
     type: ssr
     server: dajbxtw.naikonode1.top
     port: 15503
@@ -868,61 +868,61 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - FREE_US 04
-      - "001"
-      - "002"
-      - "003"
-      - "004"
-      - "005"
-      - "011"
-      - "012"
-      - "013"
-      - "014"
-      - "015"
-      - "021"
-      - "022"
-      - "023"
-      - "024"
-      - "025"
-      - "031"
-      - "032"
-      - "033"
-      - "034"
-      - "035"
-      - 奥地利🇦🇹
+      - 001-9.0
+      - 002-4.0
+      - 003-6.0
+      - 004-4.0
+      - 005-6.0
+      - 011-1.0
+      - 012-5.0
+      - 013-3.0
+      - 014-5.0
+      - 015-9.0
+      - 021-4.0
+      - 022-4.0
+      - 023-4.0
+      - 024-2.0
+      - 025-5.0
+      - 031-5.0
+      - 032-5.0
+      - 033-5.0
+      - 034-5.0
+      - 035-5.0
+      - 奥地利🇦🇹-0.5
       - KR5
-      - JP-Tokyo1
-      - JP-Tokyo13-TG
-      - KR11-1.0
-      - TG@ZDYZ21
+      - JP-Tokyo1-2.0
+      - JP-Tokyo13-TG-3.0
+      - KR11-0.5
+      - TW-Taipei5
+      - TG@ZDYZ21-2.0
       - TG@ZDYZ22
       - TG@ZDYZ23
       - 澳大利亚🇦🇺2-1.0
       - 德国🇩🇪2
       - 瑞典🇸🇪3
-      - TW-Taipei5
       - KR13-1.0
       - KR9-TG3.0
       - 德国🇩🇪
       - CF01
-      - CF02
-      - CF03
-      - CF04
-      - CF05
-      - CF06
-      - CF07
-      - CFIAD08
-      - CFSJC09
-      - CFSJC10
-      - CFSJC11
-      - CFSJC12
-      - CFSJC13
+      - CF02-5.0
+      - CF03-9.0
+      - CF04-6.0
+      - CF05-5.0
+      - CF06-5.0
+      - CF07-5.0
+      - CFIAD08-5.0
+      - CFSJC09-0.5
+      - CFSJC10-5.0
+      - CFSJC11-2.0
+      - CFSJC12-1.0
+      - CFSJC13-3.0
       - 塞尔维亚🇷🇸
       - 荷兰🇳🇱
       - 🇭🇰 香港01
       - 🇭🇰 香港02
       - 🇭🇰 香港03
       - 🇭🇰 香港04
-      - 🇨🇳 台湾01
+      - 🇨🇳 台湾01-TG0.5
       - 🇨🇳 台湾02
       - 🇸🇬 新加坡01
       - 🇸🇬 新加坡02
@@ -954,61 +954,61 @@ proxy-groups:
       - " 0AKRJPHKTWSGUSCT2"
       - " 0AKRJPHKTWSGUSCT3"
       - FREE_US 04
-      - "001"
-      - "002"
-      - "003"
-      - "004"
-      - "005"
-      - "011"
-      - "012"
-      - "013"
-      - "014"
-      - "015"
-      - "021"
-      - "022"
-      - "023"
-      - "024"
-      - "025"
-      - "031"
-      - "032"
-      - "033"
-      - "034"
-      - "035"
-      - 奥地利🇦🇹
+      - 001-9.0
+      - 002-4.0
+      - 003-6.0
+      - 004-4.0
+      - 005-6.0
+      - 011-1.0
+      - 012-5.0
+      - 013-3.0
+      - 014-5.0
+      - 015-9.0
+      - 021-4.0
+      - 022-4.0
+      - 023-4.0
+      - 024-2.0
+      - 025-5.0
+      - 031-5.0
+      - 032-5.0
+      - 033-5.0
+      - 034-5.0
+      - 035-5.0
+      - 奥地利🇦🇹-0.5
       - KR5
-      - JP-Tokyo1
-      - JP-Tokyo13-TG
-      - KR11-1.0
-      - TG@ZDYZ21
+      - JP-Tokyo1-2.0
+      - JP-Tokyo13-TG-3.0
+      - KR11-0.5
+      - TW-Taipei5
+      - TG@ZDYZ21-2.0
       - TG@ZDYZ22
       - TG@ZDYZ23
       - 澳大利亚🇦🇺2-1.0
       - 德国🇩🇪2
       - 瑞典🇸🇪3
-      - TW-Taipei5
       - KR13-1.0
       - KR9-TG3.0
       - 德国🇩🇪
       - CF01
-      - CF02
-      - CF03
-      - CF04
-      - CF05
-      - CF06
-      - CF07
-      - CFIAD08
-      - CFSJC09
-      - CFSJC10
-      - CFSJC11
-      - CFSJC12
-      - CFSJC13
+      - CF02-5.0
+      - CF03-9.0
+      - CF04-6.0
+      - CF05-5.0
+      - CF06-5.0
+      - CF07-5.0
+      - CFIAD08-5.0
+      - CFSJC09-0.5
+      - CFSJC10-5.0
+      - CFSJC11-2.0
+      - CFSJC12-1.0
+      - CFSJC13-3.0
       - 塞尔维亚🇷🇸
       - 荷兰🇳🇱
       - 🇭🇰 香港01
       - 🇭🇰 香港02
       - 🇭🇰 香港03
       - 🇭🇰 香港04
-      - 🇨🇳 台湾01
+      - 🇨🇳 台湾01-TG0.5
       - 🇨🇳 台湾02
       - 🇸🇬 新加坡01
       - 🇸🇬 新加坡02
