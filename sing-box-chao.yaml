@@ -1,0 +1,1138 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxy_dns",
+        "address": "tls://8.8.8.8/dns-query",
+        "detour": "select"
+      },
+      {
+        "tag": "local_dns",
+        "address": "h3://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "reject",
+        "address": "rcode://refused"
+      },
+      {
+        "tag": "fake_ip",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "local_dns",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "Global",
+        "server": "proxy_dns"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "local_dns"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "server": "local_dns"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "proxy_dns"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fake_ip"
+      }
+    ],
+    "final": "proxy_dns",
+    "independent_cache": true,
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    }
+  },
+  "ntp": {
+    "detour": "direct",
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "prefer_ipv4",
+      "type": "tun",
+      "inet4_address": "172.16.0.1/30",
+      "inet6_address": "2001:0470:f9da:fdfa::1/64",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "url-test",
+        " 0AKRJPHKTWSGUSCT1",
+        " 0AKRJPHKTWSGUSCT2",
+        " 0AKRJPHKTWSGUSCT3",
+        "FREE_US 04",
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "011",
+        "012",
+        "013",
+        "014",
+        "015",
+        "021",
+        "022",
+        "023",
+        "024",
+        "025",
+        "031",
+        "032",
+        "033",
+        "034",
+        "035",
+        "奥地利🇦🇹",
+        "KR5",
+        "JP-Tokyo1",
+        "JP-Tokyo13-TG",
+        "KR11-1.0",
+        "TG@ZDYZ21",
+        "TG@ZDYZ22",
+        "TG@ZDYZ23",
+        "澳大利亚🇦🇺2-1.0",
+        "德国🇩🇪2",
+        "瑞典🇸🇪3",
+        "TW-Taipei5",
+        "KR13-1.0",
+        "KR9-TG3.0",
+        "德国🇩🇪",
+        "CF01",
+        "CF02",
+        "CF03",
+        "CF04",
+        "CF05",
+        "CF06",
+        "CF07",
+        "CFIAD08",
+        "CFSJC09",
+        "CFSJC10",
+        "CFSJC11",
+        "CFSJC12",
+        "CFSJC13",
+        "塞尔维亚🇷🇸",
+        "荷兰🇳🇱"
+      ],
+      "default": "url-test"
+    },
+    {
+      "type": "urltest",
+      "tag": "url-test",
+      "outbounds": [
+        " 0AKRJPHKTWSGUSCT1",
+        " 0AKRJPHKTWSGUSCT2",
+        " 0AKRJPHKTWSGUSCT3",
+        "FREE_US 04",
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "011",
+        "012",
+        "013",
+        "014",
+        "015",
+        "021",
+        "022",
+        "023",
+        "024",
+        "025",
+        "031",
+        "032",
+        "033",
+        "034",
+        "035",
+        "奥地利🇦🇹",
+        "KR5",
+        "JP-Tokyo1",
+        "JP-Tokyo13-TG",
+        "KR11-1.0",
+        "TG@ZDYZ21",
+        "TG@ZDYZ22",
+        "TG@ZDYZ23",
+        "澳大利亚🇦🇺2-1.0",
+        "德国🇩🇪2",
+        "瑞典🇸🇪3",
+        "TW-Taipei5",
+        "KR13-1.0",
+        "KR9-TG3.0",
+        "德国🇩🇪",
+        "CF01",
+        "CF02",
+        "CF03",
+        "CF04",
+        "CF05",
+        "CF06",
+        "CF07",
+        "CFIAD08",
+        "CFSJC09",
+        "CFSJC10",
+        "CFSJC11",
+        "CFSJC12",
+        "CFSJC13",
+        "塞尔维亚🇷🇸",
+        "荷兰🇳🇱"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "type": "vless",
+      "tag": " 0AKRJPHKTWSGUSCT1",
+      "server": "storeships.toptechnonews.com",
+      "server_port": 443,
+      "uuid": "cede337b-9ea5-40e5-a8b1-690bf49ff41d",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/nimws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": " 0AKRJPHKTWSGUSCT2",
+      "server": "104.21.86.205",
+      "server_port": 443,
+      "uuid": "cede337b-9ea5-40e5-a8b1-690bf49ff41d",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/nimws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": " 0AKRJPHKTWSGUSCT3",
+      "server": "45.80.111.111",
+      "server_port": 443,
+      "uuid": "cede337b-9ea5-40e5-a8b1-690bf49ff41d",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/nimws"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "FREE_US 04",
+      "server": "duke.ns.cloudflare.com",
+      "server_port": 443,
+      "password": "Trevely",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "host": "trojan.trevely.us.kg"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "001",
+      "server": "ip.sb",
+      "server_port": 8080,
+      "uuid": "046da250-d5ef-4867-9095-302477d54d20",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "002",
+      "server": "www.gov.ua",
+      "server_port": 8080,
+      "uuid": "046da250-d5ef-4867-9095-302477d54d20",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "003",
+      "server": "www.ipget.net",
+      "server_port": 8080,
+      "uuid": "046da250-d5ef-4867-9095-302477d54d20",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "004",
+      "server": "xn--b6gac.eu.org",
+      "server_port": 8080,
+      "uuid": "046da250-d5ef-4867-9095-302477d54d20",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "005",
+      "server": "storeships.toptechnonews.com",
+      "server_port": 8080,
+      "uuid": "046da250-d5ef-4867-9095-302477d54d20",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "011",
+      "server": "ip.sb",
+      "server_port": 8080,
+      "uuid": "4c9541c7-5fa1-403c-84af-175e3b25a27f",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "012",
+      "server": "www.gov.ua",
+      "server_port": 8080,
+      "uuid": "4c9541c7-5fa1-403c-84af-175e3b25a27f",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "013",
+      "server": "www.ipget.net",
+      "server_port": 8080,
+      "uuid": "4c9541c7-5fa1-403c-84af-175e3b25a27f",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "014",
+      "server": "xn--b6gac.eu.org",
+      "server_port": 8080,
+      "uuid": "4c9541c7-5fa1-403c-84af-175e3b25a27f",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "015",
+      "server": "storeships.toptechnonews.com",
+      "server_port": 8080,
+      "uuid": "4c9541c7-5fa1-403c-84af-175e3b25a27f",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "021",
+      "server": "ip.sb",
+      "server_port": 8080,
+      "uuid": "d6ff33a6-03bf-4338-8a63-62ab284a9466",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "022",
+      "server": "www.gov.ua",
+      "server_port": 8080,
+      "uuid": "d6ff33a6-03bf-4338-8a63-62ab284a9466",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "023",
+      "server": "www.ipget.net",
+      "server_port": 8080,
+      "uuid": "d6ff33a6-03bf-4338-8a63-62ab284a9466",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "024",
+      "server": "xn--b6gac.eu.org",
+      "server_port": 8080,
+      "uuid": "d6ff33a6-03bf-4338-8a63-62ab284a9466",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "025",
+      "server": "storeships.toptechnonews.com",
+      "server_port": 8080,
+      "uuid": "d6ff33a6-03bf-4338-8a63-62ab284a9466",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "031",
+      "server": "ip.sb",
+      "server_port": 8080,
+      "uuid": "6af03153-ee0a-4ec7-93d4-89b4debc3c07",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "032",
+      "server": "wwww.gov.ua",
+      "server_port": 8080,
+      "uuid": "6af03153-ee0a-4ec7-93d4-89b4debc3c07",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "033",
+      "server": "www.ipget.net",
+      "server_port": 8080,
+      "uuid": "6af03153-ee0a-4ec7-93d4-89b4debc3c07",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "034",
+      "server": "xn--b6gac.eu.org",
+      "server_port": 8080,
+      "uuid": "6af03153-ee0a-4ec7-93d4-89b4debc3c07",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "035",
+      "server": "storeships.toptechnonews.com",
+      "server_port": 8080,
+      "uuid": "6af03153-ee0a-4ec7-93d4-89b4debc3c07",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "奥地利🇦🇹",
+      "server": "94.177.8.26",
+      "server_port": 130,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "KR5",
+      "server": "59.3.3.161",
+      "server_port": 443,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "JP-Tokyo1",
+      "server": "14.48.49.133",
+      "server_port": 10000,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "JP-Tokyo13-TG",
+      "server": "59.29.116.20",
+      "server_port": 11965,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "KR11-1.0",
+      "server": "211.196.226.172",
+      "server_port": 32202,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "TG@ZDYZ21",
+      "server": "188.42.88.66",
+      "server_port": 2053,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "TG@ZDYZ22",
+      "server": "205.233.181.36",
+      "server_port": 2053,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "TG@ZDYZ23",
+      "server": "104.21.238.2",
+      "server_port": 2096,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "澳大利亚🇦🇺2-1.0",
+      "server": "38.55.106.82",
+      "server_port": 7777,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国🇩🇪2",
+      "server": "128.140.124.244",
+      "server_port": 8443,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "瑞典🇸🇪3",
+      "server": "46.226.160.40",
+      "server_port": 8443,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "TW-Taipei5",
+      "server": "114.34.202.224",
+      "server_port": 10004,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "KR13-1.0",
+      "server": "61.77.9.219",
+      "server_port": 12487,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "KR9-TG3.0",
+      "server": "121.165.36.130",
+      "server_port": 27017,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国🇩🇪",
+      "server": "91.107.148.215",
+      "server_port": 2053,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CF01",
+      "server": "storeships.toptechnonews.com",
+      "server_port": 443,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CF02",
+      "server": "bestcf.onecf.eu.org",
+      "server_port": 2082,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CF03",
+      "server": "www.gov.ua",
+      "server_port": 8080,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CF04",
+      "server": "tilebani.com",
+      "server_port": 8080,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CF05",
+      "server": "104.19.62.86",
+      "server_port": 2082,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CF06",
+      "server": "172.64.128.0",
+      "server_port": 80,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CF07",
+      "server": "104.19.96.0",
+      "server_port": 80,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CFIAD08",
+      "server": "104.24.32.0",
+      "server_port": 80,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CFSJC09",
+      "server": "104.24.151.254",
+      "server_port": 80,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CFSJC10",
+      "server": "104.27.64.0",
+      "server_port": 80,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CFSJC11",
+      "server": "104.24.64.0",
+      "server_port": 80,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CFSJC12",
+      "server": "104.20.64.0",
+      "server_port": 80,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CFSJC13",
+      "server": "104.22.64.0",
+      "server_port": 80,
+      "uuid": "899de6c4-d602-44f3-b33a-e78bab92adc8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "塞尔维亚🇷🇸",
+      "server": "193.57.139.78",
+      "server_port": 81,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "荷兰🇳🇱",
+      "server": "104.40.244.228",
+      "server_port": 443,
+      "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "reject"
+    },
+    {
+      "type": "dns",
+      "tag": "dns_out"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "protocol": "dns",
+        "outbound": "dns_out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "reject"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090"
+    }
+  }
+}
