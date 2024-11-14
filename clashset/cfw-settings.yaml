@@ -59,6 +59,10 @@ profileParsersText: >-
             type: select
           - name: ☑️ 手动切换
             type: select
+          - name: ☑️ ZDYZ2
+            type: select
+          - name: ☑️ v2free
+            type: select
           - name: 🎯 全球直连
             type: select
           - name: 🛑 全球拦截
@@ -86,6 +90,10 @@ profileParsersText: >-
           # - proxy-groups.🛑 全球拦截.proxies.0+DIRECT
           - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
           - proxy-groups.🎯 全球直连.proxies.0+DIRECT
+          - proxy-groups.☑️ ZDYZ2.proxies=[]proxyNames|(ZDYZ2)
+          - proxy-groups.0.proxies.0+☑️ ZDYZ2
+          - proxy-groups.☑️ v2free.proxies=[]proxyNames|(v2free)
+          - proxy-groups.0.proxies.0+☑️ v2free
           - proxy-groups.☑️ 手动切换.proxies=[]proxyNames|(.*)
           - proxy-groups.0.proxies.0+☑️ 手动切换
           - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
@@ -104,6 +112,7 @@ profileParsersText: >-
           - DOMAIN-SUFFIX,javxxx.me,DIRECT
           - DOMAIN-SUFFIX,cdn.fapnfuck.com,DIRECT
           - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,DIRECT
+          - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,DIRECT
           # - DOMAIN-SUFFIX,galav-oxwy.mushroomtrack.com,DIRECT
           # PROCESS-PATH,C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,🚀 🇺🇸美国-自动选择
           # PROCESS-PATH,C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,DIRECT
