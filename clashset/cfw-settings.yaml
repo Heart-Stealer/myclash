@@ -90,10 +90,10 @@ profileParsersText: >-
           # - proxy-groups.🛑 全球拦截.proxies.0+DIRECT
           - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
           - proxy-groups.🎯 全球直连.proxies.0+DIRECT
-          - proxy-groups.☑️ ZDYZ2.proxies=[]proxyNames|(ZDYZ2)
-          - proxy-groups.0.proxies.0+☑️ ZDYZ2
           - proxy-groups.☑️ v2free.proxies=[]proxyNames|(v2free)
           - proxy-groups.0.proxies.0+☑️ v2free
+          - proxy-groups.☑️ ZDYZ2.proxies=[]proxyNames|(ZDYZ2)
+          - proxy-groups.0.proxies.0+☑️ ZDYZ2
           - proxy-groups.☑️ 手动切换.proxies=[]proxyNames|(.*)
           - proxy-groups.0.proxies.0+☑️ 手动切换
           - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
