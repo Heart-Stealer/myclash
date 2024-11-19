@@ -44,16 +44,512 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - name: " 0AKRJPHKTWSGUSCT1"
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 443
-    uuid: cede337b-9ea5-40e5-a8b1-690bf49ff41d
-    tls: true
-    servername: storeships.toptechnonews.com
+  - name: 🇨🇳 🌐 193.112.75.68【防失联网站】
+    server: hk02.ssyhi.xyz
+    port: 50201
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: b283f2ca-2b94-4f45-a406-c4fb1a6321eb
+    udp: true
+  - name: 🇨🇳 🚢 果酱商店专业且优质的海外账号
+    server: jp02.ssyhi.xyz
+    port: 50211
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: b283f2ca-2b94-4f45-a406-c4fb1a6321eb
+    udp: true
+  - name: 🇨🇳 ⚡ 节点超时更新订阅⚡
+    type: ss
+    server: osg020.nod3.org
+    port: 29971
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇭🇰 香港01｜tg@ghosxtop
+    type: ss
+    server: osg020.nod3.org
+    port: 29971
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇭🇰 香港02｜tg@ghosxtop
+    type: ss
+    server: gtm1.ktmwan.net
+    port: 27265
+    cipher: chacha20-ietf-poly1305
+    password: a7092c9e-00f7-4b22-9415-90bbeb6cd185
+    udp: true
+  - name: 🇭🇰 香港03｜tg@ghosxtop
+    type: ss
+    server: ohk020.nod3.org
+    port: 12232
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇭🇰 香港04｜tg@ghosxtop
+    type: ss
+    server: ohk020.nod3.org
+    port: 34936
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇨🇳 台湾01｜tg@ghosxtop
+    type: ss
+    server: otw020.nod3.org
+    port: 11592
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇨🇳 台湾02｜tg@ghosxtop
+    type: ss
+    server: otw020.nod3.org
+    port: 14821
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇸🇬 新加坡01｜tg@ghosxtop
+    type: ss
+    server: osg020.nod3.org
+    port: 29971
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇸🇬 新加坡02｜tg@ghosxtop
+    type: ss
+    server: osg020.nod3.org
+    port: 22411
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇯🇵 日本01｜tg@ghosxtop
+    type: ss
+    server: ojp020.nod3.org
+    port: 33811
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇯🇵 日本02｜tg@ghosxtop
+    type: ss
+    server: ojp020.nod3.org
+    port: 51295
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇺🇸 美国01｜tg@ghosxtop
+    type: ss
+    server: ous020.nod3.org
+    port: 29413
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇺🇸 美国02｜tg@ghosxtop
+    type: ss
+    server: ous020.nod3.org
+    port: 19311
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇰🇷 韩国01｜tg@ghosxtop
+    type: ss
+    server: okr020.nod3.org
+    port: 16018
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇰🇷 韩国02｜tg@ghosxtop
+    type: ss
+    server: okr020.nod3.org
+    port: 16018
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇹🇷 土耳其01｜tg@ghosxtop
+    type: ss
+    server: ojots.nod3.org
+    port: 18205
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇹🇷 土耳其02｜tg@ghosxtop
+    type: ss
+    server: ojots.nod3.org
+    port: 18205
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇺🇦 乌克兰01｜tg@ghosxtop
+    type: ss
+    server: ojots.nod3.org
+    port: 47922
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇺🇦 乌克兰02｜tg@ghosxtop
+    type: ss
+    server: ojots.nod3.org
+    port: 47922
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇹🇭 泰国01｜tg@ghosxtop
+    type: ss
+    server: ojots.nod3.org
+    port: 27315
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇹🇭 泰国02｜tg@ghosxtop
+    type: ss
+    server: ojots.nod3.org
+    port: 27315
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇻🇳 越南01｜tg@ghosxtop
+    type: ss
+    server: ojots.nod3.org
+    port: 50189
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇻🇳 越南02｜tg@ghosxtop
+    type: ss
+    server: ojots.nod3.org
+    port: 50189
+    cipher: aes-128-gcm
+    password: e57856a9-62de-44f3-bab0-78f6f28fa9c2
+    udp: true
+  - name: 🇸🇬 新加坡1|嘎嘎机场cf
+    type: vmess
+    server: hk.wish.ml
+    port: 2052
+    uuid: 7d417084-d308-4b35-96c8-99dfb2547ec2
+    alterId: 0
+    cipher: auto
+    udp: true
     network: ws
     ws-opts:
-      path: /nimws
+      path: /
+      headers:
+        Host: sg5.wish.ml
+    ws-path: /
+    ws-headers:
+      Host: sg5.wish.ml
+  - name: 🇸🇬 新加坡2|嘎嘎机场cf
+    type: vmess
+    server: hk.wish.ml
+    port: 2052
+    uuid: 7d417084-d308-4b35-96c8-99dfb2547ec2
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: sg6.wish.ml
+    ws-path: /
+    ws-headers:
+      Host: sg6.wish.ml
+  - name: 🇺🇸 美国6|嘎嘎机场cf
+    type: vmess
+    server: hk.wish.ml
+    port: 2052
+    uuid: 7d417084-d308-4b35-96c8-99dfb2547ec2
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us12.wish.ml
+    ws-path: /
+    ws-headers:
+      Host: us12.wish.ml
+  - name: 🇺🇸 美国7|嘎嘎机场cf
+    type: vmess
+    server: hk.wish.ml
+    port: 2052
+    uuid: 7d417084-d308-4b35-96c8-99dfb2547ec2
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: us13.wish.ml
+    ws-path: /
+    ws-headers:
+      Host: us13.wish.ml
+  - name: 001-0.3
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 002-2.0
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 003-0.3
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 004-1.0
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 005-1.0
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 011-1.0
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 012-0.8
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 013-1.5
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 014-2.0
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 015-3.0
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 021-2.0
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 022-3.0
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 023-1.0
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 024-2.0
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 025-2.0
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 035-5.0
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
+    tls: false
+    servername: 201.myhmyhhuang1980.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+  - name: TG@ZDYZ2 禁止爬取本订阅节点
+    type: vless
+    server: 104.21.238.2
+    port: 2096
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzi8186.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: juzi8186.5112233.xyz
+    client-fingerprint: random
+  - name: zdyz2_KR5-1.5
+    type: vless
+    server: 59.7.203.104
+    port: 10096
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzi8186.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: juzi8186.5112233.xyz
+    client-fingerprint: random
+  - name: zdyz2_KR6-1.0
+    type: vless
+    server: 125.134.172.40
+    port: 50000
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzi8186.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: juzi8186.5112233.xyz
+    client-fingerprint: random
+  - name: zdyz2_KR8-0.4
+    type: vless
+    server: 221.164.149.81
+    port: 10268
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzi8186.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: juzi8186.5112233.xyz
+    client-fingerprint: random
+  - name: zdyz2_KR9
+    type: vless
+    server: 121.190.128.166
+    port: 12345
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzi8186.5112233.xyz
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: juzi8186.5112233.xyz
+    client-fingerprint: random
+  - name: zdyz2_002-3.0
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
   - name: ZDYZ2_TG@ZDYZ2
     type: vless
     server: 104.21.238.2
@@ -67,7 +563,20 @@ proxies:
       headers:
         host: juzi8186.5112233.xyz
     client-fingerprint: random
-  - name: ZDYZ2_KR5
+  - name: KR55
+    type: vless
+    server: 59.3.3.161
+    port: 443
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    tls: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /TG@ZDYZ2?ed=2560
+      headers:
+        host: cfed.tgzdyz2.top
+    client-fingerprint: random
+  - name: ZDYZ2_KR5-n1.5
     type: vless
     server: 59.7.203.104
     port: 10096
@@ -80,7 +589,7 @@ proxies:
       headers:
         host: juzi8186.5112233.xyz
     client-fingerprint: random
-  - name: ZDYZ2_KR6
+  - name: ZDYZ2_KR6-1.0
     type: vless
     server: 125.134.172.40
     port: 50000
@@ -93,7 +602,7 @@ proxies:
       headers:
         host: juzi8186.5112233.xyz
     client-fingerprint: random
-  - name: ZDYZ2_KR8
+  - name: ZDYZ2_KR8-0.4
     type: vless
     server: 221.164.149.81
     port: 10268
@@ -106,7 +615,7 @@ proxies:
       headers:
         host: juzi8186.5112233.xyz
     client-fingerprint: random
-  - name: ZDYZ2_KR9
+  - name: ZDYZ2_KR9-
     type: vless
     server: 121.190.128.166
     port: 12345
@@ -385,622 +894,6 @@ proxies:
       headers:
         host: juzi8186.5112233.xyz
     client-fingerprint: random
-  - name: v2free|AT_0002
-    type: vless
-    server: 94.177.8.26
-    port: 130
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: juzi8186.5112233.xyz
-  - name: v2free|KR_0019
-    type: vless
-    server: 61.81.181.169
-    port: 14985
-    uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
-    tls: true
-    servername: lp.kpcloud.eu.org
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: lp.kpcloud.eu.org
-  - name: v2free|NL_0025
-    type: vless
-    server: 2.58.56.31
-    port: 3001
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: true
-    servername: vless.ifx.us.kg
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: vless.ifx.us.kg
-  - name: v2free|NL_0026
-    type: vless
-    server: 194.246.81.62
-    port: 2501
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: true
-    servername: vless.ifx.us.kg
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: vless.ifx.us.kg
-  - name: v2free|US_0042*
-    type: vless
-    server: 151.101.130.228
-    port: 443
-    uuid: 041f671a-63f5-4af1-a492-8cbff5797b8a
-    tls: true
-    servername: Falcunargo.net
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: Falcunargo.net
-    alpn:
-      - http/1.1
-  - name: v2free|US_0067
-    type: vless
-    server: 104.19.89.86
-    port: 443
-    uuid: 48198295-b7ba-4b5c-8d85-085d55a6c869
-    tls: true
-    servername: ap.ylks.xyz
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ap.ylks.xyz
-  - name: v2free|US_0074
-    type: vless
-    server: 173.245.49.128
-    port: 443
-    uuid: 48198295-b7ba-4b5c-8d85-085d55a6c869
-    tls: true
-    servername: ap.ylks.xyz
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ap.ylks.xyz
-  - name: v2free|US_0075
-    type: vless
-    server: 104.19.250.58
-    port: 443
-    uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
-    tls: true
-    servername: lp.kpcloud.eu.org
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: lp.kpcloud.eu.org
-  - name: v2free|US_0078
-    type: vless
-    server: 141.101.120.13
-    port: 443
-    uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
-    tls: true
-    servername: lp.kpcloud.eu.org
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: lp.kpcloud.eu.org
-  - name: v2free|US_0079
-    type: vless
-    server: www.rxhomeo.in
-    port: 443
-    uuid: 0792bb58-36ac-451e-a629-e363e53da93b
-    tls: true
-    servername: kafka.lastronin.cloudns.org
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: kafka.lastronin.cloudns.org
-  - name: v2free|US_0088
-    type: vless
-    server: 162.159.249.246
-    port: 443
-    uuid: 48198295-b7ba-4b5c-8d85-085d55a6c869
-    tls: true
-    servername: ap.ylks.xyz
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ap.ylks.xyz
-  - name: v2free|US_0089
-    type: vless
-    server: 172.64.104.187
-    port: 443
-    uuid: 48198295-b7ba-4b5c-8d85-085d55a6c869
-    tls: true
-    servername: ap.ylks.xyz
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ap.ylks.xyz
-  - name: v2free|US_0094
-    type: vless
-    server: cf.hughhad.us.kg
-    port: 443
-    uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9
-    tls: true
-    servername: Cf.HuGHhaD.uS.KG
-    network: ws
-    ws-opts:
-      path: /
-  - name: v2free|US_0095
-    type: vless
-    server: 188.114.99.237
-    port: 443
-    uuid: 4f9219f6-ba56-4e5a-a676-0978d8b613e4
-    tls: true
-    servername: shirvanoo.hooplnqpb.ir
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: shirvanoo.hooplnqpb.ir
-  - name: 005-6.0
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 8080
-    uuid: 046da250-d5ef-4867-9095-302477d54d20
-    tls: false
-    servername: feng.ipy29c99.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng.ipy29c99.workers.dev
-  - name: 015-5.0
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 8080
-    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
-    tls: false
-    servername: 201.58vtg99l.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.58vtg99l.workers.dev
-  - name: 025-2.0
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 8080
-    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
-    tls: false
-    servername: feng4.l1ut8bi9.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng4.l1ut8bi9.workers.dev
-  - name: 035-5.0
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 8080
-    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
-    tls: false
-    servername: 201.myhmyhhuang1980.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.myhmyhhuang1980.workers.dev
-  - name: 001-9.0
-    type: vless
-    server: ip.sb
-    port: 8080
-    uuid: 046da250-d5ef-4867-9095-302477d54d20
-    tls: false
-    servername: feng.ipy29c99.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng.ipy29c99.workers.dev
-  - name: 002-2.0
-    type: vless
-    server: www.gov.ua
-    port: 8080
-    uuid: 046da250-d5ef-4867-9095-302477d54d20
-    tls: false
-    servername: feng.ipy29c99.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng.ipy29c99.workers.dev
-  - name: 003-4.0
-    type: vless
-    server: www.ipget.net
-    port: 8080
-    uuid: 046da250-d5ef-4867-9095-302477d54d20
-    tls: false
-    servername: feng.ipy29c99.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng.ipy29c99.workers.dev
-  - name: 004-4.0
-    type: vless
-    server: xn--b6gac.eu.org
-    port: 8080
-    uuid: 046da250-d5ef-4867-9095-302477d54d20
-    tls: false
-    servername: feng.ipy29c99.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng.ipy29c99.workers.dev
-  - name: 011-1.0
-    type: vless
-    server: ip.sb
-    port: 8080
-    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
-    tls: false
-    servername: 201.58vtg99l.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.58vtg99l.workers.dev
-  - name: 012-5.0
-    type: vless
-    server: www.gov.ua
-    port: 8080
-    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
-    tls: false
-    servername: 201.58vtg99l.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.58vtg99l.workers.dev
-  - name: 013-3.0
-    type: vless
-    server: www.ipget.net
-    port: 8080
-    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
-    tls: false
-    servername: 201.58vtg99l.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.58vtg99l.workers.dev
-  - name: 014-5.0
-    type: vless
-    server: xn--b6gac.eu.org
-    port: 8080
-    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
-    tls: false
-    servername: 201.58vtg99l.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.58vtg99l.workers.dev
-  - name: 021-4.0
-    type: vless
-    server: ip.sb
-    port: 8080
-    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
-    tls: false
-    servername: feng4.l1ut8bi9.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng4.l1ut8bi9.workers.dev
-  - name: 022-4.0
-    type: vless
-    server: www.gov.ua
-    port: 8080
-    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
-    tls: false
-    servername: feng4.l1ut8bi9.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng4.l1ut8bi9.workers.dev
-  - name: 023-4.0
-    type: vless
-    server: www.ipget.net
-    port: 8080
-    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
-    tls: false
-    servername: feng4.l1ut8bi9.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng4.l1ut8bi9.workers.dev
-  - name: 024-2.0
-    type: vless
-    server: xn--b6gac.eu.org
-    port: 8080
-    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
-    tls: false
-    servername: feng4.l1ut8bi9.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng4.l1ut8bi9.workers.dev
-  - name: 031-5.0
-    type: vless
-    server: ip.sb
-    port: 8080
-    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
-    tls: false
-    servername: 201.myhmyhhuang1980.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.myhmyhhuang1980.workers.dev
-  - name: 032-5.0
-    type: vless
-    server: wwww.gov.ua
-    port: 8080
-    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
-    tls: false
-    servername: 201.myhmyhhuang1980.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.myhmyhhuang1980.workers.dev
-  - name: 033-5.0
-    type: vless
-    server: www.ipget.net
-    port: 8080
-    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
-    tls: false
-    servername: 201.myhmyhhuang1980.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.myhmyhhuang1980.workers.dev
-  - name: 034-5.0
-    type: vless
-    server: xn--b6gac.eu.org
-    port: 8080
-    uuid: 6af03153-ee0a-4ec7-93d4-89b4debc3c07
-    tls: false
-    servername: 201.myhmyhhuang1980.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: 201.myhmyhhuang1980.workers.dev
-  - name: KR55
-    type: vless
-    server: 59.3.3.161
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: CF01
-    type: vless
-    server: storeships.toptechnonews.com
-    port: 443
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: true
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CF02-5.0
-    type: vless
-    server: bestcf.onecf.eu.org
-    port: 2082
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CF03-9.0
-    type: vless
-    server: www.gov.ua
-    port: 8080
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CF04-6.0
-    type: vless
-    server: tilebani.com
-    port: 8080
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CF05-5.0
-    type: vless
-    server: 104.19.62.86
-    port: 2082
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CF06-5.0
-    type: vless
-    server: 172.64.128.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CF07-5.0
-    type: vless
-    server: 104.19.96.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFIAD08-5.0
-    type: vless
-    server: 104.24.32.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFSJC09-0.5
-    type: vless
-    server: 104.24.151.254
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFSJC10-5.0
-    type: vless
-    server: 104.27.64.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFSJC11-2.0
-    type: vless
-    server: 104.24.64.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFSJC12-1.0
-    type: vless
-    server: 104.20.64.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: CFSJC13-3.0
-    type: vless
-    server: 104.22.64.0
-    port: 80
-    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
-    tls: false
-    servername: vpn.goldbridge.workers.dev
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vpn.goldbridge.workers.dev
-    client-fingerprint: randomized
-  - name: 塞尔维亚🇷🇸
-    type: vless
-    server: 193.57.139.78
-    port: 81
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: 荷兰🇳🇱
-    type: vless
-    server: 104.40.244.228
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1008,97 +901,69 @@ proxy-groups:
       - DIRECT
       - ♻️ 自动选择
       - ☑️ 手动切换
-      - ☑️ ZDYZ2
-      - ☑️ v2free
+      - ☑️ 电报TG
+      - ⚖️ 负载均衡
       - ⚖️ 其他
   - name: ☑️ 手动切换
     type: select
     proxies:
-      - " 0AKRJPHKTWSGUSCT1"
-      - ZDYZ2_TG@ZDYZ2
-      - ZDYZ2_KR5
-      - ZDYZ2_KR6
-      - ZDYZ2_KR8
-      - ZDYZ2_KR9
-      - ZDYZ2_HK01
-      - ZDYZ2_002-3.0
-      - ZDYZ2_004
-      - ZDYZ2_013
-      - ZDYZ2_014
-      - ZDYZ2_015
-      - ZDYZ2_023
-      - ZDYZ2_024
-      - ZDYZ2_CF03
-      - ZDYZ2_CF04
-      - ZDYZ2_CFSJC09
-      - ZDYZ2_CFSJC10
-      - ZDYZ2_KR1
-      - ZDYZ2_KR4
-      - ZDYZ2_KR10
-      - ZDYZ2_JP1-4.0
-      - ZDYZ2_TW01
-      - ZDYZ2_TW02
-      - ZDYZ2_SG02
-      - ZDYZ2_SG03
-      - ZDYZ2_SG05
-      - v2free|AT_0002
-      - v2free|KR_0019
-      - v2free|NL_0025
-      - v2free|NL_0026
-      - v2free|US_0042*
-      - v2free|US_0067
-      - v2free|US_0074
-      - v2free|US_0075
-      - v2free|US_0078
-      - v2free|US_0079
-      - v2free|US_0088
-      - v2free|US_0089
-      - v2free|US_0094
-      - v2free|US_0095
-      - 005-6.0
-      - 015-5.0
+      - 🇨🇳 🌐 193.112.75.68【防失联网站】
+      - 🇨🇳 🚢 果酱商店专业且优质的海外账号
+      - 🇨🇳 ⚡ 节点超时更新订阅⚡
+      - 🇭🇰 香港01｜tg@ghosxtop
+      - 🇭🇰 香港02｜tg@ghosxtop
+      - 🇭🇰 香港03｜tg@ghosxtop
+      - 🇭🇰 香港04｜tg@ghosxtop
+      - 🇨🇳 台湾01｜tg@ghosxtop
+      - 🇨🇳 台湾02｜tg@ghosxtop
+      - 🇸🇬 新加坡01｜tg@ghosxtop
+      - 🇸🇬 新加坡02｜tg@ghosxtop
+      - 🇯🇵 日本01｜tg@ghosxtop
+      - 🇯🇵 日本02｜tg@ghosxtop
+      - 🇺🇸 美国01｜tg@ghosxtop
+      - 🇺🇸 美国02｜tg@ghosxtop
+      - 🇰🇷 韩国01｜tg@ghosxtop
+      - 🇰🇷 韩国02｜tg@ghosxtop
+      - 🇹🇷 土耳其01｜tg@ghosxtop
+      - 🇹🇷 土耳其02｜tg@ghosxtop
+      - 🇺🇦 乌克兰01｜tg@ghosxtop
+      - 🇺🇦 乌克兰02｜tg@ghosxtop
+      - 🇹🇭 泰国01｜tg@ghosxtop
+      - 🇹🇭 泰国02｜tg@ghosxtop
+      - 🇻🇳 越南01｜tg@ghosxtop
+      - 🇻🇳 越南02｜tg@ghosxtop
+      - 🇸🇬 新加坡1|嘎嘎机场cf
+      - 🇸🇬 新加坡2|嘎嘎机场cf
+      - 🇺🇸 美国6|嘎嘎机场cf
+      - 🇺🇸 美国7|嘎嘎机场cf
+      - 001-0.3
+      - 002-2.0
+      - 003-0.3
+      - 004-1.0
+      - 005-1.0
+      - 011-1.0
+      - 012-0.8
+      - 013-1.5
+      - 014-2.0
+      - 015-3.0
+      - 021-2.0
+      - 022-3.0
+      - 023-1.0
+      - 024-2.0
       - 025-2.0
       - 035-5.0
-      - 001-9.0
-      - 002-2.0
-      - 003-4.0
-      - 004-4.0
-      - 011-1.0
-      - 012-5.0
-      - 013-3.0
-      - 014-5.0
-      - 021-4.0
-      - 022-4.0
-      - 023-4.0
-      - 024-2.0
-      - 031-5.0
-      - 032-5.0
-      - 033-5.0
-      - 034-5.0
-      - KR55
-      - CF01
-      - CF02-5.0
-      - CF03-9.0
-      - CF04-6.0
-      - CF05-5.0
-      - CF06-5.0
-      - CF07-5.0
-      - CFIAD08-5.0
-      - CFSJC09-0.5
-      - CFSJC10-5.0
-      - CFSJC11-2.0
-      - CFSJC12-1.0
-      - CFSJC13-3.0
-      - 塞尔维亚🇷🇸
-      - 荷兰🇳🇱
-  - name: ☑️ ZDYZ2
-    type: select
-    proxies:
+      - TG@ZDYZ2 禁止爬取本订阅节点
+      - zdyz2_KR5-1.5
+      - zdyz2_KR6-1.0
+      - zdyz2_KR8-0.4
+      - zdyz2_KR9
+      - zdyz2_002-3.0
       - ZDYZ2_TG@ZDYZ2
-      - ZDYZ2_KR5
-      - ZDYZ2_KR6
-      - ZDYZ2_KR8
-      - ZDYZ2_KR9
+      - KR55
+      - ZDYZ2_KR5-n1.5
+      - ZDYZ2_KR6-1.0
+      - ZDYZ2_KR8-0.4
+      - ZDYZ2_KR9-
       - ZDYZ2_HK01
       - ZDYZ2_002-3.0
       - ZDYZ2_004
@@ -1120,23 +985,11 @@ proxy-groups:
       - ZDYZ2_SG02
       - ZDYZ2_SG03
       - ZDYZ2_SG05
-  - name: ☑️ v2free
+  - name: ☑️ 电报TG
     type: select
     proxies:
-      - v2free|AT_0002
-      - v2free|KR_0019
-      - v2free|NL_0025
-      - v2free|NL_0026
-      - v2free|US_0042*
-      - v2free|US_0067
-      - v2free|US_0074
-      - v2free|US_0075
-      - v2free|US_0078
-      - v2free|US_0079
-      - v2free|US_0088
-      - v2free|US_0089
-      - v2free|US_0094
-      - v2free|US_0095
+      - TG@ZDYZ2 禁止爬取本订阅节点
+      - ZDYZ2_TG@ZDYZ2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1157,12 +1010,63 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - " 0AKRJPHKTWSGUSCT1"
+      - 🇨🇳 🌐 193.112.75.68【防失联网站】
+      - 🇨🇳 🚢 果酱商店专业且优质的海外账号
+      - 🇨🇳 ⚡ 节点超时更新订阅⚡
+      - 🇭🇰 香港01｜tg@ghosxtop
+      - 🇭🇰 香港02｜tg@ghosxtop
+      - 🇭🇰 香港03｜tg@ghosxtop
+      - 🇭🇰 香港04｜tg@ghosxtop
+      - 🇨🇳 台湾01｜tg@ghosxtop
+      - 🇨🇳 台湾02｜tg@ghosxtop
+      - 🇸🇬 新加坡01｜tg@ghosxtop
+      - 🇸🇬 新加坡02｜tg@ghosxtop
+      - 🇯🇵 日本01｜tg@ghosxtop
+      - 🇯🇵 日本02｜tg@ghosxtop
+      - 🇺🇸 美国01｜tg@ghosxtop
+      - 🇺🇸 美国02｜tg@ghosxtop
+      - 🇰🇷 韩国01｜tg@ghosxtop
+      - 🇰🇷 韩国02｜tg@ghosxtop
+      - 🇹🇷 土耳其01｜tg@ghosxtop
+      - 🇹🇷 土耳其02｜tg@ghosxtop
+      - 🇺🇦 乌克兰01｜tg@ghosxtop
+      - 🇺🇦 乌克兰02｜tg@ghosxtop
+      - 🇹🇭 泰国01｜tg@ghosxtop
+      - 🇹🇭 泰国02｜tg@ghosxtop
+      - 🇻🇳 越南01｜tg@ghosxtop
+      - 🇻🇳 越南02｜tg@ghosxtop
+      - 🇸🇬 新加坡1|嘎嘎机场cf
+      - 🇸🇬 新加坡2|嘎嘎机场cf
+      - 🇺🇸 美国6|嘎嘎机场cf
+      - 🇺🇸 美国7|嘎嘎机场cf
+      - 001-0.3
+      - 002-2.0
+      - 003-0.3
+      - 004-1.0
+      - 005-1.0
+      - 011-1.0
+      - 012-0.8
+      - 013-1.5
+      - 014-2.0
+      - 015-3.0
+      - 021-2.0
+      - 022-3.0
+      - 023-1.0
+      - 024-2.0
+      - 025-2.0
+      - 035-5.0
+      - TG@ZDYZ2 禁止爬取本订阅节点
+      - zdyz2_KR5-1.5
+      - zdyz2_KR6-1.0
+      - zdyz2_KR8-0.4
+      - zdyz2_KR9
+      - zdyz2_002-3.0
       - ZDYZ2_TG@ZDYZ2
-      - ZDYZ2_KR5
-      - ZDYZ2_KR6
-      - ZDYZ2_KR8
-      - ZDYZ2_KR9
+      - KR55
+      - ZDYZ2_KR5-n1.5
+      - ZDYZ2_KR6-1.0
+      - ZDYZ2_KR8-0.4
+      - ZDYZ2_KR9-
       - ZDYZ2_HK01
       - ZDYZ2_002-3.0
       - ZDYZ2_004
@@ -1184,63 +1088,44 @@ proxy-groups:
       - ZDYZ2_SG02
       - ZDYZ2_SG03
       - ZDYZ2_SG05
-      - v2free|AT_0002
-      - v2free|KR_0019
-      - v2free|NL_0025
-      - v2free|NL_0026
-      - v2free|US_0042*
-      - v2free|US_0067
-      - v2free|US_0074
-      - v2free|US_0075
-      - v2free|US_0078
-      - v2free|US_0079
-      - v2free|US_0088
-      - v2free|US_0089
-      - v2free|US_0094
-      - v2free|US_0095
-      - 005-6.0
-      - 015-5.0
-      - 025-2.0
-      - 035-5.0
-      - 001-9.0
-      - 002-2.0
-      - 003-4.0
-      - 004-4.0
-      - 011-1.0
-      - 012-5.0
-      - 013-3.0
-      - 014-5.0
-      - 021-4.0
-      - 022-4.0
-      - 023-4.0
-      - 024-2.0
-      - 031-5.0
-      - 032-5.0
-      - 033-5.0
-      - 034-5.0
-      - KR55
-      - CF01
-      - CF02-5.0
-      - CF03-9.0
-      - CF04-6.0
-      - CF05-5.0
-      - CF06-5.0
-      - CF07-5.0
-      - CFIAD08-5.0
-      - CFSJC09-0.5
-      - CFSJC10-5.0
-      - CFSJC11-2.0
-      - CFSJC12-1.0
-      - CFSJC13-3.0
-      - 塞尔维亚🇷🇸
-      - 荷兰🇳🇱
+  - name: ⚖️ 负载均衡
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: round-robin
+    proxies:
+      - 🇭🇰 香港01｜tg@ghosxtop
+      - 🇭🇰 香港02｜tg@ghosxtop
+      - 🇭🇰 香港03｜tg@ghosxtop
+      - 🇭🇰 香港04｜tg@ghosxtop
+      - 🇨🇳 台湾01｜tg@ghosxtop
+      - 🇨🇳 台湾02｜tg@ghosxtop
+      - 🇸🇬 新加坡01｜tg@ghosxtop
+      - 🇸🇬 新加坡02｜tg@ghosxtop
+      - 🇯🇵 日本01｜tg@ghosxtop
+      - 🇯🇵 日本02｜tg@ghosxtop
+      - 🇺🇸 美国01｜tg@ghosxtop
+      - 🇺🇸 美国02｜tg@ghosxtop
+      - 🇰🇷 韩国01｜tg@ghosxtop
+      - 🇰🇷 韩国02｜tg@ghosxtop
+      - 🇹🇷 土耳其01｜tg@ghosxtop
+      - 🇹🇷 土耳其02｜tg@ghosxtop
+      - 🇺🇦 乌克兰01｜tg@ghosxtop
+      - 🇺🇦 乌克兰02｜tg@ghosxtop
+      - 🇹🇭 泰国01｜tg@ghosxtop
+      - 🇹🇭 泰国02｜tg@ghosxtop
+      - 🇻🇳 越南01｜tg@ghosxtop
+      - 🇻🇳 越南02｜tg@ghosxtop
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: round-robin
     proxies:
-      - " 0AKRJPHKTWSGUSCT1"
+      - ZDYZ2_CF03
+      - ZDYZ2_CF04
+      - ZDYZ2_CFSJC09
+      - ZDYZ2_CFSJC10
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
