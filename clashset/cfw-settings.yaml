@@ -59,9 +59,7 @@ profileParsersText: >-
             type: select
           - name: ☑️ 手动切换
             type: select
-          - name: ☑️ ZDYZ2
-            type: select
-          - name: ☑️ v2free
+          - name: ☑️ 电报TG
             type: select
           - name: 🎯 全球直连
             type: select
@@ -82,7 +80,7 @@ profileParsersText: >-
             strategy: round-robin
         commands:
           # - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
-          - proxy-groups.⚖️ 其他.proxies=[]proxyNames|(CT)
+          - proxy-groups.⚖️ 其他.proxies=[]proxyNames|(CF)
           - proxy-groups.0.proxies.0+⚖️ 其他
           - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
           - proxy-groups.🐟 漏网之鱼.proxies.0+DIRECT
@@ -90,10 +88,8 @@ profileParsersText: >-
           # - proxy-groups.🛑 全球拦截.proxies.0+DIRECT
           - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
           - proxy-groups.🎯 全球直连.proxies.0+DIRECT
-          - proxy-groups.☑️ v2free.proxies=[]proxyNames|(v2free)
-          - proxy-groups.0.proxies.0+☑️ v2free
-          - proxy-groups.☑️ ZDYZ2.proxies=[]proxyNames|(ZDYZ2)
-          - proxy-groups.0.proxies.0+☑️ ZDYZ2
+          - proxy-groups.☑️ 电报TG.proxies=[]proxyNames|(TG)
+          - proxy-groups.0.proxies.0+☑️ 电报TG
           - proxy-groups.☑️ 手动切换.proxies=[]proxyNames|(.*)
           - proxy-groups.0.proxies.0+☑️ 手动切换
           - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
