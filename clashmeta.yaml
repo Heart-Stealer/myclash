@@ -44,6 +44,24 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
+  - name: 🇺🇸 美国01
+    server: r2.xinyo.me
+    port: 40901
+    type: vmess
+    uuid: 59e8f0eb-49b8-4ad4-a7ac-5d51e305308a
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+  - name: 🇺🇸 美国02
+    server: r2.xinyo.me
+    port: 40901
+    type: vmess
+    uuid: ca2e0d9c-af4a-4145-aa9f-13f6a08f475d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
   - name: 🇨🇳 🌐 193.112.75.68【防失联网站】
     server: hk02.ssyhi.xyz
     port: 50201
@@ -473,174 +491,6 @@ proxies:
     network: ws
     ws-opts:
       path: /
-  - name: TG@ZDYZ2 禁止爬取本订阅节点
-    type: vless
-    server: 104.21.238.2
-    port: 2096
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: zdyz2_KR5-1.5
-    type: vless
-    server: 59.7.203.104
-    port: 10096
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: zdyz2_KR6-1.0
-    type: vless
-    server: 125.134.172.40
-    port: 50000
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: zdyz2_KR8-0.4
-    type: vless
-    server: 221.164.149.81
-    port: 10268
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: zdyz2_KR9
-    type: vless
-    server: 121.190.128.166
-    port: 12345
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: zdyz2_002-3.0
-    type: vless
-    server: www.gov.ua
-    port: 8080
-    uuid: 046da250-d5ef-4867-9095-302477d54d20
-    tls: false
-    servername: feng.ipy29c99.workers.dev
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: feng.ipy29c99.workers.dev
-  - name: ZDYZ2_TG@ZDYZ2
-    type: vless
-    server: 104.21.238.2
-    port: 2096
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: KR55
-    type: vless
-    server: 59.3.3.161
-    port: 443
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-    tls: true
-    servername: cfed.tgzdyz2.top
-    network: ws
-    ws-opts:
-      path: /TG@ZDYZ2?ed=2560
-      headers:
-        host: cfed.tgzdyz2.top
-    client-fingerprint: random
-  - name: ZDYZ2_KR5-n1.5
-    type: vless
-    server: 59.7.203.104
-    port: 10096
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_KR6-1.0
-    type: vless
-    server: 125.134.172.40
-    port: 50000
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_KR8-0.4
-    type: vless
-    server: 221.164.149.81
-    port: 10268
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_KR9-
-    type: vless
-    server: 121.190.128.166
-    port: 12345
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_HK01
-    type: vless
-    server: 62.72.163.169
-    port: 51206
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
   - name: ZDYZ2_002-3.0
     type: vless
     server: www.gov.ua
@@ -777,123 +627,18 @@ proxies:
       headers:
         host: vpn.goldbridge.workers.dev
     client-fingerprint: randomized
-  - name: ZDYZ2_KR1
+  - name: zdyz2_002-3.0
     type: vless
-    server: 183.109.100.130
-    port: 50000
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
+    server: www.gov.ua
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
     network: ws
     ws-opts:
-      path: /?ed=2560
+      path: /
       headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_KR4
-    type: vless
-    server: 59.3.3.161
-    port: 443
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_KR10
-    type: vless
-    server: 220.125.61.240
-    port: 20443
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_JP1-4.0
-    type: vless
-    server: 121.182.55.77
-    port: 30063
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_TW01
-    type: vless
-    server: 118.163.37.32
-    port: 81
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_TW02
-    type: vless
-    server: 210.61.97.241
-    port: 81
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_SG02
-    type: vless
-    server: 43.156.253.94
-    port: 443
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_SG03
-    type: vless
-    server: 47.237.77.220
-    port: 2082
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
-  - name: ZDYZ2_SG05
-    type: vless
-    server: 43.156.253.94
-    port: 443
-    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-    tls: true
-    servername: juzi8186.5112233.xyz
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        host: juzi8186.5112233.xyz
-    client-fingerprint: random
+        host: feng.ipy29c99.workers.dev
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -907,6 +652,8 @@ proxy-groups:
   - name: ☑️ 手动切换
     type: select
     proxies:
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
       - 🇨🇳 🌐 193.112.75.68【防失联网站】
       - 🇨🇳 🚢 果酱商店专业且优质的海外账号
       - 🇨🇳 ⚡ 节点超时更新订阅⚡
@@ -952,19 +699,6 @@ proxy-groups:
       - 024-2.0
       - 025-2.0
       - 035-5.0
-      - TG@ZDYZ2 禁止爬取本订阅节点
-      - zdyz2_KR5-1.5
-      - zdyz2_KR6-1.0
-      - zdyz2_KR8-0.4
-      - zdyz2_KR9
-      - zdyz2_002-3.0
-      - ZDYZ2_TG@ZDYZ2
-      - KR55
-      - ZDYZ2_KR5-n1.5
-      - ZDYZ2_KR6-1.0
-      - ZDYZ2_KR8-0.4
-      - ZDYZ2_KR9-
-      - ZDYZ2_HK01
       - ZDYZ2_002-3.0
       - ZDYZ2_004
       - ZDYZ2_013
@@ -976,20 +710,32 @@ proxy-groups:
       - ZDYZ2_CF04
       - ZDYZ2_CFSJC09
       - ZDYZ2_CFSJC10
-      - ZDYZ2_KR1
-      - ZDYZ2_KR4
-      - ZDYZ2_KR10
-      - ZDYZ2_JP1-4.0
-      - ZDYZ2_TW01
-      - ZDYZ2_TW02
-      - ZDYZ2_SG02
-      - ZDYZ2_SG03
-      - ZDYZ2_SG05
+      - zdyz2_002-3.0
   - name: ☑️ 电报TG
     type: select
     proxies:
-      - TG@ZDYZ2 禁止爬取本订阅节点
-      - ZDYZ2_TG@ZDYZ2
+      - 🇭🇰 香港01｜tg@ghosxtop
+      - 🇭🇰 香港02｜tg@ghosxtop
+      - 🇭🇰 香港03｜tg@ghosxtop
+      - 🇭🇰 香港04｜tg@ghosxtop
+      - 🇨🇳 台湾01｜tg@ghosxtop
+      - 🇨🇳 台湾02｜tg@ghosxtop
+      - 🇸🇬 新加坡01｜tg@ghosxtop
+      - 🇸🇬 新加坡02｜tg@ghosxtop
+      - 🇯🇵 日本01｜tg@ghosxtop
+      - 🇯🇵 日本02｜tg@ghosxtop
+      - 🇺🇸 美国01｜tg@ghosxtop
+      - 🇺🇸 美国02｜tg@ghosxtop
+      - 🇰🇷 韩国01｜tg@ghosxtop
+      - 🇰🇷 韩国02｜tg@ghosxtop
+      - 🇹🇷 土耳其01｜tg@ghosxtop
+      - 🇹🇷 土耳其02｜tg@ghosxtop
+      - 🇺🇦 乌克兰01｜tg@ghosxtop
+      - 🇺🇦 乌克兰02｜tg@ghosxtop
+      - 🇹🇭 泰国01｜tg@ghosxtop
+      - 🇹🇭 泰国02｜tg@ghosxtop
+      - 🇻🇳 越南01｜tg@ghosxtop
+      - 🇻🇳 越南02｜tg@ghosxtop
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1010,6 +756,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇺🇸 美国01
+      - 🇺🇸 美国02
       - 🇨🇳 🌐 193.112.75.68【防失联网站】
       - 🇨🇳 🚢 果酱商店专业且优质的海外账号
       - 🇨🇳 ⚡ 节点超时更新订阅⚡
@@ -1055,19 +803,6 @@ proxy-groups:
       - 024-2.0
       - 025-2.0
       - 035-5.0
-      - TG@ZDYZ2 禁止爬取本订阅节点
-      - zdyz2_KR5-1.5
-      - zdyz2_KR6-1.0
-      - zdyz2_KR8-0.4
-      - zdyz2_KR9
-      - zdyz2_002-3.0
-      - ZDYZ2_TG@ZDYZ2
-      - KR55
-      - ZDYZ2_KR5-n1.5
-      - ZDYZ2_KR6-1.0
-      - ZDYZ2_KR8-0.4
-      - ZDYZ2_KR9-
-      - ZDYZ2_HK01
       - ZDYZ2_002-3.0
       - ZDYZ2_004
       - ZDYZ2_013
@@ -1079,15 +814,7 @@ proxy-groups:
       - ZDYZ2_CF04
       - ZDYZ2_CFSJC09
       - ZDYZ2_CFSJC10
-      - ZDYZ2_KR1
-      - ZDYZ2_KR4
-      - ZDYZ2_KR10
-      - ZDYZ2_JP1-4.0
-      - ZDYZ2_TW01
-      - ZDYZ2_TW02
-      - ZDYZ2_SG02
-      - ZDYZ2_SG03
-      - ZDYZ2_SG05
+      - zdyz2_002-3.0
   - name: ⚖️ 负载均衡
     type: load-balance
     url: http://www.google.com/generate_204
