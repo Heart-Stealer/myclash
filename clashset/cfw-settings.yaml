@@ -73,6 +73,11 @@ profileParsersText: >-
             # url: http://www.gstatic.com/generate_204
             interval: 300
             tolerance: 50
+          - name: ⚖️ 负载均衡
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: round-robin
           - name: ⚖️ 其他
             type: load-balance
             url: http://www.google.com/generate_204
@@ -82,13 +87,15 @@ profileParsersText: >-
           # - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
           - proxy-groups.⚖️ 其他.proxies=[]proxyNames|(CF)
           - proxy-groups.0.proxies.0+⚖️ 其他
+          - proxy-groups.⚖️ 负载均衡.proxies=[]proxyNames|(tg|Tg|TG)
+          - proxy-groups.0.proxies.0+⚖️ 负载均衡
           - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
           - proxy-groups.🐟 漏网之鱼.proxies.0+DIRECT
           - proxy-groups.🛑 全球拦截.proxies.0+REJECT
           # - proxy-groups.🛑 全球拦截.proxies.0+DIRECT
           - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
           - proxy-groups.🎯 全球直连.proxies.0+DIRECT
-          - proxy-groups.☑️ 电报TG.proxies=[]proxyNames|(TG)
+          - proxy-groups.☑️ 电报TG.proxies=[]proxyNames|(tg|Tg|TG)
           - proxy-groups.0.proxies.0+☑️ 电报TG
           - proxy-groups.☑️ 手动切换.proxies=[]proxyNames|(.*)
           - proxy-groups.0.proxies.0+☑️ 手动切换
