@@ -49,23 +49,23 @@ dingyue: &dingyue
   # type: select
   type: url-test
   use:
-    # - 订阅一
-    - 订阅二
+    - 订阅一
+    # - 订阅二
     # - 本地配置
 
 # 订阅链接
 # 对于订阅来说，path 为选填项，但建议启用
 # 本地配置可以只填 path
 proxy-providers:
-  # 订阅一:
-    # <<: *p
-    # path: ./proxy_provider/订阅一.yaml
-    # url: "https://github.com/Heart-Stealer/myclash/raw/main/clashmeta.yaml"
+  订阅一:
+    <<: *p
+    path: ./proxy_provider/clashmeta.yaml
+    url: "https://ghp.ci/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmeta.yaml"
 
-  订阅二:
-    <<: *urltest
-    path: ./proxy_provider/zdyz2.yaml
-    url: "https://sub.tgzdyz2.xyz/sub"
+  # 订阅二:
+  #   <<: *urltest
+  #   path: ./proxy_provider/zdyz2.yaml
+  #   url: "https://sub.tgzdyz2.xyz/sub"
 
   # 本地配置:
   #   <<: *p
