@@ -58,7 +58,7 @@ dingyue: &dingyue
 # 本地配置可以只填 path
 proxy-providers:
   订阅一:
-    <<: *p
+    <<: *urltest
     path: ./proxy_provider/clashmeta.yaml
     url: "https://ghp.ci/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmeta.yaml"
 
@@ -68,7 +68,7 @@ proxy-providers:
   #   url: "https://sub.tgzdyz2.xyz/sub"
 
   # 本地配置:
-  #   <<: *p
+  #   <<: *urltest
   #   path: ./proxy_provider/clashmeta.yaml
     # path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
 
