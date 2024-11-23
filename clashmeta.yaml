@@ -438,6 +438,84 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
+  - name: CF01
+    type: vless
+    server: bestcf.onecf.eu.org
+    port: 443
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: CF02
+    type: vless
+    server: 104.19.62.86
+    port: 2082
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: CF03
+    type: vless
+    server: www.gov.ua
+    port: 2082
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: false
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: CF04
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 443
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: CF06
+    type: vless
+    server: tilebani.com
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
+  - name: CF07
+    type: vless
+    server: 8.218.132.209
+    port: 80
+    uuid: 899de6c4-d602-44f3-b33a-e78bab92adc8
+    tls: true
+    servername: vpn.goldbridge.workers.dev
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vpn.goldbridge.workers.dev
+    client-fingerprint: randomized
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -482,6 +560,12 @@ proxy-groups:
       - 024-2.0
       - 025-0.2
       - zdyz2_002-0.5
+      - CF01
+      - CF02
+      - CF03
+      - CF04
+      - CF06
+      - CF07
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -534,6 +618,12 @@ proxy-groups:
       - 024-2.0
       - 025-0.2
       - zdyz2_002-0.5
+      - CF01
+      - CF02
+      - CF03
+      - CF04
+      - CF06
+      - CF07
   - name: ⚖️ 负载均衡
     type: load-balance
     url: http://www.google.com/generate_204
@@ -552,12 +642,24 @@ proxy-groups:
       - 🇸🇬 新加坡2|cf
       - 🇺🇸 美国6|cf
       - 🇺🇸 美国7|cf
+      - CF01
+      - CF02
+      - CF03
+      - CF04
+      - CF06
+      - CF07
   - name: ⚖️ 其他
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: round-robin
-    proxies: []
+    proxies:
+      - CF01
+      - CF02
+      - CF03
+      - CF04
+      - CF06
+      - CF07
 rules:
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
