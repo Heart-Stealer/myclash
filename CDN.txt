@@ -6,3 +6,7 @@ https://cdn.jsdelivr.net/gh/
 https://cdn.jsdelivr.net/gh/Heart-Stealer/myclash@main/clashmeta.yaml
 https://fastly.jsdelivr.net/gh/
 https://fastly.jsdelivr.net/gh/Heart-Stealer/myclash@main/clashmeta.yaml
+https://gh-proxy.com/
+https://gh-proxy.com/raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmeta.yaml
+https://mirrors.chenby.cn/
+https://mirrors.chenby.cn/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmeta.yaml
