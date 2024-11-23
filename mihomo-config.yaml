@@ -100,6 +100,10 @@ log-level: info
 allow-lan: true
 # socks5/http 端口
 mixed-port: 7890
+socks-port: 7891
+port: 7892
+redir-port: 7893
+tproxy-port: 7894
 # Meta 内核特性 https://wiki.metacubex.one/config/general
 # 统一延迟
 # 更换延迟计算方式,去除握手等额外延迟
