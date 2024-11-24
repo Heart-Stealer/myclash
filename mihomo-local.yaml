@@ -37,7 +37,7 @@ urltest: &urltest
 
 # 也可以把分割线以内的内容粘贴到您使用代理工具的「覆写」功能，然后在覆写中进行修改
 # 使用覆写时可以直接将此配置文件作为订阅链接进行订阅
-# https://ghp.ci/https://gist.githubdingyuercontent.com/liuran001/5ca84f7def53c70b554d3f765ff86a33/raw/c1d33956db7097252b88a6c06ed76f32526747c4/config.yaml
+# https://ghp.ci/https://gist.githubusercontent.com/liuran001/5ca84f7def53c70b554d3f765ff86a33/raw/c1d33956db7097252b88a6c06ed76f32526747c4/config.yaml
 
 # 如果你需要使用大于两个机场，在下方 `dingyue` 处添加 `订阅三` （名字可以自己取），然后在 `proxy-providers` 照例添加订阅链接即可
 # 反之，如果你只需要使用一个，那么将 `订阅二` 前添加 `#` 进行注释即可
@@ -56,7 +56,8 @@ dingyue: &dingyue
 # 订阅链接
 # 对于订阅来说，path 为选填项，但建议启用
 # 本地配置可以只填 path
-# proxy-providers:
+proxy-providers:
+  
   # 订阅一:
   #   <<: *urltest
   #   path: ./proxy_provider/clashmeta.yaml
@@ -87,7 +88,7 @@ rule-providers:
     format: yaml
     # path可为空(仅限clash.meta 1.15.0以上版本)
     path: ./rule_provider/AWAvenue-Ads.yaml
-    url: "https://ghp.ci/https://raw.githubdingyuercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
+    url: "https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
     interval: 600
 
 # 外部控制端口
