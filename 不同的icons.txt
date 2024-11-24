@@ -1,0 +1,11 @@
+https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
+https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
+https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/hk.svg
+https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
+https://storage.googleapis.com/spotifynewsroom-jp.appspot.com/1/2020/12/Spotify_Icon_CMYK_Green.png
+
+
+https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
+https://raw.githubusercontent.com/shindgewongxj/WHATSINStash/master/icon/select.png
+https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Static.png
+https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev.github.io/master/docs/assets/icons/flags/hk.svg
