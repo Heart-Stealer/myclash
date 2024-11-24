@@ -26,7 +26,7 @@ urltest: &urltest
     # 节点连通性检测时间，单位为秒
     interval: 300
     # 节点超时延迟，单位为毫秒
-    timeout: 3000
+    timeout: 1000
     # 节点自动切换差值，单位为毫秒
     tolerance: 500
 
@@ -338,7 +338,7 @@ proxy-groups:
   - {name: Telegram,  !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
   - {name: Twitter,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
   - {name: YouTube,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
-  - {name: 全球直连, type: select, proxies: [DIRECT, 节点选择], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"}
+  - {name: 全球直连, type: select, proxies: [DIRECT], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"}
   - {name: 广告拦截, type: select, proxies: [REJECT], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"}
   - {name: GLOBAL, <<: *shoudong,proxies: [节点选择, 负载均衡, 自动选择, 漏网之鱼], icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"}
   # - {
