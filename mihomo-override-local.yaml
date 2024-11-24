@@ -21,12 +21,12 @@ urltest: &urltest
   interval: 3600
   health-check:
     enable: true
-    # url: https://cp.cloudflare.com
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com
+    # url: https://www.gstatic.com/generate_204
     # 节点连通性检测时间，单位为秒
     interval: 300
     # 节点超时延迟，单位为毫秒
-    timeout: 3000
+    timeout: 1000
     # 节点自动切换差值，单位为毫秒
     tolerance: 500
 
@@ -44,14 +44,14 @@ urltest: &urltest
 
 # 订阅名，记得修改成自己的
 # 添删订阅在这里和下方订阅链接依葫芦画瓢就行
-# dingyue: &dingyue
-#   # 如果不希望自动切换请将下面两行注释对调
-#   # type: select
-#   type: url-test
-#   use:
-#     - 订阅一
-#     # - 订阅二
-#     # - 本地配置
+dingyue: &dingyue
+  # 如果不希望自动切换请将下面两行注释对调
+  # type: select
+  type: url-test
+  use:
+    # - 订阅一
+    # - 订阅二
+    - 本地配置
 
 # 订阅链接
 # 对于订阅来说，path 为选填项，但建议启用
@@ -67,9 +67,9 @@ urltest: &urltest
   #   path: ./proxy_provider/zdyz2.yaml
   #   url: "https://sub.tgzdyz2.xyz/sub"
 
-  # 本地配置:
-  #   <<: *urltest
-  #   path: ./proxy_provider/clashmeta.yaml
+  本地配置:
+    <<: *urltest
+    path: ./proxy_provider/clashmeta.yaml
     # path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
 
 # 小白请不要继续随意修改以下设置
@@ -294,12 +294,13 @@ proxy-groups:
   # 例如 [WARP, 全部节点, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, DIRECT],
   - {name: 节点选择, <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg",}
 
-  - {name: 手动选择, <<: *zidong, icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png"}
-  - {name: 香港节点, <<: *shoudong, filter: "(?i)港|HK|Hong", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
-  - {name: 日本节点, <<: *shoudong, filter: "(?i)日|东京|JP|Japan", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
-  - {name: 狮城节点, <<: *shoudong, filter: "(?i)新|坡|SG|Singapore", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
-  - {name: 美国节点, <<: *shoudong, filter: "(?i)美|US|UM|States|American", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
-  - {name: 负载均衡, <<: *balance, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"}
+  - {name: 手动选择, <<: *dingyue, <<: *zidong, icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png"}
+  - {name: 香港节点, <<: *dingyue, <<: *shoudong, filter: "(?i)港|HK|Hong", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
+  - {name: 日本节点, <<: *dingyue, <<: *shoudong, filter: "(?i)日|东京|JP|Japan", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
+  - {name: 狮城节点, <<: *dingyue, <<: *shoudong, filter: "(?i)新|坡|SG|Singapore", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
+  - {name: 美国节点, <<: *dingyue, <<: *shoudong, filter: "(?i)美|US|UM|States|American", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
+  - {name: 负载均衡, <<: *dingyue, <<: *balance, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"}
+  - {name: 自动选择, <<: *dingyue, <<: *zidong}
   # - {name: Apple,     !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"}
   # - {name: ChatGPT,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
   # - {name: Google,    !!merge <<: *pr, icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"}
@@ -339,7 +340,6 @@ proxy-groups:
   - {name: YouTube,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
   - {name: 全球直连, type: select, proxies: [DIRECT, 节点选择], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"}
   - {name: 广告拦截, type: select, proxies: [REJECT], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"}
-  - {name: 自动选择, <<: *zidong}
   - {name: GLOBAL, <<: *shoudong,proxies: [节点选择, 负载均衡, 自动选择, 漏网之鱼], icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"}
   # - {
   #     name: 节点选择,
