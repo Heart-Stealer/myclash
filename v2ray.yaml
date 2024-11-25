@@ -1,6 +1,11 @@
-trojan://QwwHvrnN@36.151.192.196:42395?security=tls&allowInsecure=1&type=tcp&headerType=none#13%2C14%7C%E9%A6%99%E6%B8%AF2-0.5
-trojan://QwwHvrnN@36.151.192.239:17806?security=tls&allowInsecure=1&type=tcp&headerType=none#13%2C14%7C%E6%97%A5%E6%9C%AC-2.0
-trojan://QwwHvrnN@36.151.192.198:36900?security=tls&allowInsecure=1&type=tcp&headerType=none#13%2C14%7C%E9%9F%A9%E5%9B%BD-1.2
+vless://e6259fa3-fb06-4f9b-ad3f-bd6250b837f6@162.159.142.252:2083?encryption=none&security=tls&sni=lix523052.filegear-sg.me&fp=random&type=ws&host=lix523052.filegear-sg.me&path=%2F%3Fed%3D2560#TG-2.0
+vless://e6259fa3-fb06-4f9b-ad3f-bd6250b837f6@59.7.203.104:10096?encryption=none&security=tls&sni=lix523052.filegear-sg.me&fp=random&type=ws&host=lix523052.filegear-sg.me&path=%2F%3Fed%3D2560#TG-KR5-1.5
+vless://e6259fa3-fb06-4f9b-ad3f-bd6250b837f6@112.119.49.206:23555?encryption=none&security=tls&sni=lix523052.filegear-sg.me&fp=random&type=ws&host=lix523052.filegear-sg.me&path=%2F%3Fed%3D2560#TG-HK-Hong%20Kong7-1.0
+vless://e6259fa3-fb06-4f9b-ad3f-bd6250b837f6@121.182.55.77:30063?encryption=none&security=tls&sni=lix523052.filegear-sg.me&fp=random&type=ws&host=lix523052.filegear-sg.me&path=%2F%3Fed%3D2560#TG-JP-Tokyo1-1.5
+vless://e6259fa3-fb06-4f9b-ad3f-bd6250b837f6@118.163.37.32:81?encryption=none&security=tls&sni=lix523052.filegear-sg.me&fp=random&type=ws&host=lix523052.filegear-sg.me&path=%2F%3Fed%3D2560#TG-TW-Taipei1-0.5
+vless://e6259fa3-fb06-4f9b-ad3f-bd6250b837f6@138.2.84.189:443?encryption=none&security=tls&sni=lix523052.filegear-sg.me&fp=random&type=ws&host=lix523052.filegear-sg.me&path=%2F%3Fed%3D2560#TG-SG-Singapore3-1.0
+vless://e6259fa3-fb06-4f9b-ad3f-bd6250b837f6@27.50.49.156:2096?encryption=none&security=tls&sni=lix523052.filegear-sg.me&fp=random&type=ws&host=lix523052.filegear-sg.me&path=%2F%3Fed%3D2560#TG-SG-Singapore4-1.5
+vless://e6259fa3-fb06-4f9b-ad3f-bd6250b837f6@188.42.88.66:2053?encryption=none&security=tls&sni=lix523052.filegear-sg.me&fp=random&type=ws&host=lix523052.filegear-sg.me&path=%2F%3Fed%3D2560#TG%40ZDYZ2-3.0
 vless://046da250-d5ef-4867-9095-302477d54d20@ip.sb:8080?encryption=none&security=none&sni=feng.ipy29c99.workers.dev&type=ws&host=feng.ipy29c99.workers.dev&path=%2F#001-0.5
 vless://046da250-d5ef-4867-9095-302477d54d20@www.gov.ua:8080?encryption=none&security=none&sni=feng.ipy29c99.workers.dev&type=ws&host=feng.ipy29c99.workers.dev&path=%2F#002-1.5
 vless://046da250-d5ef-4867-9095-302477d54d20@www.ipget.net:8080?encryption=none&security=none&sni=feng.ipy29c99.workers.dev&type=ws&host=feng.ipy29c99.workers.dev&path=%2F#003-2.5
