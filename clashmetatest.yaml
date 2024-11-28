@@ -1,16 +1,14 @@
-
 #---------------------------------------------------#
 ## 配置文件需要放置在 $HOME/.config/clash/config.yml
-## 
 ## 如果您不知道如何操作，请参阅 Dreamacro / clash 的 Wiki：
 ## https://github.com/Dreamacro/clash/wiki
 #---------------------------------------------------#
+# HTTP SOCKS5 使用一个接口进行代理
+mixed-port: 7890
 # HTTP 代理端口
 # port: 7890
 # SOCKS5 代理端口
 # socks-port: 7891
-# HTTP SOCKS5 使用一个接口进行代理
-mixed-port: 7890
 # Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
 # redir-port: 7892
 # 允许局域网的连接（可用来共享代理）
@@ -22,16 +20,33 @@ allow-lan: true
 # "[aaaa::a8aa:ff:fe09:57d8]"   绑定一个 IPv6 地址
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
 mode: Rule
-# 5 个级别：silent / debug / info / warning / error /。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+# 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: info
 ipv6: true
 # clash web 控制的 RESTful API
 external-controller: '127.0.0.1:9090'
-# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `${API}/ui`
+
+# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
 # 参数应填写配置目录的相对路径或绝对路径。
+# http://127.0.0.1:9090/ui/#/
 # external-ui: folder
+# yacd面板：  https://github.com/haishanh/yacd
+# Razord面板：http://clash.razord.top/#/proxies
+# external-ui: dashboard
+
+# # 实验性功能
+# experimental:
+#   ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
+#   # interface-name: en0 # outbound interface name
+
 # RESTful API 的口令 (可选)
 # secret: 
+
+# 本地 SOCKS5 / HTTP(S) 服务认证
+# authentication:
+#  - "user1:pass1"
+#  - "user2:pass2"
+
 # # 实验性功能 hosts, 支持通配符 (例如 *.clash.dev 甚至 *.foo.*.example.com)
 # # 静态的域名 比 通配域名 具有更高的优先级 (foo.example.com 优先于 *.example.com)
 # # 注意: hosts 在 fake-ip 模式下不生效
@@ -48,6 +63,9 @@ dns:
   enhanced-mode: fake-ip
   # # fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
   fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
+  #fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
+     #- '*.lan'
+     #- localhost.ptlogin2.qq.com
   use-hosts: true
   nameserver:
     # - 1.2.4.8 # 1.2.4.8
@@ -57,6 +75,8 @@ dns:
     - 180.76.76.76 # 百度云 DNS
     - 183.60.83.19 # 腾讯云 DNS
     - 183.60.82.98 # 腾讯云 DNS
+     #- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
+     #- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
     - 114.114.114.114 # 114 DNS
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -66,9 +86,13 @@ dns:
   fallback:
     - 8.8.8.8 # Google DNS （偏爱）
     - 8.8.4.4 # Google DNS （偏爱）
+     #- tls://dns.rubyfish.cn:853
     - tls://1.0.0.1:853 # （偏爱）
-    - tls://8.8.4.4:853
     - tls://dns.google:853 # （偏爱）
+    - tls://8.8.4.4:853
+     #- https://dns.rubyfish.cn/dns-query
+     #- https://cloudflare-dns.com/dns-query
+     #- https://dns.google/dns-query
     - https://doh.dns.sb/dns-query
     - https://dns.twnic.tw/dns-query
     - https://dns.cloudflare.com/dns-query
@@ -95,31 +119,136 @@ dns:
   #  DoH: 以 https:// 开头的 DNS 服务器。拥有更好的伪装性，且几乎不可能被运营商或网络管理封锁，但查询效率和安全性可能略低。
   #  DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
   #  若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
+cfw-latency-timeout: 3000
+cfw-latency-url: http://www.gstatic.com/generate_204
+# 混合配置（mixin）
+# 支持向所有配置文件中注入公共属性设置
+#cfw-profile-mixin:
+  #dns:
+    #enable: true
+    #listen: :53
+    #enhanced-mode: fake-ip
+    #nameserver:
+     #- 223.5.5.5 # 阿里DNS
+     #- 180.76.76.76 # 百度DNS
+     #- 119.29.29.29 # 腾讯DNS
+     #- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
+     #- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
+     #- 114.114.114.114 # 114DNS
+  #experimental:
+    #interface-name: WLAN
+#自定义配置目录
+#cfw-profiles-path: 'C:\Users\Administrator\.config\clash\profiles'
+# 打断连接
+# Identify strategy of breaking connections after switching to a new proxy/profile/mode
+# Options for proxy: none, chain(proxy group in connection chains), all
+# Options for profile: true, false
+# Options for mode: true, false
+cfw-conn-break-strategy:
+  proxy: none # none/chain/all
+  profile: true # true/false
+  mode: false # true/false
+# 自定义状态栏图标
+#cfw-tray-icon:
+#default: .\resources\static\imgs\logo_64.png        # 默认图标
+#system-proxy-on: .\resources\static\imgs\custom.ico   # 开启系统代理后图标
+
+# 自定义字体
+#cfw-font-family: "Noto Sans TC"   # 系统中存在的字体
+
+# 自定义请求头
+#cfw-http-headers:
+  #token: "123456"
+  #cfw-version: "0.9.11"
+
+# 自定义节点排序
+# 可选参数：
+#  default：按配置文件定义节点顺序
+#  latency：按节点延迟升序排列
+#  alphabet：按节点名称字母表排列
+# Sort proxies in Proxies module by default/latency/alphabet
+cfw-proxies-order: default
+# 子进程 启动其他应用
+# Run child process after CFW started
+# Refer: https://docs.cfw.lbyczf.com/contents/childprocess.html
+#cfw-child-process:
+  # 启动订阅转换程序，端口号7893
+  #- command: "subconverter.exe" # run.cmd 程序名称 subconverter.exe -cfw >>logs/run.log 2>&1
+    #args:
+      #- "-cfw" # 运行参数1
+      #- "-f" # 运行参数2
+      #- "pref-acl4ssr.yml" # 运行参数3
+    #options:
+      #cwd: subconverter # 子进程工作目录
+      #detached: true # 子进程独立于其父进程运行
+      #shell: true # 则在 shell 中运行 command
+      #windowsHide: true # 隐藏子进程的控制台窗口
+  # 启动网易云，端口号3333
+  #- command: "unblockneteasemusic.exe" # 启动网易云
+    #args:
+      #- "-p" # 运行参数1
+      #- "3333" # 运行参数2
+    #options:
+      #cwd: unblockNeteaseMusic # 子进程工作目录
+      #detached: true # 子进程独立于其父进程运行
+      #shell: true # 则在 shell 中运行 command
+      #windowsHide: true # 隐藏子进程的控制台窗口
+
+# 系统代理跳过列表 cfw-bypass
+# System proxy will ignore these domains(or ipnet)
+# 系统代理跳过列表-备份的，不起作用，
+# 使用时可以将cfw-bypass-bak与cfw-bypass内容互换
+cfw-bypass-bak:
+  # 原有字段不用删除
+  - qq.com
+  - 'music.163.com' # 网易云域名1
+  - '*.music.126.net' # 网易云域名2
+  - localhost
+  - 127.*
+  - 10.*
+  - 172.16.*
+  - 172.17.*
+  - 172.18.*
+  - 172.19.*
+  - 172.20.*
+  - 172.21.*
+  - 172.22.*
+  - 172.23.*
+  - 172.24.*
+  - 172.25.*
+  - 172.26.*
+  - 172.27.*
+  - 172.28.*
+  - 172.29.*
+  - 172.30.*
+  - 172.31.*
+  - 192.168.*
+  - <local>
 proxies:
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
-  - {"name": "移动 01","type": "vless","server": "104.25.252.185","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "移动 02","type": "vless","server": "104.25.254.197","port": 2096,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "联通 03","type": "vless","server": "104.20.30.149","port": 2087,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "IPV6 02","type": "vless","server": "2606: 4700: 3036: 0: a36a: 4aa4: 75d9: 9f75","port": 2053,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "IPV6 03","type": "vless","server": "2606: 4700: 3036: ef: db9e: eecc: caef: 9d4a","port": 2087,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇭🇰 香港 01","type": "vless","server": "58.232.49.2","port": 12454,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇭🇰 香港 04","type": "vless","server": "175.114.195.4","port": 33517,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇨🇳 台湾 02","type": "vless","server": "210.79.155.242","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇺🇸 美国 02","type": "vless","server": "202.37.33.81","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇬🇧 英国 01","type": "vless","server": "135.181.46.229","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇫🇷 法国 01","type": "vless","server": "13.38.105.183","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇫🇷 法国 05","type": "vless","server": "193.176.179.213","port": 2053,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇮🇹 意大利 02","type": "vless","server": "87.120.237.36","port": 81,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇮🇹 意大利 03","type": "vless","server": "51.107.8.47","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇩🇪 德国 01","type": "vless","server": "51.116.121.75","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇩🇪 德国 02","type": "vless","server": "188.166.162.201","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇩🇪 德国 05","type": "vless","server": "91.107.128.128","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇳🇴 挪威 01","type": "vless","server": "176.97.77.76","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇳🇴 挪威 05","type": "vless","server": "95.164.84.9","port": 81,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇸🇪 瑞典 03","type": "vless","server": "194.87.252.135","port": 2053,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇩🇰 丹麦 03","type": "vless","server": "217.110.20.141","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "🇩🇰 丹麦 05","type": "vless","server": "89.27.8.25","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "移动 01","type": "vless","server": "104.25.252.185","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "移动 02","type": "vless","server": "104.25.254.197","port": 2096,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "联通 03","type": "vless","server": "104.20.30.149","port": 2087,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "IPV6 02","type": "vless","server": "2606: 4700: 3036: 0: a36a: 4aa4: 75d9: 9f75","port": 2053,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "IPV6 03","type": "vless","server": "2606: 4700: 3036: ef: db9e: eecc: caef: 9d4a","port": 2087,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇭🇰 香港 01","type": "vless","server": "58.232.49.2","port": 12454,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇭🇰 香港 04","type": "vless","server": "175.114.195.4","port": 33517,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇨🇳 台湾 02","type": "vless","server": "210.79.155.242","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇺🇸 美国 02","type": "vless","server": "202.37.33.81","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇬🇧 英国 01","type": "vless","server": "135.181.46.229","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇫🇷 法国 01","type": "vless","server": "13.38.105.183","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇫🇷 法国 05","type": "vless","server": "193.176.179.213","port": 2053,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇮🇹 意大利 02","type": "vless","server": "87.120.237.36","port": 81,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇮🇹 意大利 03","type": "vless","server": "51.107.8.47","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇩🇪 德国 01","type": "vless","server": "51.116.121.75","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇩🇪 德国 02","type": "vless","server": "188.166.162.201","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇩🇪 德国 05","type": "vless","server": "91.107.128.128","port": 8443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇳🇴 挪威 01","type": "vless","server": "176.97.77.76","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇳🇴 挪威 05","type": "vless","server": "95.164.84.9","port": 81,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇸🇪 瑞典 03","type": "vless","server": "194.87.252.135","port": 2053,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇩🇰 丹麦 03","type": "vless","server": "217.110.20.141","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  # - {"name": "🇩🇰 丹麦 05","type": "vless","server": "89.27.8.25","port": 443,"uuid": "23d9aa04-8a2a-4ffc-9a3c-479a9f43f6fe","tls": true,"servername": "445566.666888.lol","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "445566.666888.lol"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
   - {"name": "zdyz2_002-1.5","type": "vless","server": "www.gov.ua","port": 8080,"uuid": "046da250-d5ef-4867-9095-302477d54d20","tls": false,"servername": "feng.ipy29c99.workers.dev","network": "ws","ws-opts": {"path": "/","headers": {"host": "feng.ipy29c99.workers.dev"}}}
   - {name: 🇧🇷 Brazil Oracle, server: 168.75.67.230, port: 30185, type: vless, uuid: 5776e988-623a-4a5f-d077-d7c5fe173de4, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: rwpbqas_HY8knlW0fFSIeUrjgBXHBzSNboflsLD8elA}, servername: icloud.cdn-apple.com, client-fingerprint: chrome, network: tcp}
   - {name: 🇭🇰 HK-BGP IPV6 KVM  mike, type: vless, server: 2404:c140:1f00:1e::1b87, port: 2212, uuid: d965cf10-4928-495a-9a04-dcdf620c1c0e, network: tcp, udp: true, tls: true, servername: addons.mozilla.org, flow: xtls-rprx-vision, client-fingerprint: chrome, reality-opts: {public-key: YMkRcHUTcKK8DZw5x-pMyM7liKx3lvDnQ4e3Ls_otjI, short-id: ""} }
