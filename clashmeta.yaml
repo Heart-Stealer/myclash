@@ -76,6 +76,243 @@ cfw-bypass-bak:
   - 192.168.*
   - <local>
 proxies:
+  - name: icook-1.5
+    type: vless
+    server: icook.tw
+    port: 2053
+    uuid: b9dad5ed-74da-4a43-8145-90d06df1f890
+    tls: true
+    servername: rix.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: rix.tgzdyz2.top
+    alpn:
+      - http/1.1
+    client-fingerprint: random
+  - name: TG-KR3-3.0
+    type: vless
+    server: 222.108.0.181
+    port: 50000
+    uuid: b9dad5ed-74da-4a43-8145-90d06df1f890
+    tls: true
+    servername: rix.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: rix.tgzdyz2.top
+    alpn:
+      - http/1.1
+    client-fingerprint: random
+  - name: TG-KR6-3.0
+    type: vless
+    server: 125.134.172.40
+    port: 50000
+    uuid: b9dad5ed-74da-4a43-8145-90d06df1f890
+    tls: true
+    servername: rix.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: rix.tgzdyz2.top
+    alpn:
+      - http/1.1
+    client-fingerprint: random
+  - name: TG-TW-Taipei1-0.5
+    type: vless
+    server: 118.163.37.32
+    port: 81
+    uuid: b9dad5ed-74da-4a43-8145-90d06df1f890
+    tls: true
+    servername: rix.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: rix.tgzdyz2.top
+    alpn:
+      - http/1.1
+    client-fingerprint: random
+  - name: TG@ZDYZ2+-JP-Tokyo2
+    type: vless
+    server: 14.48.49.133
+    port: 10000
+    uuid: b9dad5ed-74da-4a43-8145-90d06df1f890
+    tls: true
+    servername: rix.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: rix.tgzdyz2.top
+  - name: TG-奥地利🇦🇹-1.5
+    type: vless
+    server: 94.177.8.26
+    port: 130
+    uuid: b9dad5ed-74da-4a43-8145-90d06df1f890
+    tls: true
+    servername: rix.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: rix.tgzdyz2.top
+    alpn:
+      - http/1.1
+    client-fingerprint: random
+  - name: TG-英国🇬🇧-1.0
+    type: vless
+    server: 213.165.84.57
+    port: 443
+    uuid: b9dad5ed-74da-4a43-8145-90d06df1f890
+    tls: true
+    servername: rix.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: rix.tgzdyz2.top
+    alpn:
+      - http/1.1
+    client-fingerprint: random
+  - name: TG-挪威🇳🇴-2.0
+    type: vless
+    server: 46.29.238.54
+    port: 8443
+    uuid: b9dad5ed-74da-4a43-8145-90d06df1f890
+    tls: true
+    servername: rix.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        host: rix.tgzdyz2.top
+    alpn:
+      - http/1.1
+    client-fingerprint: random
+  - name: 001-0.5
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 002-1.5
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 003-2.5
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 004-2.5
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 005-0.5
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: 046da250-d5ef-4867-9095-302477d54d20
+    tls: false
+    servername: feng.ipy29c99.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng.ipy29c99.workers.dev
+  - name: 021-0.5
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 022-0.5
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 023-1.5
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 024-0.5
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
+  - name: 025-1.5
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: d6ff33a6-03bf-4338-8a63-62ab284a9466
+    tls: false
+    servername: feng4.l1ut8bi9.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: feng4.l1ut8bi9.workers.dev
   - name: zdyz2_002-1.5
     type: vless
     server: www.gov.ua
@@ -88,6 +325,91 @@ proxies:
       path: /
       headers:
         host: feng.ipy29c99.workers.dev
+  - name: 011-0.5
+    type: vless
+    server: ip.sb
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 012-3.5
+    type: vless
+    server: www.gov.ua
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 013-1.5
+    type: vless
+    server: www.ipget.net
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 014-3.5
+    type: vless
+    server: xn--b6gac.eu.org
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: 015-1.5
+    type: vless
+    server: storeships.toptechnonews.com
+    port: 8080
+    uuid: 4c9541c7-5fa1-403c-84af-175e3b25a27f
+    tls: false
+    servername: 201.58vtg99l.workers.dev
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 201.58vtg99l.workers.dev
+  - name: dongtaiwang.com节点1
+    type: vmess
+    server: 104.21.238.114
+    port: 8080
+    cipher: auto
+    uuid: bc839483-5d46-4b42-e8ea-bb62c5ec49c9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: httpupgrade
+  - name: dongtaiwang.com节点2
+    type: vless
+    server: 185.22.153.73
+    port: 25835
+    udp: true
+    uuid: af7f07dc-d726-4b1e-967d-dbb6c594999f
+    tls: true
+    servername: www.yahoo.com
+    flow: xtls-rprx-vision
+    network: tcp
+    reality-opts:
+      public-key: JaUyzihmZ70WZdjNflneJnr99G-TXXtqDBeSNAQzHBc
+      short-id: aff1f4dc
+    client-fingerprint: chrome
   - name: 🇧🇷 Brazil Oracle
     server: 168.75.67.230
     port: 30185
@@ -170,160 +492,6 @@ proxies:
     type: ss
     cipher: 2022-blake3-aes-256-gcm
     password: rw/Rrbu/AOyT6DWZpyiavL88nytpaGTjRLAX6NhcD/c=:esw2VJ3XrBDyKbOHwvoRZEGVdheAyVt3jCVTlNxZIwI=
-  - name: 🇨🇳 ⚡ 节点超时更新订阅⚡
-    type: ss
-    server: osg020.nod3.org
-    port: 29971
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇭🇰 香港01-5.0｜tg@ghosxtop
-    type: ss
-    server: osg020.nod3.org
-    port: 29971
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇭🇰 香港03-1.5｜tg@ghosxtop
-    type: ss
-    server: ohk020.nod3.org
-    port: 12232
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇭🇰 香港04-5.5｜tg@ghosxtop
-    type: ss
-    server: ohk020.nod3.org
-    port: 34936
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇨🇳 台湾01-4.5｜tg@ghosxtop
-    type: ss
-    server: otw020.nod3.org
-    port: 11592
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇨🇳 台湾02-4.5｜tg@ghosxtop
-    type: ss
-    server: otw020.nod3.org
-    port: 14821
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇸🇬 新加坡01-3.5｜tg@ghosxtop
-    type: ss
-    server: osg020.nod3.org
-    port: 29971
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇸🇬 新加坡02-4.0｜tg@ghosxtop
-    type: ss
-    server: osg020.nod3.org
-    port: 22411
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇯🇵 日本01-0.0｜tg@ghosxtop
-    type: ss
-    server: ojp020.nod3.org
-    port: 33811
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇯🇵 日本02-0.0｜tg@ghosxtop
-    type: ss
-    server: ojp020.nod3.org
-    port: 51295
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇺🇸 美国01-0.0｜tg@ghosxtop
-    type: ss
-    server: ous020.nod3.org
-    port: 29413
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇺🇸 美国02-1.0｜tg@ghosxtop
-    type: ss
-    server: ous020.nod3.org
-    port: 19311
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇰🇷 韩国01-6.0｜tg@ghosxtop
-    type: ss
-    server: okr020.nod3.org
-    port: 16018
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇰🇷 韩国02-5.5｜tg@ghosxtop
-    type: ss
-    server: okr020.nod3.org
-    port: 16018
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇹🇷 土耳其01-1.0｜tg@ghosxtop
-    type: ss
-    server: ojots.nod3.org
-    port: 18205
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇹🇷 土耳其02-0.0｜tg@ghosxtop
-    type: ss
-    server: ojots.nod3.org
-    port: 18205
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇺🇦 乌克兰01-1.5｜tg@ghosxtop
-    type: ss
-    server: ojots.nod3.org
-    port: 47922
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇺🇦 乌克兰02-0.0｜tg@ghosxtop
-    type: ss
-    server: ojots.nod3.org
-    port: 47922
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇹🇭 泰国01-1.0｜tg@ghosxtop
-    type: ss
-    server: ojots.nod3.org
-    port: 27315
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇹🇭 泰国02-1.0｜tg@ghosxtop
-    type: ss
-    server: ojots.nod3.org
-    port: 27315
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇻🇳 越南01-0.0｜tg@ghosxtop
-    type: ss
-    server: ojots.nod3.org
-    port: 50189
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
-  - name: 🇻🇳 越南02-0.0｜tg@ghosxtop
-    type: ss
-    server: ojots.nod3.org
-    port: 50189
-    cipher: aes-128-gcm
-    password: 83400fbb-a0ec-411e-8c0f-dc2dd554d9c1
-    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -335,7 +503,32 @@ proxy-groups:
   - name: ☑️ 手动切换
     type: select
     proxies:
+      - icook-1.5
+      - TG-KR3-3.0
+      - TG-KR6-3.0
+      - TG-TW-Taipei1-0.5
+      - TG@ZDYZ2+-JP-Tokyo2
+      - TG-奥地利🇦🇹-1.5
+      - TG-英国🇬🇧-1.0
+      - TG-挪威🇳🇴-2.0
+      - 001-0.5
+      - 002-1.5
+      - 003-2.5
+      - 004-2.5
+      - 005-0.5
+      - 021-0.5
+      - 022-0.5
+      - 023-1.5
+      - 024-0.5
+      - 025-1.5
       - zdyz2_002-1.5
+      - 011-0.5
+      - 012-3.5
+      - 013-1.5
+      - 014-3.5
+      - 015-1.5
+      - dongtaiwang.com节点1
+      - dongtaiwang.com节点2
       - 🇧🇷 Brazil Oracle
       - 🇭🇰 HK-BGP IPV6 KVM  mike
       - 🇫🇮 FL-nodeloc
@@ -343,35 +536,38 @@ proxy-groups:
       - 🇹🇼 TW P1 群佬argo
       - 🇭🇰 LC HK-1
       - 🇨🇦 CA-V6-ss-3TB
-      - 🇨🇳 ⚡ 节点超时更新订阅⚡
-      - 🇭🇰 香港01-5.0｜tg@ghosxtop
-      - 🇭🇰 香港03-1.5｜tg@ghosxtop
-      - 🇭🇰 香港04-5.5｜tg@ghosxtop
-      - 🇨🇳 台湾01-4.5｜tg@ghosxtop
-      - 🇨🇳 台湾02-4.5｜tg@ghosxtop
-      - 🇸🇬 新加坡01-3.5｜tg@ghosxtop
-      - 🇸🇬 新加坡02-4.0｜tg@ghosxtop
-      - 🇯🇵 日本01-0.0｜tg@ghosxtop
-      - 🇯🇵 日本02-0.0｜tg@ghosxtop
-      - 🇺🇸 美国01-0.0｜tg@ghosxtop
-      - 🇺🇸 美国02-1.0｜tg@ghosxtop
-      - 🇰🇷 韩国01-6.0｜tg@ghosxtop
-      - 🇰🇷 韩国02-5.5｜tg@ghosxtop
-      - 🇹🇷 土耳其01-1.0｜tg@ghosxtop
-      - 🇹🇷 土耳其02-0.0｜tg@ghosxtop
-      - 🇺🇦 乌克兰01-1.5｜tg@ghosxtop
-      - 🇺🇦 乌克兰02-0.0｜tg@ghosxtop
-      - 🇹🇭 泰国01-1.0｜tg@ghosxtop
-      - 🇹🇭 泰国02-1.0｜tg@ghosxtop
-      - 🇻🇳 越南01-0.0｜tg@ghosxtop
-      - 🇻🇳 越南02-0.0｜tg@ghosxtop
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - icook-1.5
+      - TG-KR3-3.0
+      - TG-KR6-3.0
+      - TG-TW-Taipei1-0.5
+      - TG@ZDYZ2+-JP-Tokyo2
+      - TG-奥地利🇦🇹-1.5
+      - TG-英国🇬🇧-1.0
+      - TG-挪威🇳🇴-2.0
+      - 001-0.5
+      - 002-1.5
+      - 003-2.5
+      - 004-2.5
+      - 005-0.5
+      - 021-0.5
+      - 022-0.5
+      - 023-1.5
+      - 024-0.5
+      - 025-1.5
       - zdyz2_002-1.5
+      - 011-0.5
+      - 012-3.5
+      - 013-1.5
+      - 014-3.5
+      - 015-1.5
+      - dongtaiwang.com节点1
+      - dongtaiwang.com节点2
       - 🇧🇷 Brazil Oracle
       - 🇭🇰 HK-BGP IPV6 KVM  mike
       - 🇫🇮 FL-nodeloc
@@ -379,56 +575,22 @@ proxy-groups:
       - 🇹🇼 TW P1 群佬argo
       - 🇭🇰 LC HK-1
       - 🇨🇦 CA-V6-ss-3TB
-      - 🇨🇳 ⚡ 节点超时更新订阅⚡
-      - 🇭🇰 香港01-5.0｜tg@ghosxtop
-      - 🇭🇰 香港03-1.5｜tg@ghosxtop
-      - 🇭🇰 香港04-5.5｜tg@ghosxtop
-      - 🇨🇳 台湾01-4.5｜tg@ghosxtop
-      - 🇨🇳 台湾02-4.5｜tg@ghosxtop
-      - 🇸🇬 新加坡01-3.5｜tg@ghosxtop
-      - 🇸🇬 新加坡02-4.0｜tg@ghosxtop
-      - 🇯🇵 日本01-0.0｜tg@ghosxtop
-      - 🇯🇵 日本02-0.0｜tg@ghosxtop
-      - 🇺🇸 美国01-0.0｜tg@ghosxtop
-      - 🇺🇸 美国02-1.0｜tg@ghosxtop
-      - 🇰🇷 韩国01-6.0｜tg@ghosxtop
-      - 🇰🇷 韩国02-5.5｜tg@ghosxtop
-      - 🇹🇷 土耳其01-1.0｜tg@ghosxtop
-      - 🇹🇷 土耳其02-0.0｜tg@ghosxtop
-      - 🇺🇦 乌克兰01-1.5｜tg@ghosxtop
-      - 🇺🇦 乌克兰02-0.0｜tg@ghosxtop
-      - 🇹🇭 泰国01-1.0｜tg@ghosxtop
-      - 🇹🇭 泰国02-1.0｜tg@ghosxtop
-      - 🇻🇳 越南01-0.0｜tg@ghosxtop
-      - 🇻🇳 越南02-0.0｜tg@ghosxtop
   - name: ⚖️ 负载均衡
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: round-robin
     proxies:
+      - TG-KR3-3.0
+      - TG-KR6-3.0
+      - TG-TW-Taipei1-0.5
+      - TG@ZDYZ2+-JP-Tokyo2
+      - TG-奥地利🇦🇹-1.5
+      - TG-英国🇬🇧-1.0
+      - TG-挪威🇳🇴-2.0
+      - 012-3.5
+      - 014-3.5
       - 🇨🇦 CA-V6-ss-3TB
-      - 🇭🇰 香港01-5.0｜tg@ghosxtop
-      - 🇭🇰 香港03-1.5｜tg@ghosxtop
-      - 🇭🇰 香港04-5.5｜tg@ghosxtop
-      - 🇨🇳 台湾01-4.5｜tg@ghosxtop
-      - 🇨🇳 台湾02-4.5｜tg@ghosxtop
-      - 🇸🇬 新加坡01-3.5｜tg@ghosxtop
-      - 🇸🇬 新加坡02-4.0｜tg@ghosxtop
-      - 🇯🇵 日本01-0.0｜tg@ghosxtop
-      - 🇯🇵 日本02-0.0｜tg@ghosxtop
-      - 🇺🇸 美国01-0.0｜tg@ghosxtop
-      - 🇺🇸 美国02-1.0｜tg@ghosxtop
-      - 🇰🇷 韩国01-6.0｜tg@ghosxtop
-      - 🇰🇷 韩国02-5.5｜tg@ghosxtop
-      - 🇹🇷 土耳其01-1.0｜tg@ghosxtop
-      - 🇹🇷 土耳其02-0.0｜tg@ghosxtop
-      - 🇺🇦 乌克兰01-1.5｜tg@ghosxtop
-      - 🇺🇦 乌克兰02-0.0｜tg@ghosxtop
-      - 🇹🇭 泰国01-1.0｜tg@ghosxtop
-      - 🇹🇭 泰国02-1.0｜tg@ghosxtop
-      - 🇻🇳 越南01-0.0｜tg@ghosxtop
-      - 🇻🇳 越南02-0.0｜tg@ghosxtop
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -9777,60 +9939,4 @@ rules:
   - IP-CIDR,200.32.57.0/24,🎯 全球直连,no-resolve
   - IP-CIDR,203.135.0.0/22,🎯 全球直连,no-resolve
   - IP-CIDR,203.135.4.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.8.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.11.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.13.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.20.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.22.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.24.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.26.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.29.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.33.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.38.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.40.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.43.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.48.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.50.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,42.186.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,45.127.128.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.195.24.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,45.253.132.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.253.240.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.254.48.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,59.111.0.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,59.111.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.120.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.128.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.196.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.200.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.12.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.18.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.24.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.28.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.38.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.40.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.44.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.48.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.128.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.74.24.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.74.48.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.126.92.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.129.252.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.131.252.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.135.240.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.196.64.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,106.2.32.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,106.2.64.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,114.113.196.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,114.113.200.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,115.236.112.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,115.238.76.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,123.58.160.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,223.252.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,101.198.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,101.198.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
-  - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
-proxy-providers: {}
-rule-providers: {}
+  - IP-CIDR,203.135.8.0/23,🎯 全球直连,no-resolv
