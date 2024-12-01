@@ -1,11 +1,13 @@
 vless://b9dad5ed-74da-4a43-8145-90d06df1f890@icook.tw:2053?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#icook-1.5
 vless://b9dad5ed-74da-4a43-8145-90d06df1f890@222.108.0.181:50000?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-KR3-3.0
 vless://b9dad5ed-74da-4a43-8145-90d06df1f890@125.134.172.40:50000?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-KR6-3.0
+vless://b9dad5ed-74da-4a43-8145-90d06df1f890@220.118.142.151:50000?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-KR7-2.5
+vless://b9dad5ed-74da-4a43-8145-90d06df1f890@62.72.163.169:51206?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-HK1-0.5
 vless://b9dad5ed-74da-4a43-8145-90d06df1f890@118.163.37.32:81?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-TW-Taipei1-0.5
-vless://b9dad5ed-74da-4a43-8145-90d06df1f890@14.48.49.133:10000?encryption=none&security=tls&sni=rix.tgzdyz2.top&type=ws&host=rix.tgzdyz2.top&path=%2f%3fed%3d2560#TG%40ZDYZ2+-JP-Tokyo2
+vless://b9dad5ed-74da-4a43-8145-90d06df1f890@27.50.49.156:2096?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-SG4-1.5
 vless://b9dad5ed-74da-4a43-8145-90d06df1f890@94.177.8.26:130?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-%E5%A5%A5%E5%9C%B0%E5%88%A9%F0%9F%87%A6%F0%9F%87%B9-1.5
-vless://b9dad5ed-74da-4a43-8145-90d06df1f890@213.165.84.57:443?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-%E8%8B%B1%E5%9B%BD%F0%9F%87%AC%F0%9F%87%A7-1.0
-vless://b9dad5ed-74da-4a43-8145-90d06df1f890@46.29.238.54:8443?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG-%E6%8C%AA%E5%A8%81%F0%9F%87%B3%F0%9F%87%B4-2.0
+vless://b9dad5ed-74da-4a43-8145-90d06df1f890@91.107.128.128:8443?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG0-%E5%BE%B7%E5%9B%BD%F0%9F%87%A9%F0%9F%87%AA2-0.5
+vless://b9dad5ed-74da-4a43-8145-90d06df1f890@205.233.181.36:2053?encryption=none&security=tls&sni=rix.tgzdyz2.top&alpn=http%2F1.1&fp=random&type=ws&host=rix.tgzdyz2.top&path=%2F%3Fed%3D2560#TG%40ZDYZ2-2.0
 vless://046da250-d5ef-4867-9095-302477d54d20@ip.sb:8080?encryption=none&security=none&sni=feng.ipy29c99.workers.dev&type=ws&host=feng.ipy29c99.workers.dev&path=%2F#001-0.5
 vless://046da250-d5ef-4867-9095-302477d54d20@www.gov.ua:8080?encryption=none&security=none&sni=feng.ipy29c99.workers.dev&type=ws&host=feng.ipy29c99.workers.dev&path=%2F#002-1.5
 vless://046da250-d5ef-4867-9095-302477d54d20@www.ipget.net:8080?encryption=none&security=none&sni=feng.ipy29c99.workers.dev&type=ws&host=feng.ipy29c99.workers.dev&path=%2F#003-2.5
