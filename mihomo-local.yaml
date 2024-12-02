@@ -97,7 +97,7 @@ secret: ""
 external-ui: ui
 external-ui-url: "https://ghp.ci/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 # ipv6 支持
-ipv6: false
+ipv6: true
 mode: rule
 # socks5/http 端口
 mixed-port: 7890
@@ -115,7 +115,7 @@ unified-delay: true
 # 同时对所有ip进行连接，返回延迟最低的地址
 tcp-concurrent: true
 # 日志等级 silent/error/warning/info/debug
-log-level: debug
+log-level: info
 # 进程匹配模式
 # 路由器上请设置为 off
 # always 开启，强制匹配所有进程
@@ -134,9 +134,9 @@ skip-auth-prefixes:
   - 127.0.0.1/32
 # tun 模式
 tun:
-  enable: false  # enable 'true'
+  enable: false  # enable true
   device: Mihomo
-  stack: mixed  # or 'gvisor' system
+  stack: mixed  # or gvisor system
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
@@ -148,47 +148,87 @@ tun:
 # dns 设置
 # 已配置 ipv6
 dns:
+  # 是否启用，如为 false，则使用系统 DNS 解析
   enable: true
+  # 是否回应配置中的 hosts，默认 true
+  use-hosts: true
+  # 是否查询系统 hosts，默认 true
+  use-system-hosts: true
+  # DNS 服务监听，仅支持 udp
   listen: :1053
+  # 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
   ipv6: false
   # 路由器个人建议使用 redir-host 以最佳兼容性
   # 漏网之鱼设备可以使用 fake-ip
-  enhanced-mode: fake-ip
+  # 可选值 fake-ip/redir-host，默认redir-host
   # enhanced-mode: redir-host
+  enhanced-mode: fake-ip
+  # fakeip 下的 IP 段设置
   fake-ip-range: 28.0.0.1/8
+  # 可选 blacklist/whitelist，默认blacklist，whitelist 即只有匹配成功才返回 fake-ip
+  # fake-ip-filter-mode: blacklist
+  # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
   fake-ip-filter:
-    - '*'
-    - '+.lan'
-    - '+.local'
-    - 'time.*.com'
-    - 'ntp.*.com'
-    - '+.market.xiaomi.com'
-  use-hosts: false
-  use-system-hosts: false
+    - *
+    - +.lan
+    - +.local
+    - time.*.com
+    - ntp.*.com
+    - +.market.xiaomi.com
+  # 默认的域名解析服务器
   nameserver:
-    - 'tls://8.8.4.4#dns'
-    - 'tls://1.0.0.1#dns'
-    - 'tls://[2001:4860:4860::8844]#dns'
-    - 'tls://[2606:4700:4700::1001]#dns'
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - tls://[2001:4860:4860::8844]#dns
+    - tls://[2606:4700:4700::1001]#dns
+  # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信
+  # 配置 fallback后默认启用 fallback-filter,geoip-code为 cn
+  fallback:
+    - tls://8.8.4.4#dns
+    - tls://1.1.1.1#dns
+  # dns 连接遵守路由规则，需配置 proxy-server-nameserver
+  respect-rules: false
+  # 代理节点域名解析服务器，仅用于解析代理节点的域名，如果不填则遵循nameserver-policy、nameserver和fallback的配置
   proxy-server-nameserver:
-    - 'https://doh.pub/dns-query'
-    - 'https://120.53.53.53/dns-query'
-    - 'https://223.5.5.5/dns-query'
+    - https://doh.pub/dns-query
+    - https://120.53.53.53/dns-query
+    - https://223.5.5.5/dns-query
+  # 是否遵循nameserver-policy，默认为不遵守，仅当direct-nameserver不为空时生效
+  direct-nameserver-follow-policy: false
+  # 后备域名解析服务器筛选，满足条件的将使用 fallback结果或只使用 fallback解析
+  fallback-filter:
+    # 是否启用 geoip 判断
+    geoip: true
+    geoip-code: CN
+    # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback解析，不去使用 nameserver
+    geosite:
+      - gfw
+    # 书写内容为 IP/掩码,这些网段的结果会被视为污染，nameserver解析出这些结果时将会采用 fallback的解析结果
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+    # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback解析，不去使用 nameserver
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+  # 默认 DNS, 用于解析 DNS 服务器 的域名
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
     - 114.114.114.114
-    - '[2402:4e00::]'
-    - '[2400:3200::1]'
+    - [2402:4e00::]
+    - [2400:3200::1]
+  # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
   nameserver-policy:
-    "geosite:cn,private":
+    geosite:cn,private:
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
-    "geosite:!cn,!private": 
-      - "tls://dns.google"
-      - "tls://cloudflare-dns.com"
-      - "tls://dns.google"
-      - "tls://cloudflare-dns.com"
+    geosite:!cn,!private: 
+      - tls://dns.google
+      - tls://cloudflare-dns.com
+      - tls://dns.google
+      - tls://cloudflare-dns.com
 # 域名嗅探
 sniffer:
   enable: true
