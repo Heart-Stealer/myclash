@@ -49,9 +49,9 @@ dingyue: &dingyue
   # type: select
   type: url-test
   use:
-    - 订阅一
+    # - 订阅一
     # - 订阅二
-    # - 本地配置
+    - 本地配置
 
 # 订阅链接
 # 对于订阅来说，path 为选填项，但建议启用
@@ -70,8 +70,8 @@ proxy-providers:
 
   本地配置:
     <<: *urltest
-    path: ./proxy_provider/clashmeta.yaml
-    # path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
+    # path: ./proxy_provider/clashmeta.yaml
+    path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
 
 # 小白请不要继续随意修改以下设置
 # 若需修改请参阅文档 https://wiki.metacubex.one
