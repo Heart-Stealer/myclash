@@ -1,240 +1,16 @@
-#---------------------------------------------------#
-## 配置文件需要放置在 $HOME/.config/clash/config.yml
-## 如果您不知道如何操作，请参阅 Dreamacro / clash 的 Wiki：
-## https://github.com/Dreamacro/clash/wiki
-#---------------------------------------------------#
-# HTTP SOCKS5 使用一个接口进行代理
-mixed-port: 7890
-# HTTP 代理端口
-# port: 7890
-# SOCKS5 代理端口
-# socks-port: 7891
-# Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
-# redir-port: 7892
-# 允许局域网的连接（可用来共享代理）
-allow-lan: true
-# bind-address: "*"
-# 此功能仅在 allow-lan 设置为 true 时生效，支持三种参数：
-# "*"                           绑定所有的 IP 地址
-# 192.168.122.11                绑定一个的 IPv4 地址
-# "[aaaa::a8aa:ff:fe09:57d8]"   绑定一个 IPv6 地址
-# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
-mode: Rule
-# 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-log-level: info
-ipv6: true
-# clash web 控制的 RESTful API
-external-controller: '127.0.0.1:9090'
-
-# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
-# 参数应填写配置目录的相对路径或绝对路径。
-# http://127.0.0.1:9090/ui/#/
-# external-ui: folder
-# yacd面板：  https://github.com/haishanh/yacd
-# Razord面板：http://clash.razord.top/#/proxies
-# external-ui: dashboard
-
-# # 实验性功能
-# experimental:
-#   ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
-#   # interface-name: en0 # outbound interface name
-
-# RESTful API 的口令 (可选)
-# secret: 
-
-# 本地 SOCKS5 / HTTP(S) 服务认证
-# authentication:
-#  - "user1:pass1"
-#  - "user2:pass2"
-
-# # 实验性功能 hosts, 支持通配符 (例如 *.clash.dev 甚至 *.foo.*.example.com)
-# # 静态的域名 比 通配域名 具有更高的优先级 (foo.example.com 优先于 *.example.com)
-# # 注意: hosts 在 fake-ip 模式下不生效
-# hosts:
-#   '*.clash.dev': 127.0.0.1
-hosts:
-  'localhost': 127.0.0.1
-dns:
-  enabled: true
-  ipv6: true
-  listen: '0.0.0.0:53'
-  default-nameserver: [223.5.5.5, 119.29.29.29, 114.114.114.114]
-  # enhanced-mode: redir-host # 或 fake-ip
-  enhanced-mode: fake-ip
-  # # fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
-  fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
-  #fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
-     #- '*.lan'
-     #- localhost.ptlogin2.qq.com
-  use-hosts: true
-  nameserver:
-    # - 1.2.4.8 # 1.2.4.8
-    - 223.5.5.5 # 阿里云 DNS （偏爱）
-    - 223.6.6.6 # 阿里云 DNS （偏爱）
-    - 119.29.29.29 # DNSPod DNS （偏爱）
-    - 180.76.76.76 # 百度云 DNS
-    - 183.60.83.19 # 腾讯云 DNS
-    - 183.60.82.98 # 腾讯云 DNS
-     #- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
-     #- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
-    - 114.114.114.114 # 114 DNS
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - tls://13800000000.rubyfish.cn:853
-    - https://13800000000.rubyfish.cn/
-  # fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
-  fallback:
-    - 8.8.8.8 # Google DNS （偏爱）
-    - 8.8.4.4 # Google DNS （偏爱）
-     #- tls://dns.rubyfish.cn:853
-    - tls://1.0.0.1:853 # （偏爱）
-    - tls://dns.google:853 # （偏爱）
-    - tls://8.8.4.4:853
-     #- https://dns.rubyfish.cn/dns-query
-     #- https://cloudflare-dns.com/dns-query
-     #- https://dns.google/dns-query
-    - https://doh.dns.sb/dns-query
-    - https://dns.twnic.tw/dns-query
-    - https://dns.cloudflare.com/dns-query
-  fallback-filter: {geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32 ]}
-  # fallback-filter:
-  #   geoip: true # 默认
-  #   ipcidr:
-  #     # 在这个网段内的 IP 地址会被考虑为被污染的 IP
-  #     - 240.0.0.0/4
-  # 1. clash DNS 请求逻辑：
-  # (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
-  # (2) clash 将选取 nameserver 列表内，解析最快的结果。
-  # (3) 若解析结果中，IP 地址属于 国外，那么 clash 将选择 fallback 列表内，解析最快的结果。
-  #
-  # 因此，我在 nameserver 和 fallback 内都放置了无污染、解析速度较快的国内 DNS 服务器，以达到最快的解析速度。
-  # 但是 fallback 列表内服务器会用在解析境外网站，为了结果绝对无污染，我仅保留了支持 DoT/DoH 的两个服务器。
-  #
-  # 2. clash DNS 配置注意事项：
-  # (1) 如果您为了确保 DNS 解析结果无污染，请仅保留列表内以 tls:// 或 https:// 开头的 DNS 服务器，但是通常对于国内域名没有必要。
-  # (2) 如果您不在乎可能解析到污染的结果，更加追求速度。请将 nameserver 列表的服务器插入至 fallback 列表内，并移除重复项。
-  #
-  # 3. 关于 DNS over HTTPS (DoH) 和 DNS over TLS (DoT) 的选择：
-  #  对于两项技术双方各执一词，而且会无休止的争论，各有利弊。各位请根据具体需求自行选择，但是配置文件内默认启用 DoT，因为目前国内没有封锁或管制。
-  #  DoH: 以 https:// 开头的 DNS 服务器。拥有更好的伪装性，且几乎不可能被运营商或网络管理封锁，但查询效率和安全性可能略低。
-  #  DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
-  #  若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
-cfw-latency-timeout: 3000
-cfw-latency-url: http://www.gstatic.com/generate_204
-# 混合配置（mixin）
-# 支持向所有配置文件中注入公共属性设置
-#cfw-profile-mixin:
-  #dns:
-    #enable: true
-    #listen: :53
-    #enhanced-mode: fake-ip
-    #nameserver:
-     #- 223.5.5.5 # 阿里DNS
-     #- 180.76.76.76 # 百度DNS
-     #- 119.29.29.29 # 腾讯DNS
-     #- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
-     #- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
-     #- 114.114.114.114 # 114DNS
-  #experimental:
-    #interface-name: WLAN
-#自定义配置目录
-#cfw-profiles-path: 'C:\Users\Administrator\.config\clash\profiles'
-# 打断连接
-# Identify strategy of breaking connections after switching to a new proxy/profile/mode
-# Options for proxy: none, chain(proxy group in connection chains), all
-# Options for profile: true, false
-# Options for mode: true, false
-cfw-conn-break-strategy:
-  proxy: none # none/chain/all
-  profile: true # true/false
-  mode: false # true/false
-# 自定义状态栏图标
-#cfw-tray-icon:
-#default: .\resources\static\imgs\logo_64.png        # 默认图标
-#system-proxy-on: .\resources\static\imgs\custom.ico   # 开启系统代理后图标
-
-# 自定义字体
-#cfw-font-family: "Noto Sans TC"   # 系统中存在的字体
-
-# 自定义请求头
-#cfw-http-headers:
-  #token: "123456"
-  #cfw-version: "0.9.11"
-
-# 自定义节点排序
-# 可选参数：
-#  default：按配置文件定义节点顺序
-#  latency：按节点延迟升序排列
-#  alphabet：按节点名称字母表排列
-# Sort proxies in Proxies module by default/latency/alphabet
-cfw-proxies-order: default
-# 子进程 启动其他应用
-# Run child process after CFW started
-# Refer: https://docs.cfw.lbyczf.com/contents/childprocess.html
-#cfw-child-process:
-  # 启动订阅转换程序，端口号7893
-  #- command: "subconverter.exe" # run.cmd 程序名称 subconverter.exe -cfw >>logs/run.log 2>&1
-    #args:
-      #- "-cfw" # 运行参数1
-      #- "-f" # 运行参数2
-      #- "pref-acl4ssr.yml" # 运行参数3
-    #options:
-      #cwd: subconverter # 子进程工作目录
-      #detached: true # 子进程独立于其父进程运行
-      #shell: true # 则在 shell 中运行 command
-      #windowsHide: true # 隐藏子进程的控制台窗口
-  # 启动网易云，端口号3333
-  #- command: "unblockneteasemusic.exe" # 启动网易云
-    #args:
-      #- "-p" # 运行参数1
-      #- "3333" # 运行参数2
-    #options:
-      #cwd: unblockNeteaseMusic # 子进程工作目录
-      #detached: true # 子进程独立于其父进程运行
-      #shell: true # 则在 shell 中运行 command
-      #windowsHide: true # 隐藏子进程的控制台窗口
-
-# 系统代理跳过列表 cfw-bypass
-# System proxy will ignore these domains(or ipnet)
-# 系统代理跳过列表-备份的，不起作用，
-# 使用时可以将cfw-bypass-bak与cfw-bypass内容互换
-cfw-bypass-bak:
-  # 原有字段不用删除
-  - qq.com
-  - 'music.163.com' # 网易云域名1
-  - '*.music.126.net' # 网易云域名2
-  - localhost
-  - 127.*
-  - 10.*
-  - 172.16.*
-  - 172.17.*
-  - 172.18.*
-  - 172.19.*
-  - 172.20.*
-  - 172.21.*
-  - 172.22.*
-  - 172.23.*
-  - 172.24.*
-  - 172.25.*
-  - 172.26.*
-  - 172.27.*
-  - 172.28.*
-  - 172.29.*
-  - 172.30.*
-  - 172.31.*
-  - 192.168.*
-  - <local>
 proxies:
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
   - {"name": "icook-1.5","type": "vless","server": "icook.tw","port": 2053,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
   - {"name": "TG-KR3-3.0","type": "vless","server": "222.108.0.181","port": 50000,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
   - {"name": "TG-KR6-3.0","type": "vless","server": "125.134.172.40","port": 50000,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  - {"name": "TG-KR7-2.5","type": "vless","server": "220.118.142.151","port": 50000,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  - {"name": "TG-HK1-0.5","type": "vless","server": "62.72.163.169","port": 51206,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
   - {"name": "TG-TW-Taipei1-0.5","type": "vless","server": "118.163.37.32","port": 81,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "TG@ZDYZ2+-JP-Tokyo2","type": "vless","server": "14.48.49.133","port": 10000,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}}}
+  - {"name": "TG-SG4-1.5","type": "vless","server": "27.50.49.156","port": 2096,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
   - {"name": "TG-奥地利🇦🇹-1.5","type": "vless","server": "94.177.8.26","port": 130,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "TG-英国🇬🇧-1.0","type": "vless","server": "213.165.84.57","port": 443,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
-  - {"name": "TG-挪威🇳🇴-2.0","type": "vless","server": "46.29.238.54","port": 8443,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  - {"name": "TG0-德国🇩🇪2-0.5","type": "vless","server": "91.107.128.128","port": 8443,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
+  - {"name": "TG@ZDYZ2-2.0","type": "vless","server": "205.233.181.36","port": 2053,"uuid": "b9dad5ed-74da-4a43-8145-90d06df1f890","tls": true,"servername": "rix.tgzdyz2.top","network": "ws","ws-opts": {"path": "/?ed=2560","headers": {"host": "rix.tgzdyz2.top"}},"alpn": ["http/1.1"],"client-fingerprint": "random"}
   - {"name": "001-0.5","type": "vless","server": "ip.sb","port": 8080,"uuid": "046da250-d5ef-4867-9095-302477d54d20","tls": false,"servername": "feng.ipy29c99.workers.dev","network": "ws","ws-opts": {"path": "/","headers": {"host": "feng.ipy29c99.workers.dev"}}}
   - {"name": "002-1.5","type": "vless","server": "www.gov.ua","port": 8080,"uuid": "046da250-d5ef-4867-9095-302477d54d20","tls": false,"servername": "feng.ipy29c99.workers.dev","network": "ws","ws-opts": {"path": "/","headers": {"host": "feng.ipy29c99.workers.dev"}}}
   - {"name": "003-2.5","type": "vless","server": "www.ipget.net","port": 8080,"uuid": "046da250-d5ef-4867-9095-302477d54d20","tls": false,"servername": "feng.ipy29c99.workers.dev","network": "ws","ws-opts": {"path": "/","headers": {"host": "feng.ipy29c99.workers.dev"}}}
@@ -260,6 +36,41 @@ proxies:
   - {name: 🇹🇼 TW P1 群佬argo,"type": "vless","server": "104.22.55.146","port": 443,"uuid": "48bfe27c-03b7-4ae5-8272-45dd869a2cf1","udp": true,"tls": true,"skip-cert-verify": false,"network": "ws","ws-opts": {"path": "/argox-vl","headers": {"Host": "ware-reveals-dive-technologies.trycloudflare.com"},"max_early_data": 2408,"early_data_header_name": "Sec-WebSocket-Protocol"},"servername": "ware-reveals-dive-technologies.trycloudflare.com"}  
   - {name: 🇭🇰 LC HK-1, server: 103.192.179.19, port: 10311, type: vless, uuid: 0a909b7e-1dea-47ea-b1c8-09d8225e7042, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: -Bo7kNhSGS0S4XAs0oxAW3YEPrR-11SF57TNduoO6R8, short-id: 6a845330}, servername: tesla.com, client-fingerprint: chrome, network: tcp}
   - {name: 🇨🇦 CA-V6-ss-3TB, server: 2607:f748:203:7:1::21, port: 41597, type: ss, cipher: 2022-blake3-aes-256-gcm, password: rw/Rrbu/AOyT6DWZpyiavL88nytpaGTjRLAX6NhcD/c=:esw2VJ3XrBDyKbOHwvoRZEGVdheAyVt3jCVTlNxZIwI=}
+
+
+  - {name: 订阅免费谨防受骗-2.0, server: 104.25.252.185, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o移动 01-2.0, server: 104.25.252.185, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o移动 02-2.0, server: 104.25.254.197, port: 2096, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o移动 03-1.5, server: 172.64.232.169, port: 2053, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o联通 01, server: 104.20.30.149, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o联通 02-2.5, server: 172.67.74.9, port: 2087, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o联通 03, server: 104.20.30.149, port: 2087, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o电信 01, server: 104.19.57.183, port: 2096, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o电信 02-3.5, server: 104.19.103.190, port: 2096, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00o电信 03-3.5, server: 104.19.107.190, port: 2096, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00oIPV6 01-2.0, server: 2606:4700:3036:ef:92f:be51:8695:9fc5, port: 2096, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00oIPV6 02-2.0, server: 2606:4700:3036:0:a36a:4aa4:75d9:9f75, port: 2053, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: o00oIPV6 03-2.0, server: 2606:4700:3036:ef:db9e:eecc:caef:9d4a, port: 2087, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇭🇰 o00o香港 01-2.5, server: 58.232.49.2, port: 12454, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇭🇰 o00o香港 02-2.5, server: 18.162.246.4, port: 18443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇨🇳 o00o台湾 03-2.0, server: 220.135.202.250, port: 81, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇺🇸 o00o美国 01-2.5, server: 38.47.117.77, port: 443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇺🇸 o00o美国 03-2.5, server: 45.140.88.214, port: 4443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇨🇦 o00o加拿大 01-2.0, server: 198.46.131.76, port: 2053, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇨🇦 o00o加拿大 02-2.5, server: 107.175.76.16, port: 443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇦🇺 o00o澳大利亚 02-1.5, server: 45.32.245.32, port: 443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇬🇧 o00o英国 01-2.0, server: 213.165.84.57, port: 443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇬🇧 o00o英国 05-1.5, server: 195.20.233.219, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇫🇷 o00o法国 01-2.5, server: 13.38.105.183, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇮🇹 o00o意大利 01-2.5, server: 51.107.11.76, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇮🇹 o00o意大利 02-2.0, server: 87.120.237.36, port: 81, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇮🇹 o00o意大利 03-2.5, server: 51.107.8.47, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇮🇹 o00o意大利 04-2.0, server: 91.193.5.121, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇳🇱 o00o荷兰 02-1.5, server: 185.204.109.190, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇳🇱 o00o荷兰 03-1.5, server: 95.217.187.142, port: 8080, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇩🇪 o00o德国 01-1.5, server: 51.116.121.75, port: 443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇩🇪 o00o德国 02-1.5, server: 188.166.162.201, port: 443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
+  - {name: 🇩🇪 o00o德国 03-1.5, server: 49.13.215.89, port: 8443, type: vless, uuid: a5c1f802-80fc-410e-890f-b02c83db654d, tls: true, alpn: [http%2F1.1], tfo: false, skip-cert-verify: true, servername: 9876.666888.lol, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 9876.666888.lol}}}
   # - {"name":" 0AKRJPHKTWSGUSCT1","type":"vless","server":"storeships.toptechnonews.com","port":443,"uuid":"cede337b-9ea5-40e5-a8b1-690bf49ff41d","tls":true,"servername":"storeships.toptechnonews.com","network":"ws","ws-opts":{"path":"/nimws"}}
   # - {"name": "13,14|香港2-0.5","type": "trojan","server": "36.151.192.196","port": 42395,"udp": true,"password": "QwwHvrnN","skip-cert-verify": true,"network": "tcp"}
   # - {"name": "13,14|日本-2.0","type": "trojan","server": "36.151.192.239","port": 17806,"udp": true,"password": "QwwHvrnN","skip-cert-verify": true,"network": "tcp"}
@@ -354,7 +165,7 @@ proxies:
   # - {"name":"🇭🇰_HK尽头のCN2香港 0.6MB","type":"trojan","server":"103.15.217.182","port":33058,"udp":true,"password":"QHhbhwe6lj","skip-cert-verify":true,"network":"tcp"}
   # - {"name":"🇸🇬尽头の新加坡Linode","type":"trojan","server":"112.29.94.13","port":443,"udp":true,"password":"123456","skip-cert-verify":true,"network":"tcp"}
   # - {"name":"🇭🇰尽头のlayerstack_CN2+HK","type":"trojan","server":"103.15.217.182","port":33058,"udp":true,"password":"QHhbhwe6lj","skip-cert-verify":true,"network":"tcp"}
-proxy-groups:
+# proxy-groups:
  # 🚀 节点选择 🔰 节点选择 ⚖️ 负载均衡 🎥 NETFLIX 🎯 全球直连 🛑 全球拦截 ⛔️ 广告拦截
  # 🚫 运营劫持 🌍 国外媒体 🌏 国内媒体 📲 电报信息 🍎 苹果服务 🐟 漏网之鱼
  # - name: 自定名称
