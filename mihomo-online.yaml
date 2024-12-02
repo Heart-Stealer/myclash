@@ -97,7 +97,7 @@ secret: ""
 external-ui: ui
 external-ui-url: "https://ghp.ci/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 # ipv6 支持
-ipv6: false
+ipv6: true
 mode: rule
 # socks5/http 端口
 mixed-port: 7890
@@ -115,7 +115,7 @@ unified-delay: true
 # 同时对所有ip进行连接，返回延迟最低的地址
 tcp-concurrent: true
 # 日志等级 silent/error/warning/info/debug
-log-level: debug
+log-level: info
 # 进程匹配模式
 # 路由器上请设置为 off
 # always 开启，强制匹配所有进程
