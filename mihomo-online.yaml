@@ -61,7 +61,7 @@ proxy-providers:
   订阅一:
     <<: *urltest
     path: ./proxy_provider/clashmeta.yaml
-    url: "https://ghp.ci/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmeta.yaml"
+    url: "https://ghp.ci/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml"
 
   # 订阅二:
   #   <<: *urltest
