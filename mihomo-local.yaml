@@ -294,7 +294,6 @@ proxy-groups:
   # 使用 WARP 的用户需要手动在下方的 proxies 字段内添加 WARP
   # 例如 [WARP, 全部节点, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, DIRECT],
   - {name: 节点选择, <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg",}
-
   - {name: 手动选择, <<: *dingyue, <<: *zidong, icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png"}
   - {name: 香港节点, <<: *dingyue, <<: *shoudong, filter: "(?i)港|HK|Hong", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
   - {name: 日本节点, <<: *dingyue, <<: *shoudong, filter: "(?i)日|东京|JP|Japan", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
