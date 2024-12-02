@@ -114,7 +114,26 @@ proxy-groups:
     type: select
     proxies:
       - ☑️ 手动切换
-
+  # - proxy-groups.节点名字.proxies.0+DIRECT # 向指定分组第一个位置添加一个 DIRECT 节点名
+  # 一些可能用到的正则过滤节点示例，使分组更细致
+  # []proxyNames|a                         # 包含a
+  # []proxyNames|^(.*)(a|b)+(.*)$          # 包含a或b
+  # []proxyNames|^(?=.*a)(?=.*b).*$        # 包含a和b
+  # []proxyNames|^((?!b).)*a((?!b).)*$     # 包含a且不包含b
+  # []proxyNames|^((?!b|c).)*a((?!b|c).)*$ # 包含a且不包含b或c
+  # 更多正则教程，请看这里：https://deerchao.cn/tutorials/regex/regex.htm#top
+  # 添加规则集
+    # DOMAIN-SUFFIX：域名后缀匹配。它会检查一个完整的域名，并查看是否以指定的后缀结尾。
+    # DOMAIN：匹配完整域名
+    # DOMAIN-KEYWORD：域名关键字匹配
+    # IP-CIDR：IP段匹配
+    # SRC-IP-CIDR：源IP段匹配
+    # GEOIP：GEOIP数据库（国家代码）匹配
+    # DST-PORT：目标端口匹配
+    # SRC-PORT：源端口匹配
+    # PROCESS-NAME：源进程名匹配
+    # RULE-SET：Rule Provider规则匹配
+    # MATCH：全匹配
 rules:
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,DIRECT,no-resolve
   - DOMAIN,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT,no-resolve
