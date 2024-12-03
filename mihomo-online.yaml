@@ -324,8 +324,8 @@ ntp:
 
 # 锚点
 # 分组
-pr: &pr {type: select, proxies: [香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截, 自动选择, 负载均衡, DIRECT, 手动选择]}
-only: &only {type: select, proxies: [自动选择, DIRECT, 手动选择]}
+pr: &pr {type: select, proxies: [负载均衡, 手动选择, DIRECT, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
+only: &only {type: select, proxies: [手动选择, 自动选择, DIRECT]}
 balance: &balance {type: load-balance, include-all: true, url: "http://www.google.com/generate_204", interval: 600, strategy: round-robin}
 zidong: &zidong {type: url-test, include-all: true, interval: 600, tolerance: 50}
 shoudong: &shoudong {type: select, include-all: true}
