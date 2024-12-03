@@ -174,7 +174,18 @@ dns:
     - '+.local'
     - 'time.*.com'
     - 'ntp.*.com'
-    - '+.market.xiaomi.com'
+    - +.market.xiaomi.com
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+
   # 默认的域名解析服务器
   nameserver:
     - 'https://dns.alidns.com/dns-query'
