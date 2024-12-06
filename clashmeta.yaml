@@ -101,7 +101,7 @@ proxy-groups:
     strategy: round-robin
     use:
       - 我的订阅
-    filter: "(?i)tg|TG|-3.|-4.|-5.|-6."
+    filter: "(?i)-2.|-3.|-4.|-5.|-6."
   - name: 🎯 全球直连
     type: select
     proxies:

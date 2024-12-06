@@ -21,8 +21,8 @@ urltest: &urltest
   interval: 3600
   health-check:
     enable: true
-    url: https://cp.cloudflare.com
-    # url: https://www.gstatic.com/generate_204
+    # url: https://cp.cloudflare.com
+    url: https://www.gstatic.com/generate_204
     # 节点连通性检测时间，单位为秒
     interval: 300
     # 节点超时延迟，单位为毫秒

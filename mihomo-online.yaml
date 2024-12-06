@@ -47,7 +47,7 @@ urltest: &urltest
 dingyue: &dingyue
   # 如果不希望自动切换请将下面两行注释对调
   # type: select
-  type: url-test
+  # type: url-test
   use:
     - 订阅一
     # - 订阅二
@@ -91,6 +91,8 @@ rule-providers:
     url: "https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
     interval: 600
 
+# 用于下载订阅时指定UA
+global-ua: clash
 # 外部控制端口
 external-controller: :9090
 secret: ""
@@ -264,10 +266,6 @@ sniffer:
 profile:
   store-selected: true
   store-fake-ip: true
-
-
-# 用于下载订阅时指定UA
-# global-ua: clash
 
 # 数据库部分
 geo-auto-update: true
