@@ -1,5 +1,5 @@
 proxies:
-  # 80 443 8080 8880 2052 2082
+  # 80 443 8080 8880 2052 2082 
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
   - {"name":"HK-入湖北电信-出香港-V4-3.0","type":"vmess","server":"119.96.137.5","port":21461,"udp":true,"cipher":"auto","uuid":"fc7eb111-1292-4706-f4fb-afba1958924c","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/","headers":{"host":""}},"version":2}
   - {"name":"HK-入湖北电信-出日本-V4-3.0","type":"vmess","server":"119.96.137.5","port":11329,"udp":true,"cipher":"auto","uuid":"fc7eb111-1292-4706-f4fb-afba1958924c","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/","headers":{"host":""}},"version":2}
