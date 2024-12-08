@@ -18,7 +18,7 @@
 urltest: &urltest
   type: http
   # 自动更新订阅时间，单位为秒
-  interval: 3600
+  interval: 43200
   health-check:
     enable: true
     # url: https://cp.cloudflare.com
@@ -26,9 +26,10 @@ urltest: &urltest
     # 节点连通性检测时间，单位为秒
     interval: 300
     # 节点超时延迟，单位为毫秒
-    timeout: 1000
+    timeout: 3000
     # 节点自动切换差值，单位为毫秒
     tolerance: 500
+    lazy: true
 
 # 基础配置
 # --------------------------------------------------
@@ -89,7 +90,7 @@ rule-providers:
     # path可为空(仅限clash.meta 1.15.0以上版本)
     path: ./rule_provider/AWAvenue-Ads.yaml
     url: "https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
-    interval: 600
+    interval: 300
 
 # 用于下载订阅时指定UA
 global-ua: clash
@@ -334,9 +335,9 @@ ntp:
 # 锚点
 # 分组
 pr: &pr {type: select, proxies: [负载均衡, 手动选择, DIRECT, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
-only: &only {type: select, proxies: [手动选择, 自动选择, DIRECT]}
-balance: &balance {type: load-balance, include-all: true, url: "http://www.google.com/generate_204", interval: 600, strategy: round-robin}
-zidong: &zidong {type: url-test, include-all: true, interval: 600, tolerance: 50}
+only: &only {type: select, proxies: [节点选择, 手动选择, 自动选择, DIRECT]}
+balance: &balance {type: load-balance, include-all: true, filter: "(?i)CF|DOM|TG|tg|-2.|-3.|-4.", url: "http://www.google.com/generate_204", interval: 300, strategy: consistent-hashing, lazy: true}
+zidong: &zidong {type: url-test, include-all: true, interval: 300, timeout: 3000, tolerance: 50, lazy: true}
 shoudong: &shoudong {type: select, include-all: true}
 # 策略组
 proxy-groups:
@@ -349,7 +350,7 @@ proxy-groups:
   - {name: 狮城节点, <<: *dingyue, <<: *shoudong, filter: "(?i)新|坡|SG|Singapore", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
   - {name: 美国节点, <<: *dingyue, <<: *shoudong, filter: "(?i)美|US|UM|States|American", icon: "https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
   - {name: 负载均衡, <<: *dingyue, <<: *balance, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"}
-  - {name: 自动选择, <<: *dingyue, <<: *zidong}
+  - {name: 自动选择, <<: *dingyue, <<: *zidong, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
   # - {name: Apple,     !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"}
   # - {name: ChatGPT,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
   # - {name: Google,    !!merge <<: *pr, icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"}
@@ -375,6 +376,7 @@ proxy-groups:
   # 换言之，漏网之鱼走代理就是绕过中国大陆地址，不走就是 GFWList 模式
   - {name: 漏网之鱼,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
   - {name: Apple,     !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
+  - {name: Cloudflare,!!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
   - {name: ChatGPT,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
   - {name: Google,    !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
   - {name: GitHub,    !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
@@ -469,6 +471,7 @@ rules:
   # - GEOSITE,pixiv,Pixiv
   # - GEOSITE,steam,Steam
   - GEOSITE,github,节点选择
+  - GEOSITE,cloudflare,Cloudflare
   - GEOSITE,twitter,Twitter
   - GEOSITE,youtube,YouTube
   - GEOSITE,google,Google

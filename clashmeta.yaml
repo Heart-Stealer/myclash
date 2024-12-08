@@ -59,11 +59,11 @@ proxy-providers:
     url: "https://ghp.ci/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     # filter: 'buzhidao' # 根据关键词返回节点
     # 自动更新订阅时间，单位为秒,节点连通性检测时间，单位为秒
-    interval: 3600
-    # 节点超时延迟，单位为毫秒
-    timeout: 1000
-    # 节点自动切换差值，单位为毫秒
-    tolerance: 100
+    interval: 43200
+    # # 节点超时延迟，单位为毫秒
+    # timeout: 3000
+    # # 节点自动切换差值，单位为毫秒
+    # tolerance: 500
     health-check:
       enable: true
       # url: https://cp.cloudflare.com
@@ -71,7 +71,7 @@ proxy-providers:
       # 节点连通性检测时间，单位为秒
       interval: 300
       # 节点超时延迟，单位为毫秒
-      timeout: 1000
+      timeout: 5000
       # 节点自动切换差值，单位为毫秒
       tolerance: 500
 proxy-groups:
@@ -93,15 +93,17 @@ proxy-groups:
       - 我的订阅
     # url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50
+    tolerance: 500
   - name: ⚖️ 负载均衡
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
-    strategy: round-robin
+    # strategy: round-robin #round-robin 将会把所有的请求分配给策略组内不同的代理节点
+    strategy: consistent-hashing #consistent-hashing 将相同的 目标地址 的请求分配给策略组内的同一个代理节点
+    # strategy: sticky-sessions #sticky-sessions: 将相同的 来源地址 和 目标地址 的请求分配给策略组内的同一个代理节点，缓存 10 分钟过期
     use:
       - 我的订阅
-    filter: "(?i)-2.|-3.|-4.|-5.|-6."
+    filter: "(?i)CF|DOM|-2.|-3.|-4.|-5.|-6."
   - name: 🎯 全球直连
     type: select
     proxies:
