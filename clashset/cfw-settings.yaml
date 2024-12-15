@@ -105,7 +105,7 @@ profileParsersText: >-
           # - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
           # - proxy-groups.⚖️ 其他.proxies=[]proxyNames|(CF)
           # - proxy-groups.0.proxies.0+⚖️ 其他
-          - proxy-groups.⚖️ 负载均衡.proxies=[]proxyNames|((.*CF|DOM)(.*-2.|-3.|-4.|-5.|-6.))
+          - proxy-groups.⚖️ 负载均衡.proxies=[]proxyNames|(.*-2.|-3.|-4.|-5.|-6.)
           - proxy-groups.0.proxies.0+⚖️ 负载均衡
           - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
           - proxy-groups.🐟 漏网之鱼.proxies.0+DIRECT
