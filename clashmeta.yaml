@@ -116,6 +116,8 @@ proxy-groups:
     type: select
     proxies:
       - ☑️ 手动切换
+      - 🚀 节点选择
+      - DIRECT
   # - proxy-groups.节点名字.proxies.0+DIRECT # 向指定分组第一个位置添加一个 DIRECT 节点名
   # 一些可能用到的正则过滤节点示例，使分组更细致
   # []proxyNames|a                         # 包含a
