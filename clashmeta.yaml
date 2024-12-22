@@ -10,40 +10,56 @@ dns:
   enabled: true
   ipv6: true
   listen: 0.0.0.0:53
-  default-nameserver:
-    - 223.5.5.5
-    - 223.6.6.6
-    - 119.29.29.29
-    - 114.114.114.114
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - "*.test"
+    - "*.home.arpa"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '+.local'
+    - '+.market.xiaomi.com'
+    - '+.msftconnecttest.com'
+    - 'router.asus.com'
+    - 'localhost.sec.qq.com'
+    - 'localhost.ptlogin2.qq.com'
   use-hosts: true
-  nameserver: #默认DNS解析走的服务器
+  nameserver: #默认的域名解析服务器
+    - system
     - 223.5.5.5
     - 223.6.6.6
-    - 119.29.29.29
     - 180.76.76.76
-    - 183.60.83.19
-    - 183.60.82.98
-    - 114.114.114.114
-    - https://dns.alidns.com/dns-query
+    - 119.29.29.29
+    - https://doh.360.cn
+    # - https://dns.alidns.com/dns-query
+    # - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
-    - tls://13800000000.rubyfish.cn:853
-    - https://13800000000.rubyfish.cn/
-  fallback: #不会被污染的DNS服务器，默认DNS返回的ip不是国内的会使用fallback中的进行DNS解析
-    - 8.8.8.8
-    - 8.8.4.4
-    - tls://1.0.0.1:853
-    - tls://8.8.4.4:853
-    - tls://dns.google:853
-    - https://doh.dns.sb/dns-query
-    - https://dns.twnic.tw/dns-query
-    - https://dns.cloudflare.com/dns-query
-  fallback-filter:
-    geoip: true
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
+  # fallback: #不会被污染的DNS服务器，默认DNS返回的ip不是国内的会使用fallback中的进行DNS解析
+  #   - 8.8.8.8
+  #   - 1.1.1.1
+  #   - tls://8.8.8.8:853
+  #   - tls://8.8.4.4:853
+  #   - https://1.1.1.1/dns-query
+  #   - https://1.0.0.1/dns-query
+  # fallback-filter:
+  #   geoip: true
+  #   ipcidr:
+  #     - 240.0.0.0/4
+  #     - 0.0.0.0/32
+  #   domain:
+  #     - '+.google.com'
+  #     - '+.facebook.com'
+  #     - '+.youtube.com'
+  #     - '+.instagram.com'    
+  #     - '+.twitter.com'
+  #     - '+.chatgpt.com'
 cfw-latency-timeout: 3000
 cfw-latency-url: http://www.gstatic.com/generate_204
 cfw-conn-break-strategy:

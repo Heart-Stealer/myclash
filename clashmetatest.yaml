@@ -2,7 +2,7 @@ proxies:
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
 
-  - {name: 🇫🇮 FL-ss-1.0, server: 2a01:4f9:1a:aa6f:80:3f:0:10, port: 27207, type: ss, cipher: aes-256-gcm, password: Uc4ZT0gJOEKVytxkNENWIinHPbUYtfFEoHY9I71cpj7E}
+  - {name: 🇫🇮 FL-ss-2.0, server: 2a01:4f9:1a:aa6f:80:3f:0:10, port: 27207, type: ss, cipher: aes-256-gcm, password: Uc4ZT0gJOEKVytxkNENWIinHPbUYtfFEoHY9I71cpj7E}
   - {name: 🇫🇮 FL-nodeloc-0.5, server: 2a01:4f9:1a:aa6f:80:3f:0:10, port: 53888, type: vless, uuid: cc8890ab-ecd3-4875-eecf-16d909db9c04, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: g1f1wLjim5gOVGnI5LGUV0dL4iFXPoiepOPZfSxJe14}, servername: icloud.cdn-apple.com, client-fingerprint: chrome, network: tcp}
   - {"name": "🇭🇰 cac01-3.0","type": "trojan","server": "36.151.192.201","port": 34185,"udp": true,"password": "QwwHvrnN","skip-cert-verify": true,"network": "tcp"}
   # - {"name": "🇭🇰 cac02-0.5","type": "vmess","server": "szhk-yd1.inknode.top","port": 30137,"cipher": "auto","uuid": "acacf011-8f6b-4671-bf4a-5d0ec2d4bcac","alterId": 0,"tls": false,"skip-cert-verify": true,"servername": "","network": "tcp"}
@@ -14,7 +14,7 @@ proxies:
   - {name: 🇺🇸 paste.gg01-3.0, server: arctic.da.1.tw-polarbear.me, port: 40158, type: vless, uuid: 4a53b90d-256b-4f7c-d3b8-8fdc729ed49d, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI}, servername: icloud.cdn-apple.com, client-fingerprint: chrome, network: tcp}
   - {name: 🇭🇰 paste.ggHK-1, server: 103.192.179.19, port: 10311, type: vless, uuid: 0a909b7e-1dea-47ea-b1c8-09d8225e7042, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: -Bo7kNhSGS0S4XAs0oxAW3YEPrR-11SF57TNduoO6R8, short-id: 6a845330}, servername: tesla.com, client-fingerprint: chrome, network: tcp}
   - {name: 🇺🇸 fpaste.gg02, server: 199.245.100.163, port: 55581, type: vless, uuid: 90ac584d-761e-4120-80fe-c83827e2d903, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: y0q-sCEuL7_NSQ7XrxQ0McBOaOcCYkM3Si2Z8MRDKy0, short-id: d57e86f58bde2f5a}, servername: tesla.com, client-fingerprint: chrome, network: tcp}
-  - {name: 🇭🇰 ♾️-狂刷bt-3.0, server: relay.dmit.us.kg, port: 28577, type: vless, uuid: 422e5fb3-724d-4583-8128-c854daf157fe, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: 9rx7JwMO-KRZZEM9TQBO19BOAmmGjJyjN86ll2J7uVc}, servername: icloud.cdn-apple.com, client-fingerprint: chrome, network: tcp}    
+  - {name: 🇭🇰 ♾️-狂刷bt-0.0, server: relay.dmit.us.kg, port: 28577, type: vless, uuid: 422e5fb3-724d-4583-8128-c854daf157fe, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: 9rx7JwMO-KRZZEM9TQBO19BOAmmGjJyjN86ll2J7uVc}, servername: icloud.cdn-apple.com, client-fingerprint: chrome, network: tcp}    
   # - { name: cac01-1.0, type: trojan, server: hgc.node-is.green, port: 46930, password: aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856, udp: true, sni: hk12.bilibili.com, skip-cert-verify: true }
   # - { name: cac02-1.0, type: trojan, server: hgc.node-is.green, port: 46930, password: aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856, udp: true, sni: hk12.bilibili.com, skip-cert-verify: true }
   # - { name: cac03-0.5, type: trojan, server: hgc.node-is.green, port: 46930, password: aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856, udp: true, sni: hk12.bilibili.com, skip-cert-verify: true }
