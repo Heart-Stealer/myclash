@@ -12,12 +12,13 @@ dns:
   listen: 0.0.0.0:53
   default-nameserver:
     - 223.5.5.5
+    - 223.6.6.6
     - 119.29.29.29
     - 114.114.114.114
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
-  nameserver:
+  nameserver: #默认DNS解析走的服务器
     - 223.5.5.5
     - 223.6.6.6
     - 119.29.29.29
@@ -29,7 +30,7 @@ dns:
     - https://doh.pub/dns-query
     - tls://13800000000.rubyfish.cn:853
     - https://13800000000.rubyfish.cn/
-  fallback:
+  fallback: #不会被污染的DNS服务器，默认DNS返回的ip不是国内的会使用fallback中的进行DNS解析
     - 8.8.8.8
     - 8.8.4.4
     - tls://1.0.0.1:853
@@ -56,7 +57,7 @@ proxy-providers:
     # path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
     type: http
     path: ./profiles/proxies/clashmeta.yaml
-    url: "https://ghp.ci/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
+    url: "https://ghgo.xyz/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     # filter: 'buzhidao' # 根据关键词返回节点
     # 自动更新订阅时间，单位为秒,节点连通性检测时间，单位为秒
     interval: 43200
@@ -74,6 +75,19 @@ proxy-providers:
       timeout: 5000
       # 节点自动切换差值，单位为毫秒
       tolerance: 500
+  CF订阅cundu:
+    type: http
+    path: ./profiles/proxies/cundu.eu.org.yaml
+    url: "https://3.cundu.eu.org/233?clash"
+    interval: 43200
+    timeout: 3000
+    tolerance: 500
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 5000
+      tolerance: 500
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -86,11 +100,13 @@ proxy-groups:
     type: select
     use: 
       - 我的订阅
+      - CF订阅cundu
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     use:
       - 我的订阅
+      - CF订阅cundu
     # url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 500
@@ -103,7 +119,9 @@ proxy-groups:
     # strategy: sticky-sessions #sticky-sessions: 将相同的 来源地址 和 目标地址 的请求分配给策略组内的同一个代理节点，缓存 10 分钟过期
     use:
       - 我的订阅
-    filter: "(?i)(.*(-2\.|-3\.|-4\.|-5\.|-6\.))"
+      - CF订阅cundu
+    # filter: "(?i)(.*-2\.|-3\.|-4\.|-5\.|-6\.)"
+    filter: "(?i)(.*-2.|-3.|-4.|-5.|-6.)"
   - name: 🎯 全球直连
     type: select
     proxies:
