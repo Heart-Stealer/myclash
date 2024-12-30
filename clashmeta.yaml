@@ -4,6 +4,7 @@ mode: Rule
 log-level: info
 ipv6: true
 external-controller: 127.0.0.1:9090
+secret: ""
 hosts:
   localhost: 127.0.0.1
 dns:
@@ -73,7 +74,7 @@ proxy-providers:
     # path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
     type: http
     path: ./profiles/proxies/clashmeta.yaml
-    url: "https://ghgo.xyz/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
+    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     # filter: 'buzhidao' # 根据关键词返回节点
     # 自动更新订阅时间，单位为秒,节点连通性检测时间，单位为秒
     interval: 43200
