@@ -2,7 +2,7 @@ proxies:
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
 
-  - {name: 🇫🇮 FL-ss-3.0, server: 2a01:4f9:1a:aa6f:80:3f:0:10, port: 27207, type: ss, cipher: aes-256-gcm, password: Uc4ZT0gJOEKVytxkNENWIinHPbUYtfFEoHY9I71cpj7E}
+  - {name: 🇫🇮 FL-ss-2.0, server: 2a01:4f9:1a:aa6f:80:3f:0:10, port: 27207, type: ss, cipher: aes-256-gcm, password: Uc4ZT0gJOEKVytxkNENWIinHPbUYtfFEoHY9I71cpj7E}
   - {name: 🇫🇮 FL-nodeloc-1.0, server: 2a01:4f9:1a:aa6f:80:3f:0:10, port: 53888, type: vless, uuid: cc8890ab-ecd3-4875-eecf-16d909db9c04, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: g1f1wLjim5gOVGnI5LGUV0dL4iFXPoiepOPZfSxJe14}, servername: icloud.cdn-apple.com, client-fingerprint: chrome, network: tcp}
   - {name: 🇺🇸 paste.gg01-0.5, server: arctic.da.1.tw-polarbear.me, port: 40158, type: vless, uuid: 4a53b90d-256b-4f7c-d3b8-8fdc729ed49d, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI}, servername: icloud.cdn-apple.com, client-fingerprint: chrome, network: tcp}
   - {name: 🇺🇸 fpaste.gg02-0.5, server: 199.245.100.163, port: 55581, type: vless, uuid: 90ac584d-761e-4120-80fe-c83827e2d903, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: y0q-sCEuL7_NSQ7XrxQ0McBOaOcCYkM3Si2Z8MRDKy0, short-id: d57e86f58bde2f5a}, servername: tesla.com, client-fingerprint: chrome, network: tcp}
