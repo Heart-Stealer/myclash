@@ -93,9 +93,9 @@ proxy-providers:
       timeout: 5000
       # 节点自动切换差值，单位为毫秒
       tolerance: 500
-  订阅1:
+  订阅2:
     type: http
-    path: ./profiles/proxies/dingyue1.yaml
+    path: ./profiles/proxies/dingyue2.yaml
     url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
     interval: 43200
     health-check:
@@ -104,10 +104,10 @@ proxy-providers:
       interval: 300
       timeout: 5000
       tolerance: 500
-  订阅2:
+  订阅1:
     type: http
-    path: ./profiles/proxies/dingyue2.yaml
-    url: "https://suo.yt/fDxQQmu"
+    path: ./profiles/proxies/dingyue1.yaml
+    url: "https://vot.278986.xyz/api/v1/client/subscribe?token=a4d2c261eb6f52d43201347b43f7535c"
     interval: 43200
     health-check:
       enable: true
