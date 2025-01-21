@@ -3,25 +3,51 @@ proxies:
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
 
   - {"name": "S.a.s-hysteria-2.0","type": "hysteria","server": "195.154.184.5","port": 22787,"sni": "bing.com","skip-cert-verify": true,"alpn": ["h3"],"auth_str": "dongtaiwang.com","up": 11,"down": 55}
-  - {"name": "🇭🇰 Alibaba -2.0","type": "vless","server": "nautica.foolvpn.me","port": 443,"uuid": "c7d543af-1023-4b96-a698-187c190d3f4c","tls": true,"servername": "nautica.foolvpn.me","flow": "","network": "ws","ws-opts": {"path": "/47.89.39.186-39251","headers": {"host": "nautica.foolvpn.me"}}}
-  # - {"name": "🇷🇺 RU-Hysteria2 |-1.0","type": "hysteria2","server": "46.17.41.189","port": 50717,"password": "dongtaiwang.com","sni": "www.bing.com","skip-cert-verify": true}
   - {"name": "中国32-1.0","type": "trojan","server": "ru0195.alibabaokz.com","port": 60194,"udp": true,"password": "38571ca6-6692-4559-b901-0bc5826b7661","sni": "ru0195.alibabaokz.com","skip-cert-verify": true,"network": "tcp"}
   - {"name":"芬兰 2","type":"vmess","server":"2a01:4f9:6b:4a8f:b4::b","port":20001,"cipher":"auto","uuid":"bbfc45c1-6ee9-43c4-ecf5-60de6d16c965","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/"}}
   - {"name":"芬兰","type":"vmess","server":"2a01:4f9:6b:4a8f:b4::a","port":20000,"cipher":"auto","uuid":"1901a9bd-0b8b-4752-9b9a-482e2fb83ad3","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/"}}
   - {"name":"美国 06-5.0","type":"vmess","server":"s2.db-link01.top","port":8080,"cipher":"auto","uuid":"4b36625c-b9d9-3ea6-aed5-86d62c70e16d","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dabai.in172.67.56.88","headers":{"host":"100-117-147-51.s2.db-link01.top"}}}
-  - {"name":"美国 04","type":"vmess","server":"s1.db-link01.top","port":8880,"cipher":"auto","uuid":"4b36625c-b9d9-3ea6-aed5-86d62c70e16d","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dabai.in172.67.95.35","headers":{"host":"100-250-32-53.s1.db-link01.top"}}}
   - {"name":"美国 03-5.0","type":"vmess","server":"s1.cn-db.top","port":2052,"cipher":"auto","uuid":"4b36625c-b9d9-3ea6-aed5-86d62c70e16d","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dabai.in104.17.147.251","headers":{"host":"100-52-246-28.s1.cn-db.top"}}}
+  - {"name":"CN-50Mbps-100G","type":"vmess","server":"dxv4.pai50288.uk","port":14100,"cipher":"auto","uuid":"f6866b0b-f946-4a03-8df0-c7e0016b55ad","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  - {"name": "xrayvip-3.0","type": "vmess","server": "irvideo.cfd","port": 443,"cipher": "auto","uuid": "e537f2f5-2a0c-4f59-92c9-832ca6433bf3","alterId": 0,"tls": true,"skip-cert-verify": true,"servername": "","network": "ws","ws-opts": {"path": "/linkws","headers": {"host": "irvideo.cfd"}}}
+  - {"name": "法国1-1.0","type": "vmess","server": "163.5.159.231","port": 443,"cipher": "auto","uuid": "e537f2f5-2a0c-4f59-92c9-832ca6433bf3","alterId": 0,"tls": true,"skip-cert-verify": true,"servername": "","network": "ws","ws-opts": {"path": "/linkws","headers": {"host": "irvideo.cfd"}}}
+  # - {"name": "🇭🇰 Alibaba -2.0","type": "vless","server": "nautica.foolvpn.me","port": 443,"uuid": "c7d543af-1023-4b96-a698-187c190d3f4c","tls": true,"servername": "nautica.foolvpn.me","flow": "","network": "ws","ws-opts": {"path": "/47.89.39.186-39251","headers": {"host": "nautica.foolvpn.me"}}}
+  # - {"name": "🇷🇺 RU-Hysteria2 |-1.0","type": "hysteria2","server": "46.17.41.189","port": 50717,"password": "dongtaiwang.com","sni": "www.bing.com","skip-cert-verify": true}
+  - {"name":"美国 04","type":"vmess","server":"s1.db-link01.top","port":8880,"cipher":"auto","uuid":"4b36625c-b9d9-3ea6-aed5-86d62c70e16d","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dabai.in172.67.95.35","headers":{"host":"100-250-32-53.s1.db-link01.top"}}}
   # - {"name":"新加坡-D2","type":"ss","server":"gdgs.tarioblink.me","port":30003,"password":"3164812a-caea-4cd7-acad-9cf0627aac08","cipher":"chacha20-ietf-poly1305"}
   # - {"name":"新加坡-C2","type":"ss","server":"gdgs.tarioblink.me","port":30001,"password":"3164812a-caea-4cd7-acad-9cf0627aac08","cipher":"chacha20-ietf-poly1305"}
   # - {"name":"新加坡-B2","type":"ss","server":"gdgs.tarioblink.me","port":30003,"password":"a81b96c6-d133-4458-b254-308c6bc49127","cipher":"chacha20-ietf-poly1305"}
   # - {"name":"新加坡-A2","type":"ss","server":"gdgs.tarioblink.me","port":30001,"password":"a81b96c6-d133-4458-b254-308c6bc49127","cipher":"chacha20-ietf-poly1305"}
   - {"name":"德国-2.0-无限量-50Mbps-解锁奈非和GPT-TG分享","type":"vmess","server":"dxv4.pai50288.uk","port":14100,"cipher":"auto","uuid":"a43daf38-eb5b-48cf-b89e-0deff6392183","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
-  # - {"name":"CN-50Mbps-100G","type":"vmess","server":"dxv4.pai50288.uk","port":14100,"cipher":"auto","uuid":"f6866b0b-f946-4a03-8df0-c7e0016b55ad","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  - {name: 🇫🇷 FR-法国3, server: grown-urchin.treefrog761.one, port: 443, client-fingerprint: chrome, type: trojan, password: !<str> 3760559353321758720, skip-cert-verify: true, udp: true}
   # - {"name":"defaultName_5","type":"ss","server":"gdgs.tarioblink.me","port":30001,"password":"a81b96c6-d133-4458-b254-308c6bc49127","cipher":"chacha20-ietf-poly1305"}
   # - {"name":"defaultName_8","type":"ss","server":"gdgs.tarioblink.me","port":30001,"password":"3164812a-caea-4cd7-acad-9cf0627aac08","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇭🇰 HK DV 100M_1","type":"vless","server":"dv.wifi6.ggff.net","port":54735,"udp":true,"uuid":"54c68483-f072-40bb-dead-b7635bc206f1","tls":true,"servername":"icloud.cdn-apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rwpbqas_HY8knlW0fFSIeUrjgBXHBzSNboflsLD8elA"},"client-fingerprint":"chrome"}
   - {"name":"🇭🇰 HK DV 100M_2","type":"vless","server":"dv.dmit.us.kg","port":54735,"udp":true,"uuid":"54c68483-f072-40bb-dead-b7635bc206f1","tls":true,"servername":"icloud.cdn-apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rwpbqas_HY8knlW0fFSIeUrjgBXHBzSNboflsLD8elA"},"client-fingerprint":"chrome"}
 
+  - { name: 美国1, type: hysteria2, server: a.2513142.xyz, port: 443, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 美国2, type: hysteria2, server: a.2513142.xyz, port: 18880, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 美国3, type: hysteria2, server: a.2513142.xyz, port: 18881, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 美国4, type: hysteria2, server: a.2513142.xyz, port: 18882, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 美国5, type: hysteria2, server: a.2513142.xyz, port: 18883, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 美国6, type: hysteria2, server: a.2513142.xyz, port: 18884, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 美国7, type: hysteria2, server: a.2513142.xyz, port: 18885, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 美国8, type: hysteria2, server: a.2513142.xyz, port: 18886, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 新加坡1, type: hysteria2, server: d.2513142.xyz, port: 443, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 新加坡2, type: hysteria2, server: d.2513142.xyz, port: 18880, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 新加坡3, type: hysteria2, server: d.2513142.xyz, port: 18881, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 德国1, type: hysteria2, server: c.2513142.xyz, port: 443, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 德国2, type: hysteria2, server: c.2513142.xyz, port: 18880, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 德国3, type: hysteria2, server: c.2513142.xyz, port: 18881, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 德国4, type: hysteria2, server: c.2513142.xyz, port: 18882, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 德国5, type: hysteria2, server: c.2513142.xyz, port: 18883, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 德国6, type: hysteria2, server: c.2513142.xyz, port: 18884, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 澳大利亚1, type: hysteria2, server: b.2513142.xyz, port: 443, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 澳大利亚2, type: hysteria2, server: b.2513142.xyz, port: 18880, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 澳大利亚3, type: hysteria2, server: b.2513142.xyz, port: 18881, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 澳大利亚4, type: hysteria2, server: b.2513142.xyz, port: 18882, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 澳大利亚5, type: hysteria2, server: b.2513142.xyz, port: 18883, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
+  - { name: 澳大利亚6, type: hysteria2, server: b.2513142.xyz, port: 18884, password: 'mSIusSz2Ku3YUWxB85cQa', skip-cert-verify: true }
   # - {"name":"🇳🇱 Netherlands","type":"vless","server":"46.8.231.117","port":15717,"udp":true,"uuid":"e306cd50-37df-42d1-bcbf-8043437b7f9a","tls":true,"servername":"swdist.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"yWZ2PQ3Wytrm0vEIMqxD5_LnqlFQBL-RujWD_8ldyBo","short-id":"9200225c5aaf"},"client-fingerprint":"chrome"}
   # - {"name":"🇺🇸 US 8477","type":"vless","server":"137.175.84.77","port":32066,"udp":true,"uuid":"f2fa2843-5614-4fa7-99fe-da22f7307ad8","tls":true,"servername":"apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"-LeP2n_qttyDuBpYQA8a7q4AOYeQGOkkaxnyLlb8vgo","short-id":"4f27"},"client-fingerprint":"chrome"}
   # - {"name":"🇺🇸 US 8499","type":"vless","server":"137.175.84.99","port":38448,"udp":true,"uuid":"37b3a358-4648-4a16-97f8-d55c12aeae93","tls":true,"servername":"apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"cY8GEjT96B3DoMSmcuTZbmIG3t94ra_5oUyOZaOTHn8","short-id":"01b8"},"client-fingerprint":"chrome"}
