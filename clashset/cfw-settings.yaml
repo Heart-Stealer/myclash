@@ -12,7 +12,7 @@ connShowProcess: true
 showTrayProxyDelayIndicator: true
 showNotifications: true
 randomMixedPort: false
-lightweightMode: false
+lightweightMode: true
 theme: 1
 systemTheme: true
 fontFamily: ""
@@ -29,8 +29,8 @@ proxyOrder: 0
 proxyDelayType: 0
 latencyUrl: http://www.google.com/generate_204
 latencyTimeout: .nan
-showProxyFilter: false
-hideUnselectableGroup: true
+showProxyFilter: true
+hideUnselectableGroup: false
 connProxy: 0
 connProfile: false
 connMode: false
@@ -105,7 +105,7 @@ profileParsersText: >-
           # - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
           # - proxy-groups.⚖️ 其他.proxies=[]proxyNames|(CF)
           # - proxy-groups.0.proxies.0+⚖️ 其他
-          - proxy-groups.⚖️ 负载均衡.proxies=[]proxyNames|(.*-2.|-3.|-4.|-5.|-6.)
+          - proxy-groups.⚖️ 负载均衡.proxies=[]proxyNames|(.*(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.)))
           - proxy-groups.0.proxies.0+⚖️ 负载均衡
           - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
           - proxy-groups.🐟 漏网之鱼.proxies.0+DIRECT
