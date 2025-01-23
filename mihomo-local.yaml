@@ -59,20 +59,21 @@ dingyue: &dingyue
 # 本地配置可以只填 path
 proxy-providers:
   
-  订阅一:
-    <<: *urltest
-    path: ./proxy_provider/dingyue1.yaml
-    url: "https://gh-proxy.com/https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
+  # 订阅一:
+  #   <<: *urltest
+  #   path: ./proxy_provider/dingyue1.yaml
+  #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
 
-  订阅二:
-    <<: *urltest
-    path: ./proxy_provider/dingyue2.yaml
-    url: "https://gh-proxy.com/https://suo.yt/fDxQQmu"
+  # 订阅二:
+  #   <<: *urltest
+  #   path: ./proxy_provider/dingyue2.yaml
+  #   url: "https://suo.yt/fDxQQmu"
 
   本地配置:
     <<: *urltest
     # path: ./proxy_provider/clashmeta.yaml
-    path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
+    # 默认只允许存储在 mihomo 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml" 
 
 # 小白请不要继续随意修改以下设置
 # 若需修改请参阅文档 https://wiki.metacubex.one
@@ -337,7 +338,7 @@ ntp:
 # 分组
 pr: &pr {type: select, proxies: [负载均衡, 手动选择, DIRECT, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
 only: &only {type: select, proxies: [节点选择, 手动选择, 自动选择, DIRECT]}
-balance: &balance {type: load-balance, include-all: true, filter: "(?i)(.*(-2.|-3.|-4.|-5.))", url: "http://www.google.com/generate_204", interval: 300, strategy: consistent-hashing, lazy: true}
+balance: &balance {type: load-balance, include-all: true, filter: "(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))", url: "http://www.google.com/generate_204", interval: 300, strategy: consistent-hashing, lazy: true}
 zidong: &zidong {type: url-test, include-all: true, interval: 300, timeout: 3000, tolerance: 50, lazy: true}
 shoudong: &shoudong {type: select, include-all: true}
 # 策略组

@@ -93,10 +93,10 @@ proxy-providers:
       timeout: 5000
       # 节点自动切换差值，单位为毫秒
       tolerance: 500
-  # 订阅2:
+  # 订阅1:
   #   type: http
-  #   path: ./profiles/proxies/dingyue2.yaml
-  #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
+  #   path: ./profiles/proxies/dingyue1.yaml
+  #   url: "http://csgo3.fask511.cfd:1588/api/v1/client/subscribe?token=145b15f91f224adcb7fff14c738aa737"
   #   interval: 43200
   #   health-check:
   #     enable: true
@@ -104,9 +104,9 @@ proxy-providers:
   #     interval: 300
   #     timeout: 5000
   #     tolerance: 500
-  # 订阅1:
+  # 订阅2:
   #   type: http
-  #   path: ./profiles/proxies/dingyue1.yaml
+  #   path: ./profiles/proxies/dingyue2.yaml
   #   url: "https://ts.xship.top/v1/subscribe?starlink=mSIusSz2Ku3YUWxB85cQa"
   #   interval: 43200
   #   health-check:
@@ -150,8 +150,8 @@ proxy-groups:
       - 我的订阅
       # - 订阅1
       # - 订阅2
-    # filter: "(?i)(.*-2\.|-3\.|-4\.|-5\.|-6\.)"
-    filter: "(?i)(.*-2.|-3.|-4.|-5.|-6.)"
+    # filter: "(?i)(.*-0.|-1.)"
+    filter: "(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))"
   - name: 🎯 全球直连
     type: select
     proxies:

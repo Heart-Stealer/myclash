@@ -38,7 +38,7 @@ urltest: &urltest
 
 # 也可以把分割线以内的内容粘贴到您使用代理工具的「覆写」功能，然后在覆写中进行修改
 # 使用覆写时可以直接将此配置文件作为订阅链接进行订阅
-# https://ghgo.xyz/https://gist.githubusercontent.com/liuran001/5ca84f7def53c70b554d3f765ff86a33/raw/c1d33956db7097252b88a6c06ed76f32526747c4/config.yaml
+# https://gh-proxy.com/https://gist.githubusercontent.com/liuran001/5ca84f7def53c70b554d3f765ff86a33/raw/c1d33956db7097252b88a6c06ed76f32526747c4/config.yaml
 
 # 如果你需要使用大于两个机场，在下方 `dingyue` 处添加 `订阅三` （名字可以自己取），然后在 `proxy-providers` 照例添加订阅链接即可
 # 反之，如果你只需要使用一个，那么将 `订阅二` 前添加 `#` 进行注释即可
@@ -62,7 +62,7 @@ proxy-providers:
 #   订阅一:
 #     <<: *urltest
 #     path: ./proxy_provider/clashmeta.yaml
-#     url: "https://ghgo.xyz/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmeta.yaml"
+#     url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmeta.yaml"
 
   # 订阅二:
   #   <<: *urltest
@@ -89,14 +89,14 @@ rule-providers:
     format: yaml
     # path可为空(仅限clash.meta 1.15.0以上版本)
     path: ./rule_provider/AWAvenue-Ads.yaml
-    url: "https://ghgo.xyz/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
     interval: 300
 
 # 外部控制端口
 external-controller: :9090
 secret: ""
 external-ui: ui
-external-ui-url: "https://ghgo.xyz/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+external-ui-url: "https://gh-proxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 # ipv6 支持
 ipv6: true
 mode: rule
@@ -269,10 +269,10 @@ geodata-loader: standard
 # 源地址 https://github.com/MetaCubeX/meta-rules-dat
 # 可以更换镜像站但不要更换漏网之鱼数据库，可能导致无法启动
 geox-url:
-  geoip: "https://ghgo.xyz/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://ghgo.xyz/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://ghgo.xyz/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
-  asn: "https://ghgo.xyz/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
+  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
   # asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
 # tcp保持连接
 # 缓解移动设备耗电问题
@@ -327,7 +327,7 @@ ntp:
 # 分组
 pr: &pr {type: select, proxies: [负载均衡, 手动选择, DIRECT, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
 only: &only {type: select, proxies: [节点选择, 手动选择, 自动选择, DIRECT]}
-balance: &balance {type: load-balance, include-all: true, filter: "(?i)(.*(-2.|-3.|-4.|-5.))", url: "http://www.google.com/generate_204", interval: 300, strategy: consistent-hashing, lazy: true}
+balance: &balance {type: load-balance, include-all: true, filter: "(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))", url: "http://www.google.com/generate_204", interval: 300, strategy: consistent-hashing, lazy: true}
 zidong: &zidong {type: url-test, include-all: true, interval: 300, timeout: 3000, tolerance: 50, lazy: true}
 shoudong: &shoudong {type: select, include-all: true}
 # 策略组
@@ -335,11 +335,11 @@ proxy-groups:
   # 使用 WARP 的用户需要手动在下方的 proxies 字段内添加 WARP
   # 例如 [WARP, 全部节点, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, DIRECT],
   - {name: 节点选择, <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg",}
-  - {name: 手动选择, <<: *zidong, icon: "https://ghgo.xyz/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png"}
-  - {name: 香港节点, <<: *shoudong, filter: "(?i)港|HK|Hong", icon: "https://ghgo.xyz/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
-  - {name: 日本节点, <<: *shoudong, filter: "(?i)日|东京|JP|Japan", icon: "https://ghgo.xyz/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
-  - {name: 狮城节点, <<: *shoudong, filter: "(?i)新|坡|SG|Singapore", icon: "https://ghgo.xyz/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
-  - {name: 美国节点, <<: *shoudong, filter: "(?i)美|US|UM|States|American", icon: "https://ghgo.xyz/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
+  - {name: 手动选择, <<: *zidong, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png"}
+  - {name: 香港节点, <<: *shoudong, filter: "(?i)港|HK|Hong", icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
+  - {name: 日本节点, <<: *shoudong, filter: "(?i)日|东京|JP|Japan", icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
+  - {name: 狮城节点, <<: *shoudong, filter: "(?i)新|坡|SG|Singapore", icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
+  - {name: 美国节点, <<: *shoudong, filter: "(?i)美|US|UM|States|American", icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
   - {name: 负载均衡, <<: *balance, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"}
   - {name: 自动选择, <<: *zidong, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
   # - {name: Apple,     !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"}

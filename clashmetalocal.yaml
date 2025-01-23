@@ -71,7 +71,7 @@ cfw-proxies-order: default
 proxy-providers:
   我的订阅:
     type: file
-    path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
+    path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml"
     # type: http
     # path: ./profiles/proxies/clashmeta.yaml
     # url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
@@ -114,6 +114,17 @@ proxy-providers:
       interval: 300
       timeout: 5000
       tolerance: 500
+  订阅3:
+    type: http
+    path: ./profiles/proxies/dingyue3.yaml
+    url: "http://csgo3.fask511.cfd:1588/api/v1/client/subscribe?token=145b15f91f224adcb7fff14c738aa737"
+    interval: 43200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 5000
+      tolerance: 500
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -126,11 +137,13 @@ proxy-groups:
     type: select
     use: 
       - 我的订阅
+      # - 订阅3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     use:
       - 我的订阅
+      # - 订阅3
     # url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 500
@@ -143,8 +156,9 @@ proxy-groups:
     # strategy: sticky-sessions #sticky-sessions: 将相同的 来源地址 和 目标地址 的请求分配给策略组内的同一个代理节点，缓存 10 分钟过期
     use:
       - 我的订阅
-    # filter: "(?i)(.*-2\.|-3\.|-4\.|-5\.|-6\.)"
-    filter: "(?i)(.*-2.|-3.|-4.|-5.|-6.)"
+      # - 订阅3
+    # filter: "(?i)(.*-2.|-3.|-4.|-5.|-6.)"
+    filter: "(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))"
   - name: 🎯 全球直连
     type: select
     proxies:

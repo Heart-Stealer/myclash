@@ -337,7 +337,7 @@ ntp:
 # 分组
 pr: &pr {type: select, proxies: [负载均衡, 手动选择, DIRECT, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
 only: &only {type: select, proxies: [节点选择, 手动选择, 自动选择, DIRECT]}
-balance: &balance {type: load-balance, include-all: true, filter: "(?i)(.*(-2.|-3.|-4.|-5.))", url: "http://www.google.com/generate_204", interval: 300, strategy: consistent-hashing, lazy: true}
+balance: &balance {type: load-balance, include-all: true, filter: "(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))", url: "http://www.google.com/generate_204", interval: 300, strategy: consistent-hashing, lazy: true}
 zidong: &zidong {type: url-test, include-all: true, interval: 300, timeout: 3000, tolerance: 50, lazy: true}
 shoudong: &shoudong {type: select, include-all: true}
 # 策略组
