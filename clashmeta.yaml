@@ -9,7 +9,7 @@ hosts:
   localhost: 127.0.0.1
 dns:
   enabled: true
-  ipv6: true
+  ipv6: false
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
@@ -31,24 +31,39 @@ dns:
     - 'localhost.ptlogin2.qq.com'
     - 'xbox.*.microsoft.com'
   use-hosts: true
+  default-nameserver:
+    - 223.5.5.5
+    - 223.6.6.6
   nameserver: #默认的域名解析服务器
     - system
     - https://223.5.5.5/dns-query
     - https://223.6.6.6/dns-query
     - https://doh.pub/dns-query
-    # - https://doh.360.cn
-    # - https://dns.alidns.com/dns-query
-    # - https://doh.pub/dns-query
   proxy-server-nameserver:
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
-  # fallback: #不会被污染的DNS服务器，默认DNS返回的ip不是国内的会使用fallback中的进行DNS解析
+  fallback: #不会被污染的DNS服务器，默认DNS返回的ip不是国内的会使用fallback中的进行DNS解析
+    - tls://8.8.8.8:853
+    - tls://8.8.4.4:853
   #   - 8.8.8.8
   #   - 1.1.1.1
-  #   - tls://8.8.8.8:853
-  #   - tls://8.8.4.4:853
+    # - tls://8.8.8.8:853
+    # - tls://8.8.4.4:853
   #   - https://1.1.1.1/dns-query
   #   - https://1.0.0.1/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - '+.instagram.com'    
+      - '+.twitter.com'
+      - '+.chatgpt.com'
   # fallback-filter:
   #   geoip: true
   #   ipcidr:
