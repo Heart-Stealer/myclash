@@ -1,4 +1,4 @@
-showNewVersionIcon: true
+showNewVersionIcon: false
 hideAfterStartup: true
 randomControllerPort: false
 runTimeFormat: "hh : mm : ss"
@@ -18,7 +18,7 @@ systemTheme: true
 fontFamily: ""
 useSystemEmoji: false
 useModeIcons: false
-trayProxiesStyle: 0
+trayProxiesStyle: 1
 trayColorTransparent: false
 systemProxyTypeIndex: 0
 specifyHttpProxyProtocol: false
@@ -336,7 +336,7 @@ mixinCode: |-
   module.exports.parse = ({ content, name, url }, { yaml, axios, notify }) => {
     return content
   }
-checkForUpdates: true
+checkForUpdates: false
 bypassText: |-
   bypass:
     - localhost
@@ -362,3 +362,4 @@ bypassText: |-
     - <local>
     - surrit.com
     - sixyik.com
+updateProfileThroughClashProxy: false
