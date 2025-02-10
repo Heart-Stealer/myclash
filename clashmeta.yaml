@@ -186,6 +186,7 @@ rules:
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
   - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,🚀 节点选择
   # - DOMAIN-SUFFIX,bilibili.com,DIRECT,tcp   #【Meta专属】可指定协议类型(tcp/udp)
+
   #目的域名规则
   - DOMAIN,google.com,🚀 节点选择
   #目的域名关键字规则
@@ -239,6 +240,27 @@ rules:
   - GEOIP,netflix,NETFLIX,no-resolve
   - GEOIP,telegram,Telegram,no-resolve
   - GEOIP,twitter,Twitter,no-resolve
+
+  # 给GEOIP和GEOSITE备用的匹配规则
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,icloud,DIRECT #
+  - RULE-SET,apple,DIRECT # 这三个为国内可直连地址，如果希望走代理改为🚀 节点选择
+  - RULE-SET,google,DIRECT #
+  - RULE-SET,tld-not-cn,🚀 节点选择
+  - RULE-SET,gfw,🚀 节点选择
+  - RULE-SET,greatfire,🚀 节点选择
+  - RULE-SET,telegramcidr,🚀 节点选择
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,proxy,🚀 节点选择
+
   - MATCH,🐟 漏网之鱼
   
 rule-providers:
@@ -302,3 +324,87 @@ rule-providers:
     url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
     path: ./rules/ProgramAD.yaml
     interval: 86400  
+  reject: # 广告域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud: # iCloud 域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple: # Apple 在中国大陆可直连的域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google: # Google 在中国大陆可直连的域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy: # 代理域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct: # 直连域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private: # 私有网络专用域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw: # GFWList 域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire: # GreatFire 域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn: # 非中国大陆使用的顶级域名列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr: # Telegram 使用的 IP 地址列表
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr: # 中国大陆 IP 地址列表
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr: # 局域网 IP 及保留 IP 地址列表
+     type: http
+     behavior: ipcidr
+     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+     path: ./ruleset/lancidr.yaml
+     interval: 86400
+  applications: # 需要直连的常见软件列表
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
