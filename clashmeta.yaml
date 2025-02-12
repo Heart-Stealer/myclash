@@ -118,6 +118,17 @@ proxy-providers:
       interval: 300
       timeout: 5000
       tolerance: 500
+  10T12mouth:
+    type: http
+    path: ./profiles/proxies/10T12mouth.yaml
+    url: https://suo.yt/xGo1FPI
+    interval: 21600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 5000
+      tolerance: 500
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -130,11 +141,13 @@ proxy-groups:
     type: select
     use:
       - 我的订阅
+      - 10T12mouth
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     use:
       - 我的订阅
+      - 10T12mouth
     interval: 300
     tolerance: 500
   - name: ⚖️ 负载均衡
@@ -144,6 +157,7 @@ proxy-groups:
     strategy: consistent-hashing
     use:
       - 我的订阅
+      - 10T12mouth
     filter: (?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))
   - {name: Apple,     type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
   - {name: Cloudflare,type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
