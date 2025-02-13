@@ -62,7 +62,7 @@ proxy-providers:
   订阅一:
     <<: *urltest
     path: ./proxy_provider/dingyue1.yaml
-    url: "https://hellogfw.xn--5yqu68aonrhpu.us.kg/5b24f903-bdd0-45d4-95e4-d7c84b2fd6ad?proxyip=ProxyIP.US.CMLiussss.net&sub=sub.keaeye.icu"
+    url: "https://suo.yt/xGo1FPI"
 
   # 订阅二:
   #   <<: *urltest
