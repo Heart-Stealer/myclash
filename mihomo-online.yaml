@@ -64,10 +64,10 @@ proxy-providers:
     path: ./proxy_provider/clashmeta.yaml
     url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml"
 
-  # 订阅二:
-  #   <<: *urltest
-  #   path: ./proxy_provider/zdyz2.yaml
-  #   url: "https://sub.tgzdyz2.xyz/sub"
+  订阅二:
+    <<: *urltest
+    path: ./proxy_provider/zdyz2.yaml
+    url: "https://hellogfw.xn--5yqu68aonrhpu.us.kg/5b24f903-bdd0-45d4-95e4-d7c84b2fd6ad?proxyip=ProxyIP.US.CMLiussss.net&sub=sub.keaeye.icu"
 
   # 本地配置:
   #   <<: *urltest

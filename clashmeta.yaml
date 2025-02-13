@@ -129,6 +129,17 @@ proxy-providers:
       interval: 300
       timeout: 5000
       tolerance: 500
+  订阅1:
+    type: http
+    path: ./profiles/proxies/dingyue1.yaml
+    url: "https://hellogfw.xn--5yqu68aonrhpu.us.kg/5b24f903-bdd0-45d4-95e4-d7c84b2fd6ad?proxyip=ProxyIP.US.CMLiussss.net&sub=sub.keaeye.icu"
+    interval: 43200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 5000
+      tolerance: 500
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -141,12 +152,14 @@ proxy-groups:
     type: select
     use:
       - 我的订阅
+      - 订阅1
       - 10T12mouth
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     use:
       - 我的订阅
+      - 订阅1
       - 10T12mouth
     interval: 300
     tolerance: 500
@@ -158,6 +171,7 @@ proxy-groups:
     use:
       - 我的订阅
       - 10T12mouth
+      - 订阅1
     filter: (?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))
   - {name: Apple,     type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
   - {name: Cloudflare,type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}

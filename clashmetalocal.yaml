@@ -189,17 +189,17 @@ proxy-providers:
       timeout: 5000
       # 节点自动切换差值，单位为毫秒
       tolerance: 500
-  # 订阅1:
-  #   type: http
-  #   path: ./profiles/proxies/dingyue1.yaml
-  #   url: "http://csgo3.fask511.cfd:1588/api/v1/client/subscribe?token=145b15f91f224adcb7fff14c738aa737"
-  #   interval: 43200
-  #   health-check:
-  #     enable: true
-  #     url: http://www.gstatic.com/generate_204
-  #     interval: 300
-  #     timeout: 5000
-  #     tolerance: 500
+  订阅1:
+    type: http
+    path: ./profiles/proxies/dingyue1.yaml
+    url: "https://hellogfw.xn--5yqu68aonrhpu.us.kg/5b24f903-bdd0-45d4-95e4-d7c84b2fd6ad?proxyip=ProxyIP.US.CMLiussss.net&sub=sub.keaeye.icu"
+    interval: 43200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 5000
+      tolerance: 500
   # 订阅2:
   #   type: http
   #   path: ./profiles/proxies/dingyue2.yaml
@@ -223,14 +223,14 @@ proxy-groups:
     type: select
     use: 
       - 我的订阅
-      # - 订阅1
+      - 订阅1
       # - 订阅2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     use:
       - 我的订阅
-      # - 订阅1
+      - 订阅1
       # - 订阅2
     # url: http://www.gstatic.com/generate_204
     interval: 300
@@ -244,7 +244,7 @@ proxy-groups:
     strategy: consistent-hashing #consistent-hashing 将相同的 目标地址 的请求分配给策略组内的同一个代理节点
     use:
       - 我的订阅
-      # - 订阅1
+      - 订阅1
       # - 订阅2
     # filter: "(?i)(.*-0.|-1.)"
     filter: "(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))"
