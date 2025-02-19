@@ -1,5 +1,5 @@
 # mihomo (Clash Meta) 懒人配置
-# 版本 V1.12-241024
+# 版本 V1.15-241205
 # https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33
 # https://obdo.cc/meta
 # 作者: 笨蛋ovo (bdovo.cc)
@@ -50,106 +50,44 @@ dingyue: &dingyue
   # type: select
   # type: url-test
   use:
+    - 本地配置
     - 订阅一
-    # - 订阅二
-    # - 本地配置
+    - 订阅二
 
 # 订阅链接
 # 对于订阅来说，path 为选填项，但建议启用
 # 本地配置可以只填 path
 proxy-providers:
   
+  本地配置:
+    <<: *urltest
+    path: ./proxy_provider/本地配置.yaml
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml"
+    # 默认只允许存储在 mihomo 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml" 
+    # # 如需要为该订阅组节点添加前缀，取消下面两行注释
+    # override:
+    #   additional-prefix: "[本地配置]"
+
   订阅一:
     <<: *urltest
-    path: ./proxy_provider/clashmeta.yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml"
+    path: ./proxy_provider/dingyue1.yaml
+    url: "https://suo.yt/xGo1FPI"
+    # 如需要为该订阅组节点添加前缀，取消下面两行注释
+    override:
+      additional-prefix: "[1]"
 
   订阅二:
     <<: *urltest
-    path: ./proxy_provider/zdyz2.yaml
-    url: "https://suo.yt/xGo1FPI"
-
-  # 本地配置:
-  #   <<: *urltest
-  #   path: ./proxy_provider/clashmeta.yaml
-    # path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
+    path: ./proxy_provider/dingyue2.yaml
+    url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
+    # 如需要为该订阅组节点添加前缀，取消下面两行注释
+    override:
+      additional-prefix: "[2]"
 
 # 小白请不要继续随意修改以下设置
 # 若需修改请参阅文档 https://wiki.metacubex.one
 # --------------------------------------------------
-
-# 规则订阅
-rule-providers:
-  # AWAvenue-Ads:
-  #   type: http
-  #   behavior: domain
-  #   format: yaml
-  #   path: ./providers/rule/AWAvenue-Ads.yaml
-  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
-  #   interval: 86400
-  # ADs:
-  #   type: http
-  #   behavior: domain
-  #   format: yaml
-  #   path: ./providers/rule/ADs.yaml
-  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml"
-  #   interval: 86400
-  AD-Lite:
-    type: http
-    behavior: domain
-    format: yaml
-    path: ./providers/rule/AD-Lite.yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml"
-    interval: 86400
-  AD:
-    type: http
-    behavior: domain
-    format: yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml"
-    path: ./rules/AD.yaml
-    interval: 86400
-    
-  # EasyList:
-  #   type: http
-  #   behavior: domain
-  #   format: yaml
-  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml"
-  #   path: ./rules/EasyList.yaml
-  #   interval: 86400
-    
-  EasyListChina:
-    type: http
-    behavior: domain
-    format: yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml"
-    path: ./rules/EasyListChina.yaml
-    interval: 86400
-
-  # EasyPrivacy:
-  #   type: http
-  #   behavior: domain
-  #   format: yaml
-  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml"
-  #   path: ./rules/EasyPrivacy.yaml
-  #   interval: 86400
-
-  ProgramAD:
-    type: http
-    behavior: domain
-    format: yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
-    path: ./rules/ProgramAD.yaml
-    interval: 86400    # 秋风广告拦截规则
-  # https://awavenue.top
-  # 由于 Anti-AD 误杀率高，本项目已在 1.11-241024 版本更换秋风广告规则
-  AWAvenue-Ads:
-    type: http
-    behavior: domain
-    format: yaml
-    # path可为空(仅限clash.meta 1.15.0以上版本)
-    path: ./rule_provider/AWAvenue-Ads.yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
-    interval: 300
 
 # 用于下载订阅时指定UA
 global-ua: clash
@@ -158,6 +96,7 @@ external-controller: :9090
 secret: ""
 external-ui: ui
 external-ui-url: "https://gh-proxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+
 # ipv6 支持
 ipv6: true
 mode: rule
@@ -165,8 +104,8 @@ mode: rule
 mixed-port: 7890
 socks-port: 7891
 port: 7892
-redir-port: 0
-tproxy-port: 0
+redir-port: 7893
+tproxy-port: 7894
 # 允许局域网连接
 allow-lan: true
 # Meta 内核特性 https://wiki.metacubex.one/config/general
@@ -194,115 +133,46 @@ authentication:
   - []
 skip-auth-prefixes:
   - 127.0.0.1/32
-# tun 模式
-tun:
-  enable: false  # enable true
-  device: Mihomo
-  stack: mixed  # or gvisor system
-  auto-route: true
-  auto-redirect: true
-  auto-detect-interface: true
-  dns-hijack:
-    - "any:53"
-    - "tcp://any:53"
-  route-exclude-address: []
-  mtu: 1500
 
-# dns 设置
-dns:
-  # 是否启用，如为 false，则使用系统 DNS 解析
+# 策略组选择和fakeip缓存
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# 数据库部分
+geo-auto-update: true
+geo-update-interval: 168
+geodata-mode: true # GeoIP格式，false为MMDB，true为DAT
+geodata-loader: standard
+# Geo 数据库下载地址
+# 使用 FastGit 代理 (https://fgit.cf)
+# 源地址 https://github.com/MetaCubeX/meta-rules-dat
+# 可以更换镜像站但不要更换漏网之鱼数据库，可能导致无法启动
+geox-url:
+  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
+  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+  # asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+
+# tcp保持连接
+# 缓解移动设备耗电问题
+# https://github.com/vernesong/OpenClash/issues/2614
+keep-alive-idle: 600
+keep-alive-interval: 1800
+
+# 全局客户端指纹
+global-client-fingerprint: random # 随机指纹
+
+# 自动同步时间以防止时间不准导致无法正常联网
+ntp:
   enable: true
-  # 是否回应配置中的 hosts，默认 true
-  use-hosts: true
-  # 是否查询系统 hosts，默认 true
-  use-system-hosts: true
-  # DNS 服务监听，仅支持 udp
-  listen: :1053
-  # 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
-  ipv6: false
-  # 路由器个人建议使用 redir-host 以最佳兼容性
-  # 漏网之鱼设备可以使用 fake-ip
-  # 可选值 fake-ip/redir-host，默认redir-host
-  # enhanced-mode: redir-host
-  enhanced-mode: fake-ip
-  # fakeip 下的 IP 段设置
-  fake-ip-range: 28.0.0.1/8
-  # 可选 blacklist/whitelist，默认blacklist，whitelist 即只有匹配成功才返回 fake-ip
-  fake-ip-filter-mode: blacklist
-  # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
-  fake-ip-filter:
-    # - '+.*'
-    - '*.lan'
-    - "*.test"
-    - "*.home.arpa"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - 'time.*.com'
-    - 'ntp.*.com'
-    - '+.local'
-    - '+.market.xiaomi.com'
-    - '+.msftconnecttest.com'
-    - 'router.asus.com'
-    - 'localhost.sec.qq.com'
-    - 'localhost.ptlogin2.qq.com'
-  # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
-  nameserver-policy:
-  #   '+.arpa': '10.0.0.1'
-    geosite:cn,private:
-      - 'https://doh.pub/dns-query'
-      - 'https://dns.alidns.com/dns-query'
-    geosite:!cn,!private: 
-      - 'tls://dns.google'
-      - 'tls://cloudflare-dns.com'
-  # 默认的域名解析服务器
-  nameserver:
-    - system
-    - 'https://dns.alidns.com/dns-query'
-    - 'https://doh.pub/dns-query'
-  # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信
-  # 配置 fallback后默认启用 fallback-filter,geoip-code为 cn
-  fallback:
-    - 'tls://8.8.4.4' # dns
-    - 'tls://1.1.1.1' # dns
-  # dns 连接遵守路由规则，需配置 proxy-server-nameserver
-  respect-rules: false
-  # 代理节点域名解析服务器，仅用于解析代理节点的域名，如果不填则遵循nameserver-policy、nameserver和fallback的配置
-  proxy-server-nameserver:
-    - 'https://doh.pub/dns-query'
-    - 'https://223.5.5.5/dns-query'
-  # 用于direct出口域名解析的 DNS 服务器，如果不填则遵循nameserver-policy、nameserver和fallback的配置
-  direct-nameserver:
-    - system
-  # 是否遵循nameserver-policy，默认为不遵守，仅当direct-nameserver不为空时生效
-  direct-nameserver-follow-policy: false
-  # 后备域名解析服务器筛选，满足条件的将使用 fallback结果或只使用 fallback解析
-  fallback-filter:
-    # 是否启用 geoip 判断
-    geoip: true
-    geoip-code: CN
-    # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback解析，不去使用 nameserver
-    geosite:
-      - gfw
-    # 书写内容为 IP/掩码,这些网段的结果会被视为污染，nameserver解析出这些结果时将会采用 fallback的解析结果
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-    # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback解析，不去使用 nameserver
-    domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
-      - '+.twitter.com'
-      - '+.chatgpt.com'
-  # 默认 DNS, 用于解析 DNS 服务器 的域名
-  default-nameserver:
-    - '223.5.5.5'
-    - '119.29.29.29'
-    - '114.114.114.114'
-    - '[2402:4e00::]'
-    - '[2400:3200::1]'
+  # 是否同步至系统时间，需要 root/管理员权限
+  write-to-system: false
+  server: time.apple.com
+  port: 123
+  interval: 30
+
 # 域名嗅探
 sniffer:
   enable: true
@@ -323,41 +193,149 @@ sniffer:
     - "dlg.io.mi.com"
     - "+.push.apple.com"
     - "+.apple.com"
-# 策略组选择和fakeip缓存
-profile:
-  store-selected: true
-  store-fake-ip: true
 
-# 数据库部分
-geo-auto-update: true
-geo-update-interval: 168
-geodata-mode: false # GeoIP格式，false为MMDB，true为DAT
-geodata-loader: standard
-# Geo 数据库下载地址
-# 使用 FastGit 代理 (https://fgit.cf)
-# 源地址 https://github.com/MetaCubeX/meta-rules-dat
-# 可以更换镜像站但不要更换漏网之鱼数据库，可能导致无法启动
-geox-url:
-  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
-  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
-  # asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
-# tcp保持连接
-# 缓解移动设备耗电问题
-# https://github.com/vernesong/OpenClash/issues/2614
-keep-alive-idle: 600
-keep-alive-interval: 1800
-# 全局客户端指纹
-global-client-fingerprint: random # 随机指纹
-# 自动同步时间以防止时间不准导致无法正常联网
-ntp:
+# tun 模式
+tun:
+  enable: false  # enable true
+  device: Mihomo
+  stack: mixed  # or gvisor system
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  route-exclude-address: []
+  mtu: 1500
+
+# dns 设置
+dns:
+  # 是否启用，如为 false，则使用系统 DNS 解析
   enable: true
-  # 是否同步至系统时间，需要 root/管理员权限
-  write-to-system: false
-  server: time.apple.com
-  port: 123
-  interval: 30
+  # DNS 服务监听，仅支持 udp
+  listen: :1053
+  # 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
+  ipv6: false
+  # 路由器个人建议使用 redir-host 以最佳兼容性
+  # 漏网之鱼设备可以使用 fake-ip
+  # 可选值 fake-ip/redir-host，默认redir-host
+  # enhanced-mode: redir-host
+  enhanced-mode: fake-ip
+  # fakeip 下的 IP 段设置
+  fake-ip-range: 28.0.0.1/8
+  # 可选 blacklist/whitelist，默认blacklist，whitelist 即只有匹配成功才返回 fake-ip
+  fake-ip-filter-mode: blacklist
+  # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
+  fake-ip-filter:
+    - "*"
+    # LAN
+    - "+.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "+.local"
+    # ntp
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.edu.cn"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "ntp.*.com"
+    # windows 本地连接检测
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    # QQ登录
+    - "localhost.ptlogin2.qq.com"
+    - "localhost.sec.qq.com"
+    - "+.qq.com"
+    - "+.tencent.com"
+    # Steam
+    - "+.steamcontent.com"
+    # Microsoft Xbox
+    - "xbox.*.*.microsoft.com"
+    - "*.*.xboxlive.com"
+    - "xbox.*.microsoft.com"
+    - "xnotify.xboxlive.com"
+    # STUN
+    - "stun.*.*"
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    # Netflix
+    - "+.nflxvideo.net"
+    # Bilibili
+    - "*.mcdn.bilivideo.cn"
+    # 米家
+    - "Mijia Cloud"
+    # Xiaomi
+    - "+.market.xiaomi.com"
+    - "WORKGROUP"
+  # 是否回应配置中的 hosts，默认 true
+  use-hosts: true
+  # 是否查询系统 hosts，默认 true
+  use-system-hosts: true
+  # 默认的域名解析服务器
+  nameserver:
+    - 'https://dns.alidns.com/dns-query'
+    - 'https://doh.pub/dns-query'
+  # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
+  nameserver-policy:
+  #   '+.arpa': '10.0.0.1'
+    geosite:cn,private:
+      - 'https://223.5.5.5'
+      - 'https://doh.pub/dns-query'
+      - 'https://dns.alidns.com/dns-query'
+    geosite:!cn,!private: 
+      - 'tls://dns.google'
+      - 'tls://cloudflare-dns.com'
+  # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信
+  # 配置 fallback后默认启用 fallback-filter,geoip-code为 cn
+  fallback:
+    - 'tls://8.8.4.4' # dns
+    - 'tls://1.1.1.1' # dns
+  # 后备域名解析服务器筛选，满足条件的将使用 fallback结果或只使用 fallback解析
+  fallback-filter:
+    # 是否启用 geoip 判断
+    geoip: true
+    geoip-code: CN
+    # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback解析，不去使用 nameserver
+    geosite:
+      - gfw
+    # 书写内容为 IP/掩码,这些网段的结果会被视为污染，nameserver解析出这些结果时将会采用 fallback的解析结果
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+    # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback解析，不去使用 nameserver
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - '+.instagram.com'
+      - '+.twitter.com'
+      - '+.chatgpt.com'
+  # dns 连接遵守路由规则，需配置 proxy-server-nameserver
+  respect-rules: false
+  # 代理服务器域名解析，仅用于解析代理节点的域名，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+  proxy-server-nameserver:
+    - 'https://120.53.53.53/dns-query'
+    - 'https://223.5.5.5/dns-query'
+    - 'https://doh.pub/dns-query'
+  # 直连解析服务器，用于direct出口域名解析的 DNS 服务器，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+  direct-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - system
+  # 是否遵循nameserver-policy，默认为不遵守，仅当direct-nameserver不为空时生效
+  direct-nameserver-follow-policy: false
+  # 默认 DNS, 用于解析 DNS 服务器 的域名
+  default-nameserver:
+    - '223.5.5.5'
+    - '223.6.6.6'
+    - '119.29.29.29'
+    - '114.114.114.114'
+
 # 多入站端口设置
 # listeners:
 #   - name: hk
@@ -411,44 +389,42 @@ proxy-groups:
   - {name: 美国节点, <<: *dingyue, <<: *shoudong, filter: "(?i)美|US|UM|States|American", icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
   - {name: 负载均衡, <<: *dingyue, <<: *balance, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"}
   - {name: 自动选择, <<: *dingyue, <<: *zidong, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
-  # - {name: Apple,     !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"}
-  # - {name: ChatGPT,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
-  # - {name: Google,    !!merge <<: *pr, icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"}
-  # - {name: GitHub,    !!merge <<: *pr, icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png"}
-  # # - {name: Google,!!merge <<: *pr, icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"}
-  # # - {name: GitHub,!!merge <<: *pr, icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png"}
-  # - {name: Bing,      !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png"}
-  # - {name: Bing,      !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bing.png"}
-  # - {name: OneDrive,  !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png"}
-  # - {name: Microsoft, !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"}
-  # - {name: NETFLIX,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"}
-  # - {name: PayPal,    !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png"}
-  # - {name: Speedtest, !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"}
-  # - {name: TikTok,    !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"}
-  # - {name: Telegram,  !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"}
-  # - {name: Twitter,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitter.png"}
-  # - {name: YouTube,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"}
+  - {name: 漏网之鱼,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
+  - {name: Apple,     !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
+  - {name: Cloudflare,!!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
+  - {name: ChatGPT,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
+  - {name: Google,    !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
+  - {name: GitHub,    !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
+  - {name: Bing,      !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
+  - {name: OneDrive,  !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
+  - {name: Microsoft, !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
+  - {name: NETFLIX,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
+  - {name: Speedtest, !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
+  - {name: TikTok,    !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
+  - {name: Telegram,  !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
+  - {name: Twitter,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
+  - {name: YouTube,   !!merge <<: *pr, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
   # https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
   # https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
   # https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png
   # 漏网之鱼就是所有规则没匹配到的
   # 可以理解为 ACL4SSR 配置里的 漏网之鱼
   # 换言之，漏网之鱼走代理就是绕过中国大陆地址，不走就是 GFWList 模式
-  - {name: 漏网之鱼,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
-  - {name: Apple,     !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
-  - {name: Cloudflare,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
-  - {name: ChatGPT,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
-  - {name: Google,    !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
-  - {name: GitHub,    !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
-  - {name: Bing,      !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
-  - {name: OneDrive,  !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
-  - {name: Microsoft, !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
-  - {name: NETFLIX,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
-  - {name: Speedtest, !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
-  - {name: TikTok,    !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
-  - {name: Telegram,  !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
-  - {name: Twitter,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
-  - {name: YouTube,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
+  # - {name: 漏网之鱼,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
+  # - {name: Apple,     !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
+  # - {name: Cloudflare,!!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
+  # - {name: ChatGPT,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
+  # - {name: Google,    !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
+  # - {name: GitHub,    !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
+  # - {name: Bing,      !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
+  # - {name: OneDrive,  !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
+  # - {name: Microsoft, !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
+  # - {name: NETFLIX,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
+  # - {name: Speedtest, !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
+  # - {name: TikTok,    !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
+  # - {name: Telegram,  !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
+  # - {name: Twitter,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
+  # - {name: YouTube,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
   - {name: 全球直连, type: select, proxies: [DIRECT], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"}
   - {name: 广告拦截, type: select, proxies: [REJECT], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"}
   - {name: GLOBAL, <<: *shoudong,proxies: [节点选择, 负载均衡, 自动选择, 漏网之鱼], icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"}
@@ -498,16 +474,30 @@ rules:
   # 防止 YouTube 等使用 QUIC 导致速度不佳, 禁用 443 端口 UDP 流量（不包括国内）
   # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
   # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
-  # - RULE-SET,AWAvenue-Ads,广告拦截
+
+  # - RULE-SET,AWAvenue-Ads,🛑 广告拦截
   - RULE-SET,AD-Lite,REJECT
   - RULE-SET,AD,REJECT
   # - RULE-SET,EasyList,REJECT
   - RULE-SET,EasyListChina,REJECT
   # - RULE-SET,EasyPrivacy,REJECT
   - RULE-SET,ProgramAD,REJECT
-  - DOMAIN,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,skyearth.xyz,DIRECT,no-resolve
-  - DOMAIN-KEYWORD,microsoft,DIRECT,no-resolve
+  - DOMAIN,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT
+  - DOMAIN-SUFFIX,skyearth.xyz,DIRECT
+
+  #目的域名后缀规则
+  # - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
+  # - DOMAIN-SUFFIX,surrit.com,DIRECT
+  # - DOMAIN-SUFFIX,sixyik.com,DIRECT
+  # - DOMAIN-SUFFIX,javxxx.me,DIRECT
+  # - DOMAIN-SUFFIX,fapnfuck.com,DIRECT
+  # - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,DIRECT
+  # - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,DIRECT
+  # - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
+  # - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
+  # - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,🚀 节点选择
+  # # - DOMAIN-SUFFIX,bilibili.com,DIRECT,tcp   #【Meta专属】可指定协议类型(tcp/udp)
+
   #目的域名后缀规则
   - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
   - DOMAIN-SUFFIX,surrit.com,DIRECT
@@ -519,10 +509,17 @@ rules:
   - DOMAIN-SUFFIX,googleapis.cn,节点选择
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,节点选择
   - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,节点选择
+  - DOMAIN-SUFFIX,eporner.com,节点选择
   # - DOMAIN-SUFFIX,bilibili.com,DIRECT,tcp   #【Meta专属】可指定协议类型(tcp/udp)
+
   #目的域名规则
+  - DOMAIN,github.com,节点选择
+  - DOMAIN,twitter.com,节点选择
+  - DOMAIN,youtube.com,节点选择
   - DOMAIN,google.com,节点选择
   #目的域名关键字规则
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
   - DOMAIN-KEYWORD,google,节点选择
   #来源IP规则
   - SRC-IP-CIDR,192.168.1.201/32,DIRECT
@@ -538,39 +535,109 @@ rules:
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
-  - GEOSITE,CN,DIRECT
-  - GEOIP,CN,DIRECT
 
   #【Meta专属】GEOSITE规则
   - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,icloud@cn,DIRECT
-  - GEOSITE,apple@cn,DIRECT
-  - GEOSITE,apple-cn,DIRECT
-  - GEOSITE,microsoft@cn,DIRECT
-  - GEOSITE,facebook,节点选择
-  - GEOSITE,youtube,节点选择
-  - GEOSITE,geolocation-cn,DIRECT
-  - GEOSITE,github,节点选择
-  - GEOSITE,cloudflare,Cloudflare
+  - GEOSITE,github,GitHub
   - GEOSITE,twitter,Twitter
   - GEOSITE,youtube,YouTube
+  - GEOSITE,telegram,Telegram
   - GEOSITE,google,Google
   - GEOSITE,google-cn,Google # Google CN 不走代理会导致香港等地区节点 Play Store 异常
-  - GEOSITE,telegram,Telegram
+  - GEOSITE,cloudflare,Cloudflare
   - GEOSITE,netflix,NETFLIX
+  - GEOSITE,tiktok,TikTok
+  # - GEOSITE,spotify,Spotify
+  # - GEOSITE,steam,Steam
   - GEOSITE,steam@cn,DIRECT
+  - GEOSITE,apple@cn,DIRECT
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,icloud@cn,DIRECT
   - GEOSITE,bing,Bing
   - GEOSITE,onedrive,OneDrive
   - GEOSITE,microsoft,Microsoft
+  - GEOSITE,microsoft@cn,DIRECT
+  - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,geolocation-!cn,漏网之鱼
 
-  #GEOIP规则  
-  - GEOIP,telegram,节点选择,no-resolve
-  - GEOIP,private,DIRECT,no-resolve
-  - GEOIP,cn,DIRECT
-  # GEOIP
-  - GEOIP,google,Google,no-resolve
-  - GEOIP,netflix,NETFLIX,no-resolve
-  - GEOIP,telegram,Telegram,no-resolve
-  - GEOIP,twitter,Twitter,no-resolve
+  # GEOIP规则  
+  - GEOIP,google,Google
+  - GEOIP,netflix,NETFLIX
+  - GEOIP,telegram,Telegram
+  - GEOIP,twitter,Twitter
+  - GEOIP,private,DIRECT
+  - GEOSITE,CN,DIRECT
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+
+  # 广告拦截
+  # - RULE-SET,AWAvenue-Ads,广告拦截
+  - RULE-SET,AD-Lite,REJECT
+  - RULE-SET,AD,REJECT
+  # - RULE-SET,EasyList,REJECT
+  - RULE-SET,EasyListChina,REJECT
+  # - RULE-SET,EasyPrivacy,REJECT
+  - RULE-SET,ProgramAD,REJECT
+
   - MATCH,漏网之鱼
+
+rule-anchor:
+  ip: &ip         {type: http, interval: 86400, behavior: ipcidr,     format: yaml}
+  domain: &domain {type: http, interval: 86400, behavior: domain,     format: yaml}
+  class: &class   {type: http, interval: 86400, behavior: classical,  format: text}
+
+# 规则订阅
+rule-providers:
+  # AWAvenue-Ads:
+  #   type: http
+  #   behavior: domain
+  #   format: yaml
+  #   path: ./providers/rule/AWAvenue-Ads.yaml
+  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
+  #   interval: 86400
+  # ADs:
+  #   type: http
+  #   behavior: domain
+  #   format: yaml
+  #   path: ./providers/rule/ADs.yaml
+  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml"
+  #   interval: 86400
+  AD-Lite:
+    <<: *domain
+    path: ./providers/rule/AD-Lite.yaml
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml"
+  AD:
+    <<: *domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml"
+    path: ./rules/AD.yaml
+    
+  EasyList:
+    <<: *domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml"
+    path: ./rules/EasyList.yaml
+    
+  EasyListChina:
+    <<: *domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml"
+    path: ./rules/EasyListChina.yaml
+
+  # EasyPrivacy:
+  #   type: http
+  #   behavior: domain
+  #   format: yaml
+  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml"
+  #   path: ./rules/EasyPrivacy.yaml
+  #   interval: 86400
+
+  ProgramAD:
+    <<: *domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
+    path: ./rules/ProgramAD.yaml
+  # 秋风广告拦截规则
+  # https://awavenue.top
+  # 由于 Anti-AD 误杀率高，本项目已在 1.11-241024 版本更换秋风广告规则
+  AWAvenue-Ads:
+    <<: *domain
+    # path可为空(仅限clash.meta 1.15.0以上版本)
+    path: ./rule_provider/AWAvenue-Ads.yaml
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
