@@ -3,95 +3,127 @@ socks-port: 7891
 port: 7892
 redir-port: 7893
 tproxy-port: 7894
-geodata-mode: true
-tcp-concurrent: true
-allow-lan: false
+
 mode: Rule
 log-level: info
+allow-lan: false
+bind-address: "*"
 ipv6: false
+upd: true
+
+unified-delay: true                  # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
+tcp-concurrent: true                 # TCP 并发，可选值 true/false
+find-process-mode: strict            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
+global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
+
 external-controller: :9090
 external-ui: folder
-ntp:
-  enable: true
-  # 是否同步至系统时间，需要 root/管理员权限
-  write-to-system: false
-  server: time.apple.com
-  port: 123
-  interval: 30
+external-ui-url: 'https://gh-proxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip'
+
+secret: ""                           # 自定义 API 的访问密钥
+
+geodata-mode: true                   # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+geo-auto-update: true                # 自动更新 GEO
+geo-update-interval: 72              # 更新间隔，单位为小时
+geodata-loader: standard             # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+geox-url:
+  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
+  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+
 profile:
-  store-selected: false
-  store-fake-ip: true
+  store-selected: true               # 储存 API 对策略组的选择，以供下次启动时使用
+  store-fake-ip: true                # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
+
 sniffer:
-  enable: true
-  parse-pure-ip: true
-  force-dns-mapping: true
-  override-destination: false
+  enable: true                       # 是否启用sniffer
+  parse-pure-ip: true                # 对所有未获取到域名的流量进行强制嗅探
+  force-dns-mapping: true            # 对 redir-host 类型识别的流量进行强制嗅探
+  override-destination: true         # 是否使用嗅探结果作为实际访问，默认为 true
   sniff:
     TLS:
       ports: [443, 8443]
     HTTP:
-      ports: [80, 443, 8080-8880]
-      override-destination: true
+      ports: [80, 443, 8080-8880]    # ports字段，表示端口范围。示例：ports: [80, 8080-8880]
+      override-destination: true     # override-destination字段（可选），用于覆盖全局override-destination设置
+    QUIC:
+      ports: [443, 8443]
   sniffing:
     - tls
     - http
-  skip-domain:
+  skip-domain:                       # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备Mijia Cloud
     - Mijia Cloud
     - dlg.io.mi.com
     - +.apple.com
-  force-domain:
+  force-domain:                      # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
     - google.com
     - +.v2ex.com
-hosts:
-  localhost: 127.0.0.1
+
+tun:
+  enable: false                      # 启用 tun
+  stack: system                      # tun 模式堆栈,可用值：system/gvisor/mixed
+  dns-hijack:                        # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
+    - any:53
+  auto-route: true                   # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡
+  auto-detect-interface: true        # 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
+
 dns:
-  enable: true
-  listen: :1053
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
+  enable: true                       # 关闭将使用系统 DNS
+  listen: :1053                      # DNS 监听地址
+  ipv6: true                         # IPV6解析开关；如果为false，将返回ipv6结果为空
+  enhanced-mode: fake-ip             # 模式：redir-host或fake-ip
+  fake-ip-range: 198.18.0.1/16       # Fake-IP 解析地址池
+  fake-ip-filter:                    # Fake-ip 过滤，列表中的域名返回真实IP
     - "*"
+    # LAN
     - "+.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
+    - "+.local"
+    # ntp
     - "time.*.com"
-    - "+.pool.ntp.org"
-    - "+.ntp.*.com"
-    - "+.ntp.ntsc.ac.cn"
-    - "+.cn.ntp.org.cn"
+    - "time.*.gov"
+    - "time.*.edu.cn"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "ntp.*.com"
+    # windows 本地连接检测
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
+    # QQ登录
     - "localhost.ptlogin2.qq.com"
     - "localhost.sec.qq.com"
     - "+.qq.com"
     - "+.tencent.com"
+    # Steam
     - "+.steamcontent.com"
+    # Microsoft Xbox
     - "xbox.*.*.microsoft.com"
     - "*.*.xboxlive.com"
     - "xbox.*.microsoft.com"
     - "xnotify.xboxlive.com"
+    # STUN
     - "stun.*.*"
     - "+.stun.*.*"
     - "+.stun.*.*.*"
+    # Netflix
     - "+.nflxvideo.net"
+    # Bilibili
     - "*.mcdn.bilivideo.cn"
+    # 米家
     - "Mijia Cloud"
+    # Xiaomi
     - "+.market.xiaomi.com"
-    - WORKGROUP
-  default-nameserver:
+    - "WORKGROUP"
+  default-nameserver:                # 解析非IP的dns用的dns服务器，只支持纯IP, 可为加密 DNS
     - 223.5.5.5
     - 119.29.29.29
-  nameserver:
+  proxy-server-nameserver:           # 代理节点域名解析服务器，仅用于解析代理节点的域名
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
-  proxy-server-nameserver:
+  nameserver:                        # 默认DNS服务器，支持udp/tcp/dot/doh/doq
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
-  nameserver-policy:
+  nameserver-policy:                 # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
     "geosite:cn,private":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
@@ -116,6 +148,17 @@ dns:
       - +.instagram.com
       - +.twitter.com
       - +.chatgpt.com
+
+ntp:
+  enable: true
+  # 是否同步至系统时间，需要 root/管理员权限
+  write-to-system: false
+  server: time.apple.com
+  port: 123
+  interval: 30
+hosts:
+  localhost: 127.0.0.1
+
 cfw-latency-timeout: 3000
 cfw-latency-url: http://www.gstatic.com/generate_204
 cfw-conn-break-strategy:
@@ -123,14 +166,7 @@ cfw-conn-break-strategy:
   profile: true
   mode: false
 cfw-proxies-order: default
-geo-auto-update: true
-geo-update-interval: 168
-geodata-loader: standard
-geox-url:
-  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
-  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+
 proxy-providers:
   我的订阅:
     type: http
@@ -226,6 +262,12 @@ rules:
     #来源端口规则
   - SRC-PORT,123/136/137-139,DIRECT,udp     #【Meta专属】可指定端口范围
 
+  #目的域名关键字规则
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.metacubex.one,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,d.metacubex.one,DIRECT
+
   # - RULE-SET,AWAvenue-Ads,🛑 广告拦截
   - RULE-SET,AD-Lite,REJECT
   - RULE-SET,AD,REJECT
@@ -255,8 +297,6 @@ rules:
   - DOMAIN,youtube.com,🚀 节点选择
   - DOMAIN,google.com,🚀 节点选择
   #目的域名关键字规则
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
   - DOMAIN-KEYWORD,google,🚀 节点选择
 
     #目的IP规则

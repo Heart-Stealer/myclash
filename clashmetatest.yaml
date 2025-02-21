@@ -1,14 +1,29 @@
 proxies:
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
-  - {"name":"公益_波兰08-4.5","type":"hysteria2","server":"serv08.trevely.us.kg","port":59350,"password":"f00dd1c7-1636-4090-9f47-8448256386cc","sni":"www.bing.com","skip-cert-verify":true,"alpn":["h3"]}
-  - {name: 🇦🇪 迪拜2, server: ae2.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, sni: du.wish.ml, skip-cert-verify: true}
-  - {"name":"公益_波兰12-6.5","type":"hysteria2","server":"serv12.trevely.us.kg","port":59350,"password":"fb508d86-1679-4b22-8c09-0cd4cdbb887d","sni":"www.bing.com","skip-cert-verify":true,"alpn":["h3"]}
-  - {"name":"公益_波兰05-1.5","type":"hysteria2","server":"serv05.trevely.us.kg","port":59350,"password":"fc10a4d6-f946-478f-a3db-57f73cdb0407","sni":"www.bing.com","skip-cert-verify":true,"alpn":["h3"]}
+  - {name: 🇦🇪 迪拜2-3.0, server: ae2.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, sni: du.wish.ml, skip-cert-verify: true}
+  - {"name":"🇺🇸美国（使劲造）","type":"hysteria2","server":"143.198.235.49","port":443,"password":"iMqY3uG_5pgEj3hCfyHB-0vB","skip-cert-verify":true}
+  - {"name":"🇸🇬原生解锁","type":"vless","server":"cf.090227.xyz","port":2053,"uuid":"5fbc1f5a-06e9-46ba-ad8f-d727e2c6c409","tls":true,"servername":"cf-sg1-irminsul.nahida.im","network":"ws","ws-opts":{"path":"/63ddf261-1367-4f2b-ae6c-4cf9d58807cd","headers":{"host":"cf-sg1-irminsul.nahida.im"}},"alpn":["h2","http/1.1"]}
 
-  - {name: 伊朗10, server: sgp.fastsoonlink.com, port: 40005, type: ss, cipher: chacha20-ietf-poly1305, password: 3FB23A19-9424-40C7-9139-3540228283FA}
-  - {name: 中国4, server: 119.167.230.252, port: 28164, type: ss, cipher: aes-128-gcm, password: b637f2e47b7827b308ebf399008075d2}
-  # - {"name":"🇺🇸美国（使劲造）","type":"hysteria2","server":"143.198.235.49","port":443,"password":"iMqY3uG_5pgEj3hCfyHB-0vB","skip-cert-verify":true}
+  # - {name: 🇧🇷 巴西1, server: br.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  # - {name: 🇧🇷 巴西2, server: br2.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  # - {name: 🇧🇷 巴西3, server: br3.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  # - {name: 🇮🇳 印度1, server: in4.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  # - {name: 🇮🇳 印度2, server: in5.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  # - {name: 🇺🇸 美国1, server: us12.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  # - {name: 🇺🇸 美国2, server: us13.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  # - {name: 🇺🇸 美国3, server: us14.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  # - {name: 🇦🇪 迪拜1, server: ae1.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, sni: du.wish.ml, skip-cert-verify: true}
+  # - {name: 🇦🇪 迪拜2, server: ae2.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, sni: du.wish.ml, skip-cert-verify: true}
+  # - {name: 🇨🇦 加拿大1, server: ca11.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, sni: du.wish.ml, skip-cert-verify: true}
+  # - {name: 🇨🇦 加拿大2, server: ca12.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, sni: du.wish.ml, skip-cert-verify: true}
+
+  # - {"name":"公益_波兰08-4.5","type":"hysteria2","server":"serv08.trevely.us.kg","port":59350,"password":"f00dd1c7-1636-4090-9f47-8448256386cc","sni":"www.bing.com","skip-cert-verify":true,"alpn":["h3"]}
+  # - {"name":"公益_波兰12-6.5","type":"hysteria2","server":"serv12.trevely.us.kg","port":59350,"password":"fb508d86-1679-4b22-8c09-0cd4cdbb887d","sni":"www.bing.com","skip-cert-verify":true,"alpn":["h3"]}
+  # - {"name":"公益_波兰05-1.5","type":"hysteria2","server":"serv05.trevely.us.kg","port":59350,"password":"fc10a4d6-f946-478f-a3db-57f73cdb0407","sni":"www.bing.com","skip-cert-verify":true,"alpn":["h3"]}
+
+  # - {name: 伊朗10, server: sgp.fastsoonlink.com, port: 40005, type: ss, cipher: chacha20-ietf-poly1305, password: 3FB23A19-9424-40C7-9139-3540228283FA}
+  # - {name: 中国4, server: 119.167.230.252, port: 28164, type: ss, cipher: aes-128-gcm, password: b637f2e47b7827b308ebf399008075d2}
   # - {"name": "🇷🇺 RU-Hysteria2 |-1.0","type": "hysteria2","server": "46.17.41.189","port": 50717,"password": "dongtaiwang.com","sni": "www.bing.com","skip-cert-verify": true}
   # - {name: 🇬🇧 ipv6 -2.0, server: "2a0e:dc0:5:2264:a:b:9b16:aab7", port: 22678, type: ss, cipher: aes-256-gcm, password: Lio+69Hr465CT2wgtS33qzcuMcle2EAchuvtrZ5ZF2M=}
   # - {name: 🇹🇼 TW Byy NAT ipv6 -1.5, server: "2a12:bec0:162:279::", port: 38303, type: vless, uuid: 6aeca4d6-e7dd-4cf6-c27d-7039bbf95357, tls: true, tfo: false, flow: xtls-rprx-vision, reality-opts: {public-key: S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4}, servername: swdist.apple.com, client-fingerprint: chrome, network: tcp}
