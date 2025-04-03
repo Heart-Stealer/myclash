@@ -69,21 +69,21 @@ proxy-providers:
     # override:
     #   additional-prefix: "[本地配置]"
 
-  订阅一:
-    <<: *DYUrlTest
-    path: ./proxy_provider/dingyue1.yaml
-    url: "https://suo.yt/xGo1FPI"
-    # 如需要为该订阅组节点添加前缀，取消下面两行注释
-    override:
-      additional-prefix: "[1]"
+  # 订阅一:
+  #   <<: *DYUrlTest
+  #   path: ./proxy_provider/dingyue1.yaml
+  #   url: "https://suo.yt/xGo1FPI"
+  #   # 如需要为该订阅组节点添加前缀，取消下面两行注释
+  #   override:
+  #     additional-prefix: "[1]"
 
-  订阅二:
-    <<: *DYUrlTest
-    path: ./proxy_provider/dingyue2.yaml
-    url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
-    # 如需要为该订阅组节点添加前缀，取消下面两行注释
-    override:
-      additional-prefix: "[2]"
+  # 订阅二:
+  #   <<: *DYUrlTest
+  #   path: ./proxy_provider/dingyue2.yaml
+  #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
+  #   # 如需要为该订阅组节点添加前缀，取消下面两行注释
+  #   override:
+  #     additional-prefix: "[2]"
 
 # 小白请不要继续随意修改以下设置
 # 若需修改请参阅文档 https://wiki.metacubex.one
