@@ -1,5 +1,5 @@
 # mihomo (Clash Meta) 懒人配置
-# 版本 V1.15-241205
+# 版本 V1.18-250401
 # https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33
 # https://obdo.cc/meta
 # 作者: 笨蛋ovo (bdovo.cc)
@@ -52,7 +52,7 @@ dingyue: &dingyue
   use:
     - 本地配置
     - 订阅一
-    - 订阅二
+    # - 订阅二
 
 # 订阅链接
 # 对于订阅来说，path 为选填项，但建议启用
@@ -61,21 +61,22 @@ proxy-providers:
   
   本地配置:
     <<: *DYUrlTest
-    # path: ./proxy_provider/clashmeta.yaml
-    # url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml"
+    # path: F:/GoldBridge/clash/clash-main/clashmetatest.yaml
+    path: ./proxy_provider/clashmeta.yaml
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml"
     # 默认只允许存储在 mihomo 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
-    path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml" 
+    # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml" 
     # # 如需要为该订阅组节点添加前缀，取消下面两行注释
     # override:
     #   additional-prefix: "[本地配置]"
 
-  # 订阅一:
-  #   <<: *DYUrlTest
-  #   path: ./proxy_provider/dingyue1.yaml
-  #   url: "https://suo.yt/xGo1FPI"
-  #   # 如需要为该订阅组节点添加前缀，取消下面两行注释
-  #   override:
-  #     additional-prefix: "[1]"
+  订阅一:
+    <<: *DYUrlTest
+    path: ./proxy_provider/dingyue1.yaml
+    url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
+    # 如需要为该订阅组节点添加前缀，取消下面两行注释
+    override:
+      additional-prefix: "[1]"
 
   # 订阅二:
   #   <<: *DYUrlTest
@@ -90,7 +91,7 @@ proxy-providers:
 # --------------------------------------------------
 
 # 用于下载订阅时指定UA
-global-ua: clash
+# global-ua: clash
 
 # socks5/http 端口
 mixed-port: 7890
@@ -132,9 +133,9 @@ global-client-fingerprint: random # 随机指纹
 
 # 外部控制端口
 # 外部控制器，可以使用 RESTful API 来控制你的 Clash 内核，API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
-external-controller: 127.0.0.1:9090
+external-controller: :9090
 # 自定义 API 的访问密钥
-secret: ""
+secret: "963./*-+"
 # 可以将静态网页资源 (比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui，可以为绝对路径，或者 Clash 工作目录的相对路径
 external-ui: ui
 # 自定义外部用户界面下载地址
@@ -400,20 +401,20 @@ proxy-groups:
   - {name: 负载均衡, <<: *dingyue, <<: *LoadBalance, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/LoadBalance.svg"}
   - {name: 自动选择, <<: *dingyue, <<: *UrlTest, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
   - {name: 漏网之鱼,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
-  - {name: Apple,     !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
-  - {name: Cloudflare,!!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
-  - {name: ChatGPT,   !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
-  - {name: Google,    !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
-  - {name: GitHub,    !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
-  - {name: Bing,      !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
-  - {name: OneDrive,  !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
-  - {name: Microsoft, !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
-  - {name: NETFLIX,   !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
-  - {name: Speedtest, !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
-  - {name: TikTok,    !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
-  - {name: Telegram,  !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
-  - {name: Twitter,   !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
-  - {name: YouTube,   !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
+  # - {name: Apple,     !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
+  # - {name: Cloudflare,!!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
+  # - {name: ChatGPT,   !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
+  # - {name: Google,    !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
+  # - {name: GitHub,    !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
+  # - {name: Bing,      !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
+  # - {name: OneDrive,  !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
+  # - {name: Microsoft, !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
+  # - {name: NETFLIX,   !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
+  # - {name: Speedtest, !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
+  # - {name: TikTok,    !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
+  # - {name: Telegram,  !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
+  # - {name: Twitter,   !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
+  # - {name: YouTube,   !!merge <<: *Select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
   # https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
   # https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
   # https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png
@@ -539,33 +540,33 @@ rules:
 
   #【Meta专属】GEOSITE规则
   - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,github,GitHub
-  - GEOSITE,twitter,Twitter
-  - GEOSITE,youtube,YouTube
-  - GEOSITE,telegram,Telegram
-  - GEOSITE,google,Google
-  - GEOSITE,google-cn,Google # Google CN 不走代理会导致香港等地区节点 Play Store 异常
-  - GEOSITE,cloudflare,Cloudflare
-  - GEOSITE,netflix,NETFLIX
-  - GEOSITE,tiktok,TikTok
+  - GEOSITE,github,节点选择
+  - GEOSITE,twitter,节点选择
+  - GEOSITE,youtube,节点选择
+  - GEOSITE,telegram,节点选择
+  - GEOSITE,google,节点选择
+  - GEOSITE,google-cn,节点选择 # Google CN 不走代理会导致香港等地区节点 Play Store 异常
+  - GEOSITE,cloudflare,节点选择
+  - GEOSITE,netflix,节点选择
+  - GEOSITE,tiktok,节点选择
   # - GEOSITE,spotify,Spotify
   # - GEOSITE,steam,Steam
   - GEOSITE,steam@cn,DIRECT
   - GEOSITE,apple@cn,DIRECT
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,icloud@cn,DIRECT
-  - GEOSITE,bing,Bing
-  - GEOSITE,onedrive,OneDrive
-  - GEOSITE,microsoft,Microsoft
+  - GEOSITE,bing,DIRECT
+  - GEOSITE,onedrive,DIRECT
+  - GEOSITE,microsoft,DIRECT
   - GEOSITE,microsoft@cn,DIRECT
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,geolocation-!cn,漏网之鱼
 
   # GEOIP规则  
-  - GEOIP,google,Google
-  - GEOIP,netflix,NETFLIX
-  - GEOIP,telegram,Telegram
-  - GEOIP,twitter,Twitter
+  - GEOIP,google,节点选择
+  - GEOIP,netflix,节点选择
+  - GEOIP,telegram,节点选择
+  - GEOIP,twitter,节点选择
   - GEOIP,private,DIRECT
   - GEOSITE,CN,DIRECT
   - GEOIP,LAN,DIRECT

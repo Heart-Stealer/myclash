@@ -169,6 +169,8 @@ cfw-proxies-order: default
 
 proxy-providers:
   我的订阅:
+    # type: file
+    # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml"
     type: http
     path: ./profiles/proxies/clashmeta.yaml
     url: https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml
@@ -179,10 +181,10 @@ proxy-providers:
       interval: 300
       timeout: 5000
       tolerance: 500
-  10T12mouth:
+  订阅1:
     type: http
-    path: ./profiles/proxies/10T12mouth.yaml
-    url: https://suo.yt/xGo1FPI
+    path: ./profiles/proxies/dingyue1.yaml
+    url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
     interval: 21600
     health-check:
       enable: true
@@ -190,9 +192,9 @@ proxy-providers:
       interval: 300
       timeout: 5000
       tolerance: 500
-  订阅1:
+  订阅2:
     type: http
-    path: ./profiles/proxies/dingyue1.yaml
+    path: ./profiles/proxies/dingyue2.yaml
     url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
     interval: 43200
     health-check:
@@ -206,7 +208,7 @@ proxy-groups:
     type: select
     proxies:
       - ☑️ 手动切换
-      - ⚖️ 负载均衡
+      # - ⚖️ 负载均衡
       - DIRECT
       - ♻️ 自动选择
   - name: ☑️ 手动切换
@@ -214,45 +216,45 @@ proxy-groups:
     use:
       - 我的订阅
       - 订阅1
-      - 10T12mouth
+      # - 订阅2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     use:
       - 我的订阅
       - 订阅1
-      - 10T12mouth
+      # - 订阅2
     interval: 300
     tolerance: 500
-  - name: ⚖️ 负载均衡
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    use:
-      - 我的订阅
-      - 订阅1
-      - 10T12mouth
-    filter: (?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))
-  - {name: Apple,     type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Cloudflare,type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: ChatGPT,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Google,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: GitHub,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Bing,      type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: OneDrive,  type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Microsoft, type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: NETFLIX,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Spotify,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Speedtest, type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Steam,     type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: TikTok,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Telegram,  type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: Twitter,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: YouTube,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # - name: ⚖️ 负载均衡
+  #   type: load-balance
+  #   url: http://www.google.com/generate_204
+  #   interval: 300
+  #   strategy: consistent-hashing
+  #   use:
+  #     - 我的订阅
+  #     - 订阅1
+  #     - 订阅2
+  #   filter: (?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))
+  # # - {name: Apple,     type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Cloudflare,type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: ChatGPT,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Google,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: GitHub,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Bing,      type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: OneDrive,  type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Microsoft, type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: NETFLIX,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Spotify,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Speedtest, type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Steam,     type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: TikTok,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Telegram,  type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: Twitter,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+  # # - {name: YouTube,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
   - {name: 🐟 漏网之鱼,type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: 🎯 全球直连,type: select, proxies: [DIRECT]}
-  - {name: 🛑 广告拦截,type: select, proxies: [REJECT]}
+  # - {name: 🎯 全球直连,type: select, proxies: [DIRECT]}
+  # - {name: 🛑 广告拦截,type: select, proxies: [REJECT]}
   - {name: GLOBAL,    type: select, include-all: true, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
 rules:
   #来源IP规则
@@ -309,33 +311,33 @@ rules:
 
   #【Meta专属】GEOSITE规则
   - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,github,GitHub
-  - GEOSITE,twitter,Twitter
-  - GEOSITE,youtube,YouTube
-  - GEOSITE,telegram,Telegram
-  - GEOSITE,google,Google
-  - GEOSITE,google-cn,Google # Google CN 不走代理会导致香港等地区节点 Play Store 异常
-  - GEOSITE,cloudflare,Cloudflare
-  - GEOSITE,netflix,NETFLIX
-  - GEOSITE,tiktok,TikTok
+  - GEOSITE,github,🚀 节点选择
+  - GEOSITE,twitter,🚀 节点选择
+  - GEOSITE,youtube,🚀 节点选择
+  - GEOSITE,telegram,🚀 节点选择
+  - GEOSITE,google,🚀 节点选择
+  - GEOSITE,google-cn,🚀 节点选择 # Google CN 不走代理会导致香港等地区节点 Play Store 异常
+  - GEOSITE,cloudflare,🚀 节点选择
+  - GEOSITE,netflix,🚀 节点选择
+  - GEOSITE,tiktok,🚀 节点选择
   # - GEOSITE,spotify,Spotify
   # - GEOSITE,steam,Steam
   - GEOSITE,steam@cn,DIRECT
   - GEOSITE,apple@cn,DIRECT
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,icloud@cn,DIRECT
-  - GEOSITE,bing,Bing
-  - GEOSITE,onedrive,OneDrive
-  - GEOSITE,microsoft,Microsoft
+  - GEOSITE,bing,DIRECT
+  - GEOSITE,onedrive,DIRECT
+  - GEOSITE,microsoft,DIRECT
   - GEOSITE,microsoft@cn,DIRECT
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,geolocation-!cn,🐟 漏网之鱼
 
   #GEOIP规则  
-  - GEOIP,google,Google
-  - GEOIP,netflix,NETFLIX
-  - GEOIP,telegram,Telegram
-  - GEOIP,twitter,Twitter
+  - GEOIP,google,🚀 节点选择
+  - GEOIP,netflix,🚀 节点选择
+  - GEOIP,telegram,🚀 节点选择
+  - GEOIP,twitter,🚀 节点选择
   - GEOIP,private,DIRECT
   - GEOSITE,CN,DIRECT
   - GEOIP,LAN,DIRECT
