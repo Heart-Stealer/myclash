@@ -51,7 +51,7 @@ dingyue: &dingyue
   # type: url-test
   use:
     - 本地配置
-    - 订阅一
+    # - 订阅一
     # - 订阅二
 
 # 订阅链接
@@ -70,13 +70,13 @@ proxy-providers:
     # override:
     #   additional-prefix: "[本地配置]"
 
-  订阅一:
-    <<: *DYUrlTest
-    path: ./proxy_provider/dingyue1.yaml
-    url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
-    # 如需要为该订阅组节点添加前缀，取消下面两行注释
-    override:
-      additional-prefix: "[1]"
+  # 订阅一:
+  #   <<: *DYUrlTest
+  #   path: ./proxy_provider/dingyue1.yaml
+  #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
+  #   # 如需要为该订阅组节点添加前缀，取消下面两行注释
+  #   override:
+  #     additional-prefix: "[1]"
 
   # 订阅二:
   #   <<: *DYUrlTest
@@ -139,7 +139,10 @@ secret: "963./*-+"
 # 可以将静态网页资源 (比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui，可以为绝对路径，或者 Clash 工作目录的相对路径
 external-ui: ui
 # 自定义外部用户界面下载地址
-external-ui-url: "https://gh-proxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+# MetaCubeX的Yacd-meta
+# external-ui-url: "https://gh-proxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+# zashboard
+external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 
 # 数据库部分
 # 自动更新 GEO
@@ -502,6 +505,7 @@ rules:
   - DOMAIN-SUFFIX,skyearth.xyz,DIRECT
 
   #目的域名后缀规则
+  - DOMAIN-SUFFIX,us-c.viayoo.com:443,DIRECT
   - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
   - DOMAIN-SUFFIX,surrit.com,DIRECT
   - DOMAIN-SUFFIX,sixyik.com,DIRECT

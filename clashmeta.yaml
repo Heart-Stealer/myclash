@@ -8,7 +8,7 @@ mode: Rule
 log-level: info
 allow-lan: false
 bind-address: "*"
-ipv6: false
+ipv6: true
 upd: true
 
 unified-delay: true                  # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
@@ -16,11 +16,11 @@ tcp-concurrent: true                 # TCP 并发，可选值 true/false
 find-process-mode: strict            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
 
-external-controller: :9090
+external-controller: 0.0.0.0:9090
 external-ui: folder
-external-ui-url: 'https://gh-proxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip'
+# external-ui-url: 'https://gh-proxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip'
 
-secret: ""                           # 自定义 API 的访问密钥
+secret: "963./*-+"                           # 自定义 API 的访问密钥
 
 geodata-mode: true                   # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
 geo-auto-update: true                # 自动更新 GEO
@@ -173,7 +173,8 @@ proxy-providers:
     # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml"
     type: http
     path: ./profiles/proxies/clashmeta.yaml
-    url: https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml
+    # url: "https://gh-proxy.com/github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
+    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     interval: 21600
     health-check:
       enable: true
@@ -181,28 +182,28 @@ proxy-providers:
       interval: 300
       timeout: 5000
       tolerance: 500
-  订阅1:
-    type: http
-    path: ./profiles/proxies/dingyue1.yaml
-    url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
-    interval: 21600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 5000
-      tolerance: 500
-  订阅2:
-    type: http
-    path: ./profiles/proxies/dingyue2.yaml
-    url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
-    interval: 43200
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 5000
-      tolerance: 500
+  # 订阅1:
+  #   type: http
+  #   path: ./profiles/proxies/dingyue1.yaml
+  #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
+  #   interval: 21600
+  #   health-check:
+  #     enable: true
+  #     url: http://www.gstatic.com/generate_204
+  #     interval: 300
+  #     timeout: 5000
+  #     tolerance: 500
+  # 订阅2:
+  #   type: http
+  #   path: ./profiles/proxies/dingyue2.yaml
+  #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     url: http://www.gstatic.com/generate_204
+  #     interval: 300
+  #     timeout: 5000
+  #     tolerance: 500
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -215,14 +216,14 @@ proxy-groups:
     type: select
     use:
       - 我的订阅
-      - 订阅1
+      # - 订阅1
       # - 订阅2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.google.com/generate_204
     use:
       - 我的订阅
-      - 订阅1
+      # - 订阅1
       # - 订阅2
     interval: 300
     tolerance: 500
@@ -281,6 +282,7 @@ rules:
   - DOMAIN-SUFFIX,skyearth.xyz,DIRECT
 
   #目的域名后缀规则
+  - DOMAIN-SUFFIX,us-c.viayoo.com:443,DIRECT
   - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
   - DOMAIN-SUFFIX,surrit.com,DIRECT
   - DOMAIN-SUFFIX,sixyik.com,DIRECT
