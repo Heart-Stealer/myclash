@@ -20,25 +20,115 @@
     # interval:节点连通性检测时间，单位为秒
     # timeout:节点超时延迟，单位为毫秒
     # tolerance:节点自动切换差值，单位为毫秒
-DYUrlTest: &DYUrlTest
-  type: http
+# 订阅的urltest
+DY_urltest: &DY_urltest
+  # # 必须，provider类型，可选http / file / inline
+  # type: http
+  # url: "http://test.com"
+  proxy: DIRECT
   interval: 43200   # 自动更新订阅时间，单位为秒
   health-check:
     enable: true
-    url: 'https://www.gstatic.com/generate_204'
+    url: "https://www.gstatic.com/generate_204"
+    # url: "http://www.google.com/generate_204"
     # url: https://cp.cloudflare.com
     interval: 300  # 节点连通性检测时间，单位为秒
-    timeout: 5000   # 节点超时延迟，单位为毫秒
-    tolerance: 200  # 节点自动切换差值，单位为毫秒 节点切换容差，单位 ms
+    timeout: 3000   # 节点超时延迟，单位为毫秒
+    tolerance: 50  # 节点自动切换差值，单位为毫秒 节点切换容差，单位 ms
     lazy: true
-  proxy: DIRECT
+    # 健康检查时期望的 HTTP 响应状态码。若配置了该字段，则只有当响应状态码与期望状态一致时才认为节点可用。
+    # 默认为 *，表示对响应状态不做要求
+    # 匹配 200 和 302 以及 400 到 503 状态码
+    # expected-status: 200/302/400-503
+  # 排除满足关键词或正则表达式的节点，可以使用 ` 区分多个正则表达式
+  exclude-filter: ""
+  # 不支持正则表达式，通过 | 分割，根据节点类型排除
+  # provider 的 exclude-type 使用配置文件中的 type 类型进行排除
+  # ss|http|socks5|vmess|vless|trojan
+  exclude-type: "http"
+  # exclude-type: "ss|http"
+  # # 内容，仅 type 为 inline 时生效
+  # payload:
+  #   - name: "ss1"
+  #     type: ss
+  #     server: server
+  #     port: 443
+  #     cipher: chacha20-ietf-poly1305
+  #     password: "password"
+# 对 override 覆写中的 节点名称替换
+Proxy_name: &Proxy_name
+  proxy-name:
+  - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+    target: "🟢"
 
-Local: &Local: {type: file, path: 'F:/GoldBridge/clash/clash-main/clashmetatest.yaml'}
+# 覆写模板
+Override: &Override
+  # # 启用 TCP Fast Open, 仅生效于 TCP 协议
+  # tfo: false
+  # # 启用 TCP Multi Path, 仅生效于 TCP 协议
+  # mptcp: false
+  # # 是否允许 UDP 通过代理，默认为 false
+  # # 此选项在 TUIC 等基于 UDP 的协议以及 direct 和 dns 类型中默认开启
+  # udp: true
+  # # 启用 UDP over TCP，默认 false
+  # udp-over-tcp: false
+  # # 参阅Hysteria/Hysteria2
+  # # brutal 速率控制，若不写单位，默认为 Mbps
+  # down: "50 Mbps"
+  # up: "10 Mbps"
+  # # 跳过证书验证，仅适用于使用 tls 的协议
+  # skip-cert-verify: true
+  # # 指定当前 proxies 通过 dialer-proxy 建立网络连接，值可以为策略组/出站代理的 name
+  # dialer-proxy: proxy
+  # # 指定节点绑定的接口，从此接口发起连接
+  # interface-name: tailscale0
+  # # 节点发起连接时附加的路由标记
+  # routing-mark: 233
+  # # 代理软件出站使用的 ip 版本，如果不是 direct，则会影响 server 为域名时使用的 ip 地址
+  # # 可选：dual/ipv4/ipv6/ipv4-prefer/ipv6-prefer ,默认使用 dual
+  # # ipv4: 仅使用 IPv4
+  # # ipv6: 仅使用 IPv6
+  # # ipv4-prefer: 优先使用 IPv4，对于 TCP 会进行双栈解析，并发链接但是优先使用 IPv4 链接，UDP 则为双栈解析，获取结果中的第一个 IPv4
+  # # ipv6-prefer:优先使用 IPv6，对于 TCP 会进行双栈解析，并发链接但是优先使用 IPv6 链接，UDP 则为双栈解析，获取结果中的第一个 IPv6
+  # ip-version: ipv4-prefer
+  # # 为节点名称添加固定前缀
+  # additional-prefix: "provider1 prefix |"
+  # # 为节点名称添加固定后缀
+  # additional-suffix: "👑"
+  # # 对节点名称内容进行替换，支持正则表达式，pattern 为替换内容，target 为替换目标
+  # proxy-name:
+  # - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+  #   target: "🟢"
+# 我自己的覆写
+Override_1: &Override_1
+  override:
+    # 为节点名称添加固定后缀
+    additional-suffix: "🥇"
+    # 对节点名称内容进行替换，支持正则表达式，pattern 为替换内容，target 为替换目标
+    <<: *Proxy_name
+Override_2: &Override_2
+  override:
+    # 为节点名称添加固定后缀
+    additional-suffix: "🥈"
+    # 对节点名称内容进行替换，支持正则表达式，pattern 为替换内容，target 为替换目标
+    <<: *Proxy_name
+Override_3: &Override_3
+  override:
+    # 为节点名称添加固定后缀
+    additional-suffix: "🥉"
+    # 对节点名称内容进行替换，支持正则表达式，pattern 为替换内容，target 为替换目标
+    <<: *Proxy_name
 
-dingyue: &dingyue
-  # 如果不希望自动切换请将下面两行注释对调
-  # type: select
+# Local_url: &Local_url {type: "file", path: "F:/GoldBridge/clash/clash-main/nikkitest.yaml"}
+Local_url: &Local_url
+  type: "file"
+  path: "F:/GoldBridge/clash/clash-main/nikkitest.yaml"
+Dingyue: &Dingyue
+  # 必须选择一种类型，最好select
+  # type类型有 select url-test fallback load-balance
+  type: select
   # type: url-test
+  include-all: true
   use:
     - 本地配置
     # - 订阅一
@@ -48,34 +138,35 @@ dingyue: &dingyue
 # 对于订阅来说，path 为选填项，但建议启用
 # 本地配置可以只填 path
 proxy-providers:
-  
+  # 本地配置:
+    # <<: *Local_url
+    # <<: *DY_urltest
+    # # 默认只允许存储在 mihomo 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    # # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml" 
+    # <<: *Override_1
   本地配置:
-    <<: *DYUrlTest
-    # <<: *Local
     type: http
     path: ./proxy_provider/clashmeta.yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml"
-    # 默认只允许存储在 mihomo 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
-    # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml" 
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/nikkitest.yaml"
+    <<: *DY_urltest
+    <<: *Override_1
+
     # # 如需要为该订阅组节点添加前缀，取消下面两行注释
     # override:
     #   additional-prefix: "[本地配置]"
-
   # 订阅一:
-  #   <<: *DYUrlTest
-  #   path: ./proxy_provider/dingyue1.yaml
+  #   <<: *DY_urltest
+  #   path: ./proxy_provider/Dingyue1.yaml
   #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
   #   # 如需要为该订阅组节点添加前缀，取消下面两行注释
-  #   override:
-  #     additional-prefix: "[1]"
+    # <<: *Override_2
 
   # 订阅二:
-  #   <<: *DYUrlTest
-  #   path: ./proxy_provider/dingyue2.yaml
+  #   <<: *DY_urltest
+  #   path: ./proxy_provider/Dingyue2.yaml
   #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
   #   # 如需要为该订阅组节点添加前缀，取消下面两行注释
-  #   override:
-  #     additional-prefix: "[2]"
+    # <<: *Override_3
 
 # 小白请不要继续随意修改以下设置
 # 若需修改请参阅文档 https://wiki.metacubex.one
@@ -116,8 +207,8 @@ log-level: info
 allow-lan: true
 # 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
 # 绑定 IP, 通过 LAN 访问一个/一些特定的 IP 地址，
-# '*' 绑定所有 IP 地址，默认值，不填写此项则绑定全部
-bind-address: '*'
+# "*" 绑定所有 IP 地址，默认值，不填写此项则绑定全部
+bind-address: "*"
 # 是否允许 UDP 通过代理，默认为 false
 udp: true
 # 统一延迟，更换延迟计算方式,去除握手等额外延迟 可选值 true/false
@@ -129,14 +220,14 @@ tcp-concurrent: true
 # always 强制匹配所有进程
 # strict 默认，由 Mihomo 判断是否开启
 # off 不匹配进程，推荐在路由器上使用此模式
-find-process-mode: strict
+find-process-mode: "strict"
 
-# 路由器
-# find-process-mode: 'off'
+# # 路由器
+# find-process-mode: "off"
 # interface-name: eth1
 # 全局客户端指纹。支持协议有 VLESS, Vmess, trojan
-# 全局客户端指纹，可选：'chrome', 'firefox', 'safari', 'iOS', 'android', 'edge', '360',' qq', 'random'；
-# 若选择 'random', 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
+# 全局客户端指纹，可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"；
+# 若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
 # global-client-fingerprint: chrome
 global-client-fingerprint: random # 随机指纹
 
@@ -167,16 +258,16 @@ profile:
 # 外部控制器(HTTP)监听地址，可以使用 RESTful API 来控制你的 Mihomo 内核；
 # API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP；
 # 访问地址：http://127.0.0.1:9090
-external-controller: ':9090'
+external-controller: ":9090"
 # 外部控制器RESTful API访问密钥
-secret: '963.'
+secret: "963."
 # 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
-external-ui: 'ui'
+external-ui: "ui"
 # 自定义外部用户界面名字
-external-ui-name: 'zashboard'
+external-ui-name: "zashboard"
 # 自定义外部用户界面下载地址
-external-ui-url: 'https://gh-proxy.com/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip'
-# external-ui-url: 'https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip'
+# external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
+external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 
 # GEO文件配置
 # 自动更新 GEO 文件,可选 true/false
@@ -187,9 +278,9 @@ geo-update-interval: 72
   # standard：标准加载器
   # memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
   # memc: memconservative别名
-geodata-loader: standard
-# 路由器
-# geodata-loader: memconservative
+geodata-loader: "standard"
+# # 路由器
+# geodata-loader: "memconservative"
 # GeoIP数据模式
 # 更改 GeoIP 使用的文件（true：data，false：mmdb）默认值false
 geodata-mode: false # GeoIP格式，false为MMDB，true为DAT
@@ -198,17 +289,20 @@ geodata-mode: false # GeoIP格式，false为MMDB，true为DAT
 # 源地址 https://github.com/MetaCubeX/meta-rules-dat
 # 自定义 GEO 文件下载地址
 geox-url:
-  geosite: 'https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/geosite.dat'
-  geoip: 'https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/geoip.metadb'
-  asn: 'https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/Country-ASN-all.mmdb'
-  mmdb: 'https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/Country-all.mmdb'
-
-
-# 路由器
-  # geosite: 'https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
-  # geoip: 'https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
-  # mmdb: 'https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb'
-  # asn: 'https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb'
+  geosite: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/geosite.dat"
+  geoip: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/geoip.metadb"
+  asn: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/Country-ASN-all.mmdb"
+  mmdb: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/Country-all.mmdb"
+# # 路由器
+#   geosite: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/geosite.dat"
+#   geoip: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/geoip-lite.metadb"
+#   mmdb: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/Country-lite.mmdb"
+#   asn: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/Country-ASN-all.mmdb"
+  # mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
+  # mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  # geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
+  # asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+  # geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
 
 # 域名嗅探配置
 # 域名嗅器,通过读取握手包内的域名字段,将IP还原成域名,有效解决Mapping机制的短板
@@ -229,25 +323,36 @@ sniffer:
   
   # 需要强制嗅探的域名
   force-domain:
-    - '+.v2ex.com'
-    - 'google.com'
+    - "+.v2ex.com"
+    - "google.com"
   # 需要跳过嗅探的域名。
   # 主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备
+# +.域名：
+# 含义：“+” 符号通常表示匹配以特定字符串开头的域名。
+# 例如 +.example.com，会匹配像 example - service.example.com 这样以 example.com 完整字符串开头的域名。
+# 它要求在“+” 后的字符串作为一个整体出现在域名起始位置。
+# 示例：假设规则用于过滤或处理域名，对于域名 sub - example.example.com 可以匹配，
+# 但对于 example - sub.example.com 则不匹配，因为后者并非以 example.com 完整字符串开头。
+# *.域名：
+# 含义：“*” 是通配符，代表匹配零个或多个任意字符。
+# 所以 *.example.com 可以匹配所有以 .example.com 结尾的域名。
+# 它的匹配更为宽泛，只要域名以指定的后缀结尾即可。
+# 示例：对于 www.example.com、mail.example.com、subdomain1.subdomain2.example.com 等所有以 .example.com 结尾的域名，都能被 *.example.com 匹配到。
   skip-domain:
-    - '+.baidu.com'
-    - '+.apple.com'
-    - 'Mijia Cloud'
-    - 'dlg.io.mi.com'
-    - '*.push.apple.com'
-    - '*.apple.com'
-    - '*.wechat.com'
-    - '*.qpic.cn'
-    - '*.qq.com'
-    - '*.wechatapp.com'
-    - '*.vivox.com'
+    - "+.baidu.com"
+    # - "+.apple.com"
+    - "Mijia Cloud"
+    - "dlg.io.mi.com"
+    - "*.push.apple.com"
+    - "*.apple.com"
+    - "*.wechat.com"
+    - "*.qpic.cn"
+    - "*.qq.com"
+    - "*.wechatapp.com"
+    - "*.vivox.com"
     # 向日葵服务
-    - '*.oray.com'
-    - '*.sunlogin.net'
+    - "*.oray.com"
+    - "*.sunlogin.net"
   # 对 redir-host 类型识别的流量进行强制嗅探
   force-dns-mapping: true
   # 启用嗅探结果最为实际访问
@@ -277,7 +382,7 @@ tun:
   # 可用值： system/gvisor/mixed
   stack: mixed
   # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
-  dns-hijack: ['any:53', 'tcp://any:53']
+  dns-hijack: ["any:53", "tcp://any:53"]
   # 自动设置全局路由,可以自动将全局流量路由进入 tun 网卡
   auto-route: true
   # 是否自动重定向网络流量
@@ -287,7 +392,7 @@ tun:
   auto-detect-interface: true
   # 指定 tun 网卡名称,MacOS 设备只能使用 utun 开头的网卡名
   device: Mihomo
-  # 路由器
+  # # 路由器
   # device: nikki
   # 最大传输单元，会影响极限状态下的速率，一般用户默认即可。
   mtu: 9000
@@ -301,8 +406,8 @@ tun:
   # udp-timeout: 300
   # 使用route-exclude-address代替
   route-exclude-address: #启用 auto-route 时排除自定义网段
-    - '192.168.0.0/16'
-    - 'fc00::/7'
+    - "192.168.0.0/16"
+    - "fc00::/7"
   # inet4-route-exclude-address: #启用 auto-route 时排除自定义网段
   #   - 192.168.0.0/16
   # inet6-route-exclude-address: #启用 auto-route 时排除自定义网段
@@ -315,77 +420,82 @@ dns:
   ipv6: true
   #ipv6超时，单位 毫秒
   ipv6-timeout: 300
+  #优先使用 DOH 的 http/3
+  prefer-h3: true
   # DNS请求遵循规则路由，需配置 proxy-server-nameserver
   respect-rules: true
-  enhanced-mode: redir-host
+  # 模式切换 redir-host / fake-ip
+  enhanced-mode: fake-ip
   # 路由器
-  # enhanced-mode: fake-ip
+  # enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16
+  # 模式切换 whitelist/blacklist 
+  # 黑名单模式表示如果匹配成功则不返回 Fake-IP, 白名单模式时只有匹配成功才返回 Fake-IP
   fake-ip-filter-mode: blacklist
   # 哪些域名不适用fake-ip
   #fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
   fake-ip-filter:
-    - '*'
-    - '+.lan'
-    - '+.local'
-    - 'rule-set:private_domain,cn_domain'
-    # ntp
-    - 'time.*.com'
-    - 'ntp.*.com'
+    - "*"
+    - "+.lan"
+    - "+.local"
+    # - "rule-set:private_domain,cn_domain"
     # 米家
-    - 'Mijia Cloud'
+    - "Mijia Cloud"
     # Xiaomi
-    - '+.market.xiaomi.com'
-    - 'geosite:cn'
+    - "+.market.xiaomi.com"
+    - "geosite:cn"
     # windows 本地连接检测
-    - '+.msftconnecttest.com'
-    - '+.msftncsi.com'
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - '*.pool.ntp.org'
-    - '+.services.googleapis.cn'
-    - '+.xn--ngstr-lra8j.com'
-    - '+.push.apple.com'
-    - '5ddd.com'
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
     # QQ登录
-    - 'localhost.ptlogin2.qq.com'
-    - 'localhost.sec.qq.com'
-    - '+.qq.com'
-    - '+.tencent.com'
+    - "localhost.ptlogin2.qq.com"
+    - "localhost.sec.qq.com"
+    - "+.qq.com"
+    - "+.tencent.com"
     # Steam
-    - '+.steamcontent.com'
+    - "+.steamcontent.com"
     # Microsoft Xbox
-    - 'xbox.*.*.microsoft.com'
-    - '*.*.xboxlive.com'
-    - 'xbox.*.microsoft.com'
-    - 'xnotify.xboxlive.com'
+    - "xbox.*.*.microsoft.com"
+    - "*.*.xboxlive.com"
+    - "xbox.*.microsoft.com"
+    - "xnotify.xboxlive.com"
     # STUN
-    - 'stun.*.*'
-    - '+.stun.*.*'
-    - '+.stun.*.*.*'
+    - "stun.*.*"
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
     # Netflix
-    - '+.nflxvideo.net'
+    - "+.nflxvideo.net"
     # Bilibili
-    - '*.mcdn.bilivideo.cn'
+    - "*.mcdn.bilivideo.cn"
     # ntp
-    - 'time.*.gov'
-    - 'time.*.edu.cn'
-    - 'time.*.apple.com'
-    - 'time-ios.apple.com'
-    - 'time1.*.com'
-    - 'time2.*.com'
-    - 'time3.*.com'
-    - 'time4.*.com'
-    - 'time5.*.com'
-    - 'time6.*.com'
-    - 'time7.*.com'
-    - 'ntp1.*.com'
-    - 'ntp2.*.com'
-    - 'ntp3.*.com'
-    - 'ntp4.*.com'
-    - 'ntp5.*.com'
-    - 'ntp6.*.com'
-    - 'ntp7.*.com'
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.edu.cn"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "time1.*.com"
+    - "time2.*.com"
+    - "time3.*.com"
+    - "time4.*.com"
+    - "time5.*.com"
+    - "time6.*.com"
+    - "time7.*.com"
+    - "ntp.*.com"
+    - "ntp1.*.com"
+    - "ntp2.*.com"
+    - "ntp3.*.com"
+    - "ntp4.*.com"
+    - "ntp5.*.com"
+    - "ntp6.*.com"
+    - "ntp7.*.com"
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "*.pool.ntp.org"
+    - "+.services.googleapis.cn"
+    - "+.xn--ngstr-lra8j.com"
+    - "+.push.apple.com"
+    - "5ddd.com"
+    - "time1.cloud.tencent.com"
     - "WORKGROUP"
   # 解析 nameserver, fallback以及其他dns服务器配置的DNS服务器
   # (只能能使用纯 IP 地址，支持UDP, TCP, DoT, DoH, DoQ)可为加密 DNS
@@ -403,23 +513,22 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
-  #优先使用 DOH 的 http/3
-  prefer-h3: false
   use-system-hosts: false
   use-hosts: true
-  # DNS解析服务器策略
-  # 指定地址使用特定DNS解析服务器
-  # 指定域名查询的解析服务器，优先于 nameserver/fallback 查询
-  nameserver-policy:
-    geosite:cn,private:
-      - 223.5.5.5
-      - 119.29.29.29
-    geosite:geolocation-!cn:
-      - https://dns.cloudflare.com/dns-query
-      - https://dns.google/dns-query
-  fallback:
-    - https://dns.cloudflare.com/dns-query
-    - https://dns.google/dns-query
+  # # DNS解析服务器策略
+  # # 指定地址使用特定DNS解析服务器
+  # # 指定域名查询的解析服务器，优先于 nameserver/fallback 查询
+  # nameserver-policy:
+  #   geosite:cn,private:
+  #     - 223.5.5.5
+  #     - 119.29.29.29
+  #   geosite:geolocation-!cn:
+  #     - https://dns.cloudflare.com/dns-query
+  #     - https://dns.google/dns-query
+  # fallback:
+  #   - https://dns.cloudflare.com/dns-query
+  #   - https://dns.google/dns-query
+
   # direct出口DNS接地服务器
   direct-nameserver:
     - https://dns.alidns.com/dns-query
@@ -445,20 +554,19 @@ dns:
       - 0.0.0.0/32
     # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback解析，不去使用 nameserver
     domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
-      - '+.instagram.com'
-      - '+.twitter.com'
-      - '+.chatgpt.com'
+      - "+.google.com"
+      - "+.facebook.com"
+      - "+.youtube.com"
+      - "+.instagram.com"
+      - "+.twitter.com"
+      - "+.chatgpt.com"
 
 lan-allowed-ips:
   - 0.0.0.0/0
   - ::/0
 lan-disallowed-ips: []
 # socks5远程访问的密码
-authentication:
-  - []
+authentication: []
 skip-auth-prefixes:
   - 127.0.0.1/32
 
@@ -471,102 +579,105 @@ ntp:
   # 设置为 true 时，NTP 服务会尝试将获取的时间同步到系统时钟；
   # 设置为 false 时，仅执行 NTP 时间获取操作，但不修改系统时间。
   write-to-system: true
-  # NTP 服务器地址，这里设置为苹果的时间服务器。
   # NTP 服务地址，默认 time.apple.com
   # 你可以根据实际需求更换为其他可靠的 NTP 服务器，
-  # 如 time.nist.gov 等。
-  server: time.apple.com
-    # - 'ntp.ntsc.ac.cn'
-    # - 'ntp.aliyun.com'
-    # - 'time1.cloud.tencent.com'
-    # - 'time2.cloud.tencent.com'
+  # 如 time.nist.gov 等。只能切换，不能多选
+  server: 
+    "time.apple.com"
+    # "ntp.ntsc.ac.cn"
+    # "ntp.aliyun.com"
+    # "time1.cloud.tencent.com"
+    # "time2.cloud.tencent.com"
   # NTP 服务使用的端口，标准 NTP 端口为 123。
   port: 123
   # 检查 NTP 服务器并尝试同步时间的时间间隔，单位为秒。
   # 这里设置为 300 秒，即每 5 分钟检查并同步一次时间。
-  interval: 600
+  # 同步时间间隔，单位（分），默认同步间隔为 30 分
+  interval: 300
 
 # proxies:
 
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 # 无ICON
-# my_only_1: &my_only_1 {type: select, proxies: [🕹️ 代理选择, 手动选择, 自动选择, 🇨🇳 DIRECT]}
-# my_direct: &my_direct {type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-# my_reject: &my_reject {type: select, proxies: [REJECT, 手动选择, 自动选择]}
-# my_select: &my_select {type: select, proxies: [手动选择, 🇨🇳 DIRECT, 负载均衡, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
-# myurltest: &myurltest {type: url-test, include-all: true, interval: 300, timeout: 3000, tolerance: 50}
-# my_fallback: &my_fallback {type: fallback, include-all: true, interval: 300, timeout: 2000, tolerance: 50}
-# my_loadbalance: &my_loadbalance {type: load-balance, include-all: true, filter: '(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.|美国|US|巴西|印度|日本|JP))', url: 'http://www.google.com/generate_204', interval: 300, strategy: consistent-hashing, timeout: 2000}
+# Proxy_first: &Proxy_first {type: select, proxies: [🕹️ 代理选择, 手动选择, 自动选择, 🇨🇳 DIRECT]}
+# Direct_first: &Direct_first {type: select, proxies: [DIRECT, 手动选择, 自动选择]}
+# Reject_first: &Reject_first {type: select, proxies: [REJECT, 手动选择, 自动选择]}
+# Include_all: &Include_all {type: select, proxies: [手动选择, 🇨🇳 DIRECT, 负载均衡, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
+# my_au: &my_au {type: url-test, include-all: true, interval: 300, timeout: 3000, tolerance: 50}
+# my_fb: &my_fb {type: fallback, include-all: true, interval: 300, timeout: 3000, tolerance: 50}
+# my_lb: &my_lb {type: load-balance, include-all: true, filter: '(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.|美国|US|巴西|印度|日本|JP))', url: 'http://www.google.com/generate_204', interval: 300, strategy: consistent-hashing, timeout: 2000}
 # my_shoudong: &my_shoudong {type: select, include-all: true}
 # my_HK: &my_HK {filter: '(?i)港|hk|HK|hongkong|hong kong|HongKong'}
 # my_JP: &my_JP {filter: '(?i)日|jp|JP|japan|Japan'}
 # my_SG: &my_SG {filter: '(?i)新|sg|singapore|Singapore'}
 # my_US: &my_US {filter: '(?i)美|us|US|um|UM'}
 # need ICON
-my_only_1: &my_only_1 {type: select, proxies: [代理选择, 手动选择, 自动选择, DIRECT]}
-my_direct: &my_direct {type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-my_reject: &my_reject {type: select, proxies: [REJECT, 手动选择, 自动选择]}
-my_select: &my_select {type: select, proxies: [手动选择, DIRECT, 负载均衡, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
-myurltest: &myurltest {type: url-test, include-all: true, interval: 300, timeout: 3000, tolerance: 50}
-my_fallback: &my_fallback {type: fallback, include-all: true, interval: 300, timeout: 2000, tolerance: 50}
-my_loadbalance: &my_loadbalance {type: load-balance, include-all: true, filter: '(?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.|美国|US|巴西|印度|日本|JP))', url: 'http://www.google.com/generate_204', interval: 300, strategy: consistent-hashing, timeout: 2000}
-my_shoudong: &my_shoudong {type: select, include-all: true}
-my_HK: &my_HK {filter: '(?i)港|hk|HK|hongkong|hong kong|HongKong'}
-my_JP: &my_JP {filter: '(?i)日|jp|JP|japan|Japan'}
-my_SG: &my_SG {filter: '(?i)新|sg|singapore|Singapore'}
-my_US: &my_US {filter: '(?i)美|us|US|um|UM|States|American'}
+Proxy_first: &Proxy_first {type: select, proxies: [代理选择, 手动选择, 自动选择, DIRECT]}
+Direct_first: &Direct_first {type: select, proxies: [DIRECT, 手动选择, 自动选择]}
+Reject_first: &Reject_first {type: select, proxies: [REJECT]}
+Include_all: &Include_all {type: select, proxies: [手动选择, DIRECT, 负载均衡, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
+
+my_lb: &my_lb {type: load-balance, include-all: true, filter: "(?i)(.*(🌳)|(-([1-9]|[1-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 3000}
+# auto_select fallback
+my_au: &my_au {type: url-test, include-all: true, interval: 300, timeout: 3000, tolerance: 50}
+my_fb: &my_fb {type: fallback, include-all: true, interval: 300, timeout: 3000, tolerance: 50}
+my_HK: &my_HK {<<: *Dingyue, filter: "(?i)🌳|港|hk|hong([ \t\n\r\f\v]?|)kong"}
+my_JP: &my_JP {<<: *Dingyue, filter: "(?i)🌳|日|jp|JP|japan"}
+my_SG: &my_SG {<<: *Dingyue, filter: "(?i)🌳|新|sg|singapore"}
+my_US: &my_US {<<: *Dingyue, filter: "(?i)🌳|美|us|um|states|american"}
 # 正则表达匹配
 # ,1 icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
 # ,1 icon: "([^"]*)"
+# 因为YAML中 \s 无效，若要在YAML文件里使用这个正则表达式，且要匹配空白字符，可将 \s 替换为实际的空白字符类表示方式 [ \t\n\r\f\v]
 
 # 策略组
 proxy-groups:
   # 使用 WARP 的用户需要手动在下方的 proxies 字段内添加 WARP
   # 例如 [WARP, 全部节点, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, DIRECT],
-  - {name: 代理选择, !!merge <<: *my_select, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"}
-  - {name: 手动选择, !!merge <<: *dingyue, !!merge <<: *my_shoudong, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png"}
-  - {name: 香港节点, !!merge <<: *dingyue, !!merge <<: *my_shoudong, !!merge <<: *my_HK, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
-  - {name: 日本节点, !!merge <<: *dingyue, !!merge <<: *my_shoudong, !!merge <<: *my_JP, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
-  - {name: 狮城节点, !!merge <<: *dingyue, !!merge <<: *my_shoudong, !!merge <<: *my_SG, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
-  - {name: 美国节点, !!merge <<: *dingyue, !!merge <<: *my_shoudong, !!merge <<: *my_US, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
-  - {name: 负载均衡, !!merge <<: *dingyue, !!merge <<: *my_loadbalance, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/LoadBalance.svg"}
-  - {name: 自动选择, !!merge <<: *dingyue, !!merge <<: *myurltest, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
-  - {name: 漏网之鱼, !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
-  - {name: 全球直连, !!merge <<: *my_direct, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"}
-  - {name: 广告拦截, !!merge <<: *my_reject, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"}
-  - {name: GLOBAL,    !!merge <<: *my_shoudong, !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"}
+  - {name: 代理选择, !!merge <<: *Include_all, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"}
+  - {name: 手动选择, !!merge <<: *Dingyue, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png"}
+  - {name: 香港节点, !!merge <<: *Dingyue, !!merge <<: *my_HK, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
+  - {name: 日本节点, !!merge <<: *Dingyue, !!merge <<: *my_JP, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
+  - {name: 狮城节点, !!merge <<: *Dingyue, !!merge <<: *my_SG, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
+  - {name: 美国节点, !!merge <<: *Dingyue, !!merge <<: *my_US, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
+  - {name: 负载均衡, !!merge <<: *Dingyue, !!merge <<: *my_lb, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/LoadBalance.svg"}
+  - {name: 自动选择, !!merge <<: *Dingyue, !!merge <<: *my_au, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
+  - {name: 漏网之鱼, !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
+  - {name: 全球直连, !!merge <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"}
+  - {name: 广告拦截, !!merge <<: *Reject_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"}
+  - {name: GLOBAL,    !!merge <<: *Proxy_first, !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"}
 
-  - {name: YouTube,   !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
-  - {name: FCM,       !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/fcm.png"}
-  - {name: GoogleVPN, !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/googlevpn.png"}
-  - {name: Google,    !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
-  - {name: Meta,      !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/meta.png"}
-  - {name: AI,        !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/ai.png"}
-  - {name: GitHub,    !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
-  - {name: OneDrive,  !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
-  - {name: Microsoft, !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
-  - {name: Telegram,  !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
-  - {name: Twitter,   !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
-  - {name: Steam,     !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/steam.png"}
-  - {name: Discord,   !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/discord.png"}
-  - {name: Talkatone, !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/talkatone.png"}
-  - {name: LINE,      !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/line.png"}
-  - {name: Signal,    !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/signal.png"}
-  - {name: TikTok,    !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
-  - {name: NETFLIX,   !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
-  - {name: DisneyPlus, !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/disneyplus.png"}
-  - {name: HBO,       !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/hbo.png"}
-  - {name: Primevideo, !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/primevideo.png"}
-  - {name: AppleTV,   !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/appletv.png"}
-  - {name: Apple,     !!merge <<: *my_direct, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
+  - {name: AI,        !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/ai.png"}
+  - {name: Cloudflare,!!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
+  - {name: ChatGPT,   !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
+  - {name: Discord,   !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/discord.png"}
+  - {name: DisneyPlus,!!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/disneyplus.png"}
+  - {name: FCM,       !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/fcm.png"}
+  - {name: GitHub,    !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
+  - {name: GoogleVPN, !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/googlevpn.png"}
+  - {name: Google,    !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
+  - {name: HBO,       !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/hbo.png"}
+  - {name: LINE,      !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/line.png"}
+  - {name: Meta,      !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/meta.png"}
+  - {name: NETFLIX,   !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
+  - {name: PayPal,    !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/paypal.png"}
+  - {name: Primevideo,!!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/primevideo.png"}
+  - {name: Pixiv,     !!merge <<: *Proxy_first}
+  - {name: Signal,    !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/signal.png"}
+  - {name: Spotify,   !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/spotify.png"}
+  - {name: Steam,     !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/steam.png"}
+  - {name: Talkatone, !!merge <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/talkatone.png"}
+  - {name: Telegram,  !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
+  - {name: TikTok,    !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
+  - {name: Twitter,   !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
+  - {name: YouTube,   !!merge <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
 
-  - {name: Bing,      !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
-  - {name: Cloudflare,!!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
-  - {name: ChatGPT,   !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
-  - {name: PayPal,    !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/paypal.png"}
-  # - {name: Pixiv,     !!merge <<: *my_only_1}
-  - {name: Speedtest, !!merge <<: *my_only_1, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
-  - {name: Spotify,   !!merge <<: *my_only_1, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/spotify.png"}
+  - {name: AppleTV,   !!merge <<: *Direct_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/appletv.png"}
+  - {name: Apple,     !!merge <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
+  - {name: Bing,      !!merge <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
+  - {name: Microsoft, !!merge <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
+  - {name: OneDrive,  !!merge <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
+  - {name: Speedtest, !!merge <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
   # "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
   # "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"
   # "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png"
@@ -590,14 +701,14 @@ proxy-groups:
   # - {name: Twitter,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
   # - {name: YouTube,   !!merge <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
   # 分隔,下面是地区分组
-  # - { name: 香港, !!merge <<: *dingyue, filter: "(?i)港|hk|hongkong|hong kong" }
-  # - { name: 台湾, !!merge <<: *dingyue, filter: "(?i)台|tw|taiwan" }
-  # - { name: 日本, !!merge <<: *dingyue, filter: "(?i)日本|jp|japan" }
-  # - { name: 美国, !!merge <<: *dingyue, filter: "(?i)美|us|unitedstates|united states" }
-  # - { name: 新加坡, !!merge <<: *dingyue, filter: "(?i)(新|sg|singapore)" }
+  # - { name: 香港, !!merge <<: *Dingyue, filter: "(?i)港|hk|hongkong|hong kong" }
+  # - { name: 台湾, !!merge <<: *Dingyue, filter: "(?i)台|tw|taiwan" }
+  # - { name: 日本, !!merge <<: *Dingyue, filter: "(?i)日本|jp|japan" }
+  # - { name: 美国, !!merge <<: *Dingyue, filter: "(?i)美|us|unitedstates|united states" }
+  # - { name: 新加坡, !!merge <<: *Dingyue, filter: "(?i)(新|sg|singapore)" }
   # - {
   #     name: 其它地区,
-  #     <<: *dingyue,
+  #     <<: *Dingyue,
   #     filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*",
   #   }
 
