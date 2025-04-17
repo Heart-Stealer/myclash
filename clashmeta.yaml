@@ -17,19 +17,22 @@ find-process-mode: strict            # 控制是否让 Clash 去匹配进程，a
 global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
 
 external-controller: 0.0.0.0:9090
-external-ui: folder
-# external-ui-url: 'https://gh-proxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip'
+secret: "963."
+external-ui: ui
+external-ui-name: zashboard
+external-ui-url: https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
 
-secret: "963./*-+"                           # 自定义 API 的访问密钥
 
-geodata-mode: true                   # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+secret: "963."                           # 自定义 API 的访问密钥
+
+geodata-mode: false                   # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
 geo-auto-update: true                # 自动更新 GEO
 geo-update-interval: 72              # 更新间隔，单位为小时
 geodata-loader: standard             # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
 geox-url:
   geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
   geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
+  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.mmdb"
   asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
 
 profile:
