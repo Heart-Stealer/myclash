@@ -1,3 +1,50 @@
+proxy-providers:
+  我的订阅:
+    # type: file
+    # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml"
+    type: http
+    path: ./profiles/proxies/clashmeta.yaml
+    # url: "https://gh-proxy.com/github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
+    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
+    proxy: DIRECT
+    interval: 43200   # 自动更新订阅时间，单位为秒
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 5000
+      tolerance: 50
+      lazy: true
+    exclude-filter: ""
+    exclude-type: "http"
+    override:
+      additional-suffix: "👑"
+      proxy-name:
+      - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+        target: "🟢"
+
+  # 订阅1:
+  #   type: http
+  #   path: ./profiles/proxies/dingyue1.yaml
+  #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
+  #   interval: 21600
+  #   health-check:
+  #     enable: true
+  #     url: http://www.gstatic.com/generate_204
+  #     interval: 300
+  #     timeout: 5000
+  #     tolerance: 500
+  # 订阅2:
+  #   type: http
+  #   path: ./profiles/proxies/dingyue2.yaml
+  #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     url: http://www.gstatic.com/generate_204
+  #     interval: 300
+  #     timeout: 5000
+  #     tolerance: 500
 mixed-port: 7890
 socks-port: 7891
 port: 7892
@@ -9,32 +56,36 @@ log-level: info
 allow-lan: false
 bind-address: "*"
 ipv6: true
-upd: true
 
+upd: true
 unified-delay: true                  # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
 tcp-concurrent: true                 # TCP 并发，可选值 true/false
 find-process-mode: strict            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
-
-external-controller: 0.0.0.0:9090
-external-ui: folder
-# external-ui-url: 'https://gh-proxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip'
-
-secret: "963./*-+"                           # 自定义 API 的访问密钥
-
-geodata-mode: true                   # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
-geo-auto-update: true                # 自动更新 GEO
-geo-update-interval: 72              # 更新间隔，单位为小时
-geodata-loader: standard             # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
-geox-url:
-  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
-  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+keep-alive-idle: 600                 # 连接空闲后多久发送探测包
+keep-alive-interval: 30              # TCP Keep Alive 间隔,单位分钟
+disable-keep-alive: false            # 禁用保持活跃探测
 
 profile:
   store-selected: true               # 储存 API 对策略组的选择，以供下次启动时使用
   store-fake-ip: true                # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
+
+external-controller: ":9090"         # API 监听地址
+secret: "963."                       # 自定义 API 的访问密钥
+external-ui: "ui"                    # 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
+external-ui-name: "zashboard"        # 自定义外部用户界面名字
+external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+
+geo-auto-update: true                # 自动更新 GEO
+geo-update-interval: 72              # 更新间隔，单位为小时
+geodata-loader: "standard"           # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+geodata-mode: false                # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+geox-url:
+  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+
 
 sniffer:
   enable: true                       # 是否启用sniffer
@@ -53,39 +104,72 @@ sniffer:
     - tls
     - http
   skip-domain:                       # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备Mijia Cloud
-    - Mijia Cloud
-    - dlg.io.mi.com
-    - +.apple.com
+    - "+.baidu.com"
+    # - "+.apple.com"
+    - "Mijia Cloud"
+    - "dlg.io.mi.com"
+    - "*.push.apple.com"
+    - "*.apple.com"
+    - "*.wechat.com"
+    - "*.qpic.cn"
+    - "*.qq.com"
+    - "*.wechatapp.com"
+    - "*.vivox.com"
+    # 向日葵服务
+    - "*.oray.com"
+    - "*.sunlogin.net"
   force-domain:                      # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
-    - google.com
-    - +.v2ex.com
+    - "google.com"
+    - "+.v2ex.com"
+  skip-dst-address:
+    - 91.105.192.0/23
+    - 91.108.4.0/22
+    - 91.108.8.0/21
+    - 91.108.16.0/21
+    - 91.108.56.0/22
+    - 95.161.64.0/20
+    - 149.154.160.0/20
+    - 185.76.151.0/24
+    - 2001:67c:4e8::/48
+    - 2001:b28:f23c::/47
+    - 2001:b28:f23f::/48
+    - 2a0a:f280:203::/48
 
 tun:
   enable: false                      # 启用 tun
   stack: system                      # tun 模式堆栈,可用值：system/gvisor/mixed
   dns-hijack:                        # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
-    - any:53
+    - "any:53"
+    - "tcp://any:53"
   auto-route: true                   # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡
+  auto-redirect: true                # 是否自动重定向网络流量
   auto-detect-interface: true        # 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
+  device: Mihomo
+  mtu: 9000
+  gso: true
+  gso-max-size: 65536
+  endpoint-independent-nat: false
+  route-exclude-address: #启用 auto-route 时排除自定义网段
+    - "192.168.0.0/16"
+    - "fc00::/7"
 
 dns:
   enable: true                       # 关闭将使用系统 DNS
   listen: :1053                      # DNS 监听地址
   ipv6: true                         # IPV6解析开关；如果为false，将返回ipv6结果为空
+  prefer-h3: true
   enhanced-mode: fake-ip             # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16       # Fake-IP 解析地址池
   fake-ip-filter:                    # Fake-ip 过滤，列表中的域名返回真实IP
     - "*"
-    # LAN
     - "+.lan"
     - "+.local"
-    # ntp
-    - "time.*.com"
-    - "time.*.gov"
-    - "time.*.edu.cn"
-    - "time.*.apple.com"
-    - "time-ios.apple.com"
-    - "ntp.*.com"
+    - "geosite:cn"
+    # - "rule-set:private_domain,cn_domain"
+    # 米家
+    - "Mijia Cloud"
+    # Xiaomi
+    - "+.market.xiaomi.com"
     # windows 本地连接检测
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
@@ -109,35 +193,71 @@ dns:
     - "+.nflxvideo.net"
     # Bilibili
     - "*.mcdn.bilivideo.cn"
-    # 米家
-    - "Mijia Cloud"
-    # Xiaomi
-    - "+.market.xiaomi.com"
+    # ntp
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.edu.cn"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "time1.*.com"
+    - "time2.*.com"
+    - "time3.*.com"
+    - "time4.*.com"
+    - "time5.*.com"
+    - "time6.*.com"
+    - "time7.*.com"
+    - "ntp.*.com"
+    - "ntp1.*.com"
+    - "ntp2.*.com"
+    - "ntp3.*.com"
+    - "ntp4.*.com"
+    - "ntp5.*.com"
+    - "ntp6.*.com"
+    - "ntp7.*.com"
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "*.pool.ntp.org"
+    - "+.services.googleapis.cn"
+    - "+.xn--ngstr-lra8j.com"
+    - "+.push.apple.com"
+    - "5ddd.com"
+    - "time1.cloud.tencent.com"
     - "WORKGROUP"
   default-nameserver:                # 解析非IP的dns用的dns服务器，只支持纯IP, 可为加密 DNS
     - 223.5.5.5
     - 119.29.29.29
   proxy-server-nameserver:           # 代理节点域名解析服务器，仅用于解析代理节点的域名
-    - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
+    - 223.5.5.5
+    - 119.29.29.29
+    - 1.1.1.1
+    - 8.8.8.8
   nameserver:                        # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
-  nameserver-policy:                 # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
-    "geosite:cn,private":
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
-    "geosite:!cn,!private": 
-      - "tls://dns.google"
-      - "tls://cloudflare-dns.com"
+    - 223.5.5.5
+    - 119.29.29.29
+    - 1.1.1.1
+    - 8.8.8.8
+  # nameserver-policy:                 # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
+  #   "geosite:cn,private":
+  #     - https://doh.pub/dns-query
+  #     - https://dns.alidns.com/dns-query
+  #   "geosite:!cn,!private": 
+  #     - "tls://dns.google"
+  #     - "tls://cloudflare-dns.com"
   fallback:
     - tls://8.8.8.8:853
     - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
     geoip-code: CN
-    geosite:
-      - gfw
+    # geosite:
+    #   - gfw
+    nameserver-policy:
+      geosite:cn,private:
+        - 223.5.5.5
+        - 119.29.29.29
+      geosite:geolocation-!cn:
+        - https://dns.cloudflare.com/dns-query
+        - https://dns.google/dns-query
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
@@ -149,6 +269,16 @@ dns:
       - +.twitter.com
       - +.chatgpt.com
 
+lan-allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+lan-disallowed-ips: []
+# socks5远程访问的密码
+authentication:
+  - nikki:963.
+skip-auth-prefixes:
+  - 127.0.0.1/32
+
 ntp:
   enable: true
   # 是否同步至系统时间，需要 root/管理员权限
@@ -159,7 +289,7 @@ ntp:
 hosts:
   localhost: 127.0.0.1
 
-cfw-latency-timeout: 3000
+cfw-latency-timeout: 5000
 cfw-latency-url: http://www.gstatic.com/generate_204
 cfw-conn-break-strategy:
   proxy: none
@@ -167,121 +297,317 @@ cfw-conn-break-strategy:
   mode: false
 cfw-proxies-order: default
 
-proxy-providers:
-  我的订阅:
-    # type: file
-    # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml"
-    type: http
-    path: ./profiles/proxies/clashmeta.yaml
-    # url: "https://gh-proxy.com/github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
-    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
-    interval: 21600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 5000
-      tolerance: 500
-  # 订阅1:
-  #   type: http
-  #   path: ./profiles/proxies/dingyue1.yaml
-  #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
-  #   interval: 21600
-  #   health-check:
-  #     enable: true
-  #     url: http://www.gstatic.com/generate_204
-  #     interval: 300
-  #     timeout: 5000
-  #     tolerance: 500
-  # 订阅2:
-  #   type: http
-  #   path: ./profiles/proxies/dingyue2.yaml
-  #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
-  #   interval: 43200
-  #   health-check:
-  #     enable: true
-  #     url: http://www.gstatic.com/generate_204
-  #     interval: 300
-  #     timeout: 5000
-  #     tolerance: 500
 proxy-groups:
-  - name: 🚀 节点选择
+  - name: 🕹️ 代理选择
     type: select
     proxies:
-      - ☑️ 手动切换
-      # - ⚖️ 负载均衡
+      - 🚀 手动选择
       - DIRECT
+      - ⚖️ 负载均衡
       - ♻️ 自动选择
-  - name: ☑️ 手动切换
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇺🇲 美国节点
+      - 🛑 广告拦截
+  - name: 🚀 手动选择
     type: select
+    include-all: true
     use:
-      - 我的订阅
-      # - 订阅1
-      # - 订阅2
+      - 本地配置
+  - name: 🇭🇰 香港节点
+    type: select
+    include-all: true
+    use:
+      - 本地配置
+    filter: "(?i)🌳|港|hk|hong([ \t\n\r\f\v]?|)kong"
+  - name: 🇯🇵 日本节点
+    type: select
+    include-all: true
+    use:
+      - 本地配置
+    filter: (?i)🌳|日|jp|JP|japan
+  - name: 🇸🇬 狮城节点
+    type: select
+    include-all: true
+    use:
+      - 本地配置
+    filter: (?i)🌳|新|sg|singapore
+  - name: 🇺🇲 美国节点
+    type: select
+    include-all: true
+    use:
+      - 本地配置
+    filter: (?i)🌳|美|us|um|states|american
+  - name: ⚖️ 负载均衡
+    type: load-balance
+    include-all: true
+    filter: (?i)(.*(🌳)|(-([1-9]|[1-9][0-9]).[0-9]))
+    interval: 300
+    strategy: consistent-hashing
+    timeout: 5000
   - name: ♻️ 自动选择
     type: url-test
-    url: http://www.google.com/generate_204
-    use:
-      - 我的订阅
-      # - 订阅1
-      # - 订阅2
+    include-all: true
     interval: 300
-    tolerance: 500
-  # - name: ⚖️ 负载均衡
-  #   type: load-balance
-  #   url: http://www.google.com/generate_204
-  #   interval: 300
-  #   strategy: consistent-hashing
-  #   use:
-  #     - 我的订阅
-  #     - 订阅1
-  #     - 订阅2
-  #   filter: (?i)(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.))
-  # # - {name: Apple,     type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Cloudflare,type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: ChatGPT,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Google,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: GitHub,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Bing,      type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: OneDrive,  type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Microsoft, type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: NETFLIX,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Spotify,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Speedtest, type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Steam,     type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: TikTok,    type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Telegram,  type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: Twitter,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # # - {name: YouTube,   type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  - {name: 🐟 漏网之鱼,type: select, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
-  # - {name: 🎯 全球直连,type: select, proxies: [DIRECT]}
-  # - {name: 🛑 广告拦截,type: select, proxies: [REJECT]}
-  - {name: GLOBAL,    type: select, include-all: true, proxies: [🚀 节点选择, ☑️ 手动切换, ♻️ 自动选择, DIRECT]}
+    timeout: 5000
+    tolerance: 50
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: GLOBAL
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: AI
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Cloudflare
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: ChatGPT
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Discord
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: DisneyPlus
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: FCM
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: GitHub
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: GoogleVPN
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Google
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: HBO
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: LINE
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Meta
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: NETFLIX
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: PayPal
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Primevideo
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Pixiv
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Signal
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Spotify
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Steam
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Talkatone
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Telegram
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: TikTok
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Twitter
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: YouTube
+    type: select
+    proxies:
+      - 🕹️ 代理选择
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: AppleTV
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Bing
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Microsoft
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: OneDrive
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
+  - name: Speedtest
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动选择
+      - ♻️ 自动选择
 rules:
-  #来源IP规则
-  # - SRC-IP-CIDR,192.168.1.201/32,DIRECT
-  #目的端口规则
-  - DST-PORT,123/136/137-139,DIRECT         #【Meta专属】可指定端口范围
-    #来源端口规则
-  - SRC-PORT,123/136/137-139,DIRECT,udp     #【Meta专属】可指定端口范围
-
-  #目的域名关键字规则
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.metacubex.one,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - DOMAIN,d.metacubex.one,DIRECT
-
-  # - RULE-SET,AWAvenue-Ads,🛑 广告拦截
+  - DOMAIN,zashboard,DIRECT
+  - DOMAIN,wiki.metacubex.one,🕹️ 代理选择
+  - DOMAIN,sysupgrade.kyarucloud.moe,🕹️ 代理选择
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
   - RULE-SET,AD-Lite,REJECT
-  - RULE-SET,AD,REJECT
-  # - RULE-SET,EasyList,REJECT
   - RULE-SET,EasyListChina,REJECT
-  # - RULE-SET,EasyPrivacy,REJECT
   - RULE-SET,ProgramAD,REJECT
-  - DOMAIN,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,gh-proxy.com,DIRECT
+  - DOMAIN-SUFFIX,eporner.com,🕹️ 代理选择
+  - DOMAIN-SUFFIX,googleapis.cn,🕹️ 代理选择
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🕹️ 代理选择
+  - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,🕹️ 代理选择
+  - DOMAIN-SUFFIX,qichiyu.com,🕹️ 代理选择
+  - DOMAIN-SUFFIX,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT
   - DOMAIN-SUFFIX,skyearth.xyz,DIRECT
-
-  #目的域名后缀规则
+  - DOMAIN-SUFFIX,doppiocdn.live,DIRECT
   - DOMAIN-SUFFIX,us-c.viayoo.com:443,DIRECT
   - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
   - DOMAIN-SUFFIX,surrit.com,DIRECT
@@ -290,222 +616,155 @@ rules:
   - DOMAIN-SUFFIX,fapnfuck.com,DIRECT
   - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,DIRECT
   - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,DIRECT
-  - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
-  - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,🚀 节点选择
-  # - DOMAIN-SUFFIX,bilibili.com,DIRECT,tcp   #【Meta专属】可指定协议类型(tcp/udp)
-
-  #目的域名规则
-  - DOMAIN,github.com,🚀 节点选择
-  - DOMAIN,twitter.com,🚀 节点选择
-  - DOMAIN,youtube.com,🚀 节点选择
-  - DOMAIN,google.com,🚀 节点选择
-  #目的域名关键字规则
-  - DOMAIN-KEYWORD,google,🚀 节点选择
-
-    #目的IP规则
-  # 绕过局域网地址 #no-resolve:不解析，可应用于GEOIP, IP-CIDR
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,100.64.0.0/10,DIRECT
-  - IP-CIDR,127.0.0.0/8,DIRECT
-
-  #【Meta专属】GEOSITE规则
+  - DOMAIN-KEYWORD,google,🕹️ 代理选择
   - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,github,🚀 节点选择
-  - GEOSITE,twitter,🚀 节点选择
-  - GEOSITE,youtube,🚀 节点选择
-  - GEOSITE,telegram,🚀 节点选择
-  - GEOSITE,google,🚀 节点选择
-  - GEOSITE,google-cn,🚀 节点选择 # Google CN 不走代理会导致香港等地区节点 Play Store 异常
-  - GEOSITE,cloudflare,🚀 节点选择
-  - GEOSITE,netflix,🚀 节点选择
-  - GEOSITE,tiktok,🚀 节点选择
-  # - GEOSITE,spotify,Spotify
-  # - GEOSITE,steam,Steam
+  - GEOSITE,icloud@cn,DIRECT
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,google,Google
+  - GEOSITE,google-cn,Google
+  - GEOSITE,github,GitHub
+  - GEOSITE,onedrive,OneDrive
+  - GEOSITE,microsoft,Microsoft
+  - GEOSITE,microsoft@cn,Microsoft
+  - GEOSITE,telegram,Telegram
+  - GEOSITE,twitter,Twitter
+  - GEOSITE,steam,Steam
   - GEOSITE,steam@cn,DIRECT
+  - GEOSITE,tiktok,TikTok
+  - GEOSITE,netflix,NETFLIX
   - GEOSITE,apple@cn,DIRECT
   - GEOSITE,apple-cn,DIRECT
-  - GEOSITE,icloud@cn,DIRECT
-  - GEOSITE,bing,DIRECT
-  - GEOSITE,onedrive,DIRECT
-  - GEOSITE,microsoft,DIRECT
-  - GEOSITE,microsoft@cn,DIRECT
-  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,bing,Bing
+  - GEOSITE,cloudflare,Cloudflare
+  - GEOSITE,spotify,Spotify
   - GEOSITE,geolocation-!cn,🐟 漏网之鱼
-
-  #GEOIP规则  
-  - GEOIP,google,🚀 节点选择
-  - GEOIP,netflix,🚀 节点选择
-  - GEOIP,telegram,🚀 节点选择
-  - GEOIP,twitter,🚀 节点选择
-  - GEOIP,private,DIRECT
-  - GEOSITE,CN,DIRECT
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  # GEOIP
-
-  # 给GEOIP和GEOSITE备用的匹配规则
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,DIRECT #
-  - RULE-SET,apple,DIRECT # 这三个为国内可直连地址，如果希望走代理改为🚀 节点选择
-  - RULE-SET,google,DIRECT #
-  - RULE-SET,tld-not-cn,🚀 节点选择
-  - RULE-SET,gfw,🚀 节点选择
-  - RULE-SET,greatfire,🚀 节点选择
-  - RULE-SET,telegramcidr,🚀 节点选择
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - GEOIP,CN,DIRECT
-  - RULE-SET,proxy,🚀 节点选择
+  - GEOIP,youtube,YouTube
+  - GEOIP,google,Google
+  - GEOIP,github,GitHub
+  - GEOIP,telegram,Telegram
+  - GEOIP,twitter,Twitter
+  - GEOIP,steam,Steam
+  - GEOIP,tiktok,TikTok
+  - GEOIP,netflix,NETFLIX
+  - GEOIP,private,DIRECT
+  - GEOSITE,CN,DIRECT
+  - SRC-GEOIP,cn,DIRECT
+  - SRC-IP-ASN,9808,DIRECT
+  - DST-PORT,22,DIRECT
   - MATCH,🐟 漏网之鱼
   
 rule-providers:
-  # AWAvenue-Ads:
-  #   type: http
-  #   behavior: domain
-  #   format: yaml
-  #   path: ./providers/rule/AWAvenue-Ads.yaml
-  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
-  #   interval: 86400
-  # ADs:
-  #   type: http
-  #   behavior: domain
-  #   format: yaml
-  #   path: ./providers/rule/ADs.yaml
-  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml"
-  #   interval: 86400
   AD-Lite:
     type: http
+    interval: 86400
     behavior: domain
     format: yaml
-    path: ./providers/rule/AD-Lite.yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml"
-    interval: 86400
-  AD:
+    path: ./rule-providers/rules/AD-Lite.yaml
+    url: https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml
+  EasyList:
     type: http
+    interval: 86400
     behavior: domain
     format: yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml"
-    path: ./rules/AD.yaml
-    interval: 86400
-    
-  # EasyList:
-  #   type: http
-  #   behavior: domain
-  #   format: yaml
-  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml"
-  #   path: ./rules/EasyList.yaml
-  #   interval: 86400
-    
+    path: ./rule-providers/rules/EasyList.yaml
+    url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyList.yaml
   EasyListChina:
     type: http
+    interval: 86400
     behavior: domain
     format: yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml"
-    path: ./rules/EasyListChina.yaml
-    interval: 86400
-
-  # EasyPrivacy:
-  #   type: http
-  #   behavior: domain
-  #   format: yaml
-  #   url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml"
-  #   path: ./rules/EasyPrivacy.yaml
-  #   interval: 86400
-
+    path: ./rule-providers/rules/EasyListChina.yaml
+    url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyListChina.yaml
   ProgramAD:
     type: http
+    interval: 86400
     behavior: domain
     format: yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
-    path: ./rules/ProgramAD.yaml
-    interval: 86400  
+    path: ./rule-providers/rules/ProgramAD.yaml
+    url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/ProgramAD.yaml
   reject: # 广告域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
+    path: ./rule-providers/ruleset/reject.yaml
     interval: 86400
   icloud: # iCloud 域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
-    path: ./ruleset/icloud.yaml
+    path: ./rule-providers/ruleset/icloud.yaml
     interval: 86400
   apple: # Apple 在中国大陆可直连的域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
-    path: ./ruleset/apple.yaml
+    path: ./rule-providers/ruleset/apple.yaml
     interval: 86400
   google: # Google 在中国大陆可直连的域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
-    path: ./ruleset/google.yaml
+    path: ./rule-providers/ruleset/google.yaml
     interval: 86400
   proxy: # 代理域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
-    path: ./ruleset/proxy.yaml
+    path: ./rule-providers/ruleset/proxy.yaml
     interval: 86400
   direct: # 直连域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
-    path: ./ruleset/direct.yaml
+    path: ./rule-providers/ruleset/direct.yaml
     interval: 86400
   private: # 私有网络专用域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
-    path: ./ruleset/private.yaml
+    path: ./rule-providers/ruleset/private.yaml
     interval: 86400
   gfw: # GFWList 域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
-    path: ./ruleset/gfw.yaml
+    path: ./rule-providers/ruleset/gfw.yaml
     interval: 86400
   greatfire: # GreatFire 域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
-    path: ./ruleset/greatfire.yaml
+    path: ./rule-providers/ruleset/greatfire.yaml
     interval: 86400
   tld-not-cn: # 非中国大陆使用的顶级域名列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
-    path: ./ruleset/tld-not-cn.yaml
+    path: ./rule-providers/ruleset/tld-not-cn.yaml
     interval: 86400
   telegramcidr: # Telegram 使用的 IP 地址列表
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./ruleset/telegramcidr.yaml
+    path: ./rule-providers/ruleset/telegramcidr.yaml
     interval: 86400
   cncidr: # 中国大陆 IP 地址列表
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
-    path: ./ruleset/cncidr.yaml
+    path: ./rule-providers/ruleset/cncidr.yaml
     interval: 86400
   lancidr: # 局域网 IP 及保留 IP 地址列表
      type: http
      behavior: ipcidr
      url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-     path: ./ruleset/lancidr.yaml
+     path: ./rule-providers/ruleset/lancidr.yaml
      interval: 86400
   applications: # 需要直连的常见软件列表
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-    path: ./ruleset/applications.yaml
+    path: ./rule-providers/ruleset/applications.yaml
     interval: 86400

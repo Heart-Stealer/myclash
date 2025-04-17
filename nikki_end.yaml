@@ -220,10 +220,10 @@ tcp-concurrent: true
 # always 强制匹配所有进程
 # strict 默认，由 Mihomo 判断是否开启
 # off 不匹配进程，推荐在路由器上使用此模式
-find-process-mode: "strict"
+# find-process-mode: "strict"
 
-# # 路由器
-# find-process-mode: "off"
+# 路由器
+find-process-mode: "off"
 # interface-name: eth1
 # 全局客户端指纹。支持协议有 VLESS, Vmess, trojan
 # 全局客户端指纹，可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"；
@@ -278,9 +278,9 @@ geo-update-interval: 72
   # standard：标准加载器
   # memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
   # memc: memconservative别名
-geodata-loader: "standard"
-# # 路由器
-# geodata-loader: "memconservative"
+# geodata-loader: "standard"
+# 路由器
+geodata-loader: "memconservative"
 # GeoIP数据模式
 # 更改 GeoIP 使用的文件（true：data，false：mmdb）默认值false
 geodata-mode: false # GeoIP格式，false为MMDB，true为DAT
@@ -291,10 +291,10 @@ geodata-mode: false # GeoIP格式，false为MMDB，true为DAT
 geox-url:
   # clash.meta for android
   # lite
-  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
-  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
-  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+  # geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  # geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  # mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  # asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
   # full
   # geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
   # geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
@@ -312,10 +312,10 @@ geox-url:
   # asn: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/Country-ASN.mmdb"
 # 路由器
   # lite
-  # geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  # geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
-  # mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
-  # asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
+  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
 
 # 域名嗅探配置
 # 域名嗅器,通过读取握手包内的域名字段,将IP还原成域名,有效解决Mapping机制的短板
@@ -404,9 +404,9 @@ tun:
   # 自动选择流量出口接口,多出口网卡同时连接的设备建议手动指定出口网卡
   auto-detect-interface: true
   # 指定 tun 网卡名称,MacOS 设备只能使用 utun 开头的网卡名
-  device: Mihomo
-  # # 路由器
-  # device: nikki
+  # device: Mihomo
+  # 路由器
+  device: nikki
   # 最大传输单元，会影响极限状态下的速率，一般用户默认即可。
   mtu: 9000
   # 启用通用分段卸载,仅支持 Linux
@@ -617,16 +617,16 @@ ntp:
 
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 # 无ICON
-# Proxy_first: &Proxy_first {type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
-# Direct_first: &Direct_first {type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
-# Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
-# Include_all: &Include_all {type: select, proxies: [🚀 手动选择, DIRECT, ⚖️ 负载均衡, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🛑 广告拦截]}
+Proxy_first: &Proxy_first {type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+Direct_first: &Direct_first {type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+Include_all: &Include_all {type: select, proxies: [🚀 手动选择, DIRECT, ⚖️ 负载均衡, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🛑 广告拦截]}
 
 # # need ICON
-Proxy_first: &Proxy_first {type: select, proxies: [代理选择, 手动选择, 自动选择, DIRECT]}
-Direct_first: &Direct_first {type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选择, 自动选择]}
-Include_all: &Include_all {type: select, proxies: [手动选择, DIRECT, 负载均衡, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
+# Proxy_first: &Proxy_first {type: select, proxies: [代理选择, 手动选择, 自动选择, DIRECT]}
+# Direct_first: &Direct_first {type: select, proxies: [DIRECT, 手动选择, 自动选择]}
+# Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选择, 自动选择]}
+# Include_all: &Include_all {type: select, proxies: [手动选择, DIRECT, 负载均衡, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
 
 # strategy
 # 负载均衡策略
@@ -650,50 +650,50 @@ my_US: &my_US {<<: *Dingyue, filter: "(?i)🌳|美|us|um|states|american"}
 proxy-groups:
   # 使用 WARP 的用户需要手动在下方的 proxies 字段内添加 WARP
   # 例如 [WARP, 全部节点, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, DIRECT],
-  - {name: 代理选择, <<: *Include_all, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"}
-  - {name: 手动选择, <<: *Dingyue, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png"}
-  - {name: 香港节点, <<: *my_HK, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
-  - {name: 日本节点, <<: *my_JP, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
-  - {name: 狮城节点, <<: *my_SG, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
-  - {name: 美国节点, <<: *my_US, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
-  - {name: 负载均衡, <<: *my_lb, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/LoadBalance.svg"}
-  - {name: 自动选择, <<: *my_au, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
-  - {name: 漏网之鱼, <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
-  - {name: 全球直连, <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"}
-  - {name: 广告拦截, <<: *Reject_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"}
-  - {name: GLOBAL,    <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"}
+  - {name: 🕹️ 代理选择, <<: *Include_all}
+  - {name: 🚀 手动选择, <<: *Dingyue}
+  - {name: 🇭🇰 香港节点, <<: *my_HK}
+  - {name: 🇯🇵 日本节点, <<: *my_JP}
+  - {name: 🇸🇬 狮城节点, <<: *my_SG}
+  - {name: 🇺🇲 美国节点, <<: *my_US}
+  - {name: ⚖️ 负载均衡, <<: *my_lb}
+  - {name: ♻️ 自动选择, <<: *my_au}
+  - {name: 🐟 漏网之鱼, <<: *Proxy_first}
+  - {name: 🎯 全球直连, <<: *Direct_first}
+  - {name: 🛑 广告拦截, <<: *Reject_first}
+  - {name: GLOBAL,    <<: *Proxy_first}
 
-  - {name: AI,        <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/ai.png"}
-  - {name: Cloudflare,<<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
-  - {name: ChatGPT,   <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
-  - {name: Discord,   <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/discord.png"}
-  - {name: DisneyPlus,<<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/disneyplus.png"}
-  - {name: FCM,       <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/fcm.png"}
-  - {name: GitHub,    <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
-  - {name: GoogleVPN, <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/googlevpn.png"}
-  - {name: Google,    <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
-  - {name: HBO,       <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/hbo.png"}
-  - {name: LINE,      <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/line.png"}
-  - {name: Meta,      <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/meta.png"}
-  - {name: NETFLIX,   <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
-  - {name: PayPal,    <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/paypal.png"}
-  - {name: Primevideo,<<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/primevideo.png"}
+  - {name: AI,        <<: *Proxy_first}
+  - {name: Cloudflare,<<: *Proxy_first}
+  - {name: ChatGPT,   <<: *Proxy_first}
+  - {name: Discord,   <<: *Proxy_first}
+  - {name: DisneyPlus,<<: *Proxy_first}
+  - {name: FCM,       <<: *Proxy_first}
+  - {name: GitHub,    <<: *Proxy_first}
+  - {name: GoogleVPN, <<: *Proxy_first}
+  - {name: Google,    <<: *Proxy_first}
+  - {name: HBO,       <<: *Proxy_first}
+  - {name: LINE,      <<: *Proxy_first}
+  - {name: Meta,      <<: *Proxy_first}
+  - {name: NETFLIX,   <<: *Proxy_first}
+  - {name: PayPal,    <<: *Proxy_first}
+  - {name: Primevideo,<<: *Proxy_first}
   - {name: Pixiv,     <<: *Proxy_first}
-  - {name: Signal,    <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/signal.png"}
-  - {name: Spotify,   <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/spotify.png"}
-  - {name: Steam,     <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/steam.png"}
-  - {name: Talkatone, <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/talkatone.png"}
-  - {name: Telegram,  <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
-  - {name: TikTok,    <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
-  - {name: Twitter,   <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
-  - {name: YouTube,   <<: *Proxy_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
+  - {name: Signal,    <<: *Proxy_first}
+  - {name: Spotify,   <<: *Proxy_first}
+  - {name: Steam,     <<: *Proxy_first}
+  - {name: Talkatone, <<: *Proxy_first}
+  - {name: Telegram,  <<: *Proxy_first}
+  - {name: TikTok,    <<: *Proxy_first}
+  - {name: Twitter,   <<: *Proxy_first}
+  - {name: YouTube,   <<: *Proxy_first}
 
-  - {name: AppleTV,   <<: *Direct_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/appletv.png"}
-  - {name: Apple,     <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
-  - {name: Bing,      <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
-  - {name: Microsoft, <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
-  - {name: OneDrive,  <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
-  - {name: Speedtest, <<: *Direct_first, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
+  - {name: AppleTV,   <<: *Direct_first}
+  - {name: Apple,     <<: *Direct_first}
+  - {name: Bing,      <<: *Direct_first}
+  - {name: Microsoft, <<: *Direct_first}
+  - {name: OneDrive,  <<: *Direct_first}
+  - {name: Speedtest, <<: *Direct_first}
   # "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
   # "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"
   # "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png"
@@ -701,27 +701,27 @@ proxy-groups:
   # 漏网之鱼就是所有规则没匹配到的
   # 可以理解为 ACL4SSR 配置里的 漏网之鱼
   # 换言之，漏网之鱼走代理就是绕过中国大陆地址，不走就是 GFWList 模式
-  # - {name: 漏网之鱼,   <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
-  # - {name: Apple,     <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
-  # - {name: Cloudflare,<<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/cloudflare.svg"}
-  # - {name: ChatGPT,   <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
-  # - {name: Google,    <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
-  # - {name: GitHub,    <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
-  # - {name: Bing,      <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bing.svg"}
-  # - {name: OneDrive,  <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
-  # - {name: Microsoft, <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
-  # - {name: NETFLIX,   <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
-  # - {name: Speedtest, <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
-  # - {name: TikTok,    <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
-  # - {name: Telegram,  <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
-  # - {name: Twitter,   <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
-  # - {name: YouTube,   <<: *only, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
+  # - {name: 漏网之鱼,   <<: *only}
+  # - {name: Apple,     <<: *only}
+  # - {name: Cloudflare,<<: *only}
+  # - {name: ChatGPT,   <<: *only}
+  # - {name: Google,    <<: *only}
+  # - {name: GitHub,    <<: *only}
+  # - {name: Bing,      <<: *only}
+  # - {name: OneDrive,  <<: *only}
+  # - {name: Microsoft, <<: *only}
+  # - {name: NETFLIX,   <<: *only}
+  # - {name: Speedtest, <<: *only}
+  # - {name: TikTok,    <<: *only}
+  # - {name: Telegram,  <<: *only}
+  # - {name: Twitter,   <<: *only}
+  # - {name: YouTube,   <<: *only}
   # 分隔,下面是地区分组
-  # - { name: 香港, filter: "(?i)港|hk|hongkong|hong kong" }
-  # - { name: 台湾, filter: "(?i)台|tw|taiwan" }
-  # - { name: 日本, filter: "(?i)日本|jp|japan" }
-  # - { name: 美国, filter: "(?i)美|us|unitedstates|united states" }
-  # - { name: 新加坡, filter: "(?i)(新|sg|singapore)" }
+  # - { name: 香港, <<: *Dingyue, filter: "(?i)港|hk|hongkong|hong kong" }
+  # - { name: 台湾, <<: *Dingyue, filter: "(?i)台|tw|taiwan" }
+  # - { name: 日本, <<: *Dingyue, filter: "(?i)日本|jp|japan" }
+  # - { name: 美国, <<: *Dingyue, filter: "(?i)美|us|unitedstates|united states" }
+  # - { name: 新加坡, <<: *Dingyue, filter: "(?i)(新|sg|singapore)" }
   # - {
   #     name: 其它地区,
   #     <<: *Dingyue,
@@ -740,8 +740,8 @@ rules:
   - DOMAIN,yacd.haishan.me,DIRECT
   - DOMAIN,d.metacubex.one,DIRECT
   - DOMAIN,zashboard,DIRECT
-  - DOMAIN,wiki.metacubex.one,代理选择
-  - DOMAIN,sysupgrade.kyarucloud.moe,代理选择
+  - DOMAIN,wiki.metacubex.one,🕹️ 代理选择
+  - DOMAIN,sysupgrade.kyarucloud.moe,🕹️ 代理选择
   # 绕过局域网地址 #no-resolve:不解析，可应用于GEOIP, IP-CIDR
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
@@ -763,11 +763,11 @@ rules:
   # 但不匹配content-google.com
   - DOMAIN-SUFFIX,gh-proxy.com,DIRECT
   # - DOMAIN-SUFFIX,pages.dev,Cloudflare
-  - DOMAIN-SUFFIX,eporner.com,代理选择
-  - DOMAIN-SUFFIX,googleapis.cn,代理选择
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,代理选择
-  - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,代理选择
-  - DOMAIN-SUFFIX,qichiyu.com,代理选择
+  - DOMAIN-SUFFIX,eporner.com,🕹️ 代理选择
+  - DOMAIN-SUFFIX,googleapis.cn,🕹️ 代理选择
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🕹️ 代理选择
+  - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,🕹️ 代理选择
+  - DOMAIN-SUFFIX,qichiyu.com,🕹️ 代理选择
 
   - DOMAIN-SUFFIX,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT
   - DOMAIN-SUFFIX,skyearth.xyz,DIRECT
@@ -784,7 +784,7 @@ rules:
 
   #DOMAIN-KEYWORD
   # 使用域名关键字匹配
-  - DOMAIN-KEYWORD,google,代理选择
+  - DOMAIN-KEYWORD,google,🕹️ 代理选择
 
   # DOMAIN-REGEX
   # 域名正则表达式匹配
@@ -813,7 +813,7 @@ rules:
   - GEOSITE,bing,Bing
   - GEOSITE,cloudflare,Cloudflare
   - GEOSITE,spotify,Spotify
-  - GEOSITE,geolocation-!cn,漏网之鱼
+  - GEOSITE,geolocation-!cn,🐟 漏网之鱼
 
   # GEOIP规则  
   - GEOIP,LAN,DIRECT
@@ -831,9 +831,9 @@ rules:
 
   # # 匹配 IP 地址范围，IP-CIDR和IP-CIDR6效果是一样的，IP-CIDR6只是一个别名
   # - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  # # - IP-CIDR6,2620:0:2d0:200::7/32,代理选择
+  # # - IP-CIDR6,2620:0:2d0:200::7/32,🕹️ 代理选择
   # # 匹配 IP 后缀范围
-  # - IP-SUFFIX,8.8.8.8/24,代理选择
+  # - IP-SUFFIX,8.8.8.8/24,🕹️ 代理选择
   # # 匹配 IP 所属 ASN
   # - IP-ASN,13335,DIRECT
   # # 匹配 IP 所属国家代码
@@ -856,17 +856,17 @@ rules:
   # # 【Meta专属】可指定端口范围
   # - SRC-PORT,7777,DIRECT
   
-  # - IN-PORT,7890,代理选择
-  # - IN-TYPE,SOCKS/HTTP,代理选择
-  # - IN-USER,mihomo,代理选择
-  # - IN-NAME,ss,代理选择
+  # - IN-PORT,7890,🕹️ 代理选择
+  # - IN-TYPE,SOCKS/HTTP,🕹️ 代理选择
+  # - IN-USER,mihomo,🕹️ 代理选择
+  # - IN-NAME,ss,🕹️ 代理选择
 
-  - MATCH,漏网之鱼
+  - MATCH,🐟 漏网之鱼
 
-  # - DOMAIN-SUFFIX,qichiyu.com,代理选择
+  # - DOMAIN-SUFFIX,qichiyu.com,🕹️ 代理选择
   # - RULE-SET,private_domain,DIRECT
   # - RULE-SET,apple_domain,Apple
-  # - RULE-SET,proxylite,代理选择
+  # - RULE-SET,proxylite,🕹️ 代理选择
   # - RULE-SET,ai,ChatGPT
   # - RULE-SET,github_domain,GitHub
   # - RULE-SET,youtube_domain,YouTube
@@ -878,7 +878,7 @@ rules:
   # - RULE-SET,telegram_domain,Telegram
   # - RULE-SET,netflix_domain,NETFLIX
   # - RULE-SET,paypal_domain,PayPal
-  # - RULE-SET,gfw_domain,代理选择
+  # - RULE-SET,gfw_domain,🕹️ 代理选择
   # - RULE-SET,geolocation-!cn,手动选择
   # - RULE-SET,cn_domain,全球直连
   # - RULE-SET,google_ip,Google,no-resolve
