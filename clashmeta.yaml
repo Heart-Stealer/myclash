@@ -86,7 +86,7 @@ geox-url:
   geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
   mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.mmdb"
   asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
->>>>>>> 5a2baa627b20e77936a9dd03dacad1d1b3b885e5
+# >>>>>>> 5a2baa627b20e77936a9dd03dacad1d1b3b885e5
 
 profile:
   store-selected: true               # 储存 API 对策略组的选择，以供下次启动时使用
