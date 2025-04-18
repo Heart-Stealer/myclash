@@ -62,11 +62,11 @@ unified-delay: true                  # 开启统一延迟时，会进行两次�
 tcp-concurrent: true                 # TCP 并发，可选值 true/false
 find-process-mode: strict            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
-<<<<<<< HEAD
+# <<<<<<< HEAD
 keep-alive-idle: 600                 # 连接空闲后多久发送探测包
 keep-alive-interval: 30              # TCP Keep Alive 间隔,单位分钟
 disable-keep-alive: false            # 禁用保持活跃探测
-=======
+# =======
 
 external-controller: 0.0.0.0:9090
 secret: "963."
