@@ -296,13 +296,13 @@ cfw-proxies-order: default
 
 proxy-groups:
   - {name: "🕹️ 代理选择", type: select, proxies: [🚀 手动选择, DIRECT, ⚖️ 负载均衡, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, REJECT]}
-  - {name: "🚀 手动选择", type: select, include-all: true, use: [本地配置]}
-  - {name: "♻️ 自动选择", type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 50}
-  - {name: "🇭🇰 香港节点", type: select, include-all: true, use: [本地配置], filter: "(?i)🌳|港|hk|hong( |)kong"}
-  - {name: "🇯🇵 日本节点", type: select, include-all: true, use: [本地配置], filter: "(?i)🌳|日|jp|JP|japan"}
-  - {name: "🇸🇬 狮城节点", type: select, include-all: true, use: [本地配置], filter: "(?i)🌳|新|sg|singapore"}
-  - {name: "🇺🇲 美国节点", type: select, include-all: true, use: [本地配置], filter: "(?i)🌳|美|us|um|states|american"}
-  - {name: "⚖️ 负载均衡", type: load-balance, include-all: true, filter: "(?i)(.*(🌳)|(-([1-9]|[1-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 5000}
+  - {name: "🚀 手动选择", type: select, use: [本地配置]}
+  - {name: "♻️ 自动选择", type: url-test, use: [本地配置], interval: 300, timeout: 5000, tolerance: 50}
+  - {name: "🇭🇰 香港节点", type: select, use: [本地配置], filter: "(?i)🌳|港|hk|hong( |)kong"}
+  - {name: "🇯🇵 日本节点", type: select, use: [本地配置], filter: "(?i)🌳|日|jp|JP|japan"}
+  - {name: "🇸🇬 狮城节点", type: select, use: [本地配置], filter: "(?i)🌳|新|sg|singapore"}
+  - {name: "🇺🇲 美国节点", type: select, use: [本地配置], filter: "(?i)🌳|美|us|um|states|american"}
+  - {name: "⚖️ 负载均衡", type: load-balance, filter: "(?i)(.*(🌳)|(-([1-9]|[1-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 5000}
   - {name: "🐟 漏网之鱼", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
   - {name: "🎯 全球直连", type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
   - {name: "🛑 广告拦截", type: select, proxies: [REJECT, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
