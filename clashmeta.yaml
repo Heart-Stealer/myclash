@@ -10,7 +10,7 @@ proxy-providers:
     interval: 43200   # 自动更新订阅时间，单位为秒
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: "http://www.gstatic.com/generate_204"
       interval: 300
       timeout: 5000
       tolerance: 50
@@ -51,7 +51,7 @@ port: 7892
 redir-port: 7893
 tproxy-port: 7894
 
-mode: Rule
+mode: rule
 log-level: info
 allow-lan: false
 bind-address: "*"
@@ -62,31 +62,9 @@ unified-delay: true                  # 开启统一延迟时，会进行两次�
 tcp-concurrent: true                 # TCP 并发，可选值 true/false
 find-process-mode: strict            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
-<<<<<<< HEAD
 keep-alive-idle: 600                 # 连接空闲后多久发送探测包
 keep-alive-interval: 30              # TCP Keep Alive 间隔,单位分钟
 disable-keep-alive: false            # 禁用保持活跃探测
-=======
-
-external-controller: 0.0.0.0:9090
-secret: "963."
-external-ui: ui
-external-ui-name: zashboard
-external-ui-url: https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
-
-
-secret: "963."                           # 自定义 API 的访问密钥
-
-geodata-mode: false                   # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
-geo-auto-update: true                # 自动更新 GEO
-geo-update-interval: 72              # 更新间隔，单位为小时
-geodata-loader: standard             # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
-geox-url:
-  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.mmdb"
-  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
->>>>>>> 5a2baa627b20e77936a9dd03dacad1d1b3b885e5
 
 profile:
   store-selected: true               # 储存 API 对策略组的选择，以供下次启动时使用
@@ -94,14 +72,14 @@ profile:
 
 external-controller: ":9090"         # API 监听地址
 secret: "963."                       # 自定义 API 的访问密钥
-external-ui: "ui"                    # 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
-external-ui-name: "zashboard"        # 自定义外部用户界面名字
+external-ui: ui                      # 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
+external-ui-name: zashboard          # 自定义外部用户界面名字
 external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 
 geo-auto-update: true                # 自动更新 GEO
 geo-update-interval: 72              # 更新间隔，单位为小时
-geodata-loader: "standard"           # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
-geodata-mode: false                # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+geodata-loader: standard             # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+geodata-mode: false                  # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
 geox-url:
   geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
   geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
@@ -122,9 +100,6 @@ sniffer:
       override-destination: true     # override-destination字段（可选），用于覆盖全局override-destination设置
     QUIC:
       ports: [443, 8443]
-  sniffing:
-    - tls
-    - http
   skip-domain:                       # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备Mijia Cloud
     - "+.baidu.com"
     # - "+.apple.com"
@@ -183,7 +158,7 @@ dns:
   enhanced-mode: fake-ip             # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16       # Fake-IP 解析地址池
   fake-ip-filter:                    # Fake-ip 过滤，列表中的域名返回真实IP
-    - "*"
+    # - "*"
     - "+.lan"
     - "+.local"
     - "geosite:cn"
@@ -265,31 +240,31 @@ dns:
   #   "geosite:!cn,!private": 
   #     - "tls://dns.google"
   #     - "tls://cloudflare-dns.com"
-  fallback:
-    - tls://8.8.8.8:853
-    - tls://8.8.4.4:853
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    # geosite:
-    #   - gfw
-    nameserver-policy:
-      geosite:cn,private:
-        - 223.5.5.5
-        - 119.29.29.29
-      geosite:geolocation-!cn:
-        - https://dns.cloudflare.com/dns-query
-        - https://dns.google/dns-query
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-    domain:
-      - +.google.com
-      - +.facebook.com
-      - +.youtube.com
-      - +.instagram.com
-      - +.twitter.com
-      - +.chatgpt.com
+  # fallback:
+  #   - tls://8.8.8.8:853
+  #   - tls://8.8.4.4:853
+  # fallback-filter:
+  #   geoip: true
+  #   geoip-code: CN
+  #   # geosite:
+  #   #   - gfw
+  #   nameserver-policy:
+  #     geosite:cn,private:
+  #       - 223.5.5.5
+  #       - 119.29.29.29
+  #     geosite:geolocation-!cn:
+  #       - https://dns.cloudflare.com/dns-query
+  #       - https://dns.google/dns-query
+  #   ipcidr:
+  #     - 240.0.0.0/4
+  #     - 0.0.0.0/32
+  #   domain:
+  #     - +.google.com
+  #     - +.facebook.com
+  #     - +.youtube.com
+  #     - +.instagram.com
+  #     - +.twitter.com
+  #     - +.chatgpt.com
 
 lan-allowed-ips:
   - 0.0.0.0/0
@@ -312,7 +287,7 @@ hosts:
   localhost: 127.0.0.1
 
 cfw-latency-timeout: 5000
-cfw-latency-url: http://www.gstatic.com/generate_204
+cfw-latency-url: "http://www.gstatic.com/generate_204"
 cfw-conn-break-strategy:
   proxy: none
   profile: true
@@ -320,291 +295,48 @@ cfw-conn-break-strategy:
 cfw-proxies-order: default
 
 proxy-groups:
-  - name: 🕹️ 代理选择
-    type: select
-    proxies:
-      - 🚀 手动选择
-      - DIRECT
-      - ⚖️ 负载均衡
-      - ♻️ 自动选择
-      - 🇭🇰 香港节点
-      - 🇯🇵 日本节点
-      - 🇸🇬 狮城节点
-      - 🇺🇲 美国节点
-      - 🛑 广告拦截
-  - name: 🚀 手动选择
-    type: select
-    include-all: true
-    use:
-      - 本地配置
-  - name: 🇭🇰 香港节点
-    type: select
-    include-all: true
-    use:
-      - 本地配置
-    filter: "(?i)🌳|港|hk|hong([ \t\n\r\f\v]?|)kong"
-  - name: 🇯🇵 日本节点
-    type: select
-    include-all: true
-    use:
-      - 本地配置
-    filter: (?i)🌳|日|jp|JP|japan
-  - name: 🇸🇬 狮城节点
-    type: select
-    include-all: true
-    use:
-      - 本地配置
-    filter: (?i)🌳|新|sg|singapore
-  - name: 🇺🇲 美国节点
-    type: select
-    include-all: true
-    use:
-      - 本地配置
-    filter: (?i)🌳|美|us|um|states|american
-  - name: ⚖️ 负载均衡
-    type: load-balance
-    include-all: true
-    filter: (?i)(.*(🌳)|(-([1-9]|[1-9][0-9]).[0-9]))
-    interval: 300
-    strategy: consistent-hashing
-    timeout: 5000
-  - name: ♻️ 自动选择
-    type: url-test
-    include-all: true
-    interval: 300
-    timeout: 5000
-    tolerance: 50
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: 🛑 广告拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: GLOBAL
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: AI
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Cloudflare
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: ChatGPT
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Discord
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: DisneyPlus
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: FCM
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: GitHub
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: GoogleVPN
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Google
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: HBO
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: LINE
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Meta
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: NETFLIX
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: PayPal
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Primevideo
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Pixiv
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Signal
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Spotify
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Steam
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Talkatone
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Telegram
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: TikTok
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Twitter
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: YouTube
-    type: select
-    proxies:
-      - 🕹️ 代理选择
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: AppleTV
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Apple
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Bing
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Microsoft
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: OneDrive
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
-  - name: Speedtest
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 手动选择
-      - ♻️ 自动选择
+  - {name: "🕹️ 代理选择", type: select, proxies: [🚀 手动选择, DIRECT, ⚖️ 负载均衡, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, REJECT]}
+  - {name: "🚀 手动选择", type: select, include-all: true, use: [本地配置]}
+  - {name: "♻️ 自动选择", type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 50}
+  - {name: "🇭🇰 香港节点", type: select, include-all: true, use: [本地配置], filter: "(?i)🌳|港|hk|hong([ \t\n\r\f\v]?|)kong"}
+  - {name: "🇯🇵 日本节点", type: select, include-all: true, use: [本地配置], filter: "(?i)🌳|日|jp|JP|japan"}
+  - {name: "🇸🇬 狮城节点", type: select, include-all: true, use: [本地配置], filter: "(?i)🌳|新|sg|singapore"}
+  - {name: "🇺🇲 美国节点", type: select, include-all: true, use: [本地配置], filter: "(?i)🌳|美|us|um|states|american"}
+  - {name: "⚖️ 负载均衡", type: load-balance, include-all: true, filter: "(?i)(.*(🌳)|(-([1-9]|[1-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 5000}
+  - {name: "🐟 漏网之鱼", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "🎯 全球直连", type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "🛑 广告拦截", type: select, proxies: [REJECT, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "GLOBAL", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "AI", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Cloudflare", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "ChatGPT", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Discord", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "DisneyPlus", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "FCM", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "GitHub", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "GoogleVPN", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Google", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "HBO", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "LINE", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Meta", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "NETFLIX", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "PayPal", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Primevideo", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Pixiv", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Signal", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Spotify", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Steam", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Talkatone", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Telegram", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "TikTok", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Twitter", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "YouTube", type: select, proxies: [🕹️ 代理选择, DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "AppleTV", type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Apple", type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Bing", type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Microsoft", type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "OneDrive", type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
+  - {name: "Speedtest", type: select, proxies: [DIRECT, 🚀 手动选择, ♻️ 自动选择]}
 rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.metacubex.one,DIRECT
@@ -706,87 +438,3 @@ rule-providers:
     format: yaml
     path: ./rule-providers/rules/ProgramAD.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/ProgramAD.yaml
-  reject: # 广告域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./rule-providers/ruleset/reject.yaml
-    interval: 86400
-  icloud: # iCloud 域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
-    path: ./rule-providers/ruleset/icloud.yaml
-    interval: 86400
-  apple: # Apple 在中国大陆可直连的域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
-    path: ./rule-providers/ruleset/apple.yaml
-    interval: 86400
-  google: # Google 在中国大陆可直连的域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
-    path: ./rule-providers/ruleset/google.yaml
-    interval: 86400
-  proxy: # 代理域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
-    path: ./rule-providers/ruleset/proxy.yaml
-    interval: 86400
-  direct: # 直连域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
-    path: ./rule-providers/ruleset/direct.yaml
-    interval: 86400
-  private: # 私有网络专用域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
-    path: ./rule-providers/ruleset/private.yaml
-    interval: 86400
-  gfw: # GFWList 域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
-    path: ./rule-providers/ruleset/gfw.yaml
-    interval: 86400
-  greatfire: # GreatFire 域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
-    path: ./rule-providers/ruleset/greatfire.yaml
-    interval: 86400
-  tld-not-cn: # 非中国大陆使用的顶级域名列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
-    path: ./rule-providers/ruleset/tld-not-cn.yaml
-    interval: 86400
-  telegramcidr: # Telegram 使用的 IP 地址列表
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./rule-providers/ruleset/telegramcidr.yaml
-    interval: 86400
-  cncidr: # 中国大陆 IP 地址列表
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
-    path: ./rule-providers/ruleset/cncidr.yaml
-    interval: 86400
-  lancidr: # 局域网 IP 及保留 IP 地址列表
-     type: http
-     behavior: ipcidr
-     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-     path: ./rule-providers/ruleset/lancidr.yaml
-     interval: 86400
-  applications: # 需要直连的常见软件列表
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-    path: ./rule-providers/ruleset/applications.yaml
-    interval: 86400

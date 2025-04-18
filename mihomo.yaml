@@ -448,7 +448,7 @@ dns:
   # 哪些域名不适用fake-ip
   #fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
   fake-ip-filter:
-    - "*"
+    # - "*"
     - "+.lan"
     - "+.local"
     - "geosite:cn"
@@ -731,37 +731,37 @@ proxy-groups:
 rules:
   # 若需禁用 QUIC 请取消注释 QUIC 两条规则
   # 防止 YouTube 等使用 QUIC 导致速度不佳, 禁用 443 端口 UDP 流量（不包括国内）
-  # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
-  # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
+  # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),广告拦截 # quic
+  # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),广告拦截 # quic
 
   # DOMAIN 匹配完整域名
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.metacubex.one,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN,d.metacubex.one,DIRECT
-  - DOMAIN,zashboard,DIRECT
+  - DOMAIN,clash.razord.top,全球直连
+  - DOMAIN,yacd.metacubex.one,全球直连
+  - DOMAIN,yacd.haishan.me,全球直连
+  - DOMAIN,d.metacubex.one,全球直连
+  - DOMAIN,zashboard,全球直连
   - DOMAIN,wiki.metacubex.one,代理选择
   - DOMAIN,sysupgrade.kyarucloud.moe,代理选择
   # 绕过局域网地址 #no-resolve:不解析，可应用于GEOIP, IP-CIDR
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,100.64.0.0/10,DIRECT
-  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,全球直连
+  - IP-CIDR,172.16.0.0/12,全球直连
+  - IP-CIDR,192.168.0.0/16,全球直连
+  - IP-CIDR,100.64.0.0/10,全球直连
+  - IP-CIDR,127.0.0.0/8,全球直连
 
   # 广告拦截
-  - RULE-SET,AD-Lite,REJECT
-  # - RULE-SET,AD,REJECT
-  # - RULE-SET,EasyList,REJECT
-  - RULE-SET,EasyListChina,REJECT
-  # - RULE-SET,EasyPrivacy,REJECT
-  - RULE-SET,ProgramAD,REJECT
+  - RULE-SET,AD-Lite,广告拦截
+  # - RULE-SET,AD,广告拦截
+  # - RULE-SET,EasyList,广告拦截
+  - RULE-SET,EasyListChina,广告拦截
+  # - RULE-SET,EasyPrivacy,广告拦截
+  - RULE-SET,ProgramAD,广告拦截
 
   #目的域名后缀规则
   # DOMAIN-SUFFIX 目的域名后缀规则
   # 例：google.com匹配www.google.com/mail.google.com和google.com
   # 但不匹配content-google.com
-  - DOMAIN-SUFFIX,gh-proxy.com,DIRECT
+  - DOMAIN-SUFFIX,gh-proxy.com,全球直连
   # - DOMAIN-SUFFIX,pages.dev,Cloudflare
   - DOMAIN-SUFFIX,eporner.com,代理选择
   - DOMAIN-SUFFIX,googleapis.cn,代理选择
@@ -769,18 +769,18 @@ rules:
   - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,代理选择
   - DOMAIN-SUFFIX,qichiyu.com,代理选择
 
-  - DOMAIN-SUFFIX,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT
-  - DOMAIN-SUFFIX,skyearth.xyz,DIRECT
-  - DOMAIN-SUFFIX,doppiocdn.live,DIRECT
-  - DOMAIN-SUFFIX,us-c.viayoo.com:443,DIRECT
-  - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
-  - DOMAIN-SUFFIX,surrit.com,DIRECT
-  - DOMAIN-SUFFIX,sixyik.com,DIRECT
-  - DOMAIN-SUFFIX,javxxx.me,DIRECT
-  - DOMAIN-SUFFIX,fapnfuck.com,DIRECT
-  - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,DIRECT
-  - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,DIRECT
-  # - DOMAIN-SUFFIX,bilibili.com,DIRECT,tcp   #【Meta专属】可指定协议类型(tcp/udp)
+  - DOMAIN-SUFFIX,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,全球直连
+  - DOMAIN-SUFFIX,skyearth.xyz,全球直连
+  - DOMAIN-SUFFIX,doppiocdn.live,全球直连
+  - DOMAIN-SUFFIX,us-c.viayoo.com:443,全球直连
+  - DOMAIN-SUFFIX,vip8.3sybf.com:443,全球直连
+  - DOMAIN-SUFFIX,surrit.com,全球直连
+  - DOMAIN-SUFFIX,sixyik.com,全球直连
+  - DOMAIN-SUFFIX,javxxx.me,全球直连
+  - DOMAIN-SUFFIX,fapnfuck.com,全球直连
+  - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,全球直连
+  - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,全球直连
+  # - DOMAIN-SUFFIX,bilibili.com,全球直连,tcp   #【Meta专属】可指定协议类型(tcp/udp)
 
   #DOMAIN-KEYWORD
   # 使用域名关键字匹配
@@ -790,10 +790,10 @@ rules:
   # 域名正则表达式匹配
 
   #【Meta专属】GEOSITE规则
-  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,category-ads-all,广告拦截
   
-  - GEOSITE,icloud@cn,DIRECT
-  # - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,icloud@cn,全球直连
+  # - GEOSITE,geolocation-cn,全球直连
 
   - GEOSITE,youtube,YouTube
   - GEOSITE,google,Google
@@ -805,19 +805,19 @@ rules:
   - GEOSITE,telegram,Telegram
   - GEOSITE,twitter,Twitter
   - GEOSITE,steam,Steam
-  - GEOSITE,steam@cn,DIRECT
+  - GEOSITE,steam@cn,全球直连
   - GEOSITE,tiktok,TikTok
   - GEOSITE,netflix,NETFLIX
-  - GEOSITE,apple@cn,DIRECT
-  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple@cn,全球直连
+  - GEOSITE,apple-cn,全球直连
   - GEOSITE,bing,Bing
   - GEOSITE,cloudflare,Cloudflare
   - GEOSITE,spotify,Spotify
   - GEOSITE,geolocation-!cn,漏网之鱼
 
   # GEOIP规则  
-  - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
+  - GEOIP,LAN,全球直连
+  - GEOIP,CN,全球直连
   - GEOIP,youtube,YouTube
   - GEOIP,google,Google
   - GEOIP,github,GitHub
@@ -826,35 +826,35 @@ rules:
   - GEOIP,steam,Steam
   - GEOIP,tiktok,TikTok
   - GEOIP,netflix,NETFLIX
-  - GEOIP,private,DIRECT
-  - GEOSITE,CN,DIRECT
+  - GEOIP,private,全球直连
+  - GEOSITE,CN,全球直连
 
   # # 匹配 IP 地址范围，IP-CIDR和IP-CIDR6效果是一样的，IP-CIDR6只是一个别名
-  # - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  # - IP-CIDR,127.0.0.0/8,全球直连,no-resolve
   # # - IP-CIDR6,2620:0:2d0:200::7/32,代理选择
   # # 匹配 IP 后缀范围
   # - IP-SUFFIX,8.8.8.8/24,代理选择
   # # 匹配 IP 所属 ASN
-  # - IP-ASN,13335,DIRECT
+  # - IP-ASN,13335,全球直连
   # # 匹配 IP 所属国家代码
-  # # - GEOIP,CN,DIRECT
+  # # - GEOIP,CN,全球直连
 
   # # 匹配来源 IP 所属国家代码
-  - SRC-GEOIP,cn,DIRECT
+  - SRC-GEOIP,cn,全球直连
   # # 匹配来源 IP 所属 ASN
-  - SRC-IP-ASN,9808,DIRECT
+  - SRC-IP-ASN,9808,全球直连
   # # 匹配来源 IP 地址范围
-  # - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  # - SRC-IP-CIDR,192.168.1.201/32,全球直连
   # # 匹配来源 IP 后缀范围
-  # - SRC-IP-SUFFIX,192.168.1.201/8,DIRECT
+  # - SRC-IP-SUFFIX,192.168.1.201/8,全球直连
   
   # # 匹配请求目标端口范围
   # # 【Meta专属】可指定端口范围
-  - DST-PORT,22,DIRECT
-  # - DST-PORT,80/123/136/137-139,DIRECT
+  - DST-PORT,22,全球直连
+  # - DST-PORT,80/123/136/137-139,全球直连
   # # 匹配请求来源端口范围
   # # 【Meta专属】可指定端口范围
-  # - SRC-PORT,7777,DIRECT
+  # - SRC-PORT,7777,全球直连
   
   # - IN-PORT,7890,代理选择
   # - IN-TYPE,SOCKS/HTTP,代理选择
@@ -864,7 +864,7 @@ rules:
   - MATCH,漏网之鱼
 
   # - DOMAIN-SUFFIX,qichiyu.com,代理选择
-  # - RULE-SET,private_domain,DIRECT
+  # - RULE-SET,private_domain,全球直连
   # - RULE-SET,apple_domain,Apple
   # - RULE-SET,proxylite,代理选择
   # - RULE-SET,ai,ChatGPT
