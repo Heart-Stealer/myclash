@@ -1,5 +1,5 @@
 proxy-providers:
-  我的订阅:
+  本地配置:
     # type: file
     # path: "F:/GoldBridge/clash/clash-main/clashmetatest.yaml"
     type: http
