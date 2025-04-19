@@ -1,3 +1,4 @@
+---
 DY_urltest:
   proxy: DIRECT
   interval: 43200
@@ -45,7 +46,7 @@ proxy-providers:
   本地配置:
     type: http
     path: ./proxy_provider/clashmeta.yaml
-    url: https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/nikkitest.yaml
+    url: https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml
     proxy: DIRECT
     interval: 43200
     health-check:
@@ -65,17 +66,17 @@ proxy-providers:
 mixed-port: 7890
 socks-port: 7891
 port: 7892
-redir-port: 0
-tproxy-port: 0
+redir-port: 7893
+tproxy-port: 7894
 mode: rule
-ipv6: false
+ipv6: true
 log-level: info
-allow-lan: false
+allow-lan: true
 bind-address: "*"
 udp: true
 unified-delay: true
 tcp-concurrent: true
-find-process-mode: strict
+find-process-mode: off
 global-client-fingerprint: chrome
 keep-alive-idle: 600
 keep-alive-interval: 30
@@ -88,15 +89,15 @@ secret: "963."
 external-ui: ui
 external-ui-name: zashboard
 external-ui-url: https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
-geo-auto-update: false
-geo-update-interval: 24
+geo-auto-update: true
+geo-update-interval: 72
 geodata-loader: memconservative
 geodata-mode: false
 geox-url:
-  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
-  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat
-  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
-  asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
+  geosite: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  geoip: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat
+  mmdb: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb
+  asn: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
 sniffer:
   enable: true
   parse-pure-ip: true
@@ -110,10 +111,12 @@ sniffer:
       ports:
         - 443
         - 8443
+      override-destination: true
     QUIC:
       ports:
         - 443
         - 8443
+      override-destination: true
   force-domain:
     - +.v2ex.com
     - google.com
@@ -146,19 +149,23 @@ sniffer:
     - 2001:b28:f23f::/48
     - 2a0a:f280:203::/48
 tun:
-  enable: false
+  enable: true
   stack: mixed
   dns-hijack:
     - any:53
+    - tcp://any:53
+    - udp://any:53
   auto-route: true
-  auto-redirect: false
+  auto-redirect: true
   auto-detect-interface: true
-  device: Mihomo
-  mtu: 1500
+  device: nikki
+  mtu: 9000
   gso: true
   gso-max-size: 65536
   endpoint-independent-nat: false
-  route-exclude-address: []
+  route-exclude-address:
+    - 192.168.0.0/16
+    - fc00::/7
 dns:
   enable: true
   listen: :1053
@@ -223,6 +230,8 @@ dns:
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
+    - 8.8.8.8
+    - 1.1.1.1
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -234,7 +243,7 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
   use-system-hosts: false
-  use-hosts: true
+  use-hosts: false
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -242,7 +251,7 @@ dns:
     geoip: true
     geoip-code: CN
     nameserver-policy:
-      geosite:cn,private:
+      "geosite:cn,private":
         - 223.5.5.5
         - 119.29.29.29
       geosite:geolocation-!cn:
@@ -262,7 +271,8 @@ lan-allowed-ips:
   - 0.0.0.0/0
   - ::/0
 lan-disallowed-ips: []
-authentication: []
+authentication:
+  - nikki:963.
 skip-auth-prefixes:
   - 127.0.0.1/32
 ntp:
@@ -654,6 +664,7 @@ rules:
   - RULE-SET,ProgramAD,🛑 广告拦截
   - DOMAIN-SUFFIX,gh-proxy.com,🎯 全球直连
   - DOMAIN-SUFFIX,eporner.com,🕹️ 代理选择
+  - DOMAIN-SUFFIX,kyarucloud.moe,🕹️ 代理选择
   - DOMAIN-SUFFIX,googleapis.cn,🕹️ 代理选择
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🕹️ 代理选择
   - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,🕹️ 代理选择

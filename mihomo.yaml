@@ -147,7 +147,7 @@ proxy-providers:
   本地配置:
     type: http
     path: ./proxy_provider/clashmeta.yaml
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/nikkitest.yaml"
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/clashmetatest.yaml"
     <<: *DY_urltest
     <<: *Override_1
 
@@ -331,9 +331,10 @@ sniffer:
       override-destination: true
     TLS:
       ports: [443, 8443]
+      override-destination: true
     QUIC:
       ports: [443, 8443]
-  
+      override-destination: true
   # 需要强制嗅探的域名
   force-domain:
     - "+.v2ex.com"
@@ -352,20 +353,20 @@ sniffer:
 # 它的匹配更为宽泛，只要域名以指定的后缀结尾即可。
 # 示例：对于 www.example.com、mail.example.com、subdomain1.subdomain2.example.com 等所有以 .example.com 结尾的域名，都能被 *.example.com 匹配到。
   skip-domain:
-    - "+.baidu.com"
+    - '+.baidu.com'
     # - "+.apple.com"
-    - "Mijia Cloud"
-    - "dlg.io.mi.com"
-    - "*.push.apple.com"
-    - "*.apple.com"
-    - "*.wechat.com"
-    - "*.qpic.cn"
-    - "*.qq.com"
-    - "*.wechatapp.com"
-    - "*.vivox.com"
+    - Mijia Cloud
+    - dlg.io.mi.com
+    - '*.push.apple.com'
+    - '*.apple.com'
+    - '*.wechat.com'
+    - '*.qpic.cn'
+    - '*.qq.com'
+    - '*.wechatapp.com'
+    - '*.vivox.com'
     # 向日葵服务
-    - "*.oray.com"
-    - "*.sunlogin.net"
+    - '*.oray.com'
+    - '*.sunlogin.net'
   # 对 redir-host 类型识别的流量进行强制嗅探
   force-dns-mapping: true
   # 启用嗅探结果最为实际访问
@@ -395,7 +396,10 @@ tun:
   # 可用值： system/gvisor/mixed
   stack: mixed
   # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
-  dns-hijack: ["any:53", "tcp://any:53"]
+  dns-hijack: #["any:53", "tcp://any:53"]
+    - any:53
+    - tcp://any:53
+    - udp://any:53
   # 自动设置全局路由,可以自动将全局流量路由进入 tun 网卡
   auto-route: true
   # 是否自动重定向网络流量
@@ -429,7 +433,7 @@ tun:
 # DNS模块
 dns:
   enable: true
-  listen: :1053
+  listen: ':1053'
   ipv6: true
   #ipv6超时，单位 毫秒
   ipv6-timeout: 300
@@ -515,6 +519,8 @@ dns:
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
+    - 8.8.8.8
+    - 1.1.1.1
   # 代理节点DNS解析服务器
   # 仅用于解析代理节点的域名
   proxy-server-nameserver:
@@ -531,7 +537,7 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
   use-system-hosts: false
-  use-hosts: true
+  use-hosts: false
   # # DNS解析服务器策略
   # # 指定地址使用特定DNS解析服务器
   # # 指定域名查询的解析服务器，优先于 nameserver/fallback 查询
@@ -600,8 +606,7 @@ ntp:
   # NTP 服务地址，默认 time.apple.com
   # 你可以根据实际需求更换为其他可靠的 NTP 服务器，
   # 如 time.nist.gov 等。只能切换，不能多选
-  server: 
-    "time.apple.com"
+  server: time.apple.com
     # "ntp.ntsc.ac.cn"
     # "ntp.aliyun.com"
     # "time1.cloud.tencent.com"
@@ -764,6 +769,7 @@ rules:
   - DOMAIN-SUFFIX,gh-proxy.com,全球直连
   # - DOMAIN-SUFFIX,pages.dev,Cloudflare
   - DOMAIN-SUFFIX,eporner.com,代理选择
+  - DOMAIN-SUFFIX,kyarucloud.moe,代理选择
   - DOMAIN-SUFFIX,googleapis.cn,代理选择
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,代理选择
   - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,代理选择
