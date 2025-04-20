@@ -52,20 +52,24 @@ proxy-providers:
 mixed-port: 7890
 socks-port: 7891
 port: 7892
-redir-port: 0
-tproxy-port: 0
+# 安卓手机需要禁用 redir-port和tproxy
+redir-port: 7893
+tproxy-port: 7894
+# rule/ global/ direct
 mode: rule
-log-level: info
+# silent/ error/ warning/ info/ debug
+log-level: warning
 allow-lan: true
 bind-address: "*"
 ipv6: true
 unified-delay: true                  # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
 tcp-concurrent: true                 # TCP 并发，可选值 true/false
+# always/strict/off
 find-process-mode: strict            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
 keep-alive-idle: 600                 # 连接空闲后多久发送探测包
 keep-alive-interval: 30              # TCP Keep Alive 间隔,单位分钟
-disable-keep-alive: false            # 禁用保持活跃探测
+# disable-keep-alive: false            # 禁用保持活跃探测, 在 Android 默认为 true
 
 profile:
   store-selected: true               # 储存 API 对策略组的选择，以供下次启动时使用
@@ -80,7 +84,8 @@ external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/re
 
 geo-auto-update: true                # 自动更新 GEO
 geo-update-interval: 72              # 更新间隔，单位为小时
-geodata-loader: standard             # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+# standard/memconservative
+geodata-loader: standard             # GEO 文件加载模式, standard: 标准加载器 memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
 geodata-mode: false                  # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
 geox-url:
   geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
@@ -122,15 +127,17 @@ sniffer:
 
 # 入站  
 tun:
+# 路由器 true
+  # enable: true                      # 启用 tun
   enable: false                      # 启用 tun
   # system/gvisor/mixed
-  stack: mixed                      # tun 模式堆栈,可用值：system/gvisor/mixed
-  dns-hijack:                        # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
-    - "any:53"
-    - "tcp://any:53"
+  stack: mixed                       # https://wiki.metacubex.one/config/inbound/tun/?h=android#stack
   auto-route: true                   # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡
   auto-redirect: true                # 是否自动重定向网络流量
   auto-detect-interface: true        # 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
+  dns-hijack:                        # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
+    - "any:53"
+    - "tcp://any:53"
   device: Mihomo
   mtu: 9000
   gso: true
@@ -142,7 +149,7 @@ dns:
   enable: true                       # 关闭将使用系统 DNS
   listen: 0.0.0.0:1053               # DNS 监听地址
   ipv6: true                         # IPV6解析开关；如果为false，将返回ipv6结果为空
-  prefer-h3: true
+  # prefer-h3: true
   enhanced-mode: fake-ip             # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16       # Fake-IP 解析地址池
   fake-ip-filter:                    # Fake-ip 过滤，列表中的域名返回真实IP
@@ -215,31 +222,6 @@ dns:
     "geosite:!cn,!private": 
       - "tls://dns.google"
       - "tls://cloudflare-dns.com"
-  # fallback:
-  #   - tls://8.8.8.8:853
-  #   - tls://8.8.4.4:853
-  # fallback-filter:
-  #   geoip: true
-  #   geoip-code: CN
-  #   # geosite:
-  #   #   - gfw
-  #   nameserver-policy:
-  #     geosite:cn,private:
-  #       - 223.5.5.5
-  #       - 119.29.29.29
-  #     geosite:geolocation-!cn:
-  #       - https://dns.cloudflare.com/dns-query
-  #       - https://dns.google/dns-query
-  #   ipcidr:
-  #     - 240.0.0.0/4
-  #     - 0.0.0.0/32
-  #   domain:
-  #     - +.google.com
-  #     - +.facebook.com
-  #     - +.youtube.com
-  #     - +.instagram.com
-  #     - +.twitter.com
-  #     - +.chatgpt.com
 
 # 允许连接的 IP 地址段
 lan-allowed-ips:
@@ -263,10 +245,10 @@ my_lb: &my_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|�
 # auto_select fallback
 my_au: &my_au {type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 50}
 my_fb: &my_fb {type: fallback, include-all: true, interval: 300, timeout: 5000, tolerance: 50}
-my_HK: &my_HK {type: select, include-all: true, filter: "(?i)🌳|港|hk|hongkong|hong kong"}
-my_JP: &my_JP {type: select, include-all: true, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
-my_SG: &my_SG {type: select, include-all: true, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
-my_US: &my_US {type: select, include-all: true, filter: "(?i)🌳|美|🇺🇸|us|unitedstates|united states"}
+my_HK: &my_HK {<<: *Dingyue, filter: "(?i)🌳|港|hk|hongkong|hong kong"}
+my_JP: &my_JP {<<: *Dingyue, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
+my_SG: &my_SG {<<: *Dingyue, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
+my_US: &my_US {<<: *Dingyue, filter: "(?i)🌳|美|🇺🇸|us|unitedstates|united states"}
 
 proxy-groups:
   - {name: 代理选择, <<: *Include_all}
