@@ -1,6 +1,7 @@
 proxies:
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
+  - {"name":"拒绝 | ⬇️ 9.9MB/s|63%|Netflix|Disney|Openai|Gemini","type":"vless","server":"45.131.4.4","port":80,"uuid":"4088e698-69fd-4d15-98bc-f1fe4c071642","tls":false,"servername":"digitalscientificresearchgroup.ir","network":"ws","ws-opts":{"path":"/Telegram🇨🇳@WangCai2/?ed=2560","headers":{"host":"digitalscientificresearchgroup.ir"}}}
 
   - {"name":"🇰🇷韩国2 | ⬇️ 9.9MB/s|63%|Netflix|Disney|Openai|Gemini","type":"vless","server":"45.131.4.4","port":80,"uuid":"4088e698-69fd-4d15-98bc-f1fe4c071642","tls":false,"servername":"digitalscientificresearchgroup.ir","network":"ws","ws-opts":{"path":"/Telegram🇨🇳@WangCai2/?ed=2560","headers":{"host":"digitalscientificresearchgroup.ir"}}}
   - {"name":"🇮🇳印度1 | ⬇️ 9.9MB/s|63%|Netflix|Disney|Openai|Gemini","type":"vless","server":"45.131.4.169","port":80,"uuid":"4088e698-69fd-4d15-98bc-f1fe4c071642","tls":false,"servername":"digitalscientificresearchgroup.ir","network":"ws","ws-opts":{"path":"/Telegram🇨🇳@WangCai2","headers":{"host":"digitalscientificresearchgroup.ir"}}}
