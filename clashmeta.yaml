@@ -304,7 +304,7 @@ proxy-groups:
   - {name: TikTok,    <<: *Proxy_first}
   - {name: Twitter,   <<: *Proxy_first}
   - {name: YouTube,   <<: *Proxy_first}
-  - {name: GLOBAL,    <<: *Proxy_first}
+  # - {name: GLOBAL,    <<: *Proxy_first}
 
   - {name: AppleTV,   <<: *Direct_first}
   - {name: Apple,     <<: *Direct_first}
