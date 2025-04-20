@@ -280,7 +280,7 @@ proxy-groups:
   - {name: 狮城节点, <<: *my_SG}
   - {name: 美国节点, <<: *my_US}
   - {name: 负载均衡, <<: *my_lb}
-  - {name: GLOBAL,    type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
+  # - {name: GLOBAL,    type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
   - {name: AI,        type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
   - {name: Cloudflare,type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
   - {name: ChatGPT,   type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
