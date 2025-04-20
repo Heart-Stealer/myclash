@@ -271,47 +271,47 @@ my_US: &my_US {type: select, include-all: true, filter: "(?i)🌳|美|🇺🇸|u
 proxy-groups:
   - {name: 代理选择, <<: *Include_all}
   - {name: 手动选择, <<: *Dingyue}
-  - {name: 漏网之鱼, type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: 全球直连, type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-  - {name: 广告拦截, type: select, proxies: [REJECT, DIRECT, 手动选择, 自动选择]}
+  - {name: 漏网之鱼, <<: *Proxy_first}
+  - {name: 全球直连, <<: *Direct_first}
+  - {name: 广告拦截, <<: *Reject_first}
   - {name: 自动选择, <<: *my_au}
   - {name: 香港节点, <<: *my_HK}
   - {name: 日本节点, <<: *my_JP}
   - {name: 狮城节点, <<: *my_SG}
   - {name: 美国节点, <<: *my_US}
   - {name: 负载均衡, <<: *my_lb}
-  # - {name: GLOBAL,    type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: AI,        type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Cloudflare,type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: ChatGPT,   type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Discord,   type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: DisneyPlus,type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: FCM,       type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: GitHub,    type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: GoogleVPN, type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Google,    type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: HBO,       type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: LINE,      type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Meta,      type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: NETFLIX,   type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: PayPal,    type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Primevideo,type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Pixiv,     type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Signal,    type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Spotify,   type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Steam,     type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Talkatone, type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Telegram,  type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: TikTok,    type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: Twitter,   type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-  - {name: YouTube,   type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
+  - {name: AI,        <<: *Proxy_first}
+  - {name: Cloudflare,<<: *Proxy_first}
+  - {name: ChatGPT,   <<: *Proxy_first}
+  - {name: Discord,   <<: *Proxy_first}
+  - {name: DisneyPlus,<<: *Proxy_first}
+  - {name: FCM,       <<: *Proxy_first}
+  - {name: GitHub,    <<: *Proxy_first}
+  - {name: GoogleVPN, <<: *Proxy_first}
+  - {name: Google,    <<: *Proxy_first}
+  - {name: HBO,       <<: *Proxy_first}
+  - {name: LINE,      <<: *Proxy_first}
+  - {name: Meta,      <<: *Proxy_first}
+  - {name: NETFLIX,   <<: *Proxy_first}
+  - {name: PayPal,    <<: *Proxy_first}
+  - {name: Primevideo,<<: *Proxy_first}
+  - {name: Pixiv,     <<: *Proxy_first}
+  - {name: Signal,    <<: *Proxy_first}
+  - {name: Spotify,   <<: *Proxy_first}
+  - {name: Steam,     <<: *Proxy_first}
+  - {name: Talkatone, <<: *Proxy_first}
+  - {name: Telegram,  <<: *Proxy_first}
+  - {name: TikTok,    <<: *Proxy_first}
+  - {name: Twitter,   <<: *Proxy_first}
+  - {name: YouTube,   <<: *Proxy_first}
 
-  - {name: AppleTV,   type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-  - {name: Apple,     type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-  - {name: Bing,      type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-  - {name: Microsoft, type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-  - {name: OneDrive,  type: select, proxies: [DIRECT, 手动选择, 自动选择]}
-  - {name: Speedtest, type: select, proxies: [DIRECT, 手动选择, 自动选择]}
+  - {name: AppleTV,   <<: *Direct_first}
+  - {name: Apple,     <<: *Direct_first}
+  - {name: Bing,      <<: *Direct_first}
+  - {name: Microsoft, <<: *Direct_first}
+  - {name: OneDrive,  <<: *Direct_first}
+  - {name: Speedtest, <<: *Direct_first}
+  # - {name: GLOBAL,    <<: *Proxy_first}
 rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.metacubex.one,DIRECT
