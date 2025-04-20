@@ -263,10 +263,10 @@ my_lb: &my_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|�
 # auto_select fallback
 my_au: &my_au {type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 50}
 my_fb: &my_fb {type: fallback, include-all: true, interval: 300, timeout: 5000, tolerance: 50}
-my_HK: &my_HK {type: select, include-all: true, filter: "(?i)(🌳|港|🇭🇰|hk|hong( |)kong)"}
-my_JP: &my_JP {type: select, include-all: true, filter: "(?i)(🌳|日|🇯🇵|jp|JP|japan)"}
-my_SG: &my_SG {type: select, include-all: true, filter: "(?i)(🌳|新|🇸🇬|sg|singapore)"}
-my_US: &my_US {type: select, include-all: true, filter: "(?i)(🌳美|🇺🇸|us|unitedstates|united states)"}
+my_HK: &my_HK {type: select, include-all: true, filter: "(?i)🌳|港|hk|hongkong|hong kong"}
+my_JP: &my_JP {type: select, include-all: true, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
+my_SG: &my_SG {type: select, include-all: true, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
+my_US: &my_US {type: select, include-all: true, filter: "(?i)🌳|美|🇺🇸|us|unitedstates|united states"}
 
 proxy-groups:
   - {name: 代理选择, <<: *Include_all}
