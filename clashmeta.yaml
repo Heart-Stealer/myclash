@@ -53,12 +53,14 @@ mixed-port: 7890
 socks-port: 7891
 port: 7892
 # 安卓手机需要禁用 redir-port和tproxy
+# redir-port: 0    # 关闭 REDIRECT
+# tproxy-port: 0   # 关闭 TPROXY
 redir-port: 7893
 tproxy-port: 7894
 # rule/ global/ direct
 mode: rule
 # silent/ error/ warning/ info/ debug
-log-level: warning
+log-level: info
 allow-lan: true
 bind-address: "*"
 ipv6: true
@@ -302,6 +304,8 @@ rules:
   - DOMAIN,d.metacubex.one,DIRECT
   - DOMAIN,zashboard,DIRECT
   - DOMAIN,statics.woozooo.com,DIRECT
+  - DOMAIN,firmware-selector.immortalwrt.org,代理选择
+  - DOMAIN,sysupgrade.kyarucloud.moe,代理选择
 
   - DOMAIN-SUFFIX,kyarucloud.moe,代理选择
   - DOMAIN-SUFFIX,eporner.com,代理选择
@@ -362,42 +366,56 @@ rules:
   - GEOIP,netflix,NETFLIX
   - GEOIP,private,DIRECT
   - GEOSITE,CN,DIRECT
+
+  # 匹配来源 IP 所属国家代码
   - SRC-GEOIP,cn,DIRECT
+  # 匹配来源 IP 所属 ASN
   - SRC-IP-ASN,9808,DIRECT
+  # 匹配来源 IP 地址范围
+  # - SRC-IP-CIDR,10.0.0.0/8,DIRECT
+  # - SRC-IP-CIDR,172.16.0.0/12,DIRECT
+  # - SRC-IP-CIDR,192.168.0.0/16,DIRECT
+  # - SRC-IP-CIDR,100.64.0.0/10,DIRECT
+  # - SRC-IP-CIDR,127.0.0.0/8,DIRECT
+  # 匹配来源 IP 后缀范围
+  # - SRC-IP-SUFFIX,192.168.1.201/8,DIRECT
+  # 匹配请求目标端口范围
   - DST-PORT,22,DIRECT
+  # 匹配请求来源端口范围
+  - SRC-PORT,7777,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
+
   - MATCH,漏网之鱼
   
+rule-anchor:
+  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
+  ip_text: &ip_text {type: http, interval: 86400, behavior: ipcidr, format: text}
+  ip_yaml: &ip_yaml {type: http, interval: 86400, behavior: ipcidr, format: yaml}
+  domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
+  domain_text: &domain_text {type: http, interval: 86400, behavior: domain, format: text}
+  domain_yaml: &domain_yaml {type: http, interval: 86400, behavior: domain, format: yaml}
+  class: &class {type: http, interval: 86400, behavior: classical, format: text}
+  class_yaml: &class_yaml {type: http, interval: 86400, behavior: classical, format: yaml}
+
+# 规则订阅
 rule-providers:
   AD-Lite:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: yaml
-    path: ./rule-providers/rules/AD-Lite.yaml
+    <<: *domain_yaml
+    path: ./rule-providers/AD-Lite.yaml
     url: https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml
   EasyList:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: yaml
-    path: ./rule-providers/rules/EasyList.yaml
+    <<: *domain_yaml
+    path: ./rule-providers/EasyList.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyList.yaml
   EasyListChina:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: yaml
-    path: ./rule-providers/rules/EasyListChina.yaml
+    <<: *domain_yaml
+    path: ./rule-providers/EasyListChina.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyListChina.yaml
   ProgramAD:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: yaml
-    path: ./rule-providers/rules/ProgramAD.yaml
+    <<: *domain_yaml
+    path: ./rule-providers/ProgramAD.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/ProgramAD.yaml
