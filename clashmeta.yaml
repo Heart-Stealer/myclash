@@ -2,7 +2,7 @@
 DY_urltest: &DY_urltest
   proxy: DIRECT
   interval: 43200
-  health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300, timeout: 5000, tolerance: 50, lazy: true}
+  health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300, timeout: 5000, tolerance: 100, lazy: true}
 
 # proxy 相关
 Dingyue: &Dingyue
@@ -13,8 +13,9 @@ Dingyue: &Dingyue
   include-all: true
   use:
     - 本地配置
-    # - 订阅1
-    # - 订阅2
+    - ZDYZ2
+    - 订阅1
+    - 订阅2
 
 proxy-providers:
   本地配置:
@@ -31,7 +32,17 @@ proxy-providers:
       - pattern: "(?i)(印度|拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
         target: "🟢"
 
-  # 订阅1:
+  ZDYZ2:
+    type: http
+    path: ./proxy-providers/zdyz2.yaml
+    url: "https://sublink.634676.xyz/sub"
+    <<: *DY_urltest
+    override:
+      # additional-prefix: "[1️⃣]"
+      additional-suffix: "[1️⃣]"
+      proxy-name:
+      - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+        target: "🟢"
   #   type: http
   #   path: ./proxy-providers/dingyue1.yaml
   #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
@@ -39,7 +50,35 @@ proxy-providers:
     # override:
     #   # additional-prefix: "[1️⃣]"
     #   additional-suffix: "[1️⃣]"
-  # 订阅2:
+  订阅1:
+    type: http
+    path: ./proxy-providers/dingyue1.yaml
+    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/dingyue1.yaml"
+    <<: *DY_urltest
+    override:
+      # additional-prefix: "[1️⃣]"
+      additional-suffix: "[1️⃣]"
+      proxy-name:
+      - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+        target: "🟢"
+  #   type: http
+  #   path: ./proxy-providers/dingyue1.yaml
+  #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
+  #   <<: *DY_urltest
+    # override:
+    #   # additional-prefix: "[1️⃣]"
+    #   additional-suffix: "[1️⃣]"
+  订阅2:
+    type: http
+    path: ./proxy-providers/dingyue2.yaml
+    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/dingyue2.yaml"
+    <<: *DY_urltest
+    override:
+    #   # additional-prefix: "[2️⃣]"
+      additional-suffix: "[2️⃣]"
+      proxy-name:
+      - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+        target: "🟢"
   #   type: http
   #   path: ./profiles/proxies/dingyue2.yaml
   #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
@@ -53,8 +92,10 @@ mixed-port: 7890
 socks-port: 7891
 port: 7892
 # 安卓手机需要禁用 redir-port和tproxy
-# redir-port: 0    # 关闭 REDIRECT
-# tproxy-port: 0   # 关闭 TPROXY
+# 关闭 REDIRECT
+# redir-port: 0
+# 关闭 TPROXY
+# tproxy-port: 0   
 redir-port: 7893
 tproxy-port: 7894
 # rule/ global/ direct
@@ -64,31 +105,52 @@ log-level: info
 allow-lan: true
 bind-address: "*"
 ipv6: true
-unified-delay: true                  # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
-tcp-concurrent: true                 # TCP 并发，可选值 true/false
+# 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
+unified-delay: true
+# TCP 并发，可选值 true/false
+tcp-concurrent: true
+# 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 # always/strict/off
-find-process-mode: strict            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
-global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
-keep-alive-idle: 600                 # 连接空闲后多久发送探测包
-keep-alive-interval: 30              # TCP Keep Alive 间隔,单位分钟
-# disable-keep-alive: false            # 禁用保持活跃探测, 在 Android 默认为 true
+# 路由器 off
+find-process-mode: strict
+# find-process-mode: off
+# 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
+global-client-fingerprint: chrome
+# 连接空闲后多久发送探测包
+keep-alive-idle: 600
+# TCP Keep Alive 间隔,单位分钟
+keep-alive-interval: 30
+# # 禁用保持活跃探测, 在 Android 默认为 true
+# disable-keep-alive: false
 
 profile:
-  store-selected: true               # 储存 API 对策略组的选择，以供下次启动时使用
-  store-fake-ip: true                # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
+  # 储存 API 对策略组的选择，以供下次启动时使用
+  store-selected: true
+  # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
+  store-fake-ip: true
 
 # 控制面板
-external-controller: '0.0.0.0:9090'  # API 监听地址
-secret: "963."                       # 自定义 API 的访问密钥
-external-ui: ui                      # 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
-external-ui-name: zashboard          # 自定义外部用户界面名字
+# API 监听地址
+external-controller: '0.0.0.0:9090'
+# 自定义 API 的访问密钥
+secret: "963."
+# 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
+external-ui: ui
+# 自定义外部用户界面名字
+external-ui-name: zashboard          
 external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 
-geo-auto-update: true                # 自动更新 GEO
-geo-update-interval: 72              # 更新间隔，单位为小时
+# 自动更新 GEO
+geo-auto-update: true
+# 更新间隔，单位为小时
+geo-update-interval: 72
 # standard/memconservative
-geodata-loader: standard             # GEO 文件加载模式, standard: 标准加载器 memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
-geodata-mode: false                  # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+# GEO 文件加载模式, standard: 标准加载器 memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
+# 路由器
+geodata-loader: standard
+# geodata-loader: memconservative
+# 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+geodata-mode: false
 geox-url:
   geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
   geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
@@ -130,14 +192,20 @@ sniffer:
 # 入站  
 tun:
 # 路由器 true
-  # enable: true                      # 启用 tun
-  enable: false                      # 启用 tun
+  # 启用 tun
+  # enable: true                      
+  enable: false                      
   # system/gvisor/mixed
-  stack: mixed                       # https://wiki.metacubex.one/config/inbound/tun/?h=android#stack
-  auto-route: true                   # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡
-  auto-redirect: true                # 是否自动重定向网络流量
-  auto-detect-interface: true        # 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
-  dns-hijack:                        # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
+  # https://wiki.metacubex.one/config/inbound/tun/?h=android#stack
+  stack: mixed                       
+  # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡
+  auto-route: true                   
+  # 是否自动重定向网络流量
+  auto-redirect: true                
+  # 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
+  auto-detect-interface: true        
+  # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
+  dns-hijack:                        
     - "any:53"
     - "tcp://any:53"
   device: Mihomo
@@ -148,13 +216,19 @@ tun:
 
 # DNS模块
 dns:
-  enable: true                       # 关闭将使用系统 DNS
-  listen: 0.0.0.0:1053               # DNS 监听地址
-  ipv6: true                         # IPV6解析开关；如果为false，将返回ipv6结果为空
+  # 关闭将使用系统 DNS
+  enable: true
+  # DNS 监听地址
+  listen: 0.0.0.0:1053
+  # IPV6解析开关；如果为false，将返回ipv6结果为空
+  ipv6: true
   # prefer-h3: true
-  enhanced-mode: fake-ip             # 模式：redir-host或fake-ip
-  fake-ip-range: 198.18.0.1/16       # Fake-IP 解析地址池
-  fake-ip-filter:                    # Fake-ip 过滤，列表中的域名返回真实IP
+  # 模式：redir-host或fake-ip
+  enhanced-mode: fake-ip
+  # Fake-IP 解析地址池
+  fake-ip-range: 198.18.0.1/16
+  # Fake-ip 过滤，列表中的域名返回真实IP
+  fake-ip-filter:
     - "+.lan"
     - "+.local"
     - "geosite:cn"
@@ -202,28 +276,32 @@ dns:
     - "5ddd.com"
     - "time1.cloud.tencent.com"
     - "WORKGROUP"
-  default-nameserver:                # 解析非IP的dns用的dns服务器，只支持纯IP, 可为加密 DNS
+  # # 解析非IP的dns用的dns服务器，只支持纯IP, 可为加密 DNS
+  # default-nameserver:
+  #   - 1.1.1.1
+  #   - 8.8.8.8
+  #   - 223.5.5.5
+  #   - 119.29.29.29
+  # # 代理节点域名解析服务器，仅用于解析代理节点的域名
+  # proxy-server-nameserver:
+  #   - 1.1.1.1
+  #   - 8.8.8.8
+  #   - 223.5.5.5
+  #   - 119.29.29.29
+  # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+  nameserver:
     - 1.1.1.1
     - 8.8.8.8
     - 223.5.5.5
     - 119.29.29.29
-  proxy-server-nameserver:           # 代理节点域名解析服务器，仅用于解析代理节点的域名
-    - 1.1.1.1
-    - 8.8.8.8
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver:                        # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - 1.1.1.1
-    - 8.8.8.8
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver-policy:                 # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
-    "geosite:cn,private":
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
-    "geosite:!cn,!private": 
-      - "tls://dns.google"
-      - "tls://cloudflare-dns.com"
+  # # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
+  # nameserver-policy:
+  #   "geosite:cn,private":
+  #     - https://doh.pub/dns-query
+  #     - https://dns.alidns.com/dns-query
+  #   "geosite:!cn,!private":
+  #     - "tls://dns.google"
+  #     - "tls://cloudflare-dns.com"
 
 # 允许连接的 IP 地址段
 lan-allowed-ips:
@@ -231,10 +309,10 @@ lan-allowed-ips:
   - ::/0
 # 禁止连接的 IP 地址段
 lan-disallowed-ips: []
-# http(s)/socks/mixed代理的用户验证的账号密码
-authentication:
-  - "mihomo:963."
-  - "nikki:963."
+# # http(s)/socks/mixed代理的用户验证的账号密码
+# authentication:
+#   - "mihomo:963."
+#   - "nikki:963."
 skip-auth-prefixes:
   - 127.0.0.1/32
   - 192.168.0.0/16
@@ -245,8 +323,8 @@ Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选�
 Include_all: &Include_all {type: select, proxies: [手动选择, DIRECT, 负载均衡, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
 my_lb: &my_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|🌳)|(-([1-9]|[0-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 5000}
 # auto_select fallback
-my_au: &my_au {type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 50}
-my_fb: &my_fb {type: fallback, include-all: true, interval: 300, timeout: 5000, tolerance: 50}
+my_au: &my_au {type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
+my_fb: &my_fb {type: fallback, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
 my_HK: &my_HK {<<: *Dingyue, filter: "(?i)🌳|港|hk|hongkong|hong kong"}
 my_JP: &my_JP {<<: *Dingyue, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
 my_SG: &my_SG {<<: *Dingyue, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
@@ -299,10 +377,10 @@ proxy-groups:
   - {name: Speedtest, <<: *Direct_first}
 rules:
   - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.metacubex.one,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,yacd.metacubex.one,DIRECT
   - DOMAIN,d.metacubex.one,DIRECT
-  - DOMAIN,zashboard,DIRECT
+  - DOMAIN,board.zash.run.place,DIRECT
   - DOMAIN,statics.woozooo.com,DIRECT
   - DOMAIN,firmware-selector.immortalwrt.org,代理选择
   - DOMAIN,sysupgrade.kyarucloud.moe,代理选择
@@ -371,18 +449,13 @@ rules:
   - SRC-GEOIP,cn,DIRECT
   # 匹配来源 IP 所属 ASN
   - SRC-IP-ASN,9808,DIRECT
-  # 匹配来源 IP 地址范围
-  # - SRC-IP-CIDR,10.0.0.0/8,DIRECT
-  # - SRC-IP-CIDR,172.16.0.0/12,DIRECT
-  # - SRC-IP-CIDR,192.168.0.0/16,DIRECT
-  # - SRC-IP-CIDR,100.64.0.0/10,DIRECT
-  # - SRC-IP-CIDR,127.0.0.0/8,DIRECT
   # 匹配来源 IP 后缀范围
   # - SRC-IP-SUFFIX,192.168.1.201/8,DIRECT
   # 匹配请求目标端口范围
   - DST-PORT,22,DIRECT
   # 匹配请求来源端口范围
   - SRC-PORT,7777,DIRECT
+  # 匹配目标 IP 地址范围
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
@@ -419,3 +492,27 @@ rule-providers:
     <<: *domain_yaml
     path: ./rule-providers/ProgramAD.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/ProgramAD.yaml
+  # AD: { <<: *domain_yaml, path: "./rule-providers/AD.yaml", url: "https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/AD.yaml"}
+
+  # private_domain: { <<: *domain_yaml, path: "./providers/rules/private_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml"}
+  # proxylite: { <<: *class_yaml, path: "./providers/rules/proxylite.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"}
+  # ai: {  <<: *domain_yaml, path: "./providers/rules/ai.yaml", url: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.yaml" }
+  # youtube_domain: { <<: *domain_yaml, path: "./providers/rules/youtube_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml"}
+  # google_domain: { <<: *domain_yaml, path: "./providers/rules/google_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml"}
+  # github_domain: { <<: *domain_yaml, path: "./providers/rules/github_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml"}
+  # telegram_domain: { <<: *domain_yaml, path: "./providers/rules/telegram_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml"}
+  # netflix_domain: { <<: *domain_yaml, path: "./providers/rules/netflix_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml"}
+  # paypal_domain: { <<: *domain_yaml, path: "./providers/rules/paypal_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.yaml"}
+  # onedrive_domain: { <<: *domain_yaml, path: "./providers/rules/onedrive_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.yaml"}
+  # microsoft_domain: { <<: *domain_yaml, path: "./providers/rules/microsoft_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.yaml"}
+  # apple_domain: { <<: *domain_yaml, path: "./providers/rules/apple_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.yaml"}
+  # speedtest_domain: { <<: *domain_yaml, path: "./providers/rules/speedtest_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.yaml"}
+  # tiktok_domain: { <<: *domain_yaml, path: "./providers/rules/tiktok_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.yaml"}
+  # gfw_domain: { <<: *domain_yaml, path: "./providers/rules/gfw_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.yaml"}
+  # geolocation-!cn: { <<: *domain_yaml, path: "./providers/rules/geolocation", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml"}
+  # cn_domain: { <<: *domain_yaml, path: "./providers/rules/cn_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml"}
+
+  # cn_ip: { <<: *ip_yaml, path: "./providers/rules/cn_ip.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml"}
+  # google_ip: { <<: *ip_yaml, path: "./providers/rules/google_ip.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.yaml"}
+  # telegram_ip: { <<: *ip_yaml, path: "./providers/rules/telegram_ip.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.yaml"}
+  # netflix_ip: { <<: *ip_yaml, path: "./providers/rules/netflix_ip.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.yaml"}
