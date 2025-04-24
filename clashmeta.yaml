@@ -3,6 +3,10 @@ DY_urltest: &DY_urltest
   proxy: DIRECT
   interval: 43200
   health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300, timeout: 5000, tolerance: 100, lazy: true}
+  override:
+    proxy-name:
+    - pattern: "(?i)(TG@ZDYZ2|印度|拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+      target: ""
 
 # proxy 相关
 Dingyue: &Dingyue
@@ -14,8 +18,6 @@ Dingyue: &Dingyue
   use:
     - 本地配置
     - ZDYZ2
-    - 订阅1
-    - 订阅2
 
 proxy-providers:
   本地配置:
@@ -25,61 +27,15 @@ proxy-providers:
     path: ./proxy-providers/clashmeta.yaml
     url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     <<: *DY_urltest
-    override:
-      # additional-prefix: "[👑]"
-      additional-suffix: "[👑]"
-      proxy-name:
-      - pattern: "(?i)(印度|拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
-        target: "🟢"
 
   ZDYZ2:
     type: http
     path: ./proxy-providers/zdyz2.yaml
     url: "https://sublink.634676.xyz/sub"
     <<: *DY_urltest
-    override:
-      # additional-prefix: "[1️⃣]"
-      additional-suffix: "[1️⃣]"
-      proxy-name:
-      - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
-        target: "🟢"
-  #   type: http
   #   path: ./proxy-providers/dingyue1.yaml
   #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
   #   <<: *DY_urltest
-    # override:
-    #   # additional-prefix: "[1️⃣]"
-    #   additional-suffix: "[1️⃣]"
-  订阅1:
-    type: http
-    path: ./proxy-providers/dingyue1.yaml
-    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/dingyue1.yaml"
-    <<: *DY_urltest
-    override:
-      # additional-prefix: "[1️⃣]"
-      additional-suffix: "[1️⃣]"
-      proxy-name:
-      - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
-        target: "🟢"
-  #   type: http
-  #   path: ./proxy-providers/dingyue1.yaml
-  #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
-  #   <<: *DY_urltest
-    # override:
-    #   # additional-prefix: "[1️⃣]"
-    #   additional-suffix: "[1️⃣]"
-  订阅2:
-    type: http
-    path: ./proxy-providers/dingyue2.yaml
-    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/dingyue2.yaml"
-    <<: *DY_urltest
-    override:
-    #   # additional-prefix: "[2️⃣]"
-      additional-suffix: "[2️⃣]"
-      proxy-name:
-      - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
-        target: "🟢"
-  #   type: http
   #   path: ./profiles/proxies/dingyue2.yaml
   #   url: "https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash"
   #   <<: *DY_urltest
@@ -160,8 +116,13 @@ geox-url:
 # 嗅探
 sniffer:
   enable: true                       # 是否启用sniffer
+  ## 对所有未获取到域名的流量进行强制嗅探
   parse-pure-ip: true                # 对所有未获取到域名的流量进行强制嗅探
+  ## 对 redir-host 类型识别的流量进行强制嗅探
+  ## 如：Tun、Redir 和 TProxy 并 DNS 为 redir-host 皆属于
   force-dns-mapping: true            # 对 redir-host 类型识别的流量进行强制嗅探
+  # 是否使用嗅探结果作为实际访问，默认 true
+  # 全局配置，优先级低于 sniffer.sniff 实际配置
   override-destination: true         # 是否使用嗅探结果作为实际访问，默认为 true
   sniff:
     HTTP:
@@ -172,8 +133,14 @@ sniffer:
     QUIC:
       ports: [443, 8443]
   force-domain:                      # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
+    # - '+' # Force all domain to use sniffer
     - "google.com"
     - "+.v2ex.com"
+    - "+.netflix.com"
+    - "+.nflxvideo.net"
+    - "+.amazonaws.com"
+    - "+.media.dssott.com"
+  ## 对嗅探结果进行跳过
   skip-domain:                       # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备Mijia Cloud
     - "+.baidu.com"
     - "Mijia Cloud"
@@ -188,6 +155,10 @@ sniffer:
     # 向日葵服务
     - "*.oray.com"
     - "*.sunlogin.net"
+  skip-src-address: # 对于来源ip跳过嗅探
+    - 192.168.0.3/32
+  skip-dst-address: # 对于目标ip跳过嗅探
+    - 192.168.0.3/32
 
 # 入站  
 tun:
@@ -208,6 +179,7 @@ tun:
   dns-hijack:                        
     - "any:53"
     - "tcp://any:53"
+  # 路由器
   device: Mihomo
   mtu: 9000
   gso: true
@@ -222,7 +194,9 @@ dns:
   listen: 0.0.0.0:1053
   # IPV6解析开关；如果为false，将返回ipv6结果为空
   ipv6: true
-  # prefer-h3: true
+  prefer-h3: true
+  # DNS请求遵循规则路由，需配置 proxy-server-nameserver
+  respect-rules: true
   # 模式：redir-host或fake-ip
   enhanced-mode: fake-ip
   # Fake-IP 解析地址池
@@ -232,6 +206,9 @@ dns:
     - "+.lan"
     - "+.local"
     - "geosite:cn"
+    - "geosite:category-games"
+    - "geosite:apple-cn"
+    - "geosite:google-cn"
     # - "rule-set:private_domain,cn_domain"
     # 米家
     - "Mijia Cloud"
@@ -276,24 +253,23 @@ dns:
     - "5ddd.com"
     - "time1.cloud.tencent.com"
     - "WORKGROUP"
+    - "+.kyarucloud.moe"
   # # 解析非IP的dns用的dns服务器，只支持纯IP, 可为加密 DNS
   # default-nameserver:
-  #   - 1.1.1.1
-  #   - 8.8.8.8
   #   - 223.5.5.5
   #   - 119.29.29.29
-  # # 代理节点域名解析服务器，仅用于解析代理节点的域名
-  # proxy-server-nameserver:
-  #   - 1.1.1.1
-  #   - 8.8.8.8
-  #   - 223.5.5.5
-  #   - 119.29.29.29
-  # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-  nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
+  # 代理节点域名解析服务器，仅用于解析代理节点的域名
+  proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
+    - 8.8.8.8
+    - 1.1.1.1
+  # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.8.8
+    - 1.1.1.1
   # # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
   # nameserver-policy:
   #   "geosite:cn,private":
@@ -325,10 +301,11 @@ my_lb: &my_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|�
 # auto_select fallback
 my_au: &my_au {type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
 my_fb: &my_fb {type: fallback, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
-my_HK: &my_HK {<<: *Dingyue, filter: "(?i)🌳|港|hk|hongkong|hong kong"}
+my_HK: &my_HK {<<: *Dingyue, filter: "(?i)🌳|港|🇭🇰|hk|hongkong|hong kong"}
 my_JP: &my_JP {<<: *Dingyue, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
 my_SG: &my_SG {<<: *Dingyue, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
 my_US: &my_US {<<: *Dingyue, filter: "(?i)🌳|美|🇺🇸|us|unitedstates|united states"}
+
 
 proxy-groups:
   - {name: 代理选择, <<: *Include_all}
@@ -344,37 +321,25 @@ proxy-groups:
   - {name: 负载均衡, <<: *my_lb}
   - {name: AI,        <<: *Proxy_first}
   - {name: Cloudflare,<<: *Proxy_first}
-  - {name: ChatGPT,   <<: *Proxy_first}
-  - {name: Discord,   <<: *Proxy_first}
   - {name: DisneyPlus,<<: *Proxy_first}
-  - {name: FCM,       <<: *Proxy_first}
   - {name: GitHub,    <<: *Proxy_first}
-  - {name: GoogleVPN, <<: *Proxy_first}
   - {name: Google,    <<: *Proxy_first}
   - {name: HBO,       <<: *Proxy_first}
-  - {name: LINE,      <<: *Proxy_first}
   - {name: Meta,      <<: *Proxy_first}
   - {name: NETFLIX,   <<: *Proxy_first}
-  - {name: PayPal,    <<: *Proxy_first}
-  - {name: Primevideo,<<: *Proxy_first}
-  - {name: Pixiv,     <<: *Proxy_first}
-  - {name: Signal,    <<: *Proxy_first}
   - {name: Spotify,   <<: *Proxy_first}
   - {name: Steam,     <<: *Proxy_first}
-  - {name: Talkatone, <<: *Proxy_first}
   - {name: Telegram,  <<: *Proxy_first}
   - {name: TikTok,    <<: *Proxy_first}
   - {name: Twitter,   <<: *Proxy_first}
   - {name: YouTube,   <<: *Proxy_first}
   # 安卓不能使用
   # - {name: GLOBAL,    <<: *Proxy_first}
-
-  - {name: AppleTV,   <<: *Direct_first}
   - {name: Apple,     <<: *Direct_first}
   - {name: Bing,      <<: *Direct_first}
   - {name: Microsoft, <<: *Direct_first}
   - {name: OneDrive,  <<: *Direct_first}
-  - {name: Speedtest, <<: *Direct_first}
+  # - {name: Speedtest, <<: *Direct_first}
 rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
@@ -382,8 +347,8 @@ rules:
   - DOMAIN,d.metacubex.one,DIRECT
   - DOMAIN,board.zash.run.place,DIRECT
   - DOMAIN,statics.woozooo.com,DIRECT
-  - DOMAIN,firmware-selector.immortalwrt.org,代理选择
-  - DOMAIN,sysupgrade.kyarucloud.moe,代理选择
+  - DOMAIN,ipw.cn,DIRECT
+  # - DOMAIN,firmware-selector.immortalwrt.org,代理选择
 
   - DOMAIN-SUFFIX,kyarucloud.moe,代理选择
   - DOMAIN-SUFFIX,eporner.com,代理选择
@@ -407,43 +372,64 @@ rules:
   - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,DIRECT
 
   - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,icloud@cn,DIRECT
+  - GEOSITE,private,全球直连
+  - GEOIP,private,全球直连,no-resolve
+  - GEOSITE,category-games@cn,全球直连
+  - GEOSITE,category-public-tracker,全球直连
+  - GEOSITE,openai,AI
+  - GEOSITE,category-ai-!cn,AI
   - GEOSITE,youtube,YouTube
   - GEOSITE,google,Google
+  - GEOIP,google,Google,no-resolve
   - GEOSITE,google-cn,Google
   - GEOSITE,github,GitHub
+  - GEOSITE,bing,Bing
   - GEOSITE,onedrive,OneDrive
   - GEOSITE,microsoft,Microsoft
   - GEOSITE,microsoft@cn,Microsoft
+  - GEOSITE,apple,Apple
   - GEOSITE,telegram,Telegram
-  - GEOSITE,twitter,Twitter
-  - GEOSITE,steam,Steam
-  - GEOSITE,steam@cn,DIRECT
-  - GEOSITE,tiktok,TikTok
+  - GEOIP,telegram,Telegram,no-resolve
+  - GEOSITE,facebook,Meta
   - GEOSITE,netflix,NETFLIX
-  - GEOSITE,apple@cn,DIRECT
-  - GEOSITE,apple-cn,DIRECT
-  - GEOSITE,bing,Bing
-  - GEOSITE,cloudflare,Cloudflare
+  - GEOSITE,disney,DisneyPlus
+  - GEOSITE,hbo,HBO
   - GEOSITE,spotify,Spotify
+  - GEOSITE,tiktok,TikTok
+  - GEOSITE,bilibili,全球直连
+  - RULE-SET,bilibili_ip,全球直连,no-resolve
+  - GEOSITE,category-media-cn,全球直连
+  - GEOSITE,steam,Steam
+  - GEOSITE,steam@cn,全球直连
+  - GEOIP,twitter,代理选择,no-resolve
+  - GEOSITE,twitter,Twitter
+  - GEOIP,ai,AI,no-resolve
+  - GEOSITE,gfw,代理选择
+  - GEOSITE,geolocation-!cn,代理选择
+  - GEOSITE,cn,全球直连
+  - GEOIP,private,全球直连,no-resolve
+  - GEOIP,cn,全球直连,no-resolve
+  - GEOSITE,apple@cn,全球直连
+  - GEOSITE,apple-cn,全球直连
+  - GEOSITE,cloudflare,Cloudflare
   - GEOSITE,geolocation-!cn,漏网之鱼
 
-  - RULE-SET,AD-Lite,REJECT
-  - RULE-SET,EasyListChina,REJECT
-  - RULE-SET,ProgramAD,REJECT
+  # - RULE-SET,AD-Lite,REJECT
+  # - RULE-SET,EasyListChina,REJECT
+  # - RULE-SET,ProgramAD,REJECT
 
-  - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
-  - GEOIP,youtube,YouTube
-  - GEOIP,google,Google
-  - GEOIP,github,GitHub
-  - GEOIP,telegram,Telegram
-  - GEOIP,twitter,Twitter
-  - GEOIP,steam,Steam
-  - GEOIP,tiktok,TikTok
-  - GEOIP,netflix,NETFLIX
-  - GEOIP,private,DIRECT
-  - GEOSITE,CN,DIRECT
+  # - GEOIP,LAN,DIRECT
+  # - GEOIP,CN,DIRECT
+  # - GEOIP,youtube,YouTube
+  # - GEOIP,google,Google
+  # - GEOIP,github,GitHub
+  # - GEOIP,telegram,Telegram
+  # - GEOIP,twitter,Twitter
+  # - GEOIP,steam,Steam
+  # - GEOIP,tiktok,TikTok
+  # - GEOIP,netflix,NETFLIX
+  # - GEOIP,private,DIRECT
+  # - GEOSITE,CN,DIRECT
 
   # 匹配来源 IP 所属国家代码
   - SRC-GEOIP,cn,DIRECT
@@ -461,7 +447,6 @@ rules:
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
-
   - MATCH,漏网之鱼
   
 rule-anchor:
@@ -492,6 +477,7 @@ rule-providers:
     <<: *domain_yaml
     path: ./rule-providers/ProgramAD.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/ProgramAD.yaml
+  bilibili_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geoip/bilibili.mrs" }
   # AD: { <<: *domain_yaml, path: "./rule-providers/AD.yaml", url: "https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/AD.yaml"}
 
   # private_domain: { <<: *domain_yaml, path: "./providers/rules/private_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml"}
