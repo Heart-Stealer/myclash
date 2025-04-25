@@ -373,14 +373,14 @@ rules:
 
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,private,全球直连
-  - GEOIP,private,全球直连,no-resolve
+  # - GEOIP,private,全球直连,no-resolve
   - GEOSITE,category-games@cn,全球直连
   - GEOSITE,category-public-tracker,全球直连
   - GEOSITE,openai,AI
   - GEOSITE,category-ai-!cn,AI
   - GEOSITE,youtube,YouTube
   - GEOSITE,google,Google
-  - GEOIP,google,Google,no-resolve
+  # - GEOIP,google,Google,no-resolve
   - GEOSITE,google-cn,Google
   - GEOSITE,github,GitHub
   - GEOSITE,bing,Bing
@@ -389,7 +389,7 @@ rules:
   - GEOSITE,microsoft@cn,Microsoft
   - GEOSITE,apple,Apple
   - GEOSITE,telegram,Telegram
-  - GEOIP,telegram,Telegram,no-resolve
+  # - GEOIP,telegram,Telegram,no-resolve
   - GEOSITE,facebook,Meta
   - GEOSITE,netflix,NETFLIX
   - GEOSITE,disney,DisneyPlus
@@ -397,18 +397,18 @@ rules:
   - GEOSITE,spotify,Spotify
   - GEOSITE,tiktok,TikTok
   - GEOSITE,bilibili,全球直连
-  - RULE-SET,bilibili_ip,全球直连,no-resolve
+  # - RULE-SET,bilibili_ip,全球直连,no-resolve
   - GEOSITE,category-media-cn,全球直连
   - GEOSITE,steam,Steam
   - GEOSITE,steam@cn,全球直连
-  - GEOIP,twitter,代理选择,no-resolve
+  # - GEOIP,twitter,代理选择,no-resolve
   - GEOSITE,twitter,Twitter
-  - GEOIP,ai,AI,no-resolve
+  # - GEOIP,ai,AI,no-resolve
   - GEOSITE,gfw,代理选择
   - GEOSITE,geolocation-!cn,代理选择
   - GEOSITE,cn,全球直连
-  - GEOIP,private,全球直连,no-resolve
-  - GEOIP,cn,全球直连,no-resolve
+  # - GEOIP,private,全球直连,no-resolve
+  # - GEOIP,cn,全球直连,no-resolve
   - GEOSITE,apple@cn,全球直连
   - GEOSITE,apple-cn,全球直连
   - GEOSITE,cloudflare,Cloudflare
@@ -477,7 +477,7 @@ rule-providers:
     <<: *domain_yaml
     path: ./rule-providers/ProgramAD.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/ProgramAD.yaml
-  bilibili_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geoip/bilibili.mrs" }
+  # bilibili_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geoip/bilibili.mrs" }
   # AD: { <<: *domain_yaml, path: "./rule-providers/AD.yaml", url: "https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/AD.yaml"}
 
   # private_domain: { <<: *domain_yaml, path: "./providers/rules/private_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml"}
