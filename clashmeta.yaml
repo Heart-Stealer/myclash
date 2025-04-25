@@ -61,6 +61,7 @@ log-level: info
 allow-lan: true
 bind-address: "*"
 ipv6: true
+udp: true
 # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
 unified-delay: true
 # TCP 并发，可选值 true/false
@@ -340,6 +341,11 @@ proxy-groups:
   - {name: Microsoft, <<: *Direct_first}
   - {name: OneDrive,  <<: *Direct_first}
   # - {name: Speedtest, <<: *Direct_first}
+
+# 优先级
+# 规则将按照从上到下的顺序匹配，列表顶部的规则优先级高于其底下的规则
+# 如请求为 udp，而代理节点没有 udp 支持 (例如ss节点没写udp: true),则会继续向下匹配
+
 rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
@@ -377,7 +383,7 @@ rules:
   - GEOSITE,category-games@cn,全球直连
   - GEOSITE,category-public-tracker,全球直连
   - GEOSITE,openai,AI
-  - GEOSITE,category-ai-!cn,AI
+  # - GEOSITE,category-ai-!cn,AI
   - GEOSITE,youtube,YouTube
   - GEOSITE,google,Google
   # - GEOIP,google,Google,no-resolve
