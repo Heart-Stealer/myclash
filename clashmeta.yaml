@@ -322,17 +322,17 @@ proxy-groups:
   - {name: 漏网之鱼, <<: *Direct_first,   icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/fish.svg"}
   - {name: 全球直连, <<: *Direct_first,   icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/link.svg"}
   - {name: 广告拦截, <<: *Reject_first,   icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/block.svg"}
-  - {name: 手动自动,    <<: *select_auto, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
+  - {name: 手动自动,    <<: *select_auto, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
   - {name: 自动选择,    <<: *self_au,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/merry_go.svg"}
   - {name: 负载均衡,    <<: *self_lb,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/balance.svg"}
   - {name: 香港节点,    <<: *self_hk,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/hk.svg"}
   - {name: 日本节点,    <<: *self_jp,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/jp.svg"}
   - {name: 狮城节点,    <<: *self_sg,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/sg.svg"}
   - {name: 美国节点,    <<: *self_us,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/us.svg"}
-  - {name: 香港自动,    <<: *auto_hk,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
-  - {name: 日本自动,    <<: *auto_jp,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
-  - {name: 狮城自动,    <<: *auto_sg,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
-  - {name: 美国自动,    <<: *auto_us,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
+  - {name: 香港自动,    <<: *auto_hk,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
+  - {name: 日本自动,    <<: *auto_jp,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
+  - {name: 狮城自动,    <<: *auto_sg,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
+  - {name: 美国自动,    <<: *auto_us,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
   - {name: AI,          <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/ai.svg"}
   - {name: Amazon,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/amazon.svg"}
   - {name: Android,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/android.svg"}
