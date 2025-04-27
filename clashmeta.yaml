@@ -17,7 +17,7 @@ Dingyue: &Dingyue
   include-all: true
   use:
     - 本地配置
-    - 电报ZDYZ2
+    # - 电报ZDYZ2
 
 proxy-providers:
   本地配置:
@@ -28,11 +28,11 @@ proxy-providers:
     url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     <<: *DY_urltest
 
-  电报ZDYZ2:
-    type: http
-    path: ./proxy-providers/zdyz2.yaml
-    url: "https://sublink.634676.xyz/sub"
-    <<: *DY_urltest
+  # 电报ZDYZ2:
+  #   type: http
+  #   path: ./proxy-providers/zdyz2.yaml
+  #   url: "https://sublink.634676.xyz/sub"
+  #   <<: *DY_urltest
   #   path: ./proxy-providers/dingyue1.yaml
   #   url: "https://sub.vip.sd/JPa6vvFgygVtNP2sGJ2r/download/YuanZhang"
   #   <<: *DY_urltest
@@ -153,6 +153,7 @@ sniffer:
     - "*.qq.com"
     - "*.wechatapp.com"
     - "*.vivox.com"
+    - "+.vivo.com.cn"
     # 向日葵服务
     - "*.oray.com"
     - "*.sunlogin.net"
@@ -206,6 +207,7 @@ dns:
   fake-ip-filter:
     - "+.lan"
     - "+.local"
+    - "+.vivo.com.cn"
     - "geosite:cn"
     - "geosite:category-games"
     - "geosite:apple-cn"
@@ -294,91 +296,115 @@ skip-auth-prefixes:
   - 127.0.0.1/32
   - 192.168.0.0/16
 
-Proxy_first: &Proxy_first {type: select, proxies: [代理选择, DIRECT, 手动选择, 自动选择]}
-Direct_first: &Direct_first {type: select, proxies: [DIRECT, 手动选择, 自动选择]}
+Proxy_first: &Proxy_first   {type: select, proxies: [默认代理, 全球直连, 手动选择, 自动选择]}
+Direct_first: &Direct_first {type: select, proxies: [DIRECT, REJECT, 手动选择, 自动选择]}
 Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选择, 自动选择]}
-Include_all: &Include_all {type: select, proxies: [手动选择, DIRECT, 负载均衡, 自动选择, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
-my_lb: &my_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|🌳)|(-([2-9]|[0-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 5000}
+Include_all: &Include_all   {type: select, proxies: [手动选择, 全球直连, 负载均衡, 手动自动, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
+self_lb: &self_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|🌳)|(-([2-9]|[0-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 5000}
 # auto_select fallback
-my_au: &my_au {type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
-my_fb: &my_fb {type: fallback, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
-my_hk: &my_hk {<<: *Dingyue, filter: "(?i)🌳|港|🇭🇰|hk|hongkong|hong kong"}
-my_jp: &my_jp {<<: *Dingyue, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
-my_sg: &my_sg {<<: *Dingyue, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
-my_us: &my_us {<<: *Dingyue, filter: "(?i)🌳|美|🇺🇸|us|unitedstates|united states"}
+select_auto: &select_auto {<<: *Dingyue, proxies: [自动选择, 香港自动, 日本自动, 狮城自动, 美国自动]}
+self_au: &self_au {type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
+self_fb: &self_fb {type: fallback, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
+self_hk: &self_hk {<<: *Dingyue, filter: "(?i)🌳|港|🇭🇰|hk|hongkong|hong kong"}
+self_jp: &self_jp {<<: *Dingyue, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
+self_sg: &self_sg {<<: *Dingyue, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
+self_us: &self_us {<<: *Dingyue, filter: "(?i)🌳|美|🇺🇸|us|unitedstates|united states"}
+auto_hk: &auto_hk {<<: *Dingyue, type: url-test, filter: "(?i)🌳|港|🇭🇰|hk|hongkong|hong kong"}
+auto_jp: &auto_jp {<<: *Dingyue, type: url-test, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
+auto_sg: &auto_sg {<<: *Dingyue, type: url-test, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
+auto_us: &auto_us {<<: *Dingyue, type: url-test, filter: "(?i)🌳|美|🇺🇸|us|unitedstates|united states"}
+only_au: &only_au {type: url-test, filter: "(?i)🌳|港|🇭🇰|hk|hongkong|hong kong|日|🇯🇵|jp|JP|japan|新|🇸🇬|sg|singapore|美|🇺🇸|us|unitedstates|united states", include-all: true, interval: 300, timeout: 5000, tolerance: 100}
 
 
 proxy-groups:
-  - {name: 代理选择, <<: *Include_all,  icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/fish.svg"}
-  - {name: 手动选择, <<: *Dingyue,      icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/adjust.svg"}
-  - {name: 漏网之鱼, <<: *Proxy_first,  icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/fish.svg"}
-  - {name: 全球直连, <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/link.svg"}
-  - {name: 广告拦截, <<: *Reject_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/block.svg"}
-  - {name: 自动选择, <<: *my_au,        icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/merry_go.svg"}
-  - {name: 香港节点, <<: *my_hk,        icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/hk.svg"}
-  - {name: 日本节点, <<: *my_jp,        icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/jp.svg"}
-  - {name: 狮城节点, <<: *my_sg,        icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/sg.svg"}
-  - {name: 美国节点, <<: *my_us,        icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/us.svg"}
-  - {name: 负载均衡, <<: *my_lb,        icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/balance.svg"}
-  - {name: AI,        <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/ai.svg"}
-  - {name: Cloudflare,<<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/cloudflare.svg"}
-  - {name: DisneyPlus,<<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/disney_plus.svg"}
-  - {name: GitHub,    <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/github.svg"}
-  - {name: Google,    <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/google.svg"}
+  - {name: 默认代理, <<: *Include_all,    icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/embedded.svg"}
+  - {name: 手动选择, <<: *Dingyue,        icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/adjust.svg"}
+  - {name: 漏网之鱼, <<: *Direct_first,   icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/fish.svg"}
+  - {name: 全球直连, <<: *Direct_first,   icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/link.svg"}
+  - {name: 广告拦截, <<: *Reject_first,   icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/block.svg"}
+  - {name: 手动自动,    <<: *select_auto, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
+  - {name: 自动选择,    <<: *self_au,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/merry_go.svg"}
+  - {name: 负载均衡,    <<: *self_lb,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/balance.svg"}
+  - {name: 香港节点,    <<: *self_hk,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/hk.svg"}
+  - {name: 日本节点,    <<: *self_jp,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/jp.svg"}
+  - {name: 狮城节点,    <<: *self_sg,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/sg.svg"}
+  - {name: 美国节点,    <<: *self_us,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/us.svg"}
+  - {name: 香港自动,    <<: *auto_hk,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
+  - {name: 日本自动,    <<: *auto_jp,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
+  - {name: 狮城自动,    <<: *auto_sg,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
+  - {name: 美国自动,    <<: *auto_us,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/recycle.svg"}
+  - {name: AI,          <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/ai.svg"}
+  - {name: Amazon,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/amazon.svg"}
+  - {name: Android,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/android.svg"}
+  - {name: Chatgpt,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/chatgpt.svg"}
+  - {name: Cloudflare,  <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/cloudflare.svg"}
+  - {name: Discord,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/discord.svg"}
+  - {name: DisneyPlus,  <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/disney_plus.svg"}
+  - {name: Epic,        <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/epic.svg"}
+  - {name: GitHub,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/github.svg"}
+  - {name: Google,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/google.svg"}
+  - {name: Google_Play, <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/google_play.svg"}
+  - {name: Instagram,   <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/instagram.svg"}
   # - {name: HBO,       <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/png/hbo.png"}
-  - {name: Meta,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/facebook.svg"}
-  - {name: NETFLIX,   <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/netflix.svg"}
-  - {name: Spotify,   <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/png/spotify.png"}
-  - {name: Steam,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/steam.svg"}
-  - {name: Telegram,  <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/telegram.svg"}
-  - {name: TikTok,    <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/tiktok.svg"}
-  - {name: Twitter,   <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/twitter.svg"}
-  - {name: YouTube,   <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/youtube.svg"}
+  - {name: Meta,        <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/meta.svg"}
+  - {name: NETFLIX,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/netflix.svg"}
+  - {name: Openwrt,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/openwrt.svg"}
+  - {name: Spotify,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/png/spotify.svg"}
+  - {name: Steam,       <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/steam.svg"}
+  - {name: Telegram,    <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/telegram.svg"}
+  - {name: TikTok,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/tiktok.svg"}
+  - {name: Twitch,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/twitch.svg"}
+  - {name: Twitter,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/twitter.svg"}
+  - {name: WhatsApp,    <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/whatsapp.svg"}
+  - {name: X,           <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/x.svg"}
+  - {name: Xbox,        <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/xbox.svg"}
+  - {name: YouTube,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/youtube.svg"}
   # 安卓不能使用
   # - {name: GLOBAL,    <<: *Proxy_first}
-  - {name: Apple,     <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/apple.svg"}
-  - {name: Bing,      <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/bing.svg"}
-  - {name: Microsoft, <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/microsoft.svg"}
-  - {name: OneDrive,  <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/onedrive.svg"}
-  # - {name: Speedtest, <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/speed.svg"}
+  - {name: Apple,       <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/apple.svg"}
+  - {name: App_Store,   <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/app_store.svg"}
+  - {name: Bing,        <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/bing.svg"}
+  - {name: Microsoft,   <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/microsoft.svg"}
+  - {name: OneDrive,    <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/onedrive.svg"}
+  - {name: Speedtest,   <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/speed.svg"}
 
 # 优先级
 # 规则将按照从上到下的顺序匹配，列表顶部的规则优先级高于其底下的规则
 # 如请求为 udp，而代理节点没有 udp 支持 (例如ss节点没写udp: true),则会继续向下匹配
 
 rules:
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN,yacd.metacubex.one,DIRECT
-  - DOMAIN,d.metacubex.one,DIRECT
-  - DOMAIN,board.zash.run.place,DIRECT
-  - DOMAIN,statics.woozooo.com,DIRECT
-  - DOMAIN,ipw.cn,DIRECT
-  # - DOMAIN,firmware-selector.immortalwrt.org,代理选择
+  - DOMAIN,clash.razord.top,全球直连
+  - DOMAIN,yacd.haishan.me,全球直连
+  - DOMAIN,yacd.metacubex.one,全球直连
+  - DOMAIN,d.metacubex.one,全球直连
+  - DOMAIN,board.zash.run.place,全球直连
+  - DOMAIN,statics.woozooo.com,全球直连
+  - DOMAIN,ipw.cn,全球直连
+  # - DOMAIN,firmware-selector.immortalwrt.org,默认代理
   - DOMAIN,objects.githubusercontent.com,全球直连
 
-  - DOMAIN-SUFFIX,kyarucloud.moe,代理选择
-  - DOMAIN-SUFFIX,eporner.com,代理选择
-  - DOMAIN-SUFFIX,googleapis.cn,代理选择
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,代理选择
-  - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,代理选择
-  - DOMAIN-SUFFIX,qichiyu.com,代理选择
-  - DOMAIN-SUFFIX,metacubex.one,代理选择
+  - DOMAIN-SUFFIX,kyarucloud.moe,默认代理
+  - DOMAIN-SUFFIX,eporner.com,默认代理
+  - DOMAIN-SUFFIX,googleapis.cn,默认代理
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,默认代理
+  - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,默认代理
+  - DOMAIN-SUFFIX,qichiyu.com,默认代理
+  - DOMAIN-SUFFIX,metacubex.one,默认代理
 
-  - DOMAIN-SUFFIX,gh-proxy.com,DIRECT
-  - DOMAIN-SUFFIX,r2.cloudflarestorage.com,DIRECT
-  - DOMAIN-SUFFIX,skyearth.xyz,DIRECT
-  - DOMAIN-SUFFIX,doppiocdn.live,DIRECT
-  - DOMAIN-SUFFIX,us-c.viayoo.com:443,DIRECT
-  - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
-  - DOMAIN-SUFFIX,surrit.com,DIRECT
-  - DOMAIN-SUFFIX,sixyik.com,DIRECT
-  - DOMAIN-SUFFIX,javxxx.me,DIRECT
-  - DOMAIN-SUFFIX,fapnfuck.com,DIRECT
-  - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,DIRECT
-  - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,DIRECT
+  - DOMAIN-SUFFIX,gh-proxy.com,全球直连
+  - DOMAIN-SUFFIX,r2.cloudflarestorage.com,全球直连
+  - DOMAIN-SUFFIX,skyearth.xyz,全球直连
+  - DOMAIN-SUFFIX,doppiocdn.live,全球直连
+  - DOMAIN-SUFFIX,us-c.viayoo.com:443,全球直连
+  - DOMAIN-SUFFIX,vip8.3sybf.com:443,全球直连
+  - DOMAIN-SUFFIX,surrit.com,全球直连
+  - DOMAIN-SUFFIX,sixyik.com,全球直连
+  - DOMAIN-SUFFIX,javxxx.me,全球直连
+  - DOMAIN-SUFFIX,fapnfuck.com,全球直连
+  - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,全球直连
+  - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,全球直连
 
-  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,category-ads-all,广告拦截
   - GEOSITE,private,全球直连
   # - GEOIP,private,全球直连,no-resolve
   - GEOSITE,category-games@cn,全球直连
@@ -408,25 +434,25 @@ rules:
   - GEOSITE,category-media-cn,全球直连
   - GEOSITE,steam,Steam
   - GEOSITE,steam@cn,全球直连
-  # - GEOIP,twitter,代理选择,no-resolve
+  # - GEOIP,twitter,默认代理,no-resolve
   - GEOSITE,twitter,Twitter
   # - GEOIP,ai,AI,no-resolve
-  - GEOSITE,gfw,代理选择
-  - GEOSITE,geolocation-!cn,代理选择
-  - GEOSITE,cn,全球直连
+  - GEOSITE,gfw,默认代理
+  # - GEOSITE,geolocation-!cn,默认代理
+  # - GEOSITE,cn,全球直连
   # - GEOIP,private,全球直连,no-resolve
   # - GEOIP,cn,全球直连,no-resolve
   - GEOSITE,apple@cn,全球直连
   - GEOSITE,apple-cn,全球直连
   - GEOSITE,cloudflare,Cloudflare
-  - GEOSITE,geolocation-!cn,漏网之鱼
+  # - GEOSITE,geolocation-!cn,漏网之鱼
 
-  # - RULE-SET,AD-Lite,REJECT
-  # - RULE-SET,EasyListChina,REJECT
-  # - RULE-SET,ProgramAD,REJECT
+  # - RULE-SET,AD-Lite,广告拦截
+  # - RULE-SET,EasyListChina,广告拦截
+  # - RULE-SET,ProgramAD,广告拦截
 
-  # - GEOIP,LAN,DIRECT
-  # - GEOIP,CN,DIRECT
+  # - GEOIP,LAN,全球直连
+  # - GEOIP,CN,全球直连
   # - GEOIP,youtube,YouTube
   # - GEOIP,google,Google
   # - GEOIP,github,GitHub
@@ -435,25 +461,25 @@ rules:
   # - GEOIP,steam,Steam
   # - GEOIP,tiktok,TikTok
   # - GEOIP,netflix,NETFLIX
-  # - GEOIP,private,DIRECT
-  # - GEOSITE,CN,DIRECT
+  # - GEOIP,private,全球直连
+  # - GEOSITE,CN,全球直连
 
   # 匹配来源 IP 所属国家代码
-  - SRC-GEOIP,cn,DIRECT
+  - SRC-GEOIP,cn,全球直连
   # 匹配来源 IP 所属 ASN
-  # - SRC-IP-ASN,9808,DIRECT
+  # - SRC-IP-ASN,9808,全球直连
   # 匹配来源 IP 后缀范围
-  # - SRC-IP-SUFFIX,192.168.1.201/8,DIRECT
+  # - SRC-IP-SUFFIX,192.168.1.201/8,全球直连
   # 匹配请求目标端口范围
-  - DST-PORT,22,DIRECT
+  - DST-PORT,22,全球直连
   # 匹配请求来源端口范围
-  # - SRC-PORT,7777,DIRECT
+  # - SRC-PORT,7777,全球直连
   # 匹配目标 IP 地址范围
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,100.64.0.0/10,DIRECT
-  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,全球直连
+  - IP-CIDR,172.16.0.0/12,全球直连
+  - IP-CIDR,192.168.0.0/16,全球直连
+  - IP-CIDR,100.64.0.0/10,全球直连
+  - IP-CIDR,127.0.0.0/8,全球直连
   - MATCH,漏网之鱼
   
 rule-anchor:
