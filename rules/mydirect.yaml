@@ -1,0 +1,30 @@
+# NAME: Heart-Stealer
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: ????-??-？？ ??:??:??
+# DOMAIN: ?
+# DOMAIN-KEYWORD: ?
+# DOMAIN-SUFFIX: ?
+# TOTAL: ?
+payload:
+  - DOMAIN,clash.razord.top
+  - DOMAIN,yacd.haishan.me
+  - DOMAIN,yacd.metacubex.one
+  - DOMAIN,d.metacubex.one
+  - DOMAIN,board.zash.run.place
+  - DOMAIN,statics.woozooo.com
+  - DOMAIN,ipw.cn
+  - DOMAIN,objects.githubusercontent.com
+  - DOMAIN-SUFFIX,gh-proxy.com
+  - DOMAIN-SUFFIX,r2.cloudflarestorage.com
+  - DOMAIN-SUFFIX,skyearth.xyz
+  - DOMAIN-SUFFIX,doppiocdn.live
+  - DOMAIN-SUFFIX,us-c.viayoo.com:443
+  - DOMAIN-SUFFIX,vip8.3sybf.com:443
+  - DOMAIN-SUFFIX,surrit.com
+  - DOMAIN-SUFFIX,sixyik.com
+  - DOMAIN-SUFFIX,javxxx.me
+  - DOMAIN-SUFFIX,fapnfuck.com
+  - DOMAIN-SUFFIX,cdnstatic.jappornxl.com
+  - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com
+
