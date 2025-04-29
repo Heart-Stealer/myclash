@@ -97,7 +97,11 @@ external-ui-name: zashboard
 external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 # 自定义 API 的访问密钥
 secret: "963."
-
+# uci set nikki.mixin.ui_url='https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip'
+# uci set nikki.mixin.ui_url='https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Razord-meta/archive/refs/heads/gh-pages.zip'
 # 自动更新 GEO
 geo-auto-update: true
 # 更新间隔，单位为小时
@@ -213,7 +217,8 @@ dns:
   ipv6: false
   use-system-hosts: true
   use-hosts: true
-  prefer-h3: true
+  # prefer-h3: true
+  prefer-h3: false
   # DNS请求遵循规则路由，需配置 proxy-server-nameserver
   respect-rules: true
   # 模式：redir-host或fake-ip
@@ -351,21 +356,20 @@ proxy-groups:
   - {name: 日本自动,    <<: *auto_jp,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
   - {name: 狮城自动,    <<: *auto_sg,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
   - {name: 美国自动,    <<: *auto_us,     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
-  - {name: AI,          <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/ai.svg"}
   - {name: Amazon,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/amazon.svg"}
   - {name: Android,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/android.svg"}
-  - {name: Chatgpt,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/chatgpt.svg"}
   - {name: Cloudflare,  <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/cloudflare.svg"}
   - {name: Discord,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/discord.svg"}
-  - {name: DisneyPlus,  <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/disney_plus.svg"}
-  - {name: Epic,        <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/epic.svg"}
+  - {name: Disney,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/disney.svg"}
+  - {name: EpicGames,   <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/epicgames.svg"}
   - {name: GitHub,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/github.svg"}
   - {name: Google,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/google.svg"}
   - {name: Google_Play, <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/google_play.svg"}
   - {name: Instagram,   <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/instagram.svg"}
-  # - {name: HBO,       <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/png/hbo.png"}
+  - {name: HBO,         <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/hbo.svg"}
   - {name: Meta,        <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/meta.svg"}
   - {name: NETFLIX,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/netflix.svg"}
+  - {name: Openai,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/openai.svg"}
   - {name: Openwrt,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/openwrt.svg"}
   - {name: Spotify,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/spotify.svg"}
   - {name: Steam,       <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/steam.svg"}
@@ -392,97 +396,99 @@ proxy-groups:
 # 如请求为 udp，而代理节点没有 udp 支持 (例如ss节点没写udp: true),则会继续向下匹配
 
 rules:
-  - DOMAIN,clash.razord.top,全球直连
-  - DOMAIN,yacd.haishan.me,全球直连
-  - DOMAIN,yacd.metacubex.one,全球直连
-  - DOMAIN,d.metacubex.one,全球直连
-  - DOMAIN,board.zash.run.place,全球直连
-  - DOMAIN,statics.woozooo.com,全球直连
-  - DOMAIN,ipw.cn,全球直连
-  # - DOMAIN,firmware-selector.immortalwrt.org,默认代理
-  - DOMAIN,objects.githubusercontent.com,全球直连
+  - RULE-SET,aa-direct,全球直连
+  - RULE-SET,aa-proxy0,默认代理
+  - RULE-SET,aa-reject,广告拦截
+  - RULE-SET,AD-Lite,广告拦截
+  - RULE-SET,EasyList,广告拦截
+  - RULE-SET,EasyListChina,广告拦截
+  - RULE-SET,ProgramAD,广告拦截
+  # - DOMAIN,clash.razord.top,全球直连
+  # - DOMAIN,yacd.haishan.me,全球直连
+  # - DOMAIN,yacd.metacubex.one,全球直连
+  # - DOMAIN,d.metacubex.one,全球直连
+  # - DOMAIN,board.zash.run.place,全球直连
+  # - DOMAIN,statics.woozooo.com,全球直连
+  # - DOMAIN,ipw.cn,全球直连
+  # # - DOMAIN,firmware-selector.immortalwrt.org,默认代理
+  # - DOMAIN,objects.githubusercontent.com,全球直连
 
-  - DOMAIN-SUFFIX,kyarucloud.moe,默认代理
-  - DOMAIN-SUFFIX,eporner.com,默认代理
-  - DOMAIN-SUFFIX,googleapis.cn,默认代理
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,默认代理
-  - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,默认代理
-  - DOMAIN-SUFFIX,qichiyu.com,默认代理
-  - DOMAIN-SUFFIX,metacubex.one,默认代理
+  # - DOMAIN-SUFFIX,kyarucloud.moe,默认代理
+  # - DOMAIN-SUFFIX,eporner.com,默认代理
+  # - DOMAIN-SUFFIX,googleapis.cn,默认代理
+  # - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,默认代理
+  # - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,默认代理
+  # - DOMAIN-SUFFIX,qichiyu.com,默认代理
+  # - DOMAIN-SUFFIX,metacubex.one,默认代理
 
-  - DOMAIN-SUFFIX,gh-proxy.com,全球直连
-  - DOMAIN-SUFFIX,r2.cloudflarestorage.com,全球直连
-  - DOMAIN-SUFFIX,skyearth.xyz,全球直连
-  - DOMAIN-SUFFIX,doppiocdn.live,全球直连
-  - DOMAIN-SUFFIX,us-c.viayoo.com:443,全球直连
-  - DOMAIN-SUFFIX,vip8.3sybf.com:443,全球直连
-  - DOMAIN-SUFFIX,surrit.com,全球直连
-  - DOMAIN-SUFFIX,sixyik.com,全球直连
-  - DOMAIN-SUFFIX,javxxx.me,全球直连
-  - DOMAIN-SUFFIX,fapnfuck.com,全球直连
-  - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,全球直连
-  - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,全球直连
+  # - DOMAIN-SUFFIX,gh-proxy.com,全球直连
+  # - DOMAIN-SUFFIX,r2.cloudflarestorage.com,全球直连
+  # - DOMAIN-SUFFIX,skyearth.xyz,全球直连
+  # - DOMAIN-SUFFIX,doppiocdn.live,全球直连
+  # - DOMAIN-SUFFIX,us-c.viayoo.com:443,全球直连
+  # - DOMAIN-SUFFIX,vip8.3sybf.com:443,全球直连
+  # - DOMAIN-SUFFIX,surrit.com,全球直连
+  # - DOMAIN-SUFFIX,sixyik.com,全球直连
+  # - DOMAIN-SUFFIX,javxxx.me,全球直连
+  # - DOMAIN-SUFFIX,fapnfuck.com,全球直连
+  # - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,全球直连
+  # - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,全球直连
 
   - GEOSITE,category-ads-all,广告拦截
   - GEOSITE,category-games@cn,全球直连
   - GEOSITE,category-public-tracker,全球直连
-  - GEOSITE,openai,AI
-  # - GEOSITE,category-ai-!cn,AI
-  - GEOSITE,youtube,YouTube
-  - GEOSITE,google,Google
-  # - GEOIP,google,Google,no-resolve
-  - GEOSITE,google-cn,Google
+  - GEOSITE,amazon,Amazon
+  - GEOSITE,android,Android
+  - GEOSITE,cloudflare,Cloudflare
+  - GEOIP,cloudflare,Cloudflare,no-resolve
+  - GEOSITE,discord,Discord
+  - GEOSITE,disney,Disney
+  - GEOSITE,epicgames,EpicGames
   - GEOSITE,github,GitHub
+  # - GEOIP,github,GitHub,no-resolve
+  - GEOSITE,google,Google
+  - GEOIP,google,Google,no-resolve
+  - GEOSITE,google-play,Google_Play
+  - GEOSITE,google-cn,Google
+  - GEOSITE,instagram,Instagram
+  - GEOSITE,hbo,HBO
+  - GEOSITE,meta,Meta
+  - GEOSITE,netflix,NETFLIX
+  - GEOIP,netflix,NETFLIX,no-resolve
+  - GEOSITE,openai,Openai
+  - GEOSITE,openwrt,Openwrt
+  - GEOSITE,spotify,Spotify
+  - GEOSITE,steam,Steam
+  - GEOIP,steam,Steam,no-resolve
+  - GEOSITE,steam@cn,全球直连
+  - GEOSITE,telegram,Telegram
+  - GEOIP,telegram,Telegram,no-resolve
+  - GEOSITE,tiktok,TikTok
+  # - GEOIP,tiktok,TikTok,no-resolve
+  - GEOSITE,twitch,Twitch
+  - GEOIP,twitch,Twitch,no-resolve
+  - GEOSITE,twitter,Twitter
+  - GEOIP,twitter,Twitter,no-resolve
+  - GEOSITE,whatsapp,WhatsApp
+  - GEOSITE,x,X
+  - GEOSITE,xbox,Xbox
+  - GEOSITE,youtube,YouTube
+  # - GEOIP,youtube,YouTube,no-resolve
+  - GEOSITE,gfw,默认代理
+
+  - GEOSITE,category-media-cn,全球直连
+  - GEOSITE,apple,Apple
+  - GEOIP,apple,Apple,no-resolve
+  - GEOSITE,apple@cn,Apple
+  - GEOSITE,apple-cn,Apple
   - GEOSITE,bing,Bing
-  - GEOSITE,onedrive,OneDrive
   - GEOSITE,microsoft,Microsoft
   - GEOSITE,microsoft@cn,Microsoft
-  - GEOSITE,apple,Apple
-  - GEOSITE,telegram,Telegram
-  # - GEOIP,telegram,Telegram,no-resolve
-  - GEOSITE,facebook,Meta
-  - GEOSITE,netflix,NETFLIX
-  - GEOSITE,disney,DisneyPlus
-  # - GEOSITE,hbo,HBO
-  - GEOSITE,spotify,Spotify
-  - GEOSITE,tiktok,TikTok
-  - GEOSITE,bilibili,全球直连
-  # - RULE-SET,bilibili_ip,全球直连,no-resolve
-  - GEOSITE,category-media-cn,全球直连
-  - GEOSITE,steam,Steam
-  - GEOSITE,steam@cn,全球直连
-  # - GEOIP,twitter,默认代理,no-resolve
-  - GEOSITE,twitter,Twitter
-  # - GEOIP,ai,AI,no-resolve
-  - GEOSITE,gfw,默认代理
-  # - GEOSITE,geolocation-!cn,默认代理
-  # - GEOSITE,cn,全球直连
-  # - GEOIP,private,全球直连,no-resolve
-  # - GEOIP,cn,全球直连,no-resolve
-  - GEOSITE,apple@cn,全球直连
-  - GEOSITE,apple-cn,全球直连
-  - GEOSITE,cloudflare,Cloudflare
-  # - GEOSITE,geolocation-!cn,漏网之鱼
-
-  # - RULE-SET,AD-Lite,广告拦截
-  # - RULE-SET,EasyListChina,广告拦截
-  # - RULE-SET,ProgramAD,广告拦截
-
-  # - GEOIP,LAN,全球直连
-  # - GEOIP,CN,全球直连
-  # - GEOIP,youtube,YouTube
-  # - GEOIP,google,Google
-  # - GEOIP,github,GitHub
-  # - GEOIP,telegram,Telegram
-  # - GEOIP,twitter,Twitter
-  # - GEOIP,steam,Steam
-  # - GEOIP,tiktok,TikTok
-  # - GEOIP,netflix,NETFLIX
-  # - GEOIP,private,全球直连
-  # - GEOSITE,CN,全球直连
+  - GEOSITE,onedrive,OneDrive
+  - GEOSITE,speedtest,Speedtest
 
   # 匹配来源 IP 所属国家代码
-  - SRC-GEOIP,cn,全球直连
+  # - SRC-GEOIP,cn,全球直连
   # 匹配来源 IP 所属 ASN
   # - SRC-IP-ASN,9808,全球直连
   # 匹配来源 IP 后缀范围
@@ -491,12 +497,12 @@ rules:
   - DST-PORT,22,全球直连
   # 匹配请求来源端口范围
   # - SRC-PORT,7777,全球直连
-  # 匹配目标 IP 地址范围
-  - IP-CIDR,10.0.0.0/8,全球直连
-  - IP-CIDR,172.16.0.0/12,全球直连
-  - IP-CIDR,192.168.0.0/16,全球直连
-  - IP-CIDR,100.64.0.0/10,全球直连
-  - IP-CIDR,127.0.0.0/8,全球直连
+  # # 匹配目标 IP 地址范围
+  # - IP-CIDR,10.0.0.0/8,全球直连
+  # - IP-CIDR,172.16.0.0/12,全球直连
+  # - IP-CIDR,192.168.0.0/16,全球直连
+  # - IP-CIDR,100.64.0.0/10,全球直连
+  # - IP-CIDR,127.0.0.0/8,全球直连
   - GEOSITE,private,全球直连
   - GEOIP,private,全球直连,no-resolve
   - MATCH,漏网之鱼
@@ -510,9 +516,22 @@ rule-anchor:
   domain_yaml: &domain_yaml {type: http, interval: 86400, behavior: domain, format: yaml}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
   class_yaml: &class_yaml {type: http, interval: 86400, behavior: classical, format: yaml}
+  class_yaml_file: &class_yaml_file {type: file, interval: 86400, behavior: classical, format: yaml}
 
 # 规则订阅
 rule-providers:
+# https://github.com/Heart-Stealer/myclash/raw/refs/heads/main/
+# https://raw.githubusercontent.com/Heart-Stealer/myclash/refs/heads/main/
+  # aa-direct: { <<: *class_yaml, path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rules/aa-direct.yaml"}
+  # aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rules/aa-proxy.yaml"}
+  # aa-reject: { <<: *class_yaml, path: "./rule-providers/aa-reject.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rules/aa-reject.yaml"}
+  aa-direct: { <<: *class_yaml, path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-direct.yaml"}
+  aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-proxy.yaml"}
+  aa-reject: { <<: *class_yaml, path: "./rule-providers/aa-reject.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-reject.yaml"}
+  # aa-direct: { <<: *class_yaml_file, path: ./rule-providers/aa-direct.yaml}
+  # aa-proxy0: { <<: *class_yaml_file, path: ./rule-providers/aa-proxy0.yaml}
+  # aa-reject: { <<: *class_yaml_file, path: ./rule-providers/aa-reject.yaml}
+
   AD-Lite:
     <<: *domain_yaml
     path: ./rule-providers/AD-Lite.yaml
