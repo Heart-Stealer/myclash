@@ -424,8 +424,6 @@ rules:
   - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,全球直连
 
   - GEOSITE,category-ads-all,广告拦截
-  - GEOSITE,private,全球直连
-  # - GEOIP,private,全球直连,no-resolve
   - GEOSITE,category-games@cn,全球直连
   - GEOSITE,category-public-tracker,全球直连
   - GEOSITE,openai,AI
@@ -499,6 +497,8 @@ rules:
   - IP-CIDR,192.168.0.0/16,全球直连
   - IP-CIDR,100.64.0.0/10,全球直连
   - IP-CIDR,127.0.0.0/8,全球直连
+  - GEOSITE,private,全球直连
+  - GEOIP,private,全球直连,no-resolve
   - MATCH,漏网之鱼
   
 rule-anchor:
