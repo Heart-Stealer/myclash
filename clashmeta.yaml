@@ -2,7 +2,7 @@
 DY_urltest: &DY_urltest
   proxy: DIRECT
   interval: 43200
-  health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300, timeout: 5000, tolerance: 100, lazy: true}
+  health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 600, timeout: 8000, tolerance: 100, lazy: true}
   override:
     proxy-name:
     - pattern: "(?i)(TG@ZDYZ2|印度|拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
@@ -228,6 +228,7 @@ dns:
   fake-ip-filter-mode: blacklist
   # Fake-ip 过滤，列表中的域名返回真实IP
   fake-ip-filter:
+    - "*"
     - "+.lan"
     - "+.local"
     - "+.localdomain"
@@ -280,7 +281,8 @@ dns:
     - "5ddd.com"
     - "time1.cloud.tencent.com"
     - "WORKGROUP"
-    - "*.kyarucloud.moe"
+    - "+.kyarucloud.moe"
+    - "+.dynv6.com"
   # # 解析非IP的dns用的dns服务器，只支持纯IP, 可为加密 DNS
   # default-nameserver:
   #   - https://223.5.5.5/dns-query
@@ -321,11 +323,11 @@ Proxy_first: &Proxy_first   {type: select, proxies: [默认代理, 全球直连,
 Direct_first: &Direct_first {type: select, proxies: [DIRECT, REJECT, 手动选择, 自动选择]}
 Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选择, 自动选择]}
 Include_all: &Include_all   {type: select, proxies: [手动选择, 全球直连, 负载均衡, 手动自动, 香港节点, 日本节点, 狮城节点, 美国节点, 广告拦截]}
-self_lb: &self_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|🌳)|(-([2-9]|[0-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 5000}
+self_lb: &self_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|🌳)|(-([2-9]|[0-9][0-9]).[0-9]))", interval: 600, strategy: consistent-hashing, timeout: 8000, lazy: true}
 # auto_select fallback
 select_auto: &select_auto {<<: *Dingyue, proxies: [自动选择, 香港自动, 日本自动, 狮城自动, 美国自动]}
-self_au: &self_au {type: url-test, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
-self_fb: &self_fb {type: fallback, include-all: true, interval: 300, timeout: 5000, tolerance: 100}
+self_au: &self_au {type: url-test, include-all: true, interval: 600, timeout: 8000, tolerance: 100, lazy: true}
+self_fb: &self_fb {type: fallback, include-all: true, interval: 600, timeout: 8000, tolerance: 100, lazy: true}
 self_hk: &self_hk {<<: *Dingyue, filter: "(?i)🌳|港|🇭🇰|hk|hongkong|hong kong"}
 self_jp: &self_jp {<<: *Dingyue, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
 self_sg: &self_sg {<<: *Dingyue, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
@@ -334,7 +336,7 @@ auto_hk: &auto_hk {<<: *Dingyue, type: url-test, filter: "(?i)🌳|港|🇭🇰|
 auto_jp: &auto_jp {<<: *Dingyue, type: url-test, filter: "(?i)🌳|日|🇯🇵|jp|JP|japan"}
 auto_sg: &auto_sg {<<: *Dingyue, type: url-test, filter: "(?i)🌳|新|🇸🇬|sg|singapore"}
 auto_us: &auto_us {<<: *Dingyue, type: url-test, filter: "(?i)🌳|美|🇺🇸|us|unitedstates|united states"}
-only_au: &only_au {type: url-test, filter: "(?i)🌳|港|🇭🇰|hk|hongkong|hong kong|日|🇯🇵|jp|JP|japan|新|🇸🇬|sg|singapore|美|🇺🇸|us|unitedstates|united states", include-all: true, interval: 300, timeout: 5000, tolerance: 100}
+only_au: &only_au {type: url-test, filter: "(?i)🌳|港|🇭🇰|hk|hongkong|hong kong|日|🇯🇵|jp|JP|japan|新|🇸🇬|sg|singapore|美|🇺🇸|us|unitedstates|united states", include-all: true, interval: 600, timeout: 8000, tolerance: 100}
 
 # https://github.com/Heart-Stealer/myclash/raw/main/icons/twitter.svg
 # https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/twitter.svg
