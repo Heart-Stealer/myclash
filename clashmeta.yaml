@@ -115,8 +115,8 @@ geodata-loader: standard
 geodata-mode: false
 geox-url:
   geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
-  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
   asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
 
 # 嗅探
@@ -290,12 +290,15 @@ dns:
   # 默认DNS服务器，支持udp/tcp/dot/doh/doq
   nameserver:
     # - system
+    - 222.222.222.222
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
   # 代理节点域名解析服务器，仅用于解析代理节点的域名
   proxy-server-nameserver:
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
+    - https://dns.google/dns-query
+    # - https://8.8.8.8/dns-query
   # # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
   # nameserver-policy:
   #   "geosite:cn,private":
@@ -373,6 +376,7 @@ proxy-groups:
   - {name: NETFLIX,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/netflix.svg"}
   - {name: Openai,      <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/openai.svg"}
   - {name: Openwrt,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/openwrt.svg"}
+  - {name: Proxy,       <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/embedded.svg"}
   - {name: Spotify,     <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/spotify.svg"}
   - {name: Steam,       <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/steam.svg"}
   - {name: Telegram,    <<: *Proxy_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/telegram.svg"}
@@ -401,10 +405,11 @@ rules:
   - RULE-SET,aa-direct,全球直连
   - RULE-SET,aa-proxy0,默认代理
   - RULE-SET,aa-reject,广告拦截
+  - RULE-SET,AD,广告拦截
   - RULE-SET,AD-Lite,广告拦截
-  - RULE-SET,EasyList,广告拦截
-  - RULE-SET,EasyListChina,广告拦截
-  - RULE-SET,ProgramAD,广告拦截
+  # - RULE-SET,EasyList,广告拦截
+  # - RULE-SET,EasyListChina,广告拦截
+  # - RULE-SET,ProgramAD,广告拦截
   # - DOMAIN,clash.razord.top,全球直连
   # - DOMAIN,yacd.haishan.me,全球直连
   # - DOMAIN,yacd.metacubex.one,全球直连
@@ -439,55 +444,95 @@ rules:
   - GEOSITE,category-ads-all,广告拦截
   - GEOSITE,category-games@cn,全球直连
   - GEOSITE,category-public-tracker,全球直连
-  - GEOSITE,amazon,Amazon
-  - GEOSITE,android,Android
-  - GEOSITE,cloudflare,Cloudflare
-  - GEOIP,cloudflare,Cloudflare,no-resolve
-  - GEOSITE,discord,Discord
-  - GEOSITE,disney,Disney
-  - GEOSITE,epicgames,EpicGames
-  - GEOSITE,github,GitHub
-  # - GEOIP,github,GitHub,no-resolve
-  - GEOSITE,google,Google
-  - GEOIP,google,Google,no-resolve
-  - GEOSITE,google-play,Google_Play
-  - GEOSITE,google-cn,Google
-  - GEOSITE,instagram,Instagram
-  - GEOSITE,hbo,HBO
-  - GEOSITE,meta,Meta
-  - GEOSITE,netflix,NETFLIX
-  - GEOIP,netflix,NETFLIX,no-resolve
-  - GEOSITE,openai,Openai
-  - GEOSITE,openwrt,Openwrt
-  - GEOSITE,spotify,Spotify
-  - GEOSITE,steam,Steam
-  - GEOIP,steam,Steam,no-resolve
-  - GEOSITE,steam@cn,全球直连
-  - GEOSITE,telegram,Telegram
-  - GEOIP,telegram,Telegram,no-resolve
-  - GEOSITE,tiktok,TikTok
-  # - GEOIP,tiktok,TikTok,no-resolve
-  - GEOSITE,twitch,Twitch
-  - GEOIP,twitch,Twitch,no-resolve
-  - GEOSITE,twitter,Twitter
-  - GEOIP,twitter,Twitter,no-resolve
-  - GEOSITE,whatsapp,WhatsApp
-  - GEOSITE,x,X
-  - GEOSITE,xbox,Xbox
-  - GEOSITE,youtube,YouTube
-  # - GEOIP,youtube,YouTube,no-resolve
-  - GEOSITE,gfw,默认代理
 
-  - GEOSITE,category-media-cn,全球直连
-  - GEOSITE,apple,Apple
-  - GEOIP,apple,Apple,no-resolve
-  - GEOSITE,apple@cn,Apple
-  - GEOSITE,apple-cn,Apple
-  - GEOSITE,bing,Bing
-  - GEOSITE,microsoft,Microsoft
-  - GEOSITE,microsoft@cn,Microsoft
-  - GEOSITE,onedrive,OneDrive
-  - GEOSITE,speedtest,Speedtest
+  - RULE-SET,youtube_domain,YouTube
+  - RULE-SET,google_domain,Google
+  - RULE-SET,meta_domain,Meta
+  - RULE-SET,ai_domain,Openai
+  - RULE-SET,github_domain,GitHub
+  - RULE-SET,onedrive_domain,OneDrive
+  - RULE-SET,microsoft_domain,Microsoft
+  - RULE-SET,telegram_domain,Telegram
+  - RULE-SET,twitter_domain,Twitter
+  - RULE-SET,steam_domain,Steam
+  - RULE-SET,discord_domain,Discord
+  # - RULE-SET,talkatone_domain,Talkatone
+  # - RULE-SET,line_domain,LINE
+  # - RULE-SET,signal_domain,Signal
+  - RULE-SET,tiktok_domain,TikTok
+  - RULE-SET,netflix_domain,NETFLIX
+  - RULE-SET,disneyplus_domain,Disney
+  # - RULE-SET,hbo_domain,HBO
+  # - RULE-SET,primevideo_domain,Primevideo
+
+  - RULE-SET,apple_domain,Apple
+  - RULE-SET,bing_domain,Bing
+  - RULE-SET,cloudflare_domain,Cloudflare
+  - RULE-SET,chatgpt_domain,Openai
+  # - RULE-SET,paypal_domain,PayPal
+  # - RULE-SET,pixiv_domain,Pixiv
+  - RULE-SET,speedtest_domain,Speedtest
+  - RULE-SET,spotify_domain,Spotify
+  - RULE-SET,proxy_domain,Proxy
+
+  # - RULE-SET,domestic_non_ip,全球直连
+  - RULE-SET,direct_non_ip,全球直连
+  - RULE-SET,lan_non_ip,全球直连
+  ### IP 类规则
+  - RULE-SET,lan_ip,全球直连
+  - RULE-SET,domestic_ip,全球直连
+  # - RULE-SET,china_ip,全球直连
+
+  # - GEOSITE,amazon,Amazon
+  # - GEOSITE,android,Android
+  # - GEOSITE,cloudflare,Cloudflare
+  # - GEOSITE,discord,Discord
+  # - GEOSITE,disney,Disney
+  # - GEOSITE,epicgames,EpicGames
+  # - GEOSITE,github,GitHub
+  # - GEOSITE,google,Google
+  # - GEOSITE,google-play,Google_Play
+  # - GEOSITE,google-cn,Google
+  # - GEOSITE,instagram,Instagram
+  # - GEOSITE,hbo,HBO
+  # - GEOSITE,meta,Meta
+  # - GEOSITE,netflix,NETFLIX
+  # - GEOSITE,openai,Openai
+  # - GEOSITE,openwrt,Openwrt
+  # - GEOSITE,spotify,Spotify
+  # - GEOSITE,steam,Steam
+  # - GEOSITE,steam@cn,全球直连
+  # - GEOSITE,telegram,Telegram
+  # - GEOSITE,tiktok,TikTok
+  # - GEOSITE,twitch,Twitch
+  # - GEOSITE,twitter,Twitter
+  # - GEOSITE,whatsapp,WhatsApp
+  # - GEOSITE,x,X
+  # - GEOSITE,xbox,Xbox
+  # - GEOSITE,youtube,YouTube
+  # - GEOSITE,gfw,默认代理
+
+  # - GEOSITE,category-media-cn,全球直连
+  # - GEOSITE,apple,Apple
+  # - GEOSITE,apple@cn,Apple
+  # - GEOSITE,apple-cn,Apple
+  # - GEOSITE,bing,Bing
+  # - GEOSITE,microsoft,Microsoft
+  # - GEOSITE,microsoft@cn,Microsoft
+  # - GEOSITE,onedrive,OneDrive
+  # - GEOSITE,speedtest,Speedtest
+
+  # - GEOIP,cloudflare,Cloudflare,no-resolve
+  # # - GEOIP,github,GitHub,no-resolve
+  # - GEOIP,google,Google,no-resolve
+  # - GEOIP,netflix,NETFLIX,no-resolve
+  # - GEOIP,steam,Steam,no-resolve
+  # - GEOIP,telegram,Telegram,no-resolve
+  # # - GEOIP,tiktok,TikTok,no-resolve
+  # - GEOIP,twitch,Twitch,no-resolve
+  # - GEOIP,twitter,Twitter,no-resolve
+  # # - GEOIP,youtube,YouTube,no-resolve
+  # - GEOIP,apple,Apple,no-resolve
 
   # 匹配来源 IP 所属国家代码
   # - SRC-GEOIP,cn,全球直连
@@ -505,11 +550,18 @@ rules:
   # - IP-CIDR,192.168.0.0/16,全球直连
   # - IP-CIDR,100.64.0.0/10,全球直连
   # - IP-CIDR,127.0.0.0/8,全球直连
+  - RULE-SET,private_domain,全球直连
   - GEOSITE,private,全球直连
-  - GEOIP,private,全球直连,no-resolve
+  # - GEOIP,private,全球直连,no-resolve
+  - IP-CIDR,10.0.0.0/8,全球直连
+  - IP-CIDR,172.16.0.0/12,全球直连
+  - IP-CIDR,192.168.0.0/16,全球直连
+  - IP-CIDR,100.64.0.0/10,全球直连
+  - IP-CIDR,127.0.0.0/8,全球直连
   - MATCH,漏网之鱼
   
 rule-anchor:
+# mihomo rule-set 规则集文件，格式为 .yaml（format: yaml）、.list（format: text） 和 .mrs（format: mrs）
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   ip_text: &ip_text {type: http, interval: 86400, behavior: ipcidr, format: text}
   ip_yaml: &ip_yaml {type: http, interval: 86400, behavior: ipcidr, format: yaml}
@@ -533,25 +585,107 @@ rule-providers:
   # aa-direct: { <<: *class_yaml_file, path: ./rule-providers/aa-direct.yaml}
   # aa-proxy0: { <<: *class_yaml_file, path: ./rule-providers/aa-proxy0.yaml}
   # aa-reject: { <<: *class_yaml_file, path: ./rule-providers/aa-reject.yaml}
+  # 内网域名和局域网 IP
+  lan_non_ip:
+    <<: *domain_text
+    url: https://ruleset.skk.moe/Clash/non_ip/lan.txt
+    path: ./rule-providers/lan_non_ip.txt
+  lan_ip:
+    <<: *domain_text
+    url: https://ruleset.skk.moe/Clash/ip/lan.txt
+    path: ./rule-providers/lan_ip.txt
+  
+  # domestic_non_ip:
+  #   <<: *domain_text
+  #   url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt
+  #   path: ./rule-providers/domestic_non_ip.txt
+  direct_non_ip:
+    <<: *domain_text
+    url: https://ruleset.skk.moe/Clash/non_ip/direct.txt
+    path: ./rule-providers/direct_non_ip.txt
+  # global_non_ip:
+  #   <<: *domain_text
+  #   url: https://ruleset.skk.moe/Clash/non_ip/global.txt
+  #   path: ./rule-providers/global_non_ip.txt
+  domestic_ip:
+    <<: *domain_text
+    url: https://ruleset.skk.moe/Clash/ip/domestic.txt
+    path: ./rule-providers/domestic_ip.txt
 
+  # china_ip:
+  #   <<: *domain_text
+  #   url: https://ruleset.skk.moe/Clash/ip/china_ip.txt
+  #   path: ./rule-providers/china_ip.txt
+
+  # AD:
+  #   <<: *domain_yaml
+  #   path: ./rule-providers/AD.yaml
+  #   url: https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml
   AD-Lite:
     <<: *domain_yaml
     path: ./rule-providers/AD-Lite.yaml
     url: https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml
-  EasyList:
+  AD:
     <<: *domain_yaml
-    path: ./rule-providers/EasyList.yaml
-    url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyList.yaml
+    path: ./rule-providers/AD.yaml
+    url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/AD.yaml
+  # EasyList:
+  #   <<: *domain_yaml
+  #   path: ./rule-providers/EasyList.yaml
+  #   url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyList.yaml
   EasyListChina:
     <<: *domain_yaml
     path: ./rule-providers/EasyListChina.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyListChina.yaml
+  EasyPrivacy:
+    <<: *domain_yaml
+    path: ./rule-providers/EasyPrivacy.yaml
+    url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyPrivacy.yaml
   ProgramAD:
     <<: *domain_yaml
     path: ./rule-providers/ProgramAD.yaml
     url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/ProgramAD.yaml
   # bilibili_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geoip/bilibili.mrs" }
   # AD: { <<: *domain_yaml, path: "./rule-providers/AD.yaml", url: "https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/AD.yaml"}
+# https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/facebook.mrs
+# https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/facebook.mrs
+# https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/facebook.mrs
+# https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/facebook.mrs
+# https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cloudflare.srs
+  ai_domain: { <<: *domain, path: './rule-providers/category-ai-!cn.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs' }
+  amazon_domain: { <<: *domain, path: './rule-providers/amazon.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/amazon.mrs' }
+  android_domain: { <<: *domain, path: './rule-providers/android.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/android.mrs' }
+  chatgpt_domain: { <<: *domain, path: './rule-providers/chatgpt.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/chatgpt.mrs' }
+  cloudflare_domain: { <<: *domain, path: './rule-providers/cloudflare.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cloudflare.mrs' }
+  discord_domain: { <<: *domain, path: './rule-providers/discord.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/discord.mrs' }
+  disneyplus_domain: { <<: *domain, path: './rule-providers/disneyplus.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disneyplus.mrs' }
+  epic_domain: { <<: *domain, path: './rule-providers/epic.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epic.mrs' }
+  facebook_domain: { <<: *domain, path: './rule-providers/facebook.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/facebook.mrs' }
+  github_domain: { <<: *domain, path: './rule-providers/github.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs' }
+  google_domain: { <<: *domain, path: './rule-providers/google.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs' }
+  google_play_domain: { <<: *domain, path: './rule-providers/google-play.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-play.mrs' }
+  instagram_domain: { <<: *domain, path: './rule-providers/instagram.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/instagram.mrs' }
+  meta_domain: { <<: *domain, path: './rule-providers/meta.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/meta.mrs' }
+  netflix_domain: { <<: *domain, path: './rule-providers/netflix.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs' }
+  openwrt_domain: { <<: *domain, path: './rule-providers/openwrt.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openwrt.mrs' }
+  spotify_domain: { <<: *domain, path: './rule-providers/spotify.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs' }
+  steam_domain: { <<: *domain, path: './rule-providers/steam.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs' }
+  telegram_domain: { <<: *domain, path: './rule-providers/telegram.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs' }
+  tiktok_domain: { <<: *domain, path: './rule-providers/tiktok.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs' }
+  twitch_domain: { <<: *domain, path: './rule-providers/twitch.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitch.mrs' }
+  twitter_domain: { <<: *domain, path: './rule-providers/twitter.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs' }
+  whatsapp_domain: { <<: *domain, path: './rule-providers/whatsapp.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/whatsapp.mrs' }
+  x_domain: { <<: *domain, path: './rule-providers/x.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs' }
+  xbox_domain: { <<: *domain, path: './rule-providers/xbox.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/xbox.mrs' }
+  youtube_domain: { <<: *domain, path: './rule-providers/youtube.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs' }
+  apple_domain: { <<: *domain, path: './rule-providers/apple.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs' }
+  app_store_domain: { <<: *domain, path: './rule-providers/app-store.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/app-store.mrs' }
+  bing_domain: { <<: *domain, path: './rule-providers/bing.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing.mrs' }
+  microsoft_domain: { <<: *domain, path: './rule-providers/microsoft.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs' }
+  onedrive_domain: { <<: *domain, path: './rule-providers/onedrive.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs' }
+  speedtest_domain: { <<: *domain, path: './rule-providers/speedtest.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs' }
+  private_domain: { <<: *domain, path: './rule-providers/private.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs' }
+  proxy_domain: { <<: *domain, path: './rule-providers/proxy.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/proxy.mrs' }
 
   # private_domain: { <<: *domain_yaml, path: "./providers/rules/private_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml"}
   # proxylite: { <<: *class_yaml, path: "./providers/rules/proxylite.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"}
