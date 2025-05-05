@@ -1,7 +1,7 @@
 # NAME: Heart-Stealer
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: ????-??-？？ ??:??:??
+# UPDATED: ????-??-?? ??:??:??
 # DOMAIN: ?
 # DOMAIN-KEYWORD: ?
 # DOMAIN-SUFFIX: ?
@@ -27,4 +27,9 @@ payload:
   - DOMAIN-SUFFIX,fapnfuck.com
   - DOMAIN-SUFFIX,cdnstatic.jappornxl.com
   - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com
+  - IP-CIDR,10.0.0.0/8,全球直连
+  - IP-CIDR,172.16.0.0/12,全球直连
+  - IP-CIDR,192.168.0.0/16,全球直连
+  - IP-CIDR,100.64.0.0/10,全球直连
+  - IP-CIDR,127.0.0.0/8,全球直连
 
