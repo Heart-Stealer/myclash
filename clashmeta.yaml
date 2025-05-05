@@ -461,19 +461,19 @@ rules:
   # - RULE-SET,signal_domain,Signal
   - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,netflix_domain,NETFLIX
-  - RULE-SET,disneyplus_domain,Disney
+  # - RULE-SET,disneyplus_domain,Disney
   # - RULE-SET,hbo_domain,HBO
   # - RULE-SET,primevideo_domain,Primevideo
 
   - RULE-SET,apple_domain,Apple
   - RULE-SET,bing_domain,Bing
   - RULE-SET,cloudflare_domain,Cloudflare
-  - RULE-SET,chatgpt_domain,Openai
+  # - RULE-SET,chatgpt_domain,Openai
   # - RULE-SET,paypal_domain,PayPal
   # - RULE-SET,pixiv_domain,Pixiv
   - RULE-SET,speedtest_domain,Speedtest
   - RULE-SET,spotify_domain,Spotify
-  - RULE-SET,proxy_domain,Proxy
+  # - RULE-SET,proxy_domain,Proxy
 
   # - RULE-SET,domestic_non_ip,全球直连
   - RULE-SET,direct_non_ip,全球直连
@@ -580,7 +580,7 @@ rule-providers:
   # aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rules/aa-proxy.yaml"}
   # aa-reject: { <<: *class_yaml, path: "./rule-providers/aa-reject.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rules/aa-reject.yaml"}
   aa-direct: { <<: *class_yaml, path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-direct.yaml"}
-  aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-proxy.yaml"}
+  aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-proxy0.yaml"}
   aa-reject: { <<: *class_yaml, path: "./rule-providers/aa-reject.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-reject.yaml"}
   # aa-direct: { <<: *class_yaml_file, path: ./rule-providers/aa-direct.yaml}
   # aa-proxy0: { <<: *class_yaml_file, path: ./rule-providers/aa-proxy0.yaml}
@@ -655,11 +655,11 @@ rule-providers:
   ai_domain: { <<: *domain, path: './rule-providers/category-ai-!cn.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs' }
   amazon_domain: { <<: *domain, path: './rule-providers/amazon.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/amazon.mrs' }
   android_domain: { <<: *domain, path: './rule-providers/android.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/android.mrs' }
-  chatgpt_domain: { <<: *domain, path: './rule-providers/chatgpt.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/chatgpt.mrs' }
+  # chatgpt_domain: { <<: *domain, path: './rule-providers/chatgpt.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/chatgpt.mrs' }
   cloudflare_domain: { <<: *domain, path: './rule-providers/cloudflare.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cloudflare.mrs' }
   discord_domain: { <<: *domain, path: './rule-providers/discord.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/discord.mrs' }
-  disneyplus_domain: { <<: *domain, path: './rule-providers/disneyplus.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disneyplus.mrs' }
-  epic_domain: { <<: *domain, path: './rule-providers/epic.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epic.mrs' }
+  # disneyplus_domain: { <<: *domain, path: './rule-providers/disneyplus.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs' }
+  # epic_domain: { <<: *domain, path: './rule-providers/epic.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epic.mrs' }
   facebook_domain: { <<: *domain, path: './rule-providers/facebook.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/facebook.mrs' }
   github_domain: { <<: *domain, path: './rule-providers/github.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs' }
   google_domain: { <<: *domain, path: './rule-providers/google.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs' }
@@ -679,13 +679,13 @@ rule-providers:
   xbox_domain: { <<: *domain, path: './rule-providers/xbox.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/xbox.mrs' }
   youtube_domain: { <<: *domain, path: './rule-providers/youtube.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs' }
   apple_domain: { <<: *domain, path: './rule-providers/apple.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs' }
-  app_store_domain: { <<: *domain, path: './rule-providers/app-store.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/app-store.mrs' }
+  # app_store_domain: { <<: *domain, path: './rule-providers/app-store.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/app-store.mrs' }
   bing_domain: { <<: *domain, path: './rule-providers/bing.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing.mrs' }
   microsoft_domain: { <<: *domain, path: './rule-providers/microsoft.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs' }
   onedrive_domain: { <<: *domain, path: './rule-providers/onedrive.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs' }
   speedtest_domain: { <<: *domain, path: './rule-providers/speedtest.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs' }
   private_domain: { <<: *domain, path: './rule-providers/private.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs' }
-  proxy_domain: { <<: *domain, path: './rule-providers/proxy.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/proxy.mrs' }
+  # proxy_domain: { <<: *domain, path: './rule-providers/proxy.mrs', url: 'https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/proxy.mrs' }
 
   # private_domain: { <<: *domain_yaml, path: "./providers/rules/private_domain.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml"}
   # proxylite: { <<: *class_yaml, path: "./providers/rules/proxylite.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"}
