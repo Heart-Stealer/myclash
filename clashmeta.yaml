@@ -165,6 +165,7 @@ sniffer:
     - "*.sunlogin.net"
     - "+.pages.dev"
     - "*.kyarucloud.moe"
+    - "nikkinikki.pages.dev"
   skip-src-address: # 对于来源ip跳过嗅探
     - 192.168.0.3/32
   skip-dst-address: # 对于目标ip跳过嗅探
@@ -290,15 +291,23 @@ dns:
   # 默认DNS服务器，支持udp/tcp/dot/doh/doq
   nameserver:
     # - system
-    - 222.222.222.222
-    - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
+    # - 222.222.222.222
+    - 223.5.5.5
+    # - https://223.5.5.5/dns-query
+    - 119.29.29.29
+    # - https://doh.pub/dns-query
+    # # 360
+    # - 101.226.4.6
+    # - 218.30.118.6
+    # # 百度
+    # - 180.76.76.76
   # 代理节点域名解析服务器，仅用于解析代理节点的域名
   proxy-server-nameserver:
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
-    - https://dns.google/dns-query
-    # - https://8.8.8.8/dns-query
+    - https://8.8.8.8/dns-query
+    # - https://1.12.12.12/dns-query
+    # - https://dns.google/dns-query
   # # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
   # nameserver-policy:
   #   "geosite:cn,private":
@@ -405,11 +414,19 @@ rules:
   - RULE-SET,aa-direct,全球直连
   - RULE-SET,aa-proxy0,默认代理
   - RULE-SET,aa-reject,广告拦截
+
+  - IP-CIDR,10.0.0.0/8,全球直连
+  - IP-CIDR,172.16.0.0/12,全球直连
+  - IP-CIDR,192.168.0.0/16,全球直连
+  - IP-CIDR,100.64.0.0/10,全球直连
+  - IP-CIDR,127.0.0.0/8,全球直连
+
   - RULE-SET,AD,广告拦截
   - RULE-SET,AD-Lite,广告拦截
   # - RULE-SET,EasyList,广告拦截
-  # - RULE-SET,EasyListChina,广告拦截
-  # - RULE-SET,ProgramAD,广告拦截
+  - RULE-SET,EasyListChina,广告拦截
+  - RULE-SET,EasyPrivacy,广告拦截
+  - RULE-SET,ProgramAD,广告拦截
   # - DOMAIN,clash.razord.top,全球直连
   # - DOMAIN,yacd.haishan.me,全球直连
   # - DOMAIN,yacd.metacubex.one,全球直连
@@ -553,11 +570,6 @@ rules:
   - RULE-SET,private_domain,全球直连
   - GEOSITE,private,全球直连
   # - GEOIP,private,全球直连,no-resolve
-  - IP-CIDR,10.0.0.0/8,全球直连
-  - IP-CIDR,172.16.0.0/12,全球直连
-  - IP-CIDR,192.168.0.0/16,全球直连
-  - IP-CIDR,100.64.0.0/10,全球直连
-  - IP-CIDR,127.0.0.0/8,全球直连
   - MATCH,漏网之鱼
   
 rule-anchor:
@@ -568,7 +580,7 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   domain_text: &domain_text {type: http, interval: 86400, behavior: domain, format: text}
   domain_yaml: &domain_yaml {type: http, interval: 86400, behavior: domain, format: yaml}
-  class: &class {type: http, interval: 86400, behavior: classical, format: text}
+  class_text: &class_text {type: http, interval: 86400, behavior: classical, format: text}
   class_yaml: &class_yaml {type: http, interval: 86400, behavior: classical, format: yaml}
   class_yaml_file: &class_yaml_file {type: file, interval: 86400, behavior: classical, format: yaml}
 
@@ -587,52 +599,52 @@ rule-providers:
   # aa-reject: { <<: *class_yaml_file, path: ./rule-providers/aa-reject.yaml}
   # 内网域名和局域网 IP
   lan_non_ip:
-    <<: *domain_text
+    <<: *class_text
     url: https://ruleset.skk.moe/Clash/non_ip/lan.txt
     path: ./rule-providers/lan_non_ip.txt
   lan_ip:
-    <<: *domain_text
+    <<: *class_text
     url: https://ruleset.skk.moe/Clash/ip/lan.txt
     path: ./rule-providers/lan_ip.txt
   
   # domestic_non_ip:
-  #   <<: *domain_text
+  #   <<: *class_text
   #   url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt
   #   path: ./rule-providers/domestic_non_ip.txt
   direct_non_ip:
-    <<: *domain_text
+    <<: *class_text
     url: https://ruleset.skk.moe/Clash/non_ip/direct.txt
     path: ./rule-providers/direct_non_ip.txt
   # global_non_ip:
-  #   <<: *domain_text
+  #   <<: *class_text
   #   url: https://ruleset.skk.moe/Clash/non_ip/global.txt
   #   path: ./rule-providers/global_non_ip.txt
   domestic_ip:
-    <<: *domain_text
+    <<: *class_text
     url: https://ruleset.skk.moe/Clash/ip/domestic.txt
     path: ./rule-providers/domestic_ip.txt
 
   # china_ip:
-  #   <<: *domain_text
+  #   <<: *ip_text
   #   url: https://ruleset.skk.moe/Clash/ip/china_ip.txt
   #   path: ./rule-providers/china_ip.txt
 
-  # AD:
-  #   <<: *domain_yaml
-  #   path: ./rule-providers/AD.yaml
-  #   url: https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml
+  AD:
+    <<: *domain_yaml
+    path: ./rule-providers/AD.yaml
+    url: https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml
   AD-Lite:
     <<: *domain_yaml
     path: ./rule-providers/AD-Lite.yaml
     url: https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml
-  AD:
-    <<: *domain_yaml
-    path: ./rule-providers/AD.yaml
-    url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/AD.yaml
-  # EasyList:
+  # AD:
   #   <<: *domain_yaml
-  #   path: ./rule-providers/EasyList.yaml
-  #   url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyList.yaml
+  #   path: ./rule-providers/AD.yaml
+  #   url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/AD.yaml
+  EasyList:
+    <<: *domain_yaml
+    path: ./rule-providers/EasyList.yaml
+    url: https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyList.yaml
   EasyListChina:
     <<: *domain_yaml
     path: ./rule-providers/EasyListChina.yaml
