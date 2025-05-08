@@ -13,8 +13,8 @@ payload:
   - DOMAIN,d.metacubex.one
   - DOMAIN,board.zash.run.place
   - DOMAIN,statics.woozooo.com
-  - DOMAIN,ipw.cn
   - DOMAIN,objects.githubusercontent.com
+
   - DOMAIN-SUFFIX,gh-proxy.com
   - DOMAIN-SUFFIX,r2.cloudflarestorage.com
   - DOMAIN-SUFFIX,skyearth.xyz
@@ -27,9 +27,18 @@ payload:
   - DOMAIN-SUFFIX,fapnfuck.com
   - DOMAIN-SUFFIX,cdnstatic.jappornxl.com
   - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com
-  - IP-CIDR,10.0.0.0/8,全球直连
-  - IP-CIDR,172.16.0.0/12,全球直连
-  - IP-CIDR,192.168.0.0/16,全球直连
-  - IP-CIDR,100.64.0.0/10,全球直连
-  - IP-CIDR,127.0.0.0/8,全球直连
+  - DOMAIN-SUFFIX,ip.sb
+  - DOMAIN-SUFFIX,ip.gs
+  - DOMAIN-SUFFIX,ipw.cn
+  - DOMAIN-SUFFIX,pddpic.com
+  - DOMAIN-SUFFIX,yangkeduo.com
+  - DOMAIN-SUFFIX,pinduoduo.com
+
+  - DOMAIN-KEYWORD,test-ipv6
+
+  - IP-CIDR,10.0.0.0/8
+  - IP-CIDR,172.16.0.0/12
+  - IP-CIDR,192.168.0.0/16
+  - IP-CIDR,100.64.0.0/10
+  - IP-CIDR,127.0.0.0/8
 
