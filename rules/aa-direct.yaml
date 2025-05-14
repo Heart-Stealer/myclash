@@ -7,6 +7,7 @@
 # DOMAIN-SUFFIX: ?
 # TOTAL: ?
 payload:
+  # - DOMAIN,exampl.com
   - DOMAIN,clash.razord.top
   - DOMAIN,yacd.haishan.me
   - DOMAIN,yacd.metacubex.one
@@ -15,6 +16,7 @@ payload:
   - DOMAIN,statics.woozooo.com
   - DOMAIN,objects.githubusercontent.com
 
+  # - DOMAIN-SUFFIX,google.com
   - DOMAIN-SUFFIX,gh-proxy.com
   - DOMAIN-SUFFIX,r2.cloudflarestorage.com
   - DOMAIN-SUFFIX,skyearth.xyz
@@ -32,13 +34,29 @@ payload:
   - DOMAIN-SUFFIX,ipw.cn
   - DOMAIN-SUFFIX,pddpic.com
   - DOMAIN-SUFFIX,yangkeduo.com
-  - DOMAIN-SUFFIX,pinduoduo.com
 
+  # - DOMAIN-KEYWORD,google
   - DOMAIN-KEYWORD,test-ipv6
+  # - DOMAIN-KEYWORD,douyin
 
-  - IP-CIDR,10.0.0.0/8
-  - IP-CIDR,172.16.0.0/12
-  - IP-CIDR,192.168.0.0/16
-  - IP-CIDR,100.64.0.0/10
-  - IP-CIDR,127.0.0.0/8
+  # - DOMAIN-REGEX,^abc.*com
+  # - GEOSITE,youtube
+  # - IP-CIDR,10.0.0.0/8
+  # - IP-CIDR,172.16.0.0/12
+  # - IP-CIDR,192.168.0.0/16
+  # - IP-CIDR,100.64.0.0/10
+  # - IP-CIDR,127.0.0.0/8
+  - IP-CIDR,223.5.5.5/32
+  - IP-CIDR,223.6.6.6/32
+  - IP-CIDR,119.29.29.29/32
+  - IP-CIDR,1.12.12.12/32
+  - IP-CIDR,120.53.53.53/32
+  - IP-CIDR,222.222.222.222/32
+  - IP-CIDR,222.222.202.202/32
+  - IP-CIDR,101.226.4.6/32
+  - IP-CIDR,218.30.118.6/32
+  - IP-CIDR,180.76.76.76/32
 
+  - DST-PORT,22
+  - DST-PORT,53
+  - DSCP,4

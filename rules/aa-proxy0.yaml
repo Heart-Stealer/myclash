@@ -7,6 +7,7 @@
 # DOMAIN-SUFFIX: ?
 # TOTAL: ?
 payload:
+  # - DOMAIN,clash.razord.top
   - DOMAIN-SUFFIX,kyarucloud.moe
   - DOMAIN-SUFFIX,eporner.com
   - DOMAIN-SUFFIX,googleapis.cn
@@ -15,3 +16,8 @@ payload:
   - DOMAIN-SUFFIX,qichiyu.com
   - DOMAIN-SUFFIX,metacubex.one
   - DOMAIN-SUFFIX,v2rayse.com
+  - DOMAIN-SUFFIX,yamllint.com
+  # - DOMAIN-SUFFIX,github.com
+  # - DOMAIN-SUFFIX,githubusercontent.com
+  # - DOMAIN-KEYWORD,google
+  # - IP-CIDR,10.0.0.0/8
