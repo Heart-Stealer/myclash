@@ -1,0 +1,35 @@
+# NAME: Heart-Stealer
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: ????-??-?? ??:??:??
+# DOMAIN: ?
+# DOMAIN-KEYWORD: ?
+# DOMAIN-SUFFIX: ?
+# TOTAL: ?
+payload:
+  # - DOMAIN,exampl.com
+  - DOMAIN,vivo.com
+  - DOMAIN,vivo.com.cn
+
+  # - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,gh-proxy.com
+  - DOMAIN-SUFFIX,vivo.com
+  - DOMAIN-SUFFIX,vivo.com.cn
+  - DOMAIN-SUFFIX,pinduoduo.com
+  - DOMAIN-SUFFIX,douyinpic.com
+  - DOMAIN-SUFFIX,douyinliving.com
+  - DOMAIN-SUFFIX,douyincdn.com
+  - DOMAIN-SUFFIX,zijieapi.com
+  - DOMAIN-SUFFIX,douyinvod.com
+  - DOMAIN-SUFFIX,weixin.qq.com
+
+  # - DOMAIN-KEYWORD,google
+  # - DOMAIN-KEYWORD,vivo
+  # - DOMAIN-KEYWORD,test-ipv6
+  # - DOMAIN-KEYWORD,douyin
+
+  # - DOMAIN-REGEX,^abc.*com
+  # - GEOSITE,youtube
+  # - IP-CIDR,10.0.0.0/8
+
+  # - DST-PORT,53
