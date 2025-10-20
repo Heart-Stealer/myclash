@@ -5,21 +5,18 @@ DY_urltest: &DY_urltest
   # health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300, timeout: 3000, tolerance: 100, lazy: true}
   health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300, timeout: 3000, tolerance: 50, lazy: true}
   udp: true
-  exclude-filter: ""
-  exclude-type: "http"
-
   override:
-  proxy-name:
-  - pattern: "(?i)(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
-    target: "🟢"
+    proxy-name:
+    - pattern: "(?i)(Azure-|free|三网爽|移动|快乐| |TG@ZDYZ2|印度|拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+      target: ""
 
 proxy-providers:
   本地配置:
-    type: file
-    path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
-    # type: http
-    # path: ./proxy-providers/clashmeta.yaml
-    # url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
+    # type: file
+    # path: "D:/GoldBridge/clash/clash-main/clashmetatest.yaml"
+    type: http
+    path: ./proxy-providers/clashmeta.yaml
+    url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     <<: *DY_urltest
 
 # proxy 相关
@@ -66,32 +63,18 @@ bind-address: "*"
 udp: true
 # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
 unified-delay: true
-# TCP并发，允许同时处理多个tcp连接，可选值 true/false
+# TCP 并发，可选值 true/false
 tcp-concurrent: true
-# 进程匹配模式，控制是否让 Clash 去匹配进程
-# 路由器上请设置为 off
-# always 强制匹配所有进程
-# strict 默认，由 Mihomo 判断是否开启
-# off 不匹配进程，推荐在路由器上使用此模式
+# 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 # always/strict/off
 # 路由器 off
 find-process-mode: strict
 # find-process-mode: off
-# 全局客户端指纹。支持协议有 VLESS, Vmess, trojan
-# 全局客户端指纹，可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"；
-# 若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
+# 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
 global-client-fingerprint: chrome
-# global-client-fingerprint: random # 随机指纹
-# 保持活跃空闲时间(单位:s)
 # 连接空闲后多久发送探测包
 keep-alive-idle: 600
 # TCP Keep Alive 间隔,单位分钟
-# 控制 Mihomo 发出 TCP Keep Alive 包的间隔,减少移动设备耗电问题的临时措施
-# 保持活跃探测间隔时间(单位:s)
-# 发送探测包的时间间隔
-# tcp保持连接
-# 缓解移动设备耗电问题
-# https://github.com/vernesong/OpenClash/issues/2614
 keep-alive-interval: 30
 # # 禁用保持活跃探测, 在 Android 默认为 true
 disable-keep-alive: false
@@ -115,6 +98,11 @@ external-ui: ui
 # 自定义外部用户界面名字
 external-ui-name: zashboard
 external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+# uci set nikki.mixin.ui_url='https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip'
+# uci set nikki.mixin.ui_url='https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Razord-meta/archive/refs/heads/gh-pages.zip'
 # 自定义 API 的访问密钥
 secret: "963."
 # 自动更新 GEO 文件,可选 true/false
