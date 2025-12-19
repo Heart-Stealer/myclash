@@ -1,7 +1,5 @@
-hysteria2://fWydUhyG3woKe4a0kcKKKdx78@8.219.232.60:6467?sni=bing.com&insecure=1#SGP-Aliyun-1
-hysteria2://L60nS04NhsoMpN2DDGbnMqLP8DY@47.76.83.25:11243?sni=bing.com&insecure=1#HK-Aliyun-1
-hysteria2://qq4Wc9UakExypzw4Jd00fWqrDTY@8.209.223.212:22712?sni=bing.com&insecure=1#JP-Aliyun-3
-hysteria2://yD0mxkCA18WgPD1uVGd3Eu1dc@47.245.0.72:27789?sni=bing.com&insecure=1#JP-Aliyun-2
-hysteria2://peEduuHzbExjK7UQHzazXwqgA@166.88.164.9:27704?sni=bing.com&insecure=1#US-JUST
-hysteria2://3hszBhqVsUhqOOFWJlev6k6Tkc@47.129.217.4:22509?sni=bing.com&insecure=1#SGP-4G-2
-hysteria2://5OiuCsPmULZ0lJwts89fegLJE@47.129.100.149:17193?sni=bing.com&insecure=1#SGP-4G-1
+vless://9b40d859-e833-42eb-ba99-ebcad479997d@ct.877774.xyz:443?encryption=none&security=tls&sni=do-lon1.064288.xyz&fp=random&insecure=0&allowInsecure=0&type=ws&host=do-lon1.064288.xyz&path=%2Fannouncement%3Fed%3D2048#%E2%98%81%EF%B8%8F-UK-8.0
+vless://9b40d859-e833-42eb-ba99-ebcad479997d@freeyx.cloudflare88.eu.org:443?encryption=none&security=tls&sni=oracle-id-batam.064288.xyz&fp=random&insecure=0&allowInsecure=0&type=ws&host=oracle-id-batam.064288.xyz&path=%2Fannouncement%3Fed%3D2048#%E2%98%81%EF%B8%8F-ID-O-6.0
+vless://9b40d859-e833-42eb-ba99-ebcad479997d@www.visa.com.hk:443?encryption=none&security=tls&sni=do-sgp1.064288.xyz&fp=random&insecure=0&allowInsecure=0&type=ws&host=do-sgp1.064288.xyz&path=%2Fannouncement%3Fed%3D2048#%E2%98%81%EF%B8%8F-SG
+vless://df3afb84-b065-4223-ae9a-53345dc29c0d@cloudflare-ct-ip-ddns.sakuraikaede.com:443?encryption=none&security=tls&sni=us.alice.cloudns.pro&fp=chrome&insecure=0&allowInsecure=0&type=httpupgrade&host=us.alice.cloudns.pro&path=%2Fsiehdfioshfiosdfskkk#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%2008-9.0
+vless://df3afb84-b065-4223-ae9a-53345dc29c0d@cloudflare-cu-ip-ddns.sakuraikaede.com:443?encryption=none&security=tls&sni=us.alice.cloudns.pro&fp=chrome&insecure=0&allowInsecure=0&type=httpupgrade&host=us.alice.cloudns.pro&path=%2Fsiehdfioshfiosdfskkk#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%2007-1.0
