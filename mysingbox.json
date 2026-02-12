@@ -732,12 +732,11 @@
       "server": "8.35.211.107",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -747,12 +746,11 @@
       "server": "8.39.125.124",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -762,12 +760,11 @@
       "server": "198.41.223.84",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -777,12 +774,11 @@
       "server": "173.245.58.57",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -792,12 +788,11 @@
       "server": "172.67.68.166",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -807,12 +802,11 @@
       "server": "104.26.14.224",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -822,12 +816,11 @@
       "server": "172.67.79.34",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -837,12 +830,11 @@
       "server": "104.26.5.18",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -852,12 +844,11 @@
       "server": "104.19.60.77",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -867,12 +858,11 @@
       "server": "162.159.152.196",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -882,12 +872,11 @@
       "server": "104.19.37.46",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -897,12 +886,11 @@
       "server": "104.19.46.189",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -912,12 +900,11 @@
       "server": "172.64.53.144",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -927,12 +914,11 @@
       "server": "162.159.39.126",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -942,12 +928,11 @@
       "server": "162.159.45.81",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -957,12 +942,11 @@
       "server": "162.159.38.10",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -972,12 +956,11 @@
       "server": "108.162.198.221",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -987,12 +970,11 @@
       "server": "162.159.2.134",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -1002,12 +984,11 @@
       "server": "162.159.44.173",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -1017,12 +998,11 @@
       "server": "172.64.144.12",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -1032,12 +1012,11 @@
       "server": "172.64.52.183",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     },
@@ -1047,12 +1026,11 @@
       "server": "172.64.147.223",
       "server_port": 443,
       "method": "none",
-      "password": 0,
+      "password": "0",
       "plugin": "v2ray-plugin",
       "plugin_opts": {
         "mode": "websocket",
         "host": "ecfa74c0.ciallonneko.de5.net",
-        "tls": true,
         "path": "/?ed=2560"
       }
     }
