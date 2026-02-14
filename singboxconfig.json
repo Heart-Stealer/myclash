@@ -320,8 +320,12 @@
       "default": "direct"
     },
     {
-      "tag": "direct",
-      "type": "direct"
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
     },
     {
       "tag": "🇩🇪DE_119-3.0",
