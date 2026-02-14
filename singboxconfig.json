@@ -147,18 +147,36 @@
       "tag": "手动选择",
       "type": "selector",
       "outbounds": [
-        "{all}"
+        "🇩🇪DE_119-3.0",
+        "🇫🇷FR_205-2.5",
+        "🇩🇪DE_141-1.5",
+        "🇫🇷FR_132-1.0",
+        "_369-3.0",
+        "天书13",
+        "Relay_-🇳🇱NL_170 |310.38Mb",
+        "Relay_🇨🇳CN-🇨🇳CN_462 | 4.98Mb",
+        "🇺🇸 Dedi 2T13号-2.0",
+        "🇫🇮 FI-0.5"
       ]
     },
     {
       "tag": "手动自动",
       "type": "urltest",
       "outbounds": [
-        "{all}"
+        "🇩🇪DE_119-3.0",
+        "🇫🇷FR_205-2.5",
+        "🇩🇪DE_141-1.5",
+        "🇫🇷FR_132-1.0",
+        "_369-3.0",
+        "天书13",
+        "Relay_-🇳🇱NL_170 |310.38Mb",
+        "Relay_🇨🇳CN-🇨🇳CN_462 | 4.98Mb",
+        "🇺🇸 Dedi 2T13号-2.0",
+        "🇫🇮 FI-0.5"
       ],
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "3m",
+      "tolerance": 150
     },
     {
       "tag": "漏网之鱼",
@@ -192,16 +210,6 @@
         "手动自动"
       ],
       "default": "reject"
-    },
-    {
-      "tag": "自动选择",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
     },
     {
       "tag": "google",
@@ -303,87 +311,11 @@
       "default": "默认代理"
     },
     {
-      "tag": "hk-auto",
-      "type": "urltest",
-      "outbounds": [
-        "COMPATIBLE"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "tw-auto",
-      "type": "urltest",
-      "outbounds": [
-        "COMPATIBLE"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "jp-auto",
-      "type": "urltest",
-      "outbounds": [
-        "COMPATIBLE"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "sg-auto",
-      "type": "urltest",
-      "outbounds": [
-        "COMPATIBLE"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "us-auto",
-      "type": "urltest",
-      "outbounds": [
-        "🇺🇸 Dedi 2T13号-2.0"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "all-auto",
-      "type": "urltest",
-      "outbounds": [
-        "🇩🇪DE_119-3.0",
-        "🇫🇷FR_205-2.5",
-        "🇩🇪DE_141-1.5",
-        "🇫🇷FR_132-1.0",
-        "_369-3.0",
-        "天书13",
-        "Relay_-🇳🇱NL_170 |310.38Mb",
-        "Relay_🇨🇳CN-🇨🇳CN_462 | 4.98Mb",
-        "🇺🇸 Dedi 2T13号-2.0",
-        "🇫🇮 FI-0.5"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
       "tag": "GLOBAL",
       "type": "selector",
       "outbounds": [
         "direct",
-        "默认代理",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "默认代理"
       ],
       "default": "direct"
     },
@@ -587,10 +519,6 @@
         }
       },
       "flow": "xtls-rprx-vision"
-    },
-    {
-      "tag": "COMPATIBLE",
-      "type": "direct"
     }
   ],
   "route": {
