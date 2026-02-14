@@ -59,7 +59,7 @@
       },
       {
         "query_type": "HTTPS",
-        "action": "reject"
+        "action": "block"
       },
       {
         "query_type": [
@@ -183,7 +183,7 @@
       "type": "selector",
       "outbounds": [
         "direct",
-        "reject",
+        "block",
         "手动选择",
         "手动自动"
       ],
@@ -194,7 +194,7 @@
       "type": "selector",
       "outbounds": [
         "direct",
-        "reject",
+        "block",
         "手动选择",
         "手动自动"
       ],
@@ -204,12 +204,12 @@
       "tag": "广告拦截",
       "type": "selector",
       "outbounds": [
-        "reject",
+        "block",
         "direct",
         "手动选择",
         "手动自动"
       ],
-      "default": "reject"
+      "default": "block"
     },
     {
       "tag": "google",
@@ -558,7 +558,7 @@
       {
         "rule_set": "geosite-category-ads-all",
         "clash_mode": "rule",
-        "action": "reject"
+        "action": "block"
       },
       {
         "rule_set": "geosite-category-ads-all",
