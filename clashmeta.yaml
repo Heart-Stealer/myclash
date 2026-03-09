@@ -233,6 +233,8 @@ dns:
       # - https://dns.alidns.com/dns-query # 阿里
       # - https://doh.pub/dns-query        # 腾讯
     "geo:cn":                            # 也可以用 geo:cn 匹配 IP
+      - 223.5.5.5
+      - 119.29.29.29
       # - https://223.5.5.5/dns-query      # 阿里
       # - https://dns.alidns.com/dns-query # 阿里
       # - https://doh.pub/dns-query        # 腾讯
