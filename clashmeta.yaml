@@ -87,6 +87,101 @@ profile:
   # 持久化缓存fake-ip映射表
   # 缓存 fake-ip 映射表，域名再次发生连接时，使用原有映射地址
   store-fake-ip: true
+# 外部控制 (API)
+# ipv4:端口 或 ipv6:端口
+# 外部控制器(HTTP)监听地址，可以使用 RESTful API 来控制你的 Mihomo 内核；
+# API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP；
+# 访问地址：http://127.0.0.1:9090
+external-controller: '[::]:9090'
+# 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
+external-ui: ui
+# 自定义外部用户界面名字
+external-ui-name: zashboard
+external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+# uci set nikki.mixin.ui_url='https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip'
+# uci set nikki.mixin.ui_url='https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip'
+# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Razord-meta/archive/refs/heads/gh-pages.zip'
+# 自定义 API 的访问密钥
+secret: "963."
+# 自动更新 GEO 文件,可选 true/false
+geo-auto-update: true
+# geo自动更新间隔，单位：小时
+geo-update-interval: 72
+# standard/memconservative
+# GEO 文件加载器
+  # standard：标准加载器
+  # memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
+  # memc: memconservative别名
+geodata-loader: standard
+# geodata-loader: memconservative
+# 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+geodata-mode: false
+geox-url:
+  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  # mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  # mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
+  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
+  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+
+# 域名嗅探配置
+# 域名嗅器,通过读取握手包内的域名字段,将IP还原成域名,有效解决Mapping机制的短板
+sniffer:
+  enable: true                       # 是否启用sniffer
+  ## 对所有未获取到域名的流量进行强制嗅探
+  parse-pure-ip: true                # 对所有未获取到域名的流量进行强制嗅探
+  ## 对 redir-host 类型识别的流量进行强制嗅探
+  ## 如：Tun、Redir 和 TProxy 并 DNS 为 redir-host 皆属于
+  force-dns-mapping: true            # 对 redir-host 类型识别的流量进行强制嗅探
+  # 是否使用嗅探结果作为实际访问，默认 true
+  # 全局配置，优先级低于 sniffer.sniff 实际配置
+  override-destination: true         # 是否使用嗅探结果作为实际访问，默认为 true
+  sniff:
+    HTTP:
+      ports: [80, 443, 8080-8880]    # ports字段，表示端口范围。示例：ports: [80, 8080-8880]
+      override-destination: true     # override-destination字段（可选），用于覆盖全局override-destination设置
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:                      # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
+    # - '+' # Force all domain to use sniffer
+    - '+.v2ex.com'
+    - '+.google.com'
+    # - "+.v2ex.com"
+    - '+.netflix.com'
+    - '+.nflxvideo.net'
+    # - "+.amazonaws.com"
+    # - "+.media.dssott.com"
+  ## 对嗅探结果进行跳过
+  skip-domain:                       # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备Mijia Cloud
+    - Mijia Cloud
+    - 'dlg.io.mi.com'
+    - '*.push.apple.com'
+    - '+.apple.com'
+    # - "+.baidu.com"
+    # - "Mijia Cloud"
+    # - "*.push.apple.com"
+    # - "*.wechat.com"
+    # - "*.qpic.cn"
+    # - "*.qq.com"
+    # - "*.wechatapp.com"
+    # # vivo
+    # - "*.vivox.com"
+    # - "+.vivo.com.cn"
+    # # 向日葵服务
+    - '+.oray.com'
+    - '+.sunlogin.net'
+    # - "+.pages.dev"
+    # - "*.kyarucloud.moe"
+    # - "+.nikkinikki.pages.dev"
+  # skip-src-address: # 对于来源ip跳过嗅探
+  #   - 192.168.0.3/32
+  # skip-dst-address: # 对于目标ip跳过嗅探
+  #   - 192.168.0.3/32
+
 # 入站  
 tun:
 # 路由器 true
@@ -235,101 +330,6 @@ lan-disallowed-ips: []
 skip-auth-prefixes:
   - 127.0.0.1/32
   - 192.168.0.0/16
-# 域名嗅探配置
-# 域名嗅器,通过读取握手包内的域名字段,将IP还原成域名,有效解决Mapping机制的短板
-sniffer:
-  enable: true                       # 是否启用sniffer
-  ## 对所有未获取到域名的流量进行强制嗅探
-  parse-pure-ip: true                # 对所有未获取到域名的流量进行强制嗅探
-  ## 对 redir-host 类型识别的流量进行强制嗅探
-  ## 如：Tun、Redir 和 TProxy 并 DNS 为 redir-host 皆属于
-  force-dns-mapping: true            # 对 redir-host 类型识别的流量进行强制嗅探
-  # 是否使用嗅探结果作为实际访问，默认 true
-  # 全局配置，优先级低于 sniffer.sniff 实际配置
-  override-destination: true         # 是否使用嗅探结果作为实际访问，默认为 true
-  sniff:
-    HTTP:
-      ports: [80, 443, 8080-8880]    # ports字段，表示端口范围。示例：ports: [80, 8080-8880]
-      override-destination: true     # override-destination字段（可选），用于覆盖全局override-destination设置
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
-  ## 对嗅探结果进行跳过
-  skip-domain:                       # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备Mijia Cloud
-    - Mijia Cloud
-    - 'dlg.io.mi.com'
-    - '*.push.apple.com'
-    - '+.apple.com'
-    # - "+.baidu.com"
-    # - "Mijia Cloud"
-    # - "*.push.apple.com"
-    # - "*.wechat.com"
-    # - "*.qpic.cn"
-    # - "*.qq.com"
-    # - "*.wechatapp.com"
-    # # vivo
-    # - "*.vivox.com"
-    # - "+.vivo.com.cn"
-    # # 向日葵服务
-    - '+.oray.com'
-    - '+.sunlogin.net'
-    # - "+.pages.dev"
-    # - "*.kyarucloud.moe"
-    # - "+.nikkinikki.pages.dev"
-  force-domain:                      # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
-    # - '+' # Force all domain to use sniffer
-    - '+.v2ex.com'
-    - '+.google.com'
-    # - "+.v2ex.com"
-    - '+.netflix.com'
-    - '+.nflxvideo.net'
-    # - "+.amazonaws.com"
-    # - "+.media.dssott.com"
-  # skip-src-address: # 对于来源ip跳过嗅探
-  #   - 192.168.0.3/32
-  # skip-dst-address: # 对于目标ip跳过嗅探
-  #   - 192.168.0.3/32
-# 外部控制 (API)
-# ipv4:端口 或 ipv6:端口
-# 外部控制器(HTTP)监听地址，可以使用 RESTful API 来控制你的 Mihomo 内核；
-# API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP；
-# 访问地址：http://127.0.0.1:9090
-external-controller: '[::]:9090'
-# 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
-external-ui: ui
-# 自定义外部用户界面名字
-external-ui-name: zashboard
-external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
-# uci set nikki.mixin.ui_url='https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip'
-# uci set nikki.mixin.ui_url='https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip'
-# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
-# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip'
-# uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Razord-meta/archive/refs/heads/gh-pages.zip'
-# 自定义 API 的访问密钥
-secret: "963."
-# 自动更新 GEO 文件,可选 true/false
-geo-auto-update: true
-# geo自动更新间隔，单位：小时
-geo-update-interval: 72
-# standard/memconservative
-# GEO 文件加载器
-  # standard：标准加载器
-  # memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
-  # memc: memconservative别名
-geodata-loader: standard
-# geodata-loader: memconservative
-# 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
-geodata-mode: false
-geox-url:
-  geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
-  # mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
-  # mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
-  mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
-  asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
-
-
 
 Proxy_first: &Proxy_first   {type: select, proxies: [默认代理, 默认直连, 手动选择, 手动自动], udp: true}
 Direct_first: &Direct_first {type: select, proxies: [DIRECT, REJECT, 手动选择, 手动自动], udp: true}
