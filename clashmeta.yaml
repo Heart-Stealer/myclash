@@ -174,7 +174,7 @@ dns:
   cache-algorithm: arc    # 使用性能更优的 ARC 缓存算法
   cache-size: 4096        # 限制缓存大小，避免占用过多内存
   # Fake-IP 解析地址池
-  fake-ip-range: 198.18.0.1/16 # fake-ip 地址范围
+  fake-ip-range: 28.0.0.1/16 # fake-ip 地址范围
   fake-ip-filter-mode: blacklist
   # Fake-ip 过滤，列表中的域名返回真实IP
   fake-ip-filter:
@@ -197,40 +197,50 @@ dns:
   respect-rules: false
   # 解析非IP的dns用的dns服务器，只支持纯IP, 可为加密 DNS
   default-nameserver:
-    - "tls://223.5.5.5"                 # 阿里（国内）
-    - "tls://119.29.29.29"              # 腾讯（国内）
+    - "223.5.5.5"                 # 阿里（国内）
+    - "119.29.29.29"              # 腾讯（国内）
   # 默认DNS服务器，支持udp/tcp/dot/doh/doq
   nameserver:                   # 默认 DNS，供所有请求使用，支持 DoH3 的在前面
+    - "223.5.5.5"                 # 阿里（国内）
+    - "119.29.29.29"              # 腾讯（国内）
     # - https://1.1.1.1/dns-query             # Cloudflare（支持 H3）
-    - https://dns.alidns.com/dns-query      # 阿里（国内稳定）
-    - https://doh.pub/dns-query             # 腾讯 (境内，DoH，可作为备选)          
+    # - https://dns.alidns.com/dns-query      # 阿里（国内稳定）
+    # - https://doh.pub/dns-query             # 腾讯 (境内，DoH，可作为备选)          
     # - https://dns.google/dns-query          # Google（支持 H3）
     # # 电信
     # - 222.222.222.222
   # 代理节点域名解析服务器，仅用于解析代理节点的域名
   proxy-server-nameserver:      # 当请求通过代理（即国外站）时使用
-    - https://dns.alidns.com/dns-query      # 阿里（国内稳定）
-    - https://doh.pub/dns-query             # 腾讯 (境内，DoH，可作为备选)          
-    - https://dns.google/dns-query         # Google，DoH3
+    - "223.5.5.5"                 # 阿里（国内）
+    - "119.29.29.29"              # 腾讯（国内）
+    # - https://dns.alidns.com/dns-query      # 阿里（国内稳定）
+    # - https://doh.pub/dns-query             # 腾讯 (境内，DoH，可作为备选)          
+    # - https://dns.google/dns-query         # Google，DoH3
     # - https://1.1.1.1/dns-query            # Cloudflare，DoH3
   direct-nameserver:
-    - "system"
-    - "tls://223.5.5.5"
-    - "tls://119.29.29.29"
+    # - "system"
+    - "223.5.5.5"                 # 阿里（国内）
+    - "119.29.29.29"              # 腾讯（国内）
+    # - "tls://223.5.5.5"
+    # - "tls://119.29.29.29"
   direct-nameserver-follow-policy: false
   # # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
   nameserver-policy:
     "geosite:cn,private":                # 国内域名和私有域名强制走国内 DNS
-      - https://223.5.5.5/dns-query      # 阿里
-      - https://dns.alidns.com/dns-query # 阿里
-      - https://doh.pub/dns-query        # 腾讯
+      - 223.5.5.5
+      - 119.29.29.29
+      # - https://223.5.5.5/dns-query      # 阿里
+      # - https://dns.alidns.com/dns-query # 阿里
+      # - https://doh.pub/dns-query        # 腾讯
     "geo:cn":                            # 也可以用 geo:cn 匹配 IP
-      - https://223.5.5.5/dns-query      # 阿里
-      - https://dns.alidns.com/dns-query # 阿里
-      - https://doh.pub/dns-query        # 腾讯
+      # - https://223.5.5.5/dns-query      # 阿里
+      # - https://dns.alidns.com/dns-query # 阿里
+      # - https://doh.pub/dns-query        # 腾讯
   fallback:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - "223.5.5.5"                 # 阿里（国内）
+    - "119.29.29.29"              # 腾讯（国内）
+    # - https://dns.alidns.com/dns-query
+    # - https://doh.pub/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
