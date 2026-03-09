@@ -70,8 +70,8 @@ port: 7892
 # redir-port: 0
 # 关闭 TPROXY
 # tproxy-port: 0
-# redir-port: 7893     # 透明代理端口，用于 Linux 和 MacOS
-# tproxy-port: 7894
+redir-port: 7893     # 透明代理端口，用于 Linux 和 MacOS
+tproxy-port: 7894
 # rule/ global/ direct
 mode: rule
 # silent/ error/ warning/ info/ debug
@@ -166,7 +166,7 @@ dns:
   # IPV6解析开关；如果为false，将返回ipv6结果为空
   # ipv6: true
   ipv6: false             # 禁用 IPv6，减少潜在的解析问题
-  listen: '0.0.0.0:1053'  # 监听地址和端口
+  listen: '[::]:1053'  # 监听地址和端口
   # prefer-h3: true         # 如果DNS服务器支持DoH3会优先使用h3，提升性能
   # 模式：redir-host或fake-ip
   # enhanced-mode: redir-host
@@ -211,18 +211,18 @@ dns:
     # - 222.222.222.222
   # 代理节点域名解析服务器，仅用于解析代理节点的域名
   proxy-server-nameserver:      # 当请求通过代理（即国外站）时使用
-    - "223.5.5.5"                 # 阿里（国内）
-    - "119.29.29.29"              # 腾讯（国内）
-    # - https://dns.alidns.com/dns-query      # 阿里（国内稳定）
-    # - https://doh.pub/dns-query             # 腾讯 (境内，DoH，可作为备选)          
-    # - https://dns.google/dns-query         # Google，DoH3
+    # - "223.5.5.5"                 # 阿里（国内）
+    # - "119.29.29.29"              # 腾讯（国内）
+    - https://dns.alidns.com/dns-query      # 阿里（国内稳定）
+    - https://doh.pub/dns-query             # 腾讯 (境内，DoH，可作为备选)          
+    - https://dns.google/dns-query         # Google，DoH3
     # - https://1.1.1.1/dns-query            # Cloudflare，DoH3
-  direct-nameserver:
-    # - "system"
-    - "223.5.5.5"                 # 阿里（国内）
-    - "119.29.29.29"              # 腾讯（国内）
-    # - "tls://223.5.5.5"
-    # - "tls://119.29.29.29"
+  # direct-nameserver:
+  #   # - "system"
+  #   - "223.5.5.5"                 # 阿里（国内）
+  #   - "119.29.29.29"              # 腾讯（国内）
+  #   # - "tls://223.5.5.5"
+  #   # - "tls://119.29.29.29"
   direct-nameserver-follow-policy: false
   # # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
   nameserver-policy:
@@ -238,21 +238,21 @@ dns:
       # - https://223.5.5.5/dns-query      # 阿里
       # - https://dns.alidns.com/dns-query # 阿里
       # - https://doh.pub/dns-query        # 腾讯
-  fallback:
-    - "223.5.5.5"                 # 阿里（国内）
-    - "119.29.29.29"              # 腾讯（国内）
-    # - https://dns.alidns.com/dns-query
-    # - https://doh.pub/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-    domain:
-      - +.google.com
-      - +.facebook.com
-      - +.youtube.com
+  # fallback:
+  #   - "223.5.5.5"                 # 阿里（国内）
+  #   - "119.29.29.29"              # 腾讯（国内）
+  #   # - https://dns.alidns.com/dns-query
+  #   # - https://doh.pub/dns-query
+  # fallback-filter:
+  #   geoip: true
+  #   geoip-code: CN
+  #   ipcidr:
+  #     - 240.0.0.0/4
+  #     - 0.0.0.0/32
+  #   domain:
+  #     - +.google.com
+  #     - +.facebook.com
+  #     - +.youtube.com
 
 hosts:
   # localhost:
@@ -336,18 +336,18 @@ sniffer:
   # skip-src-address: # 对于来源ip跳过嗅探
   #   - 192.168.0.1/32
   # skip-dst-address: # 对于目标ip跳过嗅探
-    - 91.105.192.0/23
-    - 91.108.4.0/22
-    - 91.108.8.0/21
-    - 91.108.16.0/21
-    - 91.108.56.0/22
-    - 95.161.64.0/20
-    - 149.154.160.0/20
-    - 185.76.151.0/24
-    - 2001:67c:4e8::/48
-    - 2001:b28:f23c::/47
-    - 2001:b28:f23f::/48
-    - 2a0a:f280:203::/48
+  #   - 91.105.192.0/23
+  #   - 91.108.4.0/22
+  #   - 91.108.8.0/21
+  #   - 91.108.16.0/21
+  #   - 91.108.56.0/22
+  #   - 95.161.64.0/20
+  #   - 149.154.160.0/20
+  #   - 185.76.151.0/24
+  #   - 2001:67c:4e8::/48
+  #   - 2001:b28:f23c::/47
+  #   - 2001:b28:f23f::/48
+  #   - 2a0a:f280:203::/48
   #   - 192.168.0.1/32
 
 # 自动同步时间以防止时间不准导致无法正常联网
@@ -365,7 +365,7 @@ ntp:
 # 外部控制器(HTTP)监听地址，可以使用 RESTful API 来控制你的 Mihomo 内核；
 # API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP；
 # 访问地址：http://127.0.0.1:9090
-external-controller: '0.0.0.0:9090'
+external-controller: '[::]:9090'
 # 外部用户界面路径，(默认:工作目录/ui)，可以为绝对路径，或者 Mihomo 工作目录的相对路径
 external-ui: "ui"
 secret: "963."
@@ -398,10 +398,10 @@ geox-url:
   mmdb: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb"
   asn: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
 
-Proxy_first: &Proxy_first   {type: select, proxies: [默认代理, 默认直连, 手动选择], udp: true}
-Direct_first: &Direct_first {type: select, proxies: [DIRECT, REJECT, 手动选择], udp: true}
-Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选择], udp: true}
-Include_all: &Include_all   {type: select, proxies: [手动选择, 默认直连, 负载均衡, 广告拦截], udp: true}
+Proxy_first: &Proxy_first   {type: select, proxies: [默认代理, 默认直连, 手动选择, 自动选择], udp: true}
+Direct_first: &Direct_first {type: select, proxies: [DIRECT, REJECT, 手动选择, 自动选择], udp: true}
+Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选择, 自动选择], udp: true}
+Include_all: &Include_all   {type: select, proxies: [手动选择, 默认直连, 负载均衡, 广告拦截, 自动选择], udp: true}
 # select_auto: &select_auto   {type: select, proxies: [自动选择, 香港自动, 日本自动, 狮城自动, 美国自动], udp: true}
 
 self_lb: &self_lb {type: load-balance, include-all: true, filter: "(?i)(.*(⬇️|🌳)|(-([2-9]|[0-9][0-9]).[0-9]))", interval: 300, strategy: consistent-hashing, timeout: 3000, lazy: true, udp: true}
