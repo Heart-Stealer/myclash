@@ -1,0 +1,64 @@
+# NAME: Heart-Stealer
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: ????-??-?? ??:??:??
+# DOMAIN: ?
+# DOMAIN-KEYWORD: ?
+# DOMAIN-SUFFIX: ?
+# TOTAL: ?
+payload:
+    # 我的
+    - "+.vivo.com.cn"
+    - "+.kyarucloud.moe"
+    - "+.dynv6.com"
+    - "+.test-ipv6.com"
+    - "+.yamllint.com"
+    - "+.github.com"
+    - "+.githubusercontent.com"
+    # 默认
+    - "+.lan"
+    - "+.local"
+    - "+.localdomain"
+    - "Mijia Cloud"
+    - "+.market.xiaomi.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    # # QQ登录
+    - "localhost.ptlogin2.qq.com"
+    - "localhost.sec.qq.com"
+    - "+.qq.com"
+    - "+.tencent.com"
+    # # Steam
+    - "+.steamcontent.com"
+    # # Microsoft Xbox
+    - "xbox.*.*.microsoft.com"
+    - "*.*.xboxlive.com"
+    - "xbox.*.microsoft.com"
+    - "xnotify.xboxlive.com"
+    - "stun.*.*"
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.nflxvideo.net"
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.edu.cn"
+    - "time.*.apple.com"
+    - "ntp.*.com"
+    - "WORKGROUP"
+    # # Bilibili
+    - "*.mcdn.bilivideo.cn"
+    # # ntp
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.edu.cn"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "ntp.*.com"
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "*.pool.ntp.org"
+    - "+.services.googleapis.cn"
+    - "+.xn--ngstr-lra8j.com"
+    - "+.push.apple.com"
+    - "5ddd.com"
+    - "time1.cloud.tencent.com"

@@ -75,7 +75,7 @@ tproxy-port: 7894
 # rule/ global/ direct
 mode: rule
 # silent/ error/ warning/ info/ debug
-log-level: info
+log-level: warning
 # ipv6: true
 ipv6: false
 allow-lan: true
@@ -92,7 +92,7 @@ tcp-concurrent: true
 find-process-mode: strict
 # find-process-mode: off
 # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
-# global-client-fingerprint: chrome
+global-client-fingerprint: chrome
 # 连接空闲后多久发送探测包
 keep-alive-idle: 600
 # TCP Keep Alive 间隔,单位分钟
@@ -143,6 +143,7 @@ tun:
   # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
   dns-hijack:
     - any:53
+    # - tcp://any:53
   route-exclude-address: []
   mtu: 1500
   # 仅支持 Linux，自动配置 iptables/nftables 以重定向 TCP 连接，需要auto-route已启用
@@ -222,7 +223,8 @@ dns:
     # - system
     - "tls://223.5.5.5"
     - "tls://119.29.29.29"
-  direct-nameserver-follow-policy: false
+  direct-nameserver-follow-policy: true
+  # direct-nameserver-follow-policy: false
   # # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
   nameserver-policy:
     "geosite:cn,private":
@@ -344,12 +346,12 @@ ntp:
 # geo-auto-update: true
 geo-auto-update: false
 # geo自动更新间隔，单位：小时
-geo-update-interval: 72
+geo-update-interval: 24
 # standard/memconservative
 # GEO 文件加载器
-  # standard：标准加载器
-  # memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
-  # memc: memconservative别名
+# standard：标准加载器
+# memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
+# memc: memconservative别名
 geodata-loader: standard
 # geodata-loader: memconservative
 # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
@@ -513,17 +515,19 @@ rules:
 
   # - GEOSITE,gfw,默认代理
 
+  - GEOSITE,amazon@cn,默认直连
   - GEOSITE,onedrive,OneDrive
   - GEOSITE,speedtest,Speedtest
   - GEOSITE,apple,Apple
   - GEOSITE,apple@cn,Apple
   - GEOSITE,apple-cn,Apple
-  - GEOSITE,amazon@cn,默认直连
   - GEOSITE,bing,Bing
   - GEOSITE,microsoft,Microsoft
   - GEOSITE,microsoft@cn,Microsoft
   - GEOSITE,cloudflare,Cloudflare
   - GEOIP,cloudfront,默认直连,no-resolve
+  - DOMAIN-SUFFIX,cn,默认直连
+  # - GEOSITE,CN,默认直连
   - GEOIP,CN,默认直连,no-resolve
   # - GEOSITE,category-ads-all,广告拦截
 
@@ -531,12 +535,10 @@ rules:
   - RULE-SET,blackmatrix7_ad,广告拦截   # 广告过滤
   # - RULE-SET,AD,广告拦截
   # - RULE-SET,AD-Lite,广告拦截
-
   # - RULE-SET,EasyList,广告拦截
   # - RULE-SET,EasyListChina,广告拦截
   # - RULE-SET,EasyPrivacy,广告拦截
   - RULE-SET,ProgramAD,广告拦截
-  # - GEOIP,jp,默认代理,no-resolve
 
   # - IP-ASN,13335,DIRECT
   # 匹配来源 IP 所属国家代码
@@ -561,7 +563,6 @@ rules:
   # - GEOSITE,CN,默认直连
   # - GEOSITE,geolocation-cn,默认直连
   # - GEOIP,cn,默认直连,no-resolve
-  - DOMAIN-SUFFIX,cn,默认直连
   - MATCH,漏网之鱼
   
 rule-anchor:
@@ -612,17 +613,6 @@ rule-providers:
   # EasyListChina:  { <<: *domain_yaml, path: './rule-providers/EasyListChina.yaml',  url: 'https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyListChina.yaml' }
   # EasyPrivacy:    { <<: *domain_yaml, path: './rule-providers/EasyPrivacy.yaml',    url: 'https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/EasyPrivacy.yaml' }
   ProgramAD:      { <<: *domain_yaml, path: './rule-providers/ProgramAD.yaml',      url: 'https://gh-proxy.com/https://github.com/earoftoast/clash-rules/raw/main/ProgramAD.yaml' }
-  # bilibili_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geoip/bilibili.mrs" }
-  # https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/facebook.mrs
-  # https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/disney.list
-  # https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/facebook.mrs
-  # https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/facebook.mrs
-
-  # private: { <<: *ip_list, path: "./providers/rules/pribate_ip.list", url: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/private.list"}
-  # private_ip: { <<: *ip_list, path: "./providers/rules/pribate_ip.list", url: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/private.list"}
-  # https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cloudflare.srs
-  # https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/private.list
-  # https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/private.list
   # proxies: []
   # proxy-groups: []
   # rules: []
