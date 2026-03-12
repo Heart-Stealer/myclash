@@ -109,8 +109,8 @@ tcp-concurrent: true
 # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 # always/strict/off
 # 路由器 off
-find-process-mode: strict
-# find-process-mode: off
+# find-process-mode: strict
+find-process-mode: off
 # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
 global-client-fingerprint: chrome
 # 连接空闲后多久发送探测包
@@ -147,13 +147,13 @@ lan-disallowed-ips: []
 tun:
 # 路由器 true
   # 启用 tun
-  # enable: true
-  enable: false
+  enable: true
+  # enable: false
   # 路由器
   device: Mihomo
   # system/gvisor/mixed
   # https://wiki.metacubex.one/config/inbound/tun/?h=android#stack
-  stack: mixed
+  stack: system
   # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡
   auto-route: true
   # 是否自动重定向网络流量
@@ -362,6 +362,12 @@ ntp:
   port: 123
   interval: 30
 
+cmfa-plugin:
+  mode: tun
+  # mode: tproxy
+  dashboard: zashboard
+  mosdns_enable: false
+
 # 自动更新 GEO 文件,可选 true/false
 # geo-auto-update: true
 geo-auto-update: false
@@ -372,11 +378,11 @@ geo-update-interval: 24
 # standard：标准加载器
 # memconservative: 专为内存受限 (小内存) 设备优化的加载器 (默认值)
 # memc: memconservative别名
-geodata-loader: standard
-# geodata-loader: memconservative
+# geodata-loader: standard
+geodata-loader: memconservative
 # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
-# geodata-mode: true
-geodata-mode: false
+geodata-mode: true
+# geodata-mode: false
 geox-url:
   geoip: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
   geosite: "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
