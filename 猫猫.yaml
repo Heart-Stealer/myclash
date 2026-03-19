@@ -7,7 +7,6 @@ DY_urltest: &DY_urltest
     enable: true
     # url: https://cp.cloudflare.com/generate_204
     url: https://www.gstatic.com/generate_204
-    # url: http://www.gstatic.com/generate_204
     interval: 600
     # timeout: 5 # 秒
     timeout: 3000 # 秒
@@ -498,6 +497,7 @@ proxy-groups:
 
 rules:
   - RULE-SET,aa-direct,默认直连
+  - RULE-SET,aa-reject,广告拦截
   - RULE-SET,aa-proxy0,默认代理
   - RULE-SET,ab-direct,默认直连
   - GEOSITE,category-companies@cn,默认直连
@@ -709,10 +709,12 @@ rule-providers:
   # aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rules/aa-proxy.yaml"}
   aa-fakeip: { <<: *domain_yaml, path: "./rule-providers/aa-fakeip.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-fakeip.yaml"}
   aa-direct: { <<: *class_yaml, path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-direct.yaml"}
+  aa-reject: { <<: *class_yaml, path: "./rule-providers/aa-reject.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-reject.yaml"}
   aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-proxy0.yaml"}
   ab-direct: { <<: *class_yaml, path: "./rule-providers/ab-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/ab-direct.yaml"}
   # aa-fakeip: { <<: *domain_yaml_file, path: ./rule-providers/aa-fakeip.yaml}
   # aa-direct: { <<: *class_yaml_file, path: ./rule-providers/aa-direct.yaml}
+  # aa-reject: { <<: *class_yaml_file, path: ./rule-providers/aa-reject.yaml}
   # aa-proxy0: { <<: *class_yaml_file, path: ./rule-providers/aa-proxy0.yaml}
   # ab-direct: { <<: *class_yaml_file, path: ./rule-providers/ab-direct.yaml}
   # 内网域名和局域网 IP
