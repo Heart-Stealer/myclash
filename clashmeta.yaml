@@ -407,6 +407,8 @@ external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/re
 Proxy_first: &Proxy_first   {type: select, proxies: [默认代理, 默认直连, 手动选择, 负载均衡, 自动选择], udp: true}
 Direct_first: &Direct_first {type: select, proxies: [DIRECT, REJECT, 手动选择, 负载均衡, 自动选择], udp: true}
 Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选择, 负载均衡, 自动选择], udp: true}
+Direct_default: &Direct_default {type: select, proxies: [默认直连, 广告拦截, DIRECT, REJECT, 手动选择, 自动选择], udp: true}
+Reject_default: &Reject_default {type: select, proxies: [广告拦截, 默认直连, REJECT, DIRECT, 手动选择, 自动选择], udp: true}
 Include_all: &Include_all   {type: select, proxies: [手动选择, 默认直连, 负载均衡, 自动选择], udp: true}
 # select_auto: &select_auto   {type: select, proxies: [自动选择, 香港自动, 日本自动, 狮城自动, 美国自动], udp: true}
 
@@ -451,12 +453,18 @@ proxy-groups:
   - {name: Openai,      <<: *Proxy_first,  icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/openai.svg"}
   - {name: Facebook,    <<: *Proxy_first,  icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/facebook.svg"}
 
-  - {name: Bing,        <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/bing.svg"}
-  - {name: Cloudflare,  <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/cloudflare.svg"}
-  - {name: Microsoft,   <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/microsoft.svg"}
-  - {name: OneDrive,    <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/onedrive.svg"}
-  - {name: Speedtest,   <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/speed.svg"}
-  - {name: Apple,       <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/apple.svg"}
+  - {name: Bing,        <<: *Direct_default, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/bing.svg"}
+  - {name: Cloudflare,  <<: *Direct_default, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/cloudflare.svg"}
+  - {name: Microsoft,   <<: *Direct_default, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/microsoft.svg"}
+  - {name: OneDrive,    <<: *Direct_default, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/onedrive.svg"}
+  - {name: Speedtest,   <<: *Direct_default, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/speed.svg"}
+  - {name: Apple,       <<: *Direct_default, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/apple.svg"}
+  # - {name: Bing,        <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/bing.svg"}
+  # - {name: Cloudflare,  <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/cloudflare.svg"}
+  # - {name: Microsoft,   <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/microsoft.svg"}
+  # - {name: OneDrive,    <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/onedrive.svg"}
+  # - {name: Speedtest,   <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/speed.svg"}
+  # - {name: Apple,       <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/apple.svg"}
 
   # - {name: 香港节点,    <<: *self_hk,      icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/hk.svg"}
   # - {name: 日本节点,    <<: *self_jp,      icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/flags/jp.svg"}
