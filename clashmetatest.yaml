@@ -3,7 +3,7 @@ proxies:
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
   - {"name": "A - 🇯🇵 JP 01","type": "vmess","server": "103.127.243.54","port": 53229,"cipher": "auto","uuid": "2f50f5ef-1a3a-4585-a3c9-3a860d37b134","alterId": 0,"tls": false,"network": "http","http-opts": {"method": "GET","path": ["/ABCDE"]},"client-fingerprint": "chrome"}
   - {"name": "C - 🇺🇸 US 25","type": "vmess","server": "v24.hdacd.com","port": 30824,"cipher": "auto","uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId": 2}
-  - {"name":"B - 🇺🇸 US 10","type":"mieru","server":"157.254.223.44","port":34567,"username":"dongtaiwang.com","password":"dongtaiwang.com"}
+  - {"name":"B - 🇺🇸 US 10","type":"mieru","server":"157.254.223.44","port":34567,"username":"dongtaiwang.com","password":"dongtaiwang.com","multiplexing":"MULTIPLEXING_LOW","transport":"TCP"}
   - {"name":"B - 🇷🇴 RO 01","type":"http","server":"193.176.84.24","port":9002,"tls":true,"skip-cert-verify":true}
   - {"name":"B - 🇷🇴 RO 02","type":"http","server":"193.176.84.32","port":9002,"tls":true,"sni":"www.bing.com","skip-cert-verify":true}
   - {"name":"B - 🇷🇴 RO 03","type":"http","server":"193.176.84.20","port":9002,"tls":true,"skip-cert-verify":true}
