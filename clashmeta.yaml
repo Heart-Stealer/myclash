@@ -6,7 +6,8 @@ DY_urltest: &DY_urltest
   health-check:
     enable: true
     # url: https://cp.cloudflare.com/generate_204
-    url: https://www.gstatic.com/generate_204
+    # url: https://www.gstatic.com/generate_204
+    url: https://www.google.com/generate_204
     interval: 600
     # timeout: 5 # 秒
     timeout: 3000 # 秒
@@ -18,7 +19,7 @@ DY_urltest: &DY_urltest
   # health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300, timeout: 3000, tolerance: 50, lazy: true}
   override:
     proxy-name:
-      - pattern: "(?i)(mibei77.com 米贝节点分享|Relay_|Relay_-|Azure-|free|三网爽|移动|快乐|TG@ZDYZ2|印度|拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
+      - pattern: "(?i)(【机场推荐：https://a9a.xyz】|mibei77.com 米贝节点分享|Relay_|Relay_-|Azure-|free|三网爽|移动|快乐|TG@ZDYZ2|印度|拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)"
         target: ""
 
 proxy-providers:
@@ -29,6 +30,26 @@ proxy-providers:
     path: ./proxy-providers/clashmeta.yaml
     url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     <<: *DY_urltest
+
+  mycf:
+    type: http
+    path: ./proxy-providers/mycf.yaml
+    url: ""
+    <<: *DY_urltest
+
+  # Nodpai:
+  #   type: http
+  #   path: ./proxy-providers/Nodpai.yaml
+  #   url: "https://pai.yt/clash?tag=ct"
+  #   <<: *DY_urltest
+
+  xrayvip:
+    type: http
+    path: ./proxy-providers/xrayvip.yaml
+    url: "https://www.xrayvip.com/free.txt"
+    <<: *DY_urltest
+
+
   # 米贝节点分享:
   #   type: http
   #   path: ./proxy-providers/mibei77.yaml
@@ -76,6 +97,10 @@ Dingyue: &Dingyue
   udp: true
   use:
     - 本地配置
+    - xrayvip
+    - mycf
+    # - Nodpai
+    # - dingyue_Center2
     # - 米贝节点分享
     # - 订阅分享中心
     # - 电报ZDYZ2
