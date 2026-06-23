@@ -31,5 +31,6 @@ payload:
   - DOMAIN-SUFFIX,googleusercontent.com
   - DOMAIN-SUFFIX,android.com
   - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,apkmirror.com
   # - DOMAIN-KEYWORD,google
   # - IP-CIDR,10.0.0.0/8
