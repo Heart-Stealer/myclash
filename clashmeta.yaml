@@ -2,12 +2,12 @@
 DY_urltest: &DY_urltest
   proxy: DIRECT
   udp: true
-  interval: 43200
+  interval: 604800
   health-check:
     enable: true
     # url: https://cp.cloudflare.com/generate_204
-    # url: https://www.gstatic.com/generate_204
-    url: https://www.google.com/generate_204
+    url: https://www.gstatic.com/generate_204
+    # url: https://www.google.com/generate_204
     interval: 600
     # timeout: 5 # 秒
     timeout: 3000 # 秒
@@ -31,6 +31,12 @@ proxy-providers:
     url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     <<: *DY_urltest
 
+  xrayvip:
+    type: http
+    path: ./proxy-providers/xrayvip.yaml
+    url: "https://www.xrayvip.com/free.txt"
+    <<: *DY_urltest
+
   mycf:
     type: http
     path: ./proxy-providers/mycf.yaml
@@ -42,13 +48,6 @@ proxy-providers:
   #   path: ./proxy-providers/Nodpai.yaml
   #   url: "https://pai.yt/clash?tag=ct"
   #   <<: *DY_urltest
-
-  xrayvip:
-    type: http
-    path: ./proxy-providers/xrayvip.yaml
-    url: "https://www.xrayvip.com/free.txt"
-    <<: *DY_urltest
-
 
   # 米贝节点分享:
   #   type: http
