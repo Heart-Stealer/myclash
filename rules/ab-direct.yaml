@@ -8,8 +8,8 @@
 # TOTAL: ?
 payload:
   # - DOMAIN,exampl.com
-  - DOMAIN,vivo.com
-  - DOMAIN,vivo.com.cn
+  # - DOMAIN,vivo.com
+  # - DOMAIN,vivo.com.cn
 
   # - DOMAIN-SUFFIX,google.com
   - DOMAIN-SUFFIX,gh-proxy.com

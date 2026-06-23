@@ -8,6 +8,7 @@
 # TOTAL: ?
 payload:
   # - DOMAIN,clash.razord.top
+  # - DOMAIN,dl.delivery.mp.microsoft.com
   - DOMAIN-SUFFIX,kyarucloud.moe
   - DOMAIN-SUFFIX,eporner.com
   - DOMAIN-SUFFIX,googleapis.cn
@@ -17,7 +18,19 @@ payload:
   - DOMAIN-SUFFIX,metacubex.one
   - DOMAIN-SUFFIX,v2rayse.com
   - DOMAIN-SUFFIX,yamllint.com
-  # - DOMAIN-SUFFIX,github.com
-  # - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN-SUFFIX,rou.video
+  - DOMAIN-SUFFIX,jable.tv
+  - DOMAIN-SUFFIX,javtiful.com
+  - DOMAIN-SUFFIX,ppp.porn
+  - DOMAIN-SUFFIX,voidtools.com
+  - DOMAIN-SUFFIX,github.com
+  - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,gstatic.cn
+  - DOMAIN-SUFFIX,ggpht.com
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,android.com
+  - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,apkmirror.com
   # - DOMAIN-KEYWORD,google
   # - IP-CIDR,10.0.0.0/8
