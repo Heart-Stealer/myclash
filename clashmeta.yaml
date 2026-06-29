@@ -31,11 +31,17 @@ proxy-providers:
     url: "https://gh-proxy.com/https://github.com/Heart-Stealer/myclash/raw/main/clashmetatest.yaml"
     <<: *DY_urltest
 
-  xrayvip:
-    type: http
-    path: ./proxy-providers/xrayvip.yaml
-    url: "https://www.xrayvip.com/free.txt"
-    <<: *DY_urltest
+  # zcamaf:
+  #   type: http
+  #   path: ./proxy-providers/zcamaf.yaml
+  #   url: "https://hsy.zcamaf.com/api/v1/client/subscribe?token=e74fc421853933a2071020b196a80176#6T"
+  #   <<: *DY_urltest
+
+  # xrayvip:
+  #   type: http
+  #   path: ./proxy-providers/xrayvip.yaml
+  #   url: "https://www.xrayvip.com/free.txt"
+  #   <<: *DY_urltest
 
   mycf:
     type: http
@@ -96,7 +102,8 @@ Dingyue: &Dingyue
   udp: true
   use:
     - 本地配置
-    - xrayvip
+    # - zcamaf
+    # - xrayvip
     - mycf
     # - Nodpai
     # - dingyue_Center2

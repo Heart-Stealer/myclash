@@ -1,36 +1,44 @@
 proxies:
+  - name: 🇭🇰 香港-智能-中转-2
+    type: anytls
+    server: ezlink.carkk.com
+    port: 14191
+    password: 575324da-63f6-448e-963f-4d67e9ea4cb4
+    sni: hkxg4.fun88linkvn.com
+    skip-cert-verify: false
+    tls: false
+    udp: true
+  - name: 🇭🇰 香港-家宽-直连-2
+    type: vless
+    server: 2zht.cbq4.zcvh.a.vvps.xyz
+    port: 443
+    uuid: 575324da-63f6-448e-963f-4d67e9ea4cb4
+    servername: www.yahoo.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: DOGHciMvy3CcShNwgR16D6KpLf4oejTQPFMrD6234DY
+      short-id: 76de7fea
+    skip-cert-verify: false
+    udp: true
+  - name: 🇨🇳 台湾-智能-中转-2
+    type: anytls
+    server: ezlink.carkk.com
+    port: 443
+    password: 575324da-63f6-448e-963f-4d67e9ea4cb4
+    sni: twxg6.fun88linkvn.com
+    skip-cert-verify: false
+    tls: false
+    udp: true
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
-  - {"type": "vless","name": "亚洲 香港02-3.0","server": "101.32.74.224","port": 12817,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  # - {"type": "vless","name": "亚洲 香港02-3.5","server": "101.32.74.224","port": 12817,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "亚洲 香港05-1.0","server": "43.132.231.159","port": 443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "亚洲 东京05-1.0","server": "43.133.23.88","port": 8388,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "亚洲 新加坡20-3.0","server": "43.160.233.97","port": 443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "亚洲 新加坡22-3.0","server": "43.160.247.113","port": 9999,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "亚洲 新加坡23-3.0","server": "43.160.200.156","port": 4443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "北美洲 圣何塞01-2.0","server": "43.153.84.176","port": 443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "北美洲 圣何塞02-1.0","server": "43.135.186.188","port": 39738,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "北美洲 圣何塞03-1.5","server": "170.106.83.41","port": 12345,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "北美洲 圣何塞04-1.5","server": "170.106.109.59","port": 587,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "北美洲 圣何塞05-1.5","server": "43.159.138.237","port": 443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  # - {"type": "vless","name": "北美洲 圣何塞06","server": "43.153.1.183","port": 39738,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "北美洲 圣何塞07-2.0","server": "43.135.180.101","port": 9443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  # - {"type": "vless","name": "北美洲 圣何塞08","server": "43.153.112.165","port": 6443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "北美洲 圣何塞09-2.0","server": "170.106.84.131","port": 443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-  - {"type": "vless","name": "北美洲 圣何塞10-5.5","server": "43.153.124.18","port": 443,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
-
-  - {"name": "A - 🇯🇵 JP 01","type": "vmess","server": "103.127.243.54","port": 53229,"cipher": "auto","uuid": "2f50f5ef-1a3a-4585-a3c9-3a860d37b134","alterId": 0,"tls": false,"network": "http","http-opts": {"method": "GET","path": ["/ABCDE"]},"client-fingerprint": "chrome"}
-  - {"name": "B - 🇺🇸 US 10","type": "mieru","server": "157.254.223.44","port": 34567,"username": "dongtaiwang.com","password": "dongtaiwang.com","multiplexing": "MULTIPLEXING_LOW","transport": "TCP"}
-  - {"name": "xrayvip06-23","type": "vless","server": "151.101.194.219","port": 80,"uuid": "0058c215-ab1e-400c-a403-b5b2fda7e846","tls": false,"servername": "max-gb1.global.ssl.fastly.net","network": "ws","ws-opts":{"path": "/","headers":{"host": "max-gb1.global.ssl.fastly.net"}}}
-  - {"type": "vless","name": "CA4-5.0","server": "151.101.0.1","port": 80,"uuid": "0058c215-ab1e-400c-a403-b5b2fda7e846","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "max-gb1.global.ssl.fastly.net"},"path": "/"},"client-fingerprint": "chrome","servername": "max-gb1.global.ssl.fastly.net","udp": true}
-  - {"type": "vless","name": "CA3-5.0","server": "151.101.194.219","port": 80,"uuid": "0058c215-ab1e-400c-a403-b5b2fda7e846","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "max-gb1.global.ssl.fastly.net"},"path": "/"},"client-fingerprint": "chrome","servername": "max-gb1.global.ssl.fastly.net","udp": true}
-  - {"type": "vless","name": "GB7-5.0","server": "speedtest.net","port": 80,"uuid": "0058c215-ab1e-400c-a403-b5b2fda7e846","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "max-gb1.global.ssl.fastly.net"},"path": "/"},"client-fingerprint": "chrome","servername": "max-gb1.global.ssl.fastly.net","udp": true}
-
 
   - {"name": "367-1.0","server": "5.188.181.201","type": "ss","port": 9001,"udp": true,"password": "UkXRsXvR6buDMG2Y","cipher": "aes-256-cfb"}
+  - {"name": "A - 🇯🇵 JP 01","type": "vmess","server": "103.127.243.54","port": 53229,"cipher": "auto","uuid": "2f50f5ef-1a3a-4585-a3c9-3a860d37b134","alterId": 0,"tls": false,"network": "http","http-opts": {"method": "GET","path": ["/ABCDE"]},"client-fingerprint": "chrome"}
   - {"name": "C - 🇺🇸 US 25","type": "vmess","server": "v24.hdacd.com","port": 30824,"cipher": "auto","uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId": 2}
-  - {"type": "vless","name": "CA2-5.0","server": "151.101.2.219","port": 80,"uuid": "0058c215-ab1e-400c-a403-b5b2fda7e846","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "max-gb1.global.ssl.fastly.net"},"path": "/"},"client-fingerprint": "chrome","servername": "max-gb1.global.ssl.fastly.net","udp": true}
   - {name: "C-US 35",type: "ss", server: "172.96.161.152", port: 20090, cipher: "2022-blake3-aes-128-gcm", password: "YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==", plugin: "gost-plugin", plugin-opts: {path: "/ws", host: "one.local", tls: false, mux: true, mode: "websocket"}, udp: true}
+  - {"name": "B - 🇺🇸 US 10","type": "mieru","server": "157.254.223.44","port": 34567,"username": "dongtaiwang.com","password": "dongtaiwang.com","multiplexing": "MULTIPLEXING_LOW","transport": "TCP"}
 
   # - {"type": "vless","name": "亚洲 香港01","server": "43.132.244.52","port": 21415,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
   # - {"type": "vless","name": "亚洲 香港02","server": "101.32.74.224","port": 12817,"uuid": "03d73bc8-01a9-46a7-90b9-3d27065ed328","tls": true,"client-fingerprint": "chrome","skip-cert-verify": false,"network": "ws","ws-opts":{"headers":{"Host": "c.eoa.ccwu.cc"},"path":"/"},"encryption": "none","servername": "c.eoa.ccwu.cc"}
