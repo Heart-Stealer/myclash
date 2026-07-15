@@ -1,13 +1,19 @@
 proxies:
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
+  # - {"type":"vless","name":"RU2-5.0","server":"msk.24pitbullstore.ru","port":2087,"uuid":"570779d8-b4cd-4b3c-a8bd-6127f51c4d48","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"firefox","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"J2RPvguvaBHlFDFOcZHs4sY9wSNIGNvvmDZud49A7i8","short-id":"9f0a1b2c"},"network":"tcp","encryption":"none","servername":"msk.24pitbullstore.ru"}
+  # - {"type":"vless","name":"NL18-0.3","server":"run.gigicalla.ir","port":2082,"uuid":"5da0ef6a-eb08-4a7c-a982-b68d3a04b0a8","udp":true,"skip-cert-verify":false,"packet-encoding":"xudp","network":"tcp"}
 
   - {"name": "367-1.0","server": "5.188.181.201","type": "ss","port": 9001,"udp": true,"password": "UkXRsXvR6buDMG2Y","cipher": "aes-256-cfb"}
   - {"name": "A - 🇯🇵 JP 01","type": "vmess","server": "103.127.243.54","port": 53229,"cipher": "auto","uuid": "2f50f5ef-1a3a-4585-a3c9-3a860d37b134","alterId": 0,"tls": false,"network": "http","http-opts": {"method": "GET","path": ["/ABCDE"]},"client-fingerprint": "chrome"}
-  - {"name": "C - 🇺🇸 US 25","type": "vmess","server": "v24.hdacd.com","port": 30824,"cipher": "auto","uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId": 2}
-  - {name: "C-US 35",type: "ss", server: "172.96.161.152", port: 20090, cipher: "2022-blake3-aes-128-gcm", password: "YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==", plugin: "gost-plugin", plugin-opts: {path: "/ws", host: "one.local", tls: false, mux: true, mode: "websocket"}, udp: true}
-  - {"name": "B - 🇺🇸 US 10","type": "mieru","server": "157.254.223.44","port": 34567,"username": "dongtaiwang.com","password": "dongtaiwang.com","multiplexing": "MULTIPLEXING_LOW","transport": "TCP"}
+
   - {"name":"🇭🇰香港精品31","server":"d3ffdb1b-t57ls0-tedirp-1fli7.hkt.cdnhuawei.com","port":8443,"type":"http","username":"0abd5d38-fdf1-11ed-bade-f23c91369f2d","password":"<password>","tls":true,"skip-cert-verify":true,"sni":"d3ffdb1b-t57ls0-tedirp-1fli7.hkt.cdnhuawei.com","client-fingerprint":"chrome"}
+  - {"name":"🇹🇼 台湾家宽 01","server":"twmoon1-cdn-route.couldflare-cdn.com","port":1443,"type":"http","username":"mrwdfNTD8M79LCukCieldrqZWqs=","password":"exaxgqkKkd0TAMrCxeonWg==","tls":true,"skip-cert-verify":false,"client-fingerprint":"chrome","sni":"twmoon1-cdn-route.couldflare-cdn.com"}
+  - {"name": "C - 🇺🇸 US 35","type": "ss", "server": "172.96.161.152", "port": 20090, "cipher": "2022-blake3-aes-128-gcm", "password": "YTE1ZWU4ZTEyZjc3YmEzZA==:Y2JhZTU3ODYtZjg3MC00NA==", "plugin": "gost-plugin", "plugin-opts": {"path": "/ws", "host": "one.local", "tls": false, "mux": true, "mode": "websocket"}, "udp": true}
+  - {"name": "C - 🇺🇸 US 25","type": "vmess","server": "v24.hdacd.com","port": 30824,"cipher": "auto","uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId": 2}
+  - {"name": "B - 🇺🇸 US 10","type": "mieru","server": "157.254.223.44","port": 34567,"username": "dongtaiwang.com","password": "dongtaiwang.com","multiplexing": "MULTIPLEXING_LOW","transport": "TCP"}
+  - {"type":"vless","name":"FI26-5.0","server":"fn.fifapes.monster","port":2090,"uuid":"eab915bc-d2df-73d1-47d0-6eb240497055","udp":true,"skip-cert-verify":false,"packet-encoding":"xudp","network":"tcp"}
+  - {"type":"vless","name":"节点-3.0","server":"77.110.113.188","port":443,"uuid":"218fd696-e3a2-4c33-b397-a5f13a82969e","udp":true,"tls":true,"client-fingerprint":"qq","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"4e4FI0siWxFtLCRCVDQurn1wLTuvKWhRY0zj1SaUcyw","short-id":"1559b440"},"network":"tcp","servername":"www.samsung.com"}
 
   # - {"name":"🇺🇸 yo洛杉矶","server":"23.144.4.77","port":8549,"type":"vless","uuid":"45293831-ab97-4784-ad13-3f1dfa8a651a","tls":true,"tfo":false,"flow":"xtls-rprx-vision","skip-cert-verify":false,"reality-opts":{"public-key":"Cb2QHdflCI0Wevjld7K6rR8YaDNfmY_4hbNHaB9fSws"},"client-fingerprint":"chrome","network":"tcp","servername":"www.ebay.com"}
   # - {"name":"🇭🇰 Yoo 2T2号","server":"103.193.173.51","port":39485,"type":"vless","uuid":"25b3faeb-89b0-4dff-b0a3-0e70997dc962","tls":true,"tfo":false,"flow":"xtls-rprx-vision","skip-cert-verify":false,"reality-opts":{"public-key":"pzmFiyOtVaKJpJlXYC_hJcDw0hiPvPZ661uZn4NO0Xs","short-id":"b9"},"client-fingerprint":"random","network":"tcp","servername":"www.icloud.com"}
