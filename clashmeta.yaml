@@ -436,6 +436,7 @@ external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/re
 # uci set nikki.mixin.ui_url='https://github.com/MetaCubeX/Razord-meta/archive/refs/heads/gh-pages.zip'
 
 Proxy_first: &Proxy_first   {type: select, proxies: [默认代理, 默认直连, 手动选择, 负载均衡, 自动选择], udp: true}
+The_last_one: &The_last_one   {type: select, proxies: [DIRECT, REJECT, 默认代理, 默认直连], udp: true}
 Direct_first: &Direct_first {type: select, proxies: [DIRECT, REJECT, 手动选择, 负载均衡, 自动选择], udp: true}
 Reject_first: &Reject_first {type: select, proxies: [REJECT, DIRECT, 手动选择, 负载均衡, 自动选择], udp: true}
 Direct_default: &Direct_default {type: select, proxies: [默认直连, 广告拦截, DIRECT, REJECT, 手动选择, 自动选择], udp: true}
@@ -464,7 +465,7 @@ proxy-groups:
   - {name: 默认代理,    <<: *Include_all,  icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/embedded.svg"}
   - {name: 手动选择,    <<: *Dingyue,      icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/adjust.svg"}
   # - {name: 手动自动,    <<: *select_auto,  icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/recycle.svg"}
-  - {name: 漏网之鱼,    <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/fish.svg"}
+  - {name: 漏网之鱼,    <<: *The_last_one, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/fish.svg"}
   - {name: 默认直连,    <<: *Direct_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/link.svg"}
   - {name: 广告拦截,    <<: *Reject_first, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/block.svg"}
   - {name: 自动选择,    <<: *self_au,      icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/icons/merry_go.svg"}
