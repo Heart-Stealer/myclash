@@ -1,0 +1,365 @@
+showNewVersionIcon: false
+hideAfterStartup: true
+randomControllerPort: false
+runTimeFormat: "hh : mm : ss"
+trayOrders:
+  - - icon
+  - - status
+    - traffic
+    - text
+hideTrayIcon: false
+connShowProcess: true
+showTrayProxyDelayIndicator: true
+showNotifications: true
+randomMixedPort: false
+lightweightMode: true
+theme: 1
+systemTheme: true
+fontFamily: ""
+useSystemEmoji: false
+useModeIcons: false
+trayProxiesStyle: 1
+trayColorTransparent: false
+systemProxyTypeIndex: 0
+specifyHttpProxyProtocol: false
+mixinType: 0
+proxyItemWidth: ""
+proxyMiniListWidth: ""
+proxyOrder: 0
+proxyDelayType: 0
+latencyUrl: http://www.google.com/generate_204
+latencyTimeout: .nan
+showProxyFilter: true
+hideUnselectableGroup: false
+connProxy: 0
+connProfile: false
+connMode: false
+connChainType: 0
+editProfileWithCFWEditor: false
+interfaceName: 以太网
+selectAfterUpdated: false
+logPreloadLineCount: .nan
+shortcutSystemProxy: ""
+shortcutTun: ""
+shortcutMixin: ""
+shortcutGlobalMode: ""
+shortcutRuleMode: ""
+shortcutDirectMode: ""
+shortcutScriptMode: ""
+shortcutShowHideDashboard: ""
+shortcutRunTrayScript: ""
+editorFontSize: .nan
+staticSystemProxyHost: ""
+profileParsersText: >-
+  parsers: # array
+    # - reg: ^.*$ 匹配所有订阅，或  - url: https://example.com/profile.yaml 指定订阅
+    - reg: 'rule$'
+  # 删除服务商提供的策略组和规则
+      code: |
+        module.exports.parse = (raw, { yaml }) => {
+          const rawObj = yaml.parse(raw)
+          const groups = []
+          const rules = []
+          return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
+        } 
+      yaml:
+        append-proxy-groups:
+          - name: 🚀 节点选择
+            type: select
+          - name: ☑️ 手动切换
+            type: select
+          - name: ♻️ 自动选择
+            type: url-test
+            url: http://www.google.com/generate_204
+            # url: http://www.gstatic.com/generate_204
+            interval: 300
+            tolerance: 50
+          - name: ⚖️ 负载均衡
+            type: load-balance
+            url: http://www.google.com/generate_204
+            interval: 300
+            strategy: round-robin
+          - name: 🎯 全球直连
+            type: select
+          - name: 🛑 全球拦截
+            type: select
+          - name: 🐟 漏网之鱼
+            type: select
+          # - name: ⚖️ 其他
+          #   type: load-balance
+          #   url: http://www.google.com/generate_204
+          #   interval: 300
+          #   strategy: round-robin
+     # 策略组示例
+     #      - name: 分组名
+     #        type: select       # 手动选点   
+     #              url-test     # 自动选择延迟最低的节点
+     #              fallback     # 节点故障时自动切换下一个
+     #              laod-balance # 均衡使用分组内的节点
+     #        url: http://www.gstatic.com/generate_204 # 测试地址 非select类型分组必要
+     #        interval: 300 # 自动测试间隔时间，单位秒 非select类型分组必要
+     #        tolerance: 50 # 允许的偏差，节点之间延迟差小于该值不切换 非必要
+     #        proxies:  
+     #          - 节点名称或其他分组套娃
+        commands:
+          # - proxy-groups.🚀 节点选择.proxies=[]proxyNames|(.*)
+          # - proxy-groups.⚖️ 其他.proxies=[]proxyNames|(CF)
+          # - proxy-groups.0.proxies.0+⚖️ 其他
+          - proxy-groups.⚖️ 负载均衡.proxies=[]proxyNames|(.*(.*(-2.|-3.|-4.|-5.|-6.|-7.|-8.|-9.|-10.|-11.|-12.|-13.|-14.|-15.|-16.)))
+          - proxy-groups.0.proxies.0+⚖️ 负载均衡
+          - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
+          - proxy-groups.🐟 漏网之鱼.proxies.0+DIRECT
+          - proxy-groups.🛑 全球拦截.proxies.0+REJECT
+          # - proxy-groups.🛑 全球拦截.proxies.0+DIRECT
+          - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
+          - proxy-groups.🎯 全球直连.proxies.0+DIRECT
+          - proxy-groups.☑️ 手动切换.proxies=[]proxyNames|(.*)
+          - proxy-groups.0.proxies.0+☑️ 手动切换
+          - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
+          - proxy-groups.0.proxies.0+♻️ 自动选择
+          - proxy-groups.🚀 节点选择.proxies.0+DIRECT
+        prepend-rules:
+          - DOMAIN,clash.razord.top,DIRECT,no-resolve
+          - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
+          - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,DIRECT,no-resolve
+          - DOMAIN,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT,no-resolve
+          - DOMAIN-KEYWORD,microsoft,DIRECT,no-resolve
+          - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
+          - DOMAIN-SUFFIX,surrit.com,DIRECT
+          - DOMAIN-SUFFIX,cdn.skyearth.xyz:443,DIRECT
+          - DOMAIN-SUFFIX,sixyik.com,DIRECT
+          - DOMAIN-SUFFIX,javxxx.me,DIRECT
+          - DOMAIN-SUFFIX,cdn.fapnfuck.com,DIRECT
+          - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,DIRECT
+          - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,DIRECT
+          # - DOMAIN-SUFFIX,galav-oxwy.mushroomtrack.com,DIRECT
+          # PROCESS-PATH,C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,🚀 🇺🇸美国-自动选择
+          # PROCESS-PATH,C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,DIRECT
+          # - DOMAIN-SUFFIX,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT
+          # - DOMAIN-SUFFIX,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com:443,DIRECT
+          # - DOMAIN-SUFFIX,javtiful.com:443,🚀 节点选择
+          - RULE-SET,applications,DIRECT
+          - DOMAIN,clash.razord.top,DIRECT
+          - DOMAIN,yacd.haishan.me,DIRECT
+          - RULE-SET,private,DIRECT
+          - RULE-SET,reject,REJECT
+          - RULE-SET,icloud,DIRECT #
+          - RULE-SET,apple,DIRECT # 这三个为国内可直连地址，如果希望走代理改为🚀 节点选择
+          - RULE-SET,google,DIRECT # 
+          - RULE-SET,tld-not-cn,🚀 节点选择
+          - RULE-SET,gfw,🚀 节点选择
+          - RULE-SET,greatfire,🚀 节点选择
+          - RULE-SET,telegramcidr,🚀 节点选择
+          - RULE-SET,lancidr,DIRECT
+          - RULE-SET,cncidr,DIRECT
+          - GEOIP,CN,DIRECT
+          - RULE-SET,direct,DIRECT
+          - RULE-SET,proxy,🐟 漏网之鱼
+          - MATCH,🐟 漏网之鱼 # 规则之外的
+        mix-rule-providers: 
+          reject: # 广告域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+            path: ./ruleset/reject.yaml
+            interval: 86400
+            
+          icloud: # iCloud 域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+            path: ./ruleset/icloud.yaml
+            interval: 86400
+            
+          apple: # Apple 在中国大陆可直连的域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+            path: ./ruleset/apple.yaml
+            interval: 86400
+            
+          google: # Google 在中国大陆可直连的域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+            path: ./ruleset/google.yaml
+            interval: 86400
+            
+          proxy: # 代理域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+            path: ./ruleset/proxy.yaml
+            interval: 86400
+            
+          direct: # 直连域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+            path: ./ruleset/direct.yaml
+            interval: 86400
+            
+          private: # 私有网络专用域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+            path: ./ruleset/private.yaml
+            interval: 86400
+            
+          gfw: # GFWList 域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+            path: ./ruleset/gfw.yaml
+            interval: 86400
+            
+          greatfire: # GreatFire 域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
+            path: ./ruleset/greatfire.yaml
+            interval: 86400
+            
+          tld-not-cn: # 非中国大陆使用的顶级域名列表
+            type: http
+            behavior: domain
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+            path: ./ruleset/tld-not-cn.yaml
+            interval: 86400
+            
+          telegramcidr: # Telegram 使用的 IP 地址列表
+            type: http
+            behavior: ipcidr
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+            path: ./ruleset/telegramcidr.yaml
+            interval: 86400
+            
+          cncidr: # 中国大陆 IP 地址列表
+            type: http
+            behavior: ipcidr
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+            path: ./ruleset/cncidr.yaml
+            interval: 86400
+            
+          lancidr: # 局域网 IP 及保留 IP 地址列表
+            type: http
+            behavior: ipcidr
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+            path: ./ruleset/lancidr.yaml
+            interval: 86400
+            
+          applications: # 需要直连的常见软件列表
+            type: http
+            behavior: classical
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+            path: ./ruleset/applications.yaml
+            interval: 86400
+parsers:
+  - reg: rule$
+    code: |
+      module.exports.parse = (raw, { yaml }) => {
+        const rawObj = yaml.parse(raw)
+        const groups = []
+        const rules = []
+        return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
+      } 
+    yaml:
+      append-proxy-groups:
+        - name: 🚀 节点选择
+          type: select
+        - name: ☑️ 手动切换
+          type: select
+        - name: ♻️ 自动选择
+          type: url-test
+          url: http://www.google.com/generate_204
+          interval: 300
+          tolerance: 50
+        - name: ⚖️ 负载均衡
+          type: load-balance
+          url: http://www.google.com/generate_204
+          interval: 300
+          strategy: round-robin
+        - name: 🎯 全球直连
+          type: select
+        - name: 🛑 全球拦截
+          type: select
+        - name: 🐟 漏网之鱼
+          type: select
+      commands:
+        - proxy-groups.⚖️
+          负载均衡.proxies=[]proxyNames|(tg|Tg|TG|cf|Cf|CF|-3.|-4.|-5.|-6.|-7.)
+        - proxy-groups.0.proxies.0+⚖️ 负载均衡
+        - proxy-groups.🐟 漏网之鱼.proxies.0+🚀 节点选择
+        - proxy-groups.🐟 漏网之鱼.proxies.0+DIRECT
+        - proxy-groups.🛑 全球拦截.proxies.0+REJECT
+        - proxy-groups.🎯 全球直连.proxies.0+🚀 节点选择
+        - proxy-groups.🎯 全球直连.proxies.0+DIRECT
+        - proxy-groups.☑️ 手动切换.proxies=[]proxyNames|(.*)
+        - proxy-groups.0.proxies.0+☑️ 手动切换
+        - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
+        - proxy-groups.0.proxies.0+♻️ 自动选择
+        - proxy-groups.🚀 节点选择.proxies.0+DIRECT
+      prepend-rules:
+        - DOMAIN,clash.razord.top,DIRECT,no-resolve
+        - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
+        - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,DIRECT,no-resolve
+        - DOMAIN,apac2.8d5fff6dafa213ef6b9210db39c5f56e.r2.cloudflarestorage.com,DIRECT,no-resolve
+        - DOMAIN-KEYWORD,microsoft,DIRECT,no-resolve
+        - DOMAIN-SUFFIX,vip8.3sybf.com:443,DIRECT
+        - DOMAIN-SUFFIX,surrit.com,DIRECT
+        - DOMAIN-SUFFIX,cdn.skyearth.xyz:443,DIRECT
+        - DOMAIN-SUFFIX,sixyik.com,DIRECT
+        - DOMAIN-SUFFIX,javxxx.me,DIRECT
+        - DOMAIN-SUFFIX,cdn.fapnfuck.com,DIRECT
+        - DOMAIN-SUFFIX,cdnstatic.jappornxl.com,DIRECT
+        - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com,DIRECT
+        - RULE-SET,applications,DIRECT
+        - DOMAIN,clash.razord.top,DIRECT
+        - DOMAIN,yacd.haishan.me,DIRECT
+        - RULE-SET,private,DIRECT
+        - RULE-SET,reject,REJECT
+        - RULE-SET,icloud,DIRECT
+        - RULE-SET,apple,DIRECT
+        - RULE-SET,google,DIRECT
+        - RULE-SET,tld-not-cn,🚀 节点选择
+        - RULE-SET,gfw,🚀 节点选择
+        - RULE-SET,greatfire,🚀 节点选择
+        - RULE-SET,telegramcidr,🚀 节点选择
+        - RULE-SET,lancidr,DIRECT
+        - RULE-SET,cncidr,DIRECT
+        - GEOIP,,DIRECT
+        - GEOIP,CN,DIRECT
+        - RULE-SET,direct,DIRECT
+        - RULE-SET,proxy,🐟 漏网之鱼
+        - MATCH,🐟 漏网之鱼
+mixinCode: |-
+  module.exports.parse = ({ content, name, url }, { yaml, axios, notify }) => {
+    return content
+  }
+checkForUpdates: false
+bypassText: |-
+  bypass:
+    - localhost
+    - 127.*
+    - 10.*
+    - 172.16.*
+    - 172.17.*
+    - 172.18.*
+    - 172.19.*
+    - 172.20.*
+    - 172.21.*
+    - 172.22.*
+    - 172.23.*
+    - 172.24.*
+    - 172.25.*
+    - 172.26.*
+    - 172.27.*
+    - 172.28.*
+    - 172.29.*
+    - 172.30.*
+    - 172.31.*
+    - 192.168.*
+    - <local>
+    - surrit.com
+    - sixyik.com
+updateProfileThroughClashProxy: false

@@ -1,0 +1,89 @@
+# NAME: Heart-Stealer
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: ????-??-?? ??:??:??
+# DOMAIN: ?
+# DOMAIN-KEYWORD: ?
+# DOMAIN-SUFFIX: ?
+# TOTAL: ?
+payload:
+  # - DOMAIN,exampl.com
+  - DOMAIN,clash.razord.top
+  - DOMAIN,yacd.haishan.me
+  - DOMAIN,yacd.metacubex.one
+  - DOMAIN,d.metacubex.one
+  - DOMAIN,board.zash.run.place
+  - DOMAIN,statics.woozooo.com
+  - DOMAIN,objects.githubusercontent.com
+
+  # - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,yangkeduo.com
+  - DOMAIN-SUFFIX,pc528.net
+  - DOMAIN-SUFFIX,gh-proxy.com
+  - DOMAIN-SUFFIX,r2.cloudflarestorage.com
+  - DOMAIN-SUFFIX,skyearth.xyz
+  - DOMAIN-SUFFIX,doppiocdn.live
+  - DOMAIN-SUFFIX,us-c.viayoo.com:443
+  - DOMAIN-SUFFIX,vip8.3sybf.com:443
+  - DOMAIN-SUFFIX,surrit.com
+  - DOMAIN-SUFFIX,sixyik.com
+  - DOMAIN-SUFFIX,javxxx.me
+  - DOMAIN-SUFFIX,fapnfuck.com
+  - DOMAIN-SUFFIX,cdnstatic.jappornxl.com
+  - DOMAIN-SUFFIX,ap-drop-monst.mushroomtrack.com
+  - DOMAIN-SUFFIX,ip.sb
+  - DOMAIN-SUFFIX,ip.gs
+  - DOMAIN-SUFFIX,ipw.cn
+  - DOMAIN-SUFFIX,pddpic.com
+  - DOMAIN-SUFFIX,yangkeduo.com
+  - DOMAIN-SUFFIX,m1.kanav.fun
+  - DOMAIN-SUFFIX,c1.kanav.art
+  - DOMAIN-SUFFIX,11yun.site
+  
+  - DOMAIN-SUFFIX,microsoft.com
+  - DOMAIN-SUFFIX,microsoftstore.com
+  - DOMAIN-SUFFIX,windowsupdate.com
+  - DOMAIN-SUFFIX,windows.com
+  - DOMAIN-SUFFIX,live.com
+  - DOMAIN-SUFFIX,xboxlive.com
+  - DOMAIN-SUFFIX,office.com
+  - DOMAIN-SUFFIX,msftconnecttest.com
+  - DOMAIN-SUFFIX,msauth.net
+  - DOMAIN-SUFFIX,msftauth.net
+  # - DOMAIN-KEYWORD,google
+  - DOMAIN-KEYWORD,test-ipv6
+  # - DOMAIN-KEYWORD,douyin
+
+  # - DOMAIN-REGEX,^abc.*com
+  # - GEOSITE,youtube
+  - IP-CIDR,223.5.5.5/32
+  - IP-CIDR,223.6.6.6/32
+  - IP-CIDR,119.29.29.29/32
+  - IP-CIDR,1.12.12.12/32
+  - IP-CIDR,120.53.53.53/32
+  - IP-CIDR,222.222.222.222/32
+  - IP-CIDR,222.222.202.202/32
+  - IP-CIDR,101.226.4.6/32
+  - IP-CIDR,218.30.118.6/32
+  - IP-CIDR,180.76.76.76/32
+  - IP-CIDR,0.0.0.0/8
+  - IP-CIDR,10.0.0.0/8
+  - IP-CIDR,100.64.0.0/10
+  - IP-CIDR,127.0.0.0/8
+  - IP-CIDR,169.254.0.0/16
+  - IP-CIDR,172.16.0.0/12
+  - IP-CIDR,192.0.0.0/24
+  - IP-CIDR,192.0.2.0/24
+  - IP-CIDR,192.88.99.0/24
+  - IP-CIDR,192.168.0.0/16
+  - IP-CIDR,198.18.0.0/15
+  - IP-CIDR,198.51.100.0/24
+  - IP-CIDR,203.0.113.0/24
+  - IP-CIDR,224.0.0.0/3
+  - IP-CIDR,::/127
+  - IP-CIDR,fc00::/7
+  - IP-CIDR,fe80::/10
+  - IP-CIDR,ff00::/8
+  - DST-PORT,22
+  - DST-PORT,53
+  - DSCP,4
