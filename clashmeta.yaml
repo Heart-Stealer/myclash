@@ -372,7 +372,7 @@ sniffer:
     # # 向日葵服务
     - "+.oray.com"
     - "+.sunlogin.net"
-  # skip-src-address:          # 按来源 IP 跳过嗅探
+  skip-src-address:          # 按来源 IP 跳过嗅探
     - 127.0.0.0/8                                                       # 跳过目标  本机回环
     - 10.0.0.0/8                                                        # 跳过目标  私有网络
     - 172.16.0.0/12                                                     # 跳过目标  私有网络
@@ -755,13 +755,13 @@ rule-anchor:
 rule-providers:
 # https://github.com/Heart-Stealer/myclash/raw/refs/heads/main/
 # https://raw.githubusercontent.com/Heart-Stealer/myclash/refs/heads/main/
-  # aa-direct: { <<: *class_yaml, path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rules/aa-direct.yaml"}
-  # aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rules/aa-proxy.yaml"}
-  aa-fakeip: { <<: *domain_yaml, path: "./rule-providers/aa-fakeip.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-fakeip.yaml"}
-  aa-direct: { <<: *class_yaml,  path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-direct.yaml"}
-  aa-reject: { <<: *class_yaml,  path: "./rule-providers/aa-reject.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-reject.yaml"}
-  aa-proxy0: { <<: *class_yaml,  path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/aa-proxy0.yaml"}
-  ab-direct: { <<: *class_yaml,  path: "./rule-providers/ab-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rules/ab-direct.yaml"}
+  # aa-direct: { <<: *class_yaml, path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rule-providers/aa-direct.yaml"}
+  # aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rule-providers/aa-proxy.yaml"}
+  aa-fakeip: { <<: *domain_yaml, path: "./rule-providers/aa-fakeip.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rule-providers/aa-fakeip.yaml"}
+  aa-direct: { <<: *class_yaml,  path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rule-providers/aa-direct.yaml"}
+  aa-reject: { <<: *class_yaml,  path: "./rule-providers/aa-reject.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rule-providers/aa-reject.yaml"}
+  aa-proxy0: { <<: *class_yaml,  path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rule-providers/aa-proxy0.yaml"}
+  ab-direct: { <<: *class_yaml,  path: "./rule-providers/ab-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rule-providers/ab-direct.yaml"}
   # 备选：本地文件模式（把上面几行 url 版注释掉）
   # aa-fakeip: { <<: *domain_yaml_file, path: ./rule-providers/aa-fakeip.yaml}
   # aa-direct: { <<: *class_yaml_file,  path: ./rule-providers/aa-direct.yaml}
