@@ -2,9 +2,9 @@ proxies:
   # 80 443 8080 8880 2052 2082
   # @storeships.toptechnonews.com:443@south.idyllic.love@bestcf.onecf.eu.org@www.gov.ua@ip.sb:8080@www.ipget.net:8080  
   - {"type": "ssr","server": "ssr2.762988.xyz","port": 33336,"protocol": "auth_chain_a","cipher": "chacha20-ietf","obfs": "tls1.2_ticket_auth","password": "dongtaiwang.com","name": "SSR节点","udp": true}
-  - {"type": "ss","skip-cert-verify": false,"udp": false,"server": "2001:bc8:32d7:17b::100","port": 22222,"cipher": "aes-256-gcm","password": "github.com/Alvin9999-newpac/fanqiang","name": "SS-IPv6"}
+  - {"type": "ss","skip-cert-verify": false,"udp": true,"server": "2001:bc8:32d7:17b::100","port": 22222,"cipher": "aes-256-gcm","password": "github.com/Alvin9999-newpac/fanqiang","name": "SS-IPv6"}
   - {"name": "vmess-ws-ipv6","type": "vmess","server": "2001:bc8:32d7:1a9::5","port": 18901,"cipher": "auto","uuid": "3a966d20-7b9d-48cc-ba2c-8d38161b6d3a","alterId": 0,"tls": false,"network": "ws","ws-opts": {"path": "/github.com/Alvin9999-newpac/fanqiang","headers": {}},"client-fingerprint": "","udp": true}
-  - {"type": "anytls","name": "github-anytls-1","server": "ip5.934618.xyz","port": 44889,"udp": true,"sni": "ip5.934618.xyz","skip-cert-verify": false,"packet-encoding": "xudp","password": "dongtaiwang.com","allowInsecure": "0","headerType": "none"}
+  - {"type": "anytls","name": "github-anytls-1","server": "ip5.934618.xyz","port": 23550,"udp": true,"sni": "ip5.934618.xyz","skip-cert-verify": false,"packet-encoding": "xudp","password": "dongtaiwang.com","allowInsecure": "0","headerType": "none"}
 
   - {"type": "ss","skip-cert-verify": false,"udp": false,"server": "202.50.253.63","port": 19999,"cipher": "aes-256-gcm","password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","name": "新西兰+-10.0"}
   - {"type": "vless","name": "VPS-Reality-2.0","server": "162.35.168.138","port": 25246,"uuid": "ab80faff-2b71-4e11-8d24-4729e75ce782","udp": true,"tls": true,"flow": "xtls-rprx-vision","client-fingerprint": "chrome","skip-cert-verify": false,"packet-encoding": "xudp","reality-opts": {"public-key": "c6scIXXE0RS01auLcBHI85CT6xdBfvRSMmBu7r_ucR8","short-id": "6ba85179e30d4fc2"},"network": "tcp","encryption": "none","servername": "www.mongodb.com"}
@@ -15,10 +15,6 @@ proxies:
   # - {"name": "🇩🇪 德国(25)-2.0", server: 5.83.129.143, port: 26691, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 11 Mbps, down: 55 Mbps, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
   # - {"type": "anytls","name": "TW0-0.8","server": "dafeizhu.xxxyun.top","port": 55005,"udp": true,"sni": "tw2.jueduibupao.top","skip-cert-verify": false,"packet-encoding": "xudp","password": "26e8b893-7739-40cd-bbbb-a3260ab95e3a","headerType": "none"}
 
-  # - {"type": "ssr","server": "ssr2.762988.xyz","port": 33336,"protocol": "auth_chain_a","cipher": "chacha20-ietf","obfs": "tls1.2_ticket_auth","password": "dongtaiwang.com","name": "SSR节点","udp": true}
-  # - {"type": "ss","skip-cert-verify": false,"udp": false,"server": "2001:bc8:32d7:17b::100","port": 22222,"cipher": "aes-256-gcm","password": "github.com/Alvin9999-newpac/fanqiang","name": "SS-IPv6"}
-  # - {"name": "vmess-ws-ipv6","type": "vmess","server": "2001:bc8:32d7:1a9::5","port": 18901,"cipher": "auto","uuid": "3a966d20-7b9d-48cc-ba2c-8d38161b6d3a","alterId": 0,"tls": false,"network": "ws","ws-opts": {"path": "/github.com/Alvin9999-newpac/fanqiang","headers": {}},"client-fingerprint": "","udp": true}
-  # - {"type": "anytls","name": "github-anytls-1","server": "ip5.934618.xyz","port": 44889,"udp": true,"sni": "ip5.934618.xyz","skip-cert-verify": false,"packet-encoding": "xudp","password": "dongtaiwang.com","allowInsecure": "0","headerType": "none"}
   # - {"name": "🇹🇼 台湾家宽 01-0.5","server": "twmoon1-cdn-route.couldflare-cdn.com","port": 1443,"type": "http","username": "mrwdfNTD8M79LCukCieldrqZWqs=","password": "exaxgqkKkd0TAMrCxeonWg==","tls": true,"skip-cert-verify": false,"client-fingerprint": "chrome","sni": "twmoon1-cdn-route.couldflare-cdn.com"}
 
   # - {"type": "tuic","name": "TW-6","server": "tw6.dexlos.com","port": 8080,"password": "8A9905B7-801B-41AF-BFC9-2034212770F6","uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6","sni": "tw6.dexlos.com","alpn": ["h3"],"congestion-controller": "bbr","udp": true,"udp-relay-mode": "native","version": 5}
