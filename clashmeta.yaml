@@ -126,7 +126,7 @@ tcp-concurrent: true           # TCP 并发，可选值 true/false
 find-process-mode: strict      # 进程匹配：always全匹配/strict自动/off不匹配(路由器用off)
 # find-process-mode: off
 # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
-global-client-fingerprint: chrome   # 全局 TLS 指纹，优先级低于节点内设置
+# global-client-fingerprint: chrome   # 全局 TLS 指纹，优先级低于节点内设置
 # 连接空闲后多久发送探测包
 keep-alive-idle: 600
 # TCP Keep Alive 间隔,单位分钟
@@ -231,7 +231,7 @@ dns:
     - "geosite:connectivity-check"
     - "geosite:category-games"
     - "geosite:cn"
-    - "RULE-SET:aa-fakeip"
+    # - "RULE-SET:aa-fakeip"
     - "+.kyarucloud.moe"
     - "+.dynv6.com"
     # - "*"
@@ -755,8 +755,6 @@ rule-anchor:
 rule-providers:
 # https://github.com/Heart-Stealer/myclash/raw/refs/heads/main/
 # https://raw.githubusercontent.com/Heart-Stealer/myclash/refs/heads/main/
-  # aa-direct: { <<: *class_yaml, path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rule-providers/aa-direct.yaml"}
-  # aa-proxy0: { <<: *class_yaml, path: "./rule-providers/aa-proxy0.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/mihomo/rule-providers/aa-proxy.yaml"}
   aa-fakeip: { <<: *domain_yaml, path: "./rule-providers/aa-fakeip.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rule-providers/aa-fakeip.yaml"}
   aa-direct: { <<: *class_yaml,  path: "./rule-providers/aa-direct.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rule-providers/aa-direct.yaml"}
   aa-reject: { <<: *class_yaml,  path: "./rule-providers/aa-reject.yaml", url: "https://gh-proxy.com/https://raw.githubusercontent.com/Heart-Stealer/myclash/main/rule-providers/aa-reject.yaml"}
